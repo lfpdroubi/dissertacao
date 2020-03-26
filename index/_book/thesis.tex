@@ -1,0 +1,2392 @@
+% ------------------------------------------------------------------------
+% ------------------------------------------------------------------------
+% Modelo UFSC para Trabalhos Academicos (tese de doutorado, dissertação de
+% mestrado) utilizando a classe abntex2
+%
+% Autor: Alisson Lopes Furlani
+% 	Modificações:
+%	- 27/08/2019: Alisson L. Furlani, add pacote 'glossaries' para listas
+% - 30/10/2019: Alisson L. Furlani, adjusted some spacing errors and changed math fonts
+% - 17/01/2019: Alisson L. Furlani, updated certification page
+% - 03/03/2020: Luiz F. P. Droubi, change file to be used as a template with R.
+% ------------------------------------------------------------------------
+% ------------------------------------------------------------------------
+
+\documentclass[
+	% -- opções da classe memoir --
+	12pt,				% tamanho da fonte
+	%openright,			% capítulos começam em pág ímpar (insere página vazia caso preciso)
+	oneside,			% para impressão no anverso. Oposto a twoside
+	a4paper,			% tamanho do papel.
+	% -- opções da classe abntex2 --
+	chapter=TITLE,		% títulos de capítulos convertidos em letras maiúsculas
+	section=TITLE,		% títulos de seções convertidos em letras maiúsculas
+	%subsection=TITLE,	% títulos de subseções convertidos em letras maiúsculas
+	%subsubsection=TITLE,% títulos de subsubseções convertidos em letras maiúsculas
+	% -- opções do pacote babel --
+	english,			% idioma adicional para hifenização
+	%french,				% idioma adicional para hifenização
+	%spanish,			% idioma adicional para hifenização
+	brazil				% o último idioma é o principal do documento
+	]{abntex2}
+
+\usepackage{setup/ufscthesisA4-alf}
+%\addbibresource{bib/thesis.bib} % Seus arquivos de referências
+
+\usepackage[table]{xcolor}
+\let\newfloat\undefined
+\usepackage{floatrow}
+\floatsetup[table]{capposition=top}
+\floatsetup[figure]{capposition=top}
+
+\newcommand{\pkg}[1]{{\normalfont\fontseries{b}\selectfont #1}}
+\let\proglang=\textsf
+\let\code=\texttt
+
+
+\newcommand{\bcenter}{\begin{center}}
+\newcommand{\ecenter}{\end{center}}
+
+\newcommand{\bapendices}{\begin{apendicesenv}}
+\newcommand{\eapendices}{\end{apendicesenv}}
+
+\newcommand{\banexos}{\begin{anexosenv}}
+\newcommand{\eanexos}{\end{anexosenv}}
+
+% ---
+% Filtering and Mapping Bibliographies
+% ---
+\DeclareSourcemap{
+	\maps[datatype=bibtex]{
+		% remove fields that are always useless
+		\map{
+			\step[fieldset=abstract, null]
+			\step[fieldset=pagetotal, null]
+		}
+		% remove URLs for types that are primarily printed
+%		\map{
+%			\pernottype{software}
+%			\pernottype{online}
+%			\pernottype{report}
+%			\pernottype{techreport}
+%			\pernottype{standard}
+%			\pernottype{manual}
+%			\pernottype{misc}
+%			\step[fieldset=url, null]
+%			\step[fieldset=urldate, null]
+%		}
+		\map{
+			\pertype{inproceedings}
+			% remove mostly redundant conference information
+			\step[fieldset=venue, null]
+			\step[fieldset=eventdate, null]
+			\step[fieldset=eventtitle, null]
+			% do not show ISBN for proceedings
+			\step[fieldset=isbn, null]
+			% Citavi bug
+			\step[fieldset=volume, null]
+		}
+	}
+}
+% ---
+
+% ---
+% Informações de dados para CAPA e FOLHA DE ROSTO
+% ---
+% FIXME Substituir 'Nome completo do autor' pelo seu nome.
+\autor{LUIZ FERNANDO PALIN DROUBI}
+% FIXME Substituir 'Título do trabalho' pelo título da trabalho.
+\titulo{O Mercado Imobiliário e a Economia}
+% FIXME Substituir 'Subtítulo (se houver)' pelo subtítulo da trabalho.
+% Caso não tenha substítulo, comente a linha a seguir.
+  \subtitulo{Qualificação}
+% FIXME Substituir 'XXXXXX' pelo nome do seu
+% orientador.
+\orientador{Norberto Hochheim}
+% FIXME Se for orientado por uma mulher, comente a linha acima e descomente a linha a seguir.
+% \orientador[Orientadora]{Nome da orientadora, Dra.}
+% FIXME Substituir 'XXXXXX' pelo nome do seu
+% coorientador. Caso não tenha coorientador, comente a linha a seguir.
+% FIXME Se for coorientado por uma mulher, comente a linha acima e descomente a linha a seguir.
+% \coorientador[Coorientadora]{XXXXXX, Dra.}
+% FIXME Substituir '[ano]' pelo ano (ano) em que seu trabalho foi defendido.
+\ano{2020}
+% FIXME Substituir '[dia] de [mês] de [ano]' pela data em que ocorreu sua defesa.
+\data{31 de Março de 2020}
+% FIXME Substituir 'Local' pela cidade em que ocorreu sua defesa.
+\local{Florianópolis}
+\instituicaosigla{UFSC}
+\instituicao{Universidade Federal de Santa Catarina}
+% FIXME Substituir 'Dissertação/Tese' pelo tipo de trabalho (Tese, Dissertação).
+\tipotrabalho{Dissertação}
+% FIXME Substituir '[mestre/doutor] em XXXXXX' pela grau adequado.
+\formacao{Mestre em Engenharia de Transportes e Gestão Territorial}
+% FIXME Substituir '[mestrado/doutorado]' pelo nivel adequado.
+\nivel{mestrado}
+% FIXME Substituir 'Programa de Pós-Graduação em XXXXXX' pela curso adequado.
+\programa{Programa de Pós-Graduação em Engenharia de Transportes e Gestão Territorial}
+% FIXME Substituir 'Campus XXXXXX ou Centro de XXXXXX' pelo campus ou centro adequado.
+\centro{CTC - CENTRO TECNOLÓGICO}
+\preambulo
+{%
+\imprimirtipotrabalho~submetida~ao~\imprimirprograma~da~\imprimirinstituicao~para~a~obtenção~do~título~de~\imprimirformacao.
+}
+% ---
+
+% ---
+% Configurações de aparência do PDF final
+% ---
+% alterando o aspecto da cor azul
+\definecolor{blue}{RGB}{41,5,195}
+% informações do PDF
+\makeatletter
+\hypersetup{
+     	%pagebackref=true,
+		pdftitle={\@title},
+		pdfauthor={\@author},
+    	pdfsubject={\imprimirpreambulo},
+	    pdfcreator={LaTeX with abnTeX2},
+		pdfkeywords={ufsc, latex, abntex2},
+		colorlinks=true,       		% false: boxed links; true: colored links
+    	linkcolor=black,%blue,          	% color of internal links
+    	citecolor=black,%blue,        		% color of links to bibliography
+    	filecolor=black,%magenta,      		% color of file links
+		urlcolor=black,%blue,
+		bookmarksdepth=4
+}
+\makeatother
+% ---
+
+% ---
+% compila a lista de abreviaturas e siglas e a lista de símbolos
+% ---
+
+% Declaração das siglas
+\include{lista_siglas}
+
+% Declaração dos simbolos
+\include{lista_simbolos}
+
+% compila a lista de abreviaturas e siglas e a lista de símbolos
+\makenoidxglossaries
+
+% ---
+
+% ---
+% compila o indice
+% ---
+\makeindex
+% ---
+
+% ----
+% Início do documento
+% ----
+\begin{document}
+
+% Seleciona o idioma do documento (conforme pacotes do babel)
+%\selectlanguage{english}
+\selectlanguage{brazil}
+
+% Retira espaço extra obsoleto entre as frases.
+\frenchspacing
+
+% Espaçamento 1.5 entre linhas
+\OnehalfSpacing
+
+% Corrige justificação
+%\sloppy
+
+% ----------------------------------------------------------
+% ELEMENTOS PRÉ-TEXTUAIS
+% ----------------------------------------------------------
+% \pretextual %a macro \pretextual é acionado automaticamente no início de \begin{document}
+% ---
+% Capa, folha de rosto, ficha bibliografica, errata, folha de apróvação
+% Dedicatória, agradecimentos, epígrafe, resumos, listas
+% ---
+% ---
+% Capa
+% ---
+\imprimircapa
+% ---
+
+% ---
+% Folha de rosto
+% (o * indica que haverá a ficha bibliográfica)
+% ---
+\imprimirfolhaderosto*
+% ---
+
+% ---
+% Inserir a ficha bibliografica
+% ---
+% http://ficha.bu.ufsc.br/
+\begin{fichacatalografica}
+	\includepdf{Ficha_Catalografica.pdf}
+\end{fichacatalografica}
+% ---
+
+% ---
+% Inserir folha de aprovação
+% ---
+\begin{folhadeaprovacao}
+	\OnehalfSpacing
+	\centering
+	\imprimirautor\\%
+	\vspace*{10pt}		
+	\textbf{\imprimirtitulo}%
+	\ifnotempty{\imprimirsubtitulo}{:~\imprimirsubtitulo}\\%
+	%		\vspace*{31.5pt}%3\baselineskip
+	\vspace*{\baselineskip}
+	%\begin{minipage}{\textwidth}
+	O presente trabalho em nível de \imprimirnivel~foi avaliado e aprovado por banca examinadora composta pelos seguintes membros:\\
+	%\end{minipage}%
+	\vspace*{\baselineskip}
+    Prof. Everton da Silva, Dr.\\
+  Universidade Federal de Santa Catarina - UFSC\\
+  \vspace*{\baselineskip}
+    Prof. Examinador 2, Dr.\\
+  Fédération Internationale des Géomètres - FIG\\
+  \vspace*{\baselineskip}
+    
+	\vspace*{2\baselineskip}
+	\begin{minipage}{\textwidth}
+		Certificamos que esta é a \textbf{versão original e final} do trabalho de conclusão que foi julgado adequado para obtenção do título de \imprimirformacao.\\
+	\end{minipage}
+	%    \vspace{-0.7cm}
+	\vspace*{\fill}
+	\assinatura{\OnehalfSpacing Ana Maria Bencciveni Franzoni \\ Coordenação do Programa de Pós-Graduação}
+	\vspace*{\fill}
+	\assinatura{\OnehalfSpacing\imprimirorientador \\ \imprimirorientadorRotulo}
+	%	\ifnotempty{\imprimircoorientador}{
+	%	\assinatura{\imprimircoorientador \\ \imprimircoorientadorRotulo \\
+	%		\imprimirinstituicao~--~\imprimirinstituicaosigla}
+	%	}
+	% \newpage
+	\vspace*{\fill}
+	\imprimirlocal, \imprimirano.
+\end{folhadeaprovacao}
+% ---
+
+% ---
+% Dedicatória
+% ---
+\begin{dedicatoria}
+	\vspace*{\fill}
+	\noindent
+	\begin{adjustwidth*}{}{5.5cm} 
+		\raggedleft       
+		À Bibi.
+	\end{adjustwidth*}
+\end{dedicatoria}
+% ---
+
+% ---
+% Agradecimentos
+% ---
+\begin{agradecimentos}
+	Gostaria de agradecer sinceramente a todos os que colaboraram à execução\\
+deste trabalho.\\
+Aos colegas da UFSC.\\
+Aos professores do PPGTG.\\
+Em especial ao meu orientador, pela paciência.\\
+E a minha querida esposa pela compreensão.
+\end{agradecimentos}
+% ---
+
+% ---
+% Epígrafe
+% ---
+\begin{epigrafe}
+	\vspace*{\fill}
+	\begin{flushright}
+		\textit{``Eppur si muove!''\\
+(Galileu Galilei, 1633)}
+	\end{flushright}
+\end{epigrafe}
+% ---
+
+% ---
+% RESUMOS
+% ---
+
+% resumo em português
+\setlength{\absparsep}{18pt} % ajusta o espaçamento dos parágrafos do resumo
+\begin{resumo}
+	\SingleSpacing
+  No resumo são ressaltados o objetivo da pesquisa, o método utilizado, as discussões e os resultados com destaque apenas para os pontos principais. O resumo deve ser significativo, composto de uma sequência de frases concisas, afirmativas, e não de uma enumeração de tópicos. Não deve conter citações. Deve usar o verbo na voz ativa e na terceira pessoa do singular. O texto do resumo deve ser digitado, em um único bloco, sem espaço de parágrafo. O espaçamento entre linhas é simples e o tamanho da fonte é 12. Abaixo do resumo, informar as palavras-chave (palavras ou expressões significativas retiradas do texto) ou, termos retirados de thesaurus da área. Deve conter de 150 a 500 palavras. O resumo é elaborado de acordo com a NBR 6028. 
+  
+  \textbf{Palavras-chave}: 
+    Mercado Imobiliário.
+    Macroeconomia.
+    Microeconomia.
+  \end{resumo}
+% resumo em inglês
+\begin{resumo}[Abstract]
+	\SingleSpacing
+	\begin{otherlanguage*}{english}
+		Resumo traduzido para outros idiomas, neste caso, inglês. Segue o formato do resumo feito na língua vernácula. As palavras-chave traduzidas, versão em língua estrangeira, são colocadas abaixo do texto precedidas pela expressão ``Keywords'', separadas por ponto.
+		
+		\textbf{Keywords}:
+	      Real Estate.
+        Macroeconomics.
+        Microeconomics.
+    	\end{otherlanguage*}
+\end{resumo}
+%% resumo em francês 
+%\begin{resumo}[Résumé]
+% \begin{otherlanguage*}{french}
+%    Il s'agit d'un résumé en français.
+% 
+%   \textbf{Mots-clés}: latex. abntex. publication de textes.
+% \end{otherlanguage*}
+%\end{resumo}
+%
+%% resumo em espanhol
+%\begin{resumo}[Resumen]
+% \begin{otherlanguage*}{spanish}
+%   Este es el resumen en español.
+%  
+%   \textbf{Palabras clave}: latex. abntex. publicación de textos.
+% \end{otherlanguage*}
+%\end{resumo}
+%% ---
+
+{%hidelinks
+	\hypersetup{hidelinks}
+	% ---
+	% inserir lista de ilustrações
+	% ---
+	\pdfbookmark[0]{\listfigurename}{lof}
+	\listoffigures*
+	\cleardoublepage
+	% ---
+	
+	% ---
+	% inserir lista de quadros
+	% ---
+	\pdfbookmark[0]{\listofquadrosname}{loq}
+	\listofquadros*
+	\cleardoublepage
+	% ---
+	
+	% ---
+	% inserir lista de tabelas
+	% ---
+	\pdfbookmark[0]{\listtablename}{lot}
+	\listoftables*
+	\cleardoublepage
+	% ---
+	
+	% ---
+	% inserir lista de abreviaturas e siglas (devem ser declarados no preambulo)
+	% ---
+	\imprimirlistadesiglas
+	% ---
+	
+	% ---
+	% inserir lista de símbolos (devem ser declarados no preambulo)
+	% ---
+	\imprimirlistadesimbolos
+	% ---
+	
+	% ---
+	% inserir o sumario
+	% ---
+	\pdfbookmark[0]{\contentsname}{toc}
+	\tableofcontents*
+	\cleardoublepage
+	
+}%hidelinks
+% ---
+
+% ---
+
+% ----------------------------------------------------------
+% ELEMENTOS TEXTUAIS
+% ----------------------------------------------------------
+\textual
+
+\hypertarget{intro}{%
+\chapter{Introdução}\label{intro}}
+
+\hypertarget{o-conceito-de-terra-e-a-importuxe2ncia-do-territuxf3rio}{%
+\section{O conceito de terra e a importância do território}\label{o-conceito-de-terra-e-a-importuxe2ncia-do-territuxf3rio}}
+
+De acordo com Natsvaladze and Beraia (\protect\hyperlink{ref-realestate}{2018}), a terra é a base das atividades econômicas e sociais
+de um povo, essencial para a vida e a sociedade, sendo assunto de diversas
+disciplinas, como o Direito, Economia, Finanças, Sociologia e a Geografia.
+
+No Direito, a terra é abordada no direito de propriedade e uso social da terra.
+Na Economia, a terra é considerada uma dos fatores de produção, ao lado do
+trabalho e do capital. Nas Finanças, a terra é considerada como um bem
+suscetível de ser dado em garantia, em troca de capital financeiro, visando
+propiciar o desenvolvimento. Na perspectiva da Sociologia, a terra é um bem
+comum de todos, que deve ser utilizado com fins de obtenção de uma sociedade
+melhor. Já a Geografia foca em descrever os elementos físicos da terra e as
+atividades humanas das pessoas que as habitam.
+
+A Engenharia de Avaliações se preocupa em reconhecer os atributos que atuam na
+formação de valor dos bens imóveis, um conceito ligado à Economia. Para isto, os
+Avaliadores devem entender o mercado no qual estes bens estão inseridos. É o
+mercado que reflete a atitude dos atores econômicos em resposta às forças
+sociais e econômicas e às restrições da lei e dos ônus legais (Natsvaladze and Beraia \protect\hyperlink{ref-realestate}{2018}, 10).
+
+\hypertarget{o-mercado-imobiliuxe1rio}{%
+\section{O Mercado Imobiliário}\label{o-mercado-imobiliuxe1rio}}
+
+O mercado imobiliário urbano pode ser dividido basicamente em:
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Mercado de imóveis residencias e;
+\item
+  Mercado de imóveis comerciais.
+\end{enumerate}
+O Mercado Imobiliário se conecta à macroeconomia através:
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Do setor de construção civil;
+\item
+  Da demanda agregada, já que existe uma conexão entre a propensão marginal
+  a consumir com o efeito riqueza do Mercado Imobiliário;
+\item
+  Do setor bancário, haja vista que os bancos possuem imóveis em seu portfolio,
+  seja através da propriedade, ou através do financiamento imobiliário e hipotecas.
+\end{enumerate}
+\gls{Bacen}
+
+\hypertarget{objetivos}{%
+\section{Objetivos}\label{objetivos}}
+
+\hypertarget{objetivo-geral}{%
+\subsection{Objetivo Geral}\label{objetivo-geral}}
+
+Propor, através do estudo das diversas estruturas de mercado conhecidas e
+elencadas na nova NBR 14.653-01 (ABNT \protect\hyperlink{ref-NBR1465301}{2019}) e do estudo das relações entre as
+diversas variáveis macroeconômicas, novas aplicações do método involutivo e,
+de acordo com os resultados, propor novas políticas para a regulação do setor.
+
+\hypertarget{objetivos-especuxedficos}{%
+\subsection{Objetivos Específicos}\label{objetivos-especuxedficos}}
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Compreender e descrever o funcionamento das diversas estruturas de mercado.
+\item
+  Abstrair das diferentes estruturas de mercado as relações entre as variáveis
+  macroeconômicas e o seu impacto no mercado imobiliário.
+\item
+  De acordo com os resultados obtidos, propor políticas públicas que visem uma
+  melhor regulamentação do mercado imobiliário, de maneira que este atenda melhor
+  aos anseios da população.
+\end{enumerate}
+\hypertarget{justificativa}{%
+\section{Justificativa}\label{justificativa}}
+
+O território é a base das atividades econômicas e sociais do país. Um eficiente
+planejamento territorial passa por desenvolver políticas públicas que garantam
+um desenvolvimento equânime de todo o território, como o A proposta desta
+pesquisa é aprofundar
+
+\hypertarget{estrutura-do-trabalho}{%
+\section{Estrutura do trabalho}\label{estrutura-do-trabalho}}
+
+O Capítulo \ref{intro} (\protect\hyperlink{intro}{Introdução}) apresenta os objetivos, justificativas e
+estrutura do trabalho. O Capítulo \ref{historico} (\protect\hyperlink{historico}{Aspectos Históricos}) faz
+uma contextualização histórica do problema do acesso à terra e moradia no Brasil
+e no mundo. O Capítulo \ref{economia} (\protect\hyperlink{economia}{O Mercado Imobiliário e a Economia})
+aborda os aspectos teóricos e conceituais mais modernos relevantes à
+interligação do mercado imobiliário à Economia do país. O capítulo
+\ref{involutivo} (\protect\hyperlink{involutivo}{O Método Involutivo}) apresenta o método involutivo de
+avaliação de imóveis. O Capítulo \ref{copulas} (\protect\hyperlink{copulas}{O Método Copulas}) introduz o
+método Copulas, essencial para a compreender as simulações para cada
+cenário/estrutura de mercado descritas no Capítulo \ref{metodologia}
+(\protect\hyperlink{metodologia}{Metodologia}). O Capítulo \ref{resultados} (\protect\hyperlink{resultados}{Resultados}) demonstra os
+resultados obtidos com as simulações e o Capítulo \ref{conclusao}
+(\protect\hyperlink{conclusao}{Conclusão}) traz as propostas de regulação baseadas nos resultados obtidos.
+
+\hypertarget{historico}{%
+\chapter{Aspectos históricos}\label{historico}}
+\begin{epigrafe}
+    \vspace*{\fill}
+    \begin{flushright}
+        \textit{``Do ponto de vista social, todos os fatores se resumem\\ 
+        em um `recurso' elementar: o homem. Logo, não é possível seguir\\ 
+        conceptualmente o processo de industrialização se não sabemos como\\ 
+        o homem aplicava antes o seu tempo de trabalho, como o aplica depois,\\ 
+        o que ocorre quando passa de um modo de produzir a outra e em que\\ 
+        condições realiza essa passagem.[ \ldots ] Considerando que na estrutura\\ 
+        da economia que precede a industrialização quase toda a população está\\ 
+        na `agricultura', é preciso estudar detidamente a organização deste setor.\\ 
+        Em outras palavras, se o problema da `agricultura' não foi entendido,\\ 
+        tampouco será possível compreender o problema da `indústria', ou manufatura,\\ 
+        nem o papel que os serviços desempenham. Falando de modo sucinto, a \\
+        `manufatura' e os serviços são novas formas de aplicação de parte do\\ 
+        tempo de trabalho da população que antes estava na `agricultura'. Mas,\\
+        por sua vez, a própria `agricultura' se reorganiza quando a transferência ocorre.''\\
+        (RANGEL, 1954)}
+    \end{flushright}
+\end{epigrafe}
+O Capitalismo é um sistema político-econômico que, historicamente, substitui o
+Feudalismo, sistema em que a população encontrava-se toda concentrada no campo.
+
+Nas sociedades pré-capitalistas, a população predominante rural organizava-se no
+chamado `Complexo Rural', ou seja, num ambiente rural onde eram produzidos não
+apenas os produtos agrícolas, mas onde também eram produzidos, pelos próprios
+camponeses, em uma muito baixa produtividade, todo o ferramental necessário para
+as suas atividades agrícolas, assim como suas vestes, utensílios domésticos e
+outros itens.
+
+A passagem do sistema feudal para o sistema capitalista ocorre com a \emph{divisão
+social do trabalho}, ou seja, com o desenvolvimento de indústrias que vão aos
+poucos absorver as atividades não-agrícolas realizadas no campo.
+\begin{citacao}
+Numa economia em expansão, com crescente industrialização, comercialização e
+urbanização, numerosos processos anteriormente levados a efeito antes dentro da
+casa da família ou unidade (econômica) familiar, ou são completamente
+abandonados ou substituídos por processos semelhantes em bases
+comerciais. \cite[p. 41]{kuznets} \textit{apud} \cite[p. 218]{rangel1956}.
+\end{citacao}
+O desenvolvimento do capitalismo brasileiro no século XX se deu pela chamada
+``via prussiana'' ou \emph{junker} (Rangel \protect\hyperlink{ref-rangel1988}{2012}\protect\hyperlink{ref-rangel1988}{i}, 155), que é um tipo de reforma agrária
+que consiste na substituição do latifúndio feudal pelo latifúndio capitalista.
+Este tipo de desenvolvimento tem como característica se dar sem a execução
+prévia da reforma agrária no sentido clássico, \emph{i.e.} no sentido da distribuição
+dos latifúndios em pequenas propriedades, a chamada via clássica ou democrática.
+Apesar de permitir imprimir um ``impulso extraordinário e energético'' à
+industrialização, a via prussiana ``promove uma distribuição muito desigual da
+renda'' (Rangel \protect\hyperlink{ref-rangel1988}{2012}\protect\hyperlink{ref-rangel1988}{i}, 155). característica talvez mais perniciosa do
+desenvolvimento capitalista por esta via se dá pela formação de um ``exército
+industrial de reserva'' demasiado grande, ou seja, um aumento da população urbana
+desproporcional à necessidade de mão-de-obra necessária nas indústrias do
+capitalismo nascente nas cidades. O resultado é o crescimento acelerado e
+desordenado das cidades, com a inevitável formação dos cortiços e favelas para
+acomodar a parte mais carente da população que, expulsa do campo, vai se
+aglomerar nos grandes centros urbanos em busca da sua sobrevivência.
+
+Dados compilados pelas Nacões Unidas foram organizados na tabela
+\ref{tab:pop-table} com o intuito de demonstrar a evolução e o atual tamanho
+deste problema.
+\begin{table}[H]
+
+\caption{\label{tab:pop-table}População Urbana (\%).}
+\centering
+\begin{tabular}[t]{lrrrrrr}
+\toprule
+\multicolumn{1}{c}{} & \multicolumn{6}{c}{Ano} \\
+\cmidrule(l{3pt}r{3pt}){2-7}
+Entity & 1960 & 1970 & 1980 & 1990 & 2000 & 2014\\
+\midrule
+\rowcolor{gray!6}  \addlinespace[0.3em]
+\multicolumn{7}{l}{\textbf{Mundo}}\\
+\hspace{1em}World & 33,8 & 36,6 & 39,3 & 43,0 & 46,7 & 53,5\\
+\hspace{1em}More developed regions & 61,1 & 66,8 & 70,3 & 72,4 & 74,2 & 78,0\\
+\hspace{1em}Less developed regions & 21,9 & 25,3 & 29,4 & 34,9 & 40,1 & 48,4\\
+\rowcolor{gray!6}  \addlinespace[0.3em]
+\multicolumn{7}{l}{\textbf{Europa}}\\
+\hspace{1em}Europe & 57,4 & 63,1 & 67,6 & 69,9 & 71,1 & 73,7\\
+\hspace{1em}Eastern Europe & 48,9 & 56,6 & 63,8 & 68,0 & 68,2 & 69,2\\
+\hspace{1em}Western Europe & 68,6 & 72,1 & 73,4 & 74,0 & 76,0 & 79,2\\
+\rowcolor{gray!6}  \addlinespace[0.3em]
+\multicolumn{7}{l}{\textbf{América}}\\
+\hspace{1em}Latin America and the Caribbean & 49,4 & 57,3 & 64,6 & 70,7 & 75,5 & 79,7\\
+\hspace{1em}South America & 51,8 & 60,0 & 67,6 & 74,2 & 79,6 & 83,3\\
+\hspace{1em}Central America & 46,4 & 53,7 & 60,3 & 65,0 & 68,7 & 73,4\\
+\hspace{1em}Northern America & 69,9 & 73,8 & 73,9 & 75,4 & 79,1 & 81,5\\
+\hspace{1em}United States & 70,0 & 73,6 & 73,7 & 75,3 & 79,1 & 81,5\\
+\hspace{1em}Argentina & 73,6 & 78,9 & 82,9 & 87,0 & 89,1 & 91,4\\
+\hspace{1em}Brazil & 46,1 & 55,9 & 65,5 & 73,9 & 81,2 & 85,5\\
+\bottomrule
+\end{tabular}
+\end{table}
+\bcenter
+
+Fonte: Goldewijk, Beusen, and Janssen (\protect\hyperlink{ref-doi:10.1177ux2f0959683609356587}{2010})
+\ecenter
+
+Ainda, pra melhor explicação, foram elaborados os gráficos das figuras
+\ref{fig:pop-urb-mundo} a \ref{fig:pop-urb-brazil-brics}.
+
+Na figura \ref{fig:pop-urb-mundo}, pode-se notar que a população urbana no
+Brasil vem aumentando, desde 1950, numa taxa superior à média dos países em
+desenvolvimento (\emph{Less developed regions}), atingindo uma proporção superior
+inclusive à dos países mais desenvolvidos (\emph{More developed regions}).
+\begin{figure}[H]
+
+{\centering \includegraphics[width=0.8\linewidth]{images/pop-urb-mundo-1} 
+
+}
+
+\caption{População Urbana - Brasil vs. Mundo.}\label{fig:pop-urb-mundo}
+\end{figure}
+\bcenter
+
+Fonte: Goldewijk, Beusen, and Janssen (\protect\hyperlink{ref-doi:10.1177ux2f0959683609356587}{2010})
+\ecenter
+
+Na figura \ref{fig:pop-urb-continents} pode-se ver as séries da população
+urbana em diversos continentes desde 1800. Percebe-se neste gráfico também uma
+maior aceleração do crescimento da população urbana na América Latina e Caribe a
+partir de meados da década de 40, chegando esta região a ultrapassar a população
+urbana da Europa Ocidental no início do século corrente.
+\begin{figure}[H]
+
+{\centering \includegraphics[width=0.8\linewidth]{images/pop-urb-continents-1} 
+
+}
+
+\caption{População Urbana - Nos diferentes Continentes.}\label{fig:pop-urb-continents}
+\end{figure}
+\bcenter
+
+Fonte: Goldewijk, Beusen, and Janssen (\protect\hyperlink{ref-doi:10.1177ux2f0959683609356587}{2010})
+\ecenter
+
+A figura \ref{fig:pop-urb-brazil-latinAmerica} mostra a evolução da população
+urbana no Brasil em comparação com o continente sul-americano e a América Latina,
+dando destaque para alguns vizinhos.
+\begin{figure}[H]
+
+{\centering \includegraphics[width=0.8\linewidth]{images/pop-urb-brazil-latinAmerica-1} 
+
+}
+
+\caption{População Urbana - Brasil vs. AL.}\label{fig:pop-urb-brazil-latinAmerica}
+\end{figure}
+\bcenter
+
+Fonte: Goldewijk, Beusen, and Janssen (\protect\hyperlink{ref-doi:10.1177ux2f0959683609356587}{2010})
+\ecenter
+
+A figura \ref{fig:pop-urb-brazil-developed} mostra o comparativo da população
+urbana no Brasil com uma seleção de países desenvolvidos desde 1800. Quanto aos
+países desenvolvidos, nota-se que tiveram, primeiramente, uma ascenção um pouco
+mais lenta da população urbana (excessão para a Grã-Bretanha, primeira nação a
+industrializar-se), que essa ascenção teve lugar já na década de 1850 e que
+houve uma estabilização gradual, por volta da década de 1970. Já quanto ao
+Brasil nota-se uma grande aceleração no crescimento da população urbana
+brasileira após a década de 1950, o que reflete o nascimento tardio do
+capitalismo por aqui e, por fim, que, ao contrário dos países desenvolvidos, não
+houve ainda uma estabilização da proporção de população urbana e esta segue em
+crescimento, tendo chegado a níveis maiores aqui do que no resto do mundo
+desenvolvido.
+\begin{figure}[H]
+
+{\centering \includegraphics[width=0.8\linewidth]{images/pop-urb-brazil-developed-1} 
+
+}
+
+\caption{População Urbana - Brasil vs. Países Desenvolvidos.}\label{fig:pop-urb-brazil-developed}
+\end{figure}
+\bcenter
+
+Fonte: Goldewijk, Beusen, and Janssen (\protect\hyperlink{ref-doi:10.1177ux2f0959683609356587}{2010})
+\ecenter
+
+E a figura \ref{fig:pop-urb-brazil-brics} mostra a comparação dos dados do
+Brasil com os outros países do grupo dos BRICS.
+\begin{figure}[H]
+
+{\centering \includegraphics[width=0.8\linewidth]{images/pop-urb-brazil-brics-1} 
+
+}
+
+\caption{População Urbana - Brasil vs. BRICS.}\label{fig:pop-urb-brazil-brics}
+\end{figure}
+\bcenter
+
+Fonte: Goldewijk, Beusen, and Janssen (\protect\hyperlink{ref-doi:10.1177ux2f0959683609356587}{2010})
+\ecenter
+
+Em meados dos anos 60, apenas 46,1\% da população brasileira era urbana, uma
+proporção bem menor do que a dos países do então \emph{primeiro mundo} (EUA e Europa
+Ocidental), hoje ditos \emph{desenvolvidos}, que girava então em torno dos 70\% da
+população.
+
+Em apenas 10 anos, já em meados da década de 70, este número sofria um aumento
+vertiginoso de quase 10 pontos percentuais, com 55,9\% da população urbana. A
+população urbana brasileira equiparava-se à da Europa Oriental.
+Já na década de 80 a população urbana no Brasil ultrapassaria a da Europa
+Oriental, chegando à valores próximos da média para o continente europeu como um
+todo (ocidental e oriental), enquanto a população urbana no mundo desenvolvido
+se estagnava.
+
+Chegado os anos 90, a população urbana brasileira atingiu notáveis 73,9\% da
+população brasileira, número equiparado ao da população urbana do mundo
+desenvolvido (74\% na Europa Ocidental).
+
+Em meados dos anos 2000, já então no século atual, ousamos ultrapassar, em
+proporção, a população urbana da Europa Ocidental e a dos EUA, chegando ao
+último dado de 2015, com 85,8\% da população brasileira vivendo nas cidades.
+
+Há de se levar em consideração, ainda, que este ``êxodo rural'' ainda foi
+acompanhado de um crescimento demográfico expressivo.
+
+Todo este crescimento expressivo seria salutar se tivesse se dado no contexto do
+rápido desenvolvimento da economia nacional. Isto, porém, não ocorreu durante
+todo o período analisado. O crescimento da economia brasileira acelerou-se na
+segunda quadra da década de 60 e manteve-se alto até fins da década seguinte,
+porém estagnou-se na década de 80, a chamada década perdida, sem que com isso a
+população urbana deixasse de crescer vertiginosamente.
+
+Para Rangel (\protect\hyperlink{ref-rangel1986a}{2012}\protect\hyperlink{ref-rangel1986a}{d}, 151):
+\begin{citacao}
+"essa redistribuição da população entre os quadros urbano e rural não tem, em si
+mesma, nada de anormal.[...] A urbanização, em si mesma, é um fenômeno
+perfeitamente normal, numa economia em processo de industrialização. O que não é
+normal é o ritmo que imprimimos ao \emph{nosso} processo de urbanização, que
+implica criar, nas cidades, uma oferta de mão-de-obra em descompasso com a
+demanda que a industrialização vai criando."
+\end{citacao}
+Todo este processo só poderia, então, ter desaguado no inchaço das principais
+cidades brasileiras. Desnecessário dizer que o planejamento urbano nestas
+condições é praticamente inviável. As administrações municipais, nem que fossem
+as mais eficientes, teriam capacidade de planejar e disciplinar o uso do solo
+urbano nesta ``velocidade migratória''.
+
+Segundo Rangel, com o desenvolvimento da indústria pesada no Brasil, a crise
+agrária, antes cíclica, tornou-se crônica, criando um (\protect\hyperlink{ref-rangel1988}{2012}\protect\hyperlink{ref-rangel1988}{i}, 156--57):
+\begin{citacao}
+"vasto deslocamento de população, na direção geral campo-cidade. Esse movimento
+se faz escalonadamente, das áreas rurais para as cidades pequenas; destas para
+as médias e grandes, e posteriormente para as metrópoles gigantes. No fim da
+linha, portanto, vamos encontrar as cidades de São Paulo e do Rio de Janeiro".
+\end{citacao}
+Enfim, para Rangel, a origem deste ``multitudinário deslocamento demográfico'',
+está ``o modo como o país preparou sua estrutura agrária para a industrialização''.
+
+\hypertarget{a-questuxe3o-agruxe1ria}{%
+\section{A questão agrária}\label{a-questuxe3o-agruxe1ria}}
+
+Segundo Rangel, a Questão Agrária, embora nascida na área rural, é um fenômeno
+urbano. Com isto Rangel quer dizer que a crise agrária, a crise que se dá na
+transição do feudalismo para o capitalismo, começa no campo, onde se passa o
+enredo do feudalismo, para a cidade moderna, onde se desenvolve o capitalismo.
+
+Para uma melhor compreensão da questão se faz mister compreender os mecanismos
+de funcionamento dos sistemas citados, isto é, do feudalismo e do capitalismo,
+especialmente no que tange a transição entre eles, nos motivos que levam ao
+fim de um sistema e desembocam quase que inequivocamente (excetos raras
+exceções) no outro.
+
+\hypertarget{feudalismo}{%
+\subsection{Feudalismo}\label{feudalismo}}
+
+As ``leis'', ou princípios, ou ainda os ``motores primários'' do feudalismo são
+(Rangel \protect\hyperlink{ref-rangel1985}{2012}\protect\hyperlink{ref-rangel1985}{k}, 126):
+\begin{itemize}
+\tightlist
+\item
+  \emph{All land is king's land}
+\item
+  \emph{Nulle terre sans seigneur}
+\end{itemize}
+O primeiro princípio, \emph{all land is king's land}, ou ``toda a terra pertence ao
+rei'', quer dizer, mais precisamente, que todo o domínio da terra está
+concentrada nas mãos do rei, que as explora através dos laços de suserania e
+vassalagem, típicos do feudalismo. Já o segundo princípio, segundo Rangel
+(\protect\hyperlink{ref-rangel1961}{2012}\protect\hyperlink{ref-rangel1961}{e}, 219), \emph{nulle terre sans seigneur}, quer dizer que ``a existência
+de terra livre é incompatível com o feudalismo'', ou seja, toda a terra deve
+ter um senhor, que a administra a serviço da Coroa e lhe paga tributo. Na\\
+existência de terra livre, como será visto, o feudalismo não de pode desenvolver,
+e a tendência é que haja ou a formação de comunidades em estado tribal, ou que
+sejam estabelecidas formas de escravidão. Ou seja, a terra, ``nas condições
+feudais, não tem preço e é, de fato ou de direito, inalienável'' (Rangel \protect\hyperlink{ref-rangel1960}{2012}\protect\hyperlink{ref-rangel1960}{f}, 206).
+
+\hypertarget{o-feudalismo-no-brasil}{%
+\subsubsection{O feudalismo no Brasil}\label{o-feudalismo-no-brasil}}
+
+Segundo Rangel (\protect\hyperlink{ref-rangel1956}{2012}\protect\hyperlink{ref-rangel1956}{g}, 206), a atitude do economista do país
+subdesenvolvido não pode ser a mesma do economista dos países mais
+desenvolvidos, que, \emph{tendo vivido o processo histórico completo, assistiram
+simultaneamente à morte do ser antigo e à sua representação}.
+\begin{citacao} 
+a absorção sem crítica do \emph{dernier cri} em matéria de ciência econômica por
+ele lhe será fatal, porque implica mudar o reflexo ideal da realidade sem que
+essa realidade mesma tenha mudado, ou sem que tenha mudado senão em parte. Para
+nós, o pensamento dos antigos guarda muito de sua primitiva validade porque
+reflete uma realidade que, em certa medida, continua a ser a nossa
+\cite[p.~206-207]{rangel1956}.
+\end{citacao}
+Em outras palavras, para Rangel (\protect\hyperlink{ref-rangel1956}{2012}\protect\hyperlink{ref-rangel1956}{g}), os economistas dos países
+subdesenvolvidos, ou mais modernamente, países ``em desenvolvimento'', devem
+utilizar em sua análise as teorias clássicas, neoclássicas, keynesianas, à
+medida que subsistem nestes países características próprias da realidade
+econômica que imperavam no Velho Mundo quando elas foram concebidas.
+
+Desta maneira, o feudalismo tal como concebido na Europa não teve a mesma
+estrutura que o feudalismo no Brasil, assim como o sistema feudal brasileiro foi
+não-concomitante com o sistema feudal europeu.
+
+Segundo Rangel (\protect\hyperlink{ref-rangel1989}{2012}\protect\hyperlink{ref-rangel1989}{h}, 726), através da bula papal de Alexandre IV, de
+4 de maio de 1493 (ainda que tenha sido depois alterada apelo tratado de
+Tordesilhas), toda a terra onde hoje encontra-se a América Latina era declarada
+propriedade do rei. Isto é, estava satisfeito o primeiro princípio para a
+implantação do feudalismo nos trópicos: \emph{all land is king's land}. A propriedade
+sobre as terras era total, de maneira que podesse dizer que, juridicamente, em
+nenhum momento a a propriedade fundiária esteve mais concentrada do que naquele
+primeiro momento.
+
+O segundo princípio, no entanto, \emph{nulle terre sans seigneur}, ou seja, o
+princípio de que não deve haver terra sem senhor, também indispensável para a
+existência do feudalismo -- no surgimento do feudalismo na Europa, sem que todas
+as terras social e economicamente significativas estivessem apropriadas, a
+tendência natural do escravo liberto seria o retorno às condições de vida
+tribal -- não era possível em território tão vasto e inexplorado como era o
+território latino-americano naquele momento (Rangel \protect\hyperlink{ref-rangel1989}{2012}\protect\hyperlink{ref-rangel1989}{h}, 726).
+
+Desta maneira, os feudos que aqui se iam estabelecendo, através do instituto da
+enfiteuse (Rangel \protect\hyperlink{ref-rangel1989}{2012}\protect\hyperlink{ref-rangel1989}{h}, 726), os pactos de suserania-vassalagem que iam do servo
+do gleba ao rei, passando por diversos patamares, muito diferiam dos feudos
+europeus da Alta Idade Média, que ao contrário dos pactos aqui estabelecidos,
+começavam a ser constituídos pela base, convertendo os escravos libertos em
+servos e constituindo a pequena e a grande nobreza, ``tendendo afinal a, com o
+tempo, colocar no píncaro o rei'' (Rangel \protect\hyperlink{ref-rangel1989}{2012}\protect\hyperlink{ref-rangel1989}{h}, 727).
+
+A esse respeito também escreveu Alceu Amoroso Lima (\protect\hyperlink{ref-amoroso}{1981}, 51), na grande
+obra organizada por Vicente Licínio Cardoso:
+\begin{citacao}
+Foi-se vendo pouco a pouco – e até hoje o vemos ainda com surpresa, por vezes –
+que o Brasil se formara às avessas, começara pelo fim. Tivera Coroa antes de ter
+Povo. Tivera parlamentarismo antes de ter eleições. Tivera escolas superiores
+antes de ter alfabetismo. Tivera bancos antes de ter economias. Tivera salões
+antes de ter educação popular. Tivera artistas antes de ter arte. Tivera
+conceito exterior antes de ter consciência interna. Fizera empréstimos antes de
+ter riqueza consolidada. Aspirara a potência mundial antes de ter a paz e a
+força interior. Começara em quase tudo pelo fim. Fora uma obra de inversão.
+\end{citacao}
+Segundo Rangel (\protect\hyperlink{ref-rangel1989}{2012}\protect\hyperlink{ref-rangel1989}{h}, 729), as condições em que operavam os nossos
+feudos mais se assemelhavam às vigentes na República Romana e nos primeiros
+tempos do Império, o que quer dizer que, aqui, internamente, até que o monopólio
+da terra estivesse garantido, somente haveria viabilidade para o sistema
+escravagista.
+
+Com efeito, é sabido que foi necessário importar o escravo africano, que era
+socialmente mais avançado que os índios que aqui habitavam, fazendo-o
+prisioneiro do latifúndio, haja vista que o índio estava habituado a prover o
+seu sustento de forma natural nas terras que aqui habitavam.
+
+A Coroa portuguesa (Rangel \protect\hyperlink{ref-rangel1989}{2012}\protect\hyperlink{ref-rangel1989}{h}, 731):
+\begin{citacao}
+não tinha pressa em dispor de todas as suas terras, mas apenas das suficientes
+para implantar fazendas e estâncias, deixando aberta a porta para novas doações,
+que comprassem novas vassalagens, aumentando o poder, a riqueza e a glória da
+Coroa.
+\end{citacao}
+Assim, sobravam terras entre uma fazenda e outra, o que impossibilitava o modo
+de produção feudal (pela não satisfação do princípio \emph{nulle terre sans
+seigneur}), mas apenas o modo de produção escravista. Exceto por algumas regiões
+do Brasil onde a pecuária extensiva logrou ocupar uma vasta extensão contínua de
+terra, como no Rio Grande do Sul, o feudalismo só viria a se estabelecer muito
+tempo depois, com a abolição da escravidão (1888) e a Proclamação da República
+(1889) (Rangel \protect\hyperlink{ref-rangel1989}{2012}\protect\hyperlink{ref-rangel1989}{h}, 732--33).
+
+Porém, para que fosse possível o fim da escravidão sem que houvesse retorno às
+formas primitivas de produção pré-escravagistas, foi necessário um longo
+processo que teve início com a Lei do Tráfico e a Lei de Terras, ambas de 1850
+(Rangel \protect\hyperlink{ref-rangel1989}{2012}\protect\hyperlink{ref-rangel1989}{h}, 732).
+
+Enquanto a Lei do Tráfico levaria inevitavelmente ao fim da escravidão em algum
+ponto futuro, já que a ``lei demográfica peculiar ao escravismo é a reprodução
+restrita, o que supõe aportes constantes de mão de obra alienígena'', a Lei de
+Terras preparava o território para o novo regime que teria lugar, o feudalismo,
+através da promoção da efetiva ocupação do território, ou seja, de todas as
+terras acessíves, habitáveis e agricultáveis (Rangel \protect\hyperlink{ref-rangel1989}{2012}\protect\hyperlink{ref-rangel1989}{h}, 732--33).
+
+Vale dizer que, onde a condição \emph{nulle terre sans seigneur} não logrou após a
+abolição da escravidão, como no estado Maranhão, houve retrocesso a relações de
+produção pré-escravistas (Rangel \protect\hyperlink{ref-rangel1989}{2012}\protect\hyperlink{ref-rangel1989}{h}, 733--34).
+
+\hypertarget{a-crise-do-feudalismo}{%
+\subsection{A crise do feudalismo}\label{a-crise-do-feudalismo}}
+
+A crise clássica da sociedade feudal ocorre quando a produção agrícola não
+consegue suprir a demanda da superpopulação gerada. Segundo Rangel
+(\protect\hyperlink{ref-rangel1961}{2012}\protect\hyperlink{ref-rangel1961}{e}, 219):
+\begin{citacao} 
+"tempo houve em que a expansão do estoque populacional era objetivamente a
+maneira mais eficaz de expandir as forças produtivas e o produto social. Nesse
+tempo (regime feudal), a riqueza dos príncipes se media pelas almas dos seus
+domínios, e aumentar o número destas era a maneira óbvia de expandir aquela
+riqueza e também a do corpo social. Este foi forjando para si uma ética, um
+direito e uma política conducentes a esse resultado".
+\end{citacao}
+A crise do feudalismo, sistema eminentemente agrário, e o consequente surgimento
+do capitalismo, com o surgimento das cidades modernas, se dá no contexto da
+dissolução do Complexo Rural, o que descreve-se nas seções a seguir.
+
+\hypertarget{a-crise-do-feudalismo-no-brasil}{%
+\subsection{A crise do feudalismo no Brasil}\label{a-crise-do-feudalismo-no-brasil}}
+
+O feudalismo no Brasil desenvolveu-se a partir da Abolição-República,
+concomitantemente com a implantação, especialmente no quadro urbano, de uma
+vigorosa economia capitalista. No campo, ao lado do velho latifúndio feudal,
+logo surgiu outro latifúndio que, em vez de distribuir lotes entre os agregados
+-- como seria natural na desintegração do feudalismo clássico -- empreendeu, ele
+próprio, a atividade agrícola, usando mão-de-obra assalariada (Rangel \protect\hyperlink{ref-rangel1989}{2012}\protect\hyperlink{ref-rangel1989}{h}, 738--39).
+
+Segundo Rangel (\protect\hyperlink{ref-rangel1989}{2012}\protect\hyperlink{ref-rangel1989}{h}, 739), o latifúndio feudal, então, percebendo-se
+que havia tendência de seus agregados deixarem de lado o trabalho nos lotes
+que haviam recebido no processo de abolição da escravidão, para trabalhar nas
+novas fazendas capitalistas, logo comecou a deslocar esses agregados, dando
+origem ao processo do êxodo rural.
+
+\hypertarget{o-complexo-rural}{%
+\subsubsection{O Complexo Rural}\label{o-complexo-rural}}
+\begin{citacao} 
+A população de um país de economia mercantil debilmente desenvolvida (ou não 
+desenvolvida de todo) é quase exclusivamente agrícola. Todavia, não se deve 
+deduzir daí que ela se ocupa só da agricultura. Significa apenas que a população 
+ocupada na agricultura transforma, ela mesma, os produtos da terra, sendo quase 
+inexistentes o intercâmbio e a divisão do trabalho. 
+(LENIN *apud* \cite[p. 99]{rangel1954}) 
+\end{citacao}
+Segundo Rangel (\protect\hyperlink{ref-rangel1956}{2012}\protect\hyperlink{ref-rangel1956}{g}, 98), a unidade agrícola fechada é
+\begin{citacao}
+um microcosmo econômico no qual as pessoas distribuem seu tempo entre numerosas
+atividades. Cada uma dessas atividades representa o estado rudimentar daquilo
+que, com o desenvolvimento, se tornará uma 'indústria' (...) É evidente que o
+camponês não tem consciência da multiplicidade de suas atividades. Ele considera
+que elas formam um todo indivisível. Essa inespecialização é sua especialidade.
+(\ldots) Chamaremos esse microcosmo econômico, essa 'matriz de insumo-produto' em
+miniatura, de 'complexo rural'.
+\end{citacao}
+\hypertarget{condiuxe7uxf5es-e-muxe9todos-de-abertura-do-complexo-rural}{%
+\subsubsection{Condições e Métodos de abertura do Complexo Rural}\label{condiuxe7uxf5es-e-muxe9todos-de-abertura-do-complexo-rural}}
+
+Para a abertura do Complexo Rural é necessário que haja vantajosidade para a
+economia de mercado e para a economia natural do próprio Complexo.
+\begin{citacao} 
+A Abertura do Complexo Rural não é uma operação momentânea, mas sim um largo
+processo, com altos e baixos e problemas sempre novos. Sua história está muito
+longe de ser idílica. Ao contrário, está cheia de violência. Uma planificação
+econômica que não resolva preliminarmente este problema é inconcebível.
+Alternadamente, pode conduzir à liberação de mais fatores que aqueles que os
+setores não agrícolas podem usar, fazendo toda a economia submergir em uma crise
+profunda, ou condenar esses setores à estagnação por insuficiência de
+fatores.[@rangel1954, p. 118]
+\end{citacao}
+As medidas tendentes a romper o complexo rural podem ser classificadas em dois
+grupos (Rangel \protect\hyperlink{ref-rangel1954}{2012}\protect\hyperlink{ref-rangel1954}{j}, 113):
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\item
+  as que oferecem um incentivo positivo para a incorporação, à economia de
+  mercado, dos fatores usados pelo complexo e;
+\item
+  as que buscam forçar a abertura do complexo a partir de dentro, provocando
+  uma deterioração da produtividade das atividades manufatureiras dentro do
+  complexo.
+\end{enumerate}
+As medidas do tipo a) tem seu exemplo mais típico nos EUA e também na França,
+enquanto as medidas do tipo b) predominaram na Inglaterra, Alemanha e Japão
+(Rangel \protect\hyperlink{ref-rangel1954}{2012}\protect\hyperlink{ref-rangel1954}{j}, 114--15).
+
+\hypertarget{uxeaxodo-rural-e-industrializauxe7uxe3o}{%
+\subsection{Êxodo rural e industrialização}\label{uxeaxodo-rural-e-industrializauxe7uxe3o}}
+\begin{citacao}
+A revolução democrático-burguesa, nos casos em que a gleba feudal é -- como
+aconteceu na Europa Ocidental (principalmente, na França) e nos Estados Unidos
+-- substituída pela pequena propriedade familiar ou *homestead*, ao fortalecer
+as bases da economia natural ou de autoconsumo, resolve satisfatoriamente o
+problema na absorção dos excedentes de mão-de-obra no seio da própria economia
+camponesa, estancando ou reduzindo drasticamente o fluxo populacional
+responsável pelo êxodo campo-cidade [@rangel1986b, 133]. 
+\end{citacao}
+Segundo Rangel (\protect\hyperlink{ref-rangel1986b}{2012}\protect\hyperlink{ref-rangel1986b}{b}, 133), no entanto, ``esse tipo de superação das
+relações de produção feudais'', ou seja, a revolução democrático-burguesa, ``não é
+característico do Brasil. Sem embargo do surgimento de algumas `ilhas' de
+pequena propriedade camponesa, notadamente nas áreas de colonização européia e
+japonesa nos estados do Sul, que mais confirmam a regra.''
+
+Pelo contrário, ``o modelo de desenvolvimento do capitalismo na agricultura
+brasileira foi e é a grande exploração capitalista, cada dia mais propensa ao
+uso de mão-de-obra assalariada e tendendo sempre ao desmantelamento das bases da
+economia natural, causando por isso mesmo, o fenômeno do \textbf{êxodo rural}''
+(Rangel \protect\hyperlink{ref-rangel1986b}{2012}\protect\hyperlink{ref-rangel1986b}{b}, 134, grifo nosso).
+
+O caso brasileiro, porém, não é único: ``a industrialização da Inglaterra fez-se
+também, originariamente, nas condições de um enorme excedente de mão de obra,
+causado pelo \emph{enclosure}\footnote{\emph{Enclosure} - literalmente, cercamento. Movimento pelo qual os pequenos
+  agricultores ingleses foram expulsos de terras, convertidas estas à pecuária, e
+  amontoados nos \emph{slums}, ou favelas das cidades industriais nascentes, na
+  primeira metade do século XIX.} \ldots{}''. No caso inglês, porém, ``o motor primário'' do
+desenvolvimento foi a produção manufatureira para exportação, enquanto no Brasil
+a industrialização teve seu desenvolvimento estimulado, ``nas condições de uma
+crônica crise cambial'', pela política de substituição de importações
+(Rangel \protect\hyperlink{ref-rangel1962}{2012}\protect\hyperlink{ref-rangel1962}{a}, 43--44).
+
+Ocorre que, de acordo com Rangel (\protect\hyperlink{ref-rangel1986b}{2012}\protect\hyperlink{ref-rangel1986b}{b}, 134), ``a superabundância e a
+barateza da mão-de-obra não costumam ser bons condicionantes do processo de
+industrialização, dado que desestimulam a formação de capital, isto é, o
+investimento. Ora, numa economia capitalista, o investimento é o motor primário
+do desenvolvimento \ldots{}''.
+
+Por este motivo, a ``economia brasileira, nas condições de uma crise agrária
+profunda e crônica que, entre outras coisas, \textbf{causava uma urbanização
+monstruosa}, sem comparação possível com a demanda de mão-de-obra que a
+indústria e os serviços não-agrícolas estavam suscitando nas cidades (perto de
+três milhões de novos citadinos a cada ano)\ldots{}'' (Rangel \protect\hyperlink{ref-rangel1986b}{2012}\protect\hyperlink{ref-rangel1986b}{b}, 134).
+
+\hypertarget{o-uxeaxodo-rural-como-obstuxe1culo-ao-desenvolvimento}{%
+\subsubsection{O êxodo rural como obstáculo ao desenvolvimento}\label{o-uxeaxodo-rural-como-obstuxe1culo-ao-desenvolvimento}}
+\begin{citacao}
+Ordinariamentem a industrialização pressupõe certa escassez latente de 
+mão-de-obra, levando o empresário capitalista a buscar, pelo emprego de bens
+modernos de equipamento, economizar o fator trabalho. O resultado é a elevação 
+da taxa de investimento, o aumento da procura de bens de capital e de novas
+construções, para o que se torna mister empregar mais mão-de-obra 
+[@rangel1962, 43].
+\end{citacao}
+No capitalismo, é conhecido o papel do investimento ou formação de capital nas
+taxas de desemprego. Segundo Rangel (\protect\hyperlink{ref-rangel1988}{2012}\protect\hyperlink{ref-rangel1988}{i}, 156), ``por um lado, via
+efeito multiplicador (efeito para trás), o investimento cria emprego de
+mão-de-obra; por outro lado, via implementação de nova tecnologia, promove
+dispensa de mão-de-obra (efeito para frente)''.
+
+Segundo Rangel (Rangel \protect\hyperlink{ref-rangel1986c}{2012}\protect\hyperlink{ref-rangel1986c}{c}, 142), um ``\,`exército industrial de reserva'
+limitado, isto é, algum desemprego, pode ser considerado útil, do ponto de vista
+da produção capitalista, porque serve de instrumento de coerção para os
+trabalhadores livres, fortalecendo assim a disciplina no trabalho''. No entanto,
+quando este torna-se excessivo, ``pode converter-se em obstáculo ao
+desenvolvimento da própria economia capitalista. Ora, aqui está o nosso
+problema, dado que o `exército industrial de reserva' brasileiro tornou-se
+teratologicamente grande. Por isso mesmo, a questão agrária, que se exprime
+precipuamente pela formação desse `exército', não interessa apenas aos
+camponeses, mas à sociedade como um todo.''
+
+De acordo com Rangel (\protect\hyperlink{ref-rangel1988}{2012}\protect\hyperlink{ref-rangel1988}{i}, 156), ``a via democrática -- divisão dos
+latifúndios em pequenas propriedades -- ao favorecer uma distribuição menos
+desigualitária de renda, cria condições para um vigoroso efeito multiplicador
+dos investimentos, isto é, forte efeito para trás. Inversamente, a via
+prussiana, ao promover uma distribuição de renda mais desigualitária, debilita o
+efeito multiplicador, isto é, para trás, mas, por força da concentração de
+renda, aumenta o peso relativo dos investimentos dispensando mão-de-obra e, por
+isso mesmo, aumentando o efeito para diante.''
+
+\hypertarget{reforma-agruxe1ria}{%
+\subsection{Reforma agrária}\label{reforma-agruxe1ria}}
+
+Como foi visto, o assunto é complexo e requer uma análise de todo o contexto
+econômico, social e político vigente. A tão sonhada ``reforma agrária'' a que
+normalmente se refere a mídia, os movimentos sociais ou a população em geral,
+deveria ter tido lugar ainda na década de 1930, ou seja, em fase anterior ao
+início da industrialização brasileira. Para Rangel (Rangel \protect\hyperlink{ref-rangel1986a}{2012}\protect\hyperlink{ref-rangel1986a}{d}, 154), a
+``reforma agrária, no sentido convencional da expressão, isto é, a implantação de
+propriedade familiar suficientemente ampla, para permitir, ao lado da produção
+agrícola para o mercado, uma produção complementar agrícola e não-agrícola, isto
+é, para autoconsumo, pode justificar-se em certos casos, especialmente quando
+seja possível o renascimento da policultura tradicional e onde a fazenda
+capitalista, mono ou oligoculturista, ainda não tenha aparecido''. No atual
+contexto econômico, porém, esta reforma, com a dissolução do latifúndio
+produtivo para assentamento de famílias, levaria a uma regressão tecnológica no
+campo, o que seria altamente prejudicial para a economia brasileira como um
+todo.
+
+Isto dito, Rangel então propõe então que, no Brasil, com a agricultura
+capitalista plenamente desenvolvida, uma segunda variante de reforma agrária,
+``\emph{não necessariamente rural}'', com a finalidade de ``recompor a economia natural
+onde quer que isto seja possível'', viabilizando ``uma produção complementar,
+deixando a produção agrícola para o mercado a cargo da fazenda capitalista com
+mão-de-obra assalariada'',seja implementada (Rangel \protect\hyperlink{ref-rangel1986a}{2012}\protect\hyperlink{ref-rangel1986a}{d}, 155).
+
+\hypertarget{considerauxe7uxf5es-a-respeito-da-valorizauxe7uxe3o-da-terra-no-brasil}{%
+\section{Considerações a respeito da valorização da terra no Brasil}\label{considerauxe7uxf5es-a-respeito-da-valorizauxe7uxe3o-da-terra-no-brasil}}
+
+Para Rangel (\protect\hyperlink{ref-rangel1986b}{2012}\protect\hyperlink{ref-rangel1986b}{b}, 138--39), o problema da terra é uma questão
+financeira. Quer com isso dizer que, ultrapassados os problemas jurídicos da
+nossa legislação pré-capitalista (Lei de Terras de 1850), que dificultava a
+comercialização da terra, o problema do acesso à terra resume-se ao problema da
+capacidade do camponês de comprá-la, o que deveria ter se tornado possível
+devido ao esperado declínio do preço da terra que viria com a expansão das
+fronteiras agrícolas, mas que não ocorreu, devido à \emph{demanda especulativa}, o
+que é um \emph{problema financeiro}.
+
+\hypertarget{a-tenduxeancia-uxe0-elevauxe7uxe3o-de-preuxe7os-nos-peruxedodos-de-recessuxe3o-econuxf4mica}{%
+\subsection{A tendência à elevação de preços nos períodos de recessão econômica}\label{a-tenduxeancia-uxe0-elevauxe7uxe3o-de-preuxe7os-nos-peruxedodos-de-recessuxe3o-econuxf4mica}}
+
+Considerando-se que a \emph{demanda especulativa} aumenta nos períodos de recessão,
+quando não há melhores oportunidades de investimento, a tendência é que o preço
+da terra varie inversamente à \emph{eficácia marginal do capital}.
+
+Isto se explica pelo motivo que, em períodos de recessão econômica, a
+atratividade dos investimentos na economia real diminui. Os capitais sobrantes
+do período anterior de expansão/acumulação, então, na falta de boas
+oportunidades de aplicação, torna-se `excessivo' e ocasionando a diminuição da
+\emph{eficácia marginal do capital}, o que se reflete na taxa de juros básica da
+economia. Esta diminuição da rentabilidade do capital faz com que os
+investidores procurem formas alternativas de alocação financeira destes
+capitais, ou seja, há um aumento da \emph{demanda especulativa}, seja no mercado
+imobiliário, seja no mercado mobiliário.
+
+Outros fatores também podem agravar o problema. A entrada do Estado no mercado
+fundiário como comprador com fins de realização de reforma agrária, por exemplo,
+de acordo com Rangel (\protect\hyperlink{ref-rangel1985}{2012}\protect\hyperlink{ref-rangel1985}{k}, 128), promoveria a elevação do preço da
+terra, o que aumentaria ainda mais o problema agrário.
+
+Desta forma, a reforma agrária viria naturalmente com a solução do problema
+financeiro da economia, ou seja, com a abertura de novas possibilidades de
+investimentos que diminuíssem a demanda especulativa sobre a terra. Como a
+demanda de terra para cultivo e construção seria pequena em relação à demanda
+especulativa, o preço da terra tenderia a cair naturalmente (Rangel \protect\hyperlink{ref-rangel1986b}{2012}\protect\hyperlink{ref-rangel1986b}{b}, 139).
+
+\hypertarget{pressupostos-da-anuxe1lise-de-rangel}{%
+\section{Pressupostos da análise de Rangel}\label{pressupostos-da-anuxe1lise-de-rangel}}
+
+Ora, lá se vão quase 35 anos da análise de Rangel. Seria no mínimo questionável
+ainda, senão a validade da análise, mas pelo menos a sua atualidade.
+
+Primeiramente, não consta que a demanda especulativa sobre a terra tenha caído,
+pelo menos não ao ponto do preço da terra cair a um nível que possibilitasse uma
+verdadeira reforma agrária, conforme previa Rangel.
+
+De acordo com Rangel (\protect\hyperlink{ref-rangel1986b}{2012}\protect\hyperlink{ref-rangel1986b}{b}), contudo, estudos levados a cabo pelo IPEA
+\emph{a posteriori} confirmaram a sua hipótese da variação do preço da terra em
+sentido inverso da eficácia marginal do capital que, \emph{coeteris paribus},
+determina o preço dos valores mobiliários.
+
+Deve-se levar em conta, no entanto, que a análise de Rangel é prévia à abertura
+das contas de capital do balanço de pagamento, ou seja, do estabelecimento do
+livre (in)fluxo de capital estrangeiro no país, o que deve ter sido o
+responsável pela manutenção da demanda especulativa sobre o preço da terra até
+os tempos recentes.
+
+Adams and Füss (\protect\hyperlink{ref-ADAMS201038}{2010}) mostrou que, apesar dos bens raízes serem ligados ao mercado
+local, os mercados imobiliários de diversos países apresentam alta correlação, o
+que pode ser explicado pelo livre fluxo de capitais entre os diversos países
+desde o Consenso de Washington, na década de 1990. A figura \ref{fig:adams2}
+mostra que a alta de preços de imóveis nos países estudados por Adams and Füss (\protect\hyperlink{ref-ADAMS201038}{2010}).
+\begin{figure}[H]
+
+{\centering \includegraphics[width=\textwidth]{./images/adams2_crop} 
+
+}
+
+\caption{Interconexão dos preços dos imóveis em diversos países.}\label{fig:adams2}
+\end{figure}
+\bcenter
+
+Fonte: Adams and Füss (\protect\hyperlink{ref-ADAMS201038}{2010}).
+\ecenter
+
+Ainda há de se considerar que a crise agrária crônica não cessou. Pelo contrário,
+se agravou e vem se agravando cada vez mais, tendo o Brasil atingido uma
+proporção de população urbana muito maior do que o seu grau de desenvolvimento
+econômico possibilitaria.
+
+No entanto, outro fator que deve ser levado em conta é estrutural: as taxas de
+juros, sejam de curto ou longo prazo, atingiram os patamares mais baixos da
+série histórica, desde 1954, como será visto no capítulo \ref{economia}.
+
+A grave crise econômica de 2008 e seus efeitos que o mundo vive até os dias
+atuais teve grandes consequências sobre o preço dos ativos imobiliários mundo
+afora. A crise de 2008 gerou uma resposta por parte dos Bancos Centrais de
+praticamente todo o mundo, mas em especial os Bancos Centrais dos países
+desenvolvidos, no sentido de um aumento nunca antes visto da liquidez dos
+sistemas financeiros mundiais, através da redução aos limites mínimos das taxas
+de juros de curto prazo, mas também da aplicação de medidas de recompra de
+títulos de mais longo prazo, reduzindo-se assim também a níveis baixíssimos toda
+a estrutura a termo da taxa de juros. Talvez Rangel nem tivesse cogitado que as
+taxas de juros um dia chegariam a patamares tão baixos que levariam a enormes
+valorizações do preço da terra de maneira não-especulativa, mas de acordo com os
+fundamentos econômicos.
+
+Estas taxas de juros muito baixas, tanto a curto quanto a longo prazo, tem
+estimulado financiamentos imobiliários a taxas de juros negativas no mundo
+desenvolvido (Serapicos \protect\hyperlink{ref-serapicos}{2019}), criando um aumento vertiginoso dos preços dos
+imóveis, muito acima dos fundamentos econômicos de um mundo em estagnação
+econômica crônica, o que vem levando os governos destes países a tomarem medidas
+não-usuais para a regulação do mercado imobiliário, especialmente no que se
+refere ao controle dos preços dos aluguéis, devido à crise habitacional que se
+instalou nestes países desde a crise de 2008 (Ling \protect\hyperlink{ref-berlim}{2019}; Khan \protect\hyperlink{ref-londres}{2018}; Canzian \protect\hyperlink{ref-california}{2019}; Roden \protect\hyperlink{ref-suecia}{2017}).
+
+\hypertarget{efeitos-da-falta-de-reforma-agruxe1ria-no-cadastro-urbano}{%
+\section{Efeitos da falta de reforma agrária no cadastro urbano}\label{efeitos-da-falta-de-reforma-agruxe1ria-no-cadastro-urbano}}
+
+As altas proporções da população urbana nos países ditos \emph{em desenvolvimento} em
+comparação aos \emph{países desenvolvidos} não nos permite imaginar que as
+ferramentas de planejamento urbano desenvolvidas no primeiro mundo surtam o
+efeito esperado em outras regiões menos desenvolvidas do globo, pelo menos não
+na atual realidade econômica-social. E isto também se aplica, é claro, ao
+cadastro técnico multifinalitário.
+
+Enquanto a reforma agrária ideal almejada por muitos infelizmente não tem lugar,
+são o cadastro e as outras ferramentas de planejamento urbano que devem se
+adaptar a essa outra realidade particular da paisagem dos países
+subdesenvolvidos. Tentar, pelo contrário, promover a fórceps a modificação da
+terrível paisagem urbana destes locais para que se enquadrem nos modelos
+teóricos do mundo desenvolvido passaria, necessariamente, pela expulsão das
+classes menos favorecidas das grandes cidades, sem que exista do outro lado uma
+porta de saída.
+
+Obviamente, compreendido este contexto histórico do desenvolvimento do
+capitalismo no Brasil, que não difere muito do desenvolvimento capitalista dos
+outros países da América Latina, não seria de se esperar que o cadastro técnico
+multifinalitário, assim como outras ferramentas do planejamento urbano, como
+concebidos nos países desenvolvidos, possam ser replicadas, sem as devidas
+adaptações, nessa outra realidade, quase que completamente oposta.
+
+Desta maneira, vem em boa hora a implantação de núcleos de estudos específicos
+para o estudo e disseminação do cadastro na América Latina (Todorovski et al. \protect\hyperlink{ref-lalan}{2019}), em que
+entende-se que deve-se, contudo, concentrar os esforços destes núcleos na
+adaptação das ferramentas clássicas do CTM à realidade regional.
+
+\hypertarget{economia}{%
+\chapter{O Mercado Imobiliário e a Economia}\label{economia}}
+\begin{epigrafe}
+    \vspace*{\fill}
+    \begin{flushright}
+    \textit{``a economia é uma ciência histórica por excelência -\\
+    qualidade que partilha com outras ciências sociais.\\
+    Quer isso dizer que está submetida a um duplo processo\\
+    evolutivo: o fenomenal (como representação, como ideia \\
+    da coisa, como `coisa para nós', no sentido kantiano)\\
+    e o numenal (como objeto, coisa representada, `coisa em si')\\
+    \ldots e não pode ser estudada senão nesse duplo contexto.''\\
+    (Rangel, 1956, p. 204)}
+    \end{flushright}
+\end{epigrafe}
+\hypertarget{os-vuxe1rios-significados-do-termo}{%
+\section{\texorpdfstring{Os vários significados do termo \emph{economia}}{Os vários significados do termo }}\label{os-vuxe1rios-significados-do-termo}}
+\begin{citacao}
+A propósito da religião (que, para Marx, era a ideologia por excelência), Hegel
+distinguiu três momentos: \emph{doutrina, crença e ritual}; assim, fica-se
+tentado a distribuir em torno desses três eixos a multiplicidade de ideias
+associadas com o termo `ideologia': a ideologia como um complexo de ideias
+(teorias, convicções, crenças, métodos de argumentação); a ideologia em seu
+aspecto externo, ou seja, a materialidade da ideologia, os Aparelhos Ideológicos
+de Estado; e por fim, o campo mais fugidio, a ideologia `espontânea' que atua
+no cerne da própria `realidade' social.
+\cite[p.~15]{zizek} [@zizek, 15].
+\end{citacao}
+Segundo Singer (\protect\hyperlink{ref-singer}{2005}, 7), é possível distinguir pelo menos três significados
+do termo \emph{economia}:
+\begin{itemize}
+\tightlist
+\item
+  a qualidade de ser estrito ou austero no uso de recursos ou valores;
+\item
+  a característica comum de uma ampla gama de atividades que compõe a \emph{economia}
+  de um país, de uma cidade, etc.
+\item
+  a ciência que tem por objeto a atividade que dá o segundo significado.
+\end{itemize}
+A economia (ciência) é a sistematização do conhecimento sobre a economia
+(atividade).
+
+\hypertarget{a-economia-como-atividade}{%
+\subsection{A economia como atividade}\label{a-economia-como-atividade}}
+
+A ciência se divide a respeito da definição de economia como atividade, entre
+social (escola \emph{marxista}) e individual (escola \emph{marginalista}) (Singer \protect\hyperlink{ref-singer}{2005}, 9).
+
+Enquanto para os \emph{marxistas} a atividade econômica é sempre coletiva, praticada
+mediante a divisão social do trabalho, para os \emph{marginalistas} a atividade
+econômica é em sua essência individual, que atuam autonomamente, tendo em vista
+apenas seus desejos ou suas necessidades (Singer \protect\hyperlink{ref-singer}{2005}, 10).
+
+\hypertarget{a-economia-como-ciuxeancia}{%
+\subsection{A economia como ciência}\label{a-economia-como-ciuxeancia}}
+
+Também diferem os \emph{marxistas} e os \emph{marginalistas} quanto a definição de
+economia como ciência.
+
+Enquanto para os \emph{marxistas} a economia política é a ciência do social,
+abrangendo em seu campo de estudo o conjunto de atividades que formam a vida
+econômica da sociedade (Singer \protect\hyperlink{ref-singer}{2005}, 14), para os \emph{marginalistas} a
+ciência econômica tem como modelo as ciências da natureza, onde cada uma das
+quais tem como objeto próprio um determinado ``setor'' do universo físico.
+Analogamente, as ciências do homem teriam como objeto um ``setor'' do universo
+humano (Singer \protect\hyperlink{ref-singer}{2005}, 15).
+
+Para Rangel (\protect\hyperlink{ref-rangel1956}{2012}\protect\hyperlink{ref-rangel1956}{g}), ``ciência é classificação e medida - não apenas medida, como
+pode se depreender do lema econométrico. Se ciência fosse medida não haveria
+ciência em Aristóteles ou Hegel'' (Rangel \protect\hyperlink{ref-rangel1956}{2012}\protect\hyperlink{ref-rangel1956}{g}, 204).
+
+A evolução da economia, segundo Rangel (\protect\hyperlink{ref-rangel1956}{2012}\protect\hyperlink{ref-rangel1956}{g}), dá-se através de um
+duplo processo evolutivo, o fenomenal e o numenal, seguindo a filosofia de Kant:
+\begin{citacao}
+a economia é uma ciência histórica por excelência - qualidade que partilha com
+outras ciências sociais. Quer isso dizer que está submetida a um duplo processo
+evolutivo: o fenomenal (como representação, como ideia da coisa, como ``coisa
+para nós'', no sentido kantiano) e o numenal (como objeto, coisa representada,
+``coisa em si'') [\ldots] e não pode ser estudada senão nesse duplo contexto
+\cite[p.~204]{rangel1956}.
+\end{citacao}
+\hypertarget{a-economia-como-ciuxeancia-social}{%
+\subsection{A Economia como Ciência Social}\label{a-economia-como-ciuxeancia-social}}
+
+Como Ciência Social, a Economia pode ser definida como a ciência:
+\begin{citacao}
+que estuda como as pessoas e a sociedade decidem empregar recursos escassos, que
+poderiam ter utilização alternativa, na produção de bens e serviços de modo a
+distribuí-los  entre as várias pessoas e grupos da sociedade, a fim de
+satisfazer as necessidades humanas
+\cite[p.~5]{passosnogami}.
+\end{citacao}
+Para Rosseti (\protect\hyperlink{ref-rossetti}{2014}, 31), no entanto, a Economia não é uma ciência com
+limites nitidamente definidos, assim como as demais ciências sociais:
+\begin{citacao}
+À semelhança do que ocorre com os demais ramos das ciências sociais, não se pode
+considerar a economia como fechada em torno de si mesma. Pelas implicações da
+ação econômica sobre outros aspectos da vida humana, o estudo da economia
+implica a abertura de suas fronteiras às demais áreas das ciências humanas. Esta
+abertura se dá em dupla direção, assumindo assim caráter \textbf{biunívoco}.
+\end{citacao}
+Segundo (\protect\hyperlink{ref-rossetti}{2014}, 32), a separação das ciências sociais em
+especialidades distintas é não-rigorosa, ou, ao contrário, estas especialidades
+estão entremeadas:
+\begin{citacao}
+Em síntese, pode-se inferir que as interfaces da economia com outros ramos do
+conhecimento social decorrem de que as relações humanas e os problemas nelas
+implícitos ou delas decorrentes não são facilmente separáveis segundo níveis de
+referência rigorosamente pré-classificados. O referencial econômico deve ser
+visto apenas como uma abstração útil, para que se analisem aspectos específicos
+da luta humana pela sobrevivência, prosperidade, bem-estar individual e
+bem-comum. Ocorre, todavia, que essa mesma luta não se esgota nos limites do que
+se convencionou chamar de relações econômicas. Vai muito além, abrangendo
+aspectos que dizem respeito à postura ético-religiosa, às formas de organização
+política, aos modos de relacionamento social, à estruturação da ordem jurídica,
+aos padrões das conquistas tecnológicas, às limitações impostas pelas condições
+do meio ambiente e, mais abrangentemente, à formação cultural da sociedade.
+\end{citacao}
+\hypertarget{macro}{%
+\section{O mercado imobiliário e a Macroeconomia}\label{macro}}
+
+Segundo Leung (\protect\hyperlink{ref-LEUNG}{2004}), há um reconhecimento relativamente recente e crescente
+sobre a importância da interação entre os diversos mercados imobiliários entre
+si e entre o mercado imobiliário como um todo e a macroeconomia.
+
+Pesquisas em economia habitacional convencional e em economia urbana
+praticamente ignoram as interações com a macroeconomia. Na melhor das hipóteses,
+algumas análises teóricas e empíricas da economia urbana e habitacional incluem
+variáveis macroeconômicas (como inflação, crescimento econômico, PIB, taxa de
+desemprego etc.) como `variáveis de controle' exógenas (Leung \protect\hyperlink{ref-LEUNG}{2004}, 3).
+
+Por sua vez, os livros de Economia tradicionais ou tratam o mercado imobiliário
+como apenas uma dos muitos mercados de bens de consumo ou o negligenciam como um
+todo. A Macroeconomia convencional ignora completamente o mercado imobiliário
+(Leung \protect\hyperlink{ref-LEUNG}{2004}, 3), embora o mercado habitacional constitua uma grande parte da
+Macroeconomia (Leung \protect\hyperlink{ref-LEUNG}{2004}, 5). Krugman (\protect\hyperlink{ref-krugman}{2014}) afirmou que um dos segredos da
+política monetária reside no fato que a política monetária funciona através do
+mercado imobiliário, tendo pouco impacto direto no investimento em negócios.
+
+Segundo Greenwood e Hercowitz (apud Leung \protect\hyperlink{ref-LEUNG}{2004}, 5), o estoque de capital imobiliário
+é maior do que o capital de negócios e, em geral, o valor de mercado investido
+anualmente no mercado habitacional é maior do que o investimento em negócios, o
+que claramente faz do segmento habitacional muito mais do que apenas um outro
+mercado de bens de consumo.
+
+Davis and Heathcote (2001) (apud Leung \protect\hyperlink{ref-LEUNG}{2004}, 6) afirmam que o valor de mercado das
+propriedades imobiliárias em estoque nos EUA é aproximadamente igual ao PIB
+médio anual.
+
+No Brasil, segundo Costa (\protect\hyperlink{ref-fnogueira}{2018}, \protect\hyperlink{ref-fnogueira}{2018}, 155), a participação dos ativos de
+base imobiliária era cerca de 40\% dos bens e direitos declarados na Declaração
+do Imposto de Renda da Pessoa Física. Deve-se levar em conta, no entanto, que
+os valores declarados são os valores do momento da aquisição dos imóveis, que
+não são atualizados para fins de declaração de imposto de renda, portanto estes
+são usualmente menores do que os valores de mercado.
+
+Segundo Leung (\protect\hyperlink{ref-LEUNG}{2004}, 4), no entanto, mais recentemente tem havido um pequeno porém
+crescente esforço de pesquisa para preencher a lacuna entre as duas literaturas
+e lançar luz sobre questões que são conjuntamente conseqüentes para a
+macroeconomia e a habitação.
+
+O mercado imobiliário, diferentemente de outros mercados de capitais, exibe uma
+flutuação de valores baixa e não muda imediatamente após a mudança do noticiário
+econômico (Adams and Füss \protect\hyperlink{ref-ADAMS201038}{2010}, 3). O mercado imobiliário residencial, em particular,
+mostra forte rigidez pra baixo, porque os donos de imóveis residenciais tendem
+a resistir a venda da propriedade sob períodos de recessão econômica (Case, Glaeser, and Parker \protect\hyperlink{ref-Case2000}{2000}, 129).
+
+Adams and Füss (\protect\hyperlink{ref-ADAMS201038}{2010}) mostraram, com a observação de dados em painéis de 15 países por um
+período de 30 anos, que variáveis macroeconômicas apresentam um significativo
+impacto no preço de imóveis residenciais.
+
+Segundo Adams and Füss (\protect\hyperlink{ref-ADAMS201038}{2010}, 18), particularmente variáveis como
+emprego, produção industrial e aumento da base monetária demonstraram-se
+propensas a aumentar a demanda por imóveis residenciais, aumentando assim os
+seus preços. Além disto, um aumento na taxa de juros de curto prazo também
+afeta positivamente o preço dos imóveis residenciais, pelo efeito do aumento dos
+custos de financiamento e pelo desaquecimento do setor de construção, o que
+ocasiona também um aumento no preço dos aluguéis, que também puxa para cima
+o preço dos imóveis.
+
+Por outro lado, um aumento nas taxas de juros de longo prazo leva a diminuição
+da demanda por imóveis residenciais. Por causa da maior atratividade nos
+investimentos de renda fixa oriundos do aumento das taxas de longo prazo,
+reduz-se a demanda por (investimento em) imóveis residenciais, o que
+por conseguinte reduz os seus preços (Adams and Füss \protect\hyperlink{ref-ADAMS201038}{2010}, 19).
+
+Adams and Füss (\protect\hyperlink{ref-ADAMS201038}{2010}) notaram também que, devido a diferenças no nível regulatório e nas
+características do mercado hipotecário, houve um alto grau de variação entre os
+países, embora os resultados sejam muito similares mesmo com a variação dos
+métodos de estimação.
+
+Na figura \ref{fig:adams}\ldots{}
+
+\hypertarget{o-mercado-imobiliuxe1rio-e-os-fundamentos-econuxf4micos}{%
+\subsection{O mercado imobiliário e os fundamentos econômicos}\label{o-mercado-imobiliuxe1rio-e-os-fundamentos-econuxf4micos}}
+
+O mercado imobiliário, assim como acontece com o mercado mobiliário, deve
+seguir os fundamentos da Economia no longo prazo. No entanto, eventuais
+descolamentos dos preços no mercado imobiliário dos fundamentos econômicos podem
+ocorrer. A este descolamento é dado o nome de bolha especulativa.
+
+Existe no mercado imobiliário uma propensão à formação de bolhas especulativas,
+devido a diversos motivos, como ``expectativas exuberantes'' e problemas de
+informações de preços, que são difíceis devido às particularidades do mercado
+imobiliário (Adams and Füss \protect\hyperlink{ref-ADAMS201038}{2010}, 3).
+\begin{figure}[H]
+
+{\centering \includegraphics[width=\textwidth]{./images/adams_crop} 
+
+}
+
+\caption{O impacto das variáveis macroeconômicas no preço dos imóveis residenciais.}\label{fig:adams}
+\end{figure}
+\bcenter
+
+Fonte: Adams and Füss (\protect\hyperlink{ref-ADAMS201038}{2010}).
+\ecenter
+
+\hypertarget{comportamento-recente-do-mercado-imobiliuxe1rio-e-relauxe7uxe3o-com-as-variuxe1veis-macroeconuxf4micas}{%
+\subsection{Comportamento recente do mercado imobiliário e relação com as variáveis macroeconômicas}\label{comportamento-recente-do-mercado-imobiliuxe1rio-e-relauxe7uxe3o-com-as-variuxe1veis-macroeconuxf4micas}}
+
+No Brasil não existem séries históricas de prazo satisfatórios para uma análise
+de longo prazo referente ao preço dos imóveis. No entanto, como explicitado
+no teoricamente no capítulo \ref{historico}, e mostrado por Adams and Füss (\protect\hyperlink{ref-ADAMS201038}{2010}) numa
+série de países, num mundo globalizado, em que há livre fluxo de capitais, a
+tendência é que o comportamento dos preços siga uma mesma tendência, portanto a
+análise do comportamento dos preços nos países centrais da economia mundial
+tende a representar o que ocorrerá,com maior ou menor \emph{lag}, nos outros países,
+influenciados pelas variáveis e decisões ocorridas nestes países.
+
+A figura \ref{fig:nhpi} mostra a evolução do \emph{Home Price Index} de Case e
+Shiller, desde 1990.
+
+É possível notar pela análise do índice que os preços dos imóveis que, após
+o estouro da bolha do \emph{subprime}, os preços sofrem uma nítida tendência de alta,
+desde janeiro de 2012, ultrapassando já, em termos nominais, os níveis de preços
+anteriores à crise de 2008.
+\begin{figure}[H]
+
+{\centering \includegraphics[width=0.7\linewidth]{images/nhpi-1} 
+
+}
+
+\caption{Home Price Index, de Case e Shiller, em termos nominais.}\label{fig:nhpi}
+\end{figure}
+\bcenter
+
+Fonte: O autor, à partir de dados de Quandl (\protect\hyperlink{ref-QuandlWIKI}{2020}).
+\ecenter
+
+Em julho de 2006 o índice atingiu o valor de
+184,62 pontos,
+entrando então em tendência de baixa, até atingir os 134,16, em janeiro de 2012, quando se iniciou nova tendência de
+alta, que perdura até os dias atuais. No momento em que se escreve esta
+dissertação o índice se encontra com 212,20 pontos, maior valor
+da série histórica.
+
+Em termos reais, no entanto, os preços ainda são inferiores ao pico registrado,
+mas há uma nítida tendência de alta, conforme pode ser visto na figura
+\ref{fig:rhpi}.
+\begin{figure}[H]
+
+{\centering \includegraphics[width=0.7\linewidth]{images/rhpi-1} 
+
+}
+
+\caption{Home Price Index, de Case e Shiller, em termos reais.}\label{fig:rhpi}
+\end{figure}
+\bcenter
+
+Fonte: O autor, à partir de dados de Quandl (\protect\hyperlink{ref-QuandlWIKI}{2020}).
+\ecenter
+
+Na atualidade este índice se encontra em 176,84 pontos, sendo
+que o maior valor da série histórica se deu em dezembro de 2005.
+
+Em janeiro de 1997, o índice estava em 112,37 pontos. Desta data em diante, o índice entrou em franca tendência
+de alta até atingir os
+195,83 pontos,
+em dezembro de 2005, auge, em termos reais, da bolha imobiliária, que no entanto
+só viria a estourar, nominalmente falando, em julho de 2006, como se pode ver na
+figura \ref{fig:nhpi}.
+
+É importante salientar que o fenômeno da alta tão relevante dos preços dos
+imóveis é relativamente recente. O gráfico da figura \ref{fig:rhpi2} ilustra
+isto.
+\begin{figure}[H]
+
+{\centering \includegraphics[width=0.7\linewidth]{images/rhpi2-1} 
+
+}
+
+\caption{HPI, em termos reais, desde 1890.}\label{fig:rhpi2}
+\end{figure}
+\bcenter
+
+Fonte: O autor, à partir de dados de Quandl (\protect\hyperlink{ref-QuandlWIKI}{2020}).
+\ecenter
+
+O valor mínimo da série histórica (não mostrado no gráfico) foi atingido em\\
+Nov/1921, quando o índice atingiu a marca
+de 65,61 pontos.
+
+É interessante notar que, em um século, desde 1890, o índice de preços reais de
+imóveis atingiu um valor máximo de apenas
+130,99 pontos, o
+que ocorreu em agosto de 1989.
+
+Ou seja, em relação ao topo histórico de um século (agosto de 1989) à partir do
+início da coleta do índice (1890), o índice hoje se encontra
+45,85
+pontos percentuais acima daquela marca e a apenas
+18,99
+pontos percentuais abaixo de atingir o topo histórico de dezembro de 2005.
+
+Em janeiro de 2012, no fundo do vale da curva do índice real, este atingiu
+126,65 pontos,
+apenas 4,34 pontos abaixo do topo histórico
+de um século à partir de 1890.
+
+Isto poderia ser indício da formação de nova bolha imobiliária, nos moldes da
+que estourou em meados de 2006, com consequências catastróficas para a economia
+global?
+
+Bolhas imobiliárias são difíceis de serem identificadas. Bolhas são fenômenos
+de curto prazo que representam descolamentos dos preços em relação aos seus
+fundamentos. Logo, para se afirmar que existe uma bolha, é necessário mostrar
+que inexiste uma correlação entre os fundamentos e os preços dos ativos
+imobiliários.
+
+Como anteriormente mencionado, uma das variáveis macroeconômicas que afetam o
+mercado imobiliário são as taxas de juros de longo prazo. Uma diminuição das
+taxas de juros de longo prazo tende a reduzir a demanda por títulos públicos de
+longo prazo e a aumentar a demanda por investimentos com base imobiliária.
+
+Estas taxas de juros de mais longo prazo tem caído no mundo todo,
+especialmente nas economias desenvolvidas, como ilustra o gráfico da figura
+\ref{fig:yields}, que mostra as taxas de juros dos títulos da dívida do tesouro
+norte-americano. A causa da queda destas taxas de juros de mais longo prazo
+(assim como as de curto prazo) são atribuídas a diversos fatores, o que vai
+muito além do escopo deste trabalho. Uma boa discussão pode ser vista em Pereira (\protect\hyperlink{ref-bresser2018}{2018}).
+\begin{figure}[H]
+
+{\centering \includegraphics[width=0.7\linewidth]{images/yields-1} 
+
+}
+
+\caption{Taxas dos \emph{treasuries bonds} desde janeiro/1990.}\label{fig:yields}
+\end{figure}
+\bcenter
+
+Fonte: O autor, à partir de dados de Quandl (\protect\hyperlink{ref-QuandlWIKI}{2020}).
+\ecenter
+
+Mesmo uma análise mais ampla (desde 1953) das taxas de juros mostram que o
+período recente é o período de menor taxa de juros em termos históricos, o que
+pode ser visto na figura \ref{fig:fred}.
+
+No momento em que se escreve deste trabalho, a taxa de juros dos títulos de mais
+longa maturidade, ou seja, de 30 anos, está em 1,97\% a.a. Para
+os títulos com vencimento em 20 anos, a taxa está em
+1,81\% a.a. e para os títulos com
+vencimento em 10 anos está em
+1,50\% a.a., todos nos seus valores
+mínimos da série histórica.
+\begin{figure}[H]
+
+{\centering \includegraphics[width=\textwidth]{images/fred-1} 
+
+}
+
+\caption{Taxas dos \emph{treasuries bonds} desde abril/1953.}\label{fig:fred}
+\end{figure}
+\bcenter
+
+Fonte: O autor, à partir de dados do \gls{FED}.
+\ecenter
+
+Esta longa e sustentada tendência de queda de longo prazo, com esta persistência
+não pode ser atribuída a uma bolha especulativa, \emph{i.e.} um desvio de curto prazo
+de uma tendência de longo prazo, mas sim a uma tendência estrutural, sistêmica.
+
+Esta alta queda das taxas de juros dos ativos financeiros de longo prazo é uma
+das causadoras da elevação dos preços dos mesmos ativos, assim como a elevação
+do preço dos imóveis.
+
+A grande diferença então da recente alta dos preços dos imóveis (desde 2012) da
+alta anterior (até Dez/2005) é que a alta mais recente é plenamente justificada
+pela altíssima liquidez dos mercados. Ou seja, não se pode atribuir a recente
+alta dos preços dos imóveis à especulação imobiliária, ou pelo menos não se pode
+atribuir a recente alta somente a especulação: há fundamento para a alta, o que
+se discuti com mais propriedade no capítulo \ref{micro}.
+
+Em um cenário de longo prazo, a tendência é que a crise de 2008 apenas tenha
+acelerado em demasia, momentaneamente, o que já era uma tendência de longo
+prazo, portanto estrutural, da economia.
+
+\hypertarget{MI-e-o-setor-bancario}{%
+\subsection{O Mercado Imobiliário e o setor bancário}\label{MI-e-o-setor-bancario}}
+
+A participação dos produtos financeiros relacionados ao setor imobiliário
+constituem uma grande parte dos portfolios bancários. Justamente por isto,
+crises bancárias estão frequentemente associadas a superexposição do setor
+bancário no mercado imobiliário (Case, Glaeser, and Parker \protect\hyperlink{ref-Case2000}{2000}, 148).
+
+Quedas nos preços dos valores dos imóveis podem ocorrer, não apenas por causa
+do estouro de uma bolha especulativa, mas também por conta de uma inversão dos
+fundamentos econômicos que sustentavam os preços (Case, Glaeser, and Parker \protect\hyperlink{ref-Case2000}{2000}, 129), como parece
+ser o caso no momento.
+
+\hypertarget{micro}{%
+\section{O Mercado Imobiliário e a Microeconomia}\label{micro}}
+
+O mercado imobiliário, como visto na seção anterior, não pode ser
+considerado um simples mercado de bens, como outros bens de consumo em geral,
+como automóveis, móveis ou eletrodomésticos. Sua análise em nível macroeconômico,
+portanto, requer um estudo mais aprofundado das variáveis da Economia do país,
+o que não quer dizer que não se dispense de analisar também o seu comportamento
+microeconômico, o que aliás a NBR 14.653-01 (\protect\hyperlink{ref-NBR1465301}{2019}) parece ter acabado de
+perceber e recomendar.
+
+\hypertarget{estruturas-buxe1sicas-de-mercado}{%
+\subsection{Estruturas básicas de mercado}\label{estruturas-buxe1sicas-de-mercado}}
+
+De acordo com a NBR 14.653-01 (\protect\hyperlink{ref-NBR1465301}{2019}, ix):
+\begin{quote}
+As estruturas básicas do mercado podem ser, resumidamente:
+\begin{itemize}
+\item
+  \textbf{Concorrência Perfeita}: situação em que o número de vendedores e de
+  compradores é suficientemente elevado para que um agente isolado não seja
+  capaz influenciar o comportamento dos preços;
+\item
+  \textbf{Monopólio}: É constituído por um único vendedor;
+\item
+  \textbf{Monopsônio}: é constituído por um único comprador;
+\item
+  \textbf{Oligopólio}: é constituído por um número pequeno de vendedores;
+\item
+  \textbf{Oligopsônio}: é constituído por um número pequeno de compradores.
+\end{itemize}
+\end{quote}
+\hypertarget{particularidades-do-mercado-imobiliuxe1rio}{%
+\subsection{Particularidades do mercado imobiliário}\label{particularidades-do-mercado-imobiliuxe1rio}}
+
+Também em nível microeconômico o mercado imobiliário é um mercado diferenciado
+dos outros mercados de bens de consumo. Apesar de toda a indústria da construção
+ter evoluído muito ao longo das últimas décadas, ainda persiste no Brasil um
+forte componente artesanal na construção civil, o que implica em bens imóveis
+de características muito distintas, a depender da mão-de-obra aplicada na sua
+execução. Também a questão do projeto arquitetônica implica numa singularidade
+para cada bem imobiliário. Mas mais importante ainda é a questão da localização,
+que torna cada imóvel único. Isto não ocorre em qualquer outro mercado de bens
+de consumo. A não ser por questões de natureza sentimental, um carro, uma
+geladeira, ou praticamente qualquer outro bem de consumo é produzido é série:
+existem milhares de itens iguais no mercado. Isto nunca ocorre com os imóveis.
+Mesmo apartamento vizinhos, em um mesmo prédio, tem características diferentes,
+dada a sua posição solar, localização do andar em relação ao prédio, a vista
+que cada um possui, entre outras questões.
+
+Segundo a NBR 14.653-01 (\protect\hyperlink{ref-NBR1465301}{2019}, x), ``o mercado imobiliário caracteriza-se
+como um `mercado imperfeito', com bens não homogêneos, estoque limitado, liquidez
+diferenciada e grande influência de fatores externos.''
+
+De acordo com Adams and Füss (\protect\hyperlink{ref-ADAMS201038}{2010}, \protect\hyperlink{ref-ADAMS201038}{2010}, 3), a forte inércia dos preços do
+mercado imobiliário influencia o comportamento do mercado durante os booms
+econômicos, já que a exuberância das expectativas (exuberância irracional) dos
+proprietários de imóveis facilita a formação de bolhas nestes mercados. Além
+disto, a falta de informação a respeito de preços no mercado imobiliário, pelo
+motivo deste ser um mercado segmentado, ou seja, os preços obedecem uma
+lógica local, também é uma facilitadora da formação de bolhas.
+
+\hypertarget{diagnuxf3stico-de-mercado}{%
+\subsection{Diagnóstico de mercado}\label{diagnuxf3stico-de-mercado}}
+
+A NBR 14.653-01 (\protect\hyperlink{ref-NBR1465301}{2019}, 12), estabelece que, ``o profissional, conforme o
+tipo de bem, as condições de contratação, o método empregado e a finalidade da
+avaliação, pode \textbf{tecer considerações sobre o mercado do bem avaliando}, de
+forma a indicar, tanto quanto possível, \textbf{a estrutura, a conduta e o desempenho
+do mercado}.''
+
+\hypertarget{o-imuxf3vel-visto-como-um-investimento}{%
+\subsection{O imóvel visto como um investimento}\label{o-imuxf3vel-visto-como-um-investimento}}
+
+Na ótica do investidor (e não do especulador, que pretende ganhar com a
+volatilidade do mercado, ou seja, comprando na baixa e vendendo na alta), o
+imóvel é como um título de longo prazo. Racionalmente ou não, o comprador de um
+imóvel com fins de investimento espera que o imóvel comprado vá gerar um fluxo
+de aluguéis (constantes ou não) ao longo do tempo, de maneira que este fluxo de
+aluguéis compense o investimento inicial na compra do imóvel.
+
+Diferentemente do que hoje ocorre com os investimentos capitalistas, onde o
+payback esperado gira em torno de 5 a 10 anos, o comprador de um imóvel
+esperar que este gere um fluxo de renda ao longo de décadas.
+
+Assim, a compra de um imóvel assemelha-se à compra dos títulos de renda fixa de
+maior \emph{duration} disponíveis no mercado.
+
+Ora, como se sabe, o valor de face destes títulos, ou seja, o valor do resgate
+destes títulos no vencimento, é dado. Porém, estes títulos são negociados no
+mercado secundário a valor de mercado, sendo que os títulos de longo prazo são
+altamente sensíveis a variações nas taxas de juros de longo prazo. A saber, o
+preço destes títulos é inversamente proporcional às taxas de juros, ou seja,
+quanto menor as taxas, maior o valor presente dos títulos, ou valor de mercado,
+e vice-versa.
+
+\hypertarget{duration-de-um-tuxedtulo-de-renda-fixa}{%
+\subsubsection{Duration de um título de renda fixa}\label{duration-de-um-tuxedtulo-de-renda-fixa}}
+
+Segundo Marins (\protect\hyperlink{ref-marins1}{2009}), a \emph{duration} de um título, ou de um conjunto de títulos de
+renda fixa pode ser calculada de acordo com a fórmula a seguir, de Macaulay:
+
+\[D = \frac{\sum_{t = 1}^{n}t \times \frac{F_t}{(1+i)^t}}{\sum_{t = 1}^{n} \frac{F_t}{(1+i)^t}}\]
+
+\hypertarget{suxe9ries-perpuxe9tuas}{%
+\subsubsection{Séries Perpétuas}\label{suxe9ries-perpuxe9tuas}}
+
+Uma série perpétua é uma série suficientemente longa de maneira que as entradas
+ou saídas de caixa possam ser consideradas infinitas (geralmente séries acima de
+20 anos podem ser consideradas perpétuas).
+
+Assim, o Valor Presente \(VP\) de uma série de pagamentos perpétua de valor
+periódico \(A\), descontados de uma taxa de juros \(i\) é igual a:
+
+\[VP = \lim_{n \to \infty} A \frac{(1+i)^n-1}{i(1+i)^n}= \frac{A}{i}\]
+\#\#\#\# Cálculo do valor justo de um imóvel
+
+O cálculo do valor justo de um imóvel pode ser feito considerando-se o método
+do fluxo de caixa descontado, assim como é feito o \emph{valuation} de uma empresa
+capitalista.
+
+Por exemplo, se um investidor estima que o fluxo líquido de um determinado
+imóvel (aluguéis descontados de impostos, taxas e manutenção) será de R\$2.000,00
+mensais, a uma taxa de juros de 2\% ao ano, o valor presente do imóvel,
+considerando-se que este fluxo seja constante ao longo de toda a vida útil do
+imóvel (não menor do que 20 anos), é:
+
+\[P = \frac{12 \times 2.000}{0,03} = 800.000\]
+
+Uma queda moderada da taxa de juros de longo prazo, digamos, para 2\% a.a.,
+teria o seguinte impacto no valor presente deste imóvel:
+
+\[P = \frac{12 \times 2.000}{0,02} = 1.200.000\]
+
+Já uma queda da taxa de juros de longo prazo mais agressiva, digamos para 1\%
+a.a., teria o seguinte impacto:
+
+\[P = \frac{12 \times 2.000}{0,01} = 2.400.000\]
+
+A figura \ref{fig:valores-juros} mostra como varia, \emph{coeteris paribus}, o valor
+justo de um imóvel em função da taxa de juros de longo prazo.
+\begin{figure}[H]
+
+{\centering \includegraphics[width=0.7\linewidth]{images/valores-juros-1} 
+
+}
+
+\caption{Variação do valor justo de um imóvel em função da taxa de juros.}\label{fig:valores-juros}
+\end{figure}
+\bcenter
+
+Fonte: Do autor.
+\ecenter
+
+A tabela \ref{tab:tabela-valor-justo} mostra\ldots{}
+\begin{table}[H]
+
+\caption{\label{tab:tabela-valor-justo}Valor justo de um imóvel em função do valor do aluguel.}
+\centering
+\begin{tabular}[t]{rr}
+\toprule
+Taxa de Juros(\%) & Valor Justo (R\$)\\
+\midrule
+0,10 & 24.000.000\\
+0,25 & 9.600.000\\
+0,50 & 4.800.000\\
+0,75 & 3.200.000\\
+1,00 & 2.400.000\\
+\addlinespace
+1,50 & 1.600.000\\
+2,00 & 1.200.000\\
+3,00 & 800.000\\
+4,00 & 600.000\\
+5,00 & 480.000\\
+\addlinespace
+6,00 & 400.000\\
+\bottomrule
+\multicolumn{2}{l}{\textit{Notas:}}\\
+\multicolumn{2}{l}{Supondo um aluguel constante de R\$2.000/mês.}\\
+\multicolumn{2}{l}{Taxas de juros anuais.}\\
+\end{tabular}
+\end{table}
+\bcenter
+
+Fonte: Do autor.
+\ecenter
+
+\hypertarget{o-efeito-da-poluxedtica-de-limitauxe7uxe3o-do-valor-de-aluguuxe9is}{%
+\subsection{O efeito da política de limitação do valor de aluguéis}\label{o-efeito-da-poluxedtica-de-limitauxe7uxe3o-do-valor-de-aluguuxe9is}}
+
+A política de limitação do valor de aluguéis implica um controle da inflação,
+controlando os custos de moradia que a população enfrenta. Obviamente que isto
+implica de num efeito balizador importante para o cálculo de um preço justo
+dos imóveis, mas será que esta política apenas é uma política capaz de regular
+com um mínimo de equidade o valor do solo urbano?
+
+Qualquer instrumento financeiro, como um título público, uma ação de uma
+empresa, ou um derivativo, terá um valor de mercado diferente do valor justo
+calculado para o instrumento, em virtude dos movimentos do mercado (oferta
+vs.~demanda), que se dão não apenas pelos fundamentos econômicos, mas também pelas
+expectativas dos diversos agentes econômicos em relação ao valor futuro daquele
+instrumento.
+
+No entanto, assim como o \emph{valuation} serve para calcular o ``preço justo'' de uma
+ação (ou \emph{target price}, ou ainda preço-alvo), o que por sua vez permite às
+corretoras efetuarem recomendações (\emph{outperform} ou \emph{buy}, \emph{neutral} ou \emph{hold},
+\emph{underperform} ou \emph{sell}), assim como o método de Black\&Scholes permite o
+cálculo do preço justo das opções de compra e venda, as séries perpétuas
+permitem um cálculo razoável do preço justo de um imóvel, haja vista que
+permitem, sem maiores especulações, o cálculo do fluxo de caixa descontado dos
+aluguéis, balizando assim as expectativas em torno dos preços dos imóveis,
+ajudando a conter dessa maneira a especulação imobiliária.
+
+Em períodos de normalidade econômica poder-se-ia dizer que o estabelecimento
+de preços máximos de aluguéis seriam suficientes para conter uma especulação
+imobiliária desenfreada.
+
+No entanto, o mundo não vive tempos de normalidade econômica. Desde a crise de
+2008 o mundo vive tempos de uma crise crônica, persistente, que tem sido
+enfrentada pelos bancos centrais (especialmente os bancos centrais dos países
+desenvolvidos, onde a estagnação é maior), por enormes aumentos de liquidez
+do sistema financeiro.
+
+Ou seja, a imposição de um valor máximo aos aluguéis pode ser uma boa política
+para contenção da inflação, regulando os custos de moradia das classes menos
+privilegiadas, impondo também alguma limitação da especulação imobiliária
+desenfreada, porém em um cenário de juros baixíssimos e estagnação econômica
+crônica como o que se avizinha e que cada vez mais se prevê de forma duradoura,
+não será o suficiente para conter uma alta expressiva no valor dos imóveis.
+
+Pode-se prever que, apenas com esta política de limitação de aluguéis, o mundo
+estará fadado a dividir os cidadãos em proprietários e locatários, uma vez que o
+preço do aluguel estará controlado, mas o valor dos imóveis tende a disparar.
+
+\hypertarget{problemas-gerados-pelo-alto-valor-dos-imuxf3veis}{%
+\section{Problemas gerados pelo alto valor dos imóveis}\label{problemas-gerados-pelo-alto-valor-dos-imuxf3veis}}
+
+Além dos problemas relacionados ao setor bancário discutidos na seção
+\ref{MI-e-o-setor-bancario}, existe um problema normalmente desconsiderado pela
+maioria é que altos preços de imóveis e/ou aluguéis previnem que os
+trabalhadores se mudem para cidades com maior produtividade marginal do
+trabalho. Ou seja, algumas pessoas tendem a se manter em ocupações de baixa
+produtividade em cidades pequenas, no interior, ao invés de se mudarem para
+grandes cidades onde certamente teriam ocupações de maior produtividade, como
+numa fábrica, por exemplo, pois o custo adicional de moradia que elas teriam
+não seria compensado pelo maior salário que receberiam, devido à maior
+produtividade da sua ocupação. Se fosse possível a redução dos custos de moradia
+em regiões de maior produtividade da mão de obra, isto resultaria num maior
+Produto Interno Bruto (Case, Glaeser, and Parker \protect\hyperlink{ref-Case2000}{2000}, 149).
+
+Mas o principal problema advindo de uma grande alta no valor dos imóveis é o
+problema da reversão das expectativas: uma vez que as expectativas se revertem,
+seja por um aumento da taxa de juros, seja pelo estouro de uma bolha de crédito,
+como ocorreu em 2008, tendem a causar transtornos tanto para as pessoas físicas,
+que podem perder seus imóveis, quanto para as instituições financeiras expostas
+ao risco do mercado imobiliário, seja para os governos que são instados a
+socorrer as empresas e as pessoas em dificuldades.
+
+\hypertarget{involutivo}{%
+\chapter{O Método Involutivo}\label{involutivo}}
+
+Segundo a NBR14653-01 (\protect\hyperlink{ref-NBR1465301}{2019}, 14), o método involutivo ``identifica o
+valor do bem, alicerçado no seu aproveitamento eficiente, baseado em modelo de
+estudo de viabilidade técnico-econômica, \textbf{mediante hipotético empreendimento
+compatível} com as características do bem e \textbf{com as condições de mercado no
+qual está inserido}, considerando-se cenários viáveis para a execução e
+comercialização do produto. O método involutivo pode identificar o valor de
+mercado. No caso da utilização de premissas especiais, o resultado é um valor
+especial.''
+
+Apesar de laboriosa, os resultados obtidos com a aplicação do método são repletos
+de incertezas, pois as variáveis e os riscos envolvidos não são facilmente
+mensuráveis.
+
+As incertezas vão desde à manutenção dos custos de construção previstos, até aos
+valores de comercialização do empreendimento e sua velocidade de vendas,
+passando pelas incertezas quanto às variáveis macroeconômicas vigentes.
+
+\hypertarget{incertezas-em-relauxe7uxe3o-uxe0s-variuxe1veis-de-entrada}{%
+\section{Incertezas em relação às variáveis de entrada}\label{incertezas-em-relauxe7uxe3o-uxe0s-variuxe1veis-de-entrada}}
+
+A construção civil, especialmente nos países em desenvolvimento, onde a
+indústria da construção ainda não é totalmente desenvolvida, uma atividade com
+alta participação de trabalho artesanal, onde os custos e os prazos podem
+facilmente escapar do controle dos administradores.
+
+Além desta peculiaridade do setor, ainda existem as incertezas inerentes à
+situação econômica do país, estado ou cidade em que se desenvolvem as atividades,
+que podem alterar as previsões iniciais de custos e receitas previstas para o
+empreendimento.
+
+\hypertarget{anuxe1lises-de-sensibilidade}{%
+\subsection{Análises de sensibilidade}\label{anuxe1lises-de-sensibilidade}}
+
+A Engenharia de Avaliações, na busca de tentar lidar com estas incertezas,
+estabeleceu algumas análises de sensibilidade para as variáveis de entrada do
+método involutivo. No entanto, estas análises de sensibilidade são aplicadas
+de maneira separada para cada variável, todas as outras permanecendo constantes,
+\emph{i.e.} incluída a condição \emph{coeteris paribus}. Ocorre que, como se sabe, a
+condição \emph{coeteris paribus} raramente se aplica, pois uma variável está
+sempre de alguma maneira relacionada com a outra.
+
+\hypertarget{simulauxe7uxf5es}{%
+\subsection{Simulações}\label{simulauxe7uxf5es}}
+
+Haja vista o problema relatado com as análises de sensibilidade, onde o
+estabelecimento da cláusula \emph{coeteris paribus} é meramente teórica, tendo
+pouca validade prática, o uso de simulações, onde são consideradas relações
+entre as variáveis de entrada, se fazem necessárias.
+
+Em Hochheim (\protect\hyperlink{ref-gahochheim}{2017}) foram realizadas simulações considerando-se diversas hipóteses,
+tais como a distribuição de probabilidades \emph{a priori} e a dependência entre as
+variáveis. No entanto, foram modeladas apenas dependências teóricas entre as
+variáveis (independência total, dependência total e 50\% de independência).
+
+A escolha da distribuição \emph{a priori} das variáveis influencia no resultado final
+das simulações. No entanto, entende-se que uma correta definição da correlação
+entre as variáveis seja de maior importância, especialmente quando se trata
+de análises de risco de um empreendimento.
+
+Segundo Matloff (\protect\hyperlink{ref-matloff2017}{2017}), o \emph{princípio da ocorrência frequente de eventos extremos}
+afirma que, apesar da pequena probabilidade de ocorrência de um evento, sendo
+o número de repetições de uma experiência suficientemente alto, a tendência é
+que este evento ocorrerá. De maneira que considera-se que a distribuição
+uniforme de probabilidades \emph{a priori} para cada variável seja uma boa hipótese.
+
+\ldots{}
+
+A relação entre as variáveis, no entanto, pode ser
+
+Outra importante observação que se deve fazer é como o mercado em que o
+empreendimento se encontra afeta a correlação entre estas variáveis.
+
+Num mercado de concorrência perfeita, por exemplo, um aumento de custos não
+poderá ser repassado ao consumidor sem perda de \emph{market share}, ou seja, a
+tendência é que as firmas absorvam o aumento de custos perdendo margem de lucro.
+
+Já num mercado monopolista, a tendência é repassar o aumento de preços ao
+consumidor, mantendo-se os lucros do monopolista.
+
+Hochheim (\protect\hyperlink{ref-gahochheim}{2017}), a partir de simulações com diversos cenários, concluiu que a
+variável fluxo de vendas foi a variável mais impactante na formação do valor
+de um empreendimento hipotético. No entanto, como salienta Hochheim (\protect\hyperlink{ref-gahochheim}{2017}, \protect\hyperlink{ref-gahochheim}{2017}, 119), esta variável está intimamente correlacionada com a
+variável taxa mínima de atratividade, o que torna importante a correta definição
+desta taxa.
+
+\hypertarget{a-taxa-muxednima-de-atratividade}{%
+\subsubsection{A taxa mínima de atratividade}\label{a-taxa-muxednima-de-atratividade}}
+
+Na prática atual da Engenharia de Avaliações convencionou-se o estabelecimento
+de uma taxa mínima de atratividade igual a um múltiplo da taxa de juros de curto
+prazo, ou taxa selic, usualmente feito igual a 3.
+
+No entanto, considera-se que este parâmetro é injustificado e pode ser, no
+mínimo, contestado, ainda mais em se tratando de uma possível perícia judicial
+para o estabelecimento do valor de um imóvel.
+
+Ora, a taxa mínima de atratividade de um empreendimento qualquer não pode ser
+inferior a taxa dos títulos de dívida pública do governo \textbf{de \emph{duration} similar
+à duração do empreendimento}, haja vista que o investimento em títulos públicos
+pode ser considerado um investimento livre de risco.
+\begin{table}
+
+\caption{\label{tab:TD}Preços e taxas de referência dos títulos públicos}
+\centering
+\begin{tabular}[t]{>{\raggedright\arraybackslash}p{5cm}cr>{\raggedleft\arraybackslash}p{1.5cm}r}
+\toprule
+Título & Vencimento & \% a.a. & Valor Mínimo & P. U.\\
+\midrule
+\rowcolor{gray!6}  \addlinespace[0.3em]
+\multicolumn{5}{l}{\textbf{Indexados ao IPCA}}\\
+\hspace{1em}Tesouro IPCA+ 2026 & 15/08/2026 & 4,25 & R\$50,79 & R\$2.539,96\\
+\hspace{1em}Tesouro IPCA+ 2035 & 15/05/2035 & 4,74 & R\$32,94 & R\$1.647,17\\
+\hspace{1em}Tesouro IPCA+ 2045 & 15/05/2045 & 4,74 & R\$31,13 & R\$1.037,94\\
+\hspace{1em}Tesouro IPCA+ com Juros Semestrais 2030 & 15/08/2030 & 4,40 & R\$37,66 & R\$3.766,35\\
+\hspace{1em}Tesouro IPCA+ com Juros Semestrais 2040 & 15/08/2040 & 4,69 & R\$38,93 & R\$3.893,84\\
+\hspace{1em}Tesouro IPCA+ com Juros Semestrais 2055 & 15/05/2055 & 4,76 & R\$40,77 & R\$4.077,24\\
+\rowcolor{gray!6}  \addlinespace[0.3em]
+\multicolumn{5}{l}{\textbf{Prefixados}}\\
+\hspace{1em}Tesouro Prefixado 2023 & 01/01/2023 & 6,28 & R\$33,81 & R\$845,37\\
+\hspace{1em}Tesouro Prefixado 2026 & 01/01/2026 & 8,33 & R\$31,54 & R\$630,83\\
+\hspace{1em}Tesouro Prefixado com Juros Semestrais 2031 & 01/01/2031 & 9,24 & R\$32,22 & R\$1.074,22\\
+\rowcolor{gray!6}  \addlinespace[0.3em]
+\multicolumn{5}{l}{\textbf{Indexados à Taxa Selic}}\\
+\hspace{1em}Tesouro Selic 2025 & 01/03/2025 & 0,03 & R\$105,56 & R\$10.556,30\\
+\bottomrule
+\multicolumn{5}{l}{\textsuperscript{*} \href{http://www.tesouro.fazenda.gov.br/tesouro-direto-precos-e-taxas-dos-titulos}{Tesouro Direto}}\\
+\end{tabular}
+\end{table}
+Ou seja, estabelecido um cronograma para o empreendimento como um todo,
+incluindo a fase de vendas, a taxa livre de risco pode ser determinada com
+precisão. Porém, a taxa livre de risco apenas é estabelecida no momento da
+aplicação do método, desconsiderando-se que esta taxa tem livre flutuação e
+grande impacto na formação do preço final do imóvel.
+
+Resta ainda a determinação da taxa de risco a ser embutido na taxa mínima de
+atratividade, juntamente com a taxa livre de risco, através, por exemplo, do
+\emph{Capital Asset Pricing Model}, como descrito em Hochheim (\protect\hyperlink{ref-gahochheim}{2017}, \protect\hyperlink{ref-gahochheim}{2017}, 69--73),
+de acordo com a fórmula abaixo:
+
+\[\gls{R_e}= \gls{R_f} + \beta(\gls{R_m} - R_f)\]
+
+Inexiste, para tal, método exato de cálculo, como salienta Hochheim (\protect\hyperlink{ref-gahochheim}{2017}), donde
+deve-se permitir alguma variação para a entrada da taxa mínima de atratividade
+nas simulações.
+
+Porém, não apenas a variação devido à inexatidão da taxa de risco deveria
+ser embutida nas simulações, mas também uma variação devido à possíveis
+flutuações da taxa livre de risco.
+
+Outra questão de suma importância é que, assim como a taxa mínima de
+atratividade influencia no cálculo do valor do imóvel através da variável fluxo
+de vendas, através da mudança da taxa de desconto aplicada ao fluxo de caixa
+para o cálculo do valor presente, ela também exerce influencia sobre o preço de
+venda das unidades, como visto no capítulo \ref{economia}, impactando também o
+fluxo de caixa do empreendimento, desta vez não pela variação da taxa de
+desconto aplicada, mas pela variação da magnitude do valor das vendas.
+
+\hypertarget{o-valor-de-venda}{%
+\subsubsection{O valor de venda}\label{o-valor-de-venda}}
+
+Usualmente, para aplicação no método involutivo, é considerado um valor de venda
+fixo, calculado através do método comparativo direto de dados de mercado
+(MCDDM), feito em momento anterior ao empreendimento. Alguma variação dos preços
+de venda é permitida apenas dentro do intervalo de confiança do preço calculado
+à partir do MCDDM.
+
+Esta análise é questionável, pois o MCDDM é um retrato do mercado para aquele
+momento, \emph{i.e.}, ele é válido apenas para a data de referência em que foi
+aplicado, mas o valor de venda pode variar durante a execução do empreendimento,
+ou ainda durante as vendas dos imóveis, após a conclusão do mesmo.
+
+Especialmente, o valor de venda, como visto no capítulo \ref{economia}, está
+intimamente relacionado com as variáveis macroeconômicas, em especial à taxa de
+juros de longo prazo, e de maneira não-linear. No entanto, é fácil demonstrar
+que a linearização da relação entre o valor justo de um imóvel e a taxa de juros
+pode ser realizada pela simples transformação do valor pela função inversa,
+como é mostrado na figura \ref{fig:valores-juros-rec}.
+\begin{figure}[H]
+
+{\centering \includegraphics[width=0.7\linewidth]{images/valores-juros-rec-1} 
+
+}
+
+\caption{Variação do valor justo de um imóvel em função da taxa de juros.}\label{fig:valores-juros-rec}
+\end{figure}
+Outra maneira de se linearizar a relação entre as variáveis é através da
+transformação de ambas pela função logarítmica, como mostra a figura
+\ref{fig:valores-juros-log}.
+\begin{figure}[H]
+
+{\centering \includegraphics[width=0.7\linewidth]{images/valores-juros-log-1} 
+
+}
+
+\caption{Variação do valor justo de um imóvel em função da taxa de juros.}\label{fig:valores-juros-log}
+\end{figure}
+\hypertarget{estimauxe7uxe3o-de-intervalos-de-confianuxe7a-para-os-valores-uxe0-partir-das-simulauxe7uxf5es-de-monte-carlo}{%
+\subsection{Estimação de intervalos de confiança para os valores à partir das simulações de Monte Carlo}\label{estimauxe7uxe3o-de-intervalos-de-confianuxe7a-para-os-valores-uxe0-partir-das-simulauxe7uxf5es-de-monte-carlo}}
+
+\hypertarget{copulas}{%
+\chapter{O Método Copulas}\label{copulas}}
+
+Segundo Haugh (\protect\hyperlink{ref-copulas}{2016}), Copulas são funções que permitem separar as distribuições
+marginais da estrutura de dependência de uma dada distribuição multivariada.
+
+Por definição, uma copula d-dimensional é uma função de distribuição de
+probabilidade cumulativa com distribuições marginais uniformes (Haugh \protect\hyperlink{ref-copulas}{2016}, 1).
+
+\hypertarget{teorema-de-sklars}{%
+\section{Teorema de Sklars}\label{teorema-de-sklars}}
+
+\hypertarget{tipos-de-copulas}{%
+\section{Tipos de Copulas}\label{tipos-de-copulas}}
+
+\hypertarget{copulas-eluxedpticas}{%
+\subsection{Copulas elípticas}\label{copulas-eluxedpticas}}
+
+\hypertarget{a-copulas-gaussiana}{%
+\subsubsection{A copulas gaussiana}\label{a-copulas-gaussiana}}
+
+\hypertarget{a-copulas-t}{%
+\subsubsection{A copulas t}\label{a-copulas-t}}
+
+\hypertarget{copulas-arquimedianas}{%
+\subsection{Copulas Arquimedianas}\label{copulas-arquimedianas}}
+
+\hypertarget{a-copulas-clayton}{%
+\subsubsection{A copulas Clayton}\label{a-copulas-clayton}}
+
+\hypertarget{a-copulas-de-gumbel}{%
+\subsubsection{A copulas de Gumbel}\label{a-copulas-de-gumbel}}
+
+\hypertarget{outras-copulas-arquimedianas}{%
+\subsubsection{Outras copulas Arquimedianas}\label{outras-copulas-arquimedianas}}
+
+\hypertarget{metodologia}{%
+\chapter{Metodologia}\label{metodologia}}
+
+\hypertarget{resultados}{%
+\chapter{Resultados}\label{resultados}}
+
+\hypertarget{conclusao}{%
+\chapter{Conclusão}\label{conclusao}}
+
+As conclusões devem responder às questões da pesquisa, em relação aos objetivos
+e às hipóteses. Devem ser breves, podendo apresentar recomendações e sugestões
+para trabalhos futuros.
+
+\hypertarget{referuxeancias}{%
+\chapter*{REFERÊNCIAS}\label{referuxeancias}}
+\addcontentsline{toc}{chapter}{REFERÊNCIAS}
+
+\markboth{Referências}{REFERÊNCIAS}
+
+\hypertarget{refs}{}
+\leavevmode\hypertarget{ref-NBR1465301}{}%
+ABNT. 2019. \emph{NBR 14653-1: Avaliação de Bens -- Parte 1: Procedimentos Gerais}. Rio de Janeiro: Associação Brasileira de Normas Técnicas.
+
+\leavevmode\hypertarget{ref-ADAMS201038}{}%
+Adams, Zeno, and Roland Füss. 2010. ``Macroeconomic Determinants of International Housing Markets.'' \emph{Journal of Housing Economics} 19 (1): 38--50. \url{https://doi.org/https://doi.org/10.1016/j.jhe.2009.10.005}.
+
+\leavevmode\hypertarget{ref-Bresser-Pereira1973}{}%
+Bresser-Pereira, Luiz Carlos. 1973. ``A função investimento e a eficiência marginal do capital.'' São Paulo, 9. \href{http://www.bresserpereira.org.br/works/casos/73.Fun\%7B/c\%7Bc\%7D\%7D\%7B/~\%7Ba\%7D\%7DoInvestimento\%7B/_\%7DEficienciaMarginalDoCapital.pdf}{http://www.bresserpereira.org.br/works/casos/73.Fun\{\textbackslash{}c\{c\}\}\{\textbackslash{}\textasciitilde{}\{a\}\}oInvestimento\{\textbackslash{}\_\}EficienciaMarginalDoCapital.pdf}.
+
+\leavevmode\hypertarget{ref-california}{}%
+Canzian, Fernando. 2019. \emph{Folha de São Paulo}. \url{https://www1.folha.uol.com.br/mundo/2019/09/apesar-de-rica-california-concentra-pobreza-e-ve-crise-de-habitacao-em-los-angeles.shtml}.
+
+\leavevmode\hypertarget{ref-Case2000}{}%
+Case, Karl E., Edward L. Glaeser, and Jonathan A. Parker. 2000. ``Real Estate and the Macroeconomy.'' \emph{Brookings Papers on Economic Activity} 2000 (2). Brookings Institution Press: 119--62. \url{http://www.jstor.org/stable/2667357}.
+
+\leavevmode\hypertarget{ref-fnogueira}{}%
+Costa, Fernando Nogueira da. 2018. \emph{Métodos de Análise Econômica}. São Paulo: Contexto.
+
+\leavevmode\hypertarget{ref-doi:10.1177ux2f0959683609356587}{}%
+Goldewijk, Kees Klein, Arthur Beusen, and Peter Janssen. 2010. ``Long-Term Dynamic Modeling of Global Population and Built-up Area in a Spatially Explicit Way: HYDE 3.1.'' \emph{The Holocene} 20 (4): 565--73. \url{https://doi.org/10.1177/0959683609356587}.
+
+\leavevmode\hypertarget{ref-copulas}{}%
+Haugh, Martin. 2016. ``An Introduction to Copulas.'' Columbia University.
+
+\leavevmode\hypertarget{ref-gahochheim}{}%
+Hochheim, Gustavo Andreas. 2017. ``Análise Da Variabilidade Dos Resultados Na Avaliação de Terrenos Usando O Método Involutivo Com Simulação de Monte Carlo.'' \emph{Universidade Federal de Santa Catarina}. \url{https://repositorio.ufsc.br/bitstream/handle/123456789/177298/TCC\%20---\%20GUSTAVO\%20ANDREAS\%20HOCHHEIM.pdf?sequence=1\&isAllowed=y}.
+
+\leavevmode\hypertarget{ref-londres}{}%
+Khan, Sadiq. 2018. \emph{London.gov.uk}. \url{https://www.london.gov.uk/sites/default/files/2018_lhs_exec_summary_fa.pdf}.
+
+\leavevmode\hypertarget{ref-krugman}{}%
+Krugman, Paul. 2014. ``Notes on Easy Money and Inequality.'' \emph{New York Times}. \url{https://tinyurl.com/y79qn468}.
+
+\leavevmode\hypertarget{ref-LEUNG}{}%
+Leung, Charles. 2004. ``Macroeconomics and Housing: A Review of the Literature.'' \emph{Journal of Housing Economics} 13 (4): 249--67. \url{https://doi.org/https://doi.org/10.1016/j.jhe.2004.09.002}.
+
+\leavevmode\hypertarget{ref-amoroso}{}%
+Lima, Alceu Amoroso. 1981. ``Política E Letras.'' In \emph{À Margem Da História Da República: Inquérito Por Escritores Da Geração Nascida Com a República}, 2nd ed. Vol. 2. Vicente Licínio Cardoso; Câmara dos Deputados/Editora Universidade de Brasília.
+
+\leavevmode\hypertarget{ref-berlim}{}%
+Ling, Anthony. 2019. \emph{Caos Planejado}. \url{https://caosplanejado.com/entenda-a-crise-habitacional-de-berlim/}.
+
+\leavevmode\hypertarget{ref-marins1}{}%
+Marins, André Cabral. 2009. \emph{Mercado de Derivativos E Análise de Risco}. Vol. 1. Rio de Janeiro: AMS.
+
+\leavevmode\hypertarget{ref-matloff2017}{}%
+Matloff, Norman. 2017. \emph{From Linear Models to Machine Learning: Regression and Classification, with R Examples}. Chapman \& Hall. \url{http://heather.cs.ucdavis.edu/draftregclass.pdf}.
+
+\leavevmode\hypertarget{ref-realestate}{}%
+Natsvaladze, Marina, and Nino Beraia. 2018. ``Real Estate Economics.'' PhD thesis. \url{https://doi.org/10.13140/RG.2.2.13631.41124}.
+
+\leavevmode\hypertarget{ref-pereira}{}%
+Pereira, José Maria Dias. 2014. ``O Centenário de Ignácio Rangel.'' \emph{Revista de Economia Política} 34. São Paulo. \url{doi:10.1590/S0101-31572014000400003}.
+
+\leavevmode\hypertarget{ref-bresser2018}{}%
+Pereira, Luiz Carlos Bresser. 2018. ``Afinal, a Estagnação Secular Do Capitalismo?'' \emph{Revista Brasileira de Ciências Sociais} 33 (96).
+
+\leavevmode\hypertarget{ref-QuandlWIKI}{}%
+Quandl. 2020. ``WIKI Various End-of-Day Data.'' 2020. \url{https://www.quandl.com/data/WIKI}.
+
+\leavevmode\hypertarget{ref-rangel1962}{}%
+Rangel, Ignácio. 2012a. ``A Questão Agrária Brasileira.'' In \emph{Ignácio Rangel: Obras Reunidas}, 3rd ed., 2:23--80. Rio de Janeiro: César Benjamin; Contraponto.
+
+\leavevmode\hypertarget{ref-rangel1986b}{}%
+---------. 2012b. ``A Questão Agrária E O Ciclo Longo.'' In \emph{Ignácio Rangel: Obras Reunidas}, 3rd ed., 2:129--40. Rio de Janeiro: César Benjamin; Contraponto.
+
+\leavevmode\hypertarget{ref-rangel1986c}{}%
+---------. 2012c. ``A Questão Da Terra.'' In \emph{Ignácio Rangel: Obras Reunidas}, 3rd ed., 2:141--49. Rio de Janeiro: César Benjamin; Contraponto.
+
+\leavevmode\hypertarget{ref-rangel1986a}{}%
+---------. 2012d. ``Crise Agrária E Metrópole.'' In \emph{Ignácio Rangel: Obras Reunidas}, 3rd ed., 2:149--55. Rio de Janeiro: César Benjamin; Contraponto.
+
+\leavevmode\hypertarget{ref-rangel1961}{}%
+---------. 2012e. ``Demografia E Democracia.'' In \emph{Ignácio Rangel: Obras Reunidas}, 3rd ed., 2:218--20. Rio de Janeiro: César Benjamin; Contraponto.
+
+\leavevmode\hypertarget{ref-rangel1960}{}%
+---------. 2012f. ``Depoimento Sobre a Questão Agrária.'' In \emph{Ignácio Rangel: Obras Reunidas}, 3rd ed., 2:205--7. Rio de Janeiro: César Benjamin; Contraponto.
+
+\leavevmode\hypertarget{ref-rangel1956}{}%
+---------. 2012g. ``Desenvolvimento E Projeto.'' In \emph{Ignácio Rangel: Obras Reunidas}, 3rd ed., 1:203--83. Rio de Janeiro: César Benjamin; Contraponto.
+
+\leavevmode\hypertarget{ref-rangel1989}{}%
+---------. 2012h. ``Feudalismo E Propriedade Fundiária.'' In \emph{Ignácio Rangel: Obras Reunidas}, 3rd ed., 2:726--41. Rio de Janeiro: César Benjamin; Contraponto.
+
+\leavevmode\hypertarget{ref-rangel1988}{}%
+---------. 2012i. ``Fim de Linha.'' In \emph{Ignácio Rangel: Obras Reunidas}, 3rd ed., 2:155--57. Rio de Janeiro: César Benjamin; Contraponto.
+
+\leavevmode\hypertarget{ref-rangel1954}{}%
+---------. 2012j. ``O Desenvolvimento Econômico No Brasil.'' In \emph{Ignácio Rangel: Obras Reunidas}, 3rd ed., 1:39--128. Rio de Janeiro: César Benjamin; Contraponto.
+
+\leavevmode\hypertarget{ref-rangel1985}{}%
+---------. 2012k. ``Problemas Da Reforma Agrária.'' In \emph{Ignácio Rangel: Obras Reunidas}, 3rd ed., 2:125--28. Rio de Janeiro: César Benjamin; Contraponto.
+
+\leavevmode\hypertarget{ref-suecia}{}%
+Roden, Lee. 2017. \emph{The Local}. \url{https://www.thelocal.se/20170828/the-story-of-swedens-housing-crisis}.
+
+\leavevmode\hypertarget{ref-rossetti}{}%
+Rossetti, José Paschoal. 2014. \emph{Introdução à Economia}. 20th ed. São Paulo: Atlas.
+
+\leavevmode\hypertarget{ref-serapicos}{}%
+Serapicos, Ana. 2019. ``Crédito Habitação Com Juros Negativos São a Nova Tendência Na Dinamarca.'' \emph{Euronews}. \url{https://pt.euronews.com/2019/11/04/credito-habitacao-com-juros-negativos-sao-a-nova-tendencia-na-dinamarca}.
+
+\leavevmode\hypertarget{ref-singer}{}%
+Singer, Paul. 2005. \emph{O Que é Economia}. 6th ed. São Paulo: https://www.passeidireto.com/arquivo/19292334/o-que-e-economia---paul-singer; Contexto.
+
+\leavevmode\hypertarget{ref-lalan}{}%
+Todorovski, D., Rodolfo Salazar, Ginella Jacome, and C.H.J. Lemmen. 2019. ``Establishment of Latin America Land Administration Network (Lalan).'' \url{http://www.fig.net/fig2019/technical_program.htm}.
+
+\bapendices
+
+\hypertarget{eficiuxeancia-marginal-do-capital}{%
+\chapter{Eficiência Marginal do Capital}\label{eficiuxeancia-marginal-do-capital}}
+
+\hypertarget{a-funuxe7uxe3o-investimento-e-a-eficiuxeancia-marginal-do-capital}{%
+\section{A função investimento e a eficiência marginal do capital}\label{a-funuxe7uxe3o-investimento-e-a-eficiuxeancia-marginal-do-capital}}
+
+Para Bresser-Pereira (\protect\hyperlink{ref-Bresser-Pereira1973}{1973}, 3), \emph{a determinação da variável
+estratégica a determinar o volume de investimentos torna-se de extraordinária
+importância}.
+
+Segundo Bresser-Pereira (\protect\hyperlink{ref-Bresser-Pereira1973}{1973}, 3), \emph{a tradição clássica de dar
+primazia a taxa de lucros foi abandonada pelos neoclássicos, que colocaram a
+taxa de juros no centro do seu sistema}. Posteriormente, foi Keynes quem
+\emph{restabeleceu, até um certo ponto, a importância da taxa de lucros, através do
+conceito de eficiência marginal do capital}.
+
+Para Bresser-Pereira (\protect\hyperlink{ref-Bresser-Pereira1973}{1973}), ``a teoria ortodoxa\footnote{Bresser define como economistas ortodoxos os economistas neoclássicos e os
+  keynesianos, no contexto do trabalho citado.} sobre a função investimento
+afirma que a acumulação de capital depende da taxa de lucro prevista (ou
+eficiência marginal do capital) da taxa de juros, dado o nível da renda'', com
+uma relação inversa, ou seja, à medida que aumenta o volume de investimentos,
+cai a eficiência marginal do capital, conforme pode ser observado na
+figura \ref{fig:eficienciamarginal} (Bresser-Pereira \protect\hyperlink{ref-Bresser-Pereira1973}{1973}, 4):
+\begin{figure}[H]
+
+{\centering \includegraphics[width=0.8\linewidth]{images/Page-4-Image-1} 
+
+}
+
+\caption{Eficiência Marginal do Capital e Investimento.}\label{fig:eficienciamarginal}
+\end{figure}
+Uma das possíveis explicações para esta relação inversa pode ser vista no trecho
+abaixo:
+\begin{citacao}
+Há, portanto, uma relação inversa entre o volume dos investimentos e a
+eficiência marginal do capital. Podemos, inclusive, imaginar que as empresas ou
+os empresários disponham sempre de um "estoque" de projetos de investimentos,
+com taxas diferentes e declinantes de lucro. Quanto maiores fossem os
+investimentos efetivamente realizados, mais seria preciso descer na escala de
+rentabilidade prevista dos projetos \ldots Será interessante para a empresa
+investir enquanto ela puder esperar do novo investimento um retorno superior ou
+pelo menos igual ao da taxa de juros do mercado
+\cite[p.~5]{Bresser-Pereira1973}.
+\end{citacao}
+A citação acima implica que também haverá uma relação entre a taxa de juros de
+mercado e o volume de investimentos, novamente em uma relação inversa, haja
+vista que quanto menor for a taxa de juros de mercado, maior será o volume de
+investimentos.
+
+A diferença básica entre a taxa de juros de mercado e a taxa de lucros (ou
+eficiência marginal do capital), segundo Bresser-Pereira (\protect\hyperlink{ref-Bresser-Pereira1973}{1973}), é que, enquanto a
+taxa de lucros é dependente do volume de investimentos, a taxa de juros de
+mercado é uma variável independente.
+\begin{citacao}
+Em outras palavras, é a variação dos investimentos que leva à variação da
+eficiência marginal do capital, enquanto que é a variação da taxa de juros que
+leva à variação do volume de investimentos
+\cite{Bresser-Pereira1973}.
+\end{citacao}
+Segundo Bresser-Pereira (\protect\hyperlink{ref-Bresser-Pereira1973}{1973}), a eficiência marginal do capital
+varia conforme o nível de otimismo dos empresários. A ``distinção entre a
+eficiência marginal do capital, dado um determinado nível de otimismo dos
+empresários, \(r\), e a eficiência marginal do capital com diferentes níveis de
+otimismo, quanto às suas perspectivas de lucro, \(r’\)'', pode ser vista na
+figura \ref{fig:eficienciamarginal2}: \textit{fixada uma taxa de juros em um
+determinado nível $j_1$, podemos, então, deduzir graficamente uma nova função
+investimento, relacionando positivamente o volume de investimentos, dado um
+nível de renda, com a influência marginal do capital, $r’$, a diferentes níveis de
+otimismo} \cite[p.~8]{Bresser-Pereira1973}:
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=.8\textwidth]{images/Page-8-Image-3.png}
+\includegraphics[width=.8\textwidth]{images/Page-8-Image-4.png}
+\end{center}
+\caption{A nova função Investimento.}
+\label{fig:eficienciamarginal2}
+\end{figure}
+\begin{citacao}
+Através dos mecanismos ortodoxos da política monetária e fiscal, e dos
+mecanismos menos ortodoxos da política salarial, da política cambial, da
+política fiscal ampliada, que inclui subsídios os mais variados, o Governo tem
+condições crescentes de influenciar direta ou indiretamente as perspectivas de
+lucro dos empresários. Por outro lado, as variações no nível de segurança
+política para os investimentos, tão grandes no mundo moderno, devem também fazer
+variar grandemente o nível de otimismo dos empresários em relação a suas
+perspectivas de lucro
+\cite[p.~9]{Bresser-Pereira1973}.
+\end{citacao}
+Segundo Rangel (\emph{apud} Pereira (\protect\hyperlink{ref-pereira}{2014})), \emph{a eficácia marginal do capital das empresas
+com capacidade ociosa é negativa e, pela lógica, é essa eficácia que deve 3
+orientar a taxa de juros}.
+
+\eapendices
+
+\banexos
+
+\hypertarget{artigo-valor-econuxf4mico}{%
+\chapter{Artigo Valor Econômico}\label{artigo-valor-econuxf4mico}}
+
+\eanexos
+
+% ----------------------------------------------------------
+% Glossário
+% ----------------------------------------------------------
+%
+% Consulte o manual da classe abntex2 para orientações sobre o glossário.
+%
+%\glossary
+
+%---------------------------------------------------------------------
+% INDICE REMISSIVO
+%---------------------------------------------------------------------
+%\phantompart
+%\printindex
+%---------------------------------------------------------------------
+
+\end{document}

@@ -1,0 +1,31 @@
+<!--
+The bib chunk below must go last in this document according to how R Markdown renders.  More info is at http://rmarkdown.rstudio.com/authoring_bibliographies_and_citations.html
+-->
+
+<!-- 
+If you'd like to change the name of the bibliography to something else,
+delete "References" and replace it.
+-->
+
+# REFERÊNCIAS {-}
+
+```{r}
+# To create bib citations to R packages, proceed like below:
+knitr::write_bib(c("ggplot2", "stargazer"), "bib/pkgs.bib", width = 78)
+```
+
+<!--
+This manually sets the header for this unnumbered chapter.
+-->
+\markboth{Referências}{REFERÊNCIAS}
+
+
+<div id="refs"></div>
+
+<!--
+To create a hanging indent and spacing between entries.  These three lines may need to be removed for styles that don't require the hanging indent.
+-->
+
+<!--
+This is just for testing with more citations for the bibliography at the end.  Add other entries into the list here if you'd like them to appear in the bibliography even if they weren't explicitly cited in the document.
+-->

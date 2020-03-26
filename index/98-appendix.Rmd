@@ -1,0 +1,103 @@
+`r if(knitr:::is_latex_output()) '\\bapendices'`
+
+<!--
+If you feel it necessary to include an appendix, it goes here.
+-->
+
+# Eficiência Marginal do Capital
+
+## A função investimento e a eficiência marginal do capital
+
+Para Bresser-Pereira [-@Bresser-Pereira1973, 3], *a determinação da variável
+estratégica a determinar o volume de investimentos torna-se de extraordinária
+importância*.
+
+Segundo Bresser-Pereira [-@Bresser-Pereira1973, 3], *a tradição clássica de dar
+primazia a taxa de lucros foi abandonada pelos neoclássicos, que colocaram a
+taxa de juros no centro do seu sistema*. Posteriormente, foi Keynes quem
+*restabeleceu, até um certo ponto, a importância da taxa de lucros, através do
+conceito de eficiência marginal do capital*.
+
+Para @Bresser-Pereira1973, "a teoria ortodoxa[^2] sobre a função investimento 
+afirma que a acumulação de capital depende da taxa de lucro prevista (ou 
+eficiência marginal do capital) da taxa de juros, dado o nível da renda", com 
+uma relação inversa, ou seja, à medida que aumenta o volume de investimentos, 
+cai a eficiência marginal do capital, conforme pode ser observado na 
+figura \@ref(fig:eficienciamarginal) [@Bresser-Pereira1973, 4]:
+
+[^2]: Bresser define como economistas ortodoxos os economistas neoclássicos e os 
+keynesianos, no contexto do trabalho citado.
+
+```{r eficienciamarginal, out.width="80%", fig.cap = "Eficiência Marginal do Capital e Investimento."}
+knitr::include_graphics('images/Page-4-Image-1.png')
+```
+
+Uma das possíveis explicações para esta relação inversa pode ser vista no trecho
+abaixo:
+
+\begin{citacao}
+Há, portanto, uma relação inversa entre o volume dos investimentos e a
+eficiência marginal do capital. Podemos, inclusive, imaginar que as empresas ou
+os empresários disponham sempre de um "estoque" de projetos de investimentos,
+com taxas diferentes e declinantes de lucro. Quanto maiores fossem os
+investimentos efetivamente realizados, mais seria preciso descer na escala de
+rentabilidade prevista dos projetos \ldots Será interessante para a empresa
+investir enquanto ela puder esperar do novo investimento um retorno superior ou
+pelo menos igual ao da taxa de juros do mercado
+\cite[p.~5]{Bresser-Pereira1973}.
+\end{citacao}
+
+A citação acima implica que também haverá uma relação entre a taxa de juros de
+mercado e o volume de investimentos, novamente em uma relação inversa, haja
+vista que quanto menor for a taxa de juros de mercado, maior será o volume de
+investimentos.
+
+A diferença básica entre a taxa de juros de mercado e a taxa de lucros (ou
+eficiência marginal do capital), segundo @Bresser-Pereira1973, é que, enquanto a 
+taxa de lucros é dependente do volume de investimentos, a taxa de juros de
+mercado é uma variável independente. 
+
+\begin{citacao}
+Em outras palavras, é a variação dos investimentos que leva à variação da
+eficiência marginal do capital, enquanto que é a variação da taxa de juros que
+leva à variação do volume de investimentos
+\cite{Bresser-Pereira1973}.
+\end{citacao}
+
+Segundo @Bresser-Pereira1973, a eficiência marginal do capital
+varia conforme o nível de otimismo dos empresários. A "distinção entre a
+eficiência marginal do capital, dado um determinado nível de otimismo dos
+empresários, $r$, e a eficiência marginal do capital com diferentes níveis de
+otimismo, quanto às suas perspectivas de lucro, $r’$", pode ser vista na
+figura \@ref(fig:eficienciamarginal2): \textit{fixada uma taxa de juros em um
+determinado nível $j_1$, podemos, então, deduzir graficamente uma nova função
+investimento, relacionando positivamente o volume de investimentos, dado um
+nível de renda, com a influência marginal do capital, $r’$, a diferentes níveis de
+otimismo} \cite[p.~8]{Bresser-Pereira1973}:
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=.8\textwidth]{images/Page-8-Image-3.png}
+\includegraphics[width=.8\textwidth]{images/Page-8-Image-4.png}
+\end{center}
+\caption{A nova função Investimento.}
+\label{fig:eficienciamarginal2}
+\end{figure}
+
+\begin{citacao}
+Através dos mecanismos ortodoxos da política monetária e fiscal, e dos
+mecanismos menos ortodoxos da política salarial, da política cambial, da
+política fiscal ampliada, que inclui subsídios os mais variados, o Governo tem
+condições crescentes de influenciar direta ou indiretamente as perspectivas de
+lucro dos empresários. Por outro lado, as variações no nível de segurança
+política para os investimentos, tão grandes no mundo moderno, devem também fazer
+variar grandemente o nível de otimismo dos empresários em relação a suas
+perspectivas de lucro
+\cite[p.~9]{Bresser-Pereira1973}.
+\end{citacao}
+
+Segundo Rangel (*apud* @pereira),  *a eficácia marginal do capital das empresas 
+com capacidade ociosa é negativa e, pela lógica, é essa eficácia que deve 3
+orientar a taxa de juros*.
+
+`r if(knitr:::is_latex_output()) '\\eapendices'`

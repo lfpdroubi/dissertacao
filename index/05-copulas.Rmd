@@ -1,0 +1,25 @@
+# O Método Copulas {#copulas}
+
+Segundo @copulas, Copulas são funções que permitem separar as distribuições
+marginais da estrutura de dependência de uma dada distribuição multivariada.
+
+Por definição, uma copula d-dimensional é uma função de distribuição de
+probabilidade cumulativa com distribuições marginais uniformes [@copulas, 1].
+
+## Teorema de Sklars
+
+## Tipos de Copulas
+
+### Copulas elípticas
+
+#### A copulas gaussiana
+
+#### A copulas t
+
+### Copulas Arquimedianas
+
+#### A copulas Clayton
+
+#### A copulas de Gumbel
+
+#### Outras copulas Arquimedianas
