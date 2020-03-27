@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Capítulo 5 O Método Copulas | thesis.utf8</title>
   <meta name="description" content="" />
-  <meta name="generator" content="bookdown 0.17 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.18 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Capítulo 5 O Método Copulas | thesis.utf8" />
   <meta property="og:type" content="book" />
@@ -122,6 +122,12 @@
 <li class="chapter" data-level="5.2.1" data-path="5-copulas.html"><a href="5-copulas.html#copulas-elípticas"><i class="fa fa-check"></i><b>5.2.1</b> Copulas elípticas</a></li>
 <li class="chapter" data-level="5.2.2" data-path="5-copulas.html"><a href="5-copulas.html#copulas-arquimedianas"><i class="fa fa-check"></i><b>5.2.2</b> Copulas Arquimedianas</a></li>
 </ul></li>
+<li class="chapter" data-level="5.3" data-path="5-copulas.html"><a href="5-copulas.html#medidas-de-dependência"><i class="fa fa-check"></i><b>5.3</b> Medidas de dependência</a><ul>
+<li class="chapter" data-level="5.3.1" data-path="5-copulas.html"><a href="5-copulas.html#coeficiente-de-correlação-de-pearson"><i class="fa fa-check"></i><b>5.3.1</b> Coeficiente de correlação de Pearson</a></li>
+<li class="chapter" data-level="5.3.2" data-path="5-copulas.html"><a href="5-copulas.html#coeficiente-de-correlação-local-de-pearson"><i class="fa fa-check"></i><b>5.3.2</b> Coeficiente de correlação local de Pearson</a></li>
+<li class="chapter" data-level="5.3.3" data-path="5-copulas.html"><a href="5-copulas.html#coeficiente-de-correlação-de-spearman"><i class="fa fa-check"></i><b>5.3.3</b> Coeficiente de correlação de Spearman</a></li>
+<li class="chapter" data-level="5.3.4" data-path="5-copulas.html"><a href="5-copulas.html#coeficiente-de-kendall"><i class="fa fa-check"></i><b>5.3.4</b> Coeficiente de Kendall</a></li>
+</ul></li>
 </ul></li>
 <li class="chapter" data-level="6" data-path="6-metodologia.html"><a href="6-metodologia.html"><i class="fa fa-check"></i><b>6</b> Metodologia</a></li>
 <li class="chapter" data-level="7" data-path="7-resultados.html"><a href="7-resultados.html"><i class="fa fa-check"></i><b>7</b> Resultados</a></li>
@@ -180,6 +186,35 @@ probabilidade cumulativa com distribuições marginais uniformes <span class="ci
 </div>
 <div id="outras-copulas-arquimedianas" class="section level4">
 <h4><span class="header-section-number">5.2.2.3</span> Outras copulas Arquimedianas</h4>
+</div>
+</div>
+</div>
+<div id="medidas-de-dependência" class="section level2">
+<h2><span class="header-section-number">5.3</span> Medidas de dependência</h2>
+<div id="coeficiente-de-correlação-de-pearson" class="section level3">
+<h3><span class="header-section-number">5.3.1</span> Coeficiente de correlação de Pearson</h3>
+<p><span class="math display">\[Corr(X, Y ) = \frac{Cov(X, Y )}{Var(X)Var(Y)}\]</span>
+#### Propriedades</p>
+</div>
+<div id="coeficiente-de-correlação-local-de-pearson" class="section level3">
+<h3><span class="header-section-number">5.3.2</span> Coeficiente de correlação local de Pearson</h3>
+<p><span class="math display">\[\rho_{local}(x, y) = \frac{E[(X − E(X|Y = y))(Y − E(Y |X = x))]}{\sqrt{E(X − E(X|Y = y))^2 E(Y − E(Y |X = x))^2}}\]</span></p>
+<div id="propriedades" class="section level4">
+<h4><span class="header-section-number">5.3.2.1</span> Propriedades</h4>
+</div>
+</div>
+<div id="coeficiente-de-correlação-de-spearman" class="section level3">
+<h3><span class="header-section-number">5.3.3</span> Coeficiente de correlação de Spearman</h3>
+<p><span class="math display">\[\rho(X, Y ) = 3P[(X − X&#39;)(Y − Y&#39;) &gt; 0] − P[(X − X&#39;)(Y − Y&#39;&#39; ) &lt; 0]\]</span></p>
+<div id="propriedades-1" class="section level4">
+<h4><span class="header-section-number">5.3.3.1</span> Propriedades</h4>
+</div>
+</div>
+<div id="coeficiente-de-kendall" class="section level3">
+<h3><span class="header-section-number">5.3.4</span> Coeficiente de Kendall</h3>
+<p><span class="math display">\[\tau(X, Y ) = P[(X − X&#39;)(Y − Y&#39;)) &gt; 0] − P[(X − X&#39;)(Y − Y&#39;) &lt; 0]\]</span></p>
+<div id="propriedades-2" class="section level4">
+<h4><span class="header-section-number">5.3.4.1</span> Propriedades</h4>
 
 </div>
 </div>

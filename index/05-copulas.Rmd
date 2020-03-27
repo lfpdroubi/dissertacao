@@ -33,7 +33,7 @@ $$Corr(X, Y ) = \frac{Cov(X, Y )}{Var(X)Var(Y)}$$
 
 ### Coeficiente de correlação local de Pearson
 
-$$\rho_{local}(x, y) = \frac{E[(X − E(X|Y = y))(Y − E(Y |X = x))]}{\sqrt{E(X − E(X|Y = y))^2 E(Y − E(Y |X = x))^2}}$$
+$$\rho_{local}(x, y) = \frac{E[(X - E(X|Y = y))(Y - E(Y|X = x))]}{\sqrt{E(X - E(X|Y = y))^2 E(Y - E(Y |X = x))^2}}$$
 
 
 #### Propriedades
@@ -41,14 +41,14 @@ $$\rho_{local}(x, y) = \frac{E[(X − E(X|Y = y))(Y − E(Y |X = x))]}{\sqrt{E(X
 
 ### Coeficiente de correlação de Spearman
 
-$$\rho(X, Y ) = 3P[(X − X')(Y − Y') > 0] − P[(X − X')(Y − Y'' ) < 0]$$
+$$\rho(X, Y ) = 3P[(X - X')(Y - Y') > 0] - P[(X - X')(Y - Y'' ) < 0]$$
 
 #### Propriedades
 
 
 ### Coeficiente de Kendall
 
-$$\tau(X, Y ) = P[(X − X')(Y − Y')) > 0] − P[(X − X')(Y − Y') < 0]$$
+$$\tau(X, Y ) = P[(X - X')(Y - Y')) > 0] - P[(X - X')(Y - Y') < 0]$$
 
 #### Propriedades
 

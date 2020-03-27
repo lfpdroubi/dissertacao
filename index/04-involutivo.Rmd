@@ -106,13 +106,15 @@ inferior a taxa dos títulos de dívida pública do governo **de _duration_ simi
 pode ser considerado um investimento livre de risco. 
 
 ```{r TD}
-url_data <- read_html("http://www.tesouro.fazenda.gov.br/tesouro-direto-precos-e-taxas-dos-titulos")
-bonds <- url_data %>%
-  html_nodes(xpath = "//table[@class='tabelaPrecoseTaxas']") %>%
-  html_table(header = TRUE, fill = TRUE, dec = ",")
-bonds_df <- bonds[[1]][, 1:5] 
-bonds_df <- bonds_df[complete.cases(bonds_df), ]
-colnames(bonds_df) <- c("Título", "Vencimento", "% a.a.", "Valor Mínimo", "P. U.")
+# url_data <- read_html("http://www.tesouro.fazenda.gov.br/tesouro-direto-precos-e-taxas-dos-titulos")
+# bonds <- url_data %>%
+#   html_nodes(xpath = "//table[@class='tabelaPrecoseTaxas']") %>%
+#   html_table(header = TRUE, fill = TRUE, dec = ",")
+# bonds_df <- bonds[[1]][, 1:5] 
+# bonds_df <- bonds_df[complete.cases(bonds_df), ]
+# colnames(bonds_df) <- c("Título", "Vencimento", "% a.a.", "Valor Mínimo", "P. U.")
+# saveRDS(bonds_df, "data/TD")
+bonds_df <- readRDS("data/TD")
 bonds_df %>% 
   kable(caption = "Preços e taxas de referência dos títulos públicos",
         format = ifelse(type == "html", "markdown", type),

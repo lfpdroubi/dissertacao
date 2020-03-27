@@ -237,8 +237,10 @@ desde janeiro de 2012, ultrapassando já, em termos nominais, os níveis de pre�
 anteriores à crise de 2008.
 
 ```{r}
-nhpidata <- Quandl("YALE/NHPI", type="ts", start_date="1990-01-01")
-rhpidata <- Quandl("YALE/RHPI", type="ts")
+# nhpi <- Quandl("YALE/NHPI", type="ts", start_date="1990-01-01")
+# rhpi <- Quandl("YALE/RHPI", type="ts")
+# saveRDS(nhpi, file = "data/nhpi")
+# saveRDS(rhpi, file = "data/rhpi")
 ```
 
 ```{r}
@@ -255,7 +257,8 @@ recessions.df <- within(recessions.df, {
 
 ```{r nhpi, fig.cap="Home Price Index, de Case e Shiller, em termos nominais."}
 recessions.trim = subset(recessions.df, Peak >= "1990-01-01")
-ggplot(nhpidata, as.numeric = FALSE) +
+nhpi <- readRDS("data/nhpi")
+ggplot(nhpi, as.numeric = FALSE) +
   geom_line() +
    labs(
      title = "Case-Shiller U.S. National Nominal Home Price Index", 
@@ -282,10 +285,10 @@ Fonte: O autor, à partir de dados de @QuandlWIKI.
 \ecenter
 
 Em julho de 2006 o índice atingiu o valor de 
-`r brf(window(nhpidata, start = 2006 + 6/12, end = 2006 + 6/12)[[1]])` pontos,
-entrando então em tendência de baixa, até atingir os `r brf(window(nhpidata, start = 2012 + 0/12, end = 2012 + 0/12)[[1]])`, em janeiro de 2012, quando se iniciou nova tendência de 
+`r brf(window(nhpi, start = 2006 + 6/12, end = 2006 + 6/12)[[1]])` pontos,
+entrando então em tendência de baixa, até atingir os `r brf(window(nhpi, start = 2012 + 0/12, end = 2012 + 0/12)[[1]])`, em janeiro de 2012, quando se iniciou nova tendência de 
 alta, que perdura até os dias atuais. No momento em que se escreve esta 
-dissertação o índice se encontra com `r brf(last(nhpidata))` pontos, maior valor
+dissertação o índice se encontra com `r brf(last(nhpi))` pontos, maior valor
 da série histórica.
 
 Em termos reais, no entanto, os preços ainda são inferiores ao pico registrado, 
@@ -293,7 +296,8 @@ mas há uma nítida tendência de alta, conforme pode ser visto na figura
 \@ref(fig:rhpi).
 
 ```{r rhpi, fig.cap="Home Price Index, de Case e Shiller, em termos reais."}
-ggplot(window(rhpidata, start = 1990 + 0/12), as.numeric = FALSE) +
+rhpi <- readRDS("data/rhpi")
+ggplot(window(rhpi, start = 1990 + 0/12), as.numeric = FALSE) +
   geom_line() +
    labs(
      title = "Case-Shiller U.S. National Real Home Price Index", 
@@ -317,12 +321,12 @@ ggplot(window(rhpidata, start = 1990 + 0/12), as.numeric = FALSE) +
 Fonte: O autor, à partir de dados de @QuandlWIKI.
 \ecenter
 
-Na atualidade este índice se encontra em `r brf(last(rhpidata))` pontos, sendo 
+Na atualidade este índice se encontra em `r brf(last(rhpi))` pontos, sendo 
 que o maior valor da série histórica se deu em dezembro de 2005.
 
-Em janeiro de 1997, o índice estava em `r brf(window(rhpidata, start = 1997 + 0/12, end = 1997 + 0/12)[[1]])` pontos. Desta data em diante, o índice entrou em franca tendência 
+Em janeiro de 1997, o índice estava em `r brf(window(rhpi, start = 1997 + 0/12, end = 1997 + 0/12)[[1]])` pontos. Desta data em diante, o índice entrou em franca tendência 
 de alta até atingir os
-`r brf(window(rhpidata, start = 2005 + 11/12, end = 2005 + 11/12)[[1]])` pontos, 
+`r brf(window(rhpi, start = 2005 + 11/12, end = 2005 + 11/12)[[1]])` pontos, 
 em dezembro de 2005, auge, em termos reais, da bolha imobiliária, que no entanto 
 só viria a estourar, nominalmente falando, em julho de 2006, como se pode ver na 
 figura \@ref(fig:nhpi).
@@ -334,7 +338,7 @@ isto.
 
 ```{r rhpi2, fig.cap="HPI, em termos reais, desde 1890."}
 recessions.trim = subset(recessions.df, Peak >= "1953-01-01" )
-ggplot(window(rhpidata, start = 1953 + 0/12), as.numeric = FALSE) +
+ggplot(window(rhpi, start = 1953 + 0/12), as.numeric = FALSE) +
   geom_line() +
    labs(
      title = "Case-Shiller U.S. National Real Home Price Index", 
@@ -359,24 +363,24 @@ Fonte: O autor, à partir de dados de @QuandlWIKI.
 \ecenter
 
 O valor mínimo da série histórica (não mostrado no gráfico) foi atingido em  
-`r month.abb[(time(rhpidata)[which.min(rhpidata)] %% 1)*12+1]`/`r floor(time(rhpidata)[which.min(rhpidata)])`, quando o índice atingiu a marca
-de `r brf(rhpidata[which.min(rhpidata)])` pontos.
+`r month.abb[(time(rhpi)[which.min(rhpi)] %% 1)*12+1]`/`r floor(time(rhpi)[which.min(rhpi)])`, quando o índice atingiu a marca
+de `r brf(rhpi[which.min(rhpi)])` pontos.
 
 É interessante notar que, em um século, desde 1890, o índice de preços reais de 
 imóveis atingiu um valor máximo de apenas 
-`r brf(window(rhpidata, start = 1989 + 7/12, end = 1989 + 7/12)[[1]])` pontos, o
+`r brf(window(rhpi, start = 1989 + 7/12, end = 1989 + 7/12)[[1]])` pontos, o
 que ocorreu em agosto de 1989.
 
 Ou seja, em relação ao topo histórico  de um século (agosto de 1989) à partir do 
 início da coleta do índice (1890), o índice hoje se encontra 
-`r brf(last(rhpidata) - window(rhpidata, start = 1989 + 7/12, end = 1989 + 7/12)[[1]])`
+`r brf(last(rhpi) - window(rhpi, start = 1989 + 7/12, end = 1989 + 7/12)[[1]])`
 pontos percentuais acima daquela marca e a apenas 
-`r brf(window(rhpidata, start = 2005 + 11/12, end = 2005 + 11/12)[[1]] - last(rhpidata))`
+`r brf(window(rhpi, start = 2005 + 11/12, end = 2005 + 11/12)[[1]] - last(rhpi))`
 pontos percentuais abaixo de atingir o topo histórico de dezembro de 2005.
 
 Em janeiro de 2012, no fundo do vale da curva do índice real, este atingiu
-`r brf(window(rhpidata, start = 2012 + 0/12, end = 2012 + 0/12)[[1]])` pontos,
-apenas `r brf(window(rhpidata, start = 1989 + 7/12, end = 1989 + 7/12)[[1]] - window(rhpidata, start = 2012 + 0/12, end = 2012 + 0/12)[[1]])` pontos abaixo do topo histórico 
+`r brf(window(rhpi, start = 2012 + 0/12, end = 2012 + 0/12)[[1]])` pontos,
+apenas `r brf(window(rhpi, start = 1989 + 7/12, end = 1989 + 7/12)[[1]] - window(rhpi, start = 2012 + 0/12, end = 2012 + 0/12)[[1]])` pontos abaixo do topo histórico 
 de um século à partir de 1890.
 
 Isto poderia ser indício da formação de nova bolha imobiliária, nos moldes da
@@ -402,21 +406,22 @@ norte-americano. A causa da queda destas taxas de juros de mais longo prazo
 muito além do escopo deste trabalho. Uma boa discussão pode ser vista em @bresser2018.
 
 ```{r}
-ycAll <- Quandl("USTREASURY/YIELD", type = "ts")
+#ycAll <- Quandl("USTREASURY/YIELD", type = "ts")
 ```
 
 ```{r}
-gs10 <- fredr(series_id = "GS10", 
-              observation_start = as.Date("1953-04-01"))
-gs20 <- fredr(series_id = "GS20", 
-              observation_start = as.Date("1953-04-01"))
-gs30 <- fredr(series_id = "GS30", 
-              observation_start = as.Date("1953-04-01"))
-df <- left_join(gs10, gs20, by = "date", suffix = c(".GS10", ".GS20"))
-df <- left_join(df, gs30, by = "date")
-df <- df[, c("date", "value.GS10", "value.GS20", "value")]
-colnames(df) <- c("date", "GS10", "GS20", "GS30")
-df <- df %>% gather("bond", "rate", -date)
+# gs10 <- fredr(series_id = "GS10", 
+#               observation_start = as.Date("1953-04-01"))
+# gs20 <- fredr(series_id = "GS20", 
+#               observation_start = as.Date("1953-04-01"))
+# gs30 <- fredr(series_id = "GS30", 
+#               observation_start = as.Date("1953-04-01"))
+# df <- left_join(gs10, gs20, by = "date", suffix = c(".GS10", ".GS20"))
+# df <- left_join(df, gs30, by = "date")
+# df <- df[, c("date", "value.GS10", "value.GS20", "value")]
+# colnames(df) <- c("date", "GS10", "GS20", "GS30")
+# df <- df %>% gather("bond", "rate", -date)
+# saveRDS(df, "data/FRED")
 ```
 
 
@@ -429,6 +434,7 @@ recessions.df <- within(recessions.df, {
                           Peak <- as.Date(Peak)
                           Trough <- as.Date(Trough)
                         })
+df <- readRDS("data/FRED")
 ggplot(data = df[which(df$date >= as.Date("1990-01-01")), ], 
        aes(x = date, y = rate, color = bond)) +
   geom_line() +

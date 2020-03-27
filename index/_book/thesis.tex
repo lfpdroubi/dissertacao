@@ -2018,20 +2018,20 @@ Título & Vencimento & \% a.a. & Valor Mínimo & P. U.\\
 \midrule
 \rowcolor{gray!6}  \addlinespace[0.3em]
 \multicolumn{5}{l}{\textbf{Indexados ao IPCA}}\\
-\hspace{1em}Tesouro IPCA+ 2026 & 15/08/2026 & 4,25 & R\$50,79 & R\$2.539,96\\
-\hspace{1em}Tesouro IPCA+ 2035 & 15/05/2035 & 4,74 & R\$32,94 & R\$1.647,17\\
-\hspace{1em}Tesouro IPCA+ 2045 & 15/05/2045 & 4,74 & R\$31,13 & R\$1.037,94\\
-\hspace{1em}Tesouro IPCA+ com Juros Semestrais 2030 & 15/08/2030 & 4,40 & R\$37,66 & R\$3.766,35\\
-\hspace{1em}Tesouro IPCA+ com Juros Semestrais 2040 & 15/08/2040 & 4,69 & R\$38,93 & R\$3.893,84\\
-\hspace{1em}Tesouro IPCA+ com Juros Semestrais 2055 & 15/05/2055 & 4,76 & R\$40,77 & R\$4.077,24\\
+\hspace{1em}Tesouro IPCA+ 2026 & 15/08/2026 & 3,85 & R\$52,06 & R\$2.603,44\\
+\hspace{1em}Tesouro IPCA+ 2035 & 15/05/2035 & 4,41 & R\$34,55 & R\$1.727,81\\
+\hspace{1em}Tesouro IPCA+ 2045 & 15/05/2045 & 4,41 & R\$33,70 & R\$1.123,56\\
+\hspace{1em}Tesouro IPCA+ com Juros Semestrais 2030 & 15/08/2030 & 4,00 & R\$38,84 & R\$3.884,89\\
+\hspace{1em}Tesouro IPCA+ com Juros Semestrais 2040 & 15/08/2040 & 4,32 & R\$40,74 & R\$4.074,36\\
+\hspace{1em}Tesouro IPCA+ com Juros Semestrais 2055 & 15/05/2055 & 4,42 & R\$43,05 & R\$4.305,38\\
 \rowcolor{gray!6}  \addlinespace[0.3em]
 \multicolumn{5}{l}{\textbf{Prefixados}}\\
-\hspace{1em}Tesouro Prefixado 2023 & 01/01/2023 & 6,28 & R\$33,81 & R\$845,37\\
-\hspace{1em}Tesouro Prefixado 2026 & 01/01/2026 & 8,33 & R\$31,54 & R\$630,83\\
-\hspace{1em}Tesouro Prefixado com Juros Semestrais 2031 & 01/01/2031 & 9,24 & R\$32,22 & R\$1.074,22\\
+\hspace{1em}Tesouro Prefixado 2023 & 01/01/2023 & 5,63 & R\$34,39 & R\$859,98\\
+\hspace{1em}Tesouro Prefixado 2026 & 01/01/2026 & 7,43 & R\$33,10 & R\$662,07\\
+\hspace{1em}Tesouro Prefixado com Juros Semestrais 2031 & 01/01/2031 & 8,08 & R\$34,70 & R\$1.156,75\\
 \rowcolor{gray!6}  \addlinespace[0.3em]
 \multicolumn{5}{l}{\textbf{Indexados à Taxa Selic}}\\
-\hspace{1em}Tesouro Selic 2025 & 01/03/2025 & 0,03 & R\$105,56 & R\$10.556,30\\
+\hspace{1em}Tesouro Selic 2025 & 01/03/2025 & 0,03 & R\$105,57 & R\$10.557,81\\
 \bottomrule
 \multicolumn{5}{l}{\textsuperscript{*} \href{http://www.tesouro.fazenda.gov.br/tesouro-direto-precos-e-taxas-dos-titulos}{Tesouro Direto}}\\
 \end{tabular}
@@ -2142,6 +2142,39 @@ probabilidade cumulativa com distribuições marginais uniformes (Haugh \protect
 
 \hypertarget{outras-copulas-arquimedianas}{%
 \subsubsection{Outras copulas Arquimedianas}\label{outras-copulas-arquimedianas}}
+
+\hypertarget{medidas-de-dependuxeancia}{%
+\section{Medidas de dependência}\label{medidas-de-dependuxeancia}}
+
+\hypertarget{coeficiente-de-correlauxe7uxe3o-de-pearson}{%
+\subsection{Coeficiente de correlação de Pearson}\label{coeficiente-de-correlauxe7uxe3o-de-pearson}}
+
+\[Corr(X, Y ) = \frac{Cov(X, Y )}{Var(X)Var(Y)}\]
+\#\#\#\# Propriedades
+
+\hypertarget{coeficiente-de-correlauxe7uxe3o-local-de-pearson}{%
+\subsection{Coeficiente de correlação local de Pearson}\label{coeficiente-de-correlauxe7uxe3o-local-de-pearson}}
+
+\[\rho_{local}(x, y) = \frac{E[(X - E(X|Y = y))(Y - E(Y|X = x))]}{\sqrt{E(X - E(X|Y = y))^2 E(Y - E(Y |X = x))^2}}\]
+
+\hypertarget{propriedades}{%
+\subsubsection{Propriedades}\label{propriedades}}
+
+\hypertarget{coeficiente-de-correlauxe7uxe3o-de-spearman}{%
+\subsection{Coeficiente de correlação de Spearman}\label{coeficiente-de-correlauxe7uxe3o-de-spearman}}
+
+\[\rho(X, Y ) = 3P[(X - X')(Y - Y') > 0] - P[(X - X')(Y - Y'' ) < 0]\]
+
+\hypertarget{propriedades-1}{%
+\subsubsection{Propriedades}\label{propriedades-1}}
+
+\hypertarget{coeficiente-de-kendall}{%
+\subsection{Coeficiente de Kendall}\label{coeficiente-de-kendall}}
+
+\[\tau(X, Y ) = P[(X - X')(Y - Y')) > 0] - P[(X - X')(Y - Y') < 0]\]
+
+\hypertarget{propriedades-2}{%
+\subsubsection{Propriedades}\label{propriedades-2}}
 
 \hypertarget{metodologia}{%
 \chapter{Metodologia}\label{metodologia}}
