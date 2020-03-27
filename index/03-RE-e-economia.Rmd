@@ -398,12 +398,14 @@ mercado imobiliário são as taxas de juros de longo prazo. Uma diminuição das
 taxas de juros de longo prazo tende a reduzir a demanda por títulos públicos de 
 longo prazo e a aumentar a demanda por investimentos com base imobiliária.
 
-Estas taxas de juros de mais longo prazo tem caído no mundo todo,
-especialmente nas economias desenvolvidas, como ilustra o gráfico da figura
-\@ref(fig:yields), que mostra as taxas de juros dos títulos da dívida do tesouro
-norte-americano. A causa da queda destas taxas de juros de mais longo prazo
-(assim como as de curto prazo) são atribuídas a diversos fatores, o que vai
-muito além do escopo deste trabalho. Uma boa discussão pode ser vista em @bresser2018.
+Estas taxas de juros de mais longo prazo tem caído no mundo todo, especialmente
+nas economias desenvolvidas, como ilustra o gráfico da figura \@ref(fig:yields),
+elaboradas a partir de dados obtidos do @fredgs10, @fredgs20, @fredgs30. Esta
+ mostra as taxas de juros dos títulos da dívida do tesouro norte-americano,
+em periodicidade mensal. A causa da queda destas taxas de juros de mais longo
+prazo (assim como as de curto prazo) são atribuídas a diversos fatores, o que
+vai muito além do escopo deste trabalho. Uma boa discussão pode ser vista em
+@bresser2018, @krugman2020.
 
 ```{r}
 #ycAll <- Quandl("USTREASURY/YIELD", type = "ts")
@@ -453,24 +455,79 @@ ggplot(data = df[which(df$date >= as.Date("1990-01-01")), ],
             inherit.aes=F, fill='grey', alpha=0.5)
 ```
 \bcenter
-Fonte: O autor, à partir de dados de @QuandlWIKI.
+Fonte: O autor, à partir de dados do \gls{FRED}.
 \ecenter
 
 Mesmo uma análise mais ampla (desde 1953) das taxas de juros mostram que o 
 período recente é o período de menor taxa de juros em termos históricos, o que 
 pode ser visto na figura \@ref(fig:fred).
 
+```{r}
+# dgs10 <- fredr(series_id = "DGS10",
+#               observation_start = as.Date("1962-01-02"))
+# dgs20 <- fredr(series_id = "DGS20",
+#               observation_start = as.Date("1962-01-02"))
+# dgs30 <- fredr(series_id = "DGS30",
+#               observation_start = as.Date("1962-01-02"))
+# df <- left_join(dgs10, dgs20, by = "date", suffix = c(".DGS10", ".DGS20"))
+# df <- left_join(df, dgs30, by = "date")
+# df <- df[, c("date", "value.DGS10", "value.DGS20", "value")]
+# colnames(df) <- c("date", "DGS10", "DGS20", "DGS30")
+# df <- df %>% gather("bond", "rate", -date)
+# saveRDS(df, "data/FRED_daily")
+```
+
+```{r yields2, fig.cap="Taxas diárias dos \\emph{treasuries bonds} desde janeiro/1990."}
+df_daily <- readRDS("data/FRED_daily")
+ggplot(data = df_daily[which(df_daily$date >= as.Date("1990-01-01")), ], 
+       aes(x = date, y = rate, color = bond)) +
+  geom_line() +
+  labs(
+    title = "US Treasuries-bonds",
+    subtitle = "10, 20 and 30 years",
+    caption = "Fonte: Board of Governors of the Federal Reserve System (US)"
+  ) +
+  xlab("Ano")+
+  ylab("Taxa (a.a.)") +
+  scale_y_continuous(labels = scales::label_percent(scale = 1,
+                                                    decimal.mark = ",")) +
+  theme(legend.position = "bottom") +
+  geom_rect(data=recessions.df[which(recessions.df$Peak >= as.Date("1990-01-01")), ], 
+            aes(xmin=Peak, xmax=Trough, ymin=-Inf, ymax=+Inf),
+            inherit.aes=F, fill='grey', alpha=0.5)
+```
+\bcenter
+Fonte: O autor, à partir de dados do \gls{FRED}.
+\ecenter
+
 No momento em que se escreve deste trabalho, a taxa de juros dos títulos de mais
-longa maturidade, ou seja, de 30 anos, está em `r brf(last(df)$rate)`% a.a. Para
-os títulos com vencimento em 20 anos, a taxa está em 
-`r brf(last(df[which(df$bond == 'GS20'), ])$rate)`% a.a. e para os títulos com
-vencimento em 10 anos está em 
-`r brf(last(df[which(df$bond == 'GS10'), ])$rate)`% a.a., todos nos seus valores 
-mínimos da série histórica.
+longa maturidade, ou seja, de 30 anos, está em `r brf(tail(df_daily, n = 1)$rate)`% a.a. 
+
+Para os títulos com vencimento em 20 anos, a taxa está em `r brf(tail(df_daily[which(df_daily$bond == 'DGS20'), ], n = 1)$rate)`
+% a.a. e para os títulos com vencimento em 10 anos está em `r brf(tail(df_daily[which(df_daily$bond == 'DGS10'), ], n = 1)$rate)`% a.a., 
+todos muito perto dos seus valores mínimos da série histórica, que foram 
+atingidos em `r  df_daily[which.min(df_daily$rate), ]$date`, quando os títulos
+com maturidade de 10 anos atingiram impressionantes `r pull(df_daily[which(df_daily$date == as.Date("2020-03-09")), ], rate)[1]`% a.a.
+
+Segundo Krugman [-@krugman2020], no entanto, isto não está a ocorrer apenas nos
+EUA, mas em todo o mundo desenvolvido, com maior ou menor gravidade, já há 
+alguns anos, e não deve ser interpretado apenas como um efeito de curto prazo
+de uma crise com a do Corona vírus, que só fez agravar ainda mais um quadro
+que já vem de longo prazo:
+
+\begin{citacao}
+What this tells us is that the bond market isn’t just pricing in a global
+recession driven by the coronavirus, but that it expects the Fed funds rate to
+be near zero a lot of the time looking forward. That is, the market sees a
+future of secular stagnation, in which the economy is in a liquidity trap, that
+is, a situation in which monetary policy loses most of its traction, much if not
+most of the time. We were in a liquidity trap for 8 of the past 12 years; the
+market now appears to believe that something like this is the new normal.
+\end{citacao}
 
 
 
-```{r fred, out.width="\\textwidth", fig.cap="Taxas dos \\emph{treasuries bonds} desde abril/1953."}
+```{r fred, out.width="\\textwidth", fig.cap="Taxas mensais dos \\emph{treasuries bonds} desde abril/1953."}
 ggplot(data = df, aes(x = date, y = rate, color = bond)) +
   geom_line() +
   labs(
@@ -488,7 +545,7 @@ ggplot(data = df, aes(x = date, y = rate, color = bond)) +
             inherit.aes=F, fill='grey', alpha=0.5)
 ```
 \bcenter
-Fonte: O autor, à partir de dados do \gls{FED}.
+Fonte: O autor, à partir de dados do \gls{FRED}.
 \ecenter
 
 Esta longa e sustentada tendência de queda de longo prazo, com esta persistência
@@ -700,11 +757,13 @@ Fonte: Do autor.
 
 ### O efeito da política de limitação do valor de aluguéis
 
-A política de limitação do valor de aluguéis implica um controle da inflação, 
-controlando os custos de moradia que a população enfrenta. Obviamente que isto 
-implica de num efeito balizador importante para o cálculo de um preço justo
-dos imóveis, mas será que esta política apenas é uma política capaz de regular 
-com um mínimo de equidade o valor do solo urbano?
+A política de limitação do valor de aluguéis garante o controle da inflação, 
+controlando os custos de moradia para a população (aluguéis), garantindo assim
+o direito à moradia, que não implica um direito à propriedade [@fnogueira].
+
+Obviamente que isto implica de num efeito balizador importante para o cálculo de
+um preço justo dos imóveis, mas será que esta política apenas é uma política
+capaz de regular com um mínimo de equidade o valor do solo urbano?
 
 Qualquer instrumento financeiro, como um título público, uma ação de uma
 empresa, ou um derivativo, terá um valor de mercado diferente do valor justo
@@ -716,11 +775,11 @@ instrumento.
 No entanto, assim como o *valuation* serve para calcular o "preço justo" de uma
 ação (ou *target price*, ou ainda preço-alvo), o que por sua vez permite às
 corretoras efetuarem recomendações (*outperform* ou *buy*, *neutral* ou *hold*,
-*underperform* ou *sell*), assim como o método de Black&Scholes permite o
-cálculo do preço justo das opções de compra e venda, as séries perpétuas
-permitem um cálculo razoável do preço justo de um imóvel, haja vista que
-permitem, sem maiores especulações, o cálculo do fluxo de caixa descontado dos
-aluguéis, balizando assim as expectativas em torno dos preços dos imóveis,
+*underperform* ou *sell*), assim como o método de Black&Scholes [@marins2]
+permite o cálculo do preço justo das opções de compra e venda, as séries
+perpétuas permitem um cálculo razoável do preço justo de um imóvel, haja vista
+que permitem, sem maiores especulações, o cálculo do fluxo de caixa descontado
+dos aluguéis, balizando assim as expectativas em torno dos preços dos imóveis,
 ajudando a conter dessa maneira a especulação imobiliária.
 
 Em períodos de normalidade econômica poder-se-ia dizer que o estabelecimento

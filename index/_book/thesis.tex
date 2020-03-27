@@ -178,6 +178,8 @@
 \makeindex
 % ---
 
+\DeclareRobustCommand{\firstsecond}[2]{#1}
+
 % ----
 % Início do documento
 % ----
@@ -1572,12 +1574,14 @@ mercado imobiliário são as taxas de juros de longo prazo. Uma diminuição das
 taxas de juros de longo prazo tende a reduzir a demanda por títulos públicos de
 longo prazo e a aumentar a demanda por investimentos com base imobiliária.
 
-Estas taxas de juros de mais longo prazo tem caído no mundo todo,
-especialmente nas economias desenvolvidas, como ilustra o gráfico da figura
-\ref{fig:yields}, que mostra as taxas de juros dos títulos da dívida do tesouro
-norte-americano. A causa da queda destas taxas de juros de mais longo prazo
-(assim como as de curto prazo) são atribuídas a diversos fatores, o que vai
-muito além do escopo deste trabalho. Uma boa discussão pode ser vista em Pereira (\protect\hyperlink{ref-bresser2018}{2018}).
+Estas taxas de juros de mais longo prazo tem caído no mundo todo, especialmente
+nas economias desenvolvidas, como ilustra o gráfico da figura \ref{fig:yields},
+elaboradas a partir de dados obtidos do \firstsecond{\gls{FED}}{Board of Governors of the Federal Reserve System (US)} (\protect\hyperlink{ref-fredgs10}{2020}\protect\hyperlink{ref-fredgs10}{a}), \firstsecond{\gls{FED}}{Board of Governors of the Federal Reserve System (US)} (\protect\hyperlink{ref-fredgs20}{2020}\protect\hyperlink{ref-fredgs20}{b}), \firstsecond{\gls{FED}}{Board of Governors of the Federal Reserve System (US)} (\protect\hyperlink{ref-fredgs30}{2020}\protect\hyperlink{ref-fredgs30}{c}). Esta
+mostra as taxas de juros dos títulos da dívida do tesouro norte-americano,
+em periodicidade mensal. A causa da queda destas taxas de juros de mais longo
+prazo (assim como as de curto prazo) são atribuídas a diversos fatores, o que
+vai muito além do escopo deste trabalho. Uma boa discussão pode ser vista em
+Pereira (\protect\hyperlink{ref-bresser2018}{2018}), Krugman (\protect\hyperlink{ref-krugman2020}{2020}).
 \begin{figure}[H]
 
 {\centering \includegraphics[width=0.7\linewidth]{images/yields-1} 
@@ -1588,31 +1592,59 @@ muito além do escopo deste trabalho. Uma boa discussão pode ser vista em Perei
 \end{figure}
 \bcenter
 
-Fonte: O autor, à partir de dados de Quandl (\protect\hyperlink{ref-QuandlWIKI}{2020}).
+Fonte: O autor, à partir de dados do \gls{FRED}.
 \ecenter
 
 Mesmo uma análise mais ampla (desde 1953) das taxas de juros mostram que o
 período recente é o período de menor taxa de juros em termos históricos, o que
 pode ser visto na figura \ref{fig:fred}.
+\begin{figure}[H]
+
+{\centering \includegraphics[width=0.7\linewidth]{images/yields2-1} 
+
+}
+
+\caption{Taxas diárias dos \emph{treasuries bonds} desde janeiro/1990.}\label{fig:yields2}
+\end{figure}
+\bcenter
+
+Fonte: O autor, à partir de dados do \gls{FRED}.
+\ecenter
 
 No momento em que se escreve deste trabalho, a taxa de juros dos títulos de mais
-longa maturidade, ou seja, de 30 anos, está em 1,97\% a.a. Para
-os títulos com vencimento em 20 anos, a taxa está em
-1,81\% a.a. e para os títulos com
-vencimento em 10 anos está em
-1,50\% a.a., todos nos seus valores
-mínimos da série histórica.
+longa maturidade, ou seja, de 30 anos, está em 1,45\% a.a.
+
+Para os títulos com vencimento em 20 anos, a taxa está em 1,23
+\% a.a. e para os títulos com vencimento em 10 anos está em 0,88\% a.a.,
+todos muito perto dos seus valores mínimos da série histórica, que foram
+atingidos em 2020-03-09, quando os títulos
+com maturidade de 10 anos atingiram impressionantes 0.54\% a.a.
+
+Segundo Krugman (\protect\hyperlink{ref-krugman2020}{2020}), no entanto, isto não está a ocorrer apenas nos
+EUA, mas em todo o mundo desenvolvido, com maior ou menor gravidade, já há
+alguns anos, e não deve ser interpretado apenas como um efeito de curto prazo
+de uma crise com a do Corona vírus, que só fez agravar ainda mais um quadro
+que já vem de longo prazo:
+\begin{citacao}
+What this tells us is that the bond market isn’t just pricing in a global
+recession driven by the coronavirus, but that it expects the Fed funds rate to
+be near zero a lot of the time looking forward. That is, the market sees a
+future of secular stagnation, in which the economy is in a liquidity trap, that
+is, a situation in which monetary policy loses most of its traction, much if not
+most of the time. We were in a liquidity trap for 8 of the past 12 years; the
+market now appears to believe that something like this is the new normal.
+\end{citacao}
 \begin{figure}[H]
 
 {\centering \includegraphics[width=\textwidth]{images/fred-1} 
 
 }
 
-\caption{Taxas dos \emph{treasuries bonds} desde abril/1953.}\label{fig:fred}
+\caption{Taxas mensais dos \emph{treasuries bonds} desde abril/1953.}\label{fig:fred}
 \end{figure}
 \bcenter
 
-Fonte: O autor, à partir de dados do \gls{FED}.
+Fonte: O autor, à partir de dados do \gls{FRED}.
 \ecenter
 
 Esta longa e sustentada tendência de queda de longo prazo, com esta persistência
@@ -1746,7 +1778,7 @@ e vice-versa.
 \hypertarget{duration-de-um-tuxedtulo-de-renda-fixa}{%
 \subsubsection{Duration de um título de renda fixa}\label{duration-de-um-tuxedtulo-de-renda-fixa}}
 
-Segundo Marins (\protect\hyperlink{ref-marins1}{2009}), a \emph{duration} de um título, ou de um conjunto de títulos de
+Segundo Marins (\protect\hyperlink{ref-marins1}{2009}\protect\hyperlink{ref-marins1}{a}), a \emph{duration} de um título, ou de um conjunto de títulos de
 renda fixa pode ser calculada de acordo com a fórmula a seguir, de Macaulay:
 
 \[D = \frac{\sum_{t = 1}^{n}t \times \frac{F_t}{(1+i)^t}}{\sum_{t = 1}^{n} \frac{F_t}{(1+i)^t}}\]
@@ -1837,11 +1869,13 @@ Fonte: Do autor.
 \hypertarget{o-efeito-da-poluxedtica-de-limitauxe7uxe3o-do-valor-de-aluguuxe9is}{%
 \subsection{O efeito da política de limitação do valor de aluguéis}\label{o-efeito-da-poluxedtica-de-limitauxe7uxe3o-do-valor-de-aluguuxe9is}}
 
-A política de limitação do valor de aluguéis implica um controle da inflação,
-controlando os custos de moradia que a população enfrenta. Obviamente que isto
-implica de num efeito balizador importante para o cálculo de um preço justo
-dos imóveis, mas será que esta política apenas é uma política capaz de regular
-com um mínimo de equidade o valor do solo urbano?
+A política de limitação do valor de aluguéis garante o controle da inflação,
+controlando os custos de moradia para a população (aluguéis), garantindo assim
+o direito à moradia, que não implica um direito à propriedade (Costa \protect\hyperlink{ref-fnogueira}{2018}).
+
+Obviamente que isto implica de num efeito balizador importante para o cálculo de
+um preço justo dos imóveis, mas será que esta política apenas é uma política
+capaz de regular com um mínimo de equidade o valor do solo urbano?
 
 Qualquer instrumento financeiro, como um título público, uma ação de uma
 empresa, ou um derivativo, terá um valor de mercado diferente do valor justo
@@ -1853,11 +1887,11 @@ instrumento.
 No entanto, assim como o \emph{valuation} serve para calcular o ``preço justo'' de uma
 ação (ou \emph{target price}, ou ainda preço-alvo), o que por sua vez permite às
 corretoras efetuarem recomendações (\emph{outperform} ou \emph{buy}, \emph{neutral} ou \emph{hold},
-\emph{underperform} ou \emph{sell}), assim como o método de Black\&Scholes permite o
-cálculo do preço justo das opções de compra e venda, as séries perpétuas
-permitem um cálculo razoável do preço justo de um imóvel, haja vista que
-permitem, sem maiores especulações, o cálculo do fluxo de caixa descontado dos
-aluguéis, balizando assim as expectativas em torno dos preços dos imóveis,
+\emph{underperform} ou \emph{sell}), assim como o método de Black\&Scholes (Marins \protect\hyperlink{ref-marins2}{2009}\protect\hyperlink{ref-marins2}{b})
+permite o cálculo do preço justo das opções de compra e venda, as séries
+perpétuas permitem um cálculo razoável do preço justo de um imóvel, haja vista
+que permitem, sem maiores especulações, o cálculo do fluxo de caixa descontado
+dos aluguéis, balizando assim as expectativas em torno dos preços dos imóveis,
 ajudando a conter dessa maneira a especulação imobiliária.
 
 Em períodos de normalidade econômica poder-se-ia dizer que o estabelecimento
@@ -2229,6 +2263,9 @@ Khan, Sadiq. 2018. \emph{London.gov.uk}. \url{https://www.london.gov.uk/sites/de
 \leavevmode\hypertarget{ref-krugman}{}%
 Krugman, Paul. 2014. ``Notes on Easy Money and Inequality.'' \emph{New York Times}. \url{https://tinyurl.com/y79qn468}.
 
+\leavevmode\hypertarget{ref-krugman2020}{}%
+---------. 2020. ``The Case for Permanent Stimulus (Wonkish).'' \emph{New York Times}. New York. \url{https://www.nytimes.com/2020/03/07/opinion/the-case-for-permanent-stimulus-wonkish.html}.
+
 \leavevmode\hypertarget{ref-LEUNG}{}%
 Leung, Charles. 2004. ``Macroeconomics and Housing: A Review of the Literature.'' \emph{Journal of Housing Economics} 13 (4): 249--67. \url{https://doi.org/https://doi.org/10.1016/j.jhe.2004.09.002}.
 
@@ -2239,7 +2276,10 @@ Lima, Alceu Amoroso. 1981. ``Política E Letras.'' In \emph{À Margem Da Histór
 Ling, Anthony. 2019. \emph{Caos Planejado}. \url{https://caosplanejado.com/entenda-a-crise-habitacional-de-berlim/}.
 
 \leavevmode\hypertarget{ref-marins1}{}%
-Marins, André Cabral. 2009. \emph{Mercado de Derivativos E Análise de Risco}. Vol. 1. Rio de Janeiro: AMS.
+Marins, André Cabral. 2009a. \emph{Mercado de Derivativos E Análise de Risco}. Vol. 1. Rio de Janeiro: AMS.
+
+\leavevmode\hypertarget{ref-marins2}{}%
+---------. 2009b. \emph{Mercado de Derivativos E Análise de Risco}. Vol. 2. Rio de Janeiro: AMS.
 
 \leavevmode\hypertarget{ref-matloff2017}{}%
 Matloff, Norman. 2017. \emph{From Linear Models to Machine Learning: Regression and Classification, with R Examples}. Chapman \& Hall. \url{http://heather.cs.ucdavis.edu/draftregclass.pdf}.
@@ -2303,6 +2343,15 @@ Singer, Paul. 2005. \emph{O Que é Economia}. 6th ed. São Paulo: https://www.pa
 
 \leavevmode\hypertarget{ref-lalan}{}%
 Todorovski, D., Rodolfo Salazar, Ginella Jacome, and C.H.J. Lemmen. 2019. ``Establishment of Latin America Land Administration Network (Lalan).'' \url{http://www.fig.net/fig2019/technical_program.htm}.
+
+\leavevmode\hypertarget{ref-fredgs10}{}%
+\firstsecond{\gls{FED}}{Board of Governors of the Federal Reserve System (US)}. 2020a. ``10-Year Treasury Constant Maturity Rate {[}Gs10{]}.''
+
+\leavevmode\hypertarget{ref-fredgs20}{}%
+---------. 2020b. ``20-Year Treasury Constant Maturity Rate {[}Gs20{]}.''
+
+\leavevmode\hypertarget{ref-fredgs30}{}%
+---------. 2020c. ``30-Year Treasury Constant Maturity Rate {[}Gs30{]}.''
 
 \bapendices
 
