@@ -383,6 +383,32 @@ Em janeiro de 2012, no fundo do vale da curva do índice real, este atingiu
 apenas `r brf(window(rhpi, start = 1989 + 7/12, end = 1989 + 7/12)[[1]] - window(rhpi, start = 2012 + 0/12, end = 2012 + 0/12)[[1]])` pontos abaixo do topo histórico 
 de um século à partir de 1890.
 
+O *Global Real House Price Index* do \gls{FMI}, que se constitui de uma média
+simples de preços reais de residências em 57 países [@fmitwa], mostra também uma
+nítida e forte tendência de alta, como pode ser observado na figura 
+\@ref{fig:global_rhpi}.
+
+```{r}
+global_rhpi <- read.csv("data/GlobalHousePriceIndex.csv")
+global_rhpi$dateq <- seq(ISOdate(2000,3,1), ISOdate(2019,3,1), by = "quarters")
+```
+
+```{r global_rhpi, fig.cap = "HPI real do FMI."}
+ggplot(global_rhpi, aes(x = dateq, y = equally.weighted)) +
+  geom_line() +
+   labs(
+     title = "IMF Global Real Home Price Index", 
+     subtitle = "Not Seasonally Adjusted | Frequência: trimestral", 
+     caption = "2000-2019",
+     x = "Ano", 
+     y = "Índice") +
+  stat_peaks(colour = "red", span = 13) +
+  stat_peaks(geom = "text", colour = "red", 
+             vjust = -0.5, x.label.fmt = "%m/%Y", span = 13)# +
+#  stat_smooth()
+```
+
+
 Isto poderia ser indício da formação de nova bolha imobiliária, nos moldes da
 que estourou em meados de 2006, com consequências catastróficas para a economia
 global?
@@ -392,6 +418,24 @@ de curto prazo que representam descolamentos dos preços em relação aos seus
 fundamentos. Logo, para se afirmar que existe uma bolha, é necessário mostrar
 que inexiste uma correlação entre os fundamentos e os preços dos ativos
 imobiliários.
+
+@fmitwa elencam uma série de motivos que podem nos levar a conclusão que desta
+vez é diferente, como a falta de sincronicidade em diversos países, o que 
+ocorreu durante a bolha dos anos 2000, e a maior vigilância por parte das 
+autoridades monetários no que tange às medidas macroprudenciais na prevenção, 
+que incluem [@fmiem]:
+
+* Limite a razão empréstimo/valor, o que limita o valor da hipoteca relativa
+ao valor da propriedade.
+* Limites a razão dívida/renda, que limita o tamanho do pagamento do serviço da 
+dívida a um limite fixo da renda do mutuário.
+* Requerimentos de capitais setoriais, que forçam os bancos a manter capital 
+extra contra empréstimos a setores específicos, como o mercado imobiliário.
+* Requerimentos de provisionamento para pagamentos duvidosos.
+
+Porém, além das medidas macroprudenciais citadas, considera-se que existem 
+outros fundamentos que indicam a não existência de uma bolha especulativa, mas
+que indicam que o preço dos imóveis estão seguindo os fundamentos econômicos.
 
 Como anteriormente mencionado, uma das variáveis macroeconômicas que afetam o
 mercado imobiliário são as taxas de juros de longo prazo. Uma diminuição das
