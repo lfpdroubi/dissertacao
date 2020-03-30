@@ -122,7 +122,7 @@ Quandl.api_key("KFMsKFYU9QNph_XnbVUQ")
 library(fredr)
 fredr_set_key("8866e5606159b57dd69d9d8392ddfd1d")
 library(BETS)
-library(xts)
+library(zoo)
 library(appraiseR)
 gg_color_hue <- function(n) {
   hues = seq(15, 375, length = n + 1)

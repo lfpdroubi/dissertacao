@@ -390,24 +390,55 @@ nítida e forte tendência de alta, como pode ser observado na figura
 
 ```{r}
 global_rhpi <- read.csv("data/GlobalHousePriceIndex.csv")
-global_rhpi$dateq <- seq(ISOdate(2000,3,1), ISOdate(2019,3,1), by = "quarters")
+#global_rhpi <- read.zoo(global_rhpi, index = "dateq", FUN = as.yearqtr, format = "%Yq%q")
+#global_rhpi$dateq <- as.yearqtr(seq(ISOdate(2000,3,1), ISOdate(2019,3,1), by = "quarters"))
+global_rhpi$dateq <- seq(ISOdate(2000,1,1), ISOdate(2019,1,1), by = "quarters")
+format_quarters <- function(x) {
+  format(as.yearqtr(x), format = "%qT%Y")
+}
+
 ```
 
 ```{r global-rhpi, fig.cap = "HPI real do FMI."}
+# library(cowplot)
+# theme_set(theme_cowplot(14))
 ggplot(global_rhpi, aes(x = dateq, y = equally.weighted)) +
   geom_line() +
    labs(
      title = "IMF Global Real Home Price Index", 
      subtitle = "Not Seasonally Adjusted | Frequência: trimestral", 
      caption = "2000-2019",
-     x = "Ano", 
+     x = "Ano",
      y = "Índice") +
-  stat_peaks(colour = "red", span = 13) +
-  stat_peaks(geom = "text", colour = "red", 
-             vjust = -0.5, x.label.fmt = "%m/%Y", span = 13)# +
+  stat_peaks(colour = "red", span = 25) +
+  stat_peaks(geom = "text", colour = "red",
+             vjust = -0.5, x.label.fmt = "%m/%Y", span = 25) +
+  stat_valleys(colour = "red", span = 25) +
+  stat_valleys(geom = "text", colour = "red",
+             vjust = 1.5, x.label.fmt = "%m/%Y", span = 25) +
+  scale_y_continuous(expand = c(0,20))+
+  scale_x_datetime(expand = expand_scale(mult = c(0, .05)),
+                   date_breaks = "12 months",
+                   date_minor_breaks = "3 months",
+                   labels = format_quarters) +
+  theme(panel.grid.major = element_line(colour="gray", size=0.5),
+        panel.grid.minor.x = element_line(colour="gray", size=0.1),
+        axis.text.x=element_text(angle=-45, hjust=0.001))
 #  stat_smooth()
 ```
 
+Deve-se repara que, ao contrário do que aconteceu nos EUA, o pico em termos 
+globais só foi alcançado no último trimestre de 2007. Deve ser reparado ainda
+que a queda, em termos globais, foi muito menos abrupta que a queda ocorrida
+nos EUA. O ponto de retomada, no entanto, tem grande coincidência: enquanto nos
+EUA a retomada começa à partir de Jan/2012, tanto para o índice nominal quanto
+para o índice real, globalmente esta retomada ocorre à partir do final do
+primeiro trimestre de 2012. Se levar-se em conta que, diferentemente dos índices
+norte-americanos, o índice global é trimestral, pode-se dizer que a retomada
+global da alta dos preços dos imóveis é praticamente simultânea.
+
+No entanto, deve-se ter em conta que o preço dos imóveis nos EUA afeta o índice
+global.
 
 Isto poderia ser indício da formação de nova bolha imobiliária, nos moldes da
 que estourou em meados de 2006, com consequências catastróficas para a economia
