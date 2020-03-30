@@ -90,6 +90,22 @@ de um empreendimento hipotético. No entanto, como salienta @gahochheim
 variável taxa mínima de atratividade, o que torna importante a correta definição
 desta taxa.
 
+### A variável tempo
+
+O método involutivo é geralmente aplicado em um momento anterior ao início da
+implantação de um empreendimento, sendo que muitas vezes este empreendimento
+hipotético nem é realizado.
+
+Obviamente que, como em qualquer avaliação de imóveis, seja por qual método, a
+avaliação é válida para uma dada data de referência.
+
+Isso não significa, no entanto, que não se possa elaborar diferentes cenários
+onde haja alteração de uma ou mais variáveis macroeconomicas ao longo do 
+decorrer do empreendimento, verificando o impacto da mudança destas variáveis
+na viabilidade do mesmo.
+
+Isto seria extramente útil, inclusive, na análise do risco de um empreendimento.
+
 #### A taxa mínima de atratividade
 
 Na prática atual da Engenharia de Avaliações convencionou-se o estabelecimento

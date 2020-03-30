@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2020.3.15)  27 MAR 2020 22:05
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2020.3.15)  28 MAR 2020 17:00
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1698,33 +1698,33 @@ LaTeX Warning: Citation 'rangel1956' on page 20 undefined on input line 555.
 [20
 
 ]
-<images/pop-urb-mundo-1.png, id=405, 455.0601pt x 309.0747pt>
+<images/pop-urb-mundo-1.png, id=412, 455.0601pt x 309.0747pt>
 File: images/pop-urb-mundo-1.png Graphic file (type png)
 <use images/pop-urb-mundo-1.png>
 Package pdftex.def Info: images/pop-urb-mundo-1.png  used on input line 623.
 (pdftex.def)             Requested size: 364.00139pt x 247.24123pt.
 [21]
-<images/pop-urb-continents-1.png, id=413, 454.69875pt x 309.0747pt>
+<images/pop-urb-continents-1.png, id=420, 454.69875pt x 309.0747pt>
 File: images/pop-urb-continents-1.png Graphic file (type png)
 <use images/pop-urb-continents-1.png>
 Package pdftex.def Info: images/pop-urb-continents-1.png  used on input line 64
 1.
 (pdftex.def)             Requested size: 364.00139pt x 247.42987pt.
 [22 <./images/pop-urb-mundo-1.png> <./images/pop-urb-continents-1.png>]
-<images/pop-urb-brazil-latinAmerica-1.png, id=420, 454.69875pt x 309.0747pt>
+<images/pop-urb-brazil-latinAmerica-1.png, id=427, 454.69875pt x 309.0747pt>
 File: images/pop-urb-brazil-latinAmerica-1.png Graphic file (type png)
 <use images/pop-urb-brazil-latinAmerica-1.png>
 Package pdftex.def Info: images/pop-urb-brazil-latinAmerica-1.png  used on inpu
 t line 657.
 (pdftex.def)             Requested size: 364.00139pt x 247.42987pt.
-<images/pop-urb-brazil-developed-1.png, id=423, 455.0601pt x 309.0747pt>
+<images/pop-urb-brazil-developed-1.png, id=430, 455.0601pt x 309.0747pt>
 File: images/pop-urb-brazil-developed-1.png Graphic file (type png)
 <use images/pop-urb-brazil-developed-1.png>
 Package pdftex.def Info: images/pop-urb-brazil-developed-1.png  used on input l
 ine 682.
 (pdftex.def)             Requested size: 364.00139pt x 247.24123pt.
 [23 <./images/pop-urb-brazil-latinAmerica-1.png>]
-<images/pop-urb-brazil-brics-1.png, id=430, 455.301pt x 309.0747pt>
+<images/pop-urb-brazil-brics-1.png, id=437, 455.301pt x 309.0747pt>
 File: images/pop-urb-brazil-brics-1.png Graphic file (type png)
 <use images/pop-urb-brazil-brics-1.png>
 Package pdftex.def Info: images/pop-urb-brazil-brics-1.png  used on input line 
@@ -1773,7 +1773,7 @@ LaTeX Font Info:    Font shape `T1/phv/m/it' in size <7.6> not available
 LaTeX Font Info:    Font shape `T1/phv/m/it' in size <6> not available
 (Font)              Font shape `T1/phv/m/sl' tried instead on input line 1020.
 [30] [31] [32]
-<./images/adams2_crop.pdf, id=577, 520.94624pt x 436.63126pt>
+<./images/adams2_crop.pdf, id=584, 520.94624pt x 436.63126pt>
 File: ./images/adams2_crop.pdf Graphic file (type pdf)
 <use ./images/adams2_crop.pdf>
 Package pdftex.def Info: ./images/adams2_crop.pdf  used on input line 1168.
@@ -1795,132 +1795,137 @@ LaTeX Warning: Citation 'passosnogami' on page 38 undefined on input line 1332.
 
 
 [38] [39]
-<./images/adams_crop.pdf, id=680, 497.86pt x 695.59875pt>
+<./images/adams_crop.pdf, id=687, 497.86pt x 695.59875pt>
 File: ./images/adams_crop.pdf Graphic file (type pdf)
 <use ./images/adams_crop.pdf>
 Package pdftex.def Info: ./images/adams_crop.pdf  used on input line 1449.
 (pdftex.def)             Requested size: 455.0pt x 635.73427pt.
 [40] [41 <./images/adams_crop.pdf>]
-<images/nhpi-1.png, id=709, 459.03494pt x 309.0747pt>
+<images/nhpi-1.png, id=716, 459.03494pt x 309.0747pt>
 File: images/nhpi-1.png Graphic file (type png)
 <use images/nhpi-1.png>
 Package pdftex.def Info: images/nhpi-1.png  used on input line 1481.
 (pdftex.def)             Requested size: 318.49861pt x 214.45023pt.
-<images/rhpi-1.png, id=712, 459.03494pt x 309.0747pt>
+<images/rhpi-1.png, id=719, 459.03494pt x 309.0747pt>
 File: images/rhpi-1.png Graphic file (type png)
 <use images/rhpi-1.png>
 Package pdftex.def Info: images/rhpi-1.png  used on input line 1504.
 (pdftex.def)             Requested size: 318.49861pt x 214.45023pt.
 [42 <./images/nhpi-1.png>]
-<images/rhpi2-1.png, id=722, 459.03494pt x 309.0747pt>
+<images/rhpi2-1.png, id=729, 459.03494pt x 309.0747pt>
 File: images/rhpi2-1.png Graphic file (type png)
 <use images/rhpi2-1.png>
 Package pdftex.def Info: images/rhpi2-1.png  used on input line 1530.
 (pdftex.def)             Requested size: 318.49861pt x 214.45023pt.
 [43 <./images/rhpi-1.png> <./images/rhpi2-1.png>]
-<images/yields-1.png, id=740, 456.38506pt x 311.36325pt>
+<images/global-rhpi-1.png, id=738, 465.4188pt x 309.0747pt>
+File: images/global-rhpi-1.png Graphic file (type png)
+<use images/global-rhpi-1.png>
+Package pdftex.def Info: images/global-rhpi-1.png  used on input line 1568.
+(pdftex.def)             Requested size: 318.49861pt x 211.5121pt.
+[44 <./images/global-rhpi-1.png>]
+<images/yields-1.png, id=759, 456.38506pt x 311.36325pt>
 File: images/yields-1.png Graphic file (type png)
 <use images/yields-1.png>
-Package pdftex.def Info: images/yields-1.png  used on input line 1587.
+Package pdftex.def Info: images/yields-1.png  used on input line 1622.
 (pdftex.def)             Requested size: 318.49861pt x 217.29239pt.
-[44]
-<images/yields2-1.png, id=752, 456.38506pt x 311.36325pt>
+[45 <./images/yields-1.png>]
+<images/yields2-1.png, id=772, 456.38506pt x 311.36325pt>
 File: images/yields2-1.png Graphic file (type png)
 <use images/yields2-1.png>
-Package pdftex.def Info: images/yields2-1.png  used on input line 1603.
+Package pdftex.def Info: images/yields2-1.png  used on input line 1638.
 (pdftex.def)             Requested size: 318.49861pt x 217.29239pt.
-[45 <./images/yields-1.png> <./images/yields2-1.png>]
-<images/fred-1.png, id=759, 456.38506pt x 311.36325pt>
+<images/fred-1.png, id=775, 456.38506pt x 311.36325pt>
 File: images/fred-1.png Graphic file (type png)
 <use images/fred-1.png>
-Package pdftex.def Info: images/fred-1.png  used on input line 1639.
+Package pdftex.def Info: images/fred-1.png  used on input line 1674.
 (pdftex.def)             Requested size: 455.0pt x 310.42178pt.
-[46 <./images/fred-1.png>] [47] [48] [49]
-<images/valores-juros-1.png, id=802, 456.38506pt x 311.4837pt>
+[46 <./images/yields2-1.png>] [47 <./images/fred-1.png>] [48] [49] [50]
+<images/valores-juros-1.png, id=824, 456.38506pt x 311.4837pt>
 File: images/valores-juros-1.png Graphic file (type png)
 <use images/valores-juros-1.png>
-Package pdftex.def Info: images/valores-juros-1.png  used on input line 1825.
+Package pdftex.def Info: images/valores-juros-1.png  used on input line 1863.
 (pdftex.def)             Requested size: 318.49861pt x 217.37645pt.
-[50 <./images/valores-juros-1.png>] [51] [52] [53
+[51 <./images/valores-juros-1.png>] [52] [53] [54
 
-]
+] [55]
 LaTeX Font Info:    Font shape `T1/phv/b/it' in size <12> not available
-(Font)              Font shape `T1/phv/b/sl' tried instead on input line 2043.
+(Font)              Font shape `T1/phv/b/sl' tried instead on input line 2124.
 
-Overfull \hbox (2.22668pt too wide) in paragraph at lines 2055--2055
+Overfull \hbox (2.22668pt too wide) in paragraph at lines 2136--2136
  []|\T1/phv/m/n/12 (-10) R$52,06|
  []
 
 
-Overfull \hbox (2.22668pt too wide) in paragraph at lines 2056--2056
+Overfull \hbox (2.22668pt too wide) in paragraph at lines 2137--2137
  []|\T1/phv/m/n/12 (-10) R$34,55|
  []
 
 
-Overfull \hbox (2.22668pt too wide) in paragraph at lines 2057--2057
+Overfull \hbox (2.22668pt too wide) in paragraph at lines 2138--2138
  []|\T1/phv/m/n/12 (-10) R$33,70|
  []
 
 
-Overfull \hbox (2.22668pt too wide) in paragraph at lines 2058--2058
+Overfull \hbox (2.22668pt too wide) in paragraph at lines 2139--2139
  []|\T1/phv/m/n/12 (-10) R$38,84|
  []
 
 
-Overfull \hbox (2.22668pt too wide) in paragraph at lines 2059--2059
+Overfull \hbox (2.22668pt too wide) in paragraph at lines 2140--2140
  []|\T1/phv/m/n/12 (-10) R$40,74|
  []
 
 
-Overfull \hbox (2.22668pt too wide) in paragraph at lines 2060--2060
+Overfull \hbox (2.22668pt too wide) in paragraph at lines 2141--2141
  []|\T1/phv/m/n/12 (-10) R$43,05|
  []
 
 
-Overfull \hbox (2.22668pt too wide) in paragraph at lines 2063--2063
+Overfull \hbox (2.22668pt too wide) in paragraph at lines 2144--2144
  []|\T1/phv/m/n/12 (-10) R$34,39|
  []
 
 
-Overfull \hbox (2.22668pt too wide) in paragraph at lines 2064--2064
+Overfull \hbox (2.22668pt too wide) in paragraph at lines 2145--2145
  []|\T1/phv/m/n/12 (-10) R$33,10|
  []
 
 
-Overfull \hbox (2.22668pt too wide) in paragraph at lines 2065--2065
+Overfull \hbox (2.22668pt too wide) in paragraph at lines 2146--2146
  []|\T1/phv/m/n/12 (-10) R$34,70|
  []
 
 
-Overfull \hbox (8.83188pt too wide) in paragraph at lines 2068--2068
+Overfull \hbox (8.83188pt too wide) in paragraph at lines 2149--2149
  []|\T1/phv/m/n/12 (-10) R$105,57|
  []
 
-[54] [55]
-<images/valores-juros-rec-1.png, id=861, 456.38506pt x 311.4837pt>
+[56]
+<images/valores-juros-rec-1.png, id=888, 456.38506pt x 311.4837pt>
 File: images/valores-juros-rec-1.png Graphic file (type png)
 <use images/valores-juros-rec-1.png>
-Package pdftex.def Info: images/valores-juros-rec-1.png  used on input line 212
-4.
-(pdftex.def)             Requested size: 318.49861pt x 217.37645pt.
-<images/valores-juros-log-1.png, id=863, 456.38506pt x 311.4837pt>
-File: images/valores-juros-log-1.png Graphic file (type png)
-<use images/valores-juros-log-1.png>
-Package pdftex.def Info: images/valores-juros-log-1.png  used on input line 213
+Package pdftex.def Info: images/valores-juros-rec-1.png  used on input line 220
 5.
 (pdftex.def)             Requested size: 318.49861pt x 217.37645pt.
-[56 <./images/valores-juros-rec-1.png>] [57 <./images/valores-juros-log-1.png>]
-[58
+[57]
+<images/valores-juros-log-1.png, id=897, 456.38506pt x 311.4837pt>
+File: images/valores-juros-log-1.png Graphic file (type png)
+<use images/valores-juros-log-1.png>
+Package pdftex.def Info: images/valores-juros-log-1.png  used on input line 221
+6.
+(pdftex.def)             Requested size: 318.49861pt x 217.37645pt.
+[58 <./images/valores-juros-rec-1.png> <./images/valores-juros-log-1.png>] [59
 
-] [59] [60
-
-] [61
+] [60] [61
 
 ] [62
 
+] [63
+
 ]
 LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 2
-237.
+318.
 (/home/droubi/.TinyTeX/texmf-dist/tex/latex/base/t1cmtt.fd
 File: t1cmtt.fd 2019/12/16 v2.5j Standard LaTeX font definitions
 )
@@ -1929,71 +1934,91 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
 
-Overfull \hbox (295.76956pt too wide) in paragraph at lines 2239--2241
+Overfull \hbox (295.76956pt too wide) in paragraph at lines 2320--2322
 \T1/phv/m/n/12 (-10) nal do ca-pi-tal.'' São Paulo, 9. [][]http://www.bresserpe
 reira.org.br/works/casos/73.Fun{\c{c}}{\~{a}}oInvestimento{\_}EficienciaMargina
 lDoCapital.pdf[][]. 
  []
 
 
-Overfull \hbox (164.09566pt too wide) in paragraph at lines 2242--2244
+Overfull \hbox (164.09566pt too wide) in paragraph at lines 2323--2325
 \T1/cmtt/m/n/12 br / mundo / 2019 / 09 / apesar-[]de-[]rica-[]california-[]conc
 entra-[]pobreza-[]e-[]ve-[]crise-[]de-[]habitacao-[]em-[]los-[]angeles .
  []
 
 
-Overfull \hbox (10.92639pt too wide) in paragraph at lines 2251--2253
+Overfull \hbox (66.13634pt too wide) in paragraph at lines 2332--2334
+[][]\T1/phv/m/n/12 (-10) DELMENDO, LA-LAINE C. 2020. \T1/phv/m/sl/12 (-10) Glo-
+bal Pro-perty Guide\T1/phv/m/n/12 (-10) . [][]$\T1/cmtt/m/n/12 https : / / www 
+. globalpropertyguide .
+ []
+
+
+Overfull \hbox (10.92639pt too wide) in paragraph at lines 2335--2337
 \T1/phv/m/n/12 (-10) HYDE 3.1.'' \T1/phv/m/sl/12 (-10) The Ho-lo-cene \T1/phv/m
 /n/12 (-10) 20 (4): 565--73. [][]$\T1/cmtt/m/n/12 https : / / doi . org / 10 . 
 1177 / 0959683609356587$[][]\T1/phv/m/n/12 (-10) . 
  []
 
 
-Overfull \hbox (28.03241pt too wide) in paragraph at lines 2257--2259
+Overfull \hbox (1.50572pt too wide) in paragraph at lines 2341--2343
+[][]\T1/phv/m/n/12 (-10) Hites Ahir, Pra-kash Loun-gani. 2016. ``Glo-bal House 
+Pri-ces: Time to Worry Again?''
+ []
+
+
+Overfull \hbox (49.46747pt too wide) in paragraph at lines 2341--2343
+\T1/phv/m/sl/12 (-10) IMF-Blog\T1/phv/m/n/12 (-10) . [][]$\T1/cmtt/m/n/12 https
+ : / / blogs . imf . org / 2016 / 12 / 08 / global-[]house-[]prices-[]time-[]to
+-[]worry-[]again/$[][]\T1/phv/m/n/12 (-10) . 
+ []
+
+
+Overfull \hbox (28.03241pt too wide) in paragraph at lines 2344--2346
 \T1/cmtt/m/n/12 handle / 123456789 / 177298 / TCC % 20-[]-[]-[] % 20GUSTAVO % 2
 0ANDREAS % 20HOCHHEIM . pdf ? sequence =
  []
 
 
-Overfull \hbox (10.87747pt too wide) in paragraph at lines 2260--2262
+Overfull \hbox (10.87747pt too wide) in paragraph at lines 2347--2349
 [][]\T1/phv/m/n/12 (-10) Khan, Sa-diq. 2018. \T1/phv/m/sl/12 (-10) Lon-don.gov.
 uk\T1/phv/m/n/12 (-10) . [][]$\T1/cmtt/m/n/12 https : / / www . london . gov . 
 uk / sites / default /
  []
 
 
-Overfull \hbox (109.98645pt too wide) in paragraph at lines 2266--2268
+Overfull \hbox (109.98645pt too wide) in paragraph at lines 2353--2355
 \T1/phv/m/n/12 (-10) New York. [][]$\T1/cmtt/m/n/12 https : / / www . nytimes .
  com / 2020 / 03 / 07 / opinion / the-[]case-[]for-[]permanent-[]stimulus-[]won
 kish .
  []
 
+[64
 
-Overfull \hbox (182.6488pt too wide) in paragraph at lines 2275--2277
+]
+Overfull \hbox (182.6488pt too wide) in paragraph at lines 2362--2364
 [][]\T1/phv/m/n/12 (-10) Ling, Anthony. 2019. \T1/phv/m/sl/12 (-10) Caos Pla-ne
 -jado\T1/phv/m/n/12 (-10) . [][]$\T1/cmtt/m/n/12 https : / / caosplanejado . co
 m / entenda-[]a-[]crise-[]habitacional-[]de-[]berlim/$[][]\T1/phv/m/n/12 (-10) 
 . 
  []
 
-[63
 
-]
-Overfull \hbox (1.19469pt too wide) in paragraph at lines 2323--2325
+Overfull \hbox (1.19469pt too wide) in paragraph at lines 2410--2412
 [][]\T1/phv/m/n/12 (-10) ---------. 2012i. ``Fim de Linha.'' In \T1/phv/m/sl/12
  (-10) Ignácio Rangel: Obras Reunidas\T1/phv/m/n/12 (-10) , 3rd ed., 2:155--
  []
 
-
-Overfull \hbox (159.44748pt too wide) in paragraph at lines 2332--2334
+[65]
+Overfull \hbox (159.44748pt too wide) in paragraph at lines 2419--2421
 [][]\T1/phv/m/n/12 (-10) Roden, Lee. 2017. \T1/phv/m/sl/12 (-10) The Lo-cal\T1/
 phv/m/n/12 (-10) . [][]$\T1/cmtt/m/n/12 https : / / www . thelocal . se / 20170
 828 / the-[]story-[]of-[]swedens-[]housing-[]crisis$[][]\T1/phv/m/n/12 (-10) . 
 
  []
 
-[64]
-Overfull \hbox (384.84518pt too wide) in paragraph at lines 2338--2340
+
+Overfull \hbox (384.84518pt too wide) in paragraph at lines 2425--2427
 \T1/phv/m/n/12 (-10) dên-cia Na Di-na-marca.'' \T1/phv/m/sl/12 (-10) Eu-ro-news
 \T1/phv/m/n/12 (-10) . [][]$\T1/cmtt/m/n/12 https : / / pt . euronews . com / 2
 019 / 11 / 04 / credito-[]habitacao-[]com-[]juros-[]negativos-[]sao-[]a-[]nova-
@@ -2001,56 +2026,69 @@ Overfull \hbox (384.84518pt too wide) in paragraph at lines 2338--2340
  []
 
 
-Overfull \hbox (146.75853pt too wide) in paragraph at lines 2341--2343
+Overfull \hbox (146.75853pt too wide) in paragraph at lines 2428--2430
 [][]\T1/phv/m/n/12 (-10) Singer, Paul. 2005. \T1/phv/m/sl/12 (-10) O Que é Eco-
 no-mia\T1/phv/m/n/12 (-10) . 6th ed. São Paulo: https://www.passeidireto.com/ar
 quivo/19292334/o-
  []
 
-[65]
-<images/Page-4-Image-1.png, id=971, 684.30656pt x 325.96782pt>
+
+Overfull \hbox (68.79588pt too wide) in paragraph at lines 2434--2436
+[][]$\T1/cmtt/m/n/12 https : / / blogs . imf . org / 2014 / 06 / 11 / era-[]of-
+[]benign-[]neglect-[]of-[]house-[]price-[]booms-[]is-[]over/$[][]\T1/phv/m/n/12
+ (-10) . 
+ []
+
+
+Overfull \hbox (42.60191pt too wide) in paragraph at lines 2437--2439
+[][]$\T1/cmtt/m/n/12 https : / / blogs . imf . org / 2014 / 12 / 10 / managing-
+[]house-[]price-[]booms-[]in-[]emerging-[]markets/$[][]\T1/phv/m/n/12 (-10) . 
+ []
+
+[66]
+<images/Page-4-Image-1.png, id=1010, 684.30656pt x 325.96782pt>
 File: images/Page-4-Image-1.png Graphic file (type png)
 <use images/Page-4-Image-1.png>
-Package pdftex.def Info: images/Page-4-Image-1.png  used on input line 2383.
+Package pdftex.def Info: images/Page-4-Image-1.png  used on input line 2476.
 (pdftex.def)             Requested size: 364.00139pt x 173.39378pt.
 
-LaTeX Warning: Citation 'Bresser-Pereira1973' on page 66 undefined on input lin
-e 2400.
+LaTeX Warning: Citation 'Bresser-Pereira1973' on page 67 undefined on input lin
+e 2493.
 
-[66
+[67
 
  <./images/Page-4-Image-1.png>]
 
-LaTeX Warning: Citation 'Bresser-Pereira1973' on page 67 undefined on input lin
-e 2415.
+LaTeX Warning: Citation 'Bresser-Pereira1973' on page 68 undefined on input lin
+e 2508.
 
 
-LaTeX Warning: Command \textquoteright invalid in math mode on input line 2421.
-
-
-
-LaTeX Warning: Command \textquoteright invalid in math mode on input line 2426.
+LaTeX Warning: Command \textquoteright invalid in math mode on input line 2514.
 
 
 
-LaTeX Warning: Citation 'Bresser-Pereira1973' on page 67 undefined on input lin
-e 2426.
+LaTeX Warning: Command \textquoteright invalid in math mode on input line 2519.
 
-<images/Page-8-Image-3.png, id=982, 1023.825pt x 338.76563pt>
+
+
+LaTeX Warning: Citation 'Bresser-Pereira1973' on page 68 undefined on input lin
+e 2519.
+
+<images/Page-8-Image-3.png, id=1020, 1023.825pt x 338.76563pt>
 File: images/Page-8-Image-3.png Graphic file (type png)
 <use images/Page-8-Image-3.png>
-Package pdftex.def Info: images/Page-8-Image-3.png  used on input line 2429.
+Package pdftex.def Info: images/Page-8-Image-3.png  used on input line 2522.
 (pdftex.def)             Requested size: 364.00139pt x 120.44096pt.
-<images/Page-8-Image-4.png, id=983, 1023.825pt x 338.76563pt>
+<images/Page-8-Image-4.png, id=1021, 1023.825pt x 338.76563pt>
 File: images/Page-8-Image-4.png Graphic file (type png)
 <use images/Page-8-Image-4.png>
-Package pdftex.def Info: images/Page-8-Image-4.png  used on input line 2430.
+Package pdftex.def Info: images/Page-8-Image-4.png  used on input line 2523.
 (pdftex.def)             Requested size: 364.00139pt x 120.44096pt.
 
-LaTeX Warning: Citation 'Bresser-Pereira1973' on page 67 undefined on input lin
-e 2444.
+LaTeX Warning: Citation 'Bresser-Pereira1973' on page 68 undefined on input lin
+e 2537.
 
-[67 <./images/Page-8-Image-3.png> <./images/Page-8-Image-4.png>] [68
+[68 <./images/Page-8-Image-3.png> <./images/Page-8-Image-4.png>] [69
 
 ]
 \tf@lof=\write6
@@ -2065,11 +2103,11 @@ e 2444.
 \tf@toc=\write9
 \openout9 = `thesis.toc'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 2474.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 2474.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 2567.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 2567.
 (./thesis.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 2474.
-Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 2474.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 2567.
+Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 2567.
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
@@ -2084,13 +2122,13 @@ Package biblatex Warning: Please (re)run Biber on the file:
 Package logreq Info: Writing requests to 'thesis.run.xml'.
 \openout1 = `thesis.run.xml'.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 2474.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 2567.
  ) 
 Here is how much of TeX's memory you used:
- 31233 strings out of 482895
- 538175 string characters out of 5958437
- 1368476 words of memory out of 5000000
- 45452 multiletter control sequences out of 15000+600000
+ 31290 strings out of 482895
+ 539102 string characters out of 5958437
+ 1368164 words of memory out of 5000000
+ 45496 multiletter control sequences out of 15000+600000
  615230 words of font info for 211 fonts, out of 8000000 for 9000
  16 hyphenation exceptions out of 8191
  77i,18n,117p,1151b,4150s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -2103,10 +2141,10 @@ exmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></home/droubi/.TinyTeX/texmf-dist
 /fonts/type1/urw/helvetic/uhvbo8a.pfb></home/droubi/.TinyTeX/texmf-dist/fonts/t
 ype1/urw/helvetic/uhvr8a.pfb></home/droubi/.TinyTeX/texmf-dist/fonts/type1/urw/
 helvetic/uhvro8a.pfb>
-Output written on thesis.pdf (69 pages, 4212524 bytes).
+Output written on thesis.pdf (70 pages, 4391775 bytes).
 PDF statistics:
- 1424 PDF objects out of 1440 (max. 8388607)
- 1240 compressed objects within 13 object streams
- 330 named destinations out of 1000 (max. 500000)
- 25401 words of extra memory for PDF output out of 29859 (max. 10000000)
+ 1472 PDF objects out of 1728 (max. 8388607)
+ 1284 compressed objects within 13 object streams
+ 342 named destinations out of 1000 (max. 500000)
+ 25422 words of extra memory for PDF output out of 29859 (max. 10000000)
 

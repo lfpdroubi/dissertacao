@@ -386,14 +386,14 @@ de um século à partir de 1890.
 O *Global Real House Price Index* do \gls{FMI}, que se constitui de uma média
 simples de preços reais de residências em 57 países [@fmitwa], mostra também uma
 nítida e forte tendência de alta, como pode ser observado na figura 
-\@ref{fig:global_rhpi}.
+\@ref(fig:global-rhpi).
 
 ```{r}
 global_rhpi <- read.csv("data/GlobalHousePriceIndex.csv")
 global_rhpi$dateq <- seq(ISOdate(2000,3,1), ISOdate(2019,3,1), by = "quarters")
 ```
 
-```{r global_rhpi, fig.cap = "HPI real do FMI."}
+```{r global-rhpi, fig.cap = "HPI real do FMI."}
 ggplot(global_rhpi, aes(x = dateq, y = equally.weighted)) +
   geom_line() +
    labs(
@@ -730,7 +730,11 @@ ou saídas de caixa possam ser consideradas infinitas (geralmente séries acima 
 Assim, o Valor Presente $VP$ de uma série de pagamentos perpétua de valor 
 periódico $A$, descontados de uma taxa de juros $i$ é igual a:
 
-$$VP = \lim_{n \to \infty} A \frac{(1+i)^n-1}{i(1+i)^n}= \frac{A}{i}$$
+\begin{equation}
+VP = \lim_{n \to \infty} A \frac{(1+i)^n-1}{i(1+i)^n}= \frac{A}{i}
+(\#eq:perpetua)
+\end{equation}
+
 #### Cálculo do valor justo de um imóvel
 
 O cálculo do valor justo de um imóvel pode ser feito considerando-se o método
@@ -870,3 +874,29 @@ como ocorreu em 2008, tendem a causar transtornos tanto para as pessoas físicas
 que podem perder seus imóveis, quanto para as instituições financeiras expostas
 ao risco do mercado imobiliário, seja para os governos que são instados a 
 socorrer as empresas e as pessoas em dificuldades.
+
+Segundo @fmiera, episódios com padrões de boom seguidos de estouros (de bolhas),
+ou *boom-bust patterns*, precederam mais de dois terços das 50 mais recentes
+crises bancárias sistêmicas.
+
+Uma reversão de expectativas pode ocorrer devido a um fator exógeno. Por exemplo,
+no momento em que se escreve esta dissertação, o mundo se encontra em meio a
+uma pandemia de proporções globais e ainda sem qualquer perspectiva que seja
+encontrada uma cura ou uma vacina contra o Corona vírus.
+
+Estimativas recentes dão conta de que os níveis de desemprego podem aumentar 
+substancialmente em todo o mundo, o que pode gerar um perspectiva de que a 
+demanda por aluguéis diminua muito, puxada pela diminuição da renda da 
+população devido ao desemprego, *i.e.*, uma diminução no numerador da equação
+\@ref(eq:perpetua).
+
+Por outro lado, a brusca queda das taxas de juros longas, *i.e*, uma diminuição
+no denominador da equação \@ref(eq:perpetua) deve mais que compensar a queda no 
+numerador.
+
+Uma vez alternadas as expectativas, no entanto, ou seja, uma vez que se resolva
+a crise sanitária da COVID-19, as taxas de juros podem subir repentinamente, 
+ainda que permanecendo baixa em níveis históricos, mas muito dificilmente 
+ocorrerá o mesmo no mercado de trabalho, que tem recuperação lenta. Este cenário
+poderia facilmente vir a desencadear uma crise imobiliária ainda pior que a da 
+década passada.
