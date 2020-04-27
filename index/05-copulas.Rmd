@@ -10,54 +10,13 @@ probabilidade cumulativa com distribuições marginais uniformes [@copulas, 1].
 library(reticulate)
 ```
 
-```{python}
+```{python flights}
 import pandas
 flights = pandas.read_csv("data/flights.csv")
 flights = flights[flights['dest'] == "ORD"]
 flights = flights[['carrier', 'dep_delay', 'arr_delay']]
 flights = flights.dropna()
 print(flights.head())
-```
-
-```{python}
-import matplotlib.pyplot as plt
-import numpy as np
-t = np.arange(0.0, 2.0, 0.01)
-s = 1 + np.sin(2*np.pi*t)
-plt.plot(t, s)
-plt.xlabel('time (s)')
-plt.ylabel('voltage (mV)')
-plt.grid(True)
-plt.savefig('test.png')
-plt.show()
-```
-
-
-```{python}
-import seaborn as sns
-from scipy import stats
-
-x = stats.uniform(0, 1).rvs(10000)
-sns.distplot(x, kde=False, norm_hist=True)
-```
-
-```{python}
-norm = stats.distributions.norm()
-x_trans = norm.ppf(x)
-sns.distplot(x_trans)
-```
-
-
-```{python}
-h = sns.jointplot(x, x_trans, stat_func=None)
-h.set_axis_labels('original', 'transformed', fontsize=16)
-```
-
-```{python}
-beta = stats.distributions.beta(a=10, b=3)
-x_trans = beta.ppf(x)
-h = sns.jointplot(x, x_trans, stat_func=None)
-h.set_axis_labels('orignal', 'transformed', fontsize=16);
 ```
 
 
