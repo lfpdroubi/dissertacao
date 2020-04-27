@@ -765,7 +765,7 @@ econômica crônica, o que vem levando os governos destes países a tomarem medi
 não-usuais para a regulação do mercado imobiliário, especialmente no que se
 refere ao controle dos preços dos aluguéis, devido à crise habitacional que se
 instalou nestes países desde a crise de 2008 [@berlim; @londres; @california;
-@suecia, @newzeland].
+@suecia; @newzeland].
 
 ## Efeitos da falta de reforma agrária no cadastro urbano
 

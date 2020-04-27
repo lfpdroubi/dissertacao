@@ -6,9 +6,71 @@ marginais da estrutura de dependência de uma dada distribuição multivariada.
 Por definição, uma copula d-dimensional é uma função de distribuição de
 probabilidade cumulativa com distribuições marginais uniformes [@copulas, 1].
 
+```{r}
+library(reticulate)
+```
+
+```{python}
+import pandas
+flights = pandas.read_csv("data/flights.csv")
+flights = flights[flights['dest'] == "ORD"]
+flights = flights[['carrier', 'dep_delay', 'arr_delay']]
+flights = flights.dropna()
+print(flights.head())
+```
+
+```{python}
+import matplotlib.pyplot as plt
+import numpy as np
+t = np.arange(0.0, 2.0, 0.01)
+s = 1 + np.sin(2*np.pi*t)
+plt.plot(t, s)
+plt.xlabel('time (s)')
+plt.ylabel('voltage (mV)')
+plt.grid(True)
+plt.savefig('test.png')
+plt.show()
+```
+
+
+```{python}
+import seaborn as sns
+from scipy import stats
+
+x = stats.uniform(0, 1).rvs(10000)
+sns.distplot(x, kde=False, norm_hist=True)
+```
+
+```{python}
+norm = stats.distributions.norm()
+x_trans = norm.ppf(x)
+sns.distplot(x_trans)
+```
+
+
+```{python}
+h = sns.jointplot(x, x_trans, stat_func=None)
+h.set_axis_labels('original', 'transformed', fontsize=16)
+```
+
+```{python}
+beta = stats.distributions.beta(a=10, b=3)
+x_trans = beta.ppf(x)
+h = sns.jointplot(x, x_trans, stat_func=None)
+h.set_axis_labels('orignal', 'transformed', fontsize=16);
+```
+
+
 ## Teorema de Sklars
 
 ## Tipos de Copulas
+
+A copula gaussiana foi vastamente utilizada no cálculo de risco dos derivativos
+financeiros dos empréstimos imobiliários, os \gls{CDO}s.
+
+Segundo @devil, a copula gaussiana foi adotada "entusiasticamente" pela 
+indústria (financeira) pela sua simplicidade, embora ela não seja capaz de 
+captar as principais características do que se pretendia modelar.
 
 ### Copulas elípticas
 

@@ -248,6 +248,12 @@ anteriores à crise de 2008.
 #   series_id = "USREC",
 #   observation_start = as.Date("1857-01-01")
 # )
+nhpi <- readRDS("data/nhpi")
+rhpi <- readRDS("data/rhpi")
+global_rhpi <- read.csv("data/GlobalHousePriceIndex.csv")
+#global_rhpi <- read.zoo(global_rhpi, index = "dateq", FUN = as.yearqtr, format = "%Yq%q")
+#global_rhpi$dateq <- as.yearqtr(seq(ISOdate(2000,3,1), ISOdate(2019,3,1), by = "quarters"))
+global_rhpi$dateq <- seq(ISOdate(2000,1,1), ISOdate(2019,1,1), by = "quarters")
 recessions.df <- read.csv("data/us_recessions.csv")
 recessions.df <- within(recessions.df, {
   Peak <- as.POSIXct(Peak)
@@ -255,9 +261,9 @@ recessions.df <- within(recessions.df, {
   })
 ```
 
+
 ```{r nhpi, fig.cap="Home Price Index, de Case e Shiller, em termos nominais."}
 recessions.trim = subset(recessions.df, Peak >= "1990-01-01")
-nhpi <- readRDS("data/nhpi")
 ggplot(nhpi, as.numeric = FALSE) +
   geom_line() +
    labs(
@@ -284,19 +290,26 @@ ggplot(nhpi, as.numeric = FALSE) +
 Fonte: O autor, à partir de dados de @QuandlWIKI.
 \ecenter
 
-Em julho de 2006 o índice atingiu o valor de 
-`r brf(window(nhpi, start = 2006 + 6/12, end = 2006 + 6/12)[[1]])` pontos,
-entrando então em tendência de baixa, até atingir os `r brf(window(nhpi, start = 2012 + 0/12, end = 2012 + 0/12)[[1]])`, em janeiro de 2012, quando se iniciou nova tendência de 
-alta, que perdura até os dias atuais. No momento em que se escreve esta 
-dissertação o índice se encontra com `r brf(last(nhpi))` pontos, maior valor
-da série histórica.
+```{r}
+range_nhpi_2006_2012 <- range(window(nhpi, start = 2006 + 6/12, end = 2012 + 0/12))
+range_rhpi_2005_2012 <- range(window(rhpi, start = 2005 + 11/12, end = 2012 + 0/12))
+range_rhpi_1997_2005 <- range(window(rhpi, start = 1997 + 0/12, end = 2005 + 11/12))
+range_rhpi_1989_1997 <- range(window(rhpi, start = 1989 + 7/12, end = 1997 + 0/12))
+```
+
+Em julho de 2006 o índice atingiu o valor de `r brf(range_nhpi_2006_2012[2])`
+pontos, entrando então em tendência de baixa, até atingir os 
+`r brf(range_nhpi_2006_2012[1])` pontos, em janeiro de 2012, uma queda de 
+`r diff(range_nhpi_2006_2012)` pontos, quando se iniciou nova tendência de alta, 
+que perdura até os dias atuais. No momento em que se escreve esta dissertação o 
+índice se encontra com `r brf(last(nhpi))` pontos, maior valor da série 
+histórica, uma alta de `r brf(last(nhpi) - range_nhpi_2006_2012[1])` pontos. 
 
 Em termos reais, no entanto, os preços ainda são inferiores ao pico registrado, 
 mas há uma nítida tendência de alta, conforme pode ser visto na figura 
 \@ref(fig:rhpi).
 
 ```{r rhpi, fig.cap="Home Price Index, de Case e Shiller, em termos reais."}
-rhpi <- readRDS("data/rhpi")
 ggplot(window(rhpi, start = 1990 + 0/12), as.numeric = FALSE) +
   geom_line() +
    labs(
@@ -322,19 +335,18 @@ Fonte: O autor, à partir de dados de @QuandlWIKI.
 \ecenter
 
 Na atualidade este índice se encontra em `r brf(last(rhpi))` pontos, sendo 
-que o maior valor da série histórica se deu em dezembro de 2005.
+que o maior valor da série histórica se deu em dezembro de 2005, quando atingiu
+`r brf(range_rhpi_2005_2012[2])` pontos.
 
-Em janeiro de 1997, o índice estava em `r brf(window(rhpi, start = 1997 + 0/12, end = 1997 + 0/12)[[1]])` pontos. Desta data em diante, o índice entrou em franca tendência 
-de alta até atingir os
-`r brf(window(rhpi, start = 2005 + 11/12, end = 2005 + 11/12)[[1]])` pontos, 
-em dezembro de 2005, auge, em termos reais, da bolha imobiliária, que no entanto 
-só viria a estourar, nominalmente falando, em julho de 2006, como se pode ver na 
-figura \@ref(fig:nhpi).
+Em janeiro de 1997, o índice estava em `r brf(range_rhpi_1989_1997[1])` pontos.
+Desta data em diante, o índice entrou em franca tendência de alta até atingir os
+`r brf(range_rhpi_2005_2012[2])` pontos, em dezembro de 2005, auge, em termos
+reais, da bolha imobiliária, que no entanto só viria a estourar, nominalmente
+falando, em julho de 2006, como se pode ver na figura \@ref(fig:nhpi).
 
 É importante salientar que o fenômeno da alta tão relevante dos preços dos 
 imóveis é relativamente recente. O gráfico da figura \@ref(fig:rhpi2) ilustra 
 isto.
-
 
 ```{r rhpi2, fig.cap="HPI, em termos reais, desde 1890."}
 recessions.trim = subset(recessions.df, Peak >= "1953-01-01" )
@@ -363,45 +375,35 @@ Fonte: O autor, à partir de dados de @QuandlWIKI.
 \ecenter
 
 O valor mínimo da série histórica (não mostrado no gráfico) foi atingido em  
-`r month.abb[(time(rhpi)[which.min(rhpi)] %% 1)*12+1]`/`r floor(time(rhpi)[which.min(rhpi)])`, quando o índice atingiu a marca
-de `r brf(rhpi[which.min(rhpi)])` pontos.
+`r month.abb[(time(rhpi)[which.min(rhpi)] %% 1)*12+1]`/`r floor(time(rhpi)[which.min(rhpi)])`, quando o índice atingiu a marca de `r brf(rhpi[which.min(rhpi)])` pontos.
 
-É interessante notar que, em um século, desde 1890, o índice de preços reais de 
-imóveis atingiu um valor máximo de apenas 
-`r brf(window(rhpi, start = 1989 + 7/12, end = 1989 + 7/12)[[1]])` pontos, o
-que ocorreu em agosto de 1989.
+É interessante notar que, em um século, desde 1890, o índice de preços reais de
+imóveis atingiu um valor máximo de apenas `r brf(range_rhpi_1989_1997[2])`
+pontos, o que ocorreu em agosto de 1989.
 
-Ou seja, em relação ao topo histórico  de um século (agosto de 1989) à partir do 
+Ou seja, em relação ao topo histórico  de um século (agosto de 1989) à partir do
 início da coleta do índice (1890), o índice hoje se encontra 
-`r brf(last(rhpi) - window(rhpi, start = 1989 + 7/12, end = 1989 + 7/12)[[1]])`
-pontos percentuais acima daquela marca e a apenas 
-`r brf(window(rhpi, start = 2005 + 11/12, end = 2005 + 11/12)[[1]] - last(rhpi))`
-pontos percentuais abaixo de atingir o topo histórico de dezembro de 2005.
+`r brf(last(rhpi) - range_rhpi_1989_1997[2])` pontos percentuais acima daquela 
+marca e a apenas `r brf(range_rhpi_1989_1997[2] - last(rhpi))` pontos 
+percentuais abaixo de atingir o topo histórico de dezembro de 2005.
 
 Em janeiro de 2012, no fundo do vale da curva do índice real, este atingiu
-`r brf(window(rhpi, start = 2012 + 0/12, end = 2012 + 0/12)[[1]])` pontos,
-apenas `r brf(window(rhpi, start = 1989 + 7/12, end = 1989 + 7/12)[[1]] - window(rhpi, start = 2012 + 0/12, end = 2012 + 0/12)[[1]])` pontos abaixo do topo histórico 
-de um século à partir de 1890.
+`r brf(range_rhpi_2005_2012[1])` pontos, apenas 
+`r brf(range_rhpi_1989_1997[2] - range_rhpi_2005_2012[1])` pontos abaixo do topo 
+histórico de um século à partir de 1890.
 
 O *Global Real House Price Index* do \gls{FMI}, que se constitui de uma média
 simples de preços reais de residências em 57 países [@fmitwa], mostra também uma
 nítida e forte tendência de alta, como pode ser observado na figura 
 \@ref(fig:global-rhpi).
 
-```{r}
-global_rhpi <- read.csv("data/GlobalHousePriceIndex.csv")
-#global_rhpi <- read.zoo(global_rhpi, index = "dateq", FUN = as.yearqtr, format = "%Yq%q")
-#global_rhpi$dateq <- as.yearqtr(seq(ISOdate(2000,3,1), ISOdate(2019,3,1), by = "quarters"))
-global_rhpi$dateq <- seq(ISOdate(2000,1,1), ISOdate(2019,1,1), by = "quarters")
-format_quarters <- function(x) {
-  format(as.yearqtr(x), format = "%qT%Y")
-}
-
-```
 
 ```{r global-rhpi, fig.cap = "HPI real do FMI."}
 # library(cowplot)
 # theme_set(theme_cowplot(14))
+format_quarters <- function(x) {
+  format(as.yearqtr(x), format = "%qT%Y")
+}
 ggplot(global_rhpi, aes(x = dateq, y = equally.weighted)) +
   geom_line() +
    labs(
@@ -417,7 +419,7 @@ ggplot(global_rhpi, aes(x = dateq, y = equally.weighted)) +
   stat_valleys(geom = "text", colour = "red",
              vjust = 1.5, x.label.fmt = "%m/%Y", span = 25) +
   scale_y_continuous(expand = c(0,20))+
-  scale_x_datetime(expand = expand_scale(mult = c(0, .05)),
+  scale_x_datetime(expand = expansion(mult = c(0, .05)),
                    date_breaks = "12 months",
                    date_minor_breaks = "3 months",
                    labels = format_quarters) +
@@ -427,8 +429,8 @@ ggplot(global_rhpi, aes(x = dateq, y = equally.weighted)) +
 #  stat_smooth()
 ```
 
-Deve-se repara que, ao contrário do que aconteceu nos EUA, o pico em termos 
-globais só foi alcançado no último trimestre de 2007. Deve ser reparado ainda
+Deve-se reparar que, ao contrário do que aconteceu nos EUA, o pico em termos 
+globais só foi alcançado no último trimestre de 2007. Deve ser observado ainda
 que a queda, em termos globais, foi muito menos abrupta que a queda ocorrida
 nos EUA. O ponto de retomada, no entanto, tem grande coincidência: enquanto nos
 EUA a retomada começa à partir de Jan/2012, tanto para o índice nominal quanto
@@ -654,7 +656,27 @@ do estouro de uma bolha especulativa, mas também por conta de uma inversão dos
 fundamentos econômicos que sustentavam os preços [@Case2000, 129], como parece
 ser o caso no momento.
 
+#### A crise financeira de 2008
 
+Segundo @devil, a raiz da crise financeira estava nos derivativos de crédito
+que transferiam o risco de uma hipoteca dos emprestadores ao mercado financeiro,
+ou seja, aos bancos, fundos de *hedge* e companhias seguradoras.
+
+O propósito da venda destes seguros era a liberação de capital dos bancos: uma
+vez que os bancos necessitam manter provisões de capital em seus balanços contra
+os empréstimos realizados, a venda destes derivativos de risco a outros
+investidores possibilitava a liberação desse capital, tornando possível aos
+bancos efetuar mais empréstimos.
+
+Esta dispersão do risco do setor bancário era vista como um fator de diminuição
+da vulnerabilidade do setor aos choques econômicos. Na prática, porém, a 
+diminuição dos riscos levou os bancos a uma maior tolerância na análise de
+risco dos tomadores de empréstimos, o que não foi percebido de imediato pelos
+compradores dos \gls{CDO}s.
+
+#### \gls{CDO}
+
+Blah...
 
 ## O Mercado Imobiliário e a Microeconomia {#micro}
 
@@ -750,7 +772,7 @@ e vice-versa.
 Segundo @marins1, a *duration* de um título, ou de um conjunto de títulos de 
 renda fixa pode ser calculada de acordo com a fórmula a seguir, de Macaulay:
 
-$$D = \frac{\sum_{t = 1}^{n}t \times \frac{F_t}{(1+i)^t}}{\sum_{t = 1}^{n} \frac{F_t}{(1+i)^t}}$$
+$$D = \frac{\sum_{t = 1}^{n} t \times \frac{F_t}{(1+i)^t}}{\sum_{t = 1}^{n} \frac{F_t}{(1+i)^t}}$$
 
 #### Séries Perpétuas
 
@@ -925,9 +947,18 @@ Por outro lado, a brusca queda das taxas de juros longas, *i.e*, uma diminuiçã
 no denominador da equação \@ref(eq:perpetua) deve mais que compensar a queda no 
 numerador.
 
+Seja, por exemplo um imóvel em que, antes da crise, se imaginava que produziria
+uma série de pagamentos de aluguéis de R$2.000,00 mensais. A uma taxa de juros
+de longo prazo de 2% a.a., o seu valor justo, segundo a equação 
+\@ref(eq:perpetua) seria de R$1.200.000,00. Imaginando que, com a crise do COVID
+haja uma redução nas expectativas de receitas com o imóvel, passando para uma 
+prestação mensal de R$1.000,00. Com a queda da taxa dos títulos para 1% a.a.,
+o preço do imóvel permaneceria constante.
+
 Uma vez alternadas as expectativas, no entanto, ou seja, uma vez que se resolva
 a crise sanitária da COVID-19, as taxas de juros podem subir repentinamente, 
 ainda que permanecendo baixa em níveis históricos, mas muito dificilmente 
 ocorrerá o mesmo no mercado de trabalho, que tem recuperação lenta. Este cenário
-poderia facilmente vir a desencadear uma crise imobiliária ainda pior que a da 
-década passada.
+poderia vir a desencadear uma crise imobiliária similar ou ainda pior do que a
+da década passada, haja vista que na atualidade, as ferramentas tradicionais de
+política monetária já foram exauridas, além das ferramentas não-tradicionais.

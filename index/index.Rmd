@@ -58,6 +58,7 @@ epigrafe: |
 bibliography: [bib/cap1.bib, bib/cap2.bib, bib/cap3.bib, bib/cap4.bib, bib/cap5.bib, bib/pkgs.bib]
 # Download your specific csl file and refer to it in the line below.
 link-citations: true
+#biblio-style: abnt
 #csl: csl/apa.csl
 #lot: true
 #lof: true
