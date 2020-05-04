@@ -110,7 +110,7 @@ Isto seria extramente útil, inclusive, na análise do risco de um empreendiment
 
 Na prática atual da Engenharia de Avaliações convencionou-se o estabelecimento
 de uma taxa mínima de atratividade igual a um múltiplo da taxa de juros de curto
-prazo, ou taxa selic, usualmente feito igual a 3.
+prazo, ou taxa Selic, estabelecida pelo \gls{Bacen}, usualmente feito igual a 3.
 
 No entanto, considera-se que este parâmetro é injustificado e pode ser, no 
 mínimo, contestado, ainda mais em se tratando de uma possível perícia judicial

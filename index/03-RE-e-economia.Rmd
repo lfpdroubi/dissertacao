@@ -121,7 +121,7 @@ aos padrões das conquistas tecnológicas, às limitações impostas pelas condi
 do meio ambiente e, mais abrangentemente, à formação cultural da sociedade.
 \end{citacao}
 
-## O mercado imobiliário e a Macroeconomia {#macro}
+## O Mercado Imobiliário e a Macroeconomia {#macro}
 
 Segundo @LEUNG, há um reconhecimento relativamente recente e crescente
 sobre a importância da interação entre os diversos mercados imobiliários entre
@@ -199,7 +199,7 @@ métodos de estimação.
 
 Na figura \@ref(fig:adams)...
 
-### O mercado imobiliário e os fundamentos econômicos
+### Relação com os fundamentos econômicos
 
 O mercado imobiliário, assim como acontece com  o mercado mobiliário, deve
 seguir os fundamentos da Economia no longo prazo. No entanto, eventuais
@@ -222,11 +222,207 @@ Fonte: @ADAMS201038.
 
 ### Índices de preços
 
+De acordo com o @rppi, índices de preços de imóveis são importantes e podem ser
+úteis ou necessários:
+
+* como um indicador macroeconômio da atividade econômica;
+* para uso na calibração da política monetária;
+* como uma ferramenta para estimar o valor de um dos componentes de riqueza;
+* como um indicador da estabilidade financeira ou de solidez da exposição ao risco;
+* como um deflator nas contas nacionais;
+* para auxílio para a tomada de decisões dos cidadãos na negociação de um imóvel;
+* como um dos compenentes de um índice de preços ao consumidor; e
+* para uso em comparações inter-setoriais ou internacionais.
+
+Ainda segundo o @rppi, grosseiramente falando, os índices de preços podem ser 
+divididos em dois grupos:
+
+* índices para a aferição do *estoque* de propriedade imobiliária em um
+determinado tempo; e 
+* índices para a aferição das *vendas* de propriedade imobiliária em um 
+determinado período de tempo.
+
+Em síntese, índices do primeiro tipo devem conter informação tanto das
+propriedades existentes e das propriedades recém-construídas, enquanto que para
+índices do segundo tipo apenas, destinado a medir o investimento imobiliário,
+deve se ater às vendas de novos imóveis ou imóveis recém convertidos em imóveis
+de novo tipo [@rppi, 155]. 
+
+Contudo, deve-se ter em conta que para aferir o investimento bruto em *real
+estate* deve-se primeiro decompor o componente estrutural do componente
+referente ao preço da terra no valor de venda dos imóveis [@rppi, 155]. Esta
+decomposição também deve ser efetuada para utilização do índice como um
+componente de um índice de preços ao consumidor [@rppi, 156].
+
+### Índices de capitalização
+
 #### Metodologias para confecção de índices de preços de imóveis
+
+Diferentes metodologias são conhecidas para a confecção de índices de preços de
+imóveis. 
+
+a. Métodos de estratificação
+
+São os métodos mais simples de medição de mudanças nos índices de preços de 
+imóveis. É feita pela aferição da mudança de uma medida de tendência central 
+(usualmente média ou mediana) em um determinado período de tempo, dividindo-se
+os imóveis em sub-amostras de características similares.
+
+Um dos problemas da utilização deste tipo de metodologia é que ele é incapaz
+de capturar eventuais mudanças quanto a qualidade do estoque de imóveis ao longo
+do tempo, ficando viesado para cima, por exemplo, quando a qualidade dos imóveis
+aumenta ao longo do tempo e vice-versa. O índice tambem pode ficar viesado se
+houver alteração no *mix* de imóveis entre dois períodos, por exemplo, se num
+determinado período houver um maior número de imóveis de alto padrão do que 
+num período anterior, o índice ficará viesado para cima.
+
+Segundo @rppi [-@rppi, 158], o método da estratificação é recomendado quando o
+volume de vendas é grande o suficiente e a informação das características dos
+imóveis é detalhada o suficiente para uma classificação detalhada das
+propriedades, sendo este método de confecção de índice somente apropriado quando:
+
+* um nível apropriado de detalhe escolhido é factível para as células 
+* uma das variáveis de estratificação é a variável *idade* da edificação; e
+* a decomposição do índice em terra e estrutura não é necessária.
+
+b. Métodos hedônicos
+
+É o método mais eficiente de construção de um índice quando há dados disponíveis. Além explorar o máximo os 
+dados disponíveis, permite a desagragação dos preços das 
+estruturas do preço da terra e pode ser elaborado de forma a levar em conta a depreciação dos imóveis, razão pela qual tal tipo índice pode ser utilizado tanto para o monitoramento do valor dos estoques de imóveis quanto para aferir o investimento no setor imobiliário.
+
+Consiste na aplicação de modelos hedônicos, basicamente de duas maneiras distintas:
+
+1. Modelos com variáveis dicotômicas de tempo 
+
+Trata-se de um método que utiliza um modelo de regressão onde as variáveis
+hedônicas dos imóveis são adicionadas de variáveis dicotômicas de cada período
+[@rppi, 158]. Apesar da simplicidade, uma vez que um novo período é adicionado,
+com o novo ajuste do modelo, os índices dos períodos anteriores são modificados.
+Para contornar este problema, utiliza-se uma janela de tempo móvel, efetuando um
+ajuste de modelo para os últimos N períodos.
+
+2. Modelos de preços característicos
+
+Nestes tipos de índices, um modelo hedônico é ajustado a cada período e o índice
+é construído através dos preços previstos pelos modelos [@rppi, 53]. Assim, o
+índice é construído através da razão entre os preços previstos nos dois
+períodos, como mostra a equação \@ref(eq:cp-approach).
+
+\begin{equation}
+\frac{\hat p^t}{\hat p^0} = \frac{\hat \beta_0^t + \sum \hat \beta_k^t z_k^*}{\hat \beta_0^0 + \sum \hat \beta_k^0 z_k^*}
+(\#eq:cp-approach)
+\end{equation}
+
+onde as características dos imóveis $z_k^*$ pode ser estabelecida de diversas
+maneiras, como a média das carecterísticas do período base ($z_k^* = \bar z_k^0$),
+denominado índice de Laspeyres, como média das características do período
+posterior ($z_k^* = \bar z_k^t$), denominado índice de Paasche, ou ainda tomando
+a média geométrica dos períodos anterior e posterior, denominado índice do tipo
+Fisher.
+
+c. Método de vendas repetidas (Repeated Sales)
+
+Embora seja o método mais "natural" para a confecção de um índice, e de ser
+também o método do índice talvez mais famoso, o de Case e Shiller, o método de
+vendas repetidas não é tão eficiente quanto o método de modelos hedônicos, pois
+o método de vendas repetidas, ao utilizar apenas os dados de imóveis
+transacionados mais de uma vez, por conseguinte descarta muitos dados de
+transação que poderiam ser úteis para a construção de um índice mais robusto 
+[@rppi, 160].
+
+d. Métodos baseados em avaliação -- Sales Price Appraisal Ratio (SPAR)
+
+Este tipo de índice utiliza de dados de avaliação feitas para propósito de
+tributação ou outros tipos de avaliação, usualmente utilizadas para a bens 
+similares, com o intuito de resolver alguns problemas relacionados ao modelo de
+vendas repetidas (pequeno número de dados repetidos e a suscetibilidade ao viés).
+Matematicamente, o índice é calculado de acordo com a equação \@ref(eq:AP) 
+[@rppi, 75].
+
+\begin{equation}
+P_{AP}^{0t} = \sum_{n \in S(t)} w_n^0(t) \left ( \frac{p_n^t}{a_n^0} \right )
+(\#eq:AP)
+\end{equation}
+
+onde $p_n^t$ é o preço de venda no período $t$, $a_n^0$ é o valor da avaliação
+do bem no período base, $S(t)$ é a amostra do período $t$ e $w_n^0(t)$ são os
+pesos utilizados para a confecção do índice.
+
+Ou seja, este método, como uma maneira de contornar o baixo volume de dados de 
+venda de bens nos diferentes períodos, compensa essa falta de dados com a 
+utilização de dados de avaliação, nos períodos onde não há dados de venda.
+
+Como o método acima não utiliza valores observados no período base, os valores
+neste período, como acima calculados, serão diferentes de 1. Como isto é 
+indesejável, uma normalização é feita, obtendo-se assim o *Sales Price Appraisal
+Ratio* ou SPAR, cuja formulação pode ser vista na equação \@ref(eq:SPAR) 
+[@rppi, 75]:
+
+\begin{equation}
+P_{SPAR}^{0t} = \frac{\sum\limits_{n \in S(t)} p_n^t}{\sum\limits_{n \in S(t)} a_n^0} \left [ \frac{\sum\limits_{n \in S(0)} p_n^0}{\sum\limits_{n \in S(0)} a_0^n} \right ]^{-1}
+(\#eq:SPAR)
+\end{equation}
+
+Apesar de ser simples, necessitar apenas de dados de preços e avaliaçõe, o que
+simplifica a sua computação, os métodos baseados em avaliações tem a desvantagem
+de não lidar adequadamente com mudanças de qualidade entre os períodos (reparos 
+ou depreciação), além de ser dependente da qualidade das avaliações. 
+
+Uma característica interessante deste tipo de índices é que, quando o cadastro
+está atualizado e podem ser utilizados, os dados utilizados para a confecção do
+índice representam a totalidade da população e não apenas uma amostra, como de
+costume, ou seja, não há erro amostral, apenas o erro devido à avaliação em si.
+
+Uma limitação importante, porém, é que índices elaborados com tais métodos não
+podem decompor o valor total da propriedade imobiliária em valor de terra e
+valor de estruturas.
 
 #### Índices internacionais
 
+a. Índice de Case-Shiller
+b. 
+
 #### Índices no Brasil
+
+a. Índice FipeZap
+
+O índice de maior longevidade que se tem conhecimento no Brasil foi elaborado em
+conjunto pela Fundação Instituto de Pesquisas Econômicas (FIPE) e pelo portal de
+anúncios de imóveis, o chamado índice FipeZap.
+
+Segundo @fipezap, a metodologia utilizada para o cálculo do índice é a 
+estratificação. Para o índice FipeZap, apenas dois critérios de estratificação
+foram adotados, a saber, o número de dormitórios e a área de ponderação,
+definida pelos critérios do IBGE [@fipezap, 10]. 
+
+
+Segundo @fipezap, não foi possível a inclusão da variável idade da edificação, 
+por esta não ser uma variável obrigatória nos anúncios da plataforma zap imóveis.
+
+Outro problema relacionado a este índice é que ele não é composto de transações
+de imóveis, porém de anúncios de imóveis, o que além de poder ser problemático é
+questionável, devido às diferentes taxas de descontos praticadas no mercado
+em diferentes períodos e pelos diferentes atores, que neste caso não são 
+mensuráveis.
+
+Infelizmente, devido à sua metodologia e composição, o índice FipeZap não se
+presta nem a aferir o estoque de riqueza, nem o investimento bruto no mercado
+imobiliário, já que a variável idade não foi inserida na estratificação e não é
+possível a decomposição do índice na parte estrutural e preço da terra, devido à
+própria metodologia.
+
+
+b. Índices IGMI-R e IGMI-C
+
+Trata-se de um novo conjunto de índices construídos pela \gls{ABECIP} em
+convênio com o \gls{IBRE}/\gls{FGV}, provavelmente através de um método baseado
+em avaliações, "levando em conta os laudos de imóveis financiados pelos bancos".
+
+> Nos Estados Unidos, país de grande dimensão territorial e elevada mobilidade
+da população, o índice Case-Schiller faz o cálculo através da metodologia das
+transações repetidas. Outros países, que têm uma realidade diferente da
+americana, buscam alternativas para fazer o cálculo.
 
 
 ### Comportamento recente do mercado imobiliário e relação com as variáveis macroeconômicas
@@ -691,7 +887,8 @@ compradores dos \gls{CDO}s.
 
 #### \gls{CDO}
 
-Blah...
+\gls{CDO} são um tipo de instrumento financeiro utilizado para a diluição do 
+risco de crédito.
 
 ## O Mercado Imobiliário e a Microeconomia {#micro}
 

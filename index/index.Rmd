@@ -158,7 +158,7 @@ de um povo, essencial para a vida e a sociedade, sendo assunto de diversas
 disciplinas, como o Direito, Economia, Finanças, Sociologia e a Geografia.
 
 No Direito, a terra é abordada no direito de propriedade e uso social da terra.
-Na Economia, a terra é considerada uma dos fatores de produção, ao lado do
+Na Economia, a terra é considerada um dos fatores de produção, ao lado do
 trabalho e do capital. Nas Finanças, a terra é considerada como um bem
 suscetível de ser dado em garantia, em troca de capital financeiro, visando
 propiciar o desenvolvimento. Na perspectiva da Sociologia, a terra é um bem
@@ -187,4 +187,3 @@ a consumir com o efeito riqueza do Mercado Imobiliário;
 3. Do setor bancário, haja vista que os bancos possuem imóveis em seu portfolio,
 seja através da propriedade, ou através do financiamento imobiliário e hipotecas.
 
-\gls{Bacen}
