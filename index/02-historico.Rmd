@@ -502,15 +502,6 @@ origem ao processo do êxodo rural.
 
 #### O Complexo Rural
 
-\begin{citacao} 
-A população de um país de economia mercantil debilmente desenvolvida (ou não 
-desenvolvida de todo) é quase exclusivamente agrícola. Todavia, não se deve 
-deduzir daí que ela se ocupa só da agricultura. Significa apenas que a população 
-ocupada na agricultura transforma, ela mesma, os produtos da terra, sendo quase 
-inexistentes o intercâmbio e a divisão do trabalho. 
-(LENIN *apud* \cite[p. 99]{rangel1954}) 
-\end{citacao}
-
 Segundo Rangel [-@rangel1956, p.98], a unidade agrícola fechada é 
 
 \begin{citacao}
@@ -521,6 +512,33 @@ camponês não tem consciência da multiplicidade de suas atividades. Ele consid
 que elas formam um todo indivisível. Essa inespecialização é sua especialidade.
 (\ldots) Chamaremos esse microcosmo econômico, essa 'matriz de insumo-produto' em
 miniatura, de 'complexo rural'.
+\end{citacao}
+
+O estudo do desenvolvimento do capitalismo não pode ser feito sem o estudo das
+bases para o seu desenvolvimento. O capitalismo é um sistema político-econômico
+que tem surgimento com a queda do feudalismo, outro sistema político-econômico
+cujo enredo se passa, basicamente, no campo. A classe burguesa, aliás, como diz
+a história, era formada inicialmente pelos habitantes dos burgos, que se
+localizavam no entorno dos feudos. Estes formavam, no entanto, uma minoria.
+Durante a idade média, a maior parte da população vivia nos feudos, que se
+constituiam de grandes áreas cercadas e isoladas umas das outras, com economia
+quase auto-suficiente.
+
+Na economia feudal, portanto, não existia grande grau de especialização das
+atividades econômicas, como há hoje. Devido à precariedade do comércio, era
+praticamente imperioso que, no interior de cada feudo todas as atividades
+econômicas fossem executadas para a própria sustentabilidade do mesmo.
+
+Segundo Lenin [*apud* @rangel1954, 99], mesmo após o surgimento do capitalismo,
+nos países periféricos, esta realidade feudal ou quase-feudal, deve ser levada
+em consideração:
+
+\begin{citacao} 
+A população de um país de economia mercantil debilmente desenvolvida (ou não 
+desenvolvida de todo) é quase exclusivamente agrícola. Todavia, não se deve 
+deduzir daí que ela se ocupa só da agricultura. Significa apenas que a população 
+ocupada na agricultura transforma, ela mesma, os produtos da terra, sendo quase 
+inexistentes o intercâmbio e a divisão do trabalho. 
 \end{citacao}
 
 #### Condições e Métodos de abertura do Complexo Rural

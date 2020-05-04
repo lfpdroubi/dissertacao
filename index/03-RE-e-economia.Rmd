@@ -147,9 +147,12 @@ anualmente no mercado habitacional é maior do que o investimento em negócios, 
 que claramente faz do segmento habitacional muito mais do que apenas um outro 
 mercado de bens de consumo.
 
-Davis and Heathcote (2001) [apud @LEUNG, 6] afirmam que o valor de mercado das
+Davis e Heathcote (2001) [apud @LEUNG, 6] afirmam que o valor de mercado das
 propriedades imobiliárias em estoque nos EUA é aproximadamente igual ao PIB
-médio anual. 
+médio anual. Segundo a revista britânica The Economist [@economist], a maior
+classe de ativos no mundo é a propriedade residencial, com valor estimado de 200
+trilhões de dólares, o que equivale a 3 vezes mais o valor de todas as ações
+negociadas em bolsa.
 
 No Brasil, segundo @fnogueira [-@fnogueira, 155], a participação dos ativos de 
 base imobiliária era cerca de 40% dos bens e direitos declarados na Declaração
@@ -216,6 +219,15 @@ knitr::include_graphics("./images/adams_crop.pdf")
 \bcenter
 Fonte: @ADAMS201038.
 \ecenter
+
+### Índices de preços
+
+#### Metodologias para confecção de índices de preços de imóveis
+
+#### Índices internacionais
+
+#### Índices no Brasil
+
 
 ### Comportamento recente do mercado imobiliário e relação com as variáveis macroeconômicas
 
@@ -646,21 +658,24 @@ prazo, portanto estrutural, da economia.
 
 ### O Mercado Imobiliário e o setor bancário {#MI-e-o-setor-bancario}
 
-A participação dos produtos financeiros relacionados ao setor imobiliário 
+A participação dos produtos financeiros relacionados ao setor imobiliário
 constituem uma grande parte dos portfolios bancários. Justamente por isto,
 crises bancárias estão frequentemente associadas a superexposição do setor
-bancário no mercado imobiliário [@Case2000, 148].
+bancário no mercado imobiliário [@Case2000, 148]. Segundo Claessens *et al.*
+(2010) [apud @silver, 3], de 46 crises bancárias sistêmicas para quais há dados
+disponíveis, mais de dois terços foram precedidas por padrões de aumento-estouro
+de preços de imóveis.
 
-Quedas nos preços dos valores dos imóveis podem ocorrer, não apenas por causa
-do estouro de uma bolha especulativa, mas também por conta de uma inversão dos
-fundamentos econômicos que sustentavam os preços [@Case2000, 129], como parece
-ser o caso no momento.
+Não apenas pelo estouro de uma bola especulativa podem haver quedas nos preços
+bens imóveis, mas também por conta de uma inversão dos fundamentos econômicos
+que sustentavam os preços [@Case2000, 129], como aliás parece ser o caso no 
+momento, devido a um fator exógeno, a saber, a pandemia do corona vírus.
 
 #### A crise financeira de 2008
 
-Segundo @devil, a raiz da crise financeira estava nos derivativos de crédito
-que transferiam o risco de uma hipoteca dos emprestadores ao mercado financeiro,
-ou seja, aos bancos, fundos de *hedge* e companhias seguradoras.
+Segundo @devil, a raiz da crise financeira de 2008 estava nos derivativos de
+crédito que transferiam o risco de uma hipoteca dos emprestadores ao mercado
+financeiro, ou seja, aos bancos, fundos de *hedge* e companhias seguradoras.
 
 O propósito da venda destes seguros era a liberação de capital dos bancos: uma
 vez que os bancos necessitam manter provisões de capital em seus balanços contra
