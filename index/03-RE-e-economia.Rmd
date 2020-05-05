@@ -166,25 +166,24 @@ crescente esforço de pesquisa para preencher a lacuna entre as duas literaturas
 e lançar luz sobre questões que são conjuntamente conseqüentes para a 
 macroeconomia e a habitação.
 
-
-O mercado imobiliário, diferentemente de outros mercados de capitais, exibe uma 
+O mercado imobiliário, diferentemente de outros mercados de capitais, exibe uma
 flutuação de valores baixa e não muda imediatamente após a mudança do noticiário
 econômico [@ADAMS201038, 3]. O mercado imobiliário residencial, em particular,
-mostra forte rigidez pra baixo, porque os donos de imóveis residenciais tendem
-a resistir a venda da propriedade sob períodos de recessão econômica [@Case2000, 129].
+mostra forte rigidez pra baixo, porque os donos de imóveis residenciais tendem a
+resistir a venda da propriedade sob períodos de recessão econômica [@Case2000,
+129].
 
 @ADAMS201038 mostraram, com a observação de dados em painéis de 15 países por um 
 período de 30 anos, que variáveis macroeconômicas apresentam um significativo
 impacto no preço de imóveis residenciais.
 
-Segundo @ADAMS201038 [p. 18], particularmente variáveis como 
-emprego, produção industrial e aumento da base monetária demonstraram-se
-propensas a aumentar a demanda por imóveis residenciais, aumentando assim os
-seus preços. Além disto, um aumento na taxa de juros de curto prazo também
-afeta positivamente o preço dos imóveis residenciais, pelo efeito do aumento dos
-custos de financiamento e pelo desaquecimento do setor de construção, o que 
-ocasiona também um aumento no preço dos aluguéis, que também puxa para cima
-o preço dos imóveis.
+Segundo @ADAMS201038 [p. 18], particularmente variáveis como emprego, produção
+industrial e aumento da base monetária demonstraram-se propensas a aumentar a
+demanda por imóveis residenciais, aumentando assim os seus preços. Além disto,
+um aumento na taxa de juros de curto prazo também afeta positivamente o preço
+dos imóveis residenciais, pelo efeito do aumento dos custos de financiamento e
+pelo desaquecimento do setor de construção, o que ocasiona também um aumento no
+preço dos aluguéis, que também puxa para cima o preço dos imóveis.
 
 Por outro lado, um aumento nas taxas de juros de longo prazo leva a diminuição
 da demanda por imóveis residenciais. Por causa da maior atratividade nos 
@@ -220,7 +219,7 @@ knitr::include_graphics("./images/adams_crop.pdf")
 Fonte: @ADAMS201038.
 \ecenter
 
-### Índices de preços
+### Índices de preços de imóveis
 
 De acordo com o @rppi, índices de preços de imóveis são importantes e podem ser
 úteis ou necessários:
@@ -228,7 +227,8 @@ De acordo com o @rppi, índices de preços de imóveis são importantes e podem 
 * como um indicador macroeconômio da atividade econômica;
 * para uso na calibração da política monetária;
 * como uma ferramenta para estimar o valor de um dos componentes de riqueza;
-* como um indicador da estabilidade financeira ou de solidez da exposição ao risco;
+* como um indicador da estabilidade financeira ou de solidez da exposição ao 
+risco;
 * como um deflator nas contas nacionais;
 * para auxílio para a tomada de decisões dos cidadãos na negociação de um imóvel;
 * como um dos compenentes de um índice de preços ao consumidor; e
@@ -254,14 +254,14 @@ referente ao preço da terra no valor de venda dos imóveis [@rppi, 155]. Esta
 decomposição também deve ser efetuada para utilização do índice como um
 componente de um índice de preços ao consumidor [@rppi, 156].
 
-### Índices de capitalização
+#### Índices de capitalização
 
 #### Metodologias para confecção de índices de preços de imóveis
 
 Diferentes metodologias são conhecidas para a confecção de índices de preços de
 imóveis. 
 
-a. Métodos de estratificação
+##### Métodos de estratificação
 
 São os métodos mais simples de medição de mudanças nos índices de preços de 
 imóveis. É feita pela aferição da mudança de uma medida de tendência central 
@@ -285,7 +285,7 @@ propriedades, sendo este método de confecção de índice somente apropriado qu
 * uma das variáveis de estratificação é a variável *idade* da edificação; e
 * a decomposição do índice em terra e estrutura não é necessária.
 
-b. Métodos hedônicos
+##### Métodos hedônicos
 
 É o método mais eficiente de construção de um índice quando há dados disponíveis. Além explorar o máximo os 
 dados disponíveis, permite a desagragação dos preços das 
@@ -293,7 +293,7 @@ estruturas do preço da terra e pode ser elaborado de forma a levar em conta a d
 
 Consiste na aplicação de modelos hedônicos, basicamente de duas maneiras distintas:
 
-1. Modelos com variáveis dicotômicas de tempo 
+###### Modelos com variáveis dicotômicas de tempo 
 
 Trata-se de um método que utiliza um modelo de regressão onde as variáveis
 hedônicas dos imóveis são adicionadas de variáveis dicotômicas de cada período
@@ -302,7 +302,7 @@ com o novo ajuste do modelo, os índices dos períodos anteriores são modificad
 Para contornar este problema, utiliza-se uma janela de tempo móvel, efetuando um
 ajuste de modelo para os últimos N períodos.
 
-2. Modelos de preços característicos
+###### Modelos de preços característicos
 
 Nestes tipos de índices, um modelo hedônico é ajustado a cada período e o índice
 é construído através dos preços previstos pelos modelos [@rppi, 53]. Assim, o
@@ -321,7 +321,7 @@ posterior ($z_k^* = \bar z_k^t$), denominado índice de Paasche, ou ainda tomand
 a média geométrica dos períodos anterior e posterior, denominado índice do tipo
 Fisher.
 
-c. Método de vendas repetidas (Repeated Sales)
+##### Método de vendas repetidas (Repeated Sales)
 
 Embora seja o método mais "natural" para a confecção de um índice, e de ser
 também o método do índice talvez mais famoso, o de Case e Shiller, o método de
@@ -331,7 +331,7 @@ transacionados mais de uma vez, por conseguinte descarta muitos dados de
 transação que poderiam ser úteis para a construção de um índice mais robusto 
 [@rppi, 160].
 
-d. Métodos baseados em avaliação -- Sales Price Appraisal Ratio (SPAR)
+##### Métodos baseados em avaliação -- Sales Price Appraisal Ratio (SPAR)
 
 Este tipo de índice utiliza de dados de avaliação feitas para propósito de
 tributação ou outros tipos de avaliação, usualmente utilizadas para a bens 
@@ -380,21 +380,31 @@ valor de estruturas.
 
 #### Índices internacionais
 
-a. Índice de Case-Shiller
-b. 
+...
+
+##### Índice de Case-Shiller
+
+...
+
+##### Global Real House Price Index
+
+O FMI, através do observatório Global Housing Watch...
+
 
 #### Índices no Brasil
 
-a. Índice FipeZap
+##### Índice FipeZap
 
 O índice de maior longevidade que se tem conhecimento no Brasil foi elaborado em
 conjunto pela Fundação Instituto de Pesquisas Econômicas (FIPE) e pelo portal de
 anúncios de imóveis, o chamado índice FipeZap.
 
-Segundo @fipezap, a metodologia utilizada para o cálculo do índice é a 
+Segundo @fipezap, a metodologia utilizada para o cálculo do índice é a
 estratificação. Para o índice FipeZap, apenas dois critérios de estratificação
-foram adotados, a saber, o número de dormitórios e a área de ponderação,
-definida pelos critérios do IBGE [@fipezap, 10]. 
+foram adotados, no caso dos imóveis residenciais, a saber, o número de
+dormitórios e a área de ponderação, definida pelos critérios do IBGE. No caso de
+imóveis comerciais, o único critério de estratificação é a localização
+[@fipezap, 7].
 
 
 Segundo @fipezap, não foi possível a inclusão da variável idade da edificação, 
@@ -413,7 +423,7 @@ possível a decomposição do índice na parte estrutural e preço da terra, dev
 própria metodologia.
 
 
-b. Índices IGMI-R e IGMI-C
+##### Índices IGMI-R e IGMI-C
 
 Trata-se de um novo conjunto de índices construídos pela \gls{ABECIP} em
 convênio com o \gls{IBRE}/\gls{FGV}, provavelmente através de um método baseado
