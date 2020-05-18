@@ -51,7 +51,7 @@ prévia da reforma agrária no sentido clássico, *i.e.* no sentido da distribui
 dos latifúndios em pequenas propriedades, a chamada via clássica ou democrática.
 Apesar de permitir imprimir um "impulso extraordinário e energético" à
 industrialização, a via prussiana "promove uma distribuição muito desigual da
-renda" [@rangel1988, 155]. característica talvez mais perniciosa do
+renda" [@rangel1988, 155]. A característica talvez mais perniciosa do
 desenvolvimento capitalista por esta via se dá pela formação de um "exército
 industrial de reserva" demasiado grande, ou seja, um aumento da população urbana
 desproporcional à necessidade de mão-de-obra necessária nas indústrias do
@@ -108,7 +108,7 @@ knitr::kable(pop_table[c(13, 8, 7, 5, 4, 12, 6, 10, 3, 9, 11, 1, 2),
 Fonte: @doi:10.1177/0959683609356587
 \ecenter
 
-Ainda, pra melhor explicação, foram elaborados os gráficos das figuras 
+Ainda, para melhor ilustrar, foram elaborados os gráficos das figuras 
 \@ref(fig:pop-urb-mundo) a \@ref(fig:pop-urb-brazil-brics).
 
 Na figura \@ref(fig:pop-urb-mundo), pode-se notar que a população urbana no 
@@ -344,17 +344,17 @@ As "leis", ou princípios, ou ainda os "motores primários" do feudalismo são
 * *All land is king's land* 
 * *Nulle terre sans seigneur*
 
-O primeiro princípio, *all land is king's land*, ou "toda a terra pertence ao 
-rei", quer dizer, mais precisamente, que todo o domínio da terra está 
-concentrada nas mãos do rei, que as explora através dos laços de suserania e 
+O primeiro princípio, *all land is king's land*, ou "toda a terra pertence ao
+rei", quer dizer, mais precisamente, que todo o domínio da terra está
+concentrada nas mãos do rei, que as explora através dos laços de suserania e
 vassalagem, típicos do feudalismo. Já o segundo princípio, segundo Rangel
-[-@rangel1961, 219], *nulle terre sans seigneur*, quer dizer que "a existência 
-de terra livre é incompatível com o feudalismo", ou seja, toda a terra deve
-ter um senhor, que a administra a serviço da Coroa e lhe paga tributo. Na  
-existência de terra livre, como será visto, o feudalismo não de pode desenvolver,
-e a tendência é que haja ou a formação de comunidades em estado tribal, ou que
-sejam estabelecidas formas de escravidão. Ou seja, a terra, "nas condições 
-feudais, não tem preço e é, de fato ou de direito, inalienável" [@rangel1960, 206].
+[-@rangel1961, 219], *nulle terre sans seigneur*, quer dizer que "a existência
+de terra livre é incompatível com o feudalismo", ou seja, toda a terra deve ter
+um senhor, que a administra a serviço da Coroa e lhe paga tributo. Na existência
+de terra livre, como será visto, o feudalismo não se pode desenvolver, e a
+tendência é que haja ou a formação de comunidades em estado tribal, ou que sejam
+estabelecidas formas de escravidão. Ou seja, a terra, "nas condições feudais,
+não tem preço e é, de fato ou de direito, inalienável" [@rangel1960, 206].
 
 #### O feudalismo no Brasil
 
@@ -383,12 +383,12 @@ estrutura que o feudalismo no Brasil, assim como o sistema feudal brasileiro foi
 não-concomitante com o sistema feudal europeu.
 
 Segundo Rangel [-@rangel1989, 726], através da bula papal de Alexandre IV, de 
-4 de maio de 1493 (ainda que tenha sido depois alterada apelo tratado de 
+4 de maio de 1493 (ainda que tenha sido depois alterada pelo tratado de 
 Tordesilhas), toda a terra onde hoje encontra-se a América Latina era declarada 
 propriedade do rei. Isto é, estava satisfeito o primeiro princípio para a 
 implantação do feudalismo nos trópicos: *all land is king's land*. A propriedade 
 sobre as terras era total, de maneira que podesse dizer que, juridicamente, em 
-nenhum momento a a propriedade fundiária esteve mais concentrada do que naquele 
+nenhum momento a propriedade fundiária esteve mais concentrada do que naquele 
 primeiro momento.
 
 O segundo princípio, no entanto, *nulle terre sans seigneur*, ou seja, o 
@@ -462,8 +462,8 @@ através da promoção da efetiva ocupação do território, ou seja, de todas a
 terras acessíves, habitáveis e agricultáveis [@rangel1989, 732-733].
 
 Vale dizer que, onde a condição *nulle terre sans seigneur* não logrou após a
-abolição da escravidão, como no estado Maranhão, houve retrocesso a relações de
-produção pré-escravistas [@rangel1989, 733-734].
+abolição da escravidão, como no estado do Maranhão, houve retrocesso a relações
+de produção pré-escravistas [@rangel1989, 733-734].
 
 ### A crise do feudalismo
 
@@ -554,7 +554,7 @@ econômica que não resolva preliminarmente este problema é inconcebível.
 Alternadamente, pode conduzir à liberação de mais fatores que aqueles que os
 setores não agrícolas podem usar, fazendo toda a economia submergir em uma crise
 profunda, ou condenar esses setores à estagnação por insuficiência de
-fatores.[@rangel1954, p. 118]
+fatores \cite[p.~118]{rangel1954}
 \end{citacao}
 
 As medidas tendentes a romper o complexo rural podem ser classificadas em dois
@@ -580,7 +580,7 @@ aconteceu na Europa Ocidental (principalmente, na França) e nos Estados Unidos
 as bases da economia natural ou de autoconsumo, resolve satisfatoriamente o
 problema na absorção dos excedentes de mão-de-obra no seio da própria economia
 camponesa, estancando ou reduzindo drasticamente o fluxo populacional
-responsável pelo êxodo campo-cidade [@rangel1986b, 133]. 
+responsável pelo êxodo campo-cidade \cite[p.~133]{rangel1986b}. 
 \end{citacao}
 
 Segundo Rangel [-@rangel1986b, 133], no entanto, "esse tipo de superação das
@@ -628,7 +628,7 @@ mão-de-obra, levando o empresário capitalista a buscar, pelo emprego de bens
 modernos de equipamento, economizar o fator trabalho. O resultado é a elevação 
 da taxa de investimento, o aumento da procura de bens de capital e de novas
 construções, para o que se torna mister empregar mais mão-de-obra 
-[@rangel1962, 43].
+\cite[p.~43]{rangel1962}.
 \end{citacao}
 
 No capitalismo, é conhecido o papel do investimento ou formação de capital nas
@@ -740,11 +740,14 @@ livre (in)fluxo de capital estrangeiro no país, o que deve ter sido o
 responsável pela manutenção da demanda especulativa sobre o preço da terra até
 os tempos recentes. 
 
-@ADAMS201038 mostrou que, apesar dos bens raízes serem ligados ao mercado
-local, os mercados imobiliários de diversos países apresentam alta correlação, o
-que pode ser explicado pelo livre fluxo de capitais entre os diversos países
-desde o Consenso de Washington, na década de 1990. A figura \@ref(fig:adams2)
-mostra que a alta de preços de imóveis nos países estudados por @ADAMS201038.
+@ADAMS201038 mostrou que, apesar dos bens raízes serem ligados ao mercado local,
+os mercados imobiliários de diversos países apresentam alta correlação, o que
+pode ser explicado, em parte, pelo livre fluxo de capitais entre os diversos
+países desde o Consenso de Washington, na década de 1990. A figura
+\@ref(fig:adams2) mostra que a alta de preços de imóveis nos países estudados
+por @ADAMS201038 são semelhantes e diferem mais pela questão de uma assincronia,
+do que pela tendência, *i. e.* a tendência em geral é a mesma para todos os 
+países, porém há um *lag* entre o início de uma tendência nos diversos mercados.
 
 ```{r adams2, out.width="\\textwidth", fig.cap = "Interconexão dos preços dos imóveis em diversos países."}
 knitr::include_graphics("./images/adams2_crop.pdf")
@@ -791,8 +794,8 @@ As altas proporções da população urbana nos países ditos *em desenvolviment
 comparação aos *países desenvolvidos* não nos permite imaginar que as
 ferramentas de planejamento urbano desenvolvidas no primeiro mundo surtam o
 efeito esperado em outras regiões menos desenvolvidas do globo, pelo menos não
-na atual realidade econômica-social. E isto também se aplica, é claro, ao
-cadastro técnico multifinalitário.
+na atual realidade econômico-social. E isto também se aplica, é claro, ao
+cadastro territorial multifinalitário.
 
 Enquanto a reforma agrária ideal almejada por muitos infelizmente não tem lugar,
 são o cadastro e as outras ferramentas de planejamento urbano que devem se
@@ -805,10 +808,10 @@ porta de saída.
 
 Obviamente, compreendido este contexto histórico do desenvolvimento do
 capitalismo no Brasil, que não difere muito do desenvolvimento capitalista dos
-outros países da América Latina, não seria de se esperar que o cadastro técnico
-multifinalitário, assim como outras ferramentas do planejamento urbano, como
-concebidos nos países desenvolvidos, possam ser replicadas, sem as devidas
-adaptações, nessa outra realidade, quase que completamente oposta.
+outros países da América Latina, não seria de se esperar que o cadastro
+territorial multifinalitário, assim como outras ferramentas do planejamento
+urbano, como concebidos nos países desenvolvidos, possam ser replicadas, sem as
+devidas adaptações, nessa outra realidade, quase que completamente oposta.
 
 Desta maneira, vem em boa hora a implantação de núcleos de estudos específicos
 para o estudo e disseminação do cadastro na América Latina [@lalan], em que

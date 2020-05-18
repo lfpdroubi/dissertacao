@@ -1,49 +1,93 @@
 # O Método Copulas {#copulas}
 
+Como mostrado no capítlo \@ref(economia), os fatores que levaram à crise 
+imobiliário financeira pode ser assim resumidos:
+
+* O **risco moral** presente na análise de risco de financiamento de imóveis 
+devido ao surgimento de ativos financeiros (\gls{CDO}) que possibilitavam às 
+instituições hipotecárias transferir o risco dos seus empréstimos aos 
+compradores destes ativos, o que fez com que a análise de capacidade de 
+pagamento dos mutuários fosse negligenciada;
+
+* O **risco moral** devido à longa cadeia entre os empréstimos originais e as
+pessoas/instituições que acabavam assumindo o risco final dos *default*, o que 
+tornou o entendimento do risco por parte dos compradores de \gls{CDO} quase
+impossível, tendo estes que confiar quase que cegamente nas classifações das
+agências de risco de crédito;
+
+* O **risco moral** nas agências de classificação de risco, por conflito de 
+interesse, já que ao mesmo tempo em que aconselhavam seus clientes como 
+securitizar os seus produtos, também faziam o *rating* destes mesmos produtos;
+
+* O **risco moral** na crença de instituições consideradas grandes demais para 
+quebrar, que seriam sempre socorridas pelos governos, em última instância;
+
+* O **excesso de liquidez** do sistema que levou à formação de uma bolha 
+especulativa no setor imobiliário;
+
+* A **falta de controles adequados de risco** por parte de algumas instituições 
+que negociavam os derivativos de crédito, assim como as agências de classificação
+de risco de crédito, que se basearam somente no modelo da Copula Gaussiana,
+subestimando a probabilidade de *default* em *clusters*, o que eventualmente 
+levou à falta de liquidez pelo não pagamento dos coupons dos *senior tranches* 
+dos gls{CDO}, e portanto à eclosão da crise financeira.
+
+Este capítulo tem como objetivo demonstrar os problemas teóricos que levaram
+a este último fator, que está na raiz da formação da bolha imobiliária.
+
+Deve-se lembrar que, se houvesse controle adequado do risco, não haveria mercado
+para os \gls{CDO}, especialmente para os lastreados em créditos do tipo
+*subprime*, que estão na raiz da crise. Sem possiblidade de transferência de
+riscos, as instituições hipotecárias provavelmente não teriam efetuados tantos
+empréstimos *subprime*, pois sentiriam a necessidade de controlar o seu próprio
+risco de *default*. Por fim, se não houvesse tanta liquidez devido a todo o
+crédito oferecido pelas instituições hipotecárias, muito provavelmente não teria 
+se formado uma bolha especulativa.
+
 Segundo @copulas, Copulas são funções que permitem separar as distribuições
 marginais da estrutura de dependência de uma dada distribuição multivariada.
 
 Por definição, uma copula d-dimensional é uma função de distribuição de
 probabilidade cumulativa com distribuições marginais uniformes [@copulas, 1].
 
-```{r}
-library(reticulate)
-```
-
-```{python flights}
-import pandas
-flights = pandas.read_csv("data/flights.csv")
-flights = flights[flights['dest'] == "ORD"]
-flights = flights[['carrier', 'dep_delay', 'arr_delay']]
-flights = flights.dropna()
-print(flights.head())
-```
 
 
 ## Teorema de Sklars
 
 ## Tipos de Copulas
 
-A copula gaussiana foi vastamente utilizada no cálculo de risco dos derivativos
-financeiros dos empréstimos imobiliários, os \gls{CDO}s.
+Em tese, qualquer distribuição multivariada pode ser utilizada para construir
+uma Copula.
 
-Segundo @devil, a copula gaussiana foi adotada "entusiasticamente" pela 
+A Copula Gaussiana, como visto no capítulo \@ref(economia), foi vastamente 
+utilizada na precificação de derivativos financeiros dos empréstimos 
+imobiliários, os \gls{CDO}s.
+
+Segundo @devil, a Copula Gaussiana foi adotada "entusiasticamente" pela 
 indústria (financeira) pela sua simplicidade, embora ela não seja capaz de 
 captar as principais características do que se pretendia modelar.
 
+Isto ocorre porque a Copula Gaussina tende a minimizar a probabilidade de 
+ocorrência de eventos extremos, *i.e* nas caudas da distribuição de 
+probabilidade.
+
+
 ### Copulas elípticas
 
-#### A copulas gaussiana
+#### A Copula gaussiana
 
-#### A copulas t
+Segundo @formula, a primeira aparição de modelos hoje conhecidos como Copula
+Gaussiana se deu entre 1987 e 1991, por Oldrich Vasicek, um matemático teórico.
+
+#### A Copula t
 
 ### Copulas Arquimedianas
 
-#### A copulas Clayton
+#### A Copula Clayton
 
-#### A copulas de Gumbel
+#### A Copula de Gumbel
 
-#### Outras copulas Arquimedianas
+#### Outras Copulas Arquimedianas
 
 ## Medidas de dependência
 

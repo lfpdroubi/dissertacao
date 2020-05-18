@@ -26,7 +26,7 @@ associadas com o termo `ideologia': a ideologia como um complexo de ideias
 aspecto externo, ou seja, a materialidade da ideologia, os Aparelhos Ideológicos
 de Estado; e por fim, o campo mais fugidio, a ideologia `espontânea' que atua
 no cerne da própria `realidade' social.
-\cite[p.~15]{zizek} [@zizek, 15].
+\cite[p.~15]{zizek}
 \end{citacao}
 
 Segundo Singer [-@singer, 7], é possível distinguir pelo menos três significados 
@@ -102,7 +102,7 @@ implica a abertura de suas fronteiras às demais áreas das ciências humanas. E
 abertura se dá em dupla direção, assumindo assim caráter \textbf{biunívoco}.
 \end{citacao}
 
-Segundo [-@rossetti, 32], a separação das ciências sociais em
+Segundo @rosseti [-@rossetti, 32], a separação das ciências sociais em
 especialidades distintas é não-rigorosa, ou, ao contrário, estas especialidades
 estão entremeadas:
 
@@ -141,13 +141,13 @@ Macroeconomia [@LEUNG, 5]. @krugman afirmou que um dos segredos da
 política monetária reside no fato que a política monetária funciona através do
 mercado imobiliário, tendo pouco impacto direto no investimento em negócios.
 
-Segundo Greenwood e Hercowitz [apud @LEUNG, 5], o estoque de capital imobiliário 
-é maior do que o capital de negócios e, em geral, o valor de mercado investido 
-anualmente no mercado habitacional é maior do que o investimento em negócios, o 
-que claramente faz do segmento habitacional muito mais do que apenas um outro 
-mercado de bens de consumo.
+Segundo Greenwood e Hercowitz [*apud* @LEUNG, 5], o estoque de capital
+imobiliário é maior do que o capital de negócios e, em geral, o valor de mercado
+investido anualmente no mercado habitacional é maior do que o investimento em
+negócios, o que claramente faz do segmento habitacional muito mais do que apenas
+um outro mercado de bens de consumo.
 
-Davis e Heathcote (2001) [apud @LEUNG, 6] afirmam que o valor de mercado das
+Davis e Heathcote (2001) [*apud* @LEUNG, 6] afirmam que o valor de mercado das
 propriedades imobiliárias em estoque nos EUA é aproximadamente igual ao PIB
 médio anual. Segundo a revista britânica The Economist [@economist], a maior
 classe de ativos no mundo é a propriedade residencial, com valor estimado de 200
@@ -196,7 +196,14 @@ características do mercado hipotecário, houve um alto grau de variação entre
 países, embora os resultados sejam muito similares mesmo com a variação dos
 métodos de estimação.
 
-Na figura \@ref(fig:adams)...
+A figura \@ref(fig:adams) mostra como, teoricamente, as variações nas variáveis 
+macroeconômicas impactam na formação de preços do mercado imobiliário. Por 
+exemplo, no painel central é ilustrado como se propaga para o mercado 
+imobiliário um aumento na taxa de juros de longo prazo: um aumento nos juros de
+longo prazo diminui os preços dos imóveis, que por sua vez diminuem o apetite 
+dos investidores por imóveis, fazendo diminuir o ritmo das construções, o que 
+por sua vez tende a diminuir o estoque de imóveis (baixa entrada de imóveis
+novos no mercado), o que por sua vez tende a aumentar o valor dos aluguéis.
 
 ### Relação com os fundamentos econômicos
 
@@ -276,7 +283,7 @@ houver alteração no *mix* de imóveis entre dois períodos, por exemplo, se nu
 determinado período houver um maior número de imóveis de alto padrão do que 
 num período anterior, o índice ficará viesado para cima.
 
-Segundo @rppi [-@rppi, 158], o método da estratificação é recomendado quando o
+Segundo o Eurostat [-@rppi, 158], o método da estratificação é recomendado quando o
 volume de vendas é grande o suficiente e a informação das características dos
 imóveis é detalhada o suficiente para uma classificação detalhada das
 propriedades, sendo este método de confecção de índice somente apropriado quando:
@@ -378,18 +385,36 @@ Uma limitação importante, porém, é que índices elaborados com tais métodos
 podem decompor o valor total da propriedade imobiliária em valor de terra e
 valor de estruturas.
 
-#### Índices internacionais
+#### Índices no mundo
 
-...
+O @rppi elencou uma série de índices ao redor do mundo.
 
-##### Índice de Case-Shiller
+##### Países desenvolvidos
 
-...
+a. Índice de Case-Shiller
+
+@NBERw2506 desenvolveram...
+
+##### Países em desenvolvimento
+
+Nos países em desenvolvimento, segundo o o Eurostat [-@rppi, 110], uma proporção
+significante dos imóveis advém de construção própria, em terrenos de família, 
+muitas vezes incompletas, sendo que a construção de uma casa pode durar anos, as
+fontes de financiamento são incertas, não há avaliações disponíveis, o que faz
+ser impossível o cálculo dos valores de aquisição do imóvel.
+
+Nestes casos, segundo o o Eurostat [-@rppi, 110], a única opção prática para
+estimar o valor dos imóveis é através da equivalência dos valores de aluguéis.
 
 ##### Global Real House Price Index
 
 O FMI, através do observatório Global Housing Watch...
 
+#### Índices na América Latina
+
+##### IPVU (Colômbia)
+
+Desde 2003 [@rppi, 130]
 
 #### Índices no Brasil
 
@@ -399,7 +424,7 @@ O índice de maior longevidade que se tem conhecimento no Brasil foi elaborado e
 conjunto pela Fundação Instituto de Pesquisas Econômicas (FIPE) e pelo portal de
 anúncios de imóveis, o chamado índice FipeZap.
 
-Segundo @fipezap, a metodologia utilizada para o cálculo do índice é a
+Segundo a @fipezap, a metodologia utilizada para o cálculo do índice é a
 estratificação. Para o índice FipeZap, apenas dois critérios de estratificação
 foram adotados, no caso dos imóveis residenciais, a saber, o número de
 dormitórios e a área de ponderação, definida pelos critérios do IBGE. No caso de
@@ -407,14 +432,10 @@ imóveis comerciais, o único critério de estratificação é a localização
 [@fipezap, 7].
 
 
-Segundo @fipezap, não foi possível a inclusão da variável idade da edificação, 
-por esta não ser uma variável obrigatória nos anúncios da plataforma zap imóveis.
+De acordo com a @fipezap, não foi possível a inclusão da variável idade da
+edificação, por esta não ser uma variável obrigatória nos anúncios da plataforma
+zap imóveis.
 
-Outro problema relacionado a este índice é que ele não é composto de transações
-de imóveis, porém de anúncios de imóveis, o que além de poder ser problemático é
-questionável, devido às diferentes taxas de descontos praticadas no mercado
-em diferentes períodos e pelos diferentes atores, que neste caso não são 
-mensuráveis.
 
 Infelizmente, devido à sua metodologia e composição, o índice FipeZap não se
 presta nem a aferir o estoque de riqueza, nem o investimento bruto no mercado
@@ -422,12 +443,36 @@ imobiliário, já que a variável idade não foi inserida na estratificação e 
 possível a decomposição do índice na parte estrutural e preço da terra, devido à
 própria metodologia.
 
+Outro problema relacionado a este índice é que ele não é composto de transações
+de imóveis, porém de anúncios de imóveis, o que além de poder ser problemático é
+questionável, devido às diferentes taxas de descontos praticadas no mercado
+em diferentes períodos e pelos diferentes atores, que neste caso não são 
+mensuráveis. Segundo o o Eurostat [-@rppi, 126]:
+
+> Although not related to the issue of timing, a disadvantage of advertised
+prices and mortgage approvals is that not all of the prices included end in
+transactions, and in the former case, the price will tend to be higher than the
+fnal negotiated transaction price.
+
+Outros problemas relacionados ao índice FipeZap, como se basear exclusivamente
+em anúncios em websites, também são elencandos pelo o Eurostat [-@rppi, 104]:
+
+> Information collected on a seller’s asking price cannot always be easily
+verifed and, as well as depending on a balanced and representative sample,
+relies on the honesty and knowledge of those being surveyed and when drawn from
+advertisements, the accuracy of the information, especially when it is from a
+website [...] It has also been argued that websites will tend to be biased
+towards properties that have a competitive asking price to entice potential
+sellers. All this is, of course, speculation but it does bring home some of the
+potential difculties associated with these sources.
 
 ##### Índices IGMI-R e IGMI-C
 
 Trata-se de um novo conjunto de índices construídos pela \gls{ABECIP} em
 convênio com o \gls{IBRE}/\gls{FGV}, provavelmente através de um método baseado
 em avaliações, "levando em conta os laudos de imóveis financiados pelos bancos".
+
+
 
 > Nos Estados Unidos, país de grande dimensão territorial e elevada mobilidade
 da população, o índice Case-Schiller faz o cálculo através da metodologia das
@@ -438,12 +483,12 @@ americana, buscam alternativas para fazer o cálculo.
 ### Comportamento recente do mercado imobiliário e relação com as variáveis macroeconômicas
 
 No Brasil não existem séries históricas de prazo satisfatórios para uma análise
-de longo prazo referente ao preço dos imóveis. No entanto, como explicitado
-no teoricamente no capítulo \@ref(historico), e mostrado por @ADAMS201038 numa
+de longo prazo referente ao preço dos imóveis. No entanto, como explicitado 
+teoricamente no capítulo \@ref(historico), e mostrado por @ADAMS201038 numa
 série de países, num mundo globalizado, em que há livre fluxo de capitais, a
 tendência é que o comportamento dos preços siga uma mesma tendência, portanto a
 análise do comportamento dos preços nos países centrais da economia mundial 
-tende a representar o que ocorrerá,com maior ou menor *lag*, nos outros países,
+tende a representar o que ocorrerá, com maior ou menor *lag*, nos outros países,
 influenciados pelas variáveis e decisões ocorridas nestes países.
 
 A figura \@ref(fig:nhpi) mostra a evolução do *Home Price Index* de Case e
@@ -566,7 +611,7 @@ falando, em julho de 2006, como se pode ver na figura \@ref(fig:nhpi).
 imóveis é relativamente recente. O gráfico da figura \@ref(fig:rhpi2) ilustra 
 isto.
 
-```{r rhpi2, fig.cap="HPI, em termos reais, desde 1890."}
+```{r rhpi2, fig.cap="HPI, em termos reais."}
 recessions.trim = subset(recessions.df, Peak >= "1953-01-01" )
 ggplot(window(rhpi, start = 1953 + 0/12), as.numeric = FALSE) +
   geom_line() +
@@ -593,7 +638,7 @@ Fonte: O autor, à partir de dados de @QuandlWIKI.
 \ecenter
 
 O valor mínimo da série histórica (não mostrado no gráfico) foi atingido em  
-`r month.abb[(time(rhpi)[which.min(rhpi)] %% 1)*12+1]`/`r floor(time(rhpi)[which.min(rhpi)])`, quando o índice atingiu a marca de `r brf(rhpi[which.min(rhpi)])` pontos.
+`r month.abb[(time(rhpi)[which.min(rhpi)] %% 1)*12+1]` de `r floor(time(rhpi)[which.min(rhpi)])`, quando o índice atingiu a marca de `r brf(rhpi[which.min(rhpi)])` pontos.
 
 É interessante notar que, em um século, desde 1890, o índice de preços reais de
 imóveis atingiu um valor máximo de apenas `r brf(range_rhpi_1989_1997[2])`
@@ -691,7 +736,7 @@ que indicam que o preço dos imóveis estão seguindo os fundamentos econômicos
 Como anteriormente mencionado, uma das variáveis macroeconômicas que afetam o
 mercado imobiliário são as taxas de juros de longo prazo. Uma diminuição das
 taxas de juros de longo prazo tende a reduzir a demanda por títulos públicos de 
-longo prazo e a aumentar a demanda por investimentos com base imobiliária.
+longo prazo e a aumentar a demanda por investimentos com base imobiliária. 
 
 Estas taxas de juros de mais longo prazo tem caído no mundo todo, especialmente
 nas economias desenvolvidas, como ilustra o gráfico da figura \@ref(fig:yields),
@@ -847,6 +892,49 @@ Esta longa e sustentada tendência de queda de longo prazo, com esta persistênc
 não pode ser atribuída a uma bolha especulativa, *i.e.* um desvio de curto prazo
 de uma tendência de longo prazo, mas sim a uma tendência estrutural, sistêmica.
 
+As taxas de juros das hipotecas são influenciadas pelas taxas dos títulos da
+dívida pública: os títulos da dívida pública são considerados ativos sem risco,
+Por isto os investimentos em títulos públicos possuem as menores taxas do
+mercado: o governo, que emite a dívida, também emite a moeda que necessária para
+pagá-la. Ou seja, não há risco verdadeiro quando um governo emite um título de
+dívida, a não ser o risco da própria desvalorização da moeda (inflação). É
+natural, portanto, que os investidores exijam, para que invistam em ativos
+diferentes dos títulos da dívida pública, um prêmio de risco. Para o mercado
+imobiliário, este risco é mínimo, pois o empréstimo se dá com o imóvel em
+garantia. É esperado, portanto, que as taxas de juros das hipotecas sejam apenas
+um pouco superiores aos títulos da dívida pública.
+
+```{r}
+# mortgage30us <- fredr(series_id = "MORTGAGE30US",
+#              observation_start = as.Date("1971-04-02"))
+# df <- left_join(mortgage30us, dgs30, by = "date",
+#                 suffix = c(".MORTGAGE30US", ".DGS30"))
+# df <- df[, c("date", "value.MORTGAGE30US", "value.DGS30")]
+# colnames(df) <- c("date", "MORTGAGE30US", "DGS30")
+# df <- df %>% gather("index", "rate", -date)
+# saveRDS(df, "data/FRED_mortgages")
+```
+
+```{r mortagages, out.width="\\textwidth", fig.cap = "Juros hipotecários médios (30 anos) e taxas de títulos de maturidade constante de 30 anos."}
+df_mortgages <- readRDS("data/FRED_mortgages")
+ggplot(data = df_mortgages, aes(x = date, y = rate, color = index)) +
+  geom_line() +
+  labs(
+    title = "30-year fixed rate Mortgage average",
+    subtitle = "Compared with 30-year treasury constant maturity rate",
+    caption = "Fonte: Board of Governors of the Federal Reserve System (US)"
+  ) +
+  xlab("Ano")+
+  ylab("Taxa (a.a.)") +
+  scale_y_continuous(labels = scales::label_percent(scale = 1,
+                                                    decimal.mark = ",")) +
+  theme(legend.position = "bottom") +
+  geom_rect(data=recessions.df[which(recessions.df$Peak >= as.Date("1971-04-02")), ], 
+            aes(xmin=Peak, xmax=Trough, ymin=-Inf, ymax=+Inf),
+            inherit.aes=F, fill='grey', alpha=0.5)
+```
+
+
 Esta alta queda das taxas de juros dos ativos financeiros de longo prazo é uma
 das causadoras da elevação dos preços dos mesmos ativos, assim como a elevação
 do preço dos imóveis.
@@ -856,7 +944,7 @@ alta anterior (até Dez/2005) é que a alta mais recente é plenamente justifica
 pela altíssima liquidez dos mercados. Ou seja, não se pode atribuir a recente
 alta dos preços dos imóveis à especulação imobiliária, ou pelo menos não se pode
 atribuir a recente alta somente a especulação: há fundamento para a alta, o que
-se discuti com mais propriedade no capítulo \@ref(micro).
+se discute com mais propriedade na seção \@ref(micro).
 
 Em um cenário de longo prazo, a tendência é que a crise de 2008 apenas tenha
 acelerado em demasia, momentaneamente, o que já era uma tendência de longo
@@ -868,7 +956,7 @@ A participação dos produtos financeiros relacionados ao setor imobiliário
 constituem uma grande parte dos portfolios bancários. Justamente por isto,
 crises bancárias estão frequentemente associadas a superexposição do setor
 bancário no mercado imobiliário [@Case2000, 148]. Segundo Claessens *et al.*
-(2010) [apud @silver, 3], de 46 crises bancárias sistêmicas para quais há dados
+(2010) [*apud* @silver, 3], de 46 crises bancárias sistêmicas para quais há dados
 disponíveis, mais de dois terços foram precedidas por padrões de aumento-estouro
 de preços de imóveis.
 
@@ -877,11 +965,82 @@ bens imóveis, mas também por conta de uma inversão dos fundamentos econômico
 que sustentavam os preços [@Case2000, 129], como aliás parece ser o caso no 
 momento, devido a um fator exógeno, a saber, a pandemia do corona vírus.
 
-#### A crise financeira de 2008
+#### A crise imobiliária-financeira de 2008
 
-Segundo @devil, a raiz da crise financeira de 2008 estava nos derivativos de
-crédito que transferiam o risco de uma hipoteca dos emprestadores ao mercado
-financeiro, ou seja, aos bancos, fundos de *hedge* e companhias seguradoras.
+##### A dinâmica da crise
+
+Em 2001 o \gls{FED} reduziu a taxa básica da economia americana para 1,5% a.a.,
+para combater a recessão econômica, atingindo um dos níveis mais baixos da
+história. Um dos grandes problemas que emergem com níveis tão baixos de juros é
+que os maiores investidores institucionais do mercado de títulos de dívida
+pública, como os fundos de pensão, possuem metas atuariais que só são atingidas
+com taxas mais altas. Estes investidores, então, pressionados a atingir estas
+metas atuariais, são obrigados a procurar opções de investimentos mais rentáveis
+do que os títulos públicos. Estas instituições, no entanto, tem em seus
+estatutos alugmas limitações, como investir apenas em produtos financeiros acima
+de determinados *ratings*, ou seja, classificações dos produtos, que são
+elaboradas pelas agências de classificação de risco.
+
+Desta maneira, havia demanda no mercado para ativos de melhores classificação de
+risco, porém com rentabilidade mais altas do que os ativos da dívida pública.
+Para suprir esta demanda, houve o advento dos \gls{CDO}, que são derivativos
+financeiros compostos de ativos financeiros, \gls{ABS}, que podem ser compostos
+de diversos tipos de empréstimos. No caso do mercado imobiliário, estes ativos
+são os \gls{MBS}, que são grupos de ativos constituídos de hipotecas. Este tipo
+de derivativos, \gls{CDO}, tem uma estrutura que permite às instituições agrupar
+uma série de ativos de menor *rating*, criando assim um \gls{CDO} compostos de
+ativos com maior e menor *rating*. A estrutura destes derivativos se verá com
+mais detalhes na próxima seção.
+
+No entanto, em virtude das taxas muito baixas praticadas pelo \gls{FED}, esta
+demanda estava tão grande, que os bancos se sentiram incentivados a produzir
+cada vez mais empréstimos imobiliários, com o intuito de vender estes
+empréstimos na forma de \gls{CDO}. Desta maneira, os bancos se livravam dos
+riscos de crédito e liberavam mais capital para possibilitar a realização de
+novos empréstimos.
+
+Neste ínterim, porém, surgiram empréstimos exóticos, em que o mutuário pagava
+por alguns anos apenas o valor dos juros. Depois deste período, o mutuário passa
+a pagar também um parte do principal. Este tipo de empréstimos eram chamados
+de *interest-only loans*. No caso específico do mercado imobiliário, eram
+chamados de *interest-only mortgages*. Convencionou-se chamar este tipo de
+empréstimos também de empréstimos *subprime*, o que é terminologicamente
+incorreto. Tecnicamente, *subprime* é o nome que se dá aos clientes cujo
+histórico de crédito não é bom e, portanto, são mais propensos a *default*. Como
+o risco destes empréstimos é maior, os juros destes empréstimos também são
+maiores. Com juros maiores, o risco de *default* aumenta ainda mais. Os
+empréstimos do tipo *interest-only* ajudavam a possibilitar a este tipo de
+cliente a compra de um imóvel, pois a prestação era bem diminuída no início e,
+em tese, enquanto o mercado imobiliário continuasse subindo, o tomador do
+empréstimo sempre poderia, em todo caso, revendê-lo com preço maior no futuro,
+caso não conseguisse arcar com as prestações, especialmente quando do início do
+pagamento do principal. Porém, neste tipo de empréstimo também era permitido aos 
+emprestadores ajustar a taxa de juros.
+
+Com a grande liquidez inserida no mercado por estes empréstimos, o preço dos 
+imóveis tendia a continuar aumentando. Porém, em 2004 o \gls{FED} iniciou um
+ciclo de alta dos juros para conter possíver surtos inflacionários. Em junho de
+2006 a taxa básica do \gls{FED} chegou a 5,25% a.a. Com o aumento das taxas de
+juros, a demanda por residências começou a diminuir e os preços dos imóveis
+começaram a cair. Os mutuários começaram a perceber que não conseguiriam
+pagar as suas prestações e tampouco revender as suas casas a preços maiores. A 
+queda dos mercados em geral foi grande e com a queda dos mercados, ou seja, com
+a queda dos valores das companhias, estas não conseguiam oferecer garantias 
+suficientes para conseguir novos empréstimos no mercado financeiro. Ainda, os 
+bancos começaram a ficar receosos de emprestar uns para os outros, por causa
+da alta presença de ativos tóxicos nos seus balanços, os derivativos de crédito
+que compraram durante o *boom* imobiliário, o que causou uma crise de liquidez.
+
+##### A raiz da crise
+
+Segundo Donnelly e Embrechts [-@devil, 3], a raiz da crise financeira de 2008
+estava nos derivativos de crédito, \gls{CDO}, lastreados em ativos de crédito
+imobiliário, \gls{MBS}, que tinham por objetivo transferir o risco de uma
+hipoteca dos emprestadores ao mercado financeiro em geral, ou seja, aos bancos,
+fundos de *hedge* e companhias seguradoras. Esta transferência de risco, ou
+securitização, transformou o que seria apenas uma crise setorial das
+instituições hipotecárias, numa crise financeira que atingiu praticamente todos
+os setores financeiros e, por consequência, toda a economia real.
 
 O propósito da venda destes seguros era a liberação de capital dos bancos: uma
 vez que os bancos necessitam manter provisões de capital em seus balanços contra
@@ -895,10 +1054,199 @@ diminuição dos riscos levou os bancos a uma maior tolerância na análise de
 risco dos tomadores de empréstimos, o que não foi percebido de imediato pelos
 compradores dos \gls{CDO}s.
 
-#### \gls{CDO}
+Segundo Donnelly e Embrechts [-@devil, 5]:
 
-\gls{CDO} são um tipo de instrumento financeiro utilizado para a diluição do 
-risco de crédito.
+\begin{citacao}
+If a bank is not exposed to the risk of mortgage default, then it has no
+incentive to control and maintain the quality of the loans it makes. To protect
+against this, the theory was that the banks should retain the riskiest part of
+the mortgage pool. In practice, this did not always happen, which led to a
+reduction in lending standards [...] This possibility was foreseen some fifteen
+years before the Crisis with remarkable prescience by Stiglitz, as he points out
+in Stiglitz (2008).
+\end{citacao}
+
+No mercado financeiro é comum a utilização da expressão "risco moral" (*moral 
+hazard*), para descrever os mecanismos que podem levar a um desequilíbrio de um
+mercado. Na crise de 2008, este risco moral esteve presente não apenas neste
+desincentivo aos emprestadores para a diminuição dos riscos dos empréstimos, já 
+que estes eram securitizandos, mas também na crença de que, em última instância,
+os governos seriam obrigados a socorrer as instituições denominadas *too big to
+fail* (grandes de mais para quebrar) [@devil, 4-5].
+
+
+#### Derivativos de crédito
+
+\gls{CDO} são um tipo de instrumento financeiro do grupo dos denominados 
+derivativos de crédito, lastreados em \gls{ABS}, construídos através do
+empacotamento de ativos de crédito financeiros, com o intuito da diluição do
+risco. Os \gls{CDO} tiveram papel central na eclosão da crise 
+imobilário-financeira de 2007-2008.
+
+Segundo @watts, \gls{MBS}, *i.e.* seguros baseados em empréstimos hipotecários,
+surgiram nos anos 70. Pouco tempo depois, vieram os \gls{CMO}, que eram 
+derivativos de crédito similares aos \gls{MBS}, porém com a característica de 
+serem fatiados em *tranches*.
+
+A diferença entre os \gls{CDO} e \gls{CMO} é que os \gls{CDO} podem ser baseados
+em qualquer tipo de ativos ou dívidas, inclusive outros \gls{CDO}.
+
+Este tipo de instrumento é utilizado tanto no mercado imobiliário como em geral
+para a diluição do risco dos empréstimos. No caso do mercado imobiliário, das
+hipotecas [@watts, 2].
+
+Este tipo de instrumento é oferecido pelos emprestadores através de veículos de
+propósito específicos, ou \gls{SPV}, que, apesar de patrocinados pelos bancos,
+não transferem a ele o risco de falência institucional. Ou seja, a falência da
+instituição bancária não afeta o risco de recebimento dos \gls{CDO}.
+
+```{r CDO, fig.cap = "Esquemático do funcionamento de um CDO."}
+grViz("
+
+digraph boxes_and_circles{
+
+rankdir = LR
+
+# add node statements
+node [shape = box
+      fontname = Helvetica
+      penwidth = 2.0]
+'Pool of Assets'; SPV; Senior; Mezzanine; Equity
+  
+# add edge statements
+
+'Pool of Assets' -> SPV [label = 'Coupons']
+
+#SPV -> {Senior Mezzanine Equity}
+
+SPV -> Senior [label = '1º']
+SPV -> Mezzanine [label = '2º']
+SPV -> Equity [label = '3º']
+}
+")
+```
+\bcenter
+Fonte: Do autor. Adaptado de @devil.
+\ecenter
+
+Na figura \@ref(fig:CDO) pode ser visto um esquemático do funcionamento de um
+CDO simples, dividido em três *tranches* ou parcelas. Cada *tranche* tem uma
+prioridade no recebimento de cupons. Após o pagamento das despesas, a prioridade
+é para o pagamento do *Senior tranche*, depois do *Mezzanine tranche* e então do
+*Equity tranche*. Se ocorrer um *default* em um dos ativos lastreados, esta
+perda é descontada primeiramente do *Equity tranche*, que tem os valores de seus
+cupons reduzidos. Depois de mais alguns *defaults*, os cupons do *Equity
+tranche* vão a zero, e perdas adicionais serão descontadas do *Mezzanine
+tranche* e assim por diante [@devil, 6].
+
+Desta maneira, a cada *tranche* será atribuída pelas agências de risco uma nota 
+de crédito (*rating*) diferente. Segundo @devil, tipicamente um \gls{CDO} possui
+composição de em torno de 80% de *senior tranches*, o que significa que 
+aproximadamente 20% do portfolio de ativos base devem entrar em *default* antes
+do *senior tranche* ser afetado. Na classificação dos *tranches* pelas agências 
+de risco normalmente era atribuída ao *senior tranche* uma nota AAA. Aos
+*mezzanine tranches* normalmente era atribuída uma nota BBB-, enquanto que aos
+*equity tranches* não era atribuída nenhuma classificação de risco, ou seja,
+estas parcelas dos \gls{CDO} eram consideradas de grau especulativo.
+
+Deve-se salientar que existem ainda outros tipos de \gls{CDO}, com maior número
+de parcelas, sejam parcelas intermediárias (vários níveis de *mezzanine
+tranches*), ou parcelas mais seguras, com as *super-senior tranches*, aos quais
+eram atribuídas notas de crédito superiores à AAA, dos *senior tranches*.
+
+Segundo @watts, a duração típica de um contrato de \gls{CDO} era de 5 anos.
+
+
+| **Rating at issuance** | **5-yr default probability (%)** |
+|:-----------------------|---------------------------------:|
+| AAA                    | 0,05                             |
+| AA+                    | 0,19                             |
+| AA                     | 0,26                             |
+| AA-                    | 0,36                             |
+| A+                     | 0,56                             |
+| A                      | 0,62                             |
+| A-                     | 0,92                             |
+| BBB+                   | 1,20                             |
+| BBB                    | 1,89                             |
+| BBB-                   | 3,63                             |
+| BB+                    | 5,74                             |
+| BB                     | 8,11                             |
+| BB-                    | 12,50                            |
+| B+                     | 17,09                            |
+| B                      | 21,36                            |
+| B-                     | 27,08                            |
+| CCC+                   | 33,64                            |
+| CCC                    | 37,64                            |
+Table: Parte da matriz de risco de default da Fitch.
+
+| **Tranche (Rating)**   | **Attachment Points** |
+|:-----------------------|:---------------------:|
+| Senior (AAA)           | 42% -- 100%           |
+| Mezzanine 1 (AA-)      | 34% -- 42%            |
+| Mezzanine 4 (A-)       | 28% -- 34%            |
+| Mezzanine 4 (BBB-)     | 20% -- 28%            |
+| Mezzanine 4 (BB-)      | 11% -- 20%            |
+| Equity (NA)            | 0% -- 11%             |
+Table: Exemplo de parcelamento de \gls{CDO}.
+
+Para Donnelly e Embrechts [@devil, 20], os *equity tranches* são produtos com
+muito risco, portanto de pouco valor, o que interessa aos grandes especuladores,
+como os *hedge funds*, enquanto os *senior tranches* eram vistos pelas grandes
+instituições como ativos muito seguros. Já os *mezzanine tranches* nem eram tão
+seguros e nem tão baratos, não interessando nem aos investidores mais cautelosos,
+nem aos grandes especuladores. Desta maneira, o *mezzanine tranches* eram 
+também empacotados em outros \gls{CDO}, os chamados \gls{CDO}-squared, o que, em 
+tradução literal seria um \gls{CDO} ao quadrado. Este tipo de instrumento 
+financeiro, ainda mais complexo, é de precificação ainda mais difícil e isto 
+contribuiu ainda mais para aumentar o risco moral do mercado.
+
+Segundo Donnelly e Embrechts [@devil, 7], o fato de que as grandes instituições
+financeiras viam os *senior tranches* como ativos muito seguros teve uma grande
+influência na crise financeira de 2008. Segundo Donnelly e Embrechts 
+[@devil, 24], um executivo de uma subsidiária da AIG chegou a dizer, em agosto
+de 2007 que era difícil vislumbrar um cenário onde a AIG poderia perder um dólar
+sequer com estes ativos. Em 2008 o prejuízo líquido da AIG foram de 
+US\$99 bilhões, sendo US\$62 bi apenas no último trimestre, auge da crise do 
+*subprime*.
+
+##### Precificação
+
+De acordo com @watts, apesar de terem sido criados há algum tempo, uma década e
+meia teve que se passar para que o mercado de \gls{CDO} se tornasse grande. E o
+motivo era que faltava um modelo que servisse de *benchmark*, ou seja, um modelo
+que permitisse ao mercado basilar o preço dos \gls{CDO} para que desse uma 
+relativa segurança aos investidores.
+
+As condições para a precificação destes ativos vieram apenas na primeira década
+do presente século, após a publicação do trabalho seminal de @Li.
+
+De acordo com Donnelly e Embrechts [-@devil, 7], a chave para a valorização dos
+\gls{CDO} é a modelagem dos *defaults*. Para isto, foi adotado pelo mercado
+(agências de risco de crédito como Fitch, Moody's e Standard & Poor's) o modelo
+da Copula Gaussiana [@devil, 14], que tem algumas vantagens, como rapidez de
+computação e facilidade de calibração. No entanto, foram desconsideradas pelo
+mercado algumas desvantagens do modelo, a saber [@devil, 15]:
+
+* modelagem insuficiente do agrupamento de *defaults* no portfolio (quando uma 
+companhia quebra, é provável que outras companhias do mesmo setor também quebrem,
+isto não pode ser modelado pela Copula Gaussiana);
+* Diferentes correlações entre os *tranches* do CDO, o que não ocorre na 
+prática; e
+* ausência de modelagem dos fatores que levam aos *defaults*.
+
+Especialmente no que tange à primeira desvantagem, a Copula Gaussiana é
+indesejável para a aferição de risco. Como enfatizam Donnelly e Embrechts
+[-@devil, 16]: não é sábio confiar em um modelo baseado na distribuição normal
+para verificar a probabilidade de ocorrência de eventos extremos.
+
+Pela própria estrutura dos \gls{CDO}, havia uma concepção que muito raramente
+ocorreriam tantos *defaults* simultâneos a ponto de um *senior tranche* ser 
+afetado. Ocorre que pela própria característica da Copula Gaussiana, os eventos
+extremos não são suficientemente bem representados, o que não ocorre com outros
+models de Copulas, como  a de Gumbel, Clayton ou Copula-t. A apresentação destes 
+modelos será vista com detalhe no capítulo \@ref(copulas) ([O Método Copulas]).
+
+
 
 ## O Mercado Imobiliário e a Microeconomia {#micro}
 
@@ -918,7 +1266,7 @@ De acordo com a NBR 14.653-01 [-@NBR1465301, ix]:
 >
 >* **Concorrência Perfeita**: situação em que o número de vendedores e de
 > compradores é suficientemente elevado para que um agente isolado não seja 
-> capaz influenciar o comportamento dos preços;
+> capaz de influenciar o comportamento dos preços;
 >
 >* **Monopólio**: É constituído por um único vendedor;
 >
@@ -939,7 +1287,7 @@ execução. Também a questão do projeto arquitetônica implica numa singularid
 para cada bem imobiliário. Mas mais importante ainda é a questão da localização,
 que torna cada imóvel único. Isto não ocorre em qualquer outro mercado de bens 
 de consumo. A não ser por questões de natureza sentimental, um carro, uma 
-geladeira, ou praticamente qualquer outro bem de consumo é produzido é série: 
+geladeira, ou praticamente qualquer outro bem de consumo é produzido em série: 
 existem milhares de itens iguais no mercado. Isto nunca ocorre com os imóveis.
 Mesmo apartamento vizinhos, em um mesmo prédio, tem características diferentes,
 dada a sua posição solar, localização do andar em relação ao prédio, a vista
@@ -989,12 +1337,26 @@ preço destes títulos é inversamente proporcional às taxas de juros, ou seja,
 quanto menor as taxas, maior o valor presente dos títulos, ou valor de mercado,
 e vice-versa.
 
+### Rendimentos de aluguel
+
+Os rendimentos de aluguel são taxas brutas de retorno dos recebimento de
+aluguéis comparados ao valor de venda de um imóvel.
+
+Por exemplo, para um imóvel avaliado em R$1.000.000,00, com um rendimento de 
+aluguéis de R$1.500,00 reais mensais, o rendimento bruto do aluguel deste imóvel
+seria:
+
+$$y_r = \frac{12*1.500}{1.000.000} = 3,6\% \ a.a.$$
+Esta taxa tem sido utilizada para comparar o rendimento do investimento em 
+imóveis em todo o planeta, através de sítios de internet especializados em
+investimento em imóveis [@gpg].
+
 #### Duration de um título de renda fixa
 
 Segundo @marins1, a *duration* de um título, ou de um conjunto de títulos de 
 renda fixa pode ser calculada de acordo com a fórmula a seguir, de Macaulay:
 
-$$D = \frac{\sum_{t = 1}^{n} t \times \frac{F_t}{(1+i)^t}}{\sum_{t = 1}^{n} \frac{F_t}{(1+i)^t}}$$
+$$D = \frac{\sum\limits_{t = 1}^{n} t \times \frac{F_t}{(1+i)^t}}{\sum\limits_{t = 1}^{n} \frac{F_t}{(1+i)^t}}$$
 
 #### Séries Perpétuas
 
@@ -1016,11 +1378,12 @@ O cálculo do valor justo de um imóvel pode ser feito considerando-se o método
 do fluxo de caixa descontado, assim como é feito o *valuation* de uma empresa
 capitalista.
 
-Por exemplo, se um investidor estima que o fluxo líquido de um determinado
-imóvel (aluguéis descontados de impostos, taxas e manutenção) será de R$2.000,00
-mensais, a uma taxa de juros de 2% ao ano, o valor presente do imóvel,
-considerando-se que este fluxo seja constante ao longo de toda a vida útil do
-imóvel (não menor do que 20 anos), é:
+Por exemplo, se um investidor estima que os rendimentos líquidos de um
+determinado imóvel (aqui definida como o valor dos aluguéis descontados de
+taxas, custos de manutenção e outras despesas) será de R$2.000,00 mensais, a uma
+taxa de juros de 3% ao ano, o valor presente do imóvel, considerando-se que este
+fluxo seja constante ao longo de toda a vida útil do imóvel (não menor do que 20
+anos), é:
 
 $$P = \frac{12 \times 2.000}{0,03} = 800.000$$
 
@@ -1051,7 +1414,7 @@ ggplot(data.frame(x = c(.1/100, 6/100)), aes(x = x)) +
   scale_x_continuous(labels = scales::percent) +
   labs(title = "Valor justo de um imóvel", 
        subtitle = "Em milhões de reais.",
-       caption = "Supondo um aluguel constante de R$2.000/mês.") 
+       caption = "Supondo uma receita líquida constante de R$2.000/mês.") 
   
 ```
 \bcenter
@@ -1093,17 +1456,17 @@ empresa, ou um derivativo, terá um valor de mercado diferente do valor justo
 calculado para o instrumento, em virtude dos movimentos do mercado (oferta vs.
 demanda), que se dão não apenas pelos fundamentos econômicos, mas também pelas
 expectativas dos diversos agentes econômicos em relação ao valor futuro daquele
-instrumento.
-
-No entanto, assim como o *valuation* serve para calcular o "preço justo" de uma
-ação (ou *target price*, ou ainda preço-alvo), o que por sua vez permite às
-corretoras efetuarem recomendações (*outperform* ou *buy*, *neutral* ou *hold*,
-*underperform* ou *sell*), assim como o método de Black&Scholes [@marins2]
-permite o cálculo do preço justo das opções de compra e venda, as séries
-perpétuas permitem um cálculo razoável do preço justo de um imóvel, haja vista
-que permitem, sem maiores especulações, o cálculo do fluxo de caixa descontado
-dos aluguéis, balizando assim as expectativas em torno dos preços dos imóveis,
-ajudando a conter dessa maneira a especulação imobiliária.
+instrumento. Em outras palavras, quem determina o preço é o mercado. No entanto,
+um modelo de preços é utilizado para a determinação de um *benchmark*, uma
+referência de mercado. Assim como o *valuation* serve para calcular o "preço
+justo" de uma ação (ou *target price*, ou ainda preço-alvo), o que por sua vez
+permite às corretoras efetuarem recomendações (*outperform* ou *buy*, *neutral*
+ou *hold*, *underperform* ou *sell*), assim como o método de Black&Scholes
+[@marins2] permite o cálculo do preço justo das opções de compra e venda, as
+séries perpétuas permitem um cálculo razoável do preço justo de um imóvel, haja
+vista que permitem, sem maiores especulações, o cálculo do fluxo de caixa
+descontado dos aluguéis, balizando assim as expectativas em torno dos preços dos
+imóveis, ajudando a conter dessa maneira a especulação imobiliária.
 
 Em períodos de normalidade econômica poder-se-ia dizer que o estabelecimento
 de preços máximos de aluguéis seriam suficientes para conter uma especulação

@@ -1,0 +1,22 @@
+digraph boxes_and_circles{
+
+rankdir = LR
+
+# add node statements
+node [shape = box
+      fontname = Helvetica
+      penwidth = 2.0]
+      
+'Pool of Assets'; SPV; Senior; Mezzanine; Equity
+  
+# add edge statements
+
+'Pool of Assets' -> SPV [label = 'Coupons']
+
+#SPV -> {Senior Mezzanine Equity}
+
+SPV -> Senior [label = '1º']
+SPV -> Mezzanine [label = '2º']
+SPV -> Equity [label = '3º']
+
+}
