@@ -57,7 +57,7 @@ epigrafe: |
   | "Eppur si muove!"  
   | (Galileu Galilei, 1633)
 # Specify the location of the bibliography below
-bibliography: [bib/cap1.bib, bib/cap2.bib, bib/cap3.bib, bib/cap4.bib, bib/cap5.bib, bib/pkgs.bib]
+bibliography: [bib/cap1.bib, bib/cap2.bib, bib/cap3.bib, bib/cap4.bib, bib/cap5.bib, bib/cap6.bib, bib/pkgs.bib]
 # Download your specific csl file and refer to it in the line below.
 link-citations: true
 #biblio-style: abnt
@@ -177,7 +177,7 @@ sociais e econômicas e às restrições da lei e dos ônus legais [@realestate,
 
 O mercado imobiliário urbano pode ser dividido basicamente em:
 
-1. Mercado de imóveis residencias e;
+1. Mercado de imóveis residenciais e;
 2. Mercado de imóveis comerciais.
 
 O Mercado Imobiliário se conecta à macroeconomia através:

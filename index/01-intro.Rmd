@@ -11,25 +11,32 @@ The {#rmd-basics} text after the chapter declaration will allow us to link throu
 
 ### Objetivo Geral
 
-Propor, através do estudo das diversas estruturas de mercado conhecidas e 
-elencadas na nova NBR 14.653-01 [@NBR1465301] e do estudo das relações entre as 
-diversas variáveis macroeconômicas, novas aplicações do método involutivo e,
-de acordo com os resultados, propor novas políticas para a regulação do setor.
+Propor, através do estudo do comportamento histórico e recente do mercado
+imobiliário e do estudo da interação entre o mercado imobiliária e as variáveis
+macroeconômicas, novas políticas públicas para o melhor funcionamento do setor,
+de maneira que este venha a atender aos anseios da população, através da redução
+do déficit habitacional, vista a garantir o direito à moradia (digna), previsto
+na CF 88.
 
 ### Objetivos Específicos 
 
 1. Compreender e descrever o funcionamento das diversas estruturas de mercado.
 2. Abstrair das diferentes estruturas de mercado as relações entre as variáveis
 macroeconômicas e o seu impacto no mercado imobiliário.
-3. De acordo com os resultados obtidos, propor políticas públicas que visem uma 
-melhor regulamentação do mercado imobiliário, de maneira que este atenda melhor
-aos anseios da população.
+3. Propor, à partir de uma abordagem econômica, novas políticas de solo que
+visem uma melhor regulamentação do mercado imobiliário
 
 ## Justificativa
 
 O território é a base das atividades econômicas e sociais do país. Um eficiente
 planejamento territorial passa por desenvolver políticas públicas que garantam
-um desenvolvimento equânime de todo o território. A proposta desta pesquisa é aprofundar o conhecimento referente à dinâmica cadastro territorial multifinalitário, ao mercado imobiliário e às políticas de solo. Os resultados das pesquisas, além de serem divulgados no meio acadêmico, embasam ações de extensão que proporcionam a implementação de políticas de solo e a capacitação de pessoas que atuam com atividades relacionadas ao território. O grupo é formado majoritariamente por professores e estudantes do Programa de Pós-Graduação em Engenharia de Transportes e Gestão Territorial e dos departamentos de Geociências e Engenharia Civil da UFSC, mas participam também professores, pesquisadores e estudantes de outros programas e instituições nacionais e internacionais. Forma parte da Rede Acadêmica de Cadastro Multifinalitário e atua em conjunto com o Centro de Estudios Territoriales da Universidad Nacional de Córdoba, Argentina, no projeto intitulado Valores del Suelo en América Latina.
+um desenvolvimento equânime de todo o território. A proposta desta pesquisa é
+aprofundar o conhecimento referente à dinâmica do cadastro territorial
+multifinalitário, do mercado imobiliário e das políticas de solo e seus efeitos. 
+Com os resultados da pesquisa pretende-se embasar a implementação de novas 
+políticas de solo aplicáveis a países em desenvolvimento, como o Brasil, em
+que a realidade social difere dos países centrais, onde as políticas de solo
+tradicionais foram desenvolvidas. 
 
 ## Estrutura do trabalho
 

@@ -25,12 +25,12 @@ quebrar, que seriam sempre socorridas pelos governos, em última instância;
 * O **excesso de liquidez** do sistema que levou à formação de uma bolha 
 especulativa no setor imobiliário;
 
-* A **falta de controles adequados de risco** por parte de algumas instituições 
-que negociavam os derivativos de crédito, assim como as agências de classificação
-de risco de crédito, que se basearam somente no modelo da Copula Gaussiana,
-subestimando a probabilidade de *default* em *clusters*, o que eventualmente 
-levou à falta de liquidez pelo não pagamento dos coupons dos *senior tranches* 
-dos gls{CDO}, e portanto à eclosão da crise financeira.
+* A **falta de controles adequados de risco** por parte de algumas instituições
+que negociavam os derivativos de crédito, assim como as agências de
+classificação de risco de crédito, que se basearam somente no modelo da Copula
+Gaussiana, subestimando a probabilidade de *default* em *clusters*, o que
+eventualmente levou à falta de liquidez pelo não pagamento dos coupons dos
+*senior tranches* dos \gls{CDO}, e portanto à eclosão da crise financeira.
 
 Este capítulo tem como objetivo demonstrar os problemas teóricos que levaram
 a este último fator, que está na raiz da formação da bolha imobiliária.
