@@ -387,7 +387,15 @@ valor de estruturas.
 
 #### Índices no mundo
 
-O @rppi elencou uma série de índices ao redor do mundo.
+O @rppi elencou uma série de índices ao redor do mundo. Nesta subseção, alguns destes índice são descritos.
+
+##### Índices globais
+
+###### Global Real House Price Index
+
+O FMI, através do observatório Global Housing Watch...
+
+
 
 ##### Países desenvolvidos
 
@@ -405,10 +413,6 @@ ser impossível o cálculo dos valores de aquisição do imóvel.
 
 Nestes casos, segundo o o Eurostat [-@rppi, 110], a única opção prática para
 estimar o valor dos imóveis é através da equivalência dos valores de aluguéis.
-
-##### Global Real House Price Index
-
-O FMI, através do observatório Global Housing Watch...
 
 #### Índices na América Latina
 
@@ -1075,7 +1079,7 @@ os governos seriam obrigados a socorrer as instituições denominadas *too big t
 fail* (grandes de mais para quebrar) [@devil, 4-5].
 
 
-#### Derivativos de crédito
+##### Derivativos de crédito
 
 \gls{CDO} são um tipo de instrumento financeiro do grupo dos denominados 
 derivativos de crédito, lastreados em \gls{ABS}, construídos através do
@@ -1179,6 +1183,10 @@ Segundo @watts, a duração típica de um contrato de \gls{CDO} era de 5 anos.
 | CCC                    | 37,64                            |
 Table: Parte da matriz de risco de default da Fitch.
 
+\bcenter
+Fonte: @watts.
+\ecenter
+
 | **Tranche (Rating)**   | **Attachment Points** |
 |:-----------------------|:---------------------:|
 | Senior (AAA)           | 42% -- 100%           |
@@ -1188,6 +1196,10 @@ Table: Parte da matriz de risco de default da Fitch.
 | Mezzanine 4 (BB-)      | 11% -- 20%            |
 | Equity (NA)            | 0% -- 11%             |
 Table: Exemplo de parcelamento de \gls{CDO}.
+
+\bcenter
+Fonte: @watts.
+\ecenter
 
 Para Donnelly e Embrechts [@devil, 20], os *equity tranches* são produtos com
 muito risco, portanto de pouco valor, o que interessa aos grandes especuladores,

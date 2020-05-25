@@ -86,9 +86,17 @@ imobiliária, mantendo o sistema capitalista de produção, espera-se ter
 demonstrado que, na atualidade, o problema ainda persistiria: está cada vez mais
 nos fundamentos o problema dos preços elevados, não em grandes desvios de curto 
 prazo (bolhas especulativas) dos preços em relação aos fundamentos econômicos, 
-pois taxas de juros tão baixas tendem a valorizar ainda mais preço da terra, de
-maneira que também não está nas quedas dos juros hipotecários, que está na ordem
-natural das coisas, a solução para o problema habitacional.
+pois taxas de juros tão baixas tendem a valorizar ainda mais preço da terra.
+
+Também a redução dos juros hipotecários, ao invés de ajudar, agrava o problema.
+A redução dos juros, que como se mostrou, está na ordem natural das coisas, já
+que as taxas dos créditos hipotecários acompanham as taxas de juros básicas, ou
+seja, não se pode esperar que a solução para o problema habitacional tenha lugar
+a partir de uma menor taxa de exploração dos mutuários.
+
+Segundo @rolnik, na raiz da presente crise habitacional do Reino Unido está o 
+descolamento do setor habitacional das políticas sociais, iniciado por Margaret 
+Thatcher.
 
 @terraredonda nos dá uma pista de como os países desenvolvidos lidaram com este
 problema no passado: habitação sob domínio público. Claro, pois é inútil 
@@ -117,3 +125,9 @@ refletindo sobre as consequências desastrosas em todo o mundo de não se buscar
 resolutamente a solução óbvia: habitação sob domínio público. O valor de uso
 deve vir primeiro.
 \end{citacao}
+
+@harvey contextualiza a questão do direito à moradia dentro de uma conceito
+maior, do direto à cidade. 
+
+@jung2018 compara as políticas de habitação praticadas desde o início do século
+XX no Brasil e na Inglaterra.
