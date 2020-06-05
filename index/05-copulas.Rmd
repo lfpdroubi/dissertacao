@@ -94,6 +94,7 @@ Gaussiana se deu entre 1987 e 1991, por Oldrich Vasicek, um matemático teórico
 ### Coeficiente de correlação de Pearson
 
 $$Corr(X, Y ) = \frac{Cov(X, Y )}{Var(X)Var(Y)}$$
+
 #### Propriedades
 
 ### Coeficiente de correlação local de Pearson

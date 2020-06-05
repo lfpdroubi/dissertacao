@@ -1,4 +1,4 @@
-# Políticas do solo
+# Políticas do solo {#politicas}
 
 Os instrumentos tradicionais da política de solo historicamente não se mostraram
 capazes de satisfazer a grande demanda por imóveis urbanos nos países da AL,
@@ -6,7 +6,29 @@ especialmente no Brasil. A grande falência das políticas de solo podem ser
 vistas nas periferias das grandes cidades. É claro que essas políticas [@suelo],
 tem um papel em amenizar o problema -- através do combate à especulação
 imobiliária, por exemplo -- que tem origem na própria história do
-desenvolvimento dos países, mas elas não chegam a atacar o cerne desse problema.
+desenvolvimento dos países, mas elas não chegam a atacar o cerne desse problema,
+já que não são concebidas para isto. Em linhas gerais, as políticas do solo
+tradicionais tem uma função regulatória, no sentido de orientar o funcionamento
+do mercado imobiliário. O problema, no entanto, é que o mercado imobiliário,
+por si só, não tem a capacidade de resolver todos os problemas decorrentes da
+crise agrária, como descrita no capítulo \@ref(historico). Intervenções estatais
+de grande vulto se fazem necessárias, especialmente para as populações de baixa
+renda. A regularização fundiária pode ter um papel neste sentido, mas na 
+atualidade esta política tem sido utilizada apenas timidamente, beneficiando 
+apenas um pequeno número de famílias.
+
+
+\begin{citacao}
+Para o IBGE, os 'aglomerados subnormais' representam um conjunto constituído de,
+no mínimo, 51 unidades habitacionais ocupando ou tendo ocupado, até período
+recente, terreno de propriedade alheia (pública ou particular) dispostas, em
+geral, de forma desordenada e densa, e apresentando carência em serviços
+básicos.
+\cita{ibge2}
+\end{citacao}
+
+Segundo o censo de 2010 do IBGE [@ibge], em 2010 o Brasil possuía 11,4 milhões
+ de pessoas morando em aglomerados sunormais, ou favelas.
 
 ```{r injustica, fig.cap = "Condomínio de classe alta ao lado da favela de Paraisópolis em São Paulo/SP."}
 knitr::include_graphics("images/injustica_SP.jpg")
@@ -15,10 +37,10 @@ knitr::include_graphics("images/injustica_SP.jpg")
 Fonte: @paraisopolis.
 \ecenter
 
- 
-Como tratado no Capítulo \@ref(historico), o cerne do problema habitacional
-do Brasil (e provavelmente em toda a América Latina), está na passagem do
-modo de produção feudal para o modo de produção capitalista.
+ Como tratado no Capítulo \@ref(historico), o cerne do problema habitacional
+do Brasil (e provavelmente em toda a América Latina), está na crise agrária, 
+*i.e*, na passagem do modo de produção feudal para o modo de produção 
+capitalista.
 
 Deve tratar o Brasil, portanto, assim como os outros países da América Latina,
 de saber como os países avançados -- hoje ditos desenvolvidos -- cujas
@@ -26,11 +48,11 @@ transições para o capitalismo  se deram através da chamada via prussiana,
 trataram de resolver o problema habitacional nas grandes cidades, após a intensa
 migração dos camponeses para as cidades.
 
-Claro está que a solução vislumbrada por Rangel, de que a verdade reforma agrária
-se daria através da queda "natural" do preço da terra, não se deu e mui 
+Claro está que a solução vislumbrada por Rangel, de que a verdadeira reforma
+agrária se daria através da queda "natural" do preço da terra, não se deu e mui
 provavelmente nunca se dará, haja vista que Rangel dava como certo o aumento das
 taxas de juros (mais precisamente, da eficiência marginal do capital), o que não
-ocorreu e, conforme visto no capítulo \@ref(economia), não se pode prever que 
+ocorreu e, conforme visto no capítulo \@ref(economia), não se pode prever que
 acontecerá.
 
 Claro está também que o pleno desenvolvimento do mercado financeiro, como 
@@ -40,46 +62,23 @@ instrumentos financeiros, como foi visto, tende a gerar bolhas no mercado
 imobiliário, o que tende a agravar o problema habitacional, prejudicando as
 famílias de menor renda.
 
-Segundo Harvey [-@harvey, 166]:
-
-\begin{citacao}
-Da Californa à Grécia, a crise produziu perdas de direitos e novas valores dos
-ativos urbanos para a maioria da população, junto com a extensão do poder
-capitalista predatório sobre as populações de baixa renda e até hoje
-marginalizadas. Em resumo, foi um ataque indiscriminado sobre os comuns
-reprodutivos e ambientais. Vivendo com menos de 2 dólares por dia, uma população
-global de por volta de 2 bilhões de pessoas está sendo ludibriada pelo sistema
-de microfinanças, sendo "o \emph{subprime} de todas as formas de \emph{subprime}
-de crédito", para deles extrair riquezas (como aconteceu no mercado imobiliário
-dos Estados Unidos por empréstimos \emph{subprime} predatórios seguidos por
-execuções de hipotecas) para tornar ainda mais opulentas as mansões dos ricos
-[...]. Não surpreende, portanto, que os pobres não apenas estejam entre nós, mas
-que seu número aumente com o tempo, em vez de diminuir. Enquanto a Índia vem
-acumulando um respeitável índice de crescimento ao longo dessa crise, por
-exemplo, o número de bilionários saltou de 26 para 69 nos últimos três anos,
-enquanto o número de favelados quase dobrou na última década. Os impactos
-urbanos são estarrecedores conforme condomínios fechados, luxuosos e com
-ar-condicionado surgem em meio ao abandono da miséria urbana, em que os pobres
-lutam para construir algum tipo aceitável de existência para si mesmos.
-\end{citacao}
-
 Considera-se, porém, que o problema especulativo não é a raiz do problema.
-Segundo Zizek [-@zizek2005, 220-221], não é possível retirar a especulação de
-um suposto capitalismo puro: a especulação é a própria alma do processo 
-produtivo. Sem a especulação imobiliária, inexistiria o mercado imobiliário. As
-políticas de solo, portanto, que visam o combate da especulação imobiliária não
-tem, portanto, papel maior do que o de paliativo, pois essas políticas não
-podem ser radicais ao ponto de acabar com a especulação, haja vista que 
-acabariam também por extinguir os empreendimentos imobiliários. Aliás, no Brasil,
-as reformas microeconômicas de 2004 tiveram um forte papel no desenvolvimento do
-crédito imobiliário, através da melhoria das condições de execuções de garantia,
-propiciadas pela Lei 10.931/2004. A alta no crédito imobiliário fomentou a 
-construção civil, setor responsável por puxar a economia naquele ciclo. No 
-entanto, o que se viu, desde então, foi um aumento expressivo no valor dos 
-imóveis, fazendo que, se por um lado houve aumento na oferta de imóveis, devido
-à alta demanda reprimida, esse aumento da oferta veio acompanhado do aumento do
-valor dos imóveis, o que dificultou ainda mais o acesso das camadas de menor 
-renda à aquisição da casa própria.
+Segundo Zizek [-@zizek2005, 220-221], não é possível retirar a especulação de um
+suposto capitalismo puro: a especulação é a própria alma do processo produtivo
+no sistema capitalista. Sem a especulação imobiliária, inexistiria o mercado
+imobiliário. As políticas de solo, portanto, que visam o combate da especulação
+imobiliária não tem, portanto, papel maior do que o de paliativo, pois essas
+políticas não podem ser radicais ao ponto de acabar com a especulação, haja
+vista que acabariam também por extinguir os empreendimentos imobiliários. Aliás,
+no Brasil, as reformas microeconômicas de 2004 tiveram um forte papel no
+desenvolvimento do crédito imobiliário, através da melhoria das condições de
+execuções de garantia, propiciadas pela Lei 10.931/2004. A alta no crédito
+imobiliário fomentou a construção civil, setor responsável por puxar a economia
+naquele ciclo. No entanto, o que se viu, desde então, foi um aumento expressivo
+no valor dos imóveis, fazendo que, se por um lado houve aumento na oferta de
+imóveis, devido à alta demanda reprimida, esse aumento da oferta veio
+acompanhado do aumento do valor dos imóveis, o que dificultou ainda mais o
+acesso das camadas de menor renda à aquisição da casa própria.
 
 Ainda, mesmo que fosse possível separar mercado imobiliário de especulação
 imobiliária, mantendo o sistema capitalista de produção, espera-se ter 
@@ -88,15 +87,34 @@ nos fundamentos o problema dos preços elevados, não em grandes desvios de curt
 prazo (bolhas especulativas) dos preços em relação aos fundamentos econômicos, 
 pois taxas de juros tão baixas tendem a valorizar ainda mais preço da terra.
 
-Também a redução dos juros hipotecários, ao invés de ajudar, agrava o problema.
-A redução dos juros, que como se mostrou, está na ordem natural das coisas, já
-que as taxas dos créditos hipotecários acompanham as taxas de juros básicas, ou
-seja, não se pode esperar que a solução para o problema habitacional tenha lugar
-a partir de uma menor taxa de exploração dos mutuários.
+Também a redução dos juros hipotecários, ao invés de ajudar, tende a agravar o
+problema, como foi visto no capítulo \@ref(economia), dado que o aumento do
+valor dos imóveis é exponencial com a queda das taxas de juros. A redução dos
+juros, que como se mostrou, está na ordem natural das coisas, já que as taxas
+dos créditos hipotecários acompanham as taxas de juros básicas, ou seja, não se
+pode esperar que a solução para o problema habitacional tenha lugar a partir de
+uma menor taxa de exploração dos mutuários.
 
-Segundo @rolnik, na raiz da presente crise habitacional do Reino Unido está o 
-descolamento do setor habitacional das políticas sociais, iniciado por Margaret 
-Thatcher.
+Segundo @terraredonda, ainda, esse aumento dos preços dos imóveis parece ter
+efeito de beneficiar os proprietários, mas esses não são os principais 
+beneficiados:
+
+\begin{citacao}
+O rápido aumento dos preços dos imóveis parece beneficiar os proprietários, mas
+os principais beneficiários são, de fato, os bancos, as instituições de crédito
+e os grandes conglomerados e \emph{hedge funds} que aderiram ao jogo
+especulativo.
+Isso ficou evidente quando veio o \emph{crash}. Os bancos foram socorridos e os
+donos das habitações foram jogados aos tubarões da bolsa de valores. Nos EUA,
+milhões perderam suas casas para execução de hipotecas em 2007-10, enquanto no
+setor de aluguéis o ritmo de despejos de populações de baixa renda acelerou em
+todos os lugares, com consequências sociais devastadoras. Os \emph{hedge funds}
+e as empresas de \emph{private equity} compraram casas hipotecadas a preços de
+liquidação relâmpago e agora estão ganhando uma bolada em suas operações. No que
+restou do setor público, a austeridade levou à falta de manutenção e à
+deterioração do parque habitacional, até o ponto em que, como nos foi dito,
+apenas a privatização melhoraria as coisas.
+\end{citacao}
 
 @terraredonda nos dá uma pista de como os países desenvolvidos lidaram com este
 problema no passado: habitação sob domínio público. Claro, pois é inútil 
@@ -126,8 +144,77 @@ resolutamente a solução óbvia: habitação sob domínio público. O valor de 
 deve vir primeiro.
 \end{citacao}
 
+Segundo @rolnik, no entanto, na raiz da atual crise habitacional do Reino Unido
+está o descolamento do setor habitacional das políticas sociais, iniciado por
+Margaret Thatcher. Com o desenvolvimento econômico, os países desenvolvidos
+acabaram por abandonar estes programas sociais, em troca de soluções de
+mercado.
+
 @harvey contextualiza a questão do direito à moradia dentro de uma conceito
-maior, do direto à cidade. 
+maior, do direto à cidade. Segundo Harvey [-@harvey, 166]:
+
+\begin{citacao}
+Da Californa à Grécia, a crise produziu perdas de direitos e novas valores dos
+ativos urbanos para a maioria da população, junto com a extensão do poder
+capitalista predatório sobre as populações de baixa renda e até hoje
+marginalizadas. Em resumo, foi um ataque indiscriminado sobre os comuns
+reprodutivos e ambientais. Vivendo com menos de 2 dólares por dia, uma população
+global de por volta de 2 bilhões de pessoas está sendo ludibriada pelo sistema
+de microfinanças, sendo "o \emph{subprime} de todas as formas de \emph{subprime}
+de crédito", para deles extrair riquezas (como aconteceu no mercado imobiliário
+dos Estados Unidos por empréstimos \emph{subprime} predatórios seguidos por
+execuções de hipotecas) para tornar ainda mais opulentas as mansões dos ricos
+[...]. Não surpreende, portanto, que os pobres não apenas estejam entre nós, mas
+que seu número aumente com o tempo, em vez de diminuir. Enquanto a Índia vem
+acumulando um respeitável índice de crescimento ao longo dessa crise, por
+exemplo, o número de bilionários saltou de 26 para 69 nos últimos três anos,
+enquanto o número de favelados quase dobrou na última década. Os impactos
+urbanos são estarrecedores conforme condomínios fechados, luxuosos e com
+ar-condicionado surgem em meio ao abandono da miséria urbana, em que os pobres
+lutam para construir algum tipo aceitável de existência para si mesmos.
+\end{citacao}
+
+
+## Histórico das políticas habitacionais e urbanas 
 
 @jung2018 compara as políticas de habitação praticadas desde o início do século
 XX no Brasil e na Inglaterra.
+
+## Cooperativas habitacionais
+
+Nos primórdios do capitalismo nos países hoje dito desenvolvidos, dada a 
+impossibilidade do mercado suprir a demanda por habitações acessíveis para os
+trabalhadores, houve uma série de intervenções do estado, ao lado da filantropia,
+no sentido de tentar prover habitações em condições salubres aos operários.
+
+Neste quesito teve pioneirismo a Holanda, especialmente após as crises de cólera
+em meados do século XIX, que acometiam especialmente as regiões mais pobres e 
+insalubres. 
+
+Datam de 1868 a existência de cooperativas operárias que, em conjunto com as 
+administrações locais tentavam suprir as necessidades de habitações para a 
+classe trabalhadora.
+
+A primeira legislação no sentido de regulamentar e incentivar a produção de
+habitação atrelada à planejamentos municipais foi o Ato Habitacional
+(Woningwet), de 1901, na Holanda. Esta lei pioneira foi criada baseada em um
+diagnóstico da Sociedade para o Bem-Estar Geral (*Maatschappij tot nut van t'
+algemeen*) de 1887, posteriormente publicados em 1894 no documento "A Questão da
+Habitação Social".
+
+Em 1902 o Ato Habitacional foi aprovado pela coroa holandesa que atribuiu às
+administrações locais o direito, dever e meios financeiros para o 
+estabelecimento de planos de extensão para desapropriar imóveis considerados
+insalubres, adquirir áreas e construir diretamente ou oferecer empréstimos para
+cooperativas ou sociedades de promoção de moradias populares.
+
+Segundo Poleto [-@poleto, 89], 
+
+
+## Instrumentos de política do solo
+
+### IPTU progressivo
+
+### Contribuição de melhoria
+
+###

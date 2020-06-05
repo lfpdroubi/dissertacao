@@ -12,7 +12,7 @@ The {#rmd-basics} text after the chapter declaration will allow us to link throu
 ### Objetivo Geral
 
 Propor, através do estudo do comportamento histórico e recente do mercado
-imobiliário e do estudo da interação entre o mercado imobiliária e as variáveis
+imobiliário e do estudo da interação entre o mercado imobiliário e as variáveis
 macroeconômicas, novas políticas públicas para o melhor funcionamento do setor,
 de maneira que este venha a atender aos anseios da população, através da redução
 do déficit habitacional, vista a garantir o direito à moradia (digna), previsto
@@ -45,11 +45,13 @@ estrutura do trabalho. O Capítulo \@ref(historico) ([Aspectos Históricos]) faz
 uma contextualização histórica do problema do acesso à terra e moradia no Brasil
 e no mundo. O Capítulo \@ref(economia) ([O Mercado Imobiliário e a Economia])
 aborda os aspectos teóricos e conceituais mais modernos relevantes à
-interligação do mercado imobiliário à Economia do país. O capítulo
-\@ref(involutivo) ([O Método Involutivo]) apresenta o método involutivo de
-avaliação de imóveis. O Capítulo \@ref(copulas) ([O Método Copulas]) introduz o
-método Copulas, essencial para a compreender as simulações para cada
-cenário/estrutura de mercado descritas no Capítulo \@ref(metodologia)
-([Metodologia]). O Capítulo \@ref(resultados) ([Resultados]) demonstra os
-resultados obtidos com as simulações  e o Capítulo \@ref(conclusao)
-([Conclusão]) traz as propostas de regulação baseadas nos resultados obtidos.
+interligação do mercado imobiliário à Economia do país, trazendo também um
+apanhado dos principais índices de preços de imóveis no Brasil e no mundo, e uma
+análise da crise financeira-habitacional de 2008 e sus consequências no setor
+habitacional.  O Capítulo \@ref(copulas) ([O Método Copulas]) introduz o método
+Copulas, essencial para compreender a raiz da crise financeira-imobiliária de
+2008. O Capítulo \@ref(politicas) ([Políticas do solo]) traz uma breve
+argumentação a respeito das principais abordagens possíveis para solução do
+problema habitacional no Brasil, comparando com as estratégias adotadas em
+outros países. Finalmente, o Capítulo \@ref(conclusao) ([Conclusão]) traz as
+propostas de regulação baseadas nos resultados obtidos.

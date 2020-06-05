@@ -102,7 +102,7 @@ implica a abertura de suas fronteiras às demais áreas das ciências humanas. E
 abertura se dá em dupla direção, assumindo assim caráter \textbf{biunívoco}.
 \end{citacao}
 
-Segundo @rosseti [-@rossetti, 32], a separação das ciências sociais em
+Segundo Rosseti [-@rossetti, 32], a separação das ciências sociais em
 especialidades distintas é não-rigorosa, ou, ao contrário, estas especialidades
 estão entremeadas:
 
@@ -134,7 +134,7 @@ variáveis macroeconômicas (como inflação, crescimento econômico, PIB, taxa 
 desemprego etc.) como 'variáveis de controle' exógenas [@LEUNG, 3].
 
 Por sua vez,  os livros de Economia tradicionais ou tratam o mercado imobiliário
-como apenas uma dos muitos mercados de bens de consumo ou o negligenciam como um
+como apenas um dos muitos mercados de bens de consumo ou o negligenciam como um
 todo. A Macroeconomia convencional ignora completamente o mercado imobiliário
 [@LEUNG, 3], embora o mercado habitacional constitua uma grande parte da
 Macroeconomia [@LEUNG, 5]. @krugman afirmou que um dos segredos da
@@ -238,7 +238,7 @@ De acordo com o @rppi, índices de preços de imóveis são importantes e podem 
 risco;
 * como um deflator nas contas nacionais;
 * para auxílio para a tomada de decisões dos cidadãos na negociação de um imóvel;
-* como um dos compenentes de um índice de preços ao consumidor; e
+* como um dos componentes de um índice de preços ao consumidor; e
 * para uso em comparações inter-setoriais ou internacionais.
 
 Ainda segundo o @rppi, grosseiramente falando, os índices de preços podem ser 
@@ -294,9 +294,12 @@ propriedades, sendo este método de confecção de índice somente apropriado qu
 
 ##### Métodos hedônicos
 
-É o método mais eficiente de construção de um índice quando há dados disponíveis. Além explorar o máximo os 
-dados disponíveis, permite a desagragação dos preços das 
-estruturas do preço da terra e pode ser elaborado de forma a levar em conta a depreciação dos imóveis, razão pela qual tal tipo índice pode ser utilizado tanto para o monitoramento do valor dos estoques de imóveis quanto para aferir o investimento no setor imobiliário.
+É o método mais eficiente de construção de um índice quando há dados
+disponíveis. Além de explorar o máximo os dados disponíveis, permite a
+desagragação dos preços das estruturas do preço da terra e pode ser elaborado de
+forma a levar em conta a depreciação dos imóveis, razão pela qual tal tipo
+índice pode ser utilizado tanto para o monitoramento do valor dos estoques de
+imóveis quanto para aferir o investimento no setor imobiliário.
 
 Consiste na aplicação de modelos hedônicos, basicamente de duas maneiras distintas:
 
@@ -322,7 +325,7 @@ períodos, como mostra a equação \@ref(eq:cp-approach).
 \end{equation}
 
 onde as características dos imóveis $z_k^*$ pode ser estabelecida de diversas
-maneiras, como a média das carecterísticas do período base ($z_k^* = \bar z_k^0$),
+maneiras, como a média das características do período base ($z_k^* = \bar z_k^0$),
 denominado índice de Laspeyres, como média das características do período
 posterior ($z_k^* = \bar z_k^t$), denominado índice de Paasche, ou ainda tomando
 a média geométrica dos períodos anterior e posterior, denominado índice do tipo
@@ -341,7 +344,7 @@ transação que poderiam ser úteis para a construção de um índice mais robus
 ##### Métodos baseados em avaliação -- Sales Price Appraisal Ratio (SPAR)
 
 Este tipo de índice utiliza de dados de avaliação feitas para propósito de
-tributação ou outros tipos de avaliação, usualmente utilizadas para a bens 
+tributação ou outros tipos de avaliação, usualmente utilizadas para bens 
 similares, com o intuito de resolver alguns problemas relacionados ao modelo de
 vendas repetidas (pequeno número de dados repetidos e a suscetibilidade ao viés).
 Matematicamente, o índice é calculado de acordo com a equação \@ref(eq:AP) 
@@ -371,7 +374,7 @@ P_{SPAR}^{0t} = \frac{\sum\limits_{n \in S(t)} p_n^t}{\sum\limits_{n \in S(t)} a
 (\#eq:SPAR)
 \end{equation}
 
-Apesar de ser simples, necessitar apenas de dados de preços e avaliaçõe, o que
+Apesar de ser simples, necessitar apenas de dados de preços e avaliações, o que
 simplifica a sua computação, os métodos baseados em avaliações tem a desvantagem
 de não lidar adequadamente com mudanças de qualidade entre os períodos (reparos 
 ou depreciação), além de ser dependente da qualidade das avaliações. 
@@ -449,26 +452,30 @@ própria metodologia.
 
 Outro problema relacionado a este índice é que ele não é composto de transações
 de imóveis, porém de anúncios de imóveis, o que além de poder ser problemático é
-questionável, devido às diferentes taxas de descontos praticadas no mercado
-em diferentes períodos e pelos diferentes atores, que neste caso não são 
+questionável, devido aos diferentes descontos praticados no mercado em
+diferentes períodos e pelos diferentes atores, que neste caso não são
 mensuráveis. Segundo o o Eurostat [-@rppi, 126]:
 
-> Although not related to the issue of timing, a disadvantage of advertised
+\begin{citacao}
+Although not related to the issue of timing, a disadvantage of advertised
 prices and mortgage approvals is that not all of the prices included end in
 transactions, and in the former case, the price will tend to be higher than the
 fnal negotiated transaction price.
+\end{citacao}
 
 Outros problemas relacionados ao índice FipeZap, como se basear exclusivamente
-em anúncios em websites, também são elencandos pelo o Eurostat [-@rppi, 104]:
+em anúncios em websites, também são elencados pelo Eurostat [-@rppi, 104]:
 
-> Information collected on a seller’s asking price cannot always be easily
+\begin{citacao}
+Information collected on a seller’s asking price cannot always be easily
 verifed and, as well as depending on a balanced and representative sample,
 relies on the honesty and knowledge of those being surveyed and when drawn from
 advertisements, the accuracy of the information, especially when it is from a
 website [...] It has also been argued that websites will tend to be biased
 towards properties that have a competitive asking price to entice potential
 sellers. All this is, of course, speculation but it does bring home some of the
-potential difculties associated with these sources.
+potential dificulties associated with these sources.
+\end{citacao}
 
 ##### Índices IGMI-R e IGMI-C
 
@@ -477,12 +484,12 @@ convênio com o \gls{IBRE}/\gls{FGV}, provavelmente através de um método basea
 em avaliações, "levando em conta os laudos de imóveis financiados pelos bancos".
 
 
-
-> Nos Estados Unidos, país de grande dimensão territorial e elevada mobilidade
+\begin{citacao}
+Nos Estados Unidos, país de grande dimensão territorial e elevada mobilidade
 da população, o índice Case-Schiller faz o cálculo através da metodologia das
 transações repetidas. Outros países, que têm uma realidade diferente da
 americana, buscam alternativas para fazer o cálculo.
-
+\end{citacao}
 
 ### Comportamento recente do mercado imobiliário e relação com as variáveis macroeconômicas
 
@@ -565,12 +572,10 @@ range_rhpi_1989_1997 <- range(window(rhpi, start = 1989 + 7/12, end = 1997 + 0/1
 ```
 
 Em julho de 2006 o índice atingiu o valor de `r brf(range_nhpi_2006_2012[2])`
-pontos, entrando então em tendência de baixa, até atingir os 
-`r brf(range_nhpi_2006_2012[1])` pontos, em janeiro de 2012, uma queda de 
-`r diff(range_nhpi_2006_2012)` pontos, quando se iniciou nova tendência de alta, 
-que perdura até os dias atuais. No momento em que se escreve esta dissertação o 
-índice se encontra com `r brf(last(nhpi))` pontos, maior valor da série 
-histórica, uma alta de `r brf(last(nhpi) - range_nhpi_2006_2012[1])` pontos. 
+pontos, entrando então em tendência de baixa, até atingir os `r brf(range_nhpi_2006_2012[1])` pontos, em janeiro de 2012, uma queda de `r brf(diff(range_nhpi_2006_2012))` 
+pontos, quando se iniciou nova tendência de alta, que perdura até os dias atuais. 
+No momento em que se escreve esta dissertação o índice se encontra com `r brf(last(nhpi))` pontos, maior valor da série histórica, uma alta de `r brf(last(nhpi) - range_nhpi_2006_2012[1])`
+pontos.
 
 Em termos reais, no entanto, os preços ainda são inferiores ao pico registrado, 
 mas há uma nítida tendência de alta, conforme pode ser visto na figura 
@@ -851,7 +856,7 @@ Para os títulos com vencimento em 20 anos, a taxa está em `r brf(tail(df_daily
 % a.a. e para os títulos com vencimento em 10 anos está em `r brf(tail(df_daily[which(df_daily$bond == 'DGS10'), ], n = 1)$rate)`% a.a., 
 todos muito perto dos seus valores mínimos da série histórica, que foram 
 atingidos em `r  df_daily[which.min(df_daily$rate), ]$date`, quando os títulos
-com maturidade de 10 anos atingiram impressionantes `r pull(df_daily[which(df_daily$date == as.Date("2020-03-09")), ], rate)[1]`% a.a.
+com maturidade de 10 anos atingiram impressionantes `r brf(pull(df_daily[which(df_daily$date == as.Date("2020-03-09")), ], rate)[1])`% a.a.
 
 Segundo Krugman [-@krugman2020], no entanto, isto não está a ocorrer apenas nos
 EUA, mas em todo o mundo desenvolvido, com maior ou menor gravidade, já há 
@@ -899,7 +904,7 @@ de uma tendência de longo prazo, mas sim a uma tendência estrutural, sistêmic
 As taxas de juros das hipotecas são influenciadas pelas taxas dos títulos da
 dívida pública: os títulos da dívida pública são considerados ativos sem risco,
 Por isto os investimentos em títulos públicos possuem as menores taxas do
-mercado: o governo, que emite a dívida, também emite a moeda que necessária para
+mercado: o governo, que emite a dívida, também emite a moeda necessária para
 pagá-la. Ou seja, não há risco verdadeiro quando um governo emite um título de
 dívida, a não ser o risco da própria desvalorização da moeda (inflação). É
 natural, portanto, que os investidores exijam, para que invistam em ativos
@@ -964,10 +969,10 @@ bancário no mercado imobiliário [@Case2000, 148]. Segundo Claessens *et al.*
 disponíveis, mais de dois terços foram precedidas por padrões de aumento-estouro
 de preços de imóveis.
 
-Não apenas pelo estouro de uma bola especulativa podem haver quedas nos preços
-bens imóveis, mas também por conta de uma inversão dos fundamentos econômicos
-que sustentavam os preços [@Case2000, 129], como aliás parece ser o caso no 
-momento, devido a um fator exógeno, a saber, a pandemia do corona vírus.
+Não apenas pelo estouro de uma bolha especulativa pode haver quedas nos preços
+dos bens imóveis, mas também por conta de uma inversão dos fundamentos
+econômicos que sustentavam os preços [@Case2000, 129], como aliás parece ser o
+caso no momento, devido a um fator exógeno, a saber, a pandemia do corona vírus.
 
 #### A crise imobiliária-financeira de 2008
 
@@ -981,7 +986,7 @@ pública, como os fundos de pensão, possuem metas atuariais que só são atingi
 com taxas mais altas. Estes investidores, então, pressionados a atingir estas
 metas atuariais, são obrigados a procurar opções de investimentos mais rentáveis
 do que os títulos públicos. Estas instituições, no entanto, tem em seus
-estatutos alugmas limitações, como investir apenas em produtos financeiros acima
+estatutos algumas limitações, como investir apenas em produtos financeiros acima
 de determinados *ratings*, ou seja, classificações dos produtos, que são
 elaboradas pelas agências de classificação de risco.
 
@@ -1005,7 +1010,7 @@ novos empréstimos.
 
 Neste ínterim, porém, surgiram empréstimos exóticos, em que o mutuário pagava
 por alguns anos apenas o valor dos juros. Depois deste período, o mutuário passa
-a pagar também um parte do principal. Este tipo de empréstimos eram chamados
+a pagar também uma parte do principal. Este tipo de empréstimos eram chamados
 de *interest-only loans*. No caso específico do mercado imobiliário, eram
 chamados de *interest-only mortgages*. Convencionou-se chamar este tipo de
 empréstimos também de empréstimos *subprime*, o que é terminologicamente
@@ -1076,7 +1081,7 @@ mercado. Na crise de 2008, este risco moral esteve presente não apenas neste
 desincentivo aos emprestadores para a diminuição dos riscos dos empréstimos, já 
 que estes eram securitizandos, mas também na crença de que, em última instância,
 os governos seriam obrigados a socorrer as instituições denominadas *too big to
-fail* (grandes de mais para quebrar) [@devil, 4-5].
+fail* (grandes demais para quebrar) [@devil, 4-5].
 
 
 ##### Derivativos de crédito
@@ -1116,7 +1121,7 @@ node [shape = box
       fontname = Helvetica
       penwidth = 2.0]
 'Pool of Assets'; SPV; Senior; Mezzanine; Equity
-  
+
 # add edge statements
 
 'Pool of Assets' -> SPV [label = 'Coupons']
@@ -1128,6 +1133,18 @@ SPV -> Mezzanine [label = '2º']
 SPV -> Equity [label = '3º']
 }
 ")
+# m <- mermaid("
+# graph LR
+# 
+# A[Pool of Assets]-->|Coupons|B{SPV}
+# B-->|1º|C[Senior]
+# B-->|2º|D[Mezzanine]
+# B-->|3º|E[Equity]
+# ", height = '100%', width = '100%')
+# 
+# networkD3::saveNetwork(m, "m.html")
+# webshot::webshot("m.html", file = "images/CDO.png")
+# knitr::include_graphics("images/CDO.png")
 ```
 \bcenter
 Fonte: Do autor. Adaptado de @devil.
@@ -1217,8 +1234,8 @@ financeiras viam os *senior tranches* como ativos muito seguros teve uma grande
 influência na crise financeira de 2008. Segundo Donnelly e Embrechts 
 [@devil, 24], um executivo de uma subsidiária da AIG chegou a dizer, em agosto
 de 2007 que era difícil vislumbrar um cenário onde a AIG poderia perder um dólar
-sequer com estes ativos. Em 2008 o prejuízo líquido da AIG foram de 
-US\$99 bilhões, sendo US\$62 bi apenas no último trimestre, auge da crise do 
+sequer com estes ativos. Em 2008 o prejuízo líquido da AIG foi de 
+US\$ 99 bilhões, sendo US\$ 62 bi apenas no último trimestre, auge da crise do 
 *subprime*.
 
 ##### Precificação
@@ -1252,11 +1269,12 @@ indesejável para a aferição de risco. Como enfatizam Donnelly e Embrechts
 para verificar a probabilidade de ocorrência de eventos extremos.
 
 Pela própria estrutura dos \gls{CDO}, havia uma concepção que muito raramente
-ocorreriam tantos *defaults* simultâneos a ponto de um *senior tranche* ser 
+ocorreriam tantos *defaults* simultâneos a ponto de um *senior tranche* ser
 afetado. Ocorre que pela própria característica da Copula Gaussiana, os eventos
 extremos não são suficientemente bem representados, o que não ocorre com outros
-models de Copulas, como  a de Gumbel, Clayton ou Copula-t. A apresentação destes 
-modelos será vista com detalhe no capítulo \@ref(copulas) ([O Método Copulas]).
+modelos de Copulas, como  a de Gumbel, Clayton ou Copula-t. A apresentação
+destes modelos será vista com detalhe no capítulo \@ref(copulas) ([O Método
+Copulas]).
 
 
 
@@ -1295,7 +1313,7 @@ dos outros mercados de bens de consumo. Apesar de toda a indústria da construç
 ter evoluído muito ao longo das últimas décadas, ainda persiste no Brasil um
 forte componente artesanal na construção civil, o que implica em bens imóveis
 de características muito distintas, a depender da mão-de-obra aplicada na sua
-execução. Também a questão do projeto arquitetônica implica numa singularidade
+execução. Também a questão do projeto arquitetônico implica numa singularidade
 para cada bem imobiliário. Mas mais importante ainda é a questão da localização,
 que torna cada imóvel único. Isto não ocorre em qualquer outro mercado de bens 
 de consumo. A não ser por questões de natureza sentimental, um carro, uma 
@@ -1535,7 +1553,7 @@ uma pandemia de proporções globais e ainda sem qualquer perspectiva que seja
 encontrada uma cura ou uma vacina contra o Corona vírus.
 
 Estimativas recentes dão conta de que os níveis de desemprego podem aumentar 
-substancialmente em todo o mundo, o que pode gerar um perspectiva de que a 
+substancialmente em todo o mundo, o que pode gerar uma perspectiva de que a 
 demanda por aluguéis diminua muito, puxada pela diminuição da renda da 
 população devido ao desemprego, *i.e.*, uma diminução no numerador da equação
 \@ref(eq:perpetua).

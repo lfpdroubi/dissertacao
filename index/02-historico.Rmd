@@ -161,6 +161,11 @@ pop_urb %>%
   coord_cartesian(xlim = c(1800, 2016)) +
   scale_x_continuous(expand=c(0,0),
                      breaks = seq(1800, 2010, 50)) +
+  annotate("rect", 
+           xmin= c(1914, 1939), 
+           xmax = c(1919, 1946), 
+           ymin = -Inf, ymax = +Inf, 
+           alpha = .2) +
   guides(color=guide_legend(title="País/Região"))
 ```
 \bcenter
@@ -172,7 +177,7 @@ urbana no Brasil em comparação com o continente sul-americano e a América Lat
 dando destaque para alguns vizinhos. 
 
 ```{r pop-urb-brazil-latinAmerica, out.width = "80%", fig.cap = "População Urbana - Brasil vs. AL."}
-cols <- gg_color_hue(6)
+cols <- gg_color_hue(7)
 pop_urb %>%
   filter( 
     Entity == "Latin America and the Caribbean" |
@@ -190,7 +195,8 @@ pop_urb %>%
   coord_cartesian(xlim = c(1950, 2016)) +
   scale_x_continuous(expand=c(0,0),
                      breaks = seq(1950, 2010, 10)) + 
-  scale_color_manual(values=c( cols[3],  cols[1],  cols[2],  cols[5],  cols[6],  cols[4])) +
+  scale_color_manual(values=c( cols[3],  cols[1],  cols[2],  
+                               cols[5],  cols[6],  cols[4])) +
   guides(color=guide_legend(title="País/Região"))
 ```
 \bcenter
@@ -218,18 +224,26 @@ pop_urb %>%
     Entity == "Germany" |
     Entity == "France"|
     Code == "GBR" |
-    Entity == "England and Wales"
+    Entity == "England and Wales" |
+    Entity == "Netherlands" |
+    Entity == "Switzerland"
       ) %>%
   ggplot(., aes(x = Year, y = Urban...., color = Entity)) +
   geom_line() +
   labs(title = "População Urbana", 
        subtitle = "Brasil vs. Países Desenvolvidos.", 
-       caption = "Desde 1950 ") +
+       caption = "Desde 1800 ") +
   ylab("%") +
   coord_cartesian(xlim = c(1800, 2016)) +
   scale_x_continuous(expand=c(0,0),
                      breaks = seq(1800, 2010, 50)) + 
-  scale_color_manual(values=c(cols[1], cols[2], cols[3], cols[4], cols[2], cols[5])) +
+  scale_color_manual(values=c(cols[1], cols[2], cols[3], cols[4], cols[6], 
+                              cols[7], cols[2], cols[5])) +
+  annotate("rect", 
+       xmin= c(1914, 1939), 
+       xmax = c(1919, 1946), 
+       ymin = -Inf, ymax = +Inf, 
+       alpha = .2) + 
   guides(color=guide_legend(title="País/Região"))
 ```
 \bcenter
@@ -277,11 +291,10 @@ se estagnava.
 
 Chegado os anos 90, a população urbana brasileira atingiu notáveis 73,9% da
 população brasileira, número equiparado ao da população urbana do mundo
-desenvolvido (74% na Europa Ocidental).
-
-Em meados dos anos 2000, já então no século atual, ousamos ultrapassar, em
-proporção, a população urbana da Europa Ocidental e a dos EUA, chegando ao
-último dado de 2015, com 85,8% da população brasileira vivendo nas cidades.
+desenvolvido (74% na Europa Ocidental). Em meados dos anos 2000, já então no
+século atual, ela ultrapassou, em proporção, a população urbana da Europa
+Ocidental e a dos EUA, chegando ao último dado de 2015, com 85,8% da população
+brasileira vivendo nas cidades.
 
 Há de se levar em consideração, ainda, que este "êxodo rural" ainda foi
 acompanhado de um crescimento demográfico expressivo.
