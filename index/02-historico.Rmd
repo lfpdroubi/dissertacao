@@ -223,7 +223,7 @@ pop_urb %>%
     Entity == "United States" |
     Entity == "Germany" |
     Entity == "France"|
-    Code == "GBR" |
+    Entity == "United Kingdom" |
     Entity == "England and Wales" |
     Entity == "Netherlands" |
     Entity == "Switzerland"
@@ -332,6 +332,27 @@ se faz escalonadamente, das áreas rurais para as cidades pequenas; destas para
 as médias e grandes, e posteriormente para as metrópoles gigantes. No fim da
 linha, portanto, vamos encontrar as cidades de São Paulo e do Rio de Janeiro".
 \end{citacao}
+
+De fato, os dados parecem mostrar a pertinência desta análise. Segundo 
+@doi:10.1177/0959683609356587, em 1990 36,7% da população urbana brasileira
+vivia em favelas. É verdade que a proporção da população urbana vivendo em 
+favelas vem diminuindo desde então. Em 2000, 31,5% da população urbana ocupava
+as favelas, ao passo que em 2014 esse número diminuiu para 22,3% da população
+urbana.
+
+No entanto, com o crescimento da população brasileira e o aumento da porcentagem
+de população urbana desde então, os números totais estão estagnados.
+
+| Ano | População Total | Pop. Urbana (%) | Pop. urbana (hab.) | Favelas (%) | Favelas (hab.) |
+|----:|----------------:|----------------:|-------------------:|------------:|---------------:|
+|1990 | 149             |   73,9          | 110,1              | 36,7        | 40,4           |
+|1995 | 162             |   77,61         | 125,7              | 34,1        | 42,9           |
+|2000 | 174,8           |   81,2          | 141,9              | 31,5        | 44,7           |
+|2005 | 186,1           |   82,8          | 154,2              | 29,0        | 44,7           |
+|2014 | 202,8           |   85,9          | 174,3              | 22,3        | 38,9           |
+Table: População habitando favelas no Brasil.
+
+
 
 Enfim, para Rangel, a origem deste "multitudinário deslocamento demográfico",
 está "o modo como o país preparou sua estrutura agrária para a industrialização".
