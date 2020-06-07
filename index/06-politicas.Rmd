@@ -24,7 +24,7 @@ no mínimo, 51 unidades habitacionais ocupando ou tendo ocupado, até período
 recente, terreno de propriedade alheia (pública ou particular) dispostas, em
 geral, de forma desordenada e densa, e apresentando carência em serviços
 básicos.
-\cita{ibge2}
+\cite{ibge2}
 \end{citacao}
 
 Segundo o censo de 2010 do IBGE [@ibge], em 2010 o Brasil possuía 11,4 milhões
@@ -180,7 +180,18 @@ lutam para construir algum tipo aceitável de existência para si mesmos.
 @jung2018 compara as políticas de habitação praticadas desde o início do século
 XX no Brasil e na Inglaterra.
 
-## Cooperativas habitacionais
+### O sanitarismo como propulsor das políticas habitacionais
+
+Segundo Poleto [-@poleto, 36], dada a incapacidade do mercado, logo após a revolução industrial, de suprir as condições de moradia digna para a classe trabalhadora, a intervenção estatal foi necessária, ainda que de forma inicialmente tímida e pontual.
+
+Para Poleto [-@poleto, 37], na Holanda, país pioneiro neste tipo de intervenção
+estatal para construção de habitações sociais, estas intervenções se deram 
+principalmente devido às crises da epidemia de cólera de meados do século XIX,
+"que acometiam principalmente as regiões com habitações mais pobres, atrelando
+dessa forma a condição de moradia a uma questão de saúde pública".
+
+
+### Cooperativas habitacionais
 
 Nos primórdios do capitalismo nos países hoje dito desenvolvidos, dada a 
 impossibilidade do mercado suprir a demanda por habitações acessíveis para os
@@ -208,13 +219,182 @@ estabelecimento de planos de extensão para desapropriar imóveis considerados
 insalubres, adquirir áreas e construir diretamente ou oferecer empréstimos para
 cooperativas ou sociedades de promoção de moradias populares.
 
-Segundo Poleto [-@poleto, 89], 
+Na Alemanha a legislação também fomentou o crescimento das cooperativas
+habitacionais (em 1924 foi instituída uma taxa de 15% sobre o aluguel das
+habitações já construídas para alavancar os fundos federais para construção
+habitacional) e as próprias administrações muncipais tinham a função de atuar no
+desenho urbano para possibilitar a produção em massa de habitação. Esta
+interação levou à construção de 130.000 unidades habitacionais entre 1924 e
+1930, sendo que em algumas cidades como Berlim os conjuntos habitacionais foram
+amplamente divulgados e reconhecidos nos meios arquitetônicos, adquirando valor
+emblemático na história da arquitetura do século XX [@poleto, 90].destravar 
+
 
 
 ## Instrumentos de política do solo
 
+O Estatuto da Cidade (lei 10.257, de 10 de julho de 2001) prevê uma série de
+instrumentos de política urbana. Segundo o Estatuto, os instrumentos são
+classificados em seis categorias:
+
+I. planos nacionais, regionais e estaduais de ordenação do território e de desenvolvimento econômico e social;
+
+II. planejamento das regiões metropolitanas, aglomerações urbanas e microrregiões;
+
+III. planejamento municipal;
+
+IV. institutos tributários e financeiros;
+
+V. institutos jurídicos e políticos;
+
+VI. \gls{EIA} e \gls{EIV}.
+
+Dentre os instrumentos citados, destacamos os seguintes.
+
 ### IPTU progressivo
+
+O \gls{IPTU} progressivo no tempo tem como finalidade promover uma maior
+efetividade da função social da propriedade.
 
 ### Contribuição de melhoria
 
-###
+### Regularização Fundiária
+
+A \gls{REURB} é um instrumento de política urbana essencial em países onde
+existem altos índices de informalidade, como nos países da América Latina, por
+ser uma forma de aquisição de propriedade.
+
+No Brasil, diversos avanços foram trazidos com a edição da lei 11.977, de 07 de
+junho de 2009, que previa em seu capítulo III, artigos 46 a 71, a regularização
+fundiária de assentamentos urbanos e, conjuntamente com a titulação do imóvel,
+uma série de medidas associadas a condições dignas de moradia e acesso à
+infraestrutura adequada. Porém, com a edição da nova lei 13465/2017, estas
+medidas foram retiradas.
+
+A nova lei sobre regularização fundiária (lei 13.465/2017) trata, além da
+\gls{REURB-S} e da \gls{REURB-E}, da "regularização fundiária" rural e na
+Amazônia Legal. Entre os pontos polêmicos desta nova lei está a regularização de
+conjuntos habitacionais sem a obrigatoriedade do "habite-se" (artigos 60 e 63),
+entre outros, como a possibilidade de regularização de imóveis em áreas
+públicas, o que deverá ser discutida pelo \gls{STF} na \gls{ADI} 5771, proposta
+pela \gls{PGR}.
+
+O instituto da regularização fundiária de imóveis públicos já estava previsto na
+lei 9.636, de 15 de maio de 1998, porém apenas para comunidades de baixa renda, 
+como se vê na redação do art. 6º-A da referida lei:
+
+\begin{citacao}
+Art. 6º-A No caso de cadastramento de ocupações para fins de moradia cujo
+ocupante seja considerado carente ou de baixa renda, na forma do $\S$ 2º do art.
+1º do Decreto-Lei nº 1.876, de 15 de julho de 1981, a União poderá proceder à
+regularização fundiária da área, utilizando, entre outros, os instrumentos
+previstos no art. 18, no inciso VI do art. 19 e nos arts. 22-A e 31 desta Lei.
+\end{citacao}
+
+#### Exemplo de regularização fundiária de imóvel público -- Ponta do Leal, Florianópolis/SC
+
+Um exemplo do bom uso da regularização fundiária em imóvel público é a
+regularização da comunidade da Ponta do Leal, localizada no Balneário do
+Estreito, em Florianópolis/SC.
+
+O processo tramitou na \gls{SPU} em Santa Catarina sob nº 04972.000987/2010-14.
+
+```{r}
+# lpm <- st_read("https://raw.githubusercontent.com/lfpdroubi/SPUData/master/linhas/LPM_HOMOLOGADA.geojson")
+# lltm <- st_read("https://raw.githubusercontent.com/lfpdroubi/SPUData/master/linhas/LLTM_HOMOLOGADA.geojson")
+# m <-
+#   leaflet() %>%
+#   addWMSTiles(baseUrl = "http://sigsc.sc.gov.br/sigserver/SIGSC/wms",
+#               layers = list("OrtoRGB-Landsat-2012")) %>% 
+#   setView(lat = -27.579613, lng = -48.576272, zoom = 18) %>% 
+#   addPolylines(data = lpm, color = "blue") %>% 
+#   addPolylines(data = lltm, color = "red")
+# mapview::mapshot(m, file = "images/ponta-leal-antes.png")
+# m1 <-
+#   leaflet() %>%
+#   addProviderTiles("Esri.WorldImagery") %>% 
+#   setView(lat = -27.579613, lng = -48.576272, zoom = 18) %>% 
+#   addPolylines(data = lpm, color = "blue") %>% 
+#   addPolylines(data = lltm, color = "red")
+# mapview::mapshot(m1, file = "images/ponta-leal-depois.png")
+```
+
+
+```{r ponta-leal-antes, fig.cap = "Ponta do Leal. Situação anterior: palafitas situadas em terrenos de marinha."}
+knitr::include_graphics("images/ponta-leal-antes.png")
+```
+\bcenter
+Fonte: @sigsc.
+\ecenter
+
+Como pode ser visto na figura \@ref(fig:ponta-leal-antes), a comunidade ali 
+radicada habitava palafitas em condições degradantes, sem condições mínimas de
+salubridade.
+
+Com a intervenção do governo federal, através da \gls{SPU} em SC, responsável
+pelos cadastramento das famílias,  e com o auxílio da \gls{CEF}, foram
+construídos quatro edifícios de apartamentos com o \gls{PMCMV}, beneficiando as
+famílias ali existentes.
+
+```{r ponta-leal-depois, fig.cap = "Ponta do Leal. Situação atual: construídos quatro edifícios de apartamentos."}
+knitr::include_graphics("images/ponta-leal-depois.png")
+```
+\bcenter
+Fonte: Imagens de satélite da ESRI.
+\ecenter
+
+A figura \@ref(fig:ponta-leal-depois) mostra a área após a regularização, com os
+edifício construídos e as palafitas devidamente removidas (a fota atualizada com
+as palafitas removidas ainda não estão disponíveis, mas até o final da escrita 
+da dissertação devem estar).
+
+### Controle de aluguéis residenciais
+
+Diversos países utilizaram em algum momento a política de controle de aluguéis 
+com o intuito de conter o peso excessivo dos custos habitacionais sobre a 
+população em geral. Estas políticas intervencionistas do poder público sobre o
+mercado, no entanto, vão contra a ideologia liberal predominante, que prega a 
+livre atuação das forças de mercado como solução para os mais diversos problemas,
+não somente os habitacionais.
+
+Na Alemanha houve controle de aluguéis entre 1917 e 1922, o que afastou a
+iniciativa privada da produção habitacional. Por outro lado, o governo assumiu
+pra si a responsabilidade pela construção das moradias, chegando a ser
+utilizados fundos públicos para a construção de 70% das habitações edificadas
+[@poleto, 89].
+
+Após, em 1990, o chamado *Wohnungsgemeinnütziqkeit* limitou os reajustes dos
+aluguéis em Berlim, após a reabertura econômica. 
+
+Atualmente, após um rápido e forte aumento dos preços dos imóveis e dos
+aluguéis, devido ao forte aumento da procura por moradia na cidade, às
+dificuldades regulatórias para a construção de novas moradias e o forte
+desenvolvimento do setor de turismo que se estabeleceu na cidade, Berlim foi
+obrigada a estabelecer um teto no valor dos aluguéis (*Mietendeckel*), além do
+congelamento do preço dos aluguéis dos imóveis construídos antes de 2013 e da
+requisição pública de imóveis privatizados durante a década de 1990. [@berlim].
+
+A crise habitacional atual tem levado uma série de cidades européias a implantar
+o controle de aluguéis residenciais, tais como Barcelona, Amsterdam e Paris
+[@economist-rent-control]. A cidade de Londres também vem discutindo a
+implementação de uma comissão para sistema de controle efetivo de aluguéis, a
+criação de um sistema de registro universal de proprietários e o estabelecimento
+de tetos para os aluguéis como medida de urgência, enquanto não se cria a
+comissão referida [@guardian].
+
+No Brasil houve uma tentativa de estabelecer um controle de aluguéis através do
+decreto-lei do inquilinato, de 1942. No entanto, àquela época a adoção da do
+controle de aluguéis parece ter tido mais motivações econômicas, no sentido de
+destinar mais capitais para a indústria leve então em implantação no Brasil, num
+contexto de falta de capitais de vulto para fazêlo, do que motivações no sentido
+de promover uma boa política habitacional. De fato, o efeito do congelamento do
+valor dos aluguéis então foi de paralisar o segmento de construção para fins
+habitacionais, levando ao fim numa crise habitacional de grande monta.
+[@bonduki_origens_1994]
+
+De toda maneira, entende-se que esta política de controle de aluguéis é muito
+limitada e só teria um efeito positivo se mantida por um curto período de tempo,
+de maneira que não desincentive a construção de novas moradias pelo mercado, e 
+que venha acompanhada de outras medidas que impulsionem a construção de 
+habitações sociais.
+

@@ -177,7 +177,7 @@ urbana no Brasil em comparação com o continente sul-americano e a América Lat
 dando destaque para alguns vizinhos. 
 
 ```{r pop-urb-brazil-latinAmerica, out.width = "80%", fig.cap = "População Urbana - Brasil vs. AL."}
-cols <- gg_color_hue(7)
+cols <- gg_color_hue(8)
 pop_urb %>%
   filter( 
     Entity == "Latin America and the Caribbean" |
@@ -237,7 +237,7 @@ pop_urb %>%
   coord_cartesian(xlim = c(1800, 2016)) +
   scale_x_continuous(expand=c(0,0),
                      breaks = seq(1800, 2010, 50)) + 
-  scale_color_manual(values=c(cols[1], cols[2], cols[3], cols[4], cols[6], 
+  scale_color_manual(values=c(cols[8], cols[1], cols[2], cols[3], cols[4], cols[6], 
                               cols[7], cols[2], cols[5])) +
   annotate("rect", 
        xmin= c(1914, 1939), 
@@ -333,26 +333,56 @@ as médias e grandes, e posteriormente para as metrópoles gigantes. No fim da
 linha, portanto, vamos encontrar as cidades de São Paulo e do Rio de Janeiro".
 \end{citacao}
 
-De fato, os dados parecem mostrar a pertinência desta análise. Segundo 
-@doi:10.1177/0959683609356587, em 1990 36,7% da população urbana brasileira
-vivia em favelas. É verdade que a proporção da população urbana vivendo em 
-favelas vem diminuindo desde então. Em 2000, 31,5% da população urbana ocupava
-as favelas, ao passo que em 2014 esse número diminuiu para 22,3% da população
-urbana.
+De fato, os dados parecem mostrar a pertinência desta análise. Segundo
+@ritchie_urbanization_2018, em 1990 em torno de 36,7% da população urbana
+brasileira vivia em favelas. É verdade que a proporção da população urbana
+vivendo em favelas vem diminuindo desde então. Em 2000, 31,5% da população
+urbana ocupava as favelas, ao passo que em 2014 esse número diminuiu para 22,3%
+da população urbana.
 
 No entanto, com o crescimento da população brasileira e o aumento da porcentagem
-de população urbana desde então, os números totais estão estagnados.
+de população urbana desde então, os números totais estão praticamente estagnados,
+o que pode ser observado na tabela abaixo.
 
-| Ano | População Total | Pop. Urbana (%) | Pop. urbana (hab.) | Favelas (%) | Favelas (hab.) |
-|----:|----------------:|----------------:|-------------------:|------------:|---------------:|
-|1990 | 149             |   73,9          | 110,1              | 36,7        | 40,4           |
-|1995 | 162             |   77,61         | 125,7              | 34,1        | 42,9           |
-|2000 | 174,8           |   81,2          | 141,9              | 31,5        | 44,7           |
-|2005 | 186,1           |   82,8          | 154,2              | 29,0        | 44,7           |
-|2014 | 202,8           |   85,9          | 174,3              | 22,3        | 38,9           |
+| Ano | Pop. ootal (milhões hab.) | Pop. urbana (%) | Pop. urbana (milhões hab.) | Favelas (%) | Favelas (milhões hab.)|
+|----:|--------------------------:|----------------:|---------------------------:|------------:|----------------------:|
+|1990 | 149,0                     |   73,90         | 110,1                      | 36,7        | 40,4                  |
+|1995 | 162,0                     |   77,61         | 125,7                      | 34,1        | 42,9                  |
+|2000 | 174,8                     |   81,20         | 141,9                      | 31,5        | 44,7                  |
+|2005 | 186,1                     |   82,80         | 154,2                      | 29,0        | 44,7                  |
+|2009 | 193,9                     |   84,04         | 162,9                      | 26,9        | 43,8                  |
+|2014 | 202,8                     |   85,90         | 174,3                      | 22,3        | 38,9                  |
 Table: População habitando favelas no Brasil.
 
+\bcenter
+Fonte: Do autor, a partir de dados do Banco Mundial.
+\ecenter
 
+A figura \@ref(fig:slums) mostra graficamente a evolução da população urbana em
+favelas (em vermelho) e a população urbana total (em azul). Nota-se que o 
+aumento da população urbana ocorreu com a quase estagnada população das 
+favelas.
+
+A situação econômica do país deve ter um peso na composição da população
+habitando as favelas: a década de 90 e o início da década de 2000 são períodos
+sabidamente de crescimento baixo e intermitente, intercalados por graves
+recessões na economia brasileira. Já a baixa considerável desta população
+desfavorecida entre os períodos de 2009 e 2014 (aprox. 11%) sugere que houve um
+impacto do crescimento econômico do período[^1], que veio acompanhado de
+programas habitacionais destinados à população de baixa renda, como o Minha Casa
+Minha Vida e, ainda que mais timidamente, do instituto da regularização
+fundiária. Deve-se lembrar que neste período houve aumento da proporção de
+população urbana, ou seja, a diminuição da população favelada com certeza não
+reflete um fenômeno de migração da cidade para o campo.
+
+[^1]: Especialmente no que tange à manutenção de baixas taxas de desemprego.
+
+```{r slums, fig.cap = "População urbana e população em favelas."}
+knitr::include_graphics("images/urban-pop-in-out-of-slums.png")
+```
+\bcenter
+Fonte: @ritchie_urbanization_2018
+\ecenter
 
 Enfim, para Rangel, a origem deste "multitudinário deslocamento demográfico",
 está "o modo como o país preparou sua estrutura agrária para a industrialização".
@@ -631,13 +661,13 @@ economia natural, causando por isso mesmo, o fenômeno do **êxodo rural**"
 
 O caso brasileiro, porém, não é único: "a industrialização da Inglaterra fez-se
 também, originariamente, nas condições de um enorme excedente de mão de obra,
-causado pelo *enclosure*[^1] ...". No caso inglês, porém, "o motor primário" do
+causado pelo *enclosure*[^2] ...". No caso inglês, porém, "o motor primário" do
 desenvolvimento foi a produção manufatureira para exportação, enquanto no Brasil
 a industrialização teve seu desenvolvimento estimulado, "nas condições de uma
 crônica crise cambial", pela política de substituição de importações
 [@rangel1962, 43-44].
 
-[^1]: *Enclosure* - literalmente, cercamento. Movimento pelo qual os pequenos 
+[^2]: *Enclosure* - literalmente, cercamento. Movimento pelo qual os pequenos 
 agricultores ingleses foram expulsos de terras, convertidas estas à pecuária, e
 amontoados nos *slums*, ou favelas das cidades industriais nascentes, na 
 primeira metade do século XIX.
