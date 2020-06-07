@@ -62,6 +62,11 @@ instrumentos financeiros, como foi visto, tende a gerar bolhas no mercado
 imobiliário, o que tende a agravar o problema habitacional, prejudicando as
 famílias de menor renda.
 
+O que se nota hoje nos países desenvolvidos é uma grave crise habitacional, 
+apesar de todo o desenvolvimento dos seus mercados financeiros, da baixa 
+informalidade e dos baixos juros que sempre tiveram, se comparados aos países em
+desenvolvimento [@housing-europe; @california]. 
+
 Considera-se, porém, que o problema especulativo não é a raiz do problema.
 Segundo Zizek [-@zizek2005, 220-221], não é possível retirar a especulação de um
 suposto capitalismo puro: a especulação é a própria alma do processo produtivo
@@ -87,13 +92,13 @@ nos fundamentos o problema dos preços elevados, não em grandes desvios de curt
 prazo (bolhas especulativas) dos preços em relação aos fundamentos econômicos, 
 pois taxas de juros tão baixas tendem a valorizar ainda mais preço da terra.
 
-Também a redução dos juros hipotecários, ao invés de ajudar, tende a agravar o
-problema, como foi visto no capítulo \@ref(economia), dado que o aumento do
-valor dos imóveis é exponencial com a queda das taxas de juros. A redução dos
-juros, que como se mostrou, está na ordem natural das coisas, já que as taxas
-dos créditos hipotecários acompanham as taxas de juros básicas, ou seja, não se
-pode esperar que a solução para o problema habitacional tenha lugar a partir de
-uma menor taxa de exploração dos mutuários.
+Também a redução dos juros hipotecários, ao invés de ajudar, como seria de se
+esperar, tende a agravar o problema, como foi visto no capítulo \@ref(economia),
+dado que o aumento do valor dos imóveis é exponencial com a queda das taxas de
+juros. A redução dos juros, como se mostrou, está na ordem natural das
+coisas, já que as taxas dos créditos hipotecários acompanham as taxas de juros
+básicas.Ou seja, não se pode esperar que a solução para o problema habitacional
+tenha lugar a partir de uma menor taxa de exploração dos mutuários.
 
 Segundo @terraredonda, ainda, esse aumento dos preços dos imóveis parece ter
 efeito de beneficiar os proprietários, mas esses não são os principais 
@@ -117,8 +122,8 @@ apenas a privatização melhoraria as coisas.
 \end{citacao}
 
 @terraredonda nos dá uma pista de como os países desenvolvidos lidaram com este
-problema no passado: habitação sob domínio público. Claro, pois é inútil 
-aguardar que a solução venha através do mercado. 
+problema no passado: habitação sob domínio público, ou simplesmente habitação
+social. Claro, pois é inútil aguardar que a solução venha através do mercado. 
 
 Segundo @terraredonda:
 
@@ -175,14 +180,79 @@ lutam para construir algum tipo aceitável de existência para si mesmos.
 \end{citacao}
 
 
-## Histórico das políticas habitacionais e urbanas 
+## Breve histórico das políticas habitacionais e urbanas 
 
-@jung2018 compara as políticas de habitação praticadas desde o início do século
-XX no Brasil e na Inglaterra.
+Gonzalez [-@jung2018] compara as políticas de habitação praticadas desde o
+início do século XX no Brasil e na Inglaterra. De acordo com Gonzales
+[-@jung2018, 165], a diferença principal entre os dois países, além dos aspectos
+cronológicos, é que enquanto no Brasil houve uma opção clara pela construção de
+grandes conjuntos habitacionais, geralmente periféricos, na Inglaterra optou-se
+por um balanço entre grandes conjuntos e núcleos urbanísticos do tipo
+Cidade-Jardim, *new towns*, aluguel social e revitalização urbana. Ainda segundo
+Gonzales, o que se observou também nos dois países é que em grandes conjuntos
+habitacionais onde priorizam-se a quantidade de imóveis em detrimento da sua
+qualidade, estes acabam por serem rejeitados pela população.
+
+Segundo Rolnik [*apud* @jung2018, 165-166]:
+
+\begin{citacao}
+A principal característica dos assentamentos precários é a ausência de
+infraestrutura – água, luz, esgoto, rede elétrica, iluminação pública,
+pavimentação, etc. Nesse sentido há algumas semelhanças entre a precariedade de
+lá e a daqui. Mas nos países desenvolvidos as favelas aparecem aqui e ali,
+residualmente. Raramente se permite que uma região fique abandonada por muito
+tempo. Já aqui, é comum encontrar até neto dos primeiros moradores de uma favela
+vivendo em condições similares às que viviam seus avós. Temos assentamentos
+precários com até 50 anos de existência. A favela é elemento estrutural do
+processo de urbanização. Ou seja, desde sua concepção, o modelo de urbanização
+adotado não acolhe os pobres. Vou dar um exemplo. Na Inglaterra, desde a década
+de 50, todo novo empreendimento imobiliário deve destinar parte de seu terreno
+às moradias populares. Houve interesse, desde a aceleração do processo de
+urbanização, de incluir quem não tinha acesso à moradia. No Brasil, não existe
+uma política de uso do solo urbano desenhada para acolher a habitação social.
+Aqui a política habitacional se limita ao crédito para a indústria da construção
+civil. Mas de que adianta esse crédito se ele só viabiliza a construção de casas
+de quinta categoria a 50 quilômetros da cidade? Estamos perpetuando a
+precariedade
+\end{citacao}
+
+Apesar das políticas habitacionais avançadas executadas durante a primeira 
+metade do século XX, porém, à partir do *Housing Act*, de 1980, que instituiu o
+*Right to buy*, ou direito de comprar (das habitações de interesse social), a 
+lógica do mercado, do neoliberalismo Tatcherista, voltou a prevalecer: o 
+resultado é que já em fins dos anos 80, com o aumento dos preços dos imóveis e a
+ausência de intervenções públicas, o índice de desabrigados na cidade de Londres
+já era novamente muito alto [@jung2018, 72].
+
+De fato, a produção de novas unidades habitacionais diminui de maneira drástica,
+especialmente pela abrupta diminuição das unidades construídas pelo setor 
+público, o que pode ser visto na figura \@ref(fig:inglaterra-unidades). 
+
+```{r inglaterra-unidades, fig.cap="Construções de novas unidades habitacionais na Inglaterra, de 1974 a 1994."}
+knitr::include_graphics("images/inglaterra-unidades.png")
+```
+\bcenter
+Fonte: VARADY, 1998 [*apud* @jung2018, 73].
+\ecenter
+
+Como se pode perceber, ainda, a diminuição da produção de unidades habitacionais
+pelo poder público não foi compensada por um aumento na produção de unidades 
+pelo setor privado.
+
+Após o ano 2000 diversas tentativas foram feitas pelos governos trabalhistas de
+Tony Blair, sem resultados animadores, contudo. Com o intuito de evitar criar
+guetos, nos moldes atuais, é exigido dos empreendedores que ao menos 40% das
+unidades construídas sejam destinadas à habitação social (*affordable housing*),
+sendo que a qualidade construtiva destas habitações sociais deve ser a mesma das
+demais unidades do empreendimento, com excessão da metragem quadrada, o que 
+parece ser uma tendência [@jung2018, 77].
 
 ### O sanitarismo como propulsor das políticas habitacionais
 
-Segundo Poleto [-@poleto, 36], dada a incapacidade do mercado, logo após a revolução industrial, de suprir as condições de moradia digna para a classe trabalhadora, a intervenção estatal foi necessária, ainda que de forma inicialmente tímida e pontual.
+Segundo Poleto [-@poleto, 36], dada a incapacidade do mercado, logo após a
+revolução industrial, de suprir as condições de moradia digna para a classe
+trabalhadora, a intervenção estatal foi necessária, ainda que de forma
+inicialmente tímida e pontual.
 
 Para Poleto [-@poleto, 37], na Holanda, país pioneiro neste tipo de intervenção
 estatal para construção de habitações sociais, estas intervenções se deram 
@@ -190,6 +260,10 @@ principalmente devido às crises da epidemia de cólera de meados do século XIX
 "que acometiam principalmente as regiões com habitações mais pobres, atrelando
 dessa forma a condição de moradia a uma questão de saúde pública".
 
+Da mesma maneira, devido à atual pandemia de COVID-19, concomitante com esta
+grave crise urbana que já se estava alimentando há alguns anos, é evidente que 
+a tendência é que haja mobilização pela volta da intervenção estatal para a 
+construção de habitações sociais.
 
 ### Cooperativas habitacionais
 
@@ -208,10 +282,10 @@ classe trabalhadora.
 
 A primeira legislação no sentido de regulamentar e incentivar a produção de
 habitação atrelada à planejamentos municipais foi o Ato Habitacional
-(Woningwet), de 1901, na Holanda. Esta lei pioneira foi criada baseada em um
-diagnóstico da Sociedade para o Bem-Estar Geral (*Maatschappij tot nut van t'
-algemeen*) de 1887, posteriormente publicados em 1894 no documento "A Questão da
-Habitação Social".
+(*Woningwet*), de 1901, na Holanda. Esta lei pioneira foi criada baseada em um
+diagnóstico da Sociedade para o Bem-Estar Geral 
+(*Maatschappij tot nut van t'algemeen*) de 1887, posteriormente publicados em 
+1894 no documento "A Questão da Habitação Social".
 
 Em 1902 o Ato Habitacional foi aprovado pela coroa holandesa que atribuiu às
 administrações locais o direito, dever e meios financeiros para o 
@@ -227,19 +301,23 @@ desenho urbano para possibilitar a produção em massa de habitação. Esta
 interação levou à construção de 130.000 unidades habitacionais entre 1924 e
 1930, sendo que em algumas cidades como Berlim os conjuntos habitacionais foram
 amplamente divulgados e reconhecidos nos meios arquitetônicos, adquirando valor
-emblemático na história da arquitetura do século XX [@poleto, 90].destravar 
+emblemático na história da arquitetura do século XX [@poleto, 90].
 
 
 
 ## Instrumentos de política do solo
 
+### Estatuto da Cidade
+
 O Estatuto da Cidade (lei 10.257, de 10 de julho de 2001) prevê uma série de
 instrumentos de política urbana. Segundo o Estatuto, os instrumentos são
 classificados em seis categorias:
 
-I. planos nacionais, regionais e estaduais de ordenação do território e de desenvolvimento econômico e social;
+I. planos nacionais, regionais e estaduais de ordenação do território e de 
+desenvolvimento econômico e social;
 
-II. planejamento das regiões metropolitanas, aglomerações urbanas e microrregiões;
+II. planejamento das regiões metropolitanas, aglomerações urbanas e 
+microrregiões;
 
 III. planejamento municipal;
 
@@ -251,14 +329,16 @@ VI. \gls{EIA} e \gls{EIV}.
 
 Dentre os instrumentos citados, destacamos os seguintes.
 
-### IPTU progressivo
+#### IPTU progressivo
 
 O \gls{IPTU} progressivo no tempo tem como finalidade promover uma maior
 efetividade da função social da propriedade.
 
-### Contribuição de melhoria
+#### Contribuição de melhoria
 
-### Regularização Fundiária
+A escrever...
+
+#### Regularização Fundiária
 
 A \gls{REURB} é um instrumento de política urbana essencial em países onde
 existem altos índices de informalidade, como nos países da América Latina, por
@@ -291,7 +371,7 @@ regularização fundiária da área, utilizando, entre outros, os instrumentos
 previstos no art. 18, no inciso VI do art. 19 e nos arts. 22-A e 31 desta Lei.
 \end{citacao}
 
-#### Exemplo de regularização fundiária de imóvel público -- Ponta do Leal, Florianópolis/SC
+##### Exemplo de regularização fundiária de imóvel público -- Ponta do Leal, Florianópolis/SC
 
 Um exemplo do bom uso da regularização fundiária em imóvel público é a
 regularização da comunidade da Ponta do Leal, localizada no Balneário do
@@ -305,16 +385,16 @@ O processo tramitou na \gls{SPU} em Santa Catarina sob nº 04972.000987/2010-14.
 # m <-
 #   leaflet() %>%
 #   addWMSTiles(baseUrl = "http://sigsc.sc.gov.br/sigserver/SIGSC/wms",
-#               layers = list("OrtoRGB-Landsat-2012")) %>% 
-#   setView(lat = -27.579613, lng = -48.576272, zoom = 18) %>% 
-#   addPolylines(data = lpm, color = "blue") %>% 
+#               layers = list("OrtoRGB-Landsat-2012")) %>%
+#   setView(lat = -27.579613, lng = -48.576272, zoom = 18) %>%
+#   addPolylines(data = lpm, color = "blue") %>%
 #   addPolylines(data = lltm, color = "red")
 # mapview::mapshot(m, file = "images/ponta-leal-antes.png")
 # m1 <-
 #   leaflet() %>%
-#   addProviderTiles("Esri.WorldImagery") %>% 
-#   setView(lat = -27.579613, lng = -48.576272, zoom = 18) %>% 
-#   addPolylines(data = lpm, color = "blue") %>% 
+#   addProviderTiles("Esri.WorldImagery") %>%
+#   setView(lat = -27.579613, lng = -48.576272, zoom = 18) %>%
+#   addPolylines(data = lpm, color = "blue") %>%
 #   addPolylines(data = lltm, color = "red")
 # mapview::mapshot(m1, file = "images/ponta-leal-depois.png")
 ```
@@ -348,7 +428,9 @@ edifício construídos e as palafitas devidamente removidas (a fota atualizada c
 as palafitas removidas ainda não estão disponíveis, mas até o final da escrita 
 da dissertação devem estar).
 
-### Controle de aluguéis residenciais
+### Outros instrumentos
+
+#### Controle de aluguéis residenciais
 
 Diversos países utilizaram em algum momento a política de controle de aluguéis 
 com o intuito de conter o peso excessivo dos custos habitacionais sobre a 
@@ -397,4 +479,20 @@ limitada e só teria um efeito positivo se mantida por um curto período de temp
 de maneira que não desincentive a construção de novas moradias pelo mercado, e 
 que venha acompanhada de outras medidas que impulsionem a construção de 
 habitações sociais.
+
+#### Intervenção estatal direta
+
+Apesar da atual procura pelos governos por soluções de mercado que resolvam os 
+problemas sem a necessidade de uma intervenção estatal direta, parece que esta
+é, ainda hoje, a única opção realmente eficaz no sentido de resolver o problema.
+
+Apesar do relativo sucesso do \gls{PMCMV}, soluções como as da Ponta do Leal, em
+que a implantação da habitação social se deu em área nobre, são uma exceção à
+regra. A tendência neste tipo de programa é que os empreendimentos se viabilizem
+apenas em áreas remotas, desprovidas de transporte público decente, escolas,
+postos de saúde, segurança e outros, o que acaba por acarretar ou numa
+necessidade maior de investimento em infraestrutura pública, ou na tendência de
+favelização e abandono destas construções com o tempo.
+
+
 

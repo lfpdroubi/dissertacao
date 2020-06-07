@@ -18,14 +18,14 @@ taxa de juros no centro do seu sistema*. Posteriormente, foi Keynes quem
 *restabeleceu, até um certo ponto, a importância da taxa de lucros, através do
 conceito de eficiência marginal do capital*.
 
-Para @Bresser-Pereira1973, "a teoria ortodoxa[^2] sobre a função investimento 
+Para @Bresser-Pereira1973, "a teoria ortodoxa[^3] sobre a função investimento 
 afirma que a acumulação de capital depende da taxa de lucro prevista (ou 
 eficiência marginal do capital) da taxa de juros, dado o nível da renda", com 
 uma relação inversa, ou seja, à medida que aumenta o volume de investimentos, 
 cai a eficiência marginal do capital, conforme pode ser observado na 
 figura \@ref(fig:eficienciamarginal) [@Bresser-Pereira1973, 4]:
 
-[^2]: Bresser define como economistas ortodoxos os economistas neoclássicos e os 
+[^3]: Bresser define como economistas ortodoxos os economistas neoclássicos e os 
 keynesianos, no contexto do trabalho citado.
 
 ```{r eficienciamarginal, out.width="80%", fig.cap = "Eficiência Marginal do Capital e Investimento."}
