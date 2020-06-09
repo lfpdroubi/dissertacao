@@ -1,6 +1,61 @@
 # Conclusão {#conclusao}
 
-As conclusões devem responder às questões da pesquisa, em relação aos objetivos 
-e às hipóteses. Devem ser breves, podendo apresentar recomendações e sugestões 
-para trabalhos futuros.
+Os tempos que se aproximam são de uma tendência de queda brutal das taxas de
+juros de longo prazo. Estas taxas apenas refletem uma imensa sobra de capital no
+sistema, decorrente da falta de oportunidades de inversões em atividades
+produtivas, o que tende a levar a eficácia marginal do capital a níveis muito
+baixos, as vezes até negativos. As taxas de juros oficiais apenas refletem esta
+realidade do mercado. Problemas como a armadilha de liquidez, antes restritos
+aos países desenvolvidos, estão na ordem natural das coisas também para os
+países emergentes [@krugman-emergentes].
+
+Este capital abundante, sem oportunidades de inversão, tende a se procurar
+reservas de valor, se alocando em grande parte no mercado imobiliário. Isto, por
+si só já é um grande problema a ser resolvido, pois a tendência é que, como a
+recessão econômica, novos empreendimentos não venham a surgir na mesma
+velocidade de antes e os imóveis podem ficar parados por anos a espera de
+oportunidades de inversão, tendo lugar apenas empreendimentos para as classes
+mais altas, muito mais rentáveis. Porém, um problema ainda maior pode vir a
+ocorrer com o enorme influxo de capital se movendo para o mercado imobiliário, a
+saber, uma forte tendência de aumento dos preços. Esta possível tendência de
+aumento dos preços pode vir a desencadear uma espiral de especulação
+desenfreada, atraindo ainda mais capitais para o mercado imobiliário.
+
+O problema destes juros muito baixos já se fez sentir nos países desenvolvidos,
+onde o excesso de capitais teve papel principal na criação de bolhas
+imobiliárias, como a do *subprime* norte-americano. Os principais prejudicados,
+no final, são os mutuários, que perdem suas casas e suas poupanças, já que os
+especuladores tendem a lucrar com a liquidação forçada dos imóveis,
+revendendo-os depois de alguns anos com a recuperação dos preços, como foi 
+observado. Mas mesmo após o estouro da bolha, a elevação dos preços dos imóveis 
+se mostrou uma tendência nestes países e o resultado é que há crises 
+habitacionais em praticamente todos os países, pela falta de habitação a preços
+acessíveis.
+
+Nos países em desenvolvimento, esta tendência ao aumento do preço da terra em
+períodos de recessão econômica, já prevista por Rangel, tende somente a agravar
+a crise habitacional crônica em que vivem o Brasil e outros países da \gls{AL}
+há décadas.
+
+Neste contexto, os instrumentos tradicionais de política urbana previstos no 
+Estatuto da Cidade são insuficientes. Não quer isto dizer que sejam 
+desnecessários. Muito pelo contrário: o que se necessita é de uma política 
+de Estado que coloque em aplicação os diversos instrumentos previstos de maneira
+coordenada, além da inclusão de outros instrumentos mais radicais não previstos,
+dada a magnitude do problema.  
+
+Esta política habitacional deve ser coordenada em torno de um objetivo, que é
+a construção de habitação social. A implementação destas políticas não pode ser 
+deixada a cargo de cada municipalidade: as administrações municipais devem ter
+um papel de auxiliar na implantação da política habitacional, mas a coordenação
+deve ser nacional, pois a lógica política local tende a abortar muitas 
+iniciativas.
+
+Por fim, uma nova política habitacional poderia trazer consigo o estabelecimento
+de um novo ciclo de crescimento econômico, pois tem um grande potencial para a 
+geração de empregos. Além disto, o investimento em habitação social pode vir a
+diminuir os gastos sociais, pois melhora as condições de vida da população, e 
+e reduzir também os gastos com a saúde pública, dada a melhora no saneamento 
+básico para a população.
+
 

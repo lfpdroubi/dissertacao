@@ -1,7 +1,7 @@
 # Políticas do solo {#politicas}
 
 Os instrumentos tradicionais da política de solo historicamente não se mostraram
-capazes de satisfazer a grande demanda por imóveis urbanos nos países da AL,
+capazes de satisfazer a grande demanda por imóveis urbanos nos países da \gls{AL},
 especialmente no Brasil. A grande falência das políticas de solo podem ser
 vistas nas periferias das grandes cidades. É claro que essas políticas [@suelo],
 tem um papel em amenizar o problema -- através do combate à especulação
@@ -18,18 +18,6 @@ atualidade esta política tem sido utilizada apenas timidamente, beneficiando
 apenas um pequeno número de famílias.
 
 
-\begin{citacao}
-Para o IBGE, os 'aglomerados subnormais' representam um conjunto constituído de,
-no mínimo, 51 unidades habitacionais ocupando ou tendo ocupado, até período
-recente, terreno de propriedade alheia (pública ou particular) dispostas, em
-geral, de forma desordenada e densa, e apresentando carência em serviços
-básicos.
-\cite{ibge2}
-\end{citacao}
-
-Segundo o censo de 2010 do IBGE [@ibge], em 2010 o Brasil possuía 11,4 milhões
- de pessoas morando em aglomerados sunormais, ou favelas.
-
 ```{r injustica, fig.cap = "Condomínio de classe alta ao lado da favela de Paraisópolis em São Paulo/SP."}
 knitr::include_graphics("images/injustica_SP.jpg")
 ```
@@ -38,11 +26,11 @@ Fonte: @paraisopolis.
 \ecenter
 
  Como tratado no Capítulo \@ref(historico), o cerne do problema habitacional
-do Brasil (e provavelmente em toda a América Latina), está na crise agrária, 
+do Brasil (e provavelmente em toda a \gls{AL}), está na crise agrária, 
 *i.e*, na passagem do modo de produção feudal para o modo de produção 
 capitalista.
 
-Deve tratar o Brasil, portanto, assim como os outros países da América Latina,
+Deve tratar o Brasil, portanto, assim como os outros países da \gls{AL},
 de saber como os países avançados -- hoje ditos desenvolvidos -- cujas
 transições para o capitalismo  se deram através da chamada via prussiana,
 trataram de resolver o problema habitacional nas grandes cidades, após a intensa
@@ -260,10 +248,33 @@ principalmente devido às crises da epidemia de cólera de meados do século XIX
 "que acometiam principalmente as regiões com habitações mais pobres, atrelando
 dessa forma a condição de moradia a uma questão de saúde pública".
 
+\begin{citacao}
+Na Holanda, de 1888 a 1895, diversos estudos e ações do Estado holandês, que até
+hoje é monárquico, delegou e exigiu das municipalidades que se
+responsabilizassem pela infraestrutura, incluindo o abastecimento de água, luz,
+gás, transporte coletivo (bondes) e telefonia.
+Decorrente daí, em 1894, foi elaborado um relatório sobre a questão da habitação
+social, com o objetivo de alicerçar uma legislação que permitisse às
+municipalidades desapropriarem terras e edifícios urbanos visando à erradicação
+de cortiços, gerando, a partir desse Relatório, a Leis de Habitação, decretada
+em 1902.
+\cite[p.~317]{poleto}
+\end{citacao}
+
 Da mesma maneira, devido à atual pandemia de COVID-19, concomitante com esta
 grave crise urbana que já se estava alimentando há alguns anos, é evidente que 
 a tendência é que haja mobilização pela volta da intervenção estatal para a 
-construção de habitações sociais.
+construção de habitações sociais, tanto no Brasil como no mundo.
+
+A experiência de países como a Finlândia, mostram que a concessão
+de habitação permanente aos desabrigados pode, inclusive, ser uma solução mais
+rentável do que prover abrigos temporários e que esta intervenção deve ocorrer
+da maneira mais rápida possível, pois a tendência é que as pessoas desabrigadas
+venham a apresentar outros problemas decorrentes dessa condição, o que tende
+a aumentar ainda mais os problemas sociais o que, em consequência, acaba por
+aumentar os gastos sociais [@finlandia].
+
+
 
 ### Cooperativas habitacionais
 
@@ -303,7 +314,17 @@ interação levou à construção de 130.000 unidades habitacionais entre 1924 e
 amplamente divulgados e reconhecidos nos meios arquitetônicos, adquirando valor
 emblemático na história da arquitetura do século XX [@poleto, 90].
 
-
+\begin{citacao}
+Na Alemanha, também as prefeituras eram encarregadas de projetar, por 
+seus próprios arquitetos, ou **supervisionar o trabalho das cooperativas e 
+associações no projeto das habitações**, construí-las ou supervisionar a 
+construção integralmente como foram planejadas, além de determinar o 
+financiamento.
+Tanto na Holanda, quanto na Alemanha, com o objetivo de minimizar ou 
+impedir a inadimplência, **o financiamento para a casa jamais era concedido 
+diretamente ao mutuário, como pessoa física, mas para cooperativas municipais**.
+\cite[p.~317-318]{poleto}
+\end{citacao}
 
 ## Instrumentos de política do solo
 
@@ -341,7 +362,7 @@ A escrever...
 #### Regularização Fundiária
 
 A \gls{REURB} é um instrumento de política urbana essencial em países onde
-existem altos índices de informalidade, como nos países da América Latina, por
+existem altos índices de informalidade, como nos países da \gls{AL}, por
 ser uma forma de aquisição de propriedade.
 
 No Brasil, diversos avanços foram trazidos com a edição da lei 11.977, de 07 de
@@ -494,5 +515,75 @@ postos de saúde, segurança e outros, o que acaba por acarretar ou numa
 necessidade maior de investimento em infraestrutura pública, ou na tendência de
 favelização e abandono destas construções com o tempo.
 
+O artigo 3º do Estatuto da Cidade prevê que cabe a União, entre outras
+atribuições:
 
+\begin{citacao}
+III - promover, por iniciativa própria e em conjunto com os Estados, o Distrito
+Federal e os Municípios, programas de construção de moradias e melhoria das
+condições habitacionais, de saneamento básico, das calçadas, dos passeios
+públicos, do mobiliário urbano e dos demais espaços de uso público;
+\end{citacao}
+
+No entanto, ainda é preciso definir como isso deve ser implementado.
+
+O que o Brasil, assim como outros países da \gls{AL} necessitam, é  não de
+apenas a implementação solta de alguns dos instrumentos da política urbana
+previstas no Estatuto da Cidade por parte de um ou outro ente municipal ou
+federado. É necessário o estabelecimento de uma política pública totalmente
+coordenada que, utilizando os diversos instrumentos e com objetivo definido,
+ataque diretamente o problema e não aguarde que uma eventual melhora da
+regulação do mercado imobiliário porventura obtida com a aplicação de um ou mais
+instrumentos venha a resolver os problemas de falta de habitação decente através
+da iniciativa privada. A história dos países com histórico de desenvolvimento
+similar ao do Brasil e muitos outros países da \gls{AL}, com forte êxodo rural e 
+crescimento urbano vertiginoso, como a Inglaterra e a Alemanha, apenas mostram
+que soluções como as de mercado não resolvem o problema do déficit habitacional,
+especialmente para as classes menos favorecidas. As soluções de mercado se 
+aplicam aos países cujo desenvolvimento capitalista tenha se dado nas condições
+de prévia reforma agrária, como os EUA ou a França, onde a migração do campo
+para a cidade se deu de maneira mais gradual, devido às melhores condições do
+campesinato quando da abertura do complexo rural.
+
+## Diretrizes para a implementação de políticas públicas para a habitação social
+
+Políticas públicas devem ser traçadas no sentido de:
+
+1. Controle de aluguéis dos imóveis existentes por um breve período de tempo, 
+diminuindo assim o grau de especulação do sistema. Esta medida, por si só, deve
+vir a ser necessária aqui, como tem se mostrado necessária no exterior, mas não 
+é suficiente. Deverá vir acompanhada de medidas de estímulo à produção de novos
+imóveis para a solução do déficit habitacional no longo prazo;
+
+2. Para os novos empreendimentos urge considerar adotar medidas como as da
+Inglaterra, como o estabelecimento de uma cota de habitações sociais. Estes
+empreendimentos deverão ser localizados preferencialmente em regiões de
+infraestrutura já consolidada. Para isto o poder pública municipal deverá
+utilizar dos instrumentos de desapropriação, caso necessário;
+
+3. Ao mesmo tempo, o poder público deve iniciar a busca de novas fontes de 
+financiamento, através do bom uso dos instrumentos disponíveis previstos no
+Estatuto da Cidade (IPTU progressivo, Contribuição de melhoria e outros). No 
+entanto, acredita-se que apenas medidas sistêmicas e obrigatórias surtam
+efeito. Deixar que a possibilidade de aplicação destas medidas a cargo das
+municipalidades tende a inação pela lógica política local;
+
+4. Os recursos advindos da aplicação destes instrumentos deve ter destinação
+certa: deve ser estudado um marco legal para isto, que preveja que os recursos
+arrecadados com estes instrumentos sejam revertidos para a atualização e
+manutenção dos cadastros municipais, revisão de plantas de valores, criação de
+bases de dados confiáveis de transações imobiliárias e aluguéis, confecção de
+índices imobiliários que possibilitem a aferição do estoque de moradias e o
+investimento em novas moradias, desapropriação de áreas para implantação de
+empreendimentos para habitação social, etc;
+
+5. Devem ser criadas empresas municipais de urbanização que reúna os melhores
+engenheiros e arquitetos, que se especializem nas soluções adotadas por outros
+países, como as cidades-jardim, as *new towns* e projetem conjuntos
+habitacionais dentro de um contexto maior de urbanismo para que não se deteriore
+facilmente, para que não se criem novos guetos;
+
+6. Os empreendimentos devem vir acompanhados de infraestrutura pública, 
+especialmente segurança e saneamento básico, para que se evite a propagação de 
+novas epidemais;
 

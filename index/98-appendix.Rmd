@@ -4,7 +4,7 @@
 If you feel it necessary to include an appendix, it goes here.
 -->
 
-# Eficiência Marginal do Capital
+# Eficiência Marginal do Capital {#capital}
 
 ## A função investimento e a eficiência marginal do capital
 

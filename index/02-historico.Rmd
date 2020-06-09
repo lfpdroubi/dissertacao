@@ -384,6 +384,32 @@ knitr::include_graphics("images/urban-pop-in-out-of-slums.png")
 Fonte: @ritchie_urbanization_2018
 \ecenter
 
+Já para o IBGE [@ibge], segundo dados do censo de 2010, o Brasil possuía 11,4
+milhões de pessoas morando em aglomerados subnormais, ou favelas.
+ 
+\begin{citacao}
+Para o IBGE, os 'aglomerados subnormais' representam um conjunto constituído de,
+no mínimo, 51 unidades habitacionais ocupando ou tendo ocupado, até período
+recente, terreno de propriedade alheia (pública ou particular) dispostas, em
+geral, de forma desordenada e densa, e apresentando carência em serviços
+básicos.
+\cite{ibge2}
+\end{citacao}
+
+A discrepância entre os números do IBGE e os números internacionais pode ser
+explicado por falhas metodológicas. Segundo MARICATO (2002, p. 154) [*apud* @silva, 9]:
+
+\begin{citacao}
+Não há números gerais, confiáveis, sobre a ocorrência de favelas ou de
+loteamentos ilegais em todo o Brasil. Por falhas metodológicas ou ainda por uma
+dificuldade óbvia de conhecer a titularidade da terra sobre a qual as favelas se
+instalam, o IBGE apresenta dados bastante subdimensionados. A busca de números
+mais rigorosos nos conduz a alguns diagnósticos elaborados por governos
+municipais, teses acadêmicas ou organismos estaduais que, entretanto, fornecem
+dados localizados e restritos.
+\end{citacao}
+
+
 Enfim, para Rangel, a origem deste "multitudinário deslocamento demográfico",
 está "o modo como o país preparou sua estrutura agrária para a industrialização".
 
@@ -761,7 +787,7 @@ que é um *problema financeiro*.
 
 Considerando-se que a *demanda especulativa* aumenta nos períodos de recessão,
 quando não há melhores oportunidades de investimento, a tendência é que o preço
-da terra varie inversamente à *eficácia marginal do capital*.
+da terra varie inversamente à *eficácia marginal do capital* (ver \@ref(capital)).
 
 Isto se explica pelo motivo que, em períodos de recessão econômica, a
 atratividade dos investimentos na economia real diminui. Os capitais sobrantes
@@ -850,7 +876,7 @@ econômica crônica, o que vem levando os governos destes países a tomarem medi
 não-usuais para a regulação do mercado imobiliário, especialmente no que se
 refere ao controle dos preços dos aluguéis, devido à crise habitacional que se
 instalou nestes países desde a crise de 2008 [@berlim; @londres; @california;
-@suecia; @newzeland].
+@suecia; @newzeland; @finlandia].
 
 ## Efeitos da falta de reforma agrária no cadastro urbano
 
