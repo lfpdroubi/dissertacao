@@ -1,7 +1,7 @@
 book_filename: "thesis"
 chapter_name: "Capítulo "
 rmd_files: ["index.Rmd", "01-intro.Rmd", "02-historico.Rmd", 
-"03-RE-e-economia.Rmd", "05-copulas.Rmd", "06-politicas.Rmd", 
+"03-RE-e-economia.Rmd", "04-copulas.Rmd", "05-politicas.Rmd", 
 "96-conclusion.Rmd", "97-references.Rmd", "98-appendix.Rmd", "99-annex.Rmd"]
 download: [["thesis.pdf", "PDF"], ["thesis.epub", "EPUB"], ["thesis.docx", "Word"]]
 delete_merged_file: true

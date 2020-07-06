@@ -11,47 +11,53 @@ The {#rmd-basics} text after the chapter declaration will allow us to link throu
 
 ### Objetivo Geral
 
-Propor, através do estudo do comportamento histórico e recente do mercado
-imobiliário e do estudo da interação entre o mercado imobiliário e as variáveis
-macroeconômicas, novas políticas públicas para o melhor funcionamento do setor,
-de maneira que este venha a atender aos anseios da população, através da redução
-do déficit habitacional, vista a garantir o direito à moradia (digna), previsto
-na CF 88.
+Estudar o comportamento histórico e recente do mercado imobiliário à luz das
+variáveis macroeconômicas, de maneira que se possa propor novas políticas
+públicas para orientar o setor habitacional.
 
 ### Objetivos Específicos 
 
-1. Compreender e descrever o funcionamento das diversas estruturas de mercado.
-2. Abstrair das diferentes estruturas de mercado as relações entre as variáveis
-macroeconômicas e o seu impacto no mercado imobiliário.
-3. Propor, à partir de uma abordagem econômica, novas políticas de solo que
-visem uma melhor regulamentação do mercado imobiliário
-
-## Justificativa
-
-O território é a base das atividades econômicas e sociais do país. Um eficiente
-planejamento territorial passa por desenvolver políticas públicas que garantam
-um desenvolvimento equânime de todo o território. A proposta desta pesquisa é
-aprofundar o conhecimento referente à dinâmica do cadastro territorial
-multifinalitário, do mercado imobiliário e das políticas de solo e seus efeitos. 
-Com os resultados da pesquisa pretende-se embasar a implementação de novas 
-políticas de solo aplicáveis a países em desenvolvimento, como o Brasil, em
-que a realidade social difere dos países centrais, onde as políticas de solo
-tradicionais foram desenvolvidas. 
+1. Pesquisar as raízes do grande déficit habitacional brasileiro;
+2. Efetuar análise comparativa entre o desenvolvimento econômico brasileiro e o
+de outros países, buscando aplicar aqui soluções que eventualmente já tenham 
+sido aplicadas em outros países com desenvolvimento similiar ao brasileiro;
+3. Compreender e descrever o funcionamento do mercado imobiliário;
+4. Abstrair das diferentes estruturas de mercado as relações entre as variáveis
+macroeconômicas e o seu impacto no mercado de terras e no incentivo à construção
+de moradias.
+5. Propor, à partir de uma abordagem econômica, novas políticas de solo que
+visem uma melhor regulamentação do setor habitacional, visando que a aplicação
+dos diversas instrumentos previstos no Estatuto da Cidade, de maneira coordenada
+e focada na solução do problema do déficit habitacional venha a produzir
+resultados de maneira que este seja zerado em um período de tempo razoável.
 
 ## Estrutura do trabalho
 
-O Capítulo \@ref(intro) ([Introdução])  apresenta os objetivos, justificativas e
-estrutura do trabalho. O Capítulo \@ref(historico) ([Aspectos Históricos]) faz
-uma contextualização histórica do problema do acesso à terra e moradia no Brasil
-e no mundo. O Capítulo \@ref(economia) ([O Mercado Imobiliário e a Economia])
-aborda os aspectos teóricos e conceituais mais modernos relevantes à
-interligação do mercado imobiliário à Economia do país, trazendo também um
-apanhado dos principais índices de preços de imóveis no Brasil e no mundo, e uma
-análise da crise financeira-habitacional de 2008 e sus consequências no setor
-habitacional.  O Capítulo \@ref(copulas) ([O Método Copulas]) introduz o método
-Copulas, essencial para compreender a raiz da crise financeira-imobiliária de
-2008. O Capítulo \@ref(politicas) ([Políticas do solo]) traz uma breve
-argumentação a respeito das principais abordagens possíveis para solução do
-problema habitacional no Brasil, comparando com as estratégias adotadas em
-outros países. Finalmente, o Capítulo \@ref(conclusao) ([Conclusão]) traz as
-propostas de regulação baseadas nos resultados obtidos.
+O **Capítulo 1 (Introdução)**  apresenta os objetivos, justificativas e
+estrutura do trabalho. 
+
+O **Capítulo 2 (Método)** traz considerações a respeito do método de análise e
+de pesquisa.
+
+O **Capítulo 3 ([Aspectos Históricos])** faz uma contextualização histórica do 
+problema do acesso à terra e moradia no Brasil, dado o modelo de desenvolvimento
+econômico que aqui se instalou, e compara com o ocorrido em outros países do
+mundo ocidental.
+
+O **Capítulo 4 (O Mercado Imobiliário e a Economia)** aborda os aspectos 
+teóricos e conceituais mais modernos relevantes à interligação do mercado 
+imobiliário à Economia de um país, trazendo também um apanhado dos principais 
+índices de preços de imóveis no Brasil e no mundo, e uma análise da crise 
+financeira-habitacional de 2008 e suas consequências até os tempos presentes.  
+
+O **Capítulo 5 (O Método Copulas)** introduz o método Copulas, utilizado na 
+precifição dos derivativos de crédito imobiliário, essencial para compreender a 
+raiz da crise financeira-imobiliária de 2008. 
+
+O **Capítulo 6 (Políticas do solo no Brasil e no mundo)** faz um histórico a
+respeito das principais abordagens utilizadas no mundo ocidental para solução da
+crise habitacional de fins do século XIX/início do século XX e faz considerações
+a respeito da atual crise habitacional e como ela vem sendo enfrentada no mundo.
+
+Finalmente, o **Capítulo 7 (Conclusão)** traz as propostas de regulação baseadas
+nos resultados obtidos.

@@ -15,6 +15,150 @@
 \end{epigrafe}
 
 
+Conforme visto no capítulo anterior, a análise de Rangel a respeito da questão
+agrária não mais pode ser considerada atual, porém esta análise está longe de
+poder ser considerada errada. Como ciência histórica, a Economia está sujeita a
+este tipo de caducidade de teorias que, antes de mudanças drásticas ou mesmo de
+uma lenta evolução natural da 'Economia em si', eram válidas.
+
+Como nos ensina o próprio Rangel:
+
+\begin{citacao}
+Quando a oferta de mão de obra, por efeito do próprio desenvolvimento do 
+capitalismo, se tornou relativamente inelástica, a análise clássica pereceu, 
+porque ela supunha uma oferta perfeitamente elástica desse fator. A morte da 
+coisa em si acarretou a morte da coisa para nós.
+Quando se tornou patente que o fluxo de pagamento aos fatores não estava gerando
+mais uma procura efetiva da mesma magnitude que a oferta efetiva que o emprego
+destes fatores possibilitava, e que as discrepâncias não eram transitórias,
+capazes de corrigir-se progressivamente pelo processo da crise, foi preciso 
+abandonar outro suposto dos clássicos, que havia passado aos neoclássicos, 
+implicitamente, sob a forma da `lei dos mercados'. A problemática econômica
+mudara inteiramente e, para resolver os novos problemas, tivemos a teoria
+keynesiana.
+Simultaneamente, quando, graças a certas mudanças institucionais trazidas pela
+Revolução Russa, criaram-se condições concretas que permitem tornar a procura
+efetiva cada vez mais independente do preço dos fatores, o planejamento 
+econômico tornou-se possível e tivemos as teorias que correspondem à nova
+problemática. O economista deixara de ser um `meteorologista' da conjuntura
+para fazer-se fautor da sua própria conjuntura.
+\cite[p.~206]{rangel1956}
+\end{citacao}
+
+Pois foi a própria análise de Rangel que morreu com a estabilidade da moeda. Na
+atualidade, a economia brasileira pode estar no caminho de experimentar um
+fenômeno novo: a armadilha da liquidez [ver @krugman-emergentes], problema que
+aflige os países de economia desenvolvida já há alguns anos, é uma espécie de
+'incapacidade' da economia gerar inflação suficiente para que a taxa de juros
+real chegue a patamares baixos o suficientes para que iguale a eficácia marginal
+média do sistema. Em outras palavras, a inflação deixa de ser um fator corretivo
+da conjuntura, passando a ser insuficiente. No entanto, a análise de Rangel não
+deixa de ser útil, na medida em que explica como chegamos a situação presente.
+Como explicar este déficit habitacional crônico senão através da crise agrária?
+Como explicar o aumento do preço da terra em períodos de baixa conjuntura, que
+agravava a situação agrária, levando milhares de pessoas a se aglomerarem em
+situação precária nas cidades brasileiras?
+
+## Motivação
+
+Em geral, é costume entre os economistas dizer que os mercados imobiliários são
+mercados locais, isto é, devido a heterogeneidade dos bens imóveis e,
+principalmente, devido à localização espacial, que faz com que cada imóvel seja
+único, ou seja, bens imóveis em diferentes mercados não podem ser
+considerados bens substitutos.
+
+O comportamento destes mercados, no entanto, não está imune ao que ocorre em
+outros locais diferentes do mercado estudado. De fato, estudos mostram que os
+\gls{MI} de diferentes países estão altamente correlacionados, dependendo do
+grau de abertura econômica de cada país [@Case2000; @ADAMS2010].
+
+A disponibilidade de dados é usualmente um problema na análise dos \gls{MI}. No
+entanto, dada a alta correlação demonstrada entre os diversos mercados, 
+@ADAMS2010 lograram elaborar um modelo de dados em painéis cointegrados 
+para diversos mercados, o que mostra a importância do estudo do comportamento do
+\gls{MI} de outros países, especialmente na falta de dados disponíveis, como é
+o caso do Brasil.
+
+A figura \@ref(fig:adams2) mostra que a alta de preços de imóveis nos países
+estudados por @ADAMS2010 são semelhantes e diferem mais pela questão de uma
+assincronia, do que pela tendência, *i. e.* a tendência em geral é a mesma para
+todos os países, porém há um *lag* entre o início de uma tendência nos diversos
+mercados, devido a diferenças nos mecanismos de propagação das variáveis 
+macroeconômicas em cada país.
+
+```{r adams2, out.width="\\textwidth", fig.cap = "Interconexão dos preços dos imóveis em diversos países."}
+knitr::include_graphics("./images/adams2_crop.pdf")
+```
+\bcenter
+Fonte: @ADAMS2010.
+\ecenter
+
+A figura \@ref(fig:nhpi) ilustra o comportamento do \gls{MI} norte-americano
+desde 1990. 
+
+```{r}
+# nhpi <- Quandl("YALE/NHPI", type="ts", start_date="1990-01-01")
+# rhpi <- Quandl("YALE/RHPI", type="ts")
+# saveRDS(nhpi, file = "data/nhpi")
+# saveRDS(rhpi, file = "data/rhpi")
+```
+
+```{r}
+# fredr(
+#   series_id = "USREC",
+#   observation_start = as.Date("1857-01-01")
+# )
+nhpi <- readRDS("data/nhpi")
+rhpi <- readRDS("data/rhpi")
+global_rhpi <- read.csv("data/GlobalHousePriceIndex.csv")
+#global_rhpi <- read.zoo(global_rhpi, index = "dateq", FUN = as.yearqtr, format = "%Yq%q")
+#global_rhpi$dateq <- as.yearqtr(seq(ISOdate(2000,3,1), ISOdate(2019,3,1), by = "quarters"))
+global_rhpi$dateq <- seq(ISOdate(2000,1,1), ISOdate(2019,1,1), by = "quarters")
+recessions.df <- read.csv("data/us_recessions.csv")
+recessions.df <- within(recessions.df, {
+  Peak <- as.POSIXct(Peak)
+  Trough <- as.POSIXct(Trough)
+  })
+```
+
+
+
+```{r nhpi, fig.cap="Home Price Index, de Case e Shiller, em termos nominais."}
+recessions.trim = subset(recessions.df, Peak >= "1990-01-01")
+ggplot(nhpi, as.numeric = FALSE) +
+  geom_line() +
+   labs(
+     title = "Case-Shiller U.S. National Nominal Home Price Index", 
+     subtitle = "Not Seasonally Adjusted | Frequency: Monthly", 
+     caption = "1990-2019",
+     x = "Ano", 
+     y = "Índice Jan 2000 = 100") +
+   scale_y_continuous(expand=c(0,0),
+                      breaks = c(seq(50, 200, 50)),
+                      minor_breaks = seq(80, 200, 10)) +
+  stat_peaks(colour = "red", span = 61) +
+  stat_peaks(geom = "text", colour = "red", 
+             vjust = -0.5, x.label.fmt = "%b/%Y", span = 61) +
+  stat_valleys(colour = "blue", span = 61) +
+  stat_valleys(geom = "text", colour = "blue", 
+             vjust = 1.5, x.label.fmt = "%b/%Y", span = 61) +
+  geom_rect(data=recessions.trim, aes(xmin=Peak, xmax=Trough, 
+                                    ymin=-Inf, ymax=+Inf),
+          inherit.aes=F,
+          fill='grey', alpha=0.5)
+```
+\bcenter
+Fonte: O autor, à partir de dados de @QuandlWIKI.
+\ecenter
+
+Nota-se que depois do derretimento do \gls{MI} norte-americano depois da crise
+imobiliário-financeira de 2007-2008, este mercado voltou a se aquecer fortemente desde Janeiro de 2012, tendo o nível de preços já ultrapassado o último pico, 
+atingido em julho de 2006.
+
+A alta volatilidade do \gls{MI} tal como apresentada nos últimos anos, como será visto, não é comum. Neste capítulo serão analisados os motivos que levaram o 
+\gls{MI} norte-americano e mundial a este aumento de volatilidade e os efeitos
+desta grande volatilidade, não apenas no \gls{MI}, mas na Economia como um todo.
+
 ## Os vários significados do termo \emph{economia}
 
 \begin{citacao}
@@ -168,16 +312,19 @@ macroeconomia e a habitação.
 
 O mercado imobiliário, diferentemente de outros mercados de capitais, exibe uma
 flutuação de valores baixa e não muda imediatamente após a mudança do noticiário
-econômico [@ADAMS201038, 3]. O mercado imobiliário residencial, em particular,
+econômico [@ADAMS2010, 3]. O mercado imobiliário residencial, em particular,
 mostra forte rigidez pra baixo, porque os donos de imóveis residenciais tendem a
 resistir a venda da propriedade sob períodos de recessão econômica [@Case2000,
 129].
 
-@ADAMS201038 mostraram, com a observação de dados em painéis de 15 países por um 
-período de 30 anos, que variáveis macroeconômicas apresentam um significativo
-impacto no preço de imóveis residenciais.
+### Modelos macroeconômicos para o \gls{MI}
 
-Segundo @ADAMS201038 [p. 18], particularmente variáveis como emprego, produção
+@ADAMS2010 mostraram, com a observação de dados em painéis de 15 países por um 
+período de 30 anos, que variáveis macroeconômicas apresentam um significativo
+impacto no preço de imóveis residenciais em longo prazo. @fan também chegou a
+essa conclusão para mercados de imóveis em 5 diferentes regiões da China.
+
+Segundo @ADAMS2010 [p. 18], particularmente variáveis como emprego, produção
 industrial e aumento da base monetária demonstraram-se propensas a aumentar a
 demanda por imóveis residenciais, aumentando assim os seus preços. Além disto,
 um aumento na taxa de juros de curto prazo também afeta positivamente o preço
@@ -189,12 +336,80 @@ Por outro lado, um aumento nas taxas de juros de longo prazo leva a diminuição
 da demanda por imóveis residenciais. Por causa da maior atratividade nos 
 investimentos de renda fixa oriundos do aumento das taxas de longo prazo, 
 reduz-se a demanda por (investimento em) imóveis residenciais, o que
-por conseguinte reduz os seus preços [@ADAMS201038, 19].
+por conseguinte reduz os seus preços [@ADAMS2010, 19].
 
-@ADAMS201038 notaram também que, devido a diferenças no nível regulatório e nas
+@ADAMS2010 notaram também que, devido a diferenças no nível regulatório e nas
 características do mercado hipotecário, houve um alto grau de variação entre os
 países, embora os resultados sejam muito similares mesmo com a variação dos
 métodos de estimação.
+
+#### Modelo aplicado aos países desenvolvidos
+
+O equilíbrio no mercado de bens imobiliários se dá através da equalização das
+equações de oferta e demanda por bens imóveis.
+
+Segundo @ADAMS2010, a demanda do mercado de bens imóveis pode ser modelada de
+acordo com a equação \@ref(eq:demanda-bens).
+
+\begin{equation}
+\gls{D}_t = \alpha - \beta_1 \gls{hp}_t + \beta_2 \gls{EA}_t - 
+\beta_3 \gls{long}_t - \beta_4 \gls{short}_t + \hat \epsilon_t
+(\#eq:demanda-bens)
+\end{equation}
+
+Na equação \@ref(eq:demanda-bens), presume-se que a demanda por bens imóveis
+seja afetada negativamente pelos preços dos imóves ($hp_t$), pela taxa de juros
+de longo prazo ($long_t$) e pela taxa de juros de curto prazo ($short_t$) e
+positivamente pelo nível da atividade econômica ($EA_t$).
+
+De acordo com @ADAMS2010 [p. 7-8], uma taxa de juros de longo prazo mais alta
+tende a desviar a demanda por investimento em imóveis para títulos da dívida
+público, de menor risco, ou seja, um aumento da taxa de juros de longo prazo
+tende a diminuir a atratividade pelo investimento em imóveis. Já a taxa de juros
+de curto prazo, segundo @ADAMS2010 [p. 7], deve diminuir a demanda por moradia 
+por causa do aumento que acarreta nas taxas das hipotecas.
+
+A oferta do mercado de bens, por sua vez, pode ser modelada de acordo com a 
+equação \@ref(eq:oferta-bens).
+
+Na equação \@ref(eq:oferta-bens), presume-se que a oferta de bens imóveis seja
+positivamente afetada pelos preços dos imóveis ($hp_t$) e negativamente pela
+taxa de juros de curto prazo ($short_t$) e pelos custos de construção
+($constr_t$).
+
+\begin{equation}
+\gls{S}_t = \eta + \gamma_1 \gls{hp}_t - \gamma_2 \gls{short}_t - 
+\gamma_3 \gls{constr}_t + \hat \nu_t
+(\#eq:oferta-bens)
+\end{equation}
+
+Para @ADAMS2010 [p. 7-8], um aumento da taxa de juros de curto prazo tende a 
+aumentar os custos de financiamento para construção de moradias, o que impacta
+negativamente a oferta.
+
+O equilíbrio do mercado se dá no ponto de encontro entre as equações de oferta e
+procura, ou seja, o equilíbrio é atingido quando o preço dos imóveis é:
+
+\begin{equation}
+\gls{hp}_{it} = \alpha^*_i - \beta_{2i}^* \gls{EA}_{it} + 
+\gamma^*_{2i} \gls{short}_{it} + \gamma^*_{3i} \gls{constr}_{it} - 
+\beta^*_{3i} \gls{long}_{it} + \hat \epsilon^*_{it}
+(\#eq:equilibrio-bens)
+\end{equation}
+
+onde $\alpha^*_i = \dfrac{\alpha_i - \eta_i}{\gamma_{1i} - \beta_{1i}}$, 
+$\gamma^*_{2i} = \dfrac{\gamma_{2i} - \beta_{4i}}{\gamma_{1i} - \beta_{1i}}$, 
+$\gamma^*_{3i} = \dfrac{\gamma_{3i}}{\gamma_{1i}-\beta_{1i}}$, 
+$\epsilon^*_{it} = \hat \epsilon_{it} - \hat \eta_{it}$ e   
+$\beta^*_{ji} = \dfrac{\beta_{ji}}{\gamma_{1i} - \beta_{1i}} \quad para \quad j = 2, 3$
+
+@ADAMS2010 salienta que, pela análise das equações acima, o efeito total da taxa
+de juros de curto prazo é ambíguo, dependendo da força relativa dos coeficientes
+$\gamma_2$ e $\beta_4$. Para o mundo desenvolvido, segundo @ADAMS2010 [p. 15], 
+a magnitude do coeficiente $\gamma_2$ é maior do que a do coeficiente $\beta_4$,
+ou seja, o aumento de custo impacta mais a oferta do que o aumento das hipotecas
+afeta a demanda, exceção apenas para EUA e Itália, onde as taxas hipotecárias
+preferidas são as ajustáveis.
 
 A figura \@ref(fig:adams) mostra como, teoricamente, as variações nas variáveis 
 macroeconômicas impactam na formação de preços do mercado imobiliário. Por 
@@ -205,26 +420,47 @@ dos investidores por imóveis, fazendo diminuir o ritmo das construções, o que
 por sua vez tende a diminuir o estoque de imóveis (baixa entrada de imóveis
 novos no mercado), o que por sua vez tende a aumentar o valor dos aluguéis.
 
-### Relação com os fundamentos econômicos
-
-O mercado imobiliário, assim como acontece com  o mercado mobiliário, deve
-seguir os fundamentos da Economia no longo prazo. No entanto, eventuais
-descolamentos dos preços no mercado imobiliário dos fundamentos econômicos podem
-ocorrer. A este descolamento é dado o nome de bolha especulativa.
-
-Existe no mercado imobiliário uma propensão à formação de bolhas especulativas,
-devido a diversos motivos, como "expectativas exuberantes" e problemas de
-informações de preços, que são difíceis devido às particularidades do mercado
-imobiliário [@ADAMS201038, 3].
-
-
-
 ```{r adams, out.width="\\textwidth", fig.cap = "O impacto das variáveis macroeconômicas no preço dos imóveis residenciais."}
 knitr::include_graphics("./images/adams_crop.pdf")
 ```
 \bcenter
-Fonte: @ADAMS201038.
+Fonte: @ADAMS2010.
 \ecenter
+
+#### Possíveis adequações necessárias ao modelo no Brasil
+
+É importante notar que na equação \@ref(eq:demanda-bens) as taxa de juros de 
+curto e longo prazo afetam negativamente a demanda por bens imóveis, exatamente 
+como previsto por @rangel1986b e confirmado pelo IPEA. No entanto, segundo 
+@rangel1986b, no Brasil a atividade econômica tinha efeito inverso, ou seja,
+em períodos de fraca conjuntura a demanda por bens imóveis tendia a aumentar e a
+diminuir em períodos de aquecimento da atividade econômica. Entende-se que isto
+devia estar relacionado à inflação brasileira, que tinha o efeito de penalizar
+a liquidez. Com a estabilidade de moeda, esta aberração da economia brasileira
+provavelmente desapareceu.
+
+O que provavelmente impactaria a forma dos modelos no Brasil é a estrutura a
+termo da taxa de juros. Ao contrário do mundo desenvolvido, no Brasil a
+estrutura a termo da taxa de juros é invertida, pois há concentração da dívida
+pública no curto prazo. Outra hipótese a ser verificada é quanto ao impacto das
+taxas de juros de curto prazo nos juros hipotecários, o que parece não ocorrer
+no Brasil.
+
+### Desvios em relação com os fundamentos econômicos
+
+O mercado imobiliário, assim como acontece com  o mercado mobiliário, deve
+seguir os fundamentos da Economia no longo prazo. No entanto, eventuais
+descolamentos dos preços no mercado imobiliário dos fundamentos econômicos podem
+ocorrer, especialmente pela inelasticidade de oferta no \gls{MI} e pela inércia
+nos preços.
+
+Existe no mercado imobiliário uma propensão à formação de bolhas especulativas,
+devido a diversos motivos, como "expectativas exuberantes" e problemas de
+informações de preços, que são difíceis devido às particularidades do \gls{MI} 
+[@ADAMS2010, 3].
+
+Devido a estes fatos, são importantes os modelos dinâmicos, conforme demonstrado
+por @fan. Este assunto, porém, está fora do escopo deste trabalho.
 
 ### Índices de preços de imóveis
 
@@ -495,7 +731,7 @@ americana, buscam alternativas para fazer o cálculo.
 
 No Brasil não existem séries históricas de prazo satisfatórios para uma análise
 de longo prazo referente ao preço dos imóveis. No entanto, como explicitado 
-teoricamente no capítulo \@ref(historico), e mostrado por @ADAMS201038 numa
+teoricamente no capítulo \@ref(historico), e mostrado por @ADAMS2010 numa
 série de países, num mundo globalizado, em que há livre fluxo de capitais, a
 tendência é que o comportamento dos preços siga uma mesma tendência, portanto a
 análise do comportamento dos preços nos países centrais da economia mundial 
@@ -505,64 +741,10 @@ influenciados pelas variáveis e decisões ocorridas nestes países.
 A figura \@ref(fig:nhpi) mostra a evolução do *Home Price Index* de Case e
 Shiller, desde 1990. 
 
-É possível notar pela análise do índice que os preços dos imóveis que, após
-o estouro da bolha do _subprime_, os preços sofrem uma nítida tendência de alta,
-desde janeiro de 2012, ultrapassando já, em termos nominais, os níveis de preços 
-anteriores à crise de 2008.
-
-```{r}
-# nhpi <- Quandl("YALE/NHPI", type="ts", start_date="1990-01-01")
-# rhpi <- Quandl("YALE/RHPI", type="ts")
-# saveRDS(nhpi, file = "data/nhpi")
-# saveRDS(rhpi, file = "data/rhpi")
-```
-
-```{r}
-# fredr(
-#   series_id = "USREC",
-#   observation_start = as.Date("1857-01-01")
-# )
-nhpi <- readRDS("data/nhpi")
-rhpi <- readRDS("data/rhpi")
-global_rhpi <- read.csv("data/GlobalHousePriceIndex.csv")
-#global_rhpi <- read.zoo(global_rhpi, index = "dateq", FUN = as.yearqtr, format = "%Yq%q")
-#global_rhpi$dateq <- as.yearqtr(seq(ISOdate(2000,3,1), ISOdate(2019,3,1), by = "quarters"))
-global_rhpi$dateq <- seq(ISOdate(2000,1,1), ISOdate(2019,1,1), by = "quarters")
-recessions.df <- read.csv("data/us_recessions.csv")
-recessions.df <- within(recessions.df, {
-  Peak <- as.POSIXct(Peak)
-  Trough <- as.POSIXct(Trough)
-  })
-```
-
-
-```{r nhpi, fig.cap="Home Price Index, de Case e Shiller, em termos nominais."}
-recessions.trim = subset(recessions.df, Peak >= "1990-01-01")
-ggplot(nhpi, as.numeric = FALSE) +
-  geom_line() +
-   labs(
-     title = "Case-Shiller U.S. National Nominal Home Price Index", 
-     subtitle = "Not Seasonally Adjusted | Frequency: Monthly", 
-     caption = "1990-2019",
-     x = "Ano", 
-     y = "Índice Jan 2000 = 100") +
-   scale_y_continuous(expand=c(0,0),
-                      breaks = c(seq(50, 200, 50)),
-                      minor_breaks = seq(80, 200, 10)) +
-  stat_peaks(colour = "red", span = 61) +
-  stat_peaks(geom = "text", colour = "red", 
-             vjust = -0.5, x.label.fmt = "%b/%Y", span = 61) +
-  stat_valleys(colour = "blue", span = 61) +
-  stat_valleys(geom = "text", colour = "blue", 
-             vjust = 1.5, x.label.fmt = "%b/%Y", span = 61) +
-  geom_rect(data=recessions.trim, aes(xmin=Peak, xmax=Trough, 
-                                    ymin=-Inf, ymax=+Inf),
-          inherit.aes=F,
-          fill='grey', alpha=0.5)
-```
-\bcenter
-Fonte: O autor, à partir de dados de @QuandlWIKI.
-\ecenter
+É possível notar pela análise do índice que os preços dos imóveis que, após o
+estouro da bolha do \gls{glo:subprime}, os preços sofrem uma nítida tendência de
+alta, desde janeiro de 2012, ultrapassando já, em termos nominais, os níveis de
+preços anteriores à crise de 2008.
 
 ```{r}
 range_nhpi_2006_2012 <- range(window(nhpi, start = 2006 + 6/12, end = 2012 + 0/12))
@@ -1327,7 +1509,7 @@ Segundo a NBR 14.653-01 [-@NBR1465301, x], "o mercado imobiliário caracteriza-s
 como um 'mercado imperfeito', com bens não homogêneos, estoque limitado, liquidez 
 diferenciada e grande influência de fatores externos."
 
-De acordo com @ADAMS201038 [-@ADAMS201038, 3], a forte inércia dos preços do 
+De acordo com @ADAMS2010 [-@ADAMS2010, 3], a forte inércia dos preços do 
 mercado imobiliário influencia o comportamento do mercado durante os booms 
 econômicos, já que a exuberância das expectativas (exuberância irracional) dos 
 proprietários de imóveis facilita a formação de bolhas nestes mercados. Além
@@ -1477,6 +1659,8 @@ A política de limitação do valor de aluguéis garante o controle da inflaçã
 controlando os custos de moradia para a população (aluguéis), garantindo assim
 o direito à moradia, que não implica um direito à propriedade [@fnogueira].
 
+Segundo @shelter [p. 194-195], ...
+
 Obviamente que isto implica de num efeito balizador importante para o cálculo de
 um preço justo dos imóveis, mas será que esta política apenas é uma política
 capaz de regular com um mínimo de equidade o valor do solo urbano?
@@ -1508,7 +1692,6 @@ enfrentada pelos bancos centrais (especialmente os bancos centrais dos países
 desenvolvidos, onde a estagnação é maior), por enormes aumentos de liquidez
 do sistema financeiro.
 
-
 Ou seja, a imposição de um valor máximo aos aluguéis pode ser uma boa política
 para contenção da inflação, regulando os custos de moradia das classes menos
 privilegiadas, impondo também alguma limitação da especulação imobiliária
@@ -1523,17 +1706,30 @@ preço do aluguel estará controlado, mas o valor dos imóveis tende a disparar.
 ## Problemas gerados pelo alto valor dos imóveis
 
 Além dos problemas relacionados ao setor bancário discutidos na seção
-\@ref(MI-e-o-setor-bancario), existe um problema normalmente desconsiderado pela
-maioria é que altos preços de imóveis e/ou aluguéis previnem que os
+\@ref(MI-e-o-setor-bancario), existe um problema, normalmente desconsiderado
+pela maioria, que o altos preços de imóveis e/ou aluguéis previnem que os
 trabalhadores se mudem para cidades com maior produtividade marginal do
-trabalho. Ou seja, algumas pessoas tendem a se manter em ocupações de baixa 
-produtividade em cidades pequenas, no interior, ao invés de se mudarem para 
-grandes cidades onde certamente teriam ocupações de maior produtividade, como 
-numa fábrica, por exemplo, pois o custo adicional de moradia que elas teriam
-não seria compensado pelo maior salário que receberiam, devido à maior 
-produtividade da sua ocupação. Se fosse possível a redução dos custos de moradia 
-em regiões de maior produtividade da mão de obra, isto resultaria num maior 
-Produto Interno Bruto [@Case2000, 149].
+trabalho. Ou seja, algumas pessoas tendem a se manter em ocupações de baixa
+produtividade em cidades pequenas, no interior, ao invés de se mudarem para
+grandes cidades onde certamente teriam ocupações de maior produtividade, como
+numa fábrica, por exemplo, pois o custo adicional de moradia que elas teriam não
+seria compensado pelo maior salário que receberiam, devido à maior produtividade
+da sua ocupação. Se fosse possível a redução dos custos de moradia em regiões de
+maior produtividade da mão de obra, isto resultaria num maior Produto Interno
+Bruto [@Case2000, 149; @economist-housing-2020].
+
+\begin{citacao}
+A habitação também é um grande motivo pelo qual muitas pessoas no mundo rico
+sentem que o economia não funciona para eles. Enquanto os \emph{baby boomers}
+tendem a possuir casas grandes e caras, os jovens precisam cada vez mais alugar
+um lugar apertado com seus amigos, fomentando o ressentimento dos jovens
+\emph{millenials} em relação aos idosos. O economista Thomas Piketty afirmou que
+nas últimas décadas o retorno ao capital excedeu o que é pago ao trabalho na
+forma de salários, aumentando a desigualdade. Mas outros criticaram os achados
+de Piketty, apontando que o que realmente explica o aumento da participação no
+capital está nos retornos crescentes sobre a habitação.
+\cite{economist-housing-2020}
+\end{citacao}
 
 Mas o principal problema advindo de uma grande alta no valor dos imóveis é o
 problema da reversão das expectativas: uma vez que as expectativas se revertem,
@@ -1543,9 +1739,15 @@ que podem perder seus imóveis, quanto para as instituições financeiras expost
 ao risco do mercado imobiliário, seja para os governos que são instados a 
 socorrer as empresas e as pessoas em dificuldades.
 
-Segundo @fmiera, episódios com padrões de boom seguidos de estouros (de bolhas),
-ou *boom-bust patterns*, precederam mais de dois terços das 50 mais recentes
-crises bancárias sistêmicas.
+Segundo o conceituado semanário econômico *The Economist*, entre 1960 e 2000 um
+quarto das recessões no mundo rico estavam associadas com fortes declínios de
+preços de moradia. Ainda segundo a *The Economist*, recessões associadas com
+restrições de créditos e estouros de preços de moradia foram mais profundas e
+mais duradouras do que as outras recessões.[@economist-housing-2020].
+
+Segundo @fmiera, episódios com padrões de *boom* seguidos de estouros (de
+bolhas), ou *boom-bust patterns*, precederam mais de dois terços das 50 mais
+recentes crises bancárias sistêmicas.
 
 Uma reversão de expectativas pode ocorrer devido a um fator exógeno. Por exemplo,
 no momento em que se escreve esta dissertação, o mundo se encontra em meio a
@@ -1577,3 +1779,26 @@ ocorrerá o mesmo no mercado de trabalho, que tem recuperação lenta. Este cen�
 poderia vir a desencadear uma crise imobiliária similar ou ainda pior do que a
 da década passada, haja vista que na atualidade, as ferramentas tradicionais de
 política monetária já foram exauridas, além das ferramentas não-tradicionais.
+
+## Mercado imobiliário e populismo
+
+Segundo a *The Economist*, o mercado imobiliário e o populismo estão intimamente
+ligados: novas pesquisas mostraram que pessoas que habitam locais onde o mercado
+imobiliário está estagnado tem se aproximado mais de partidos e ideiais da 
+extrema-direita populista na Inglaterra e na França [@economist-housing-2020].
+
+Ainda de acordo com a *The Economist*, felizmente os governos estão começando a 
+perceber o estrago causado pelos erros da política habitacional desde o fim da
+segunda guerra mundial. Para @economist-housing-2020:
+
+\begin{citacao}
+sistemas de planejamento flexíveis, tributação e regulamentação financeira
+apropriadas podem transformar a habitação em força para estabilidade social e
+econômica. O sistema de habitação pública de Cingapura ajuda a melhorar inclusão
+social; financiamento imobiliário na Alemanha ajudou o país a evitar a pior da
+crise de 2008-10; O sistema de planejamento da Suíça ajuda bastante a explicar
+porque o populismo até agora não chegou até lá. Governos em todo o mundo
+precisam agir de forma decisiva e sem demora. Nada menos que a estabilidade 
+econômica e política do mundo está em jogo.
+\cite{economist-housing-2020}
+\end{citacao}

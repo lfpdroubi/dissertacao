@@ -23,7 +23,7 @@ desenfreada, atraindo ainda mais capitais para o mercado imobiliário.
 
 O problema destes juros muito baixos já se fez sentir nos países desenvolvidos,
 onde o excesso de capitais teve papel principal na criação de bolhas
-imobiliárias, como a do *subprime* norte-americano. Os principais prejudicados,
+imobiliárias, como a do \gls{glo:subprime} norte-americano. Os principais prejudicados,
 no final, são os mutuários, que perdem suas casas e suas poupanças, já que os
 especuladores tendem a lucrar com a liquidação forçada dos imóveis,
 revendendo-os depois de alguns anos com a recuperação dos preços, como foi 

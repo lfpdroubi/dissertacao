@@ -152,7 +152,26 @@ they are handled in the YAML above differently for the PDF version.
 on chapters.
 -->
 
+
 # Introdução {#intro}
+
+O território é a base das atividades econômicas e sociais do país. Um eficiente
+planejamento territorial passa por desenvolver políticas públicas que garantam
+um desenvolvimento equânime de todo o território. A proposta desta pesquisa é
+aprofundar o conhecimento referente à dinâmica do mercado imobiliário e das
+políticas de solo, de maneira a planejar a utilização dos instrumentos de
+política do solo no sentido de resolver os problemas do crônico déficit
+habitacional brasileiro, onde milhões de pessoas vivem em situação precária.
+
+O mundo vive uma situação de crise habitacional que se agrava desde a crise
+financeiro-habitacional de 2008, por diversos motivos. No caso brasileiro, a
+crise habitacional é crônica.
+
+A precariedade de grande parte do estoque de moradias atualmente no Brasil, 
+a falta de infraestrutura básica, e o grande número de pessoas dividindo o mesmo 
+cômodo é uma situação que afeta a saúde pública em tempos de normalidade e se
+agrava fortemente em tempos de crises epidêmicas, com a atual pandemia de 
+COVID-19.
 
 ## O conceito de terra e a importância do território
 
@@ -182,11 +201,189 @@ O mercado imobiliário urbano pode ser dividido basicamente em:
 1. Mercado de imóveis residenciais e;
 2. Mercado de imóveis comerciais.
 
-O Mercado Imobiliário se conecta à macroeconomia através:
+\textcite{Case2000} identificaram quatro canais em que o Mercado Imobiliário se
+conecta à macroeconomia:
 
-1. Do setor de construção civil;
-2. Da demanda agregada, já que existe uma conexão entre a propensão marginal
-a consumir com o efeito riqueza do Mercado Imobiliário;
-3. Do setor bancário, haja vista que os bancos possuem imóveis em seu portfolio,
-seja através da propriedade, ou através do financiamento imobiliário e hipotecas.
+1. Através do setor de construção civil, pelo seu papel na atividade econômica 
+como um todo, apesar de, segundo os autores, este setor não ser grande o 
+suficiente para orientar toda a economia de um país;
+2. Através da formação da demanda agregada, já que existe uma conexão entre a 
+propensão marginal a consumir com o efeito riqueza do Mercado Imobiliário;
+3. Através do setor bancário, haja vista que os bancos possuem grande parte de
+seu portfolio ligado a produtos conectados de alguma forma com o mercado
+imobiliário
+4. E, por fim, mas não menos importante, o Mercado Imobiliário desempenha um
+relevante papel na Macroeconomia através da sua capacidade de alocar os 
+trabalhadores de maneira eficiente, ou seja, em regiões de maior produtividade
+do trabalho, o que tem um potencial de aumentar a produtividade da Economia como
+um todo.
 
+## A Economia e o mercado imobiliário
+
+Uma questão sempre presente nas discussões econômicas diz respeito ao papel do
+Estado na Economia, seja como ofertante, através de empresas públicas,
+geralmente criadas em setores onde não há atratividade para empresas privadas,
+como demandante -- em muitos casos o Estado é o maior demandante do setor -- ou
+ainda como interventor/regulador. Em relação ao \gls{MI}, então, qual deveria
+ser o papel do Estado junto a este mercado. Deveria o Estado intervir de alguma
+forma, seja como ofertante, demandante ou interventor, ou deveria o Estado
+tentar permanecer neutro em relação ao \gls{MI}, deixando que o mercado se
+auto-regule, através do equilíbrio da demanda e da oferta por bens imóveis?
+
+Diversos autores tem manifestado que o \gls{MI}, por sua pujança e
+particularidades, não deveria ser estudado apenas como mais um mercado de bens
+da Economia, haja vista sua forte interação com o bem-estar da população, da
+saúde pública, e do seu impacto nas variáveis macroeconômicas e *vice-versa*.
+
+De acordo com @Case2000 [p. 149-150], a análise econômica padrão sugeriria que a
+terra é uma mercadoria como qualquer outra e o seu preço reflete as forças de
+mercado de oferta e demanda, e que por este motivo o Estado não deveria intervir
+neste mercado, assim como no mercado de outros produtos. No entanto, @Case2000
+ponderam que o alto preço dos imóveis em alguns dos mercados mais aquecidos tem
+menos a ver com as forças de mercado do que com políticas regulatórias
+governamentais, como o zoneamento urbano, que restringem muito a possibilidade
+de novos empreendimentos e acabam por valorizar demais os imóveis já
+construídos, muitas vezes sem motivos técnicos que as justifiquem.
+
+Ainda há de se considerar a inelasticidade da oferta e a inércia dos preços como 
+fatores preponderantes que devem levar a uma necessária intervenção do Estado no 
+\gls{MI}. Devido a estes fatores, choques macroeconômicos afetam diferentemente 
+o lado da oferta e o lado da demanda no \gls{MI}, podendo levar a formação de 
+bolhas especulativas.
+
+Historicamente, nos países de mercado de capitais menos desenvolvidos, como o 
+Brasil, o \gls{MI} é utilizado como reserva de valor, o que se agrava
+especialmente em tempos de crise econômica, como a atual.
+
+Nos países desenvolvidos do sistema, os mercados de capitais mais desenvolvidos
+propiciam alternativas de investimento que possibilitam aos grandes investidores
+institucionais diversos produtos de investimento que tornam desnecessários o
+investimento direto no \gls{MI}, o que não significa, no entanto, que o mercado
+imobiliário esteja imune à especulação do capital financeiro, o que ficou claro
+com a crise financeiro-imobiliária de 2008. Também o setor financeiro não está
+livre dos impactos causados por fortes variações de preços no mercado
+imobiliário e choques de preços como o de 2007/2008 nos EUA mostraram que, numa
+economia capitalista desenvolvida, crises setoriais que antes se restringiriam
+ao setor atingido, atualmente tendem a se propagar rapidamente pelos diversos
+setores da Economia, especialmente as crises advindas do mercado imobiliário.
+
+
+
+## Crise habitacional crônica
+
+Segundo @ritchie_urbanization_2018, em 1990 em torno de 36,7% da população
+urbana brasileira vivia em favelas. É verdade que a proporção da população
+urbana vivendo em favelas vem diminuindo desde então. Em 2000, 31,5% da
+população urbana ocupava as favelas, ao passo que em 2014 esse número diminuiu
+para 22,3% da população urbana.
+
+No entanto, com o crescimento da população brasileira e o aumento da porcentagem
+de população urbana desde então, os números totais estão praticamente estagnados,
+o que pode ser observado na tabela abaixo.
+
+| Ano | Pop. total (milhões hab.) | Pop. urbana (%) | Pop. urbana (milhões hab.) | Favelas (%) | Favelas (milhões hab.)|
+|----:|--------------------------:|----------------:|---------------------------:|------------:|----------------------:|
+|1990 | 149,0                     |   73,90         | 110,1                      | 36,7        | 40,4                  |
+|1995 | 162,0                     |   77,61         | 125,7                      | 34,1        | 42,9                  |
+|2000 | 174,8                     |   81,20         | 141,9                      | 31,5        | 44,7                  |
+|2005 | 186,1                     |   82,80         | 154,2                      | 29,0        | 44,7                  |
+|2009 | 193,9                     |   84,04         | 162,9                      | 26,9        | 43,8                  |
+|2014 | 202,8                     |   85,90         | 174,3                      | 22,3        | 38,9                  |
+Table: População habitando favelas no Brasil.
+
+\bcenter
+Fonte: Do autor, a partir de dados do Banco Mundial.
+\ecenter
+
+A figura \@ref(fig:slums) mostra graficamente a evolução da população urbana em
+favelas (em vermelho) e a população urbana total (em azul). Nota-se que o 
+aumento da população urbana ocorreu com a quase estagnada população das 
+favelas.
+
+A situação econômica do país deve ter um peso na composição da população
+habitando as favelas: a década de 90 e o início da década de 2000 são períodos
+sabidamente de crescimento baixo e intermitente, intercalados por graves
+recessões na economia brasileira. Já a baixa considerável desta população
+desfavorecida entre os períodos de 2009 e 2014 (aprox. 11%) sugere que houve um
+impacto do crescimento econômico do período[^1], que veio acompanhado de
+programas habitacionais destinados à população de baixa renda, como o Minha Casa
+Minha Vida e, ainda que mais timidamente, do instituto da regularização
+fundiária. Deve-se lembrar que neste período houve aumento da proporção de
+população urbana, ou seja, a diminuição da população favelada com certeza não
+reflete um fenômeno de migração da cidade para o campo.
+
+[^1]: Especialmente no que tange à manutenção de baixas taxas de desemprego.
+
+```{r slums, fig.cap = "População urbana e população em favelas."}
+knitr::include_graphics("images/urban-pop-in-out-of-slums.png")
+```
+\bcenter
+Fonte: @ritchie_urbanization_2018
+\ecenter
+
+Já para o IBGE [@ibge], segundo dados do censo de 2010, o Brasil possuía 11,4
+milhões de pessoas morando em aglomerados subnormais, ou favelas.
+ 
+\begin{citacao}
+Para o IBGE, os 'aglomerados subnormais' representam um conjunto constituído de,
+no mínimo, 51 unidades habitacionais ocupando ou tendo ocupado, até período
+recente, terreno de propriedade alheia (pública ou particular) dispostas, em
+geral, de forma desordenada e densa, e apresentando carência em serviços
+básicos.
+\cite{ibge2}
+\end{citacao}
+
+A discrepância entre os números do IBGE e os números internacionais pode ser
+explicado por falhas metodológicas. Segundo MARICATO (2002, p. 154) [*apud*
+@silva, 9]:
+
+\begin{citacao}
+Não há números gerais, confiáveis, sobre a ocorrência de favelas ou de
+loteamentos ilegais em todo o Brasil. Por falhas metodológicas ou ainda por uma
+dificuldade óbvia de conhecer a titularidade da terra sobre a qual as favelas se
+instalam, o IBGE apresenta dados bastante subdimensionados. A busca de números
+mais rigorosos nos conduz a alguns diagnósticos elaborados por governos
+municipais, teses acadêmicas ou organismos estaduais que, entretanto, fornecem
+dados localizados e restritos.
+\end{citacao}
+
+## A tendência ao agravamento da crise habitacional
+
+Deixado o problema sujeito às forças de mercado, a tendência é de agravamento do
+problema. A diminuição das taxas de juros a níveis muito baixos causa o
+outrora raro problema da armadilha da liquidez, problema que vem atormentando os
+países desenvolvidos há alguns anos e agora tem encontrado lugar nos países em
+desenvolvimento, como o Brasil [@krugman-emergentes].
+
+A reação dos bancos centrais do mundo a este problema é o de encontrar formas
+alternativas de injetar mais liquidez ao sistema, o que pode acabar por
+propiciar a formação de novas bolhas especulativas e o setor imobiliário não 
+está imune a isto. Pelo contrário, em tempos de incertezas econômicas, o 
+mercado imobiliário é um dos destinos preferenciais para os capitais em busca
+de reserva de valor. O aumento do preço da terra que pode estar por vir, então,
+acompanhado do alto desemprego que se tem gerado em todo o mundo pela pandemia
+de COVID-19, tende a agravar sobremaneira o problema da crise habitacional no
+mundo e, em especial, onde esta já se tornou crônica, como no Brasil e em outros
+países da \gls{AL}.
+
+## Efeitos do mercado imobiliário na Economia em geral
+
+Além da crise habitacional proveniente deste forte aumento dos preços dos
+imóveis, inflar o setor habitacional também não tem dado bons resultados em
+termos econômicos e políticos mais gerais:
+
+\begin{citacao}
+Os políticos tradicionalmente gostam quando os preços das casas aumentam. As
+pessoas se sentem mais ricas e portanto, emprestam e gastam mais, dando um bom
+impulso à economia, eles pensam. Quando todo mundo está se sentindo bem com sua
+situação financeira, os políticos têm maior chance de reeleição. Mas existe um
+outro lado. Habitações caras são inequivocamente ruins para a crescente
+população de locatários do mundo rico, forçando-os a reduzir os gastos com
+outros bens e serviços. E uma política econômica baseada em compradores de casas
+em grandes dívidas não é sustentável. A curto prazo, encontra um estudo do FMI,
+o aumento da dívida das famílias aumenta o crescimento econômico e o emprego.
+Mas as famílias precisam controlar os gastos para pagar seus empréstimos, então
+em três a cinco anos, esses efeitos são revertidos: o crescimento se torna mais
+lento do que seria de outra forma e as chances de uma crise financeira aumentam.
+\cite{economist-housing-2020}
+\end{citacao}
