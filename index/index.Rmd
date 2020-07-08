@@ -201,7 +201,7 @@ O mercado imobiliário urbano pode ser dividido basicamente em:
 1. Mercado de imóveis residenciais e;
 2. Mercado de imóveis comerciais.
 
-\textcite{Case2000} identificaram quatro canais em que o Mercado Imobiliário se
+@Case2000 identificaram quatro canais em que o Mercado Imobiliário se
 conecta à macroeconomia:
 
 1. Através do setor de construção civil, pelo seu papel na atividade econômica 
@@ -212,11 +212,19 @@ propensão marginal a consumir com o efeito riqueza do Mercado Imobiliário;
 3. Através do setor bancário, haja vista que os bancos possuem grande parte de
 seu portfolio ligado a produtos conectados de alguma forma com o mercado
 imobiliário
-4. E, por fim, mas não menos importante, o Mercado Imobiliário desempenha um
-relevante papel na Macroeconomia através da sua capacidade de alocar os 
-trabalhadores de maneira eficiente, ou seja, em regiões de maior produtividade
-do trabalho, o que tem um potencial de aumentar a produtividade da Economia como
-um todo.
+4. E, por fim, porém não menos importante, o \gls{MI} desempenha um relevante
+papel na Macroeconomia através da sua capacidade de alocar os trabalhadores de
+maneira eficiente, ou seja, em regiões de maior produtividade do trabalho, o que
+tem um potencial de aumentar a produtividade da Economia como um todo.
+
+Especialmente devido a sua relação com o setor bancário, o \gls{MI} tem um papel
+importante na estabilidade financeira e na calibragem da política monetária
+[@Zhu]. Esta razão, por si só, seria suficiente para justificar intervenções
+por parte dos governos no \gls{MI}. Mas ainda, pelo importante papel do \gls{MI} 
+na eficiente alocação dos trabalhadores em áreas de maior produtividade de 
+Economia, esta intervenção estatal no \gls{MI} deve ser justificada, já que isto
+afeta a renda e o bem-estar de toda a população, propiciando um funcionamento 
+mais eficiente das engrenagens econômicas.
 
 ## A Economia e o mercado imobiliário
 
@@ -225,7 +233,7 @@ Estado na Economia, seja como ofertante, através de empresas públicas,
 geralmente criadas em setores onde não há atratividade para empresas privadas,
 como demandante -- em muitos casos o Estado é o maior demandante do setor -- ou
 ainda como interventor/regulador. Em relação ao \gls{MI}, então, qual deveria
-ser o papel do Estado junto a este mercado. Deveria o Estado intervir de alguma
+ser o papel do Estado junto a este mercado? Deveria o Estado intervir de alguma
 forma, seja como ofertante, demandante ou interventor, ou deveria o Estado
 tentar permanecer neutro em relação ao \gls{MI}, deixando que o mercado se
 auto-regule, através do equilíbrio da demanda e da oferta por bens imóveis?
@@ -252,22 +260,23 @@ o lado da oferta e o lado da demanda no \gls{MI}, podendo levar a formação de
 bolhas especulativas.
 
 Historicamente, nos países de mercado de capitais menos desenvolvidos, como o 
-Brasil, o \gls{MI} é utilizado como reserva de valor, o que se agrava
-especialmente em tempos de crise econômica, como a atual.
+Brasil, o \gls{MI} é utilizado como reserva de valor, o que tende a se agravar
+em tempos de crise econômica, em que os investidores tendem a procurar 
+investimentos de menor risco.
 
 Nos países desenvolvidos do sistema, os mercados de capitais mais desenvolvidos
 propiciam alternativas de investimento que possibilitam aos grandes investidores
-institucionais diversos produtos de investimento que tornam desnecessários o
-investimento direto no \gls{MI}, o que não significa, no entanto, que o mercado
-imobiliário esteja imune à especulação do capital financeiro, o que ficou claro
-com a crise financeiro-imobiliária de 2008. Também o setor financeiro não está
-livre dos impactos causados por fortes variações de preços no mercado
-imobiliário e choques de preços como o de 2007/2008 nos EUA mostraram que, numa
-economia capitalista desenvolvida, crises setoriais que antes se restringiriam
-ao setor atingido, atualmente tendem a se propagar rapidamente pelos diversos
-setores da Economia, especialmente as crises advindas do mercado imobiliário.
-
-
+institucionais diversos produtos de investimento que tornam praticamente
+desnecessário e contraproducente o investimento direto no \gls{MI}, haja vista
+todas as taxas de negociação envolvidas, o que costuma espantar os investidores
+profissionais. Isto não significa, no entanto, que o \gls{MI} destes países
+esteja imune à especulação do capital financeiro, o que ficou claro com a crise
+financeiro-imobiliária de 2008. Também o setor financeiro não está livre dos
+impactos causados por fortes variações de preços no \gls{MI} e choques de preços
+como o de 2007/2008 nos EUA mostraram que, numa economia capitalista
+desenvolvida, crises setoriais que antes se restringiriam ao setor atingido,
+atualmente tendem a se propagar rapidamente pelos diversos setores da Economia,
+especialmente as crises advindas do mercado imobiliário.
 
 ## Crise habitacional crônica
 

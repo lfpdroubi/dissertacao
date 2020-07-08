@@ -21,7 +21,8 @@ poder ser considerada errada. Como ciência histórica, a Economia está sujeita
 este tipo de caducidade de teorias que, antes de mudanças drásticas ou mesmo de
 uma lenta evolução natural da 'Economia em si', eram válidas.
 
-Como nos ensina o próprio Rangel:
+Como nos ensina o próprio Rangel, a respeito do desenvolvimento da ciência
+Econômica:
 
 \begin{citacao}
 Quando a oferta de mão de obra, por efeito do próprio desenvolvimento do 
@@ -50,16 +51,27 @@ atualidade, a economia brasileira pode estar no caminho de experimentar um
 fenômeno novo: a armadilha da liquidez [ver @krugman-emergentes], problema que
 aflige os países de economia desenvolvida já há alguns anos, é uma espécie de
 'incapacidade' da economia gerar inflação suficiente para que a taxa de juros
-real chegue a patamares baixos o suficientes para que iguale a eficácia marginal
-média do sistema. Em outras palavras, a inflação deixa de ser um fator corretivo
-da conjuntura, passando a ser insuficiente. No entanto, a análise de Rangel não
-deixa de ser útil, na medida em que explica como chegamos a situação presente.
-Como explicar este déficit habitacional crônico senão através da crise agrária?
-Como explicar o aumento do preço da terra em períodos de baixa conjuntura, que
-agravava a situação agrária, levando milhares de pessoas a se aglomerarem em
-situação precária nas cidades brasileiras?
+básica real da economia chegue a patamares baixos o suficientes para que iguale
+a eficácia marginal média do sistema. Em outras palavras, a inflação deixa de
+ser um fator corretivo da conjuntura, passando a ser insuficiente para tal. No
+entanto, a análise de Rangel não deixa de ser útil, na medida em que explica
+como chegamos a situação presente. Como explicar este déficit habitacional
+crônico senão através da crise agrária? Como explicar o aumento do preço da
+terra em períodos de baixa conjuntura, que agravava a situação agrária, levando
+milhares de pessoas a se aglomerarem em situação precária nas cidades
+brasileiras? Por que não houve a esperada queda do preço da terra, como
+esperado? Que tipo de soluções podem ser aplicadas ao caso brasileiro?
 
-## Motivação
+Estes questionamentos, porém, não podem ser respondidos antes de uma análise do
+atual comportamento do \gls{MI} no Brasil. É o que se pretende fazer neste 
+capítulo. No entanto, se uma análise estatística direta do comportamento do 
+\gls{MI} no Brasil dificilmente poderá ser feita, pela ausência de séries 
+históricas de preços de imóveis, uma análise econômica conceitual, aos moldes da
+análise de Rangel, pode ter espaço. Estudos futuros tratarão da validade desta 
+análise conceitual, através da análise dos dados, que porventura estarão 
+disponíveis.
+
+## Correlação entre os mercados imobiliários
 
 Em geral, é costume entre os economistas dizer que os mercados imobiliários são
 mercados locais, isto é, devido a heterogeneidade dos bens imóveis e,
@@ -152,10 +164,25 @@ Fonte: O autor, à partir de dados de @QuandlWIKI.
 \ecenter
 
 Nota-se que depois do derretimento do \gls{MI} norte-americano depois da crise
-imobiliário-financeira de 2007-2008, este mercado voltou a se aquecer fortemente desde Janeiro de 2012, tendo o nível de preços já ultrapassado o último pico, 
+imobiliário-financeira de 2007-2008, este mercado voltou a se aquecer fortemente
+desde Janeiro de 2012, tendo o nível de preços já ultrapassado o último pico,
 atingido em julho de 2006.
 
-A alta volatilidade do \gls{MI} tal como apresentada nos últimos anos, como será visto, não é comum. Neste capítulo serão analisados os motivos que levaram o 
+@regulation também notaram um aumento generalizado nos preços dos imóveis em
+diversos países, especialmente após a segunda metade da década de 90, com 
+exceção do Japão e da Alemanha.
+
+A comparação de índices de preços dos diversos países, no entanto, deve ser
+feita com cautela, haja vista que os países compõem os seus índices de maneira
+diferente, além das estruturas de oferta e demanda destes países serem 
+diferentes [ver @regulation, p. 4; @silver].
+
+Segundo @regulation [p. 4-5], o aumento do preço dos imóveis está fortemente 
+ligado ao aumento do preço da terra, ou seja, os custos de construção tem um
+papel secundário no aumento do preço dos imóveis.
+
+A alta volatilidade do \gls{MI} tal como apresentada nos últimos anos, como será
+visto, não é comum. Neste capítulo serão analisados os motivos que levaram o
 \gls{MI} norte-americano e mundial a este aumento de volatilidade e os efeitos
 desta grande volatilidade, não apenas no \gls{MI}, mas na Economia como um todo.
 
@@ -431,15 +458,20 @@ Fonte: @ADAMS2010.
 
 É importante notar que na equação \@ref(eq:demanda-bens) as taxa de juros de 
 curto e longo prazo afetam negativamente a demanda por bens imóveis, exatamente 
-como previsto por @rangel1986b e confirmado pelo IPEA. No entanto, segundo 
-@rangel1986b, no Brasil a atividade econômica tinha efeito inverso, ou seja,
-em períodos de fraca conjuntura a demanda por bens imóveis tendia a aumentar e a
-diminuir em períodos de aquecimento da atividade econômica. Entende-se que isto
-devia estar relacionado à inflação brasileira, que tinha o efeito de penalizar
-a liquidez. Com a estabilidade de moeda, esta aberração da economia brasileira
-provavelmente desapareceu.
+como previsto por @rangel1986b e confirmado pelo IPEA. 
 
-O que provavelmente impactaria a forma dos modelos no Brasil é a estrutura a
+No entanto, segundo @rangel1986b, no Brasil a atividade econômica tinha efeito
+inverso, ou seja, em períodos de fraca conjuntura a demanda por bens imóveis
+tendia a aumentar e a diminuir em períodos de aquecimento da atividade
+econômica. Entende-se que este comportamente devia estar relacionado ao
+comportamento da inflação brasileira, que tinha o efeito de penalizar a
+liquidez, incentivando as imobilizações de capital. Com a estabilidade de moeda, 
+esta aberração da economia brasileira provavelmente desapareceu ou se reduziu
+a um papel secundário, ou seja, atualmente é esperado que o aquecimento da 
+atividade da Economia brasileira venha acompanhado de aumento dos preços dos 
+imóveis e _vice-versa_.
+
+O que provavelmente deve impactar a forma dos modelos no Brasil é a estrutura a
 termo da taxa de juros. Ao contrário do mundo desenvolvido, no Brasil a
 estrutura a termo da taxa de juros é invertida, pois há concentração da dívida
 pública no curto prazo. Outra hipótese a ser verificada é quanto ao impacto das
@@ -454,8 +486,9 @@ descolamentos dos preços no mercado imobiliário dos fundamentos econômicos po
 ocorrer, especialmente pela inelasticidade de oferta no \gls{MI} e pela inércia
 nos preços.
 
-Existe no mercado imobiliário uma propensão à formação de bolhas especulativas,
-devido a diversos motivos, como "expectativas exuberantes" e problemas de
+Segundo @regulation [p. 4], um ciclo de preços no mercado imobiliário pode durar
+décadas. Existe, dessa forma uma propensão à formação de bolhas especulativas,
+atribuídas a diversos motivos, como "expectativas exuberantes" e problemas de
 informações de preços, que são difíceis devido às particularidades do \gls{MI} 
 [@ADAMS2010, 3].
 
