@@ -14,15 +14,56 @@
 	\end{flushright}
 \end{epigrafe}
 
+## Os vários significados do termo \emph{economia}
 
-Conforme visto no capítulo anterior, a análise de Rangel a respeito da questão
-agrária não mais pode ser considerada atual, porém esta análise está longe de
-poder ser considerada errada. Como ciência histórica, a Economia está sujeita a
-este tipo de caducidade de teorias que, antes de mudanças drásticas ou mesmo de
-uma lenta evolução natural da 'Economia em si', eram válidas.
+A economia é uma ciência social. Apesar do desenvolvimento recente das ciências
+econômicas ter levado muitos dos economistas da atualidade, em sua prática, a se
+assemelharem muito mais aos profissionais das ciências exatas, como um cientista
+de dados, um estatístico, a Economia como ciência continua, a luz dos últimos
+fatos da história recente, uma ciência histórica por excelência, como dizia
+Rangel. O 'fim da história' [@fukuyama], *i.e.* a ingênua tese de Francis
+Fukuyama sobre a naturalização do capitalismo neoliberal, sobre a forma racional
+de vida finalmente encontrada [@zizek2011, 401], indiscutivelmente não se
+concretizou de fato: o próprio Fukuyama hoje admite este fato 
+[@menand_francis_nodate].
 
-Como nos ensina o próprio Rangel, a respeito do desenvolvimento da ciência
-Econômica:
+Para @rangel1956, "ciência é classificação e medida - não apenas medida, como 
+pode se depreender do lema econométrico. Se ciência fosse medida não haveria 
+ciência em Aristóteles ou Hegel" [@rangel1956, 204].
+
+Desta maneira, pode-se traçar um paralelo das noções sobre o termo "economia", 
+com as noções sobre outros termos, como religião e ideologia, como neste 
+parágrafo de Zizek, onde o autor trata do conceito de "ideologia", a partir das
+noções de Marx sobre "religião":
+
+\begin{citacao}
+A propósito da religião (que, para Marx, era a ideologia por excelência), Hegel
+distinguiu três momentos: \emph{doutrina, crença e ritual}; assim, fica-se
+tentado a distribuir em torno desses três eixos a multiplicidade de ideias
+associadas com o termo `ideologia': a ideologia como um complexo de ideias
+(teorias, convicções, crenças, métodos de argumentação); a ideologia em seu
+aspecto externo, ou seja, a materialidade da ideologia, os Aparelhos Ideológicos
+de Estado; e por fim, o campo mais fugidio, a ideologia `espontânea' que atua
+no cerne da própria `realidade' social.
+\cite[p.~15]{zizek}
+\end{citacao}
+
+Da mesma forma, para Singer [-@singer, 7], é possível distinguir pelo menos três
+significados do termo *economia*:
+
+* a qualidade de ser estrito ou austero no uso de recursos ou valores;
+* a característica comum de uma ampla gama de atividades que compõe a *economia*
+de um país, de uma cidade, etc.
+* a ciência que tem por objeto a atividade que dá o segundo significado.
+
+A economia (ciência, "coisa para nós"), então, é a sistematização do
+conhecimento sobre a economia (atividade, "coisa em si"). Assim, em suma, quando 
+a "coisa em si" muda, também deve mudar a "coisa para nós", ou seja, o resultado
+contingente do processo histórico inacabado continua a mudar as ciências 
+econômicas hoje, tal qual ocorreu em diversos outros momentos, como ensina 
+Rangel, a respeito das várias fases do desenvolvimento da ciência Econômica, 
+ocorridas de acordo com as mudanças estruturais ou materiais (mudança da 
+"coisa em si"):
 
 \begin{citacao}
 Quando a oferta de mão de obra, por efeito do próprio desenvolvimento do 
@@ -46,8 +87,89 @@ para fazer-se fautor da sua própria conjuntura.
 \cite[p.~206]{rangel1956}
 \end{citacao}
 
-Pois foi a própria análise de Rangel que morreu com a estabilidade da moeda. Na
-atualidade, a economia brasileira pode estar no caminho de experimentar um
+Nos próximos itens será visto como as diferentes escolas de pensamento, a saber,
+as escolas *marxista* e *marginalista*, abordam os diferentes conceitos do termo
+"economia".
+
+### A economia como atividade
+
+A ciência se divide a respeito da definição de economia como atividade, entre 
+social (escola *marxista*) e individual (escola *marginalista*) [@singer, 9].
+
+Enquanto para os *marxistas* a atividade econômica é sempre coletiva, praticada
+mediante a divisão social do trabalho, para os *marginalistas* a atividade
+econômica é em sua essência individual, que atuam autonomamente, tendo em vista
+apenas seus desejos ou suas necessidades [@singer, 10].
+
+### A economia como ciência
+
+Também diferem os *marxistas* e os *marginalistas* quanto a definição de 
+economia como ciência.
+
+Enquanto para os *marxistas* a economia política é a ciência do social,
+abrangendo em seu campo de estudo o conjunto de atividades que formam a vida
+econômica da sociedade [@singer, 14], para os *marginalistas* a
+ciência econômica tem como modelo as ciências da natureza, onde cada uma das
+quais tem como objeto próprio um determinado "setor" do universo físico.
+Analogamente, as ciências do homem teriam como objeto um "setor" do universo
+humano [@singer, 15].
+
+### A Economia como Ciência Social
+
+Como Ciência Social, a Economia pode ser definida como a ciência:
+
+\begin{citacao}
+que estuda como as pessoas e a sociedade decidem empregar recursos escassos, que
+poderiam ter utilização alternativa, na produção de bens e serviços de modo a
+distribuí-los  entre as várias pessoas e grupos da sociedade, a fim de
+satisfazer as necessidades humanas
+\cite[p.~5]{passosnogami}.
+\end{citacao}
+
+Para Rosseti [-@rossetti, 31], no entanto, a Economia não é uma ciência com
+limites nitidamente definidos, assim como as demais ciências sociais:
+
+\begin{citacao}
+À semelhança do que ocorre com os demais ramos das ciências sociais, não se pode
+considerar a economia como fechada em torno de si mesma. Pelas implicações da
+ação econômica sobre outros aspectos da vida humana, o estudo da economia
+implica a abertura de suas fronteiras às demais áreas das ciências humanas. Esta
+abertura se dá em dupla direção, assumindo assim caráter \textbf{biunívoco}.
+\end{citacao}
+
+Segundo Rosseti [-@rossetti, 32], a separação das ciências sociais em
+especialidades distintas é não-rigorosa, ou, ao contrário, estas especialidades
+estão entremeadas:
+
+\begin{citacao}
+Em síntese, pode-se inferir que as interfaces da economia com outros ramos do
+conhecimento social decorrem de que as relações humanas e os problemas nelas
+implícitos ou delas decorrentes não são facilmente separáveis segundo níveis de
+referência rigorosamente pré-classificados. O referencial econômico deve ser
+visto apenas como uma abstração útil, para que se analisem aspectos específicos
+da luta humana pela sobrevivência, prosperidade, bem-estar individual e
+bem-comum. Ocorre, todavia, que essa mesma luta não se esgota nos limites do que
+se convencionou chamar de relações econômicas. Vai muito além, abrangendo
+aspectos que dizem respeito à postura ético-religiosa, às formas de organização
+política, aos modos de relacionamento social, à estruturação da ordem jurídica,
+aos padrões das conquistas tecnológicas, às limitações impostas pelas condições
+do meio ambiente e, mais abrangentemente, à formação cultural da sociedade.
+\end{citacao}
+
+Conforme visto no capítulo anterior, a análise de Rangel a respeito da questão
+agrária não mais pode ser considerada atual, porém esta análise está longe de
+poder ser considerada errada. Como ciência histórica, a Economia está sujeita a
+este tipo de caducidade de teorias que, antes de mudanças drásticas ou mesmo de
+uma lenta evolução natural da 'Economia em si', eram válidas.
+
+Não teria sido a vez, então, da própria análise de Rangel à respeito do
+aprofundamento da crise agrária (que como vimos reflete nas cidades) "morrer"
+com a estabilidade da moeda alcançada pela economia brasileira desde meados da
+década de 90 do século passado, ou ao menos mais recentemente, nos últimos anos,
+quando a inflação brasileira parece ancorada, a despeito da prática de taxas de 
+juros internas (e externas) muito próximas de zero?
+
+Na atualidade, a economia brasileira pode estar no caminho de experimentar um
 fenômeno novo: a armadilha da liquidez [ver @krugman-emergentes], problema que
 aflige os países de economia desenvolvida já há alguns anos, é uma espécie de
 'incapacidade' da economia gerar inflação suficiente para que a taxa de juros
@@ -71,7 +193,69 @@ análise de Rangel, pode ter espaço. Estudos futuros tratarão da validade dest
 análise conceitual, através da análise dos dados, que porventura estarão 
 disponíveis.
 
-## Correlação entre os mercados imobiliários
+## O Mercado Imobiliário e a Macroeconomia {#macro}
+
+Segundo @LEUNG, há um reconhecimento relativamente recente e crescente
+sobre a importância da interação entre os diversos mercados imobiliários entre
+si e entre o mercado imobiliário como um todo e a macroeconomia.
+
+Pesquisas em economia habitacional convencional e em economia urbana
+praticamente ignoram as interações com a macroeconomia. Na melhor das hipóteses,
+algumas análises teóricas e empíricas da economia urbana e habitacional incluem
+variáveis macroeconômicas (como inflação, crescimento econômico, PIB, taxa de
+desemprego etc.) como 'variáveis de controle' exógenas [@LEUNG, 3].
+
+Por sua vez,  os livros de Economia tradicionais ou tratam o mercado imobiliário
+como apenas um dos muitos mercados de bens de consumo ou o negligenciam como um
+todo. A Macroeconomia convencional ignora completamente o mercado imobiliário
+[@LEUNG, 3], embora o mercado habitacional constitua uma grande parte da
+Macroeconomia [@LEUNG, 5]. @krugman afirmou que um dos segredos da
+política monetária reside no fato que a política monetária funciona através do
+mercado imobiliário, tendo pouco impacto direto no investimento em negócios.
+
+Segundo Greenwood e Hercowitz [*apud* @LEUNG, 5], o estoque de capital
+imobiliário é maior do que o capital de negócios e, em geral, o valor de mercado
+investido anualmente no mercado habitacional é maior do que o investimento em
+negócios, o que claramente faz do segmento habitacional muito mais do que apenas
+um outro mercado de bens de consumo.
+
+Davis e Heathcote (2001) [*apud* @LEUNG, 6] afirmam que o valor de mercado das
+propriedades imobiliárias em estoque nos EUA é aproximadamente igual ao PIB
+médio anual. Segundo a revista britânica The Economist [@economist], a maior
+classe de ativos no mundo é a propriedade residencial, com valor estimado de 200
+trilhões de dólares, o que equivale a 3 vezes mais o valor de todas as ações
+negociadas em bolsa.
+
+No Brasil, segundo @fnogueira [-@fnogueira, 155], a participação dos ativos de 
+base imobiliária era cerca de 40% dos bens e direitos declarados na Declaração
+do Imposto de Renda da Pessoa Física. Deve-se levar em conta, no entanto, que
+os valores declarados são os valores do momento da aquisição dos imóveis, que
+não são atualizados para fins de declaração de imposto de renda, portanto estes
+são usualmente menores do que os valores de mercado.
+
+Segundo @LEUNG [p. 4], no entanto, mais recentemente tem havido um pequeno porém 
+crescente esforço de pesquisa para preencher a lacuna entre as duas literaturas 
+e lançar luz sobre questões que são conjuntamente conseqüentes para a 
+macroeconomia e a habitação.
+
+O mercado imobiliário, diferentemente de outros mercados de capitais, exibe uma
+flutuação de valores baixa e não muda imediatamente após a mudança do noticiário
+econômico [@ADAMS2010, 3]. O mercado imobiliário residencial, em particular,
+mostra forte rigidez pra baixo, porque os donos de imóveis residenciais tendem a
+resistir a venda da propriedade sob períodos de recessão econômica [@Case2000,
+129].
+
+### Variáveis macroeconômicas e variáveis do mercado imobiliário
+
+Leung e Ng [-@macroHousing] classificaram as variáveis importantes para a
+aferição do comportamento do \gls{MI} e sua correlação com a Macroeconomia em
+variáveis macroeconômicas (*macro variables* ou \gls{MV}) e variáveis do mercado
+residencial (*housing market variables* ou \gls{HMV}). Entre as \gls{MV} estão o
+\gls{PIB}, a taxa de desemprego, taxa de inflação e entre as \gls{HMV}
+encontram-se não apenas os índices de preços, mas também variáveis como o número
+de novas residências vendidas, a taxa de vacância e o investimento residencial.
+
+### Correlação entre os mercados imobiliários
 
 Em geral, é costume entre os economistas dizer que os mercados imobiliários são
 mercados locais, isto é, devido a heterogeneidade dos bens imóveis e,
@@ -135,13 +319,13 @@ recessions.df <- within(recessions.df, {
 
 
 
-```{r nhpi, fig.cap="Home Price Index, de Case e Shiller, em termos nominais."}
+```{r nhpi, fig.cap="Home Price Index (HPI), de Case e Shiller, em termos nominais."}
 recessions.trim = subset(recessions.df, Peak >= "1990-01-01")
 ggplot(nhpi, as.numeric = FALSE) +
   geom_line() +
    labs(
-     title = "Case-Shiller U.S. National Nominal Home Price Index", 
-     subtitle = "Not Seasonally Adjusted | Frequency: Monthly", 
+     title = "Índice de Case-Shiller (EUA) HPI Nacional Nominal", 
+     subtitle = "Não ajustado sazonalmente | Frequência: Mensal", 
      caption = "1990-2019",
      x = "Ano", 
      y = "Índice Jan 2000 = 100") +
@@ -185,164 +369,6 @@ A alta volatilidade do \gls{MI} tal como apresentada nos últimos anos, como ser
 visto, não é comum. Neste capítulo serão analisados os motivos que levaram o
 \gls{MI} norte-americano e mundial a este aumento de volatilidade e os efeitos
 desta grande volatilidade, não apenas no \gls{MI}, mas na Economia como um todo.
-
-## Os vários significados do termo \emph{economia}
-
-\begin{citacao}
-A propósito da religião (que, para Marx, era a ideologia por excelência), Hegel
-distinguiu três momentos: \emph{doutrina, crença e ritual}; assim, fica-se
-tentado a distribuir em torno desses três eixos a multiplicidade de ideias
-associadas com o termo `ideologia': a ideologia como um complexo de ideias
-(teorias, convicções, crenças, métodos de argumentação); a ideologia em seu
-aspecto externo, ou seja, a materialidade da ideologia, os Aparelhos Ideológicos
-de Estado; e por fim, o campo mais fugidio, a ideologia `espontânea' que atua
-no cerne da própria `realidade' social.
-\cite[p.~15]{zizek}
-\end{citacao}
-
-Segundo Singer [-@singer, 7], é possível distinguir pelo menos três significados 
-do termo *economia*:
-
-* a qualidade de ser estrito ou austero no uso de recursos ou valores;
-* a característica comum de uma ampla gama de atividades que compõe a *economia*
-de um país, de uma cidade, etc.
-* a ciência que tem por objeto a atividade que dá o segundo significado.
-
-A economia (ciência) é a sistematização do conhecimento sobre a economia 
-(atividade).
-
-### A economia como atividade
-
-A ciência se divide a respeito da definição de economia como atividade, entre 
-social (escola *marxista*) e individual (escola *marginalista*) [@singer, 9].
-
-Enquanto para os *marxistas* a atividade econômica é sempre coletiva, praticada
-mediante a divisão social do trabalho, para os *marginalistas* a atividade
-econômica é em sua essência individual, que atuam autonomamente, tendo em vista
-apenas seus desejos ou suas necessidades [@singer, 10].
-
-### A economia como ciência
-
-Também diferem os *marxistas* e os *marginalistas* quanto a definição de 
-economia como ciência.
-
-Enquanto para os *marxistas* a economia política é a ciência do social,
-abrangendo em seu campo de estudo o conjunto de atividades que formam a vida
-econômica da sociedade [@singer, 14], para os *marginalistas* a
-ciência econômica tem como modelo as ciências da natureza, onde cada uma das
-quais tem como objeto próprio um determinado "setor" do universo físico.
-Analogamente, as ciências do homem teriam como objeto um ``setor'' do universo
-humano [@singer, 15].
-
-Para @rangel1956, "ciência é classificação e medida - não apenas medida, como 
-pode se depreender do lema econométrico. Se ciência fosse medida não haveria 
-ciência em Aristóteles ou Hegel" [@rangel1956, 204].
-
-A evolução da economia, segundo @rangel1956, dá-se através de um 
-duplo processo evolutivo, o fenomenal e o numenal, seguindo a filosofia de Kant:
-
-\begin{citacao}
-a economia é uma ciência histórica por excelência - qualidade que partilha com
-outras ciências sociais. Quer isso dizer que está submetida a um duplo processo
-evolutivo: o fenomenal (como representação, como ideia da coisa, como ``coisa
-para nós'', no sentido kantiano) e o numenal (como objeto, coisa representada,
-``coisa em si'') [\ldots] e não pode ser estudada senão nesse duplo contexto
-\cite[p.~204]{rangel1956}.
-\end{citacao}
-
-### A Economia como Ciência Social
-
-Como Ciência Social, a Economia pode ser definida como a ciência:
-
-\begin{citacao}
-que estuda como as pessoas e a sociedade decidem empregar recursos escassos, que
-poderiam ter utilização alternativa, na produção de bens e serviços de modo a
-distribuí-los  entre as várias pessoas e grupos da sociedade, a fim de
-satisfazer as necessidades humanas
-\cite[p.~5]{passosnogami}.
-\end{citacao}
-
-Para Rosseti [-@rossetti, 31], no entanto, a Economia não é uma ciência com
-limites nitidamente definidos, assim como as demais ciências sociais:
-
-\begin{citacao}
-À semelhança do que ocorre com os demais ramos das ciências sociais, não se pode
-considerar a economia como fechada em torno de si mesma. Pelas implicações da
-ação econômica sobre outros aspectos da vida humana, o estudo da economia
-implica a abertura de suas fronteiras às demais áreas das ciências humanas. Esta
-abertura se dá em dupla direção, assumindo assim caráter \textbf{biunívoco}.
-\end{citacao}
-
-Segundo Rosseti [-@rossetti, 32], a separação das ciências sociais em
-especialidades distintas é não-rigorosa, ou, ao contrário, estas especialidades
-estão entremeadas:
-
-\begin{citacao}
-Em síntese, pode-se inferir que as interfaces da economia com outros ramos do
-conhecimento social decorrem de que as relações humanas e os problemas nelas
-implícitos ou delas decorrentes não são facilmente separáveis segundo níveis de
-referência rigorosamente pré-classificados. O referencial econômico deve ser
-visto apenas como uma abstração útil, para que se analisem aspectos específicos
-da luta humana pela sobrevivência, prosperidade, bem-estar individual e
-bem-comum. Ocorre, todavia, que essa mesma luta não se esgota nos limites do que
-se convencionou chamar de relações econômicas. Vai muito além, abrangendo
-aspectos que dizem respeito à postura ético-religiosa, às formas de organização
-política, aos modos de relacionamento social, à estruturação da ordem jurídica,
-aos padrões das conquistas tecnológicas, às limitações impostas pelas condições
-do meio ambiente e, mais abrangentemente, à formação cultural da sociedade.
-\end{citacao}
-
-## O Mercado Imobiliário e a Macroeconomia {#macro}
-
-Segundo @LEUNG, há um reconhecimento relativamente recente e crescente
-sobre a importância da interação entre os diversos mercados imobiliários entre
-si e entre o mercado imobiliário como um todo e a macroeconomia.
-
-Pesquisas em economia habitacional convencional e em economia urbana
-praticamente ignoram as interações com a macroeconomia. Na melhor das hipóteses,
-algumas análises teóricas e empíricas da economia urbana e habitacional incluem
-variáveis macroeconômicas (como inflação, crescimento econômico, PIB, taxa de
-desemprego etc.) como 'variáveis de controle' exógenas [@LEUNG, 3].
-
-Por sua vez,  os livros de Economia tradicionais ou tratam o mercado imobiliário
-como apenas um dos muitos mercados de bens de consumo ou o negligenciam como um
-todo. A Macroeconomia convencional ignora completamente o mercado imobiliário
-[@LEUNG, 3], embora o mercado habitacional constitua uma grande parte da
-Macroeconomia [@LEUNG, 5]. @krugman afirmou que um dos segredos da
-política monetária reside no fato que a política monetária funciona através do
-mercado imobiliário, tendo pouco impacto direto no investimento em negócios.
-
-Segundo Greenwood e Hercowitz [*apud* @LEUNG, 5], o estoque de capital
-imobiliário é maior do que o capital de negócios e, em geral, o valor de mercado
-investido anualmente no mercado habitacional é maior do que o investimento em
-negócios, o que claramente faz do segmento habitacional muito mais do que apenas
-um outro mercado de bens de consumo.
-
-Davis e Heathcote (2001) [*apud* @LEUNG, 6] afirmam que o valor de mercado das
-propriedades imobiliárias em estoque nos EUA é aproximadamente igual ao PIB
-médio anual. Segundo a revista britânica The Economist [@economist], a maior
-classe de ativos no mundo é a propriedade residencial, com valor estimado de 200
-trilhões de dólares, o que equivale a 3 vezes mais o valor de todas as ações
-negociadas em bolsa.
-
-No Brasil, segundo @fnogueira [-@fnogueira, 155], a participação dos ativos de 
-base imobiliária era cerca de 40% dos bens e direitos declarados na Declaração
-do Imposto de Renda da Pessoa Física. Deve-se levar em conta, no entanto, que
-os valores declarados são os valores do momento da aquisição dos imóveis, que
-não são atualizados para fins de declaração de imposto de renda, portanto estes
-são usualmente menores do que os valores de mercado.
-
-Segundo @LEUNG [p. 4], no entanto, mais recentemente tem havido um pequeno porém 
-crescente esforço de pesquisa para preencher a lacuna entre as duas literaturas 
-e lançar luz sobre questões que são conjuntamente conseqüentes para a 
-macroeconomia e a habitação.
-
-O mercado imobiliário, diferentemente de outros mercados de capitais, exibe uma
-flutuação de valores baixa e não muda imediatamente após a mudança do noticiário
-econômico [@ADAMS2010, 3]. O mercado imobiliário residencial, em particular,
-mostra forte rigidez pra baixo, porque os donos de imóveis residenciais tendem a
-resistir a venda da propriedade sob períodos de recessão econômica [@Case2000,
-129].
 
 ### Modelos macroeconômicos para o \gls{MI}
 
@@ -497,6 +523,16 @@ por @fan. Este assunto, porém, está fora do escopo deste trabalho.
 
 ### Índices de preços de imóveis
 
+Diversos países hoje contam com índices de preços de imóveis nacionais, oficiais
+ou não, no entanto o modo deconstrução destes índices de preços difere de país 
+para país, assim como variam as estruturas de oferta e demanda em cada um deles
+[@regulation, 3-4].
+
+No Brasil recentemente foram criados alguns índices de preços de imóveis, 
+contudo, deve-se ter em conta, na criação de um índice de preços qualquer, a que
+objetivo ele se destina e, como se verá, isto parece não ter sido levado em 
+conta na criação dos índices de preços de imóveis brasileiros.
+
 De acordo com o @rppi, índices de preços de imóveis são importantes e podem ser
 úteis ou necessários:
 
@@ -524,18 +560,31 @@ propriedades existentes e das propriedades recém-construídas, enquanto que par
 deve se ater às vendas de novos imóveis ou imóveis recém convertidos em imóveis
 de novo tipo [@rppi, 155]. 
 
-Contudo, deve-se ter em conta que para aferir o investimento bruto em *real
-estate* deve-se primeiro decompor o componente estrutural do componente
+Contudo, deve-se ter em conta que para aferir o investimento bruto no \gls{MI} 
+deve-se primeiro decompor o componente estrutural do componente
 referente ao preço da terra no valor de venda dos imóveis [@rppi, 155]. Esta
 decomposição também deve ser efetuada para utilização do índice como um
 componente de um índice de preços ao consumidor [@rppi, 156].
 
-#### Índices de capitalização
-
 #### Metodologias para confecção de índices de preços de imóveis
 
 Diferentes metodologias são conhecidas para a confecção de índices de preços de
-imóveis. 
+imóveis, que vão desde as mais simples, como o método de vendas repetidas, 
+proposto por Case e Shiller [-@repeatedSales], até métodos mais complexos, com
+modelos hedônicos, com os quais é possível decompor os preços dos imóveis em
+preços de terra e preços de estruturas.
+
+A opção pela aplicação de cada método não se dá apenas pela maior ou menor
+precisão ou complexidade de cada índice, mas deve se dar pelos aspectos do
+\gls{MI} em referência e em relação à finalidade do índice. O índice de Case e
+Shiller, um dos mais conhecidos, se aplica perfeitamente ao \gls{MI} americano,
+dado este é um mercado muito dinâmico, onde a compra e venda de imóveis é feita
+com considerável frequência, o que permite a utilização do índice, que se baseia
+em vendas repetidas de um mesmo imóvel. É provável, portanto, que este índice
+não se adapte à países com \gls{MI} menos complexos, como o Brasil, onde ainda
+existe grande informalidade e as transações muitas vezes nem são comunicadas às
+entidades reguladoras, dado que diversas transações são feitas baseadas em
+simples contratos particulares de compra e venda.
 
 ##### Métodos de estratificação
 
@@ -608,7 +657,7 @@ vendas repetidas não é tão eficiente quanto o método de modelos hedônicos, 
 o método de vendas repetidas, ao utilizar apenas os dados de imóveis
 transacionados mais de uma vez, por conseguinte descarta muitos dados de
 transação que poderiam ser úteis para a construção de um índice mais robusto 
-[@rppi, 160].
+[@rppi, 160]. 
 
 ##### Métodos baseados em avaliação -- Sales Price Appraisal Ratio (SPAR)
 
@@ -796,12 +845,12 @@ Em termos reais, no entanto, os preços ainda são inferiores ao pico registrado
 mas há uma nítida tendência de alta, conforme pode ser visto na figura 
 \@ref(fig:rhpi).
 
-```{r rhpi, fig.cap="Home Price Index, de Case e Shiller, em termos reais."}
+```{r rhpi, fig.cap="Home Price Index (HPI), de Case e Shiller, em termos reais."}
 ggplot(window(rhpi, start = 1990 + 0/12), as.numeric = FALSE) +
   geom_line() +
    labs(
-     title = "Case-Shiller U.S. National Real Home Price Index", 
-     subtitle = "Not Seasonally Adjusted | Frequency: Monthly", 
+     title = "Índice de Case-Shiller (EUA) HPI Nacional Real", 
+     subtitle = "Não ajustado sazonalmente | Frequência: Mensal", 
      caption = "1990-2019",
      x = "Ano", 
      y = "Índice Jan 1890 = 100") +
@@ -840,8 +889,8 @@ recessions.trim = subset(recessions.df, Peak >= "1953-01-01" )
 ggplot(window(rhpi, start = 1953 + 0/12), as.numeric = FALSE) +
   geom_line() +
    labs(
-     title = "Case-Shiller U.S. National Real Home Price Index", 
-     subtitle = "Not Seasonally Adjusted | Frequency: Monthly", 
+     title = "Índice de Case-Shiller (EUA) HPI Nacional Real", 
+     subtitle = "Não ajustado sazonalmente | Frequência: Mensal", 
      caption = "1953-2019",
      x = "Ano", 
      y = "Índice Jan 1890 = 100") +
@@ -894,8 +943,8 @@ format_quarters <- function(x) {
 ggplot(global_rhpi, aes(x = dateq, y = equally.weighted)) +
   geom_line() +
    labs(
-     title = "IMF Global Real Home Price Index", 
-     subtitle = "Not Seasonally Adjusted | Frequência: trimestral", 
+     title = "Índice Preço de Imóveis residenciais global FMI", 
+     subtitle = "Não ajustado sazonalmente | Frequência: trimestral", 
      caption = "2000-2019",
      x = "Ano",
      y = "Índice") +
@@ -1174,6 +1223,86 @@ Em um cenário de longo prazo, a tendência é que a crise de 2008 apenas tenha
 acelerado em demasia, momentaneamente, o que já era uma tendência de longo
 prazo, portanto estrutural, da economia.
 
+```{r}
+RHVRUSQ156N <- fredr(series_id = "RHVRUSQ156N", 
+               observation_start = as.Date("1956-01-01")) # Homeowner vacancy rate
+USHOWN <- fredr(series_id = "USHOWN", 
+               observation_start = as.Date("1984-01-01")) # Homeownership rate
+RRVRUSQ156N <- fredr(series_id = "RRVRUSQ156N", 
+               observation_start = as.Date("1956-01-01")) # Rental vacancy rate
+RHVRUSQ156N$date <- seq(ISOdate(1956,1,1), ISOdate(2020,4,1), by = "quarters")
+RRVRUSQ156N$date <- seq(ISOdate(1956,1,1), ISOdate(2020,4,1), by = "quarters")
+```
+
+```{r vacancyRate, fig.cap="Home Price Index, de Case e Shiller, em termos reais."}
+p1 <- ggplot(RHVRUSQ156N, aes(x = date, y = value)) +
+  geom_line() +
+   labs(
+     title = "Imóveis próprios", 
+     subtitle = "Não ajustada sazonalmente | Frequência: trimestral", 
+     caption = "1951-2020",
+     x = "Data", 
+     y = "%") +
+  stat_peaks(colour = "red", span = 61) +
+  stat_peaks(geom = "text", colour = "red", 
+             vjust = -0.5, x.label.fmt = "%m/%y", span = 61) +
+  stat_valleys(colour = "blue", span = 61) +
+  stat_valleys(geom = "text", colour = "blue", 
+             vjust = 1.5, x.label.fmt = "%b/%Y", span = 61) +   
+  scale_x_datetime(expand = expansion(mult = c(0, .05)),
+                   date_breaks = "60 months",
+                   date_minor_breaks = "12 months",
+                   labels = format_quarters) +
+  theme(panel.grid.major = element_line(colour="gray", size=0.5),
+        panel.grid.minor.x = element_line(colour="gray", size=0.1),
+        axis.text.x=element_text(angle=-45, hjust=0.001))#+
+  # geom_rect(data=recessions.trim, aes(xmin=Peak, xmax=Trough, 
+  #                                   ymin=-Inf, ymax=+Inf),
+  #         inherit.aes=F,
+  #         fill='grey', alpha=0.5)
+p2 <- ggplot(RRVRUSQ156N, aes(x = date, y = value)) +
+  geom_line() +
+   labs(
+     title = "Imóveis de aluguel", 
+     subtitle = "Não ajustada sazonalmente | Frequência: trimestral", 
+     caption = "1951-2020",
+     x = "Data", 
+     y = "%") +
+  stat_peaks(colour = "red", span = 61) +
+  stat_peaks(geom = "text", colour = "red", 
+             vjust = -0.5, x.label.fmt = "%m/%y", span = 61) +
+  stat_valleys(colour = "blue", span = 61) +
+  stat_valleys(geom = "text", colour = "blue", 
+             vjust = 1.5, x.label.fmt = "%b/%Y", span = 61) +
+  scale_x_datetime(expand = expansion(mult = c(0, .05)),
+                   date_breaks = "60 months",
+                   date_minor_breaks = "12 months",
+                   labels = format_quarters) +
+  theme(panel.grid.major = element_line(colour="gray", size=0.5),
+        panel.grid.minor.x = element_line(colour="gray", size=0.1),
+        axis.text.x=element_text(angle=-45, hjust=0.001))#+
+  # geom_rect(data=recessions.trim, aes(xmin=Peak, xmax=Trough, 
+  #                                   ymin=-Inf, ymax=+Inf),
+  #         inherit.aes=F,
+  #         fill='grey', alpha=0.5)
+plot_row <- plot_grid(p1, p2)
+title <- ggdraw() +
+  draw_label(
+    "Taxa de Vacância (EUA)",
+    fontface = 'bold',
+    x = 0,
+    hjust = 0
+  ) +
+  theme(
+    # add margin on the left of the drawing canvas,
+    # so title is aligned with left edge of first plot
+    plot.margin = margin(0, 0, 0, 7)
+  )
+plot_grid(title, plot_row, ncol = 1,
+          # rel_heights values control vertical title margins
+          rel_heights = c(0.1, 1))
+```
+
 ### O Mercado Imobiliário e o setor bancário {#MI-e-o-setor-bancario}
 
 A participação dos produtos financeiros relacionados ao setor imobiliário
@@ -1189,309 +1318,7 @@ dos bens imóveis, mas também por conta de uma inversão dos fundamentos
 econômicos que sustentavam os preços [@Case2000, 129], como aliás parece ser o
 caso no momento, devido a um fator exógeno, a saber, a pandemia do corona vírus.
 
-#### A crise imobiliária-financeira de 2008
-
-##### A dinâmica da crise
-
-Em 2001 o \gls{FED} reduziu a taxa básica da economia americana para 1,5% a.a.,
-para combater a recessão econômica, atingindo um dos níveis mais baixos da
-história. Um dos grandes problemas que emergem com níveis tão baixos de juros é
-que os maiores investidores institucionais do mercado de títulos de dívida
-pública, como os fundos de pensão, possuem metas atuariais que só são atingidas
-com taxas mais altas. Estes investidores, então, pressionados a atingir estas
-metas atuariais, são obrigados a procurar opções de investimentos mais rentáveis
-do que os títulos públicos. Estas instituições, no entanto, tem em seus
-estatutos algumas limitações, como investir apenas em produtos financeiros acima
-de determinados *ratings*, ou seja, classificações dos produtos, que são
-elaboradas pelas agências de classificação de risco.
-
-Desta maneira, havia demanda no mercado para ativos de melhores classificação de
-risco, porém com rentabilidade mais altas do que os ativos da dívida pública.
-Para suprir esta demanda, houve o advento dos \gls{CDO}, que são derivativos
-financeiros compostos de ativos financeiros, \gls{ABS}, que podem ser compostos
-de diversos tipos de empréstimos. No caso do mercado imobiliário, estes ativos
-são os \gls{MBS}, que são grupos de ativos constituídos de hipotecas. Este tipo
-de derivativos, \gls{CDO}, tem uma estrutura que permite às instituições agrupar
-uma série de ativos de menor *rating*, criando assim um \gls{CDO} compostos de
-ativos com maior e menor *rating*. A estrutura destes derivativos se verá com
-mais detalhes na próxima seção.
-
-No entanto, em virtude das taxas muito baixas praticadas pelo \gls{FED}, esta
-demanda estava tão grande, que os bancos se sentiram incentivados a produzir
-cada vez mais empréstimos imobiliários, com o intuito de vender estes
-empréstimos na forma de \gls{CDO}. Desta maneira, os bancos se livravam dos
-riscos de crédito e liberavam mais capital para possibilitar a realização de
-novos empréstimos.
-
-Neste ínterim, porém, surgiram empréstimos exóticos, em que o mutuário pagava
-por alguns anos apenas o valor dos juros. Depois deste período, o mutuário passa
-a pagar também uma parte do principal. Este tipo de empréstimos eram chamados
-de *interest-only loans*. No caso específico do mercado imobiliário, eram
-chamados de *interest-only mortgages*. Convencionou-se chamar este tipo de
-empréstimos também de empréstimos *subprime*, o que é terminologicamente
-incorreto. Tecnicamente, *subprime* é o nome que se dá aos clientes cujo
-histórico de crédito não é bom e, portanto, são mais propensos a *default*. Como
-o risco destes empréstimos é maior, os juros destes empréstimos também são
-maiores. Com juros maiores, o risco de *default* aumenta ainda mais. Os
-empréstimos do tipo *interest-only* ajudavam a possibilitar a este tipo de
-cliente a compra de um imóvel, pois a prestação era bem diminuída no início e,
-em tese, enquanto o mercado imobiliário continuasse subindo, o tomador do
-empréstimo sempre poderia, em todo caso, revendê-lo com preço maior no futuro,
-caso não conseguisse arcar com as prestações, especialmente quando do início do
-pagamento do principal. Porém, neste tipo de empréstimo também era permitido aos 
-emprestadores ajustar a taxa de juros.
-
-Com a grande liquidez inserida no mercado por estes empréstimos, o preço dos 
-imóveis tendia a continuar aumentando. Porém, em 2004 o \gls{FED} iniciou um
-ciclo de alta dos juros para conter possíver surtos inflacionários. Em junho de
-2006 a taxa básica do \gls{FED} chegou a 5,25% a.a. Com o aumento das taxas de
-juros, a demanda por residências começou a diminuir e os preços dos imóveis
-começaram a cair. Os mutuários começaram a perceber que não conseguiriam
-pagar as suas prestações e tampouco revender as suas casas a preços maiores. A 
-queda dos mercados em geral foi grande e com a queda dos mercados, ou seja, com
-a queda dos valores das companhias, estas não conseguiam oferecer garantias 
-suficientes para conseguir novos empréstimos no mercado financeiro. Ainda, os 
-bancos começaram a ficar receosos de emprestar uns para os outros, por causa
-da alta presença de ativos tóxicos nos seus balanços, os derivativos de crédito
-que compraram durante o *boom* imobiliário, o que causou uma crise de liquidez.
-
-##### A raiz da crise
-
-Segundo Donnelly e Embrechts [-@devil, 3], a raiz da crise financeira de 2008
-estava nos derivativos de crédito, \gls{CDO}, lastreados em ativos de crédito
-imobiliário, \gls{MBS}, que tinham por objetivo transferir o risco de uma
-hipoteca dos emprestadores ao mercado financeiro em geral, ou seja, aos bancos,
-fundos de *hedge* e companhias seguradoras. Esta transferência de risco, ou
-securitização, transformou o que seria apenas uma crise setorial das
-instituições hipotecárias, numa crise financeira que atingiu praticamente todos
-os setores financeiros e, por consequência, toda a economia real.
-
-O propósito da venda destes seguros era a liberação de capital dos bancos: uma
-vez que os bancos necessitam manter provisões de capital em seus balanços contra
-os empréstimos realizados, a venda destes derivativos de risco a outros
-investidores possibilitava a liberação desse capital, tornando possível aos
-bancos efetuar mais empréstimos.
-
-Esta dispersão do risco do setor bancário era vista como um fator de diminuição
-da vulnerabilidade do setor aos choques econômicos. Na prática, porém, a 
-diminuição dos riscos levou os bancos a uma maior tolerância na análise de
-risco dos tomadores de empréstimos, o que não foi percebido de imediato pelos
-compradores dos \gls{CDO}s.
-
-Segundo Donnelly e Embrechts [-@devil, 5]:
-
-\begin{citacao}
-If a bank is not exposed to the risk of mortgage default, then it has no
-incentive to control and maintain the quality of the loans it makes. To protect
-against this, the theory was that the banks should retain the riskiest part of
-the mortgage pool. In practice, this did not always happen, which led to a
-reduction in lending standards [...] This possibility was foreseen some fifteen
-years before the Crisis with remarkable prescience by Stiglitz, as he points out
-in Stiglitz (2008).
-\end{citacao}
-
-No mercado financeiro é comum a utilização da expressão "risco moral" (*moral 
-hazard*), para descrever os mecanismos que podem levar a um desequilíbrio de um
-mercado. Na crise de 2008, este risco moral esteve presente não apenas neste
-desincentivo aos emprestadores para a diminuição dos riscos dos empréstimos, já 
-que estes eram securitizandos, mas também na crença de que, em última instância,
-os governos seriam obrigados a socorrer as instituições denominadas *too big to
-fail* (grandes demais para quebrar) [@devil, 4-5].
-
-
-##### Derivativos de crédito
-
-\gls{CDO} são um tipo de instrumento financeiro do grupo dos denominados 
-derivativos de crédito, lastreados em \gls{ABS}, construídos através do
-empacotamento de ativos de crédito financeiros, com o intuito da diluição do
-risco. Os \gls{CDO} tiveram papel central na eclosão da crise 
-imobilário-financeira de 2007-2008.
-
-Segundo @watts, \gls{MBS}, *i.e.* seguros baseados em empréstimos hipotecários,
-surgiram nos anos 70. Pouco tempo depois, vieram os \gls{CMO}, que eram 
-derivativos de crédito similares aos \gls{MBS}, porém com a característica de 
-serem fatiados em *tranches*.
-
-A diferença entre os \gls{CDO} e \gls{CMO} é que os \gls{CDO} podem ser baseados
-em qualquer tipo de ativos ou dívidas, inclusive outros \gls{CDO}.
-
-Este tipo de instrumento é utilizado tanto no mercado imobiliário como em geral
-para a diluição do risco dos empréstimos. No caso do mercado imobiliário, das
-hipotecas [@watts, 2].
-
-Este tipo de instrumento é oferecido pelos emprestadores através de veículos de
-propósito específicos, ou \gls{SPV}, que, apesar de patrocinados pelos bancos,
-não transferem a ele o risco de falência institucional. Ou seja, a falência da
-instituição bancária não afeta o risco de recebimento dos \gls{CDO}.
-
-```{r CDO, fig.cap = "Esquemático do funcionamento de um CDO."}
-grViz("
-
-digraph boxes_and_circles{
-
-rankdir = LR
-
-# add node statements
-node [shape = box
-      fontname = Helvetica
-      penwidth = 2.0]
-'Pool of Assets'; SPV; Senior; Mezzanine; Equity
-
-# add edge statements
-
-'Pool of Assets' -> SPV [label = 'Coupons']
-
-#SPV -> {Senior Mezzanine Equity}
-
-SPV -> Senior [label = '1º']
-SPV -> Mezzanine [label = '2º']
-SPV -> Equity [label = '3º']
-}
-")
-# m <- mermaid("
-# graph LR
-# 
-# A[Pool of Assets]-->|Coupons|B{SPV}
-# B-->|1º|C[Senior]
-# B-->|2º|D[Mezzanine]
-# B-->|3º|E[Equity]
-# ", height = '100%', width = '100%')
-# 
-# networkD3::saveNetwork(m, "m.html")
-# webshot::webshot("m.html", file = "images/CDO.png")
-# knitr::include_graphics("images/CDO.png")
-```
-\bcenter
-Fonte: Do autor. Adaptado de @devil.
-\ecenter
-
-Na figura \@ref(fig:CDO) pode ser visto um esquemático do funcionamento de um
-CDO simples, dividido em três *tranches* ou parcelas. Cada *tranche* tem uma
-prioridade no recebimento de cupons. Após o pagamento das despesas, a prioridade
-é para o pagamento do *Senior tranche*, depois do *Mezzanine tranche* e então do
-*Equity tranche*. Se ocorrer um *default* em um dos ativos lastreados, esta
-perda é descontada primeiramente do *Equity tranche*, que tem os valores de seus
-cupons reduzidos. Depois de mais alguns *defaults*, os cupons do *Equity
-tranche* vão a zero, e perdas adicionais serão descontadas do *Mezzanine
-tranche* e assim por diante [@devil, 6].
-
-Desta maneira, a cada *tranche* será atribuída pelas agências de risco uma nota 
-de crédito (*rating*) diferente. Segundo @devil, tipicamente um \gls{CDO} possui
-composição de em torno de 80% de *senior tranches*, o que significa que 
-aproximadamente 20% do portfolio de ativos base devem entrar em *default* antes
-do *senior tranche* ser afetado. Na classificação dos *tranches* pelas agências 
-de risco normalmente era atribuída ao *senior tranche* uma nota AAA. Aos
-*mezzanine tranches* normalmente era atribuída uma nota BBB-, enquanto que aos
-*equity tranches* não era atribuída nenhuma classificação de risco, ou seja,
-estas parcelas dos \gls{CDO} eram consideradas de grau especulativo.
-
-Deve-se salientar que existem ainda outros tipos de \gls{CDO}, com maior número
-de parcelas, sejam parcelas intermediárias (vários níveis de *mezzanine
-tranches*), ou parcelas mais seguras, com as *super-senior tranches*, aos quais
-eram atribuídas notas de crédito superiores à AAA, dos *senior tranches*.
-
-Segundo @watts, a duração típica de um contrato de \gls{CDO} era de 5 anos.
-
-
-| **Rating at issuance** | **5-yr default probability (%)** |
-|:-----------------------|---------------------------------:|
-| AAA                    | 0,05                             |
-| AA+                    | 0,19                             |
-| AA                     | 0,26                             |
-| AA-                    | 0,36                             |
-| A+                     | 0,56                             |
-| A                      | 0,62                             |
-| A-                     | 0,92                             |
-| BBB+                   | 1,20                             |
-| BBB                    | 1,89                             |
-| BBB-                   | 3,63                             |
-| BB+                    | 5,74                             |
-| BB                     | 8,11                             |
-| BB-                    | 12,50                            |
-| B+                     | 17,09                            |
-| B                      | 21,36                            |
-| B-                     | 27,08                            |
-| CCC+                   | 33,64                            |
-| CCC                    | 37,64                            |
-Table: Parte da matriz de risco de default da Fitch.
-
-\bcenter
-Fonte: @watts.
-\ecenter
-
-| **Tranche (Rating)**   | **Attachment Points** |
-|:-----------------------|:---------------------:|
-| Senior (AAA)           | 42% -- 100%           |
-| Mezzanine 1 (AA-)      | 34% -- 42%            |
-| Mezzanine 4 (A-)       | 28% -- 34%            |
-| Mezzanine 4 (BBB-)     | 20% -- 28%            |
-| Mezzanine 4 (BB-)      | 11% -- 20%            |
-| Equity (NA)            | 0% -- 11%             |
-Table: Exemplo de parcelamento de \gls{CDO}.
-
-\bcenter
-Fonte: @watts.
-\ecenter
-
-Para Donnelly e Embrechts [@devil, 20], os *equity tranches* são produtos com
-muito risco, portanto de pouco valor, o que interessa aos grandes especuladores,
-como os *hedge funds*, enquanto os *senior tranches* eram vistos pelas grandes
-instituições como ativos muito seguros. Já os *mezzanine tranches* nem eram tão
-seguros e nem tão baratos, não interessando nem aos investidores mais cautelosos,
-nem aos grandes especuladores. Desta maneira, o *mezzanine tranches* eram 
-também empacotados em outros \gls{CDO}, os chamados \gls{CDO}-squared, o que, em 
-tradução literal seria um \gls{CDO} ao quadrado. Este tipo de instrumento 
-financeiro, ainda mais complexo, é de precificação ainda mais difícil e isto 
-contribuiu ainda mais para aumentar o risco moral do mercado.
-
-Segundo Donnelly e Embrechts [@devil, 7], o fato de que as grandes instituições
-financeiras viam os *senior tranches* como ativos muito seguros teve uma grande
-influência na crise financeira de 2008. Segundo Donnelly e Embrechts 
-[@devil, 24], um executivo de uma subsidiária da AIG chegou a dizer, em agosto
-de 2007 que era difícil vislumbrar um cenário onde a AIG poderia perder um dólar
-sequer com estes ativos. Em 2008 o prejuízo líquido da AIG foi de 
-US\$ 99 bilhões, sendo US\$ 62 bi apenas no último trimestre, auge da crise do 
-*subprime*.
-
-##### Precificação
-
-De acordo com @watts, apesar de terem sido criados há algum tempo, uma década e
-meia teve que se passar para que o mercado de \gls{CDO} se tornasse grande. E o
-motivo era que faltava um modelo que servisse de *benchmark*, ou seja, um modelo
-que permitisse ao mercado basilar o preço dos \gls{CDO} para que desse uma 
-relativa segurança aos investidores.
-
-As condições para a precificação destes ativos vieram apenas na primeira década
-do presente século, após a publicação do trabalho seminal de @Li.
-
-De acordo com Donnelly e Embrechts [-@devil, 7], a chave para a valorização dos
-\gls{CDO} é a modelagem dos *defaults*. Para isto, foi adotado pelo mercado
-(agências de risco de crédito como Fitch, Moody's e Standard & Poor's) o modelo
-da Copula Gaussiana [@devil, 14], que tem algumas vantagens, como rapidez de
-computação e facilidade de calibração. No entanto, foram desconsideradas pelo
-mercado algumas desvantagens do modelo, a saber [@devil, 15]:
-
-* modelagem insuficiente do agrupamento de *defaults* no portfolio (quando uma 
-companhia quebra, é provável que outras companhias do mesmo setor também quebrem,
-isto não pode ser modelado pela Copula Gaussiana);
-* Diferentes correlações entre os *tranches* do CDO, o que não ocorre na 
-prática; e
-* ausência de modelagem dos fatores que levam aos *defaults*.
-
-Especialmente no que tange à primeira desvantagem, a Copula Gaussiana é
-indesejável para a aferição de risco. Como enfatizam Donnelly e Embrechts
-[-@devil, 16]: não é sábio confiar em um modelo baseado na distribuição normal
-para verificar a probabilidade de ocorrência de eventos extremos.
-
-Pela própria estrutura dos \gls{CDO}, havia uma concepção que muito raramente
-ocorreriam tantos *defaults* simultâneos a ponto de um *senior tranche* ser
-afetado. Ocorre que pela própria característica da Copula Gaussiana, os eventos
-extremos não são suficientemente bem representados, o que não ocorre com outros
-modelos de Copulas, como  a de Gumbel, Clayton ou Copula-t. A apresentação
-destes modelos será vista com detalhe no capítulo \@ref(copulas) ([O Método
-Copulas]).
-
-
+(**AUMENTAR**)
 
 ## O Mercado Imobiliário e a Microeconomia {#micro}
 

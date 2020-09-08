@@ -47,12 +47,16 @@ mundo ocidental.
 O **Capítulo 4 (O Mercado Imobiliário e a Economia)** aborda os aspectos 
 teóricos e conceituais mais modernos relevantes à interligação do mercado 
 imobiliário à Economia de um país, trazendo também um apanhado dos principais 
-índices de preços de imóveis no Brasil e no mundo, e uma análise da crise 
-financeira-habitacional de 2008 e suas consequências até os tempos presentes.  
+índices de preços de imóveis no Brasil e no mundo. 
 
-O **Capítulo 5 (O Método Copulas)** introduz o método Copulas, utilizado na 
-precifição dos derivativos de crédito imobiliário, essencial para compreender a 
-raiz da crise financeira-imobiliária de 2008. 
+O **Capítulo 5 (A crise imobiliário-financeira de 2007-2008 revisitada)** faz
+uma reanálise da crise financeira-habitacional de 2008 a luz dos recentes
+acontecimentos e suas consequências até os tempos presentes, passando pelas 
+origens da crise, a queda acentuada das taxas de lucros da economia capitalista,
+os erros de análise de risco com a precifição dos derivativos de crédito 
+imobiliário, e, finalmente, o pós-crise, ou seja, que medidas tomaram os países
+mais atingidos pela crise e como ela continua a produzir seus efeitos até os 
+dias atuais.
 
 O **Capítulo 6 (Políticas do solo no Brasil e no mundo)** faz um histórico a
 respeito das principais abordagens utilizadas no mundo ocidental para solução da
