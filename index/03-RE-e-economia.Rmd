@@ -249,11 +249,11 @@ resistir a venda da propriedade sob períodos de recessão econômica [@Case2000
 
 Leung e Ng [-@macroHousing] classificaram as variáveis importantes para a
 aferição do comportamento do \gls{MI} e sua correlação com a Macroeconomia em
-variáveis macroeconômicas (*macro variables* ou \gls{MV}) e variáveis do mercado
-residencial (*housing market variables* ou \gls{HMV}). Entre as \gls{MV} estão o
-\gls{PIB}, a taxa de desemprego, taxa de inflação e entre as \gls{HMV}
-encontram-se não apenas os índices de preços, mas também variáveis como o número
-de novas residências vendidas, a taxa de vacância e o investimento residencial.
+variáveis macroeconômicas -- \gls{MV}) -- e variáveis do mercado residencial -- 
+\gls{HMV}). Entre as \gls{MV} estão o \gls{PIB}, a taxa de desemprego, taxa de 
+inflação e entre as \gls{HMV} encontram-se não apenas os índices de preços, mas 
+também variáveis como o número de novas residências vendidas, a taxa de vacância 
+e o investimento residencial.
 
 ### Correlação entre os mercados imobiliários
 
@@ -289,8 +289,8 @@ knitr::include_graphics("./images/adams2_crop.pdf")
 Fonte: @ADAMS2010.
 \ecenter
 
-A figura \@ref(fig:nhpi) ilustra o comportamento do \gls{MI} norte-americano
-desde 1990. 
+A figura \@ref(fig:nhpi) ilustra o comportamento do \gls{MI} residencial
+norte-americano desde 1990. 
 
 ```{r}
 # nhpi <- Quandl("YALE/NHPI", type="ts", start_date="1990-01-01")
@@ -347,14 +347,23 @@ ggplot(nhpi, as.numeric = FALSE) +
 Fonte: O autor, à partir de dados de @QuandlWIKI.
 \ecenter
 
-Nota-se que depois do derretimento do \gls{MI} norte-americano depois da crise
+Nota-se que após o derretimento do \gls{MI} norte-americano depois da crise
 imobiliário-financeira de 2007-2008, este mercado voltou a se aquecer fortemente
 desde Janeiro de 2012, tendo o nível de preços já ultrapassado o último pico,
 atingido em julho de 2006.
 
 @regulation também notaram um aumento generalizado nos preços dos imóveis em
 diversos países, especialmente após a segunda metade da década de 90, com 
-exceção do Japão e da Alemanha.
+exceção do Japão e da Alemanha, conforme pode ser visto na Figura 
+\@ref(fig:several-indices).
+
+```{r several-indices, fig.cap="Evolução dos índices de preços de imóveis em diversos países."}
+knitr::include_graphics("images/several_indices_regulations.png")
+```
+
+\bcenter
+Fonte: @regulation [p. 3]
+\ecenter
 
 A comparação de índices de preços dos diversos países, no entanto, deve ser
 feita com cautela, haja vista que os países compõem os seus índices de maneira
@@ -363,7 +372,18 @@ diferentes [ver @regulation, p. 4; @silver].
 
 Segundo @regulation [p. 4-5], o aumento do preço dos imóveis está fortemente 
 ligado ao aumento do preço da terra, ou seja, os custos de construção tem um
-papel secundário no aumento do preço dos imóveis.
+papel secundário no aumento do preço dos imóveis. Segundo Davis e Palumbo 
+[*apud* @regulation, p. 4], é o preço da terra que governa o aumento dos preços 
+dos imóveis nos EUA, o que se confirma também na China, como pode ser visto na 
+Figura \@ref(fig:land).
+
+```{r land, fig.cap="Aumento nominal e real do valor da terra na China."}
+knitr::include_graphics("images/land.png")
+```
+
+\bcenter
+Fonte: @regulation [p. 5]
+\ecenter
 
 A alta volatilidade do \gls{MI} tal como apresentada nos últimos anos, como será
 visto, não é comum. Neste capítulo serão analisados os motivos que levaram o
@@ -396,7 +416,7 @@ características do mercado hipotecário, houve um alto grau de variação entre
 países, embora os resultados sejam muito similares mesmo com a variação dos
 métodos de estimação.
 
-#### Modelo aplicado aos países desenvolvidos
+#### Modelo de oferta e demanda
 
 O equilíbrio no mercado de bens imobiliários se dá através da equalização das
 equações de oferta e demanda por bens imóveis.
@@ -504,7 +524,7 @@ pública no curto prazo. Outra hipótese a ser verificada é quanto ao impacto d
 taxas de juros de curto prazo nos juros hipotecários, o que parece não ocorrer
 no Brasil.
 
-### Desvios em relação com os fundamentos econômicos
+### Desvios em relação aos fundamentos econômicos - choques de demanda
 
 O mercado imobiliário, assim como acontece com  o mercado mobiliário, deve
 seguir os fundamentos da Economia no longo prazo. No entanto, eventuais
@@ -519,7 +539,66 @@ informações de preços, que são difíceis devido às particularidades do \gls
 [@ADAMS2010, 3].
 
 Devido a estes fatos, são importantes os modelos dinâmicos, conforme demonstrado
-por @fan. Este assunto, porém, está fora do escopo deste trabalho.
+por @fan. 
+
+De acordo com @regulation [p. 11], os padrões de *boom* e *boost* no \gls{MI},
+ou seja, a formação e estouro de bolhas, podem ser explicados por modelos
+dinâmicos e tem maior relação com problemas na inelasticidade da oferta de
+alguns mercados do que propriamente com a ação de especuladores, que são quase
+sempre eleitos os culpados no noticiário econômico.
+
+No entanto, para @regulation [p. 1], a oferta inelástica em alguns mercados é
+uma condição necessária para a formação de bolhas, porém não suficiente: a
+formação de bolhas também está relacionada a choques de demanda.
+
+O detalhamento destes modelos dinâmicos está fora do escopo deste trabalho. No
+entanto, é possível através de modelos mais simples de oferta e demanda entender
+o efeito da inelasticidade da oferta, como pode ser visto na Figura 
+\@ref(fig:choque): um aumento na demanda pode ser modelado como um deslocamento
+da curva da demanda para a direita, levando os preços de equilíbrio inicial 
+$P_0$ ao novo preço de equilíbrio $P_1$. Com o aumento da oferta, no longo prazo,
+o preço de equilíbrio retorna ao ponto $P_2$.
+
+```{r choque, fig.cap="Efeitos de um choque de demanda num mercado com oferta inelástica."}
+knitr::include_graphics("images/choque_demanda_oferta_inelastica.png")
+```
+\bcenter
+Fonte: @regulation [p. 10]
+\ecenter
+
+Num mercado com uma oferta menos inelástica, a volatilidade é muito menor, o que
+pode ser visto na figura \@ref(fig:choque2): o deslocamento da curva de oferta
+provoca um aumento mais rápido da oferta, fazendo com que o preço inicial de 
+equilíbrio $P_0$ aumente muito menos significativamente ($P_1$) do que no caso
+anterior, voltando a um preço de equilíbrio no longo prazo ($P_2$) praticamente 
+igual ao preço inicial.
+
+
+```{r choque2, fig.cap="Efeitos de um choque de demanda num mercado com oferta elástica."}
+knitr::include_graphics("images/choque_demanda_oferta_elastica.png")
+```
+\bcenter
+Fonte: @regulation [p. 10]
+\ecenter
+
+Para @regulation [p. 11], ainda, além do problema da oferta inelástica pode 
+ocorrer ainda o problema de uma resposta mal desenhada pelo governo ao aumento 
+de preços inicial. Algumas medidas podem funcionar no médio prazo, aumentando a 
+oferta temporariamente e evitando uma grande alta dos preços, porém, no longo
+prazo, um posterior novo choque de demanda pode vir a elever os preços a 
+níveis muito superiores, como ilustrado na Figura \@ref(fig:choque3). 
+
+```{r choque3, fig.cap="Efeitos de uma resposta governamental inadequada a um choque de demanda."}
+knitr::include_graphics("images/choque_demanda_resposta_inadequada.png")
+```
+\bcenter
+Fonte: @regulation [p. 11]
+\ecenter
+
+Reformas adequadas na regulação do \gls{MI} serão apresentadas no capítulo \@ref(politicas).
+
+Algumas referências importantes para trabalhos futuros de modelos dinâmicos são:
+@wheaton1999, @FAN201937
 
 ### Índices de preços de imóveis
 
@@ -565,6 +644,19 @@ deve-se primeiro decompor o componente estrutural do componente
 referente ao preço da terra no valor de venda dos imóveis [@rppi, 155]. Esta
 decomposição também deve ser efetuada para utilização do índice como um
 componente de um índice de preços ao consumidor [@rppi, 156].
+
+No Brasil existe uma grande dificuldade para a confecção de plantas genéricas
+para a constituição da base de cálculo do \gls{IPTU}. Em diversas cidades é
+comum que as \gls{PVG} não sejam atualizadas por muitos anos, o que acaba
+distorcendo muito a \gls{PVG} em relação aos valores reais de mercado. O que
+agrava ainda mais a situação é que as bases de cálculo acabam sendo atualizadas
+por índices de preços ao consumidor, como o \gls{IPCA}. O efeito disto é que, em
+períodos em que os preços dos imóveis aumentam mais do que o \gls{IPCA} em média
+(ou qualquer quer seja o índice de preço adotado), a base da tributação acaba
+deprimida e vice-versa, se o aumento do \gls{IPCA} é muito alto, o aumento da
+base de cálculo do \gls{IPTU} acaba por sobrecarregar ainda mais os
+proprietários. A elaboração de índices de preços de imóveis pode ajudar a 
+resolver este problema.
 
 #### Metodologias para confecção de índices de preços de imóveis
 
@@ -1024,7 +1116,7 @@ vai muito além do escopo deste trabalho. Uma boa discussão pode ser vista em
 #ycAll <- Quandl("USTREASURY/YIELD", type = "ts")
 ```
 
-```{r}
+```{r ratesData}
 # gs10 <- fredr(series_id = "GS10", 
 #               observation_start = as.Date("1953-04-01"))
 # gs20 <- fredr(series_id = "GS20", 
@@ -1039,16 +1131,19 @@ vai muito além do escopo deste trabalho. Uma boa discussão pode ser vista em
 # saveRDS(df, "data/FRED")
 ```
 
+```{r recessionsDF}
+recessions.df <- within(recessions.df, {
+                          Peak <- as.Date(Peak)
+                          Trough <- as.Date(Trough)
+                        })
+```
+
 
 ```{r yields, fig.cap="Taxas dos \\emph{treasuries bonds} desde janeiro/1990."}
 # xyplot.ts(ycAll[, c(9:12)], 
 #           superpose=TRUE, 
 #           auto.key=list(columns=4), 
 #           ylab="Yield (%)")
-recessions.df <- within(recessions.df, {
-                          Peak <- as.Date(Peak)
-                          Trough <- as.Date(Trough)
-                        })
 df <- readRDS("data/FRED")
 ggplot(data = df[which(df$date >= as.Date("1990-01-01")), ], 
        aes(x = date, y = rate, color = bond)) +
@@ -1212,6 +1307,10 @@ Esta alta queda das taxas de juros dos ativos financeiros de longo prazo é uma
 das causadoras da elevação dos preços dos mesmos ativos, assim como a elevação
 do preço dos imóveis.
 
+De fato, @goodhart2008 encontraram uma ligação multidirecional entre \gls{MV} 
+relacionadas à oferta monetária (base monetária, crédito, entre outras) e o
+preço dos imóveis.
+
 A grande diferença então da recente alta dos preços dos imóveis (desde 2012) da
 alta anterior (até Dez/2005) é que a alta mais recente é plenamente justificada
 pela altíssima liquidez dos mercados. Ou seja, não se pode atribuir a recente
@@ -1234,7 +1333,10 @@ RHVRUSQ156N$date <- seq(ISOdate(1956,1,1), ISOdate(2020,4,1), by = "quarters")
 RRVRUSQ156N$date <- seq(ISOdate(1956,1,1), ISOdate(2020,4,1), by = "quarters")
 ```
 
-```{r vacancyRate, fig.cap="Home Price Index, de Case e Shiller, em termos reais."}
+```{r vacancyRate, fig.cap="Home Price Index, de Case e Shiller, em termos reais.", out.width="100%"}
+recessions.trim = subset(recessions.df, Peak >= "1956-01-01" )
+recessions.trim$Peak <- as.POSIXct(recessions.trim$Peak)
+recessions.trim$Trough <- as.POSIXct(recessions.trim$Trough)
 p1 <- ggplot(RHVRUSQ156N, aes(x = date, y = value)) +
   geom_line() +
    labs(
@@ -1243,23 +1345,23 @@ p1 <- ggplot(RHVRUSQ156N, aes(x = date, y = value)) +
      caption = "1951-2020",
      x = "Data", 
      y = "%") +
-  stat_peaks(colour = "red", span = 61) +
-  stat_peaks(geom = "text", colour = "red", 
-             vjust = -0.5, x.label.fmt = "%m/%y", span = 61) +
-  stat_valleys(colour = "blue", span = 61) +
-  stat_valleys(geom = "text", colour = "blue", 
-             vjust = 1.5, x.label.fmt = "%b/%Y", span = 61) +   
+  stat_peaks(colour = "red", span = 25) +
+  # stat_peaks(geom = "text", colour = "red", 
+  #            vjust = -0.5, x.label.fmt = "%m/%y", span = 25) +
+  stat_valleys(colour = "blue", span = 25) +
+  # stat_valleys(geom = "text", colour = "blue", 
+  #            vjust = 1.5, x.label.fmt = "%b/%Y", span = 25) +   
   scale_x_datetime(expand = expansion(mult = c(0, .05)),
                    date_breaks = "60 months",
                    date_minor_breaks = "12 months",
                    labels = format_quarters) +
   theme(panel.grid.major = element_line(colour="gray", size=0.5),
         panel.grid.minor.x = element_line(colour="gray", size=0.1),
-        axis.text.x=element_text(angle=-45, hjust=0.001))#+
-  # geom_rect(data=recessions.trim, aes(xmin=Peak, xmax=Trough, 
-  #                                   ymin=-Inf, ymax=+Inf),
-  #         inherit.aes=F,
-  #         fill='grey', alpha=0.5)
+        axis.text.x=element_text(angle=-45, hjust=0.001)) +
+  geom_rect(data=recessions.trim, aes(xmin=Peak, xmax=Trough,
+                                    ymin=-Inf, ymax=+Inf),
+          inherit.aes=F,
+          fill='grey', alpha=0.5)
 p2 <- ggplot(RRVRUSQ156N, aes(x = date, y = value)) +
   geom_line() +
    labs(
@@ -1269,22 +1371,22 @@ p2 <- ggplot(RRVRUSQ156N, aes(x = date, y = value)) +
      x = "Data", 
      y = "%") +
   stat_peaks(colour = "red", span = 61) +
-  stat_peaks(geom = "text", colour = "red", 
-             vjust = -0.5, x.label.fmt = "%m/%y", span = 61) +
+  # stat_peaks(geom = "text", colour = "red", 
+  #            vjust = -0.5, x.label.fmt = "%m/%y", span = 61) +
   stat_valleys(colour = "blue", span = 61) +
-  stat_valleys(geom = "text", colour = "blue", 
-             vjust = 1.5, x.label.fmt = "%b/%Y", span = 61) +
+  # stat_valleys(geom = "text", colour = "blue", 
+  #            vjust = 1.5, x.label.fmt = "%b/%Y", span = 61) +
   scale_x_datetime(expand = expansion(mult = c(0, .05)),
                    date_breaks = "60 months",
                    date_minor_breaks = "12 months",
                    labels = format_quarters) +
   theme(panel.grid.major = element_line(colour="gray", size=0.5),
         panel.grid.minor.x = element_line(colour="gray", size=0.1),
-        axis.text.x=element_text(angle=-45, hjust=0.001))#+
-  # geom_rect(data=recessions.trim, aes(xmin=Peak, xmax=Trough, 
-  #                                   ymin=-Inf, ymax=+Inf),
-  #         inherit.aes=F,
-  #         fill='grey', alpha=0.5)
+        axis.text.x=element_text(angle=-45, hjust=0.001)) +
+  geom_rect(data=recessions.trim, aes(xmin=Peak, xmax=Trough,
+                                    ymin=-Inf, ymax=+Inf),
+          inherit.aes=F,
+          fill='grey', alpha=0.5)
 plot_row <- plot_grid(p1, p2)
 title <- ggdraw() +
   draw_label(
@@ -1296,7 +1398,7 @@ title <- ggdraw() +
   theme(
     # add margin on the left of the drawing canvas,
     # so title is aligned with left edge of first plot
-    plot.margin = margin(0, 0, 0, 7)
+    plot.margin = margin(0, 0, 0, 0)
   )
 plot_grid(title, plot_row, ncol = 1,
           # rel_heights values control vertical title margins
