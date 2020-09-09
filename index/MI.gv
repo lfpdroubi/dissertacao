@@ -1,0 +1,39 @@
+digraph nicegraph {
+
+  # graph, node, and edge definitions
+  graph [compound = true, nodesep = .5, ranksep = .25,
+         color = crimson]
+
+  node [fontname = Helvetica, fontcolor = darkslategray,
+        shape = rectangle, fixedsize = true, width = 2.5,
+        color = darkslategray]
+
+  edge [color = grey, arrowhead = none, arrowtail = none]
+
+  # subgraph for R information
+  subgraph cluster0 {
+    node [fixedsize = true, width = 3]
+    'Terra' -> 'Materiais' -> 'Infraestrutura' -> 'Financiamento' -> 'Trabalhadores'
+  }
+
+  # subgraph for RStudio information
+  subgraph cluster1 {
+    node [fixedsize = true, width = 3]
+    'Construtores' -> 'Incorporadores' -> 'Proprietários'
+  }
+  
+  # subgraph for RStudio information
+  subgraph cluster2 {
+    node [fixedsize = true, width = 3]
+    'Compradores' -> 'Investidores'
+  }
+
+  'Mercado Imobiliário'             [width = 3]
+  'Mercado Imobiliário' -> 'Mercado de Insumos'
+  'Mercado Imobiliário' -> 'Processo de Produção'
+  'Mercado Imobiliário' -> 'Mercado de Residências'
+  'Mercado de Insumos' -> 'Terra'            [lhead = cluster0]
+  'Processo de Produção' -> 'Construtores'   [lhead = cluster1]
+  'Mercado de Residências' -> 'Compradores'  [lhead = cluster2]
+
+}

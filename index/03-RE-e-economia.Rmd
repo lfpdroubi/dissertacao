@@ -193,6 +193,62 @@ análise de Rangel, pode ter espaço. Estudos futuros tratarão da validade dest
 análise conceitual, através da análise dos dados, que porventura estarão 
 disponíveis.
 
+## O Mercado Imobiliário
+
+Segundo @shelter [p. 188-189], ...
+
+```{r, fig.cap = "Diagrama esquemático do funcionamento do Mercado Imobiliário."}
+grViz("
+      digraph nicegraph {
+
+  # graph, node, and edge definitions
+  graph [compound = true, nodesep = .5, ranksep = .25,
+         color = crimson]
+
+  node [fontname = Helvetica, fontcolor = darkslategray,
+        shape = rectangle, fixedsize = true, width = 2.5,
+        color = darkslategray]
+
+  edge [color = grey, arrowhead = none, arrowtail = none]
+
+  # subgraph for R information
+  subgraph cluster0 {
+    node [fixedsize = true, width = 3]
+    'Terra' -> 'Materiais' -> 'Infraestrutura' -> 'Financiamento' -> 'Trabalhadores'
+  }
+
+  # subgraph for RStudio information
+  subgraph cluster1 {
+    node [fixedsize = true, width = 3]
+    'Construtores' -> 'Incorporadores' -> 'Proprietários'
+  }
+  
+  # subgraph for RStudio information
+  subgraph cluster2 {
+    node [fixedsize = true, width = 3]
+    'Compradores' -> 'Investidores'
+  }
+
+  'Mercado Imobiliário'             [width = 3]
+  'Mercado Imobiliário' -> 'Mercado de Insumos'
+  'Mercado Imobiliário' -> 'Processo de Produção'
+  'Mercado Imobiliário' -> 'Mercado de Residências'
+  'Mercado de Insumos' -> 'Terra'            [lhead = cluster0]
+  'Processo de Produção' -> 'Construtores'   [lhead = cluster1]
+  'Mercado de Residências' -> 'Compradores'  [lhead = cluster2]
+
+}
+
+      ")
+```
+\bcenter
+Fonte: Adaptado de @shelter [p. 189]
+\ecenter
+
+
+
+
+
 ## O Mercado Imobiliário e a Macroeconomia {#macro}
 
 Segundo @LEUNG, há um reconhecimento relativamente recente e crescente
