@@ -195,58 +195,86 @@ disponíveis.
 
 ## O Mercado Imobiliário
 
-Segundo @shelter [p. 188-189], ...
+Segundo @shelter [p. 188-189], o funcionamento do \gls{MI} residencial pode
+ser compreendido de acordo com o diagrama da Figura \@ref(fig:MIResidencial):
+existe um mercado de residências que pode ser considerado competitivo. No
+processo de produção, contudo, a presença de poucos incorporadores e 
+proprietários pode lhes dar um grande poder de mercado, sobretudo se eles também
+controlarem o mercado de outros insumos, porém isto não é comum. No Mercado de 
+Insumos, a propriedade pode ser tão concentrada que os proprietários podem ter 
+poder de fixar os preços, grandes economias de escala podem tornar a produção de 
+alguns insumos um monopólio natural e a regulação governamental pode restringir 
+a alocação competitiva de recursos, especialmente os financeiros.
 
-```{r, fig.cap = "Diagrama esquemático do funcionamento do Mercado Imobiliário."}
+```{r MIResidencial, fig.cap = "Diagrama esquemático do funcionamento do \\gls{MI} residencial."}
 grViz("
-      digraph nicegraph {
-
+digraph nicegraph {
+  
+  // title
+  label     = 'O Mercado Imobiliário Residencial'
+  labelloc  =  top // t: Place the graph's title on top.
+  fontsize  = 30 // Make title stand out by giving a large font size
+  fontcolor = blue
   # graph, node, and edge definitions
   graph [compound = true, nodesep = .5, ranksep = .25,
-         color = crimson]
+         color = crimson, rankdir = 'TD']
 
   node [fontname = Helvetica, fontcolor = darkslategray,
         shape = rectangle, fixedsize = true, width = 2.5,
         color = darkslategray]
 
-  edge [color = grey, arrowhead = none, arrowtail = none]
+  edge [color = none, arrowhead = none, arrowtail = none]
 
   # subgraph for R information
   subgraph cluster0 {
-    node [fixedsize = true, width = 3]
+    label = 'Mercado de Insumos';
+    labelloc  =  top // t: Place the graph's title on top.
+    fontsize  = 15 // Make title stand out by giving a large font size
+    fontcolor = red
+    rank = 'same'
+    node [color=none weight=1000]
     'Terra' -> 'Materiais' -> 'Infraestrutura' -> 'Financiamento' -> 'Trabalhadores'
   }
 
   # subgraph for RStudio information
   subgraph cluster1 {
-    node [fixedsize = true, width = 3]
+    label = 'Processo de Produção';
+    labelloc  =  top // t: Place the graph's title on top.
+    fontsize  = 15 // Make title stand out by giving a large font size
+    fontcolor = red
+    node [color=none weight=1000]
     'Construtores' -> 'Incorporadores' -> 'Proprietários'
   }
   
   # subgraph for RStudio information
   subgraph cluster2 {
-    node [fixedsize = true, width = 3]
-    'Compradores' -> 'Investidores'
+    label = 'Mercado de Residências';
+    labelloc  =  top // t: Place the graph's title on top.
+    fontsize  = 15 // Make title stand out by giving a large font size
+    fontcolor = red
+    node [color=none weight=1000]
+    'Compradores' -> 'Investidores' -> 'Locadores' -> 'Serviços Residenciais'
   }
-
-  'Mercado Imobiliário'             [width = 3]
-  'Mercado Imobiliário' -> 'Mercado de Insumos'
-  'Mercado Imobiliário' -> 'Processo de Produção'
-  'Mercado Imobiliário' -> 'Mercado de Residências'
-  'Mercado de Insumos' -> 'Terra'            [lhead = cluster0]
-  'Processo de Produção' -> 'Construtores'   [lhead = cluster1]
-  'Mercado de Residências' -> 'Compradores'  [lhead = cluster2]
-
+  // Edges that directly connect one cluster to another
+  //'Terra' -> 'Construtores' [ltail=cluster0 lhead=cluster1, label = 'Preços'];
+  //'Materiais' -> 'Incorporadores' [ltail=cluster0 lhead=cluster1, label = 'Preços'];
+  //'Trabalhadores' -> 'Proprietários' [ltail=cluster0 lhead=cluster1, label = 'Preços'];
+  //'Construtores' -> 'Compradores' [ltail=cluster1 lhead=cluster2, label = 'Preços'];
+  //'Proprietários' -> 'Serviços Residenciais' [ltail=cluster1 lhead=cluster2, label = 'Preços'];
 }
-
-      ")
+")
 ```
 \bcenter
 Fonte: Adaptado de @shelter [p. 189]
 \ecenter
 
 
-
+Para @shelter [p. 189], então, o problema dos \gls{MI} residenciais usualmente 
+se concentram no mercado de insumos, onde as intervenções governamentais 
+deveriam se concentrar. Contudo, nem sempre é isto que ocorre: muitos governos
+decidem intervir diretamente no processo de produção ou no controle de preços ao
+consumidor final, como o controle de aluguéis, no entanto isto apenas distorce 
+os sinais enviados ao mercado e podem exacerbar o problema original.
 
 
 ## O Mercado Imobiliário e a Macroeconomia {#macro}
@@ -311,6 +339,107 @@ inflação e entre as \gls{HMV} encontram-se não apenas os índices de preços,
 também variáveis como o número de novas residências vendidas, a taxa de vacância 
 e o investimento residencial.
 
+A Figura \@ref(fig:vacancyRate) mostra a taxa de vacância de imóveis próprios (A)
+e de aluguel (B) para os EUA.
+
+```{r}
+RHVRUSQ156N <- fredr(series_id = "RHVRUSQ156N", 
+               observation_start = as.Date("1956-01-01")) # Homeowner vacancy rate
+USHOWN <- fredr(series_id = "USHOWN", 
+               observation_start = as.Date("1984-01-01")) # Homeownership rate
+RRVRUSQ156N <- fredr(series_id = "RRVRUSQ156N", 
+               observation_start = as.Date("1956-01-01")) # Rental vacancy rate
+RHVRUSQ156N$date <- seq(ISOdate(1956,1,1), ISOdate(2020,4,1), by = "quarters")
+RRVRUSQ156N$date <- seq(ISOdate(1956,1,1), ISOdate(2020,4,1), by = "quarters")
+```
+
+```{r recessionsDF3}
+recessions.df <- read.csv("data/us_recessions.csv")
+recessions.df <- within(recessions.df, {
+  Peak <- as.POSIXct(Peak)
+  Trough <- as.POSIXct(Trough)
+  })
+```
+
+```{r format-quarters}
+format_quarters <- function(x) {
+  format(as.yearqtr(x), format = "%qT%Y")
+}
+```
+
+
+```{r vacancyRate, fig.cap="Home Price Index, de Case e Shiller, em termos reais.", out.width="100%"}
+recessions.trim = subset(recessions.df, Peak >= "1956-01-01" )
+recessions.trim$Peak <- as.POSIXct(recessions.trim$Peak)
+recessions.trim$Trough <- as.POSIXct(recessions.trim$Trough)
+p1 <- ggplot(RHVRUSQ156N, aes(x = date, y = value)) +
+  geom_line() +
+   labs(
+     title = "Imóveis próprios", 
+     subtitle = "Não ajustada sazonalmente | Frequência: trimestral", 
+     caption = "1951-2020",
+     x = "Data", 
+     y = "%") +
+  stat_peaks(colour = "red", span = 25) +
+  # stat_peaks(geom = "text", colour = "red", 
+  #            vjust = -0.5, x.label.fmt = "%m/%y", span = 25) +
+  stat_valleys(colour = "blue", span = 25) +
+  # stat_valleys(geom = "text", colour = "blue", 
+  #            vjust = 1.5, x.label.fmt = "%b/%Y", span = 25) +   
+  scale_x_datetime(expand = expansion(mult = c(0, .05)),
+                   date_breaks = "60 months",
+                   date_minor_breaks = "12 months",
+                   labels = format_quarters) +
+  theme(panel.grid.major = element_line(colour="gray", size=0.5),
+        panel.grid.minor.x = element_line(colour="gray", size=0.1),
+        axis.text.x=element_text(angle=-45, hjust=0.001)) +
+  geom_rect(data=recessions.trim, aes(xmin=Peak, xmax=Trough,
+                                    ymin=-Inf, ymax=+Inf),
+          inherit.aes=F,
+          fill='grey', alpha=0.5)
+p2 <- ggplot(RRVRUSQ156N, aes(x = date, y = value)) +
+  geom_line() +
+   labs(
+     title = "Imóveis de aluguel", 
+     subtitle = "Não ajustada sazonalmente | Frequência: trimestral", 
+     caption = "1951-2020",
+     x = "Data", 
+     y = "%") +
+  stat_peaks(colour = "red", span = 61) +
+  # stat_peaks(geom = "text", colour = "red", 
+  #            vjust = -0.5, x.label.fmt = "%m/%y", span = 61) +
+  stat_valleys(colour = "blue", span = 61) +
+  # stat_valleys(geom = "text", colour = "blue", 
+  #            vjust = 1.5, x.label.fmt = "%b/%Y", span = 61) +
+  scale_x_datetime(expand = expansion(mult = c(0, .05)),
+                   date_breaks = "60 months",
+                   date_minor_breaks = "12 months",
+                   labels = format_quarters) +
+  theme(panel.grid.major = element_line(colour="gray", size=0.5),
+        panel.grid.minor.x = element_line(colour="gray", size=0.1),
+        axis.text.x=element_text(angle=-45, hjust=0.001)) +
+  geom_rect(data=recessions.trim, aes(xmin=Peak, xmax=Trough,
+                                    ymin=-Inf, ymax=+Inf),
+          inherit.aes=F,
+          fill='grey', alpha=0.5)
+plot_row <- plot_grid(p1, p2)
+title <- ggdraw() +
+  draw_label(
+    "Taxa de Vacância (EUA)",
+    fontface = 'bold',
+    x = 0,
+    hjust = 0
+  ) +
+  theme(
+    # add margin on the left of the drawing canvas,
+    # so title is aligned with left edge of first plot
+    plot.margin = margin(0, 0, 0, 0)
+  )
+plot_grid(title, plot_row, ncol = 1,
+          # rel_heights values control vertical title margins
+          rel_heights = c(0.1, 1))
+```
+
 ### Correlação entre os mercados imobiliários
 
 Em geral, é costume entre os economistas dizer que os mercados imobiliários são
@@ -366,11 +495,6 @@ global_rhpi <- read.csv("data/GlobalHousePriceIndex.csv")
 #global_rhpi <- read.zoo(global_rhpi, index = "dateq", FUN = as.yearqtr, format = "%Yq%q")
 #global_rhpi$dateq <- as.yearqtr(seq(ISOdate(2000,3,1), ISOdate(2019,3,1), by = "quarters"))
 global_rhpi$dateq <- seq(ISOdate(2000,1,1), ISOdate(2019,1,1), by = "quarters")
-recessions.df <- read.csv("data/us_recessions.csv")
-recessions.df <- within(recessions.df, {
-  Peak <- as.POSIXct(Peak)
-  Trough <- as.POSIXct(Trough)
-  })
 ```
 
 
@@ -607,846 +731,147 @@ No entanto, para @regulation [p. 1], a oferta inelástica em alguns mercados é
 uma condição necessária para a formação de bolhas, porém não suficiente: a
 formação de bolhas também está relacionada a choques de demanda.
 
-O detalhamento destes modelos dinâmicos está fora do escopo deste trabalho. No
-entanto, é possível através de modelos mais simples de oferta e demanda entender
-o efeito da inelasticidade da oferta, como pode ser visto na Figura 
-\@ref(fig:choque): um aumento na demanda pode ser modelado como um deslocamento
-da curva da demanda para a direita, levando os preços de equilíbrio inicial 
-$P_0$ ao novo preço de equilíbrio $P_1$. Com o aumento da oferta, no longo prazo,
-o preço de equilíbrio retorna ao ponto $P_2$.
-
-```{r choque, fig.cap="Efeitos de um choque de demanda num mercado com oferta inelástica."}
-knitr::include_graphics("images/choque_demanda_oferta_inelastica.png")
-```
-\bcenter
-Fonte: @regulation [p. 10]
-\ecenter
-
-Num mercado com uma oferta menos inelástica, a volatilidade é muito menor, o que
-pode ser visto na figura \@ref(fig:choque2): o deslocamento da curva de oferta
-provoca um aumento mais rápido da oferta, fazendo com que o preço inicial de 
-equilíbrio $P_0$ aumente muito menos significativamente ($P_1$) do que no caso
-anterior, voltando a um preço de equilíbrio no longo prazo ($P_2$) praticamente 
-igual ao preço inicial.
-
-
-```{r choque2, fig.cap="Efeitos de um choque de demanda num mercado com oferta elástica."}
-knitr::include_graphics("images/choque_demanda_oferta_elastica.png")
-```
-\bcenter
-Fonte: @regulation [p. 10]
-\ecenter
-
-Para @regulation [p. 11], ainda, além do problema da oferta inelástica pode 
-ocorrer ainda o problema de uma resposta mal desenhada pelo governo ao aumento 
-de preços inicial. Algumas medidas podem funcionar no médio prazo, aumentando a 
-oferta temporariamente e evitando uma grande alta dos preços, porém, no longo
-prazo, um posterior novo choque de demanda pode vir a elever os preços a 
-níveis muito superiores, como ilustrado na Figura \@ref(fig:choque3). 
-
-```{r choque3, fig.cap="Efeitos de uma resposta governamental inadequada a um choque de demanda."}
-knitr::include_graphics("images/choque_demanda_resposta_inadequada.png")
-```
-\bcenter
-Fonte: @regulation [p. 11]
-\ecenter
-
-Reformas adequadas na regulação do \gls{MI} serão apresentadas no capítulo \@ref(politicas).
-
-Algumas referências importantes para trabalhos futuros de modelos dinâmicos são:
-@wheaton1999, @FAN201937
-
-### Índices de preços de imóveis
-
-Diversos países hoje contam com índices de preços de imóveis nacionais, oficiais
-ou não, no entanto o modo deconstrução destes índices de preços difere de país 
-para país, assim como variam as estruturas de oferta e demanda em cada um deles
-[@regulation, 3-4].
-
-No Brasil recentemente foram criados alguns índices de preços de imóveis, 
-contudo, deve-se ter em conta, na criação de um índice de preços qualquer, a que
-objetivo ele se destina e, como se verá, isto parece não ter sido levado em 
-conta na criação dos índices de preços de imóveis brasileiros.
-
-De acordo com o @rppi, índices de preços de imóveis são importantes e podem ser
-úteis ou necessários:
-
-* como um indicador macroeconômio da atividade econômica;
-* para uso na calibração da política monetária;
-* como uma ferramenta para estimar o valor de um dos componentes de riqueza;
-* como um indicador da estabilidade financeira ou de solidez da exposição ao 
-risco;
-* como um deflator nas contas nacionais;
-* para auxílio para a tomada de decisões dos cidadãos na negociação de um imóvel;
-* como um dos componentes de um índice de preços ao consumidor; e
-* para uso em comparações inter-setoriais ou internacionais.
-
-Ainda segundo o @rppi, grosseiramente falando, os índices de preços podem ser 
-divididos em dois grupos:
-
-* índices para a aferição do *estoque* de propriedade imobiliária em um
-determinado tempo; e 
-* índices para a aferição das *vendas* de propriedade imobiliária em um 
-determinado período de tempo.
-
-Em síntese, índices do primeiro tipo devem conter informação tanto das
-propriedades existentes e das propriedades recém-construídas, enquanto que para
-índices do segundo tipo apenas, destinado a medir o investimento imobiliário,
-deve se ater às vendas de novos imóveis ou imóveis recém convertidos em imóveis
-de novo tipo [@rppi, 155]. 
-
-Contudo, deve-se ter em conta que para aferir o investimento bruto no \gls{MI} 
-deve-se primeiro decompor o componente estrutural do componente
-referente ao preço da terra no valor de venda dos imóveis [@rppi, 155]. Esta
-decomposição também deve ser efetuada para utilização do índice como um
-componente de um índice de preços ao consumidor [@rppi, 156].
-
-No Brasil existe uma grande dificuldade para a confecção de plantas genéricas
-para a constituição da base de cálculo do \gls{IPTU}. Em diversas cidades é
-comum que as \gls{PVG} não sejam atualizadas por muitos anos, o que acaba
-distorcendo muito a \gls{PVG} em relação aos valores reais de mercado. O que
-agrava ainda mais a situação é que as bases de cálculo acabam sendo atualizadas
-por índices de preços ao consumidor, como o \gls{IPCA}. O efeito disto é que, em
-períodos em que os preços dos imóveis aumentam mais do que o \gls{IPCA} em média
-(ou qualquer quer seja o índice de preço adotado), a base da tributação acaba
-deprimida e vice-versa, se o aumento do \gls{IPCA} é muito alto, o aumento da
-base de cálculo do \gls{IPTU} acaba por sobrecarregar ainda mais os
-proprietários. A elaboração de índices de preços de imóveis pode ajudar a 
-resolver este problema.
-
-#### Metodologias para confecção de índices de preços de imóveis
-
-Diferentes metodologias são conhecidas para a confecção de índices de preços de
-imóveis, que vão desde as mais simples, como o método de vendas repetidas, 
-proposto por Case e Shiller [-@repeatedSales], até métodos mais complexos, com
-modelos hedônicos, com os quais é possível decompor os preços dos imóveis em
-preços de terra e preços de estruturas.
-
-A opção pela aplicação de cada método não se dá apenas pela maior ou menor
-precisão ou complexidade de cada índice, mas deve se dar pelos aspectos do
-\gls{MI} em referência e em relação à finalidade do índice. O índice de Case e
-Shiller, um dos mais conhecidos, se aplica perfeitamente ao \gls{MI} americano,
-dado este é um mercado muito dinâmico, onde a compra e venda de imóveis é feita
-com considerável frequência, o que permite a utilização do índice, que se baseia
-em vendas repetidas de um mesmo imóvel. É provável, portanto, que este índice
-não se adapte à países com \gls{MI} menos complexos, como o Brasil, onde ainda
-existe grande informalidade e as transações muitas vezes nem são comunicadas às
-entidades reguladoras, dado que diversas transações são feitas baseadas em
-simples contratos particulares de compra e venda.
-
-##### Métodos de estratificação
-
-São os métodos mais simples de medição de mudanças nos índices de preços de 
-imóveis. É feita pela aferição da mudança de uma medida de tendência central 
-(usualmente média ou mediana) em um determinado período de tempo, dividindo-se
-os imóveis em sub-amostras de características similares.
-
-Um dos problemas da utilização deste tipo de metodologia é que ele é incapaz
-de capturar eventuais mudanças quanto a qualidade do estoque de imóveis ao longo
-do tempo, ficando viesado para cima, por exemplo, quando a qualidade dos imóveis
-aumenta ao longo do tempo e vice-versa. O índice tambem pode ficar viesado se
-houver alteração no *mix* de imóveis entre dois períodos, por exemplo, se num
-determinado período houver um maior número de imóveis de alto padrão do que 
-num período anterior, o índice ficará viesado para cima.
-
-Segundo o Eurostat [-@rppi, 158], o método da estratificação é recomendado quando o
-volume de vendas é grande o suficiente e a informação das características dos
-imóveis é detalhada o suficiente para uma classificação detalhada das
-propriedades, sendo este método de confecção de índice somente apropriado quando:
-
-* um nível apropriado de detalhe escolhido é factível para as células 
-* uma das variáveis de estratificação é a variável *idade* da edificação; e
-* a decomposição do índice em terra e estrutura não é necessária.
-
-##### Métodos hedônicos
-
-É o método mais eficiente de construção de um índice quando há dados
-disponíveis. Além de explorar o máximo os dados disponíveis, permite a
-desagragação dos preços das estruturas do preço da terra e pode ser elaborado de
-forma a levar em conta a depreciação dos imóveis, razão pela qual tal tipo
-índice pode ser utilizado tanto para o monitoramento do valor dos estoques de
-imóveis quanto para aferir o investimento no setor imobiliário.
-
-Consiste na aplicação de modelos hedônicos, basicamente de duas maneiras distintas:
-
-###### Modelos com variáveis dicotômicas de tempo 
-
-Trata-se de um método que utiliza um modelo de regressão onde as variáveis
-hedônicas dos imóveis são adicionadas de variáveis dicotômicas de cada período
-[@rppi, 158]. Apesar da simplicidade, uma vez que um novo período é adicionado,
-com o novo ajuste do modelo, os índices dos períodos anteriores são modificados.
-Para contornar este problema, utiliza-se uma janela de tempo móvel, efetuando um
-ajuste de modelo para os últimos N períodos.
-
-###### Modelos de preços característicos
-
-Nestes tipos de índices, um modelo hedônico é ajustado a cada período e o índice
-é construído através dos preços previstos pelos modelos [@rppi, 53]. Assim, o
-índice é construído através da razão entre os preços previstos nos dois
-períodos, como mostra a equação \@ref(eq:cp-approach).
-
-\begin{equation}
-\frac{\hat p^t}{\hat p^0} = \frac{\hat \beta_0^t + \sum \hat \beta_k^t z_k^*}{\hat \beta_0^0 + \sum \hat \beta_k^0 z_k^*}
-(\#eq:cp-approach)
-\end{equation}
-
-onde as características dos imóveis $z_k^*$ pode ser estabelecida de diversas
-maneiras, como a média das características do período base ($z_k^* = \bar z_k^0$),
-denominado índice de Laspeyres, como média das características do período
-posterior ($z_k^* = \bar z_k^t$), denominado índice de Paasche, ou ainda tomando
-a média geométrica dos períodos anterior e posterior, denominado índice do tipo
-Fisher.
-
-##### Método de vendas repetidas (Repeated Sales)
-
-Embora seja o método mais "natural" para a confecção de um índice, e de ser
-também o método do índice talvez mais famoso, o de Case e Shiller, o método de
-vendas repetidas não é tão eficiente quanto o método de modelos hedônicos, pois
-o método de vendas repetidas, ao utilizar apenas os dados de imóveis
-transacionados mais de uma vez, por conseguinte descarta muitos dados de
-transação que poderiam ser úteis para a construção de um índice mais robusto 
-[@rppi, 160]. 
-
-##### Métodos baseados em avaliação -- Sales Price Appraisal Ratio (SPAR)
-
-Este tipo de índice utiliza de dados de avaliação feitas para propósito de
-tributação ou outros tipos de avaliação, usualmente utilizadas para bens 
-similares, com o intuito de resolver alguns problemas relacionados ao modelo de
-vendas repetidas (pequeno número de dados repetidos e a suscetibilidade ao viés).
-Matematicamente, o índice é calculado de acordo com a equação \@ref(eq:AP) 
-[@rppi, 75].
-
-\begin{equation}
-P_{AP}^{0t} = \sum_{n \in S(t)} w_n^0(t) \left ( \frac{p_n^t}{a_n^0} \right )
-(\#eq:AP)
-\end{equation}
-
-onde $p_n^t$ é o preço de venda no período $t$, $a_n^0$ é o valor da avaliação
-do bem no período base, $S(t)$ é a amostra do período $t$ e $w_n^0(t)$ são os
-pesos utilizados para a confecção do índice.
-
-Ou seja, este método, como uma maneira de contornar o baixo volume de dados de 
-venda de bens nos diferentes períodos, compensa essa falta de dados com a 
-utilização de dados de avaliação, nos períodos onde não há dados de venda.
-
-Como o método acima não utiliza valores observados no período base, os valores
-neste período, como acima calculados, serão diferentes de 1. Como isto é 
-indesejável, uma normalização é feita, obtendo-se assim o *Sales Price Appraisal
-Ratio* ou SPAR, cuja formulação pode ser vista na equação \@ref(eq:SPAR) 
-[@rppi, 75]:
-
-\begin{equation}
-P_{SPAR}^{0t} = \frac{\sum\limits_{n \in S(t)} p_n^t}{\sum\limits_{n \in S(t)} a_n^0} \left [ \frac{\sum\limits_{n \in S(0)} p_n^0}{\sum\limits_{n \in S(0)} a_0^n} \right ]^{-1}
-(\#eq:SPAR)
-\end{equation}
-
-Apesar de ser simples, necessitar apenas de dados de preços e avaliações, o que
-simplifica a sua computação, os métodos baseados em avaliações tem a desvantagem
-de não lidar adequadamente com mudanças de qualidade entre os períodos (reparos 
-ou depreciação), além de ser dependente da qualidade das avaliações. 
-
-Uma característica interessante deste tipo de índices é que, quando o cadastro
-está atualizado e podem ser utilizados, os dados utilizados para a confecção do
-índice representam a totalidade da população e não apenas uma amostra, como de
-costume, ou seja, não há erro amostral, apenas o erro devido à avaliação em si.
-
-Uma limitação importante, porém, é que índices elaborados com tais métodos não
-podem decompor o valor total da propriedade imobiliária em valor de terra e
-valor de estruturas.
-
-#### Índices no mundo
-
-O @rppi elencou uma série de índices ao redor do mundo. Nesta subseção, alguns destes índice são descritos.
-
-##### Índices globais
-
-###### Global Real House Price Index
-
-O FMI, através do observatório Global Housing Watch...
-
-
-
-##### Países desenvolvidos
-
-a. Índice de Case-Shiller
-
-@NBERw2506 desenvolveram...
-
-##### Países em desenvolvimento
-
-Nos países em desenvolvimento, segundo o o Eurostat [-@rppi, 110], uma proporção
-significante dos imóveis advém de construção própria, em terrenos de família, 
-muitas vezes incompletas, sendo que a construção de uma casa pode durar anos, as
-fontes de financiamento são incertas, não há avaliações disponíveis, o que faz
-ser impossível o cálculo dos valores de aquisição do imóvel.
-
-Nestes casos, segundo o o Eurostat [-@rppi, 110], a única opção prática para
-estimar o valor dos imóveis é através da equivalência dos valores de aluguéis.
-
-#### Índices na América Latina
-
-##### IPVU (Colômbia)
-
-Desde 2003 [@rppi, 130]
-
-#### Índices no Brasil
-
-##### Índice FipeZap
-
-O índice de maior longevidade que se tem conhecimento no Brasil foi elaborado em
-conjunto pela Fundação Instituto de Pesquisas Econômicas (FIPE) e pelo portal de
-anúncios de imóveis, o chamado índice FipeZap.
-
-Segundo a @fipezap, a metodologia utilizada para o cálculo do índice é a
-estratificação. Para o índice FipeZap, apenas dois critérios de estratificação
-foram adotados, no caso dos imóveis residenciais, a saber, o número de
-dormitórios e a área de ponderação, definida pelos critérios do IBGE. No caso de
-imóveis comerciais, o único critério de estratificação é a localização
-[@fipezap, 7].
-
-
-De acordo com a @fipezap, não foi possível a inclusão da variável idade da
-edificação, por esta não ser uma variável obrigatória nos anúncios da plataforma
-zap imóveis.
-
-
-Infelizmente, devido à sua metodologia e composição, o índice FipeZap não se
-presta nem a aferir o estoque de riqueza, nem o investimento bruto no mercado
-imobiliário, já que a variável idade não foi inserida na estratificação e não é
-possível a decomposição do índice na parte estrutural e preço da terra, devido à
-própria metodologia.
-
-Outro problema relacionado a este índice é que ele não é composto de transações
-de imóveis, porém de anúncios de imóveis, o que além de poder ser problemático é
-questionável, devido aos diferentes descontos praticados no mercado em
-diferentes períodos e pelos diferentes atores, que neste caso não são
-mensuráveis. Segundo o o Eurostat [-@rppi, 126]:
-
-\begin{citacao}
-Although not related to the issue of timing, a disadvantage of advertised
-prices and mortgage approvals is that not all of the prices included end in
-transactions, and in the former case, the price will tend to be higher than the
-fnal negotiated transaction price.
-\end{citacao}
-
-Outros problemas relacionados ao índice FipeZap, como se basear exclusivamente
-em anúncios em websites, também são elencados pelo Eurostat [-@rppi, 104]:
-
-\begin{citacao}
-Information collected on a seller’s asking price cannot always be easily
-verifed and, as well as depending on a balanced and representative sample,
-relies on the honesty and knowledge of those being surveyed and when drawn from
-advertisements, the accuracy of the information, especially when it is from a
-website [...] It has also been argued that websites will tend to be biased
-towards properties that have a competitive asking price to entice potential
-sellers. All this is, of course, speculation but it does bring home some of the
-potential dificulties associated with these sources.
-\end{citacao}
-
-##### Índices IGMI-R e IGMI-C
-
-Trata-se de um novo conjunto de índices construídos pela \gls{ABECIP} em
-convênio com o \gls{IBRE}/\gls{FGV}, provavelmente através de um método baseado
-em avaliações, "levando em conta os laudos de imóveis financiados pelos bancos".
-
-
-\begin{citacao}
-Nos Estados Unidos, país de grande dimensão territorial e elevada mobilidade
-da população, o índice Case-Schiller faz o cálculo através da metodologia das
-transações repetidas. Outros países, que têm uma realidade diferente da
-americana, buscam alternativas para fazer o cálculo.
-\end{citacao}
-
-### Comportamento recente do mercado imobiliário e relação com as variáveis macroeconômicas
-
-No Brasil não existem séries históricas de prazo satisfatórios para uma análise
-de longo prazo referente ao preço dos imóveis. No entanto, como explicitado 
-teoricamente no capítulo \@ref(historico), e mostrado por @ADAMS2010 numa
-série de países, num mundo globalizado, em que há livre fluxo de capitais, a
-tendência é que o comportamento dos preços siga uma mesma tendência, portanto a
-análise do comportamento dos preços nos países centrais da economia mundial 
-tende a representar o que ocorrerá, com maior ou menor *lag*, nos outros países,
-influenciados pelas variáveis e decisões ocorridas nestes países.
-
-A figura \@ref(fig:nhpi) mostra a evolução do *Home Price Index* de Case e
-Shiller, desde 1990. 
-
-É possível notar pela análise do índice que os preços dos imóveis que, após o
-estouro da bolha do \gls{glo:subprime}, os preços sofrem uma nítida tendência de
-alta, desde janeiro de 2012, ultrapassando já, em termos nominais, os níveis de
-preços anteriores à crise de 2008.
-
-```{r}
-range_nhpi_2006_2012 <- range(window(nhpi, start = 2006 + 6/12, end = 2012 + 0/12))
-range_rhpi_2005_2012 <- range(window(rhpi, start = 2005 + 11/12, end = 2012 + 0/12))
-range_rhpi_1997_2005 <- range(window(rhpi, start = 1997 + 0/12, end = 2005 + 11/12))
-range_rhpi_1989_1997 <- range(window(rhpi, start = 1989 + 7/12, end = 1997 + 0/12))
-```
-
-Em julho de 2006 o índice atingiu o valor de `r brf(range_nhpi_2006_2012[2])`
-pontos, entrando então em tendência de baixa, até atingir os `r brf(range_nhpi_2006_2012[1])` pontos, em janeiro de 2012, uma queda de `r brf(diff(range_nhpi_2006_2012))` 
-pontos, quando se iniciou nova tendência de alta, que perdura até os dias atuais. 
-No momento em que se escreve esta dissertação o índice se encontra com `r brf(last(nhpi))` pontos, maior valor da série histórica, uma alta de `r brf(last(nhpi) - range_nhpi_2006_2012[1])`
-pontos.
-
-Em termos reais, no entanto, os preços ainda são inferiores ao pico registrado, 
-mas há uma nítida tendência de alta, conforme pode ser visto na figura 
-\@ref(fig:rhpi).
-
-```{r rhpi, fig.cap="Home Price Index (HPI), de Case e Shiller, em termos reais."}
-ggplot(window(rhpi, start = 1990 + 0/12), as.numeric = FALSE) +
-  geom_line() +
-   labs(
-     title = "Índice de Case-Shiller (EUA) HPI Nacional Real", 
-     subtitle = "Não ajustado sazonalmente | Frequência: Mensal", 
-     caption = "1990-2019",
-     x = "Ano", 
-     y = "Índice Jan 1890 = 100") +
-  ylim(110, 200) +
-  stat_peaks(colour = "red", span = 61) +
-  stat_peaks(geom = "text", colour = "red", 
-             vjust = -0.5, x.label.fmt = "%b/%Y", span = 61) +
-  stat_valleys(colour = "blue", span = 61) +
-  stat_valleys(geom = "text", colour = "blue", 
-             vjust = 1.5, x.label.fmt = "%b/%Y", span = 61) +
-  geom_rect(data=recessions.trim, aes(xmin=Peak, xmax=Trough, 
-                                    ymin=-Inf, ymax=+Inf),
-          inherit.aes=F,
-          fill='grey', alpha=0.5)
-```
-\bcenter
-Fonte: O autor, à partir de dados de @QuandlWIKI.
-\ecenter
-
-Na atualidade este índice se encontra em `r brf(last(rhpi))` pontos, sendo 
-que o maior valor da série histórica se deu em dezembro de 2005, quando atingiu
-`r brf(range_rhpi_2005_2012[2])` pontos.
-
-Em janeiro de 1997, o índice estava em `r brf(range_rhpi_1989_1997[1])` pontos.
-Desta data em diante, o índice entrou em franca tendência de alta até atingir os
-`r brf(range_rhpi_2005_2012[2])` pontos, em dezembro de 2005, auge, em termos
-reais, da bolha imobiliária, que no entanto só viria a estourar, nominalmente
-falando, em julho de 2006, como se pode ver na figura \@ref(fig:nhpi).
-
-É importante salientar que o fenômeno da alta tão relevante dos preços dos 
-imóveis é relativamente recente. O gráfico da figura \@ref(fig:rhpi2) ilustra 
-isto.
-
-```{r rhpi2, fig.cap="HPI, em termos reais."}
-recessions.trim = subset(recessions.df, Peak >= "1953-01-01" )
-ggplot(window(rhpi, start = 1953 + 0/12), as.numeric = FALSE) +
-  geom_line() +
-   labs(
-     title = "Índice de Case-Shiller (EUA) HPI Nacional Real", 
-     subtitle = "Não ajustado sazonalmente | Frequência: Mensal", 
-     caption = "1953-2019",
-     x = "Ano", 
-     y = "Índice Jan 1890 = 100") +
-  ylim(95, 205) +
-  stat_peaks(colour = "red", span = 61) +
-  stat_peaks(geom = "text", colour = "red", 
-             vjust = -0.5, x.label.fmt = "%m/%Y", span = 61) +
-  stat_valleys(colour = "blue", span = 61) +
-  stat_valleys(geom = "text", colour = "blue", 
-             vjust = 1.5, x.label.fmt = "%m/%Y", span = 61) +
-  geom_rect(data=recessions.trim, aes(xmin=Peak, xmax=Trough, 
-                                      ymin=-Inf, ymax=+Inf),
-            inherit.aes=F,
-            fill='grey', alpha=0.5)
-```
-\bcenter
-Fonte: O autor, à partir de dados de @QuandlWIKI.
-\ecenter
-
-O valor mínimo da série histórica (não mostrado no gráfico) foi atingido em  
-`r month.abb[(time(rhpi)[which.min(rhpi)] %% 1)*12+1]` de `r floor(time(rhpi)[which.min(rhpi)])`, quando o índice atingiu a marca de `r brf(rhpi[which.min(rhpi)])` pontos.
-
-É interessante notar que, em um século, desde 1890, o índice de preços reais de
-imóveis atingiu um valor máximo de apenas `r brf(range_rhpi_1989_1997[2])`
-pontos, o que ocorreu em agosto de 1989.
-
-Ou seja, em relação ao topo histórico  de um século (agosto de 1989) à partir do
-início da coleta do índice (1890), o índice hoje se encontra 
-`r brf(last(rhpi) - range_rhpi_1989_1997[2])` pontos percentuais acima daquela 
-marca e a apenas `r brf(range_rhpi_1989_1997[2] - last(rhpi))` pontos 
-percentuais abaixo de atingir o topo histórico de dezembro de 2005.
-
-Em janeiro de 2012, no fundo do vale da curva do índice real, este atingiu
-`r brf(range_rhpi_2005_2012[1])` pontos, apenas 
-`r brf(range_rhpi_1989_1997[2] - range_rhpi_2005_2012[1])` pontos abaixo do topo 
-histórico de um século à partir de 1890.
-
-O *Global Real House Price Index* do \gls{FMI}, que se constitui de uma média
-simples de preços reais de residências em 57 países [@fmitwa], mostra também uma
-nítida e forte tendência de alta, como pode ser observado na figura 
-\@ref(fig:global-rhpi).
-
-
-```{r global-rhpi, fig.cap = "HPI real do FMI."}
-# library(cowplot)
-# theme_set(theme_cowplot(14))
-format_quarters <- function(x) {
-  format(as.yearqtr(x), format = "%qT%Y")
+O detalhamento destes modelos dinâmicos está fora do escopo deste trabalho. É
+possível compreender o problema da inelasticidade da oferta no \gls{MI},
+contudo, através de simples modelos de oferta e demanda, como pode ser visto nas
+Figuras \@ref(fig:choque) A e B: na Figura \@ref(fig:choque) A, um mercado inicialmente com preço de equilíbrio $P_1$, com um aumento na demanda, modelado
+com o deslocamento da curva da demanda $D_1$ para a direita (curva $D_2$), leva 
+os preços de equilíbrio inicial $P_1$ ao novo preço de equilíbrio $P_2$, um 
+pouco maior que $P_1$. Com a mudança subsequente da estrutura da oferta no longo prazo, o preço de equilíbrio retorna ao ponto $P_3$.
+
+Já num mercado com uma oferta mais inelástica, a volatilidade é muito maior, o
+que pode ser visto na Figura \@ref(fig:choque) B: o deslocamento da curva da
+demanda $D_1$ para a curva $D_2$ provoca um aumento mais lento da oferta, fazendo 
+com que o preço inicial de equilíbrio $P_1$ aumente, muito mais pronunciadamente 
+do que no caso anterior, para $P_2$, voltando no longo prazo a um preço de 
+equilíbrio $P_3$, após a mudança da estrutura da oferta, muito menor do que 
+$P_2$, o que configura um padrão de *boom e bust*: no primeiro momento, como a
+oferta é inelástica, ocorre um grande aumento dos preços, ou seja, a bolha é
+inflada, para num segundo momento estourar, voltando para um preço de equilíbrio
+muito menor do que o alcançado durante o *boom*.
+
+```{r choque, fig.cap="Efeitos de um choque de demanda em diferentes mercados.", out.width="100%"}
+# curve1 and curve2 should be data.frames with an x and y column
+# For instance, as_data_frame(Hmisc::bezier(c(1, 8, 9), c(1, 5, 9)))
+#
+curve_intersect <- function(curve1, curve2) {
+  # Approximate the functional form of both curves
+  curve1_f <- approxfun(curve1$x, curve1$y, rule = 2)
+  curve2_f <- approxfun(curve2$x, curve2$y, rule = 2)
+  
+  # Calculate the intersection of curve 1 and curve 2 along the x-axis
+  point_x <- uniroot(function(x) curve1_f(x) - curve2_f(x), 
+                     c(min(curve1$x), max(curve1$x)))$root
+  
+  # Find where point_x is in curve 2
+  point_y <- curve2_f(point_x)
+  
+  # All done!
+  return(list(x = point_x, y = point_y))
 }
-ggplot(global_rhpi, aes(x = dateq, y = equally.weighted)) +
-  geom_line() +
-   labs(
-     title = "Índice Preço de Imóveis residenciais global FMI", 
-     subtitle = "Não ajustado sazonalmente | Frequência: trimestral", 
-     caption = "2000-2019",
-     x = "Ano",
-     y = "Índice") +
-  stat_peaks(colour = "red", span = 25) +
-  stat_peaks(geom = "text", colour = "red",
-             vjust = -0.5, x.label.fmt = "%m/%Y", span = 25) +
-  stat_valleys(colour = "red", span = 25) +
-  stat_valleys(geom = "text", colour = "red",
-             vjust = 1.5, x.label.fmt = "%m/%Y", span = 25) +
-  scale_y_continuous(expand = c(0,20))+
-  scale_x_datetime(expand = expansion(mult = c(0, .05)),
-                   date_breaks = "12 months",
-                   date_minor_breaks = "3 months",
-                   labels = format_quarters) +
-  theme(panel.grid.major = element_line(colour="gray", size=0.5),
-        panel.grid.minor.x = element_line(colour="gray", size=0.1),
-        axis.text.x=element_text(angle=-45, hjust=0.001))
-#  stat_smooth()
-```
 
-Deve-se reparar que, ao contrário do que aconteceu nos EUA, o pico em termos 
-globais só foi alcançado no último trimestre de 2007. Deve ser observado ainda
-que a queda, em termos globais, foi muito menos abrupta que a queda ocorrida
-nos EUA. O ponto de retomada, no entanto, tem grande coincidência: enquanto nos
-EUA a retomada começa à partir de Jan/2012, tanto para o índice nominal quanto
-para o índice real, globalmente esta retomada ocorre à partir do final do
-primeiro trimestre de 2012. Se levar-se em conta que, diferentemente dos índices
-norte-americanos, o índice global é trimestral, pode-se dizer que a retomada
-global da alta dos preços dos imóveis é praticamente simultânea.
+supplye1 <- Hmisc::bezier(c(1, 8, 9),
+                        c(1, 5, 9)) %>%
+  data.frame()
 
-No entanto, deve-se ter em conta que o preço dos imóveis nos EUA afeta o índice
-global.
+demand1 <- Hmisc::bezier(c(1, 3, 9),
+                         c(9, 3, 1)) %>%
+  data.frame()
 
-Isto poderia ser indício da formação de nova bolha imobiliária, nos moldes da
-que estourou em meados de 2006, com consequências catastróficas para a economia
-global?
+supplye2 <- Hmisc::bezier(c(1, 8, 12),
+                         c(3, 3.5, 6)) %>%
+  data.frame()
 
-Bolhas imobiliárias são difíceis de serem identificadas. Bolhas são fenômenos
-de curto prazo que representam descolamentos dos preços em relação aos seus
-fundamentos. Logo, para se afirmar que existe uma bolha, é necessário mostrar
-que inexiste uma correlação entre os fundamentos e os preços dos ativos
-imobiliários.
+demand2 <- Hmisc::bezier(c(3, 5, 11),
+                         c(11, 5, 3)) %>%
+  data.frame()
 
-@fmitwa elencam uma série de motivos que podem nos levar a conclusão que desta
-vez é diferente, como a falta de sincronicidade em diversos países, o que 
-ocorreu durante a bolha dos anos 2000, e a maior vigilância por parte das 
-autoridades monetários no que tange às medidas macroprudenciais na prevenção, 
-que incluem [@fmiem]:
+# Calculate the intersections of the two curves
+intere1 <- curve_intersect(supplye1, demand1)
+intere2 <- curve_intersect(supplye1, demand2)
+intere3 <- curve_intersect(supplye2, demand2)
 
-* Limite a razão empréstimo/valor, o que limita o valor da hipoteca relativa
-ao valor da propriedade.
-* Limites a razão dívida/renda, que limita o tamanho do pagamento do serviço da 
-dívida a um limite fixo da renda do mutuário.
-* Requerimentos de capitais setoriais, que forçam os bancos a manter capital 
-extra contra empréstimos a setores específicos, como o mercado imobiliário.
-* Requerimentos de provisionamento para pagamentos duvidosos.
+intersections <- bind_rows(intere1, intere2, intere3)
 
-Porém, além das medidas macroprudenciais citadas, considera-se que existem 
-outros fundamentos que indicam a não existência de uma bolha especulativa, mas
-que indicam que o preço dos imóveis estão seguindo os fundamentos econômicos.
+plot_labels <- data_frame(label = c("O[1]", "O[2]", "D[1]", "D[2]"),
+                          x = c(8.25, 11.5, 1, 4),
+                          y = c(8.5, 6.25, 8, 10))
 
-Como anteriormente mencionado, uma das variáveis macroeconômicas que afetam o
-mercado imobiliário são as taxas de juros de longo prazo. Uma diminuição das
-taxas de juros de longo prazo tende a reduzir a demanda por títulos públicos de 
-longo prazo e a aumentar a demanda por investimentos com base imobiliária. 
+p1 <- ggplot(mapping = aes(x = x, y = y)) + 
+  geom_path(data = supplye1, color = "#0073D9", size = 1, linetype = "dashed") + 
+  geom_path(data = supplye2, color = "#0073D9", size = 1) + 
+  geom_path(data = demand1, color = "#FF4036", size = 1, linetype = "dashed") + 
+  geom_path(data = demand2, color = "#FF4036", size = 1) + 
+  geom_segment(data = intersections, 
+               aes(x = x, y = 0, xend = x, yend = y), lty = "dotted") +
+  geom_segment(data = intersections, 
+               aes(x = 0, y = y, xend = x, yend = y), lty = "dotted") + 
+  geom_text(data = plot_labels,
+            aes(x = x, y = y, label = label), parse = TRUE,
+            family = "Source Sans Pro") +
+  annotate("segment", x = 1.5, xend = 3.5, y = 8, yend = 9.5,
+           arrow = arrow(length = unit(1, "lines")), colour = "grey50") +
+  geom_point(data = intersections, size = 3) +
+  scale_x_continuous(expand = c(0, 0), breaks = intersections$x,
+                     labels = expression(Q[1], Q[2], Q[3])) +
+  scale_y_continuous(expand = c(0, 0), breaks = intersections$y,
+                     labels = expression(P[1], P[2], P[3])) +
+  labs(x = "Quantidade", y = "Preço",
+       title = "Oferta Elástica",
+       subtitle = "Mercado com oferta elástica") +
+  coord_equal() +
+  theme_classic(base_family = "Source Sans Pro") + 
+  theme(plot.title = element_text(family = "Source Sans Pro Semibold", size = rel(1.3)))
 
-Estas taxas de juros de mais longo prazo tem caído no mundo todo, especialmente
-nas economias desenvolvidas, como ilustra o gráfico da figura \@ref(fig:yields),
-elaboradas a partir de dados obtidos do @fredgs10, @fredgs20, @fredgs30. Esta
- mostra as taxas de juros dos títulos da dívida do tesouro norte-americano,
-em periodicidade mensal. A causa da queda destas taxas de juros de mais longo
-prazo (assim como as de curto prazo) são atribuídas a diversos fatores, o que
-vai muito além do escopo deste trabalho. Uma boa discussão pode ser vista em
-@bresser2018, @krugman2020.
+supplyi1 <- Hmisc::bezier(c(1, 5, 8),
+                          c(1, 2, 12)) %>%
+  data.frame()
 
-```{r}
-#ycAll <- Quandl("USTREASURY/YIELD", type = "ts")
-```
+supplyi2 <- Hmisc::bezier(c(1, 4.5, 12),
+                          c(4.5, 2, 7)) %>%
+  data.frame()
 
-```{r ratesData}
-# gs10 <- fredr(series_id = "GS10", 
-#               observation_start = as.Date("1953-04-01"))
-# gs20 <- fredr(series_id = "GS20", 
-#               observation_start = as.Date("1953-04-01"))
-# gs30 <- fredr(series_id = "GS30", 
-#               observation_start = as.Date("1953-04-01"))
-# df <- left_join(gs10, gs20, by = "date", suffix = c(".GS10", ".GS20"))
-# df <- left_join(df, gs30, by = "date")
-# df <- df[, c("date", "value.GS10", "value.GS20", "value")]
-# colnames(df) <- c("date", "GS10", "GS20", "GS30")
-# df <- df %>% gather("bond", "rate", -date)
-# saveRDS(df, "data/FRED")
-```
+# Calculate the intersections of the two curves
+interi1 <- curve_intersect(supplyi1, demand1)
+interi2 <- curve_intersect(supplyi1, demand2)
+interi3 <- curve_intersect(supplyi2, demand2)
 
-```{r recessionsDF}
-recessions.df <- within(recessions.df, {
-                          Peak <- as.Date(Peak)
-                          Trough <- as.Date(Trough)
-                        })
-```
+intersections <- bind_rows(interi1, interi2, interi3)
 
+plot_labels <- data_frame(label = c("O[1]", "O[2]", "D[1]", "D[2]"),
+                          x = c(7, 11.25, 1, 4),
+                          y = c(11.5, 7.25, 8, 10))
 
-```{r yields, fig.cap="Taxas dos \\emph{treasuries bonds} desde janeiro/1990."}
-# xyplot.ts(ycAll[, c(9:12)], 
-#           superpose=TRUE, 
-#           auto.key=list(columns=4), 
-#           ylab="Yield (%)")
-df <- readRDS("data/FRED")
-ggplot(data = df[which(df$date >= as.Date("1990-01-01")), ], 
-       aes(x = date, y = rate, color = bond)) +
-  geom_line() +
-  labs(
-    title = "US Treasuries-bonds",
-    subtitle = "10, 20 and 30 years",
-    caption = "Fonte: Board of Governors of the Federal Reserve System (US)"
-  ) +
-  xlab("Ano")+
-  ylab("Taxa (a.a.)") +
-  scale_y_continuous(labels = scales::label_percent(scale = 1,
-                                                    decimal.mark = ",")) +
-  theme(legend.position = "bottom") +
-  geom_rect(data=recessions.df[which(recessions.df$Peak >= as.Date("1990-01-01")), ], 
-            aes(xmin=Peak, xmax=Trough, ymin=-Inf, ymax=+Inf),
-            inherit.aes=F, fill='grey', alpha=0.5)
-```
-\bcenter
-Fonte: O autor, à partir de dados do \gls{FRED}.
-\ecenter
+p2 <- ggplot(mapping = aes(x = x, y = y)) + 
+  geom_path(data = supplyi1, color = "#0073D9", size = 1, linetype = "dashed") + 
+  geom_path(data = supplyi2, color = "#0073D9", size = 1) + 
+  geom_path(data = demand1, color = "#FF4036", size = 1, linetype = "dashed") + 
+  geom_path(data = demand2, color = "#FF4036", size = 1) + 
+  geom_segment(data = intersections, 
+               aes(x = x, y = 0, xend = x, yend = y), lty = "dotted") +
+  geom_segment(data = intersections, 
+               aes(x = 0, y = y, xend = x, yend = y), lty = "dotted") + 
+  geom_text(data = plot_labels,
+            aes(x = x, y = y, label = label), parse = TRUE,
+            family = "Source Sans Pro") +
+  annotate("segment", x = 1.5, xend = 3.5, y = 8, yend = 9.5,
+           arrow = arrow(length = unit(1, "lines")), colour = "grey50") +
+  geom_point(data = intersections, size = 3) +
+  scale_x_continuous(expand = c(0, 0), breaks = intersections$x,
+                     labels = expression(Q[1], Q[2], Q[3])) +
+  scale_y_continuous(expand = c(0, 0), breaks = intersections$y,
+                     labels = expression(P[1], P[2], P[3])) +
+  labs(x = "Quantidade", y = "Preço",
+       title = "Oferta inelástica",
+       subtitle = "Mercado com oferta inelástica") +
+  coord_equal() +
+  theme_classic(base_family = "Source Sans Pro") + 
+  theme(plot.title = element_text(family = "Source Sans Pro Semibold", size = rel(1.3)))
 
-Mesmo uma análise mais ampla (desde 1953) das taxas de juros mostram que o 
-período recente é o período de menor taxa de juros em termos históricos, o que 
-pode ser visto na figura \@ref(fig:fred).
-
-```{r}
-# dgs10 <- fredr(series_id = "DGS10",
-#               observation_start = as.Date("1962-01-02"))
-# dgs20 <- fredr(series_id = "DGS20",
-#               observation_start = as.Date("1962-01-02"))
-# dgs30 <- fredr(series_id = "DGS30",
-#               observation_start = as.Date("1962-01-02"))
-# df <- left_join(dgs10, dgs20, by = "date", suffix = c(".DGS10", ".DGS20"))
-# df <- left_join(df, dgs30, by = "date")
-# df <- df[, c("date", "value.DGS10", "value.DGS20", "value")]
-# colnames(df) <- c("date", "DGS10", "DGS20", "DGS30")
-# df <- df %>% gather("bond", "rate", -date)
-# saveRDS(df, "data/FRED_daily")
-```
-
-```{r yields2, fig.cap="Taxas diárias dos \\emph{treasuries bonds} desde janeiro/1990."}
-df_daily <- readRDS("data/FRED_daily")
-ggplot(data = df_daily[which(df_daily$date >= as.Date("1990-01-01")), ], 
-       aes(x = date, y = rate, color = bond)) +
-  geom_line() +
-  labs(
-    title = "US Treasuries-bonds",
-    subtitle = "10, 20 and 30 years",
-    caption = "Fonte: Board of Governors of the Federal Reserve System (US)"
-  ) +
-  xlab("Ano")+
-  ylab("Taxa (a.a.)") +
-  scale_y_continuous(labels = scales::label_percent(scale = 1,
-                                                    decimal.mark = ",")) +
-  theme(legend.position = "bottom") +
-  geom_rect(data=recessions.df[which(recessions.df$Peak >= as.Date("1990-01-01")), ], 
-            aes(xmin=Peak, xmax=Trough, ymin=-Inf, ymax=+Inf),
-            inherit.aes=F, fill='grey', alpha=0.5)
-```
-\bcenter
-Fonte: O autor, à partir de dados do \gls{FRED}.
-\ecenter
-
-No momento em que se escreve deste trabalho, a taxa de juros dos títulos de mais
-longa maturidade, ou seja, de 30 anos, está em `r brf(tail(df_daily, n = 1)$rate)`% a.a. 
-
-Para os títulos com vencimento em 20 anos, a taxa está em `r brf(tail(df_daily[which(df_daily$bond == 'DGS20'), ], n = 1)$rate)`
-% a.a. e para os títulos com vencimento em 10 anos está em `r brf(tail(df_daily[which(df_daily$bond == 'DGS10'), ], n = 1)$rate)`% a.a., 
-todos muito perto dos seus valores mínimos da série histórica, que foram 
-atingidos em `r  df_daily[which.min(df_daily$rate), ]$date`, quando os títulos
-com maturidade de 10 anos atingiram impressionantes `r brf(pull(df_daily[which(df_daily$date == as.Date("2020-03-09")), ], rate)[1])`% a.a.
-
-Segundo Krugman [-@krugman2020], no entanto, isto não está a ocorrer apenas nos
-EUA, mas em todo o mundo desenvolvido, com maior ou menor gravidade, já há 
-alguns anos, e não deve ser interpretado apenas como um efeito de curto prazo
-de uma crise com a do Corona vírus, que só fez agravar ainda mais um quadro
-que já vem de longo prazo:
-
-\begin{citacao}
-What this tells us is that the bond market isn’t just pricing in a global
-recession driven by the coronavirus, but that it expects the Fed funds rate to
-be near zero a lot of the time looking forward. That is, the market sees a
-future of secular stagnation, in which the economy is in a liquidity trap, that
-is, a situation in which monetary policy loses most of its traction, much if not
-most of the time. We were in a liquidity trap for 8 of the past 12 years; the
-market now appears to believe that something like this is the new normal.
-\end{citacao}
-
-
-
-```{r fred, out.width="\\textwidth", fig.cap="Taxas mensais dos \\emph{treasuries bonds} desde abril/1953."}
-ggplot(data = df, aes(x = date, y = rate, color = bond)) +
-  geom_line() +
-  labs(
-    title = "US Treasuries-bonds",
-    subtitle = "10, 20 and 30 years",
-    caption = "Fonte: Board of Governors of the Federal Reserve System (US)"
-  ) +
-  xlab("Ano")+
-  ylab("Taxa (a.a.)") +
-  scale_y_continuous(labels = scales::label_percent(scale = 1,
-                                                    decimal.mark = ",")) +
-  theme(legend.position = "bottom") +
-  geom_rect(data=recessions.df[which(recessions.df$Peak >= as.Date("1953-04-01")), ], 
-            aes(xmin=Peak, xmax=Trough, ymin=-Inf, ymax=+Inf),
-            inherit.aes=F, fill='grey', alpha=0.5)
-```
-\bcenter
-Fonte: O autor, à partir de dados do \gls{FRED}.
-\ecenter
-
-Esta longa e sustentada tendência de queda de longo prazo, com esta persistência
-não pode ser atribuída a uma bolha especulativa, *i.e.* um desvio de curto prazo
-de uma tendência de longo prazo, mas sim a uma tendência estrutural, sistêmica.
-
-As taxas de juros das hipotecas são influenciadas pelas taxas dos títulos da
-dívida pública: os títulos da dívida pública são considerados ativos sem risco,
-Por isto os investimentos em títulos públicos possuem as menores taxas do
-mercado: o governo, que emite a dívida, também emite a moeda necessária para
-pagá-la. Ou seja, não há risco verdadeiro quando um governo emite um título de
-dívida, a não ser o risco da própria desvalorização da moeda (inflação). É
-natural, portanto, que os investidores exijam, para que invistam em ativos
-diferentes dos títulos da dívida pública, um prêmio de risco. Para o mercado
-imobiliário, este risco é mínimo, pois o empréstimo se dá com o imóvel em
-garantia. É esperado, portanto, que as taxas de juros das hipotecas sejam apenas
-um pouco superiores aos títulos da dívida pública.
-
-```{r}
-# mortgage30us <- fredr(series_id = "MORTGAGE30US",
-#              observation_start = as.Date("1971-04-02"))
-# df <- left_join(mortgage30us, dgs30, by = "date",
-#                 suffix = c(".MORTGAGE30US", ".DGS30"))
-# df <- df[, c("date", "value.MORTGAGE30US", "value.DGS30")]
-# colnames(df) <- c("date", "MORTGAGE30US", "DGS30")
-# df <- df %>% gather("index", "rate", -date)
-# saveRDS(df, "data/FRED_mortgages")
-```
-
-```{r mortagages, out.width="\\textwidth", fig.cap = "Juros hipotecários médios (30 anos) e taxas de títulos de maturidade constante de 30 anos."}
-df_mortgages <- readRDS("data/FRED_mortgages")
-ggplot(data = df_mortgages, aes(x = date, y = rate, color = index)) +
-  geom_line() +
-  labs(
-    title = "30-year fixed rate Mortgage average",
-    subtitle = "Compared with 30-year treasury constant maturity rate",
-    caption = "Fonte: Board of Governors of the Federal Reserve System (US)"
-  ) +
-  xlab("Ano")+
-  ylab("Taxa (a.a.)") +
-  scale_y_continuous(labels = scales::label_percent(scale = 1,
-                                                    decimal.mark = ",")) +
-  theme(legend.position = "bottom") +
-  geom_rect(data=recessions.df[which(recessions.df$Peak >= as.Date("1971-04-02")), ], 
-            aes(xmin=Peak, xmax=Trough, ymin=-Inf, ymax=+Inf),
-            inherit.aes=F, fill='grey', alpha=0.5)
-```
-
-
-Esta alta queda das taxas de juros dos ativos financeiros de longo prazo é uma
-das causadoras da elevação dos preços dos mesmos ativos, assim como a elevação
-do preço dos imóveis.
-
-De fato, @goodhart2008 encontraram uma ligação multidirecional entre \gls{MV} 
-relacionadas à oferta monetária (base monetária, crédito, entre outras) e o
-preço dos imóveis.
-
-A grande diferença então da recente alta dos preços dos imóveis (desde 2012) da
-alta anterior (até Dez/2005) é que a alta mais recente é plenamente justificada
-pela altíssima liquidez dos mercados. Ou seja, não se pode atribuir a recente
-alta dos preços dos imóveis à especulação imobiliária, ou pelo menos não se pode
-atribuir a recente alta somente a especulação: há fundamento para a alta, o que
-se discute com mais propriedade na seção \@ref(micro).
-
-Em um cenário de longo prazo, a tendência é que a crise de 2008 apenas tenha
-acelerado em demasia, momentaneamente, o que já era uma tendência de longo
-prazo, portanto estrutural, da economia.
-
-```{r}
-RHVRUSQ156N <- fredr(series_id = "RHVRUSQ156N", 
-               observation_start = as.Date("1956-01-01")) # Homeowner vacancy rate
-USHOWN <- fredr(series_id = "USHOWN", 
-               observation_start = as.Date("1984-01-01")) # Homeownership rate
-RRVRUSQ156N <- fredr(series_id = "RRVRUSQ156N", 
-               observation_start = as.Date("1956-01-01")) # Rental vacancy rate
-RHVRUSQ156N$date <- seq(ISOdate(1956,1,1), ISOdate(2020,4,1), by = "quarters")
-RRVRUSQ156N$date <- seq(ISOdate(1956,1,1), ISOdate(2020,4,1), by = "quarters")
-```
-
-```{r vacancyRate, fig.cap="Home Price Index, de Case e Shiller, em termos reais.", out.width="100%"}
-recessions.trim = subset(recessions.df, Peak >= "1956-01-01" )
-recessions.trim$Peak <- as.POSIXct(recessions.trim$Peak)
-recessions.trim$Trough <- as.POSIXct(recessions.trim$Trough)
-p1 <- ggplot(RHVRUSQ156N, aes(x = date, y = value)) +
-  geom_line() +
-   labs(
-     title = "Imóveis próprios", 
-     subtitle = "Não ajustada sazonalmente | Frequência: trimestral", 
-     caption = "1951-2020",
-     x = "Data", 
-     y = "%") +
-  stat_peaks(colour = "red", span = 25) +
-  # stat_peaks(geom = "text", colour = "red", 
-  #            vjust = -0.5, x.label.fmt = "%m/%y", span = 25) +
-  stat_valleys(colour = "blue", span = 25) +
-  # stat_valleys(geom = "text", colour = "blue", 
-  #            vjust = 1.5, x.label.fmt = "%b/%Y", span = 25) +   
-  scale_x_datetime(expand = expansion(mult = c(0, .05)),
-                   date_breaks = "60 months",
-                   date_minor_breaks = "12 months",
-                   labels = format_quarters) +
-  theme(panel.grid.major = element_line(colour="gray", size=0.5),
-        panel.grid.minor.x = element_line(colour="gray", size=0.1),
-        axis.text.x=element_text(angle=-45, hjust=0.001)) +
-  geom_rect(data=recessions.trim, aes(xmin=Peak, xmax=Trough,
-                                    ymin=-Inf, ymax=+Inf),
-          inherit.aes=F,
-          fill='grey', alpha=0.5)
-p2 <- ggplot(RRVRUSQ156N, aes(x = date, y = value)) +
-  geom_line() +
-   labs(
-     title = "Imóveis de aluguel", 
-     subtitle = "Não ajustada sazonalmente | Frequência: trimestral", 
-     caption = "1951-2020",
-     x = "Data", 
-     y = "%") +
-  stat_peaks(colour = "red", span = 61) +
-  # stat_peaks(geom = "text", colour = "red", 
-  #            vjust = -0.5, x.label.fmt = "%m/%y", span = 61) +
-  stat_valleys(colour = "blue", span = 61) +
-  # stat_valleys(geom = "text", colour = "blue", 
-  #            vjust = 1.5, x.label.fmt = "%b/%Y", span = 61) +
-  scale_x_datetime(expand = expansion(mult = c(0, .05)),
-                   date_breaks = "60 months",
-                   date_minor_breaks = "12 months",
-                   labels = format_quarters) +
-  theme(panel.grid.major = element_line(colour="gray", size=0.5),
-        panel.grid.minor.x = element_line(colour="gray", size=0.1),
-        axis.text.x=element_text(angle=-45, hjust=0.001)) +
-  geom_rect(data=recessions.trim, aes(xmin=Peak, xmax=Trough,
-                                    ymin=-Inf, ymax=+Inf),
-          inherit.aes=F,
-          fill='grey', alpha=0.5)
-plot_row <- plot_grid(p1, p2)
+plot_row <- plot_grid(p1, p2, labels = "AUTO")
 title <- ggdraw() +
   draw_label(
-    "Taxa de Vacância (EUA)",
+    "Choques de demanda",
     fontface = 'bold',
     x = 0,
     hjust = 0
@@ -1460,8 +885,89 @@ plot_grid(title, plot_row, ncol = 1,
           # rel_heights values control vertical title margins
           rel_heights = c(0.1, 1))
 ```
+\bcenter
+Fonte: Adaptado de @regulation [p. 10].
+\ecenter
 
-### O Mercado Imobiliário e o setor bancário {#MI-e-o-setor-bancario}
+Para @regulation [p. 11], ainda, além do problema da oferta inelástica pode
+ocorrer também o problema de uma resposta mal desenhada pelo governo ao aumento
+de preços inicial, como ilustrado na Figura \@ref(fig:choque2): algumas medidas
+podem funcionar a médio prazo, como as grandes intervenções governamentais que
+se destinam a promover uma grande oferta de imóveis de uma só vez (programas do
+tipo "1 milhão de casas"), mas seu efeito é equivalente a deslocar a curva de
+oferta inicial $O_1$ para $O_2$. Aumentando a oferta temporariamente, evita-se
+uma grande alta dos preços, que são estabilizados no preço de equilíbrio $P_3$.
+No longo prazo, porém, um posterior novo choque de demanda pode vir a elevar os
+preços a níveis muito mais altos ($P_4$), superiores inclusive aos preços
+atingidos durante o primeiro choque ($P_2$).
+
+```{r choque2, fig.cap="Efeitos de uma resposta governamental inadequada.", warning=FALSE}
+supplyi2 <- Hmisc::bezier(c(4, 8, 11),
+                          c(1, 3, 12)) %>%
+  data.frame()
+
+demand3 <- Hmisc::bezier(c(5, 7, 13),
+                         c(13, 7, 5)) %>%
+  data.frame()
+
+# Calculate the intersections of the two curves
+interi1 <- curve_intersect(supplyi1, demand1)
+interi2 <- curve_intersect(supplyi1, demand2)
+interi3 <- curve_intersect(supplyi2, demand2)
+interi4 <- curve_intersect(supplyi2, demand3)
+
+intersections <- bind_rows(interi1, interi2, interi3, interi4)
+
+plot_labels <- data_frame(label = c("O[1]", "O[2]", "D[1]", "D[2]", "D[3]"),
+                          x = c(8.75, 11.75, 1.5, 4, 6),
+                          y = c(11.5, 11.5, 9.5, 11, 12.5))
+
+p3 <- ggplot(mapping = aes(x = x, y = y)) + 
+  geom_path(data = supplyi1, color = "#0073D9", size = 1, linetype = "dashed") + 
+  geom_path(data = supplyi2, color = "#0073D9", size = 1) + 
+  geom_path(data = demand1, color = "#FF4036", size = 1, linetype = "dashed") + 
+  geom_path(data = demand2, color = "#FF4036", size = 1) + 
+  geom_path(data = demand3, color = "#FF4036", size = 1) + 
+  geom_segment(data = intersections, 
+               aes(x = x, y = 0, xend = x, yend = y), lty = "dotted") +
+  geom_segment(data = intersections, 
+               aes(x = 0, y = y, xend = x, yend = y), lty = "dotted") + 
+  geom_text(data = plot_labels,
+            aes(x = x, y = y, label = label), parse = TRUE,
+            family = "Source Sans Pro") +
+  annotate("segment", x = 1.5, xend = 3.5, y = 8, yend = 9.5,
+           arrow = arrow(length = unit(1, "lines")), colour = "grey50") +
+  annotate("segment", x = 3.5, xend = 5.5, y = 9.5, yend = 11,
+           arrow = arrow(length = unit(1, "lines")), colour = "grey50") +
+  geom_point(data = intersections, size = 3) +
+  scale_x_continuous(expand = c(0, 0), breaks = intersections$x,
+                     labels = expression(Q[1], Q[2], Q[3], Q[4])) +
+  scale_y_continuous(expand = c(0, 0), breaks = intersections$y,
+                     labels = expression(P[1], P[2], P[3], P[4])) +
+  labs(x = "Quantidade", y = "Preço",
+       title = "Choque de demanda",
+       subtitle = "Intervenção governamental mal calculada") +
+  coord_equal() +
+  theme_classic(base_family = "Source Sans Pro") + 
+  theme(plot.title = element_text(family = "Source Sans Pro Semibold", size = rel(1.3)))
+
+p3
+```
+\bcenter
+Fonte: @regulation [p. 11]
+\ecenter
+
+Segundo @Malpezzi2002TheRO [p. 19], o processo descrito na Figura 
+\@ref(fig:choque2) não se trata de mera curiosidade, mas foi documentado em
+diversos estudos.
+
+Reformas adequadas na regulação do \gls{MI} serão apresentadas no capítulo \@ref(politicas).
+
+Algumas referências importantes para trabalhos futuros de modelos dinâmicos são:
+@wheaton1999, @FAN201937
+
+
+## O Mercado Imobiliário e o setor bancário {#MI-e-o-setor-bancario}
 
 A participação dos produtos financeiros relacionados ao setor imobiliário
 constituem uma grande parte dos portfolios bancários. Justamente por isto,
@@ -1670,153 +1176,3 @@ kable(valorJusto, format = "latex", booktabs = TRUE,
 Fonte: Do autor.
 \ecenter
 
-
-### O efeito da política de limitação do valor de aluguéis
-
-A política de limitação do valor de aluguéis garante o controle da inflação, 
-controlando os custos de moradia para a população (aluguéis), garantindo assim
-o direito à moradia, que não implica um direito à propriedade [@fnogueira].
-
-Segundo @shelter [p. 194-195], ...
-
-Obviamente que isto implica de num efeito balizador importante para o cálculo de
-um preço justo dos imóveis, mas será que esta política apenas é uma política
-capaz de regular com um mínimo de equidade o valor do solo urbano?
-
-Qualquer instrumento financeiro, como um título público, uma ação de uma
-empresa, ou um derivativo, terá um valor de mercado diferente do valor justo
-calculado para o instrumento, em virtude dos movimentos do mercado (oferta vs.
-demanda), que se dão não apenas pelos fundamentos econômicos, mas também pelas
-expectativas dos diversos agentes econômicos em relação ao valor futuro daquele
-instrumento. Em outras palavras, quem determina o preço é o mercado. No entanto,
-um modelo de preços é utilizado para a determinação de um *benchmark*, uma
-referência de mercado. Assim como o *valuation* serve para calcular o "preço
-justo" de uma ação (ou *target price*, ou ainda preço-alvo), o que por sua vez
-permite às corretoras efetuarem recomendações (*outperform* ou *buy*, *neutral*
-ou *hold*, *underperform* ou *sell*), assim como o método de Black&Scholes
-[@marins2] permite o cálculo do preço justo das opções de compra e venda, as
-séries perpétuas permitem um cálculo razoável do preço justo de um imóvel, haja
-vista que permitem, sem maiores especulações, o cálculo do fluxo de caixa
-descontado dos aluguéis, balizando assim as expectativas em torno dos preços dos
-imóveis, ajudando a conter dessa maneira a especulação imobiliária.
-
-Em períodos de normalidade econômica poder-se-ia dizer que o estabelecimento
-de preços máximos de aluguéis seriam suficientes para conter uma especulação
-imobiliária desenfreada.
-
-No entanto, o mundo não vive tempos de normalidade econômica. Desde a crise de
-2008 o mundo vive tempos de uma crise crônica, persistente, que tem sido 
-enfrentada pelos bancos centrais (especialmente os bancos centrais dos países
-desenvolvidos, onde a estagnação é maior), por enormes aumentos de liquidez
-do sistema financeiro.
-
-Ou seja, a imposição de um valor máximo aos aluguéis pode ser uma boa política
-para contenção da inflação, regulando os custos de moradia das classes menos
-privilegiadas, impondo também alguma limitação da especulação imobiliária
-desenfreada, porém em um cenário de juros baixíssimos e estagnação econômica
-crônica como o que se avizinha e que cada vez mais se prevê de forma duradoura,
-não será o suficiente para conter uma alta expressiva no valor dos imóveis.
-
-Pode-se prever que, apenas com esta política de limitação de aluguéis, o mundo
-estará fadado a dividir os cidadãos em proprietários e locatários, uma vez que o 
-preço do aluguel estará controlado, mas o valor dos imóveis tende a disparar.
-
-## Problemas gerados pelo alto valor dos imóveis
-
-Além dos problemas relacionados ao setor bancário discutidos na seção
-\@ref(MI-e-o-setor-bancario), existe um problema, normalmente desconsiderado
-pela maioria, que o altos preços de imóveis e/ou aluguéis previnem que os
-trabalhadores se mudem para cidades com maior produtividade marginal do
-trabalho. Ou seja, algumas pessoas tendem a se manter em ocupações de baixa
-produtividade em cidades pequenas, no interior, ao invés de se mudarem para
-grandes cidades onde certamente teriam ocupações de maior produtividade, como
-numa fábrica, por exemplo, pois o custo adicional de moradia que elas teriam não
-seria compensado pelo maior salário que receberiam, devido à maior produtividade
-da sua ocupação. Se fosse possível a redução dos custos de moradia em regiões de
-maior produtividade da mão de obra, isto resultaria num maior Produto Interno
-Bruto [@Case2000, 149; @economist-housing-2020].
-
-\begin{citacao}
-A habitação também é um grande motivo pelo qual muitas pessoas no mundo rico
-sentem que o economia não funciona para eles. Enquanto os \emph{baby boomers}
-tendem a possuir casas grandes e caras, os jovens precisam cada vez mais alugar
-um lugar apertado com seus amigos, fomentando o ressentimento dos jovens
-\emph{millenials} em relação aos idosos. O economista Thomas Piketty afirmou que
-nas últimas décadas o retorno ao capital excedeu o que é pago ao trabalho na
-forma de salários, aumentando a desigualdade. Mas outros criticaram os achados
-de Piketty, apontando que o que realmente explica o aumento da participação no
-capital está nos retornos crescentes sobre a habitação.
-\cite{economist-housing-2020}
-\end{citacao}
-
-Mas o principal problema advindo de uma grande alta no valor dos imóveis é o
-problema da reversão das expectativas: uma vez que as expectativas se revertem,
-seja por um aumento da taxa de juros, seja pelo estouro de uma bolha de crédito,
-como ocorreu em 2008, tendem a causar transtornos tanto para as pessoas físicas,
-que podem perder seus imóveis, quanto para as instituições financeiras expostas
-ao risco do mercado imobiliário, seja para os governos que são instados a 
-socorrer as empresas e as pessoas em dificuldades.
-
-Segundo o conceituado semanário econômico *The Economist*, entre 1960 e 2000 um
-quarto das recessões no mundo rico estavam associadas com fortes declínios de
-preços de moradia. Ainda segundo a *The Economist*, recessões associadas com
-restrições de créditos e estouros de preços de moradia foram mais profundas e
-mais duradouras do que as outras recessões.[@economist-housing-2020].
-
-Segundo @fmiera, episódios com padrões de *boom* seguidos de estouros (de
-bolhas), ou *boom-bust patterns*, precederam mais de dois terços das 50 mais
-recentes crises bancárias sistêmicas.
-
-Uma reversão de expectativas pode ocorrer devido a um fator exógeno. Por exemplo,
-no momento em que se escreve esta dissertação, o mundo se encontra em meio a
-uma pandemia de proporções globais e ainda sem qualquer perspectiva que seja
-encontrada uma cura ou uma vacina contra o Corona vírus.
-
-Estimativas recentes dão conta de que os níveis de desemprego podem aumentar 
-substancialmente em todo o mundo, o que pode gerar uma perspectiva de que a 
-demanda por aluguéis diminua muito, puxada pela diminuição da renda da 
-população devido ao desemprego, *i.e.*, uma diminução no numerador da equação
-\@ref(eq:perpetua).
-
-Por outro lado, a brusca queda das taxas de juros longas, *i.e*, uma diminuição
-no denominador da equação \@ref(eq:perpetua) deve mais que compensar a queda no 
-numerador.
-
-Seja, por exemplo um imóvel em que, antes da crise, se imaginava que produziria
-uma série de pagamentos de aluguéis de R$2.000,00 mensais. A uma taxa de juros
-de longo prazo de 2% a.a., o seu valor justo, segundo a equação 
-\@ref(eq:perpetua) seria de R$1.200.000,00. Imaginando que, com a crise do COVID
-haja uma redução nas expectativas de receitas com o imóvel, passando para uma 
-prestação mensal de R$1.000,00. Com a queda da taxa dos títulos para 1% a.a.,
-o preço do imóvel permaneceria constante.
-
-Uma vez alternadas as expectativas, no entanto, ou seja, uma vez que se resolva
-a crise sanitária da COVID-19, as taxas de juros podem subir repentinamente, 
-ainda que permanecendo baixa em níveis históricos, mas muito dificilmente 
-ocorrerá o mesmo no mercado de trabalho, que tem recuperação lenta. Este cenário
-poderia vir a desencadear uma crise imobiliária similar ou ainda pior do que a
-da década passada, haja vista que na atualidade, as ferramentas tradicionais de
-política monetária já foram exauridas, além das ferramentas não-tradicionais.
-
-## Mercado imobiliário e populismo
-
-Segundo a *The Economist*, o mercado imobiliário e o populismo estão intimamente
-ligados: novas pesquisas mostraram que pessoas que habitam locais onde o mercado
-imobiliário está estagnado tem se aproximado mais de partidos e ideiais da 
-extrema-direita populista na Inglaterra e na França [@economist-housing-2020].
-
-Ainda de acordo com a *The Economist*, felizmente os governos estão começando a 
-perceber o estrago causado pelos erros da política habitacional desde o fim da
-segunda guerra mundial. Para @economist-housing-2020:
-
-\begin{citacao}
-sistemas de planejamento flexíveis, tributação e regulamentação financeira
-apropriadas podem transformar a habitação em força para estabilidade social e
-econômica. O sistema de habitação pública de Cingapura ajuda a melhorar inclusão
-social; financiamento imobiliário na Alemanha ajudou o país a evitar a pior da
-crise de 2008-10; O sistema de planejamento da Suíça ajuda bastante a explicar
-porque o populismo até agora não chegou até lá. Governos em todo o mundo
-precisam agir de forma decisiva e sem demora. Nada menos que a estabilidade 
-econômica e política do mundo está em jogo.
-\cite{economist-housing-2020}
-\end{citacao}

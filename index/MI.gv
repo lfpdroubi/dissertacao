@@ -1,39 +1,54 @@
 digraph nicegraph {
-
+  
+  // title
+  label     = 'O Mercado Imobiliário'
+  labelloc  =  top // t: Place the graph's title on top.
+  fontsize  = 30 // Make title stand out by giving a large font size
+  fontcolor = blue
   # graph, node, and edge definitions
   graph [compound = true, nodesep = .5, ranksep = .25,
-         color = crimson]
+         color = crimson, rankdir = 'TD']
 
   node [fontname = Helvetica, fontcolor = darkslategray,
         shape = rectangle, fixedsize = true, width = 2.5,
         color = darkslategray]
 
-  edge [color = grey, arrowhead = none, arrowtail = none]
+  edge [color = none, arrowhead = none, arrowtail = none]
 
   # subgraph for R information
   subgraph cluster0 {
-    node [fixedsize = true, width = 3]
+    label = 'Mercado de Insumos';
+    labelloc  =  top // t: Place the graph's title on top.
+    fontsize  = 15 // Make title stand out by giving a large font size
+    fontcolor = red
+    rank = 'same'
+    node [color=none weight=1000]
     'Terra' -> 'Materiais' -> 'Infraestrutura' -> 'Financiamento' -> 'Trabalhadores'
   }
 
   # subgraph for RStudio information
   subgraph cluster1 {
-    node [fixedsize = true, width = 3]
+    label = 'Processo de Produção';
+    labelloc  =  top // t: Place the graph's title on top.
+    fontsize  = 15 // Make title stand out by giving a large font size
+    fontcolor = red
+    node [color=none weight=1000]
     'Construtores' -> 'Incorporadores' -> 'Proprietários'
   }
   
   # subgraph for RStudio information
   subgraph cluster2 {
-    node [fixedsize = true, width = 3]
-    'Compradores' -> 'Investidores'
+    label = 'Mercado de Residências';
+    labelloc  =  top // t: Place the graph's title on top.
+    fontsize  = 15 // Make title stand out by giving a large font size
+    fontcolor = red
+    node [color=none weight=1000]
+    'Compradores' -> 'Investidores' -> 'Locadores' -> 'Serviços Residenciais'
   }
-
-  'Mercado Imobiliário'             [width = 3]
-  'Mercado Imobiliário' -> 'Mercado de Insumos'
-  'Mercado Imobiliário' -> 'Processo de Produção'
-  'Mercado Imobiliário' -> 'Mercado de Residências'
-  'Mercado de Insumos' -> 'Terra'            [lhead = cluster0]
-  'Processo de Produção' -> 'Construtores'   [lhead = cluster1]
-  'Mercado de Residências' -> 'Compradores'  [lhead = cluster2]
-
+  // Edges that directly connect one cluster to another
+  //'Terra' -> 'Construtores' [ltail=cluster0 lhead=cluster1, label = 'Preços'];
+  //'Materiais' -> 'Incorporadores' [ltail=cluster0 lhead=cluster1, label = 'Preços'];
+  //'Trabalhadores' -> 'Proprietários' [ltail=cluster0 lhead=cluster1, label = 'Preços'];
+  //'Construtores' -> 'Compradores' [ltail=cluster1 lhead=cluster2, label = 'Preços'];
+  //'Proprietários' -> 'Serviços Residenciais' [ltail=cluster1 lhead=cluster2, label = 'Preços'];
 }
