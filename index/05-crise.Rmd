@@ -1,8 +1,413 @@
-# A crise imobiliário-financeira de 2007-2008 revisitada {#crise2008}
+# Ciclos, bolhas especulativas e a crise imobiliário-financeira de 2007-2008 {#crise2008}
 
-#### A crise imobiliária-financeira de 2008
+No capítulo \@ref(economia) foi mostrado um modelo econométrico que correlaciona
+os preços residenciais a variáveis macroeconômicas. Estes modelos podem ser 
+elaborados relacionando os preços dos imóveis a diversas variáveis 
+macroeconômicas como o \gls{PIB}, à atividade econômica \gls{EA} ou à índices de
+mercados de capitais, como o \gls{IBOVESPA} ou o \gls{SP500}. Estes modelos
+testa estatisticamente a significância destas diversas variáveis na explicação
+do preço dos imóveis, num espaço razoável de tempo (longo prazo). No entanto,
+descolamentos momentâneos dos preços dos imóveis do preço de equilíbrio de 
+longo prazo podem acontecer, iniciando um ciclo no \gls{MI}. A partir do início
+do ciclo, oferta e demanda vão se ajustar, até que um novo equilíbrio do mercado
+seja atingido. Segundo @regulation [p. 18] este novo equilíbrio pode levar "uma 
+década ou mais".
 
-##### A dinâmica da crise
+Os ciclos do \gls{MI}, portanto, muitas vezes são atribuídos a um único fator
+exógeno a este mercado. Por exemplo, pode-se atribuir a criação de um ciclo a um
+incentivo fiscal do governo ou a um choque de demanda na economia. Porém,
+segundo @wheaton1999 [p. 209-210], diferentes tipos de imóveis apresentam
+diferentes tipos de comportamento cíclico. Alguns tipos de imóveis apresentam
+movimentos de preços mais ligados à economia enquanto outros apresentam períodos
+de oscilação muito mais longos e apresentam quase nenhuma relação com oscilação
+da economia.
+
+Neste capítulo serão abordados as características dos diversos \gls{MI}, como
+se constituem os seus ciclos e como pode ocorrer o surgimento de bolhas 
+especulativas neste mercados, a depender do impacto de variáveis exógenas, assim
+como das características intrínsecas destes mercados e dos seus aspectos 
+regulatórios.
+
+## Ciclos do \gls{MI}
+
+De acordo com @wheaton1999 [p. 212], alguns mercados parecem não apresentar um
+componente cíclico intrínseco: o investimento nestes imóveis aumenta ou diminui
+de acordo com os choques econômicos, como no mercado de apartamentos ou no
+mercado de imóveis industriais nos EUA. Já para outros mercados, a oscilação
+natural dos investimentos parece não ter ligação alguma com a economia: existe
+uma oscilação, mas que parece ser uma característica intrínseca daqueles
+mercados, como o mercado de imóveis de escritório e o mercado de imóveis para o
+varejo (*shopping centers*, p. ex.) nos EUA.
+
+@wheaton1999 elaborou então um modelo econométrico que leva em conta o tempo de
+  desenvolvimento de um projeto nos diferentes mercados, assim como a taxa de
+  depreciação em cada um deles, assim como outras variáveis como a
+  elasticidade-preço da demanda e da oferta nestes mercados e concluiu que se a
+  demanda é mais elástica do que a oferta (ou mesmo que ainda menos elástica,
+  porém com tempo de desenvolvimento curto e a taxa de depreciação baixa),
+  existe uma estabilidade de preços nestes mercados. Contudo, se a oferta é mais
+  elástica que a demanda e o tempo de desenvolvimento é longo, o mercado
+  apresenta instabilidade.
+
+Para @wheaton1999 [p. 228], com isto é possível explicar a diferença dos ciclos
+nos diversos mercados, já que o tempo de desenvolvimento geralmente é curto nos
+mercados de apartamentos e industrial, enquanto no mercado de escritórios e se
+imóveis comerciais o tempo de desenvolvimento é maior.
+
+Quanto às elasticidades, no mercado residencial geralmente a demanda é 
+inelástica, porém também é a oferta. Já para o caso dos escritórios, a demanda
+também é inelástica, porém estudos sugerem haver relativa elasticidade da oferta,
+o que explica os vários casos de *overbuilding*, ou seja, de construção além do
+que o mercado pode absorver [@wheaton1999, p. 228].
+
+Finalmente, segundo @wheaton1999 [p. 228], a única coisa em comum nos vários 
+mercados é o alto grau de durabilidade dos bens. Porém mesmo pequenas diferenças
+na durabilidade entre os diversos mercados podem fazer uma diferença 
+considerável na estabilidade desses mercados, assim como os diferentes prazos de
+desenvolvimento dos projetos e das elasticidades de oferta e demanda.
+
+## Bolhas Especulativas no Mercado Imobiliário
+
+Conforme antecipado no capítulo \@ref(economia), mecanismos regulatórios para o 
+\gls{MI} podem ser utilizados visando uma melhora da curva da oferta, tornando-a
+mais elástica, de maneira a evitar grandes oscilações de preços quando estes
+mercados forem atingidos por choques de demanda.
+
+No entanto, em alguns mercados isto não é tão simples: muitos mercados estão
+limitados por condições geográficas e simplesmente não é possível tornar a 
+oferta elástica nestes tipos de mercado. Em outros mercados, apesar da oferta
+ser relativamente elástica, o choque de demanda pode ser tão forte que mesmo com
+o aumento da oferta, os preços oscilem muito. Ademais, em alguns mercados, como
+visto no item anterior, o tempo de desenvolvimento é maior, o que faz com que 
+um aumento de demanda leve alguns anos até que possa ser absorvido pelo mercado.
+
+Estas grandes oscilações de preços são indesejáveis por uma série de motivos. 
+A dinâmica do mercado pode ser assim descrita:
+
+1. Com os preços acima (abaixo) dos fundamentos, ao longo do tempo, a oferta 
+aumenta (diminui);
+2. Há superinvestimento (subinvestimento) no setor de construção, devido aos 
+preços acima (abaixo) dos fundamentos;
+3. Com a oferta muito alta (baixa), os preços tendem a cair (subir);
+4. Se a volatilidade é muito alta, estes movimentos podem ser bruscos: ao invés
+da bolha se dissolver, ela estoura;
+5. Muitos investimentos no setor imobiliário são feitos por um empreendedor 
+financiado por empréstimos bancários: uma grande queda nos preços pode levar
+ao desequilíbrio econômico financeiro do empreendedor, o que desencadeia uma 
+série de problemas posteriores[^5]
+
+[^5]: Segundo @Malpezzi2002TheRO[p. 2], nas economias mais afetadas,o colapso
+dos preços no \gls{MI} é seguida por uma série de eventos, como uma crise
+bancária, uma crise no balanço de pagamentos, uma crise financeira e um estouro
+de um ciclo de negócios.
+
+## Medidas macroprudenciais de prevenção de bolhas
+
+Isto poderia ser indício da formação de nova bolha imobiliária, nos moldes da
+que estourou em meados de 2006, com consequências catastróficas para a economia
+global?
+
+Bolhas imobiliárias são difíceis de serem identificadas. Bolhas são fenômenos
+de curto prazo que representam descolamentos dos preços em relação aos seus
+fundamentos. Logo, para se afirmar que existe uma bolha, é necessário mostrar
+que inexiste uma correlação entre os fundamentos e os preços dos ativos
+imobiliários.
+
+@fmitwa elencam uma série de motivos que podem nos levar a conclusão que desta
+vez é diferente, como a falta de sincronicidade em diversos países, o que 
+ocorreu durante a bolha dos anos 2000, e a maior vigilância por parte das 
+autoridades monetários no que tange às medidas macroprudenciais na prevenção, 
+que incluem [@fmiem]:
+
+* Limite a razão empréstimo/valor (*loan-to-value ratio*), o que limita o valor
+da hipoteca relativa ao valor da propriedade.
+* Limites a razão dívida/renda, que limita o tamanho do pagamento do serviço da 
+dívida a um limite fixo da renda do mutuário.
+* Requerimentos de capitais setoriais, que forçam os bancos a manter capital 
+extra contra empréstimos a setores específicos, como o mercado imobiliário.
+* Requerimentos de provisionamento para pagamentos duvidosos.
+
+Porém, além das medidas macroprudenciais citadas, considera-se que existem 
+outros fundamentos que indicam a não existência de uma bolha especulativa, mas
+que indicam que o preço dos imóveis estão seguindo os fundamentos econômicos.
+
+### Bolhas Especulativas e taxas de juros
+
+Como demonstraram @joebges, um dos grandes dogmas da Economia, de que políticas 
+monetarárias frouxas causam bolhas no \gls{MI} não tem fundamentação científica,
+tanto teorica, como empiricamente falando. Bolhas especulativas foram 
+documentadas tanto em países com política monetária frouxa quanto em países que 
+praticavam política monetária apertada. Isto não quer dizer, no entanto, que
+as taxas de juros não tenham impacto sobre os preços dos imóveis, como mostram
+diversos trabalhos. Para a ocorrência de bolhas especulativas, no entanto, é
+necessário que existam outras características presentes: a inelasticidade da 
+oferta, como citado no capítulo \@ref(economia), a entrada no mercado de 
+grandes especuladores, geralmente fundos de hedge, a desregulamentação 
+financeira, com o lançamento de novos produtos financeiros de risco duvidos, 
+etc. 
+
+No entanto, é sabido que os bancos centrais praticam (ou deveriam praticar) 
+políticas monetárias frouxas visando estimular uma economia em crise, visando
+aumentar a liquidez monetária do mercado e com isso, fazer com  que a economia
+volte ao seu ritmo de crescimento 'natural'. Ora, ocorre que nestes momentos em
+que os bancos centrais estão praticando esta política monetária frouxa, 
+usualmente esta política monetária vem acompanhada de uma série de 
+desregulamentações financeiras, visando o aumento do volume de crédito, e também
+que os grandes investidores, com as baixas taxas de juros, tendem a procurar 
+alternativas mais rentáveis de investimento, ao custo do aumento do risco destes
+investimentos. A dinâmica que levou a crise imobiliário-financeira nos EUA foi
+essa e será melhor detalhada no capítulo \@ref(crise).
+
+Por ora o que interessa é o entendimento das razões da queda das taxas de lucro 
+da economia capitalista e porque isto é um fator estrutural, não conjuntural, o
+que é o assunto do próximo item.
+
+#### A tendência a queda das taxas de lucro
+
+Como anteriormente mencionado, uma das variáveis macroeconômicas que afetam o
+mercado imobiliário são as taxas de juros de longo prazo. Uma diminuição das
+taxas de juros de longo prazo tende a reduzir a demanda por títulos públicos de 
+longo prazo e a aumentar a demanda por outros investimentos, ou seja, uma 
+diminuição nas taxas de juros da dívida pública aumenta a propensão ao risco dos
+investidores, que são obrigados a procurar investimentos mais rentáveis, já que
+a rentabilidade dos títulos é muito baixa.
+
+Estas taxas de juros de mais longo prazo tem caído no mundo todo, especialmente
+nas economias desenvolvidas, como ilustra o gráfico da figura \@ref(fig:yields),
+elaboradas a partir de dados obtidos do @fredgs10, @fredgs20, @fredgs30. Esta
+ mostra as taxas de juros dos títulos da dívida do tesouro norte-americano,
+em periodicidade mensal. 
+
+A causa da queda destas taxas de juros de mais longo prazo (assim como as de
+curto prazo) são atribuídas a diversos fatores, o que vai muito além do escopo
+deste trabalho. Em resumo, diversas escolas de pensamento econômico tem 
+diagnósticos diferentes: a escola marginalista atribui a queda das taxas de 
+juros à chamada estagnação secular da Economia dos países desenvolvidos. Uma boa 
+discussão pode ser vista em @bresser2018 e @krugman2020. Já os marxistas 
+teorizam sobre uma queda natural das taxas de lucros no sistema capitalista, 
+o que já era previsto pelo próprio Marx [@roberts2020]. A Figura \@ref(fig:roberts) 
+ilustra o fenômeno desde meados do século XIX.
+
+```{r roberts, fig.cap="Diminuição da taxa de lucro na economia capitalista.", out.width="100%"}
+knitr::include_graphics("images/wrp-2.png")
+```
+\bcenter
+Fonte: @roberts2020, adaptado de @crisis.
+\ecenter
+
+A queda nas taxas de lucro obviamente impactam as taxas de juros dos títulos
+públicos, que apenas refletem as taxas de lucro das empresas capitalistas, que 
+são compostas pelas taxas de juros livres de risco mais um prêmio de risco pela
+alocação do capital naquele mercado.
+
+```{r}
+#ycAll <- Quandl("USTREASURY/YIELD", type = "ts")
+```
+
+```{r ratesData}
+# gs10 <- fredr(series_id = "GS10", 
+#               observation_start = as.Date("1953-04-01"))
+# gs20 <- fredr(series_id = "GS20", 
+#               observation_start = as.Date("1953-04-01"))
+# gs30 <- fredr(series_id = "GS30", 
+#               observation_start = as.Date("1953-04-01"))
+# df <- left_join(gs10, gs20, by = "date", suffix = c(".GS10", ".GS20"))
+# df <- left_join(df, gs30, by = "date")
+# df <- df[, c("date", "value.GS10", "value.GS20", "value")]
+# colnames(df) <- c("date", "GS10", "GS20", "GS30")
+# df <- df %>% gather("bond", "rate", -date)
+# saveRDS(df, "data/FRED")
+```
+
+```{r yields, fig.cap="Taxas dos \\emph{treasuries bonds} desde janeiro/1990."}
+# xyplot.ts(ycAll[, c(9:12)], 
+#           superpose=TRUE, 
+#           auto.key=list(columns=4), 
+#           ylab="Yield (%)")
+recessions.df <- read.csv("data/us_recessions.csv")
+recessions.df <- within(recessions.df, {
+                          Peak <- as.Date(Peak)
+                          Trough <- as.Date(Trough)
+                        })
+df <- readRDS("data/FRED")
+ggplot(data = df[which(df$date >= as.Date("1990-01-01")), ], 
+       aes(x = date, y = rate, color = bond)) +
+  geom_line() +
+  labs(
+    title = "US Treasuries-bonds",
+    subtitle = "10, 20 and 30 years",
+    caption = "Fonte: Board of Governors of the Federal Reserve System (US)"
+  ) +
+  xlab("Ano")+
+  ylab("Taxa (a.a.)") +
+  scale_y_continuous(labels = scales::label_percent(scale = 1,
+                                                    decimal.mark = ",")) +
+  theme(legend.position = "bottom") +
+  geom_rect(data=recessions.df[which(recessions.df$Peak >= as.Date("1990-01-01")), ], 
+            aes(xmin=Peak, xmax=Trough, ymin=-Inf, ymax=+Inf),
+            inherit.aes=F, fill='grey', alpha=0.5)
+```
+\bcenter
+Fonte: O autor, à partir de dados do \gls{FRED}.
+\ecenter
+
+Mesmo uma análise mais ampla (desde 1953) das taxas de juros mostram que o 
+período recente é o período de menor taxa de juros em termos históricos, o que 
+pode ser visto na figura \@ref(fig:fred).
+
+```{r}
+# dgs10 <- fredr(series_id = "DGS10",
+#               observation_start = as.Date("1962-01-02"))
+# dgs20 <- fredr(series_id = "DGS20",
+#               observation_start = as.Date("1962-01-02"))
+# dgs30 <- fredr(series_id = "DGS30",
+#               observation_start = as.Date("1962-01-02"))
+# df <- left_join(dgs10, dgs20, by = "date", suffix = c(".DGS10", ".DGS20"))
+# df <- left_join(df, dgs30, by = "date")
+# df <- df[, c("date", "value.DGS10", "value.DGS20", "value")]
+# colnames(df) <- c("date", "DGS10", "DGS20", "DGS30")
+# df <- df %>% gather("bond", "rate", -date)
+# saveRDS(df, "data/FRED_daily")
+```
+
+```{r yields2, fig.cap="Taxas diárias dos \\emph{treasuries bonds} desde janeiro/1990."}
+df_daily <- readRDS("data/FRED_daily")
+ggplot(data = df_daily[which(df_daily$date >= as.Date("1990-01-01")), ], 
+       aes(x = date, y = rate, color = bond)) +
+  geom_line() +
+  labs(
+    title = "US Treasuries-bonds",
+    subtitle = "10, 20 and 30 years",
+    caption = "Fonte: Board of Governors of the Federal Reserve System (US)"
+  ) +
+  xlab("Ano")+
+  ylab("Taxa (a.a.)") +
+  scale_y_continuous(labels = scales::label_percent(scale = 1,
+                                                    decimal.mark = ",")) +
+  theme(legend.position = "bottom") +
+  geom_rect(data=recessions.df[which(recessions.df$Peak >= as.Date("1990-01-01")), ], 
+            aes(xmin=Peak, xmax=Trough, ymin=-Inf, ymax=+Inf),
+            inherit.aes=F, fill='grey', alpha=0.5)
+```
+\bcenter
+Fonte: O autor, à partir de dados do \gls{FRED}.
+\ecenter
+
+No momento em que se escreve deste trabalho, a taxa de juros dos títulos de mais
+longa maturidade, ou seja, de 30 anos, está em `r brf(tail(df_daily, n = 1)$rate)`% a.a. 
+
+Para os títulos com vencimento em 20 anos, a taxa está em `r brf(tail(df_daily[which(df_daily$bond == 'DGS20'), ], n = 1)$rate)`
+% a.a. e para os títulos com vencimento em 10 anos está em `r brf(tail(df_daily[which(df_daily$bond == 'DGS10'), ], n = 1)$rate)`% a.a., 
+todos muito perto dos seus valores mínimos da série histórica, que foram 
+atingidos em `r  df_daily[which.min(df_daily$rate), ]$date`, quando os títulos
+com maturidade de 10 anos atingiram impressionantes `r brf(pull(df_daily[which(df_daily$date == as.Date("2020-03-09")), ], rate)[1])`% a.a.
+
+Segundo Krugman [-@krugman2020], no entanto, isto não está a ocorrer apenas nos
+EUA, mas em todo o mundo desenvolvido, com maior ou menor gravidade, já há 
+alguns anos, e não deve ser interpretado apenas como um efeito de curto prazo
+de uma crise com a do Corona vírus, que só fez agravar ainda mais um quadro
+que já vem de longo prazo:
+
+\begin{citacao}
+What this tells us is that the bond market isn’t just pricing in a global
+recession driven by the coronavirus, but that it expects the Fed funds rate to
+be near zero a lot of the time looking forward. That is, the market sees a
+future of secular stagnation, in which the economy is in a liquidity trap, that
+is, a situation in which monetary policy loses most of its traction, much if not
+most of the time. We were in a liquidity trap for 8 of the past 12 years; the
+market now appears to believe that something like this is the new normal.
+\end{citacao}
+
+
+
+```{r fred, out.width="\\textwidth", fig.cap="Taxas mensais dos \\emph{treasuries bonds} desde abril/1953."}
+ggplot(data = df, aes(x = date, y = rate, color = bond)) +
+  geom_line() +
+  labs(
+    title = "US Treasuries-bonds",
+    subtitle = "10, 20 and 30 years",
+    caption = "Fonte: Board of Governors of the Federal Reserve System (US)"
+  ) +
+  xlab("Ano")+
+  ylab("Taxa (a.a.)") +
+  scale_y_continuous(labels = scales::label_percent(scale = 1,
+                                                    decimal.mark = ",")) +
+  theme(legend.position = "bottom") +
+  geom_rect(data=recessions.df[which(recessions.df$Peak >= as.Date("1953-04-01")), ], 
+            aes(xmin=Peak, xmax=Trough, ymin=-Inf, ymax=+Inf),
+            inherit.aes=F, fill='grey', alpha=0.5)
+```
+\bcenter
+Fonte: O autor, à partir de dados do \gls{FRED}.
+\ecenter
+
+Esta longa e sustentada tendência de queda de longo prazo, com esta persistência
+não pode ser atribuída a uma bolha especulativa, *i.e.* um desvio de curto prazo
+de uma tendência de longo prazo, mas sim a uma tendência estrutural, sistêmica.
+
+As taxas de juros das hipotecas são influenciadas pelas taxas dos títulos da
+dívida pública: os títulos da dívida pública são considerados ativos sem risco,
+Por isto os investimentos em títulos públicos possuem as menores taxas do
+mercado: o governo, que emite a dívida, também emite a moeda necessária para
+pagá-la. Ou seja, não há risco verdadeiro quando um governo emite um título de
+dívida, a não ser o risco da própria desvalorização da moeda (inflação). É
+natural, portanto, que os investidores exijam, para que invistam em ativos
+diferentes dos títulos da dívida pública, um prêmio de risco. Para o mercado
+imobiliário, este risco é mínimo, pois o empréstimo se dá com o imóvel em
+garantia. É esperado, portanto, que as taxas de juros das hipotecas sejam apenas
+um pouco superiores aos títulos da dívida pública.
+
+```{r}
+# mortgage30us <- fredr(series_id = "MORTGAGE30US",
+#              observation_start = as.Date("1971-04-02"))
+# df <- left_join(mortgage30us, dgs30, by = "date",
+#                 suffix = c(".MORTGAGE30US", ".DGS30"))
+# df <- df[, c("date", "value.MORTGAGE30US", "value.DGS30")]
+# colnames(df) <- c("date", "MORTGAGE30US", "DGS30")
+# df <- df %>% gather("index", "rate", -date)
+# saveRDS(df, "data/FRED_mortgages")
+```
+
+```{r mortagages, out.width="\\textwidth", fig.cap = "Juros hipotecários médios (30 anos) e taxas de títulos de maturidade constante de 30 anos."}
+df_mortgages <- readRDS("data/FRED_mortgages")
+ggplot(data = df_mortgages, aes(x = date, y = rate, color = index)) +
+  geom_line() +
+  labs(
+    title = "30-year fixed rate Mortgage average",
+    subtitle = "Compared with 30-year treasury constant maturity rate",
+    caption = "Fonte: Board of Governors of the Federal Reserve System (US)"
+  ) +
+  xlab("Ano")+
+  ylab("Taxa (a.a.)") +
+  scale_y_continuous(labels = scales::label_percent(scale = 1,
+                                                    decimal.mark = ",")) +
+  theme(legend.position = "bottom") +
+  geom_rect(data=recessions.df[which(recessions.df$Peak >= as.Date("1971-04-02")), ], 
+            aes(xmin=Peak, xmax=Trough, ymin=-Inf, ymax=+Inf),
+            inherit.aes=F, fill='grey', alpha=0.5)
+```
+
+
+Esta alta queda das taxas de juros dos ativos financeiros de longo prazo é uma
+das causadoras da elevação dos preços dos mesmos ativos, assim como a elevação
+do preço dos imóveis.
+
+De fato, @goodhart2008 encontraram uma ligação multidirecional entre \gls{MV} 
+relacionadas à oferta monetária (base monetária, crédito, entre outras) e o
+preço dos imóveis.
+
+A grande diferença então da recente alta dos preços dos imóveis (desde 2012) da
+alta anterior (até Dez/2005) é que a alta mais recente é plenamente justificada
+pela altíssima liquidez dos mercados. Ou seja, não se pode atribuir a recente
+alta dos preços dos imóveis à especulação imobiliária, ou pelo menos não se pode
+atribuir a recente alta somente a especulação: há fundamento para a alta, o que
+se discute com mais propriedade na seção \@ref(micro).
+
+Em um cenário de longo prazo, a tendência é que a crise de 2008 apenas tenha
+acelerado em demasia, momentaneamente, o que já era uma tendência de longo
+prazo, portanto estrutural, da economia.
+
+## A dinâmica da crise
 
 Em 2001 o \gls{FED} reduziu a taxa básica da economia americana para 1,5% a.a.,
 para combater a recessão econômica, atingindo um dos níveis mais baixos da
@@ -66,7 +471,7 @@ bancos começaram a ficar receosos de emprestar uns para os outros, por causa
 da alta presença de ativos tóxicos nos seus balanços, os derivativos de crédito
 que compraram durante o *boom* imobiliário, o que causou uma crise de liquidez.
 
-##### A raiz da crise
+## A raiz da crise
 
 Segundo Donnelly e Embrechts [-@devil, 3], a raiz da crise financeira de 2008
 estava nos derivativos de crédito, \gls{CDO}, lastreados em ativos de crédito
@@ -109,8 +514,7 @@ que estes eram securitizandos, mas também na crença de que, em última instân
 os governos seriam obrigados a socorrer as instituições denominadas *too big to
 fail* (grandes demais para quebrar) [@devil, 4-5].
 
-
-##### Derivativos de crédito
+### Derivativos de crédito
 
 \gls{CDO} são um tipo de instrumento financeiro do grupo dos denominados 
 derivativos de crédito, lastreados em \gls{ABS}, construídos através do
@@ -226,9 +630,9 @@ Segundo @watts, a duração típica de um contrato de \gls{CDO} era de 5 anos.
 | CCC                    | 37,64                            |
 Table: Parte da matriz de risco de default da Fitch.
 
-\bcenter
+
 Fonte: @watts.
-\ecenter
+
 
 | **Tranche (Rating)**   | **Attachment Points** |
 |:-----------------------|:---------------------:|
@@ -240,9 +644,7 @@ Fonte: @watts.
 | Equity (NA)            | 0% -- 11%             |
 Table: Exemplo de parcelamento de \gls{CDO}.
 
-\bcenter
 Fonte: @watts.
-\ecenter
 
 Para Donnelly e Embrechts [@devil, 20], os *equity tranches* são produtos com
 muito risco, portanto de pouco valor, o que interessa aos grandes especuladores,
@@ -264,7 +666,7 @@ sequer com estes ativos. Em 2008 o prejuízo líquido da AIG foi de
 US\$ 99 bilhões, sendo US\$ 62 bi apenas no último trimestre, auge da crise do 
 *subprime*.
 
-##### Precificação
+### Precificação
 
 De acordo com @watts, apesar de terem sido criados há algum tempo, uma década e
 meia teve que se passar para que o mercado de \gls{CDO} se tornasse grande. E o

@@ -1,4 +1,6 @@
-# Índices de preços de imóveis e correlação com variáveis macroeconômicas {#indices}
+# Índices de preços e indicadores de performance do \gls{MI} {#indices}
+
+## Índices de preços de imóveis
 
 Diversos países hoje contam com índices de preços de imóveis nacionais, oficiais
 ou não, no entanto o modo de construção destes índices de preços difere de país 
@@ -56,7 +58,7 @@ base de cálculo do \gls{IPTU} acaba por sobrecarregar ainda mais os
 proprietários. A elaboração de índices de preços de imóveis pode ajudar a 
 resolver este problema.
 
-## Metodologias para confecção de índices de preços de imóveis
+### Metodologias para confecção de índices de preços de imóveis
 
 Diferentes metodologias são conhecidas para a confecção de índices de preços de
 imóveis, que vão desde as mais simples, como o método de vendas repetidas, 
@@ -76,7 +78,7 @@ existe grande informalidade e as transações muitas vezes nem são comunicadas 
 entidades reguladoras, dado que diversas transações são feitas baseadas em
 simples contratos particulares de compra e venda.
 
-### Métodos de estratificação
+#### Métodos de estratificação
 
 São os métodos mais simples de medição de mudanças nos índices de preços de 
 imóveis. É feita pela aferição da mudança de uma medida de tendência central 
@@ -100,7 +102,7 @@ propriedades, sendo este método de confecção de índice somente apropriado qu
 * uma das variáveis de estratificação é a variável *idade* da edificação; e
 * a decomposição do índice em terra e estrutura não é necessária.
 
-### Métodos hedônicos
+#### Métodos hedônicos
 
 É o método mais eficiente de construção de um índice quando há dados
 disponíveis. Além de explorar o máximo os dados disponíveis, permite a
@@ -111,7 +113,7 @@ imóveis quanto para aferir o investimento no setor imobiliário.
 
 Consiste na aplicação de modelos hedônicos, basicamente de duas maneiras distintas:
 
-#### Modelos com variáveis dicotômicas de tempo 
+##### Modelos com variáveis dicotômicas de tempo 
 
 Trata-se de um método que utiliza um modelo de regressão onde as variáveis
 hedônicas dos imóveis são adicionadas de variáveis dicotômicas de cada período
@@ -120,7 +122,7 @@ com o novo ajuste do modelo, os índices dos períodos anteriores são modificad
 Para contornar este problema, utiliza-se uma janela de tempo móvel, efetuando um
 ajuste de modelo para os últimos N períodos.
 
-#### Modelos de preços característicos
+##### Modelos de preços característicos
 
 Nestes tipos de índices, um modelo hedônico é ajustado a cada período e o índice
 é construído através dos preços previstos pelos modelos [@rppi, 53]. Assim, o
@@ -139,7 +141,7 @@ posterior ($z_k^* = \bar z_k^t$), denominado índice de Paasche, ou ainda tomand
 a média geométrica dos períodos anterior e posterior, denominado índice do tipo
 Fisher.
 
-### Método de vendas repetidas (Repeated Sales)
+#### Método de vendas repetidas (Repeated Sales)
 
 Embora seja o método mais "natural" para a confecção de um índice, e de ser
 também o método do índice talvez mais famoso, o de Case e Shiller, o método de
@@ -149,7 +151,7 @@ transacionados mais de uma vez, por conseguinte descarta muitos dados de
 transação que poderiam ser úteis para a construção de um índice mais robusto 
 [@rppi, 160]. 
 
-### Métodos baseados em avaliação -- Sales Price Appraisal Ratio (SPAR)
+#### Métodos baseados em avaliação -- Sales Price Appraisal Ratio (SPAR)
 
 Este tipo de índice utiliza de dados de avaliação feitas para propósito de
 tributação ou outros tipos de avaliação, usualmente utilizadas para bens 
@@ -196,25 +198,25 @@ Uma limitação importante, porém, é que índices elaborados com tais métodos
 podem decompor o valor total da propriedade imobiliária em valor de terra e
 valor de estruturas.
 
-## Índices no mundo
+### Índices no mundo
 
 O @rppi elencou uma série de índices ao redor do mundo. Nesta subseção, alguns destes índice são descritos.
 
-### Índices globais
+#### Índices globais
 
-#### Global Real House Price Index
+##### Global Real House Price Index
 
 O FMI, através do observatório Global Housing Watch...
 
 
 
-### Índices em países desenvolvidos
+#### Índices em países desenvolvidos
 
 a. Índice de Case-Shiller
 
 @NBERw2506 desenvolveram...
 
-### Índices em países em desenvolvimento
+#### Índices em países em desenvolvimento
 
 Nos países em desenvolvimento, segundo o o Eurostat [-@rppi, 110], uma proporção
 significante dos imóveis advém de construção própria, em terrenos de família, 
@@ -299,7 +301,256 @@ transações repetidas. Outros países, que têm uma realidade diferente da
 americana, buscam alternativas para fazer o cálculo.
 \end{citacao}
 
-## Comportamento recente dos índices de preços e relação com variáveis macroeconômicas
+## Indicadores de performance do setor imobiliário residencial
+
+O Quadro \@ref(qua:Quadro-2) traz uma coleção de dez indicadores que podem 
+ser utilizados para o diagnóstico e um comparativo do \gls{MI} residencial em 
+um país com outros mercados em perspectiva [@indicators, 7].
+
+\begin{quadro}[htb]
+	\centering
+	\caption{\label{qua:Quadro-2}Dez indicadores chave da performance do \gls{MI} residencial.}	
+	\begin{tabular}{|p{5cm}|p{10cm}|}
+		\hline
+		\textbf{Indicador}        & \textbf{Definição}\\ \hline
+		 Razão preço/renda        & Razão do preço mediano de uma casa e a renda 
+		 mediana doméstica anual  \\ \hline
+		 Razão aluguel/renda      & Razão do aluguel mediano anual de uma casa e a 
+		 renda mediana anual doméstica dos locadores       \\ \hline
+		 Produção de unidades     & Número total de unidades residenciais (formais e 
+		 informais) produzida por ano por 1.000 habitantes       \\ \hline
+		 Investimento residencial & Investimento total no \gls{MI} residencial, em 
+		 porcentagem do \gls{PIB}       \\ \hline
+		 Área útil por habitante  & Área útil total disponível por habitante       \\ \hline
+		 Estruturas permanentes   & Porcentagem de unidades residenciais em 
+		 estruturas construídas por material permanente       \\ \hline
+		 Estruturas irregulares   & Porcentagem do estoque total residencial na área 
+		 urbana em desacordo com a regulamentação corrente.       \\ \hline
+		 Carteira de crédito residencial & Razão do crédito total hipotecários em 
+		 relação ao crédito total (instituições comerciais e governamentais)       \\ \hline
+		 Multiplicador de terra loteada & Raiz média entre o preço mediano da terra 
+		 loteada nos extremos urbanos em um loteamento típico e o preço mediano da 
+		 terra nua, não loteada, próxima ao perímetro urbano       \\ \hline
+		 Gastos com infraestrutura per capita & Razão dos gastos totais com 
+		 infraestrutura durante o ano e a população urbana       \\ \hline
+	\end{tabular}
+	\fonte{\textcite[4]{indicators}.}
+\end{quadro}
+
+## Variáveis macroeconômicas e variáveis do mercado imobiliário
+
+Outros indicares importantes de performance do mercado imobiliário foram 
+elencadas por @macroHousing. 
+
+@macroHousing classificaram as variáveis importantes para a aferição do
+comportamento do \gls{MI} e sua correlação com a Macroeconomia em variáveis
+macroeconômicas -- \gls{MV} -- e variáveis do mercado residencial --  \gls{HMV}. 
+Entre as \gls{MV} estão as variáveis macroeconômicas mais convencionais, como o
+\gls{PIB}, a taxa de desemprego, taxa de inflação e outras, mas também o que 
+@macroHousing chamaram de variáveis macro-financeiras, como as taxas de juros
+básicas, sejam nominais ou reais, os índices das bolsas de valores (S&P 500), 
+etc. Entre as \gls{HMV} encontram-se não apenas os índices de preços, mas também 
+variáveis como o número de novas residências vendidas, a taxa de vacância e o 
+investimento residencial.
+
+A Figura \@ref(fig:vacancyRate) mostra a taxa de vacância de imóveis próprios (A)
+e de aluguel (B) para os EUA.
+
+```{r}
+RHVRUSQ156N <- fredr(series_id = "RHVRUSQ156N", 
+               observation_start = as.Date("1956-01-01")) # Homeowner vacancy rate
+USHOWN <- fredr(series_id = "RSAHORUSQ156S", 
+               observation_start = as.Date("1984-01-01")) # Homeownership rate
+NHPI <- fredr(series_id = "CSUSHPINSA", 
+              observation_start = as.Date("1987-01-01"), 
+              frequency = "q")
+RRVRUSQ156N <- fredr(series_id = "RRVRUSQ156N", 
+               observation_start = as.Date("1956-01-01")) # Rental vacancy rate
+RHVRUSQ156N$date <- seq(ISOdate(1956,1,1), ISOdate(2020,4,1), by = "quarters")
+RRVRUSQ156N$date <- seq(ISOdate(1956,1,1), ISOdate(2020,4,1), by = "quarters")
+```
+
+```{r recessionsDF4}
+recessions.df <- read.csv("data/us_recessions.csv")
+recessions.df <- within(recessions.df, {
+  Peak <- as.POSIXct(Peak)
+  Trough <- as.POSIXct(Trough)
+  })
+```
+
+```{r format-quarters}
+format_quarters <- function(x) {
+  format(as.yearqtr(x), format = "%qT%Y")
+}
+```
+
+
+```{r vacancyRate, fig.cap="Home Price Index, de Case e Shiller, em termos reais.", out.width="100%"}
+recessions.trim = subset(recessions.df, Peak >= "1956-01-01" )
+recessions.trim$Peak <- as.POSIXct(recessions.trim$Peak)
+recessions.trim$Trough <- as.POSIXct(recessions.trim$Trough)
+p1 <- ggplot(RHVRUSQ156N, aes(x = date, y = value)) +
+  geom_line() +
+   labs(
+     title = "Imóveis próprios", 
+     subtitle = "Não ajustada sazonalmente | Frequência: trimestral", 
+     caption = "1956-2020",
+     x = "Data", 
+     y = "%") +
+  stat_peaks(colour = "red", span = 25) +
+  # stat_peaks(geom = "text", colour = "red", 
+  #            vjust = -0.5, x.label.fmt = "%m/%y", span = 25) +
+  stat_valleys(colour = "blue", span = 25) +
+  # stat_valleys(geom = "text", colour = "blue", 
+  #            vjust = 1.5, x.label.fmt = "%b/%Y", span = 25) +   
+  scale_x_datetime(expand = expansion(mult = c(0, .05)),
+                   date_breaks = "60 months",
+                   date_minor_breaks = "12 months",
+                   labels = format_quarters) +
+  theme(panel.grid.major = element_line(colour="gray", size=0.5),
+        panel.grid.minor.x = element_line(colour="gray", size=0.1),
+        axis.text.x=element_text(angle=-45, hjust=0.001)) +
+  geom_rect(data=recessions.trim, aes(xmin=Peak, xmax=Trough,
+                                    ymin=-Inf, ymax=+Inf),
+          inherit.aes=F,
+          fill='grey', alpha=0.5)
+p2 <- ggplot(RRVRUSQ156N, aes(x = date, y = value)) +
+  geom_line() +
+   labs(
+     title = "Imóveis de aluguel", 
+     subtitle = "Não ajustada sazonalmente | Frequência: trimestral", 
+     caption = "1956-2020",
+     x = "Data", 
+     y = "%") +
+  stat_peaks(colour = "red", span = 61) +
+  # stat_peaks(geom = "text", colour = "red", 
+  #            vjust = -0.5, x.label.fmt = "%m/%y", span = 61) +
+  stat_valleys(colour = "blue", span = 61) +
+  # stat_valleys(geom = "text", colour = "blue", 
+  #            vjust = 1.5, x.label.fmt = "%b/%Y", span = 61) +
+  scale_x_datetime(expand = expansion(mult = c(0, .05)),
+                   date_breaks = "60 months",
+                   date_minor_breaks = "12 months",
+                   labels = format_quarters) +
+  theme(panel.grid.major = element_line(colour="gray", size=0.5),
+        panel.grid.minor.x = element_line(colour="gray", size=0.1),
+        axis.text.x=element_text(angle=-45, hjust=0.001)) +
+  geom_rect(data=recessions.trim, aes(xmin=Peak, xmax=Trough,
+                                    ymin=-Inf, ymax=+Inf),
+          inherit.aes=F,
+          fill='grey', alpha=0.5)
+plot_row <- plot_grid(p1, p2)
+title <- ggdraw() +
+  draw_label(
+    "Taxa de Vacância (EUA)",
+    fontface = 'bold',
+    x = 0,
+    hjust = 0
+  ) +
+  theme(
+    # add margin on the left of the drawing canvas,
+    # so title is aligned with left edge of first plot
+    plot.margin = margin(0, 0, 0, 0)
+  )
+plot_grid(title, plot_row, ncol = 1,
+          # rel_heights values control vertical title margins
+          rel_heights = c(0.1, 1))
+```
+\bcenter
+Fonte: O autor, com dados obtidos do FRED [@RHVRUSQ156N; @RRVRUSQ156N].
+\ecenter
+
+Outra \gls{HMV} importante não citada por @macroHousing é a *Homeownership rate*,
+*i.e* a proporção da população que vive em imóveis próprios. A Figura 
+\@ref(fig:USHOWN) mostra a evolução da *Homeownership rate* desde 1984.
+
+```{r USHOWN, fig.cap = "Proporção da população vivendo em imóveis próprios (EUA)."}
+ggplot(USHOWN, aes(x = date, y = value)) +
+  geom_line() +
+   labs(
+     title = "Proporção da população vivendo em imóveis próprios (EUA)", 
+     subtitle = "Não ajustada sazonalmente | Frequência: trimestral", 
+     caption = "Desde 1984.",
+     x = "Data", 
+     y = "%") 
+```
+\bcenter
+Fonte: O autor, com dados obtidos do FRED [@RSAHORUSQ156S].
+\ecenter
+
+É usual encontrar análises sobre o \gls{MI} com estas séries plotadas num 
+único gráfico [ver @FRED2014; @FRED2016; @FRED2018], como mostrado na Figura 
+\@ref(fig:twoseries).
+
+```{r twoseries, fig.cap = "Análise comparativa de séries de \\gls{HMV}.", out.width="100%"}
+ushown <- as.xts(USHOWN[, 3], order.by = USHOWN$date)
+nhpi <- as.xts(NHPI[, 3], order.by = NHPI$date)
+
+## add extra space to right margin of plot within frame
+par(mar=c(4, 4, 1, 6) + 0.1)
+
+## Plot first set of data and draw its axis
+plot(time(ushown), ushown$value, pch=20, axes=FALSE, cex = .25,
+     ylim=c(63,70), xlab="", ylab="", type="l",col="black", 
+     main=NULL)
+axis(2, ylim=c(63,70),col="black",las=1)  ## las=1 makes horizontal labels
+mtext("HouseOwnership (%)",side=2,line=2.5)
+box()
+
+## Allow a second plot on the same graph
+par(new=TRUE)
+
+## Plot the second plot and put axis scale on right
+plot(time(nhpi), nhpi$value, pch=18,  cex = .25, 
+     xlab="", ylab="", ylim=c(60, 270), 
+     axes=FALSE, type="l", col="red")
+## a little farther out (line=4) to make room for labels
+mtext("HPI (2000 = 100)",side=4,col="red",line=4) 
+axis(4, ylim=c(60, 270), col="red",col.axis="red",las=1)
+
+## Draw the time axis
+#axis.Date(1, range(time(ushown)), format = "%m/%Y")
+axis.Date(1, at=seq(as.Date("1984/1/1"), as.Date("2020/1/1"), "years"), format = "%Y")
+mtext("Ano", side = 1, col = "black", line = 2.5)  
+
+## Add Legend
+legend("topleft",legend=c("HomeOwnership","HPI"),
+  text.col=c("black","red"),lty=rep(1, 2), col=c("black","red"))
+
+# dualplot(x1 = time(ushown), y1 = ushown$value,
+#         x2 = time(nhpi), y2 = nhpi$value)
+
+# df <- inner_join(USHOWN, NHPI, by = "date", suffix = c(".USHOWN", ".NHPI"))
+# coef <- 3
+# 
+# ggplot(df, aes(x=date)) +
+#   
+#   geom_line( aes(y=value.USHOWN), size=2, color="blue") + 
+#   geom_line( aes(y=value.NHPI/coef), size=2, color="red") +
+#   
+#   scale_y_continuous(
+#     
+#     # Features of the first axis
+#     name = "%",
+#     
+#     limits = c(63, 70),
+#     
+#     # Add a second axis and specify its features
+#     sec.axis = sec_axis(~.*coef, name="NHPI - 2000=100")
+#   ) + 
+#   
+#   theme(
+#     axis.title.y = element_text(color = "blue", size=13),
+#     axis.title.y.right = element_text(color = "red", size=13)
+#   ) +
+# 
+#   ggtitle("Temperature down, price up")
+```
+\bcenter
+Fonte: O autor, com dados obtidos do FRED [@RSAHORUSQ156S; @CSUSHPINSA].
+\ecenter
+
+## Comportamento recente dos índices de preços e relação com \gls{MV} e \gls{HMV}
 
 No Brasil não existem séries históricas de prazo satisfatórios para uma análise
 de longo prazo referente ao preço dos imóveis. No entanto, como explicitado 
@@ -319,6 +570,12 @@ Shiller, desde 1990.
 estouro da bolha do \gls{glo:subprime}, os preços sofrem uma nítida tendência de
 alta, desde janeiro de 2012, ultrapassando já, em termos nominais, os níveis de
 preços anteriores à crise de 2008.
+
+```{r}
+nhpi <- readRDS("data/nhpi")
+rhpi <- readRDS("data/rhpi")
+```
+
 
 ```{r}
 range_nhpi_2006_2012 <- range(window(nhpi, start = 2006 + 6/12, end = 2012 + 0/12))
@@ -471,290 +728,3 @@ global da alta dos preços dos imóveis é praticamente simultânea.
 
 No entanto, deve-se ter em conta que o preço dos imóveis nos EUA afeta o índice
 global.
-
-## Bolhas Especulativas no Mercado Imobiliário
-
-Isto poderia ser indício da formação de nova bolha imobiliária, nos moldes da
-que estourou em meados de 2006, com consequências catastróficas para a economia
-global?
-
-Bolhas imobiliárias são difíceis de serem identificadas. Bolhas são fenômenos
-de curto prazo que representam descolamentos dos preços em relação aos seus
-fundamentos. Logo, para se afirmar que existe uma bolha, é necessário mostrar
-que inexiste uma correlação entre os fundamentos e os preços dos ativos
-imobiliários.
-
-@fmitwa elencam uma série de motivos que podem nos levar a conclusão que desta
-vez é diferente, como a falta de sincronicidade em diversos países, o que 
-ocorreu durante a bolha dos anos 2000, e a maior vigilância por parte das 
-autoridades monetários no que tange às medidas macroprudenciais na prevenção, 
-que incluem [@fmiem]:
-
-* Limite a razão empréstimo/valor, o que limita o valor da hipoteca relativa
-ao valor da propriedade.
-* Limites a razão dívida/renda, que limita o tamanho do pagamento do serviço da 
-dívida a um limite fixo da renda do mutuário.
-* Requerimentos de capitais setoriais, que forçam os bancos a manter capital 
-extra contra empréstimos a setores específicos, como o mercado imobiliário.
-* Requerimentos de provisionamento para pagamentos duvidosos.
-
-Porém, além das medidas macroprudenciais citadas, considera-se que existem 
-outros fundamentos que indicam a não existência de uma bolha especulativa, mas
-que indicam que o preço dos imóveis estão seguindo os fundamentos econômicos.
-
-### Bolhas Especulativas e taxas de juros
-
-Como demonstraram @joebges, um dos grandes dogmas da Economia, de que políticas 
-monetarárias frouxas causam bolhas no \gls{MI} não tem fundamentação científica,
-tanto teorica, como empiricamente falando. Bolhas especulativas foram 
-documentadas tanto em países com política monetária frouxa quanto em países que 
-praticavam política monetária apertada. Isto não quer dizer, no entanto, que
-as taxas de juros não tenham impacto sobre os preços dos imóveis, como mostram
-diversos trabalhos. Para a ocorrência de bolhas especulativas, no entanto, é
-necessário que existam outras características presentes: a inelasticidade da 
-oferta, como citado no capítulo \@ref(economia), a entrada no mercado de 
-grandes especuladores, geralmente fundos de hedge, a desregulamentação 
-financeira, com o lançamento de novos produtos financeiros de risco duvidos, 
-etc. 
-
-No entanto, é sabido que os bancos centrais praticam (ou deveriam praticar) 
-políticas monetárias frouxas visando estimular uma economia em crise, visando
-aumentar a liquidez monetária do mercado e com isso, fazer com  que a economia
-volte ao seu ritmo de crescimento 'natural'. Ora, ocorre que nestes momentos em
-que os bancos centrais estão praticando esta política monetária frouxa, 
-usualmente esta política monetária vem acompanhada de uma série de 
-desregulamentações financeiras, visando o aumento do volume de crédito, e também
-que os grandes investidores, com as baixas taxas de juros, tendem a procurar 
-alternativas mais rentáveis de investimento, ao custo do aumento do risco destes
-investimentos. A dinâmica que levou a crise imobiliário-financeira nos EUA foi
-essa e será melhor detalhada no capítulo \@ref(crise).
-
-Por ora o que interessa é o entendimento das razões da queda das taxas de lucro 
-da economia capitalista e porque isto é um fator estrutural, não conjuntural, o
-que é o assunto do próximo item.
-
-#### A tendência a queda das taxas de lucro
-
-Como anteriormente mencionado, uma das variáveis macroeconômicas que afetam o
-mercado imobiliário são as taxas de juros de longo prazo. Uma diminuição das
-taxas de juros de longo prazo tende a reduzir a demanda por títulos públicos de 
-longo prazo e a aumentar a demanda por investimentos com base imobiliária. 
-
-Estas taxas de juros de mais longo prazo tem caído no mundo todo, especialmente
-nas economias desenvolvidas, como ilustra o gráfico da figura \@ref(fig:yields),
-elaboradas a partir de dados obtidos do @fredgs10, @fredgs20, @fredgs30. Esta
- mostra as taxas de juros dos títulos da dívida do tesouro norte-americano,
-em periodicidade mensal. A causa da queda destas taxas de juros de mais longo
-prazo (assim como as de curto prazo) são atribuídas a diversos fatores, o que
-vai muito além do escopo deste trabalho. Uma boa discussão pode ser vista em
-@bresser2018, @krugman2020.
-
-```{r}
-#ycAll <- Quandl("USTREASURY/YIELD", type = "ts")
-```
-
-```{r ratesData}
-# gs10 <- fredr(series_id = "GS10", 
-#               observation_start = as.Date("1953-04-01"))
-# gs20 <- fredr(series_id = "GS20", 
-#               observation_start = as.Date("1953-04-01"))
-# gs30 <- fredr(series_id = "GS30", 
-#               observation_start = as.Date("1953-04-01"))
-# df <- left_join(gs10, gs20, by = "date", suffix = c(".GS10", ".GS20"))
-# df <- left_join(df, gs30, by = "date")
-# df <- df[, c("date", "value.GS10", "value.GS20", "value")]
-# colnames(df) <- c("date", "GS10", "GS20", "GS30")
-# df <- df %>% gather("bond", "rate", -date)
-# saveRDS(df, "data/FRED")
-```
-
-```{r recessionsDF4}
-recessions.df <- within(recessions.df, {
-                          Peak <- as.Date(Peak)
-                          Trough <- as.Date(Trough)
-                        })
-```
-
-
-```{r yields, fig.cap="Taxas dos \\emph{treasuries bonds} desde janeiro/1990."}
-# xyplot.ts(ycAll[, c(9:12)], 
-#           superpose=TRUE, 
-#           auto.key=list(columns=4), 
-#           ylab="Yield (%)")
-df <- readRDS("data/FRED")
-ggplot(data = df[which(df$date >= as.Date("1990-01-01")), ], 
-       aes(x = date, y = rate, color = bond)) +
-  geom_line() +
-  labs(
-    title = "US Treasuries-bonds",
-    subtitle = "10, 20 and 30 years",
-    caption = "Fonte: Board of Governors of the Federal Reserve System (US)"
-  ) +
-  xlab("Ano")+
-  ylab("Taxa (a.a.)") +
-  scale_y_continuous(labels = scales::label_percent(scale = 1,
-                                                    decimal.mark = ",")) +
-  theme(legend.position = "bottom") +
-  geom_rect(data=recessions.df[which(recessions.df$Peak >= as.Date("1990-01-01")), ], 
-            aes(xmin=Peak, xmax=Trough, ymin=-Inf, ymax=+Inf),
-            inherit.aes=F, fill='grey', alpha=0.5)
-```
-\bcenter
-Fonte: O autor, à partir de dados do \gls{FRED}.
-\ecenter
-
-Mesmo uma análise mais ampla (desde 1953) das taxas de juros mostram que o 
-período recente é o período de menor taxa de juros em termos históricos, o que 
-pode ser visto na figura \@ref(fig:fred).
-
-```{r}
-# dgs10 <- fredr(series_id = "DGS10",
-#               observation_start = as.Date("1962-01-02"))
-# dgs20 <- fredr(series_id = "DGS20",
-#               observation_start = as.Date("1962-01-02"))
-# dgs30 <- fredr(series_id = "DGS30",
-#               observation_start = as.Date("1962-01-02"))
-# df <- left_join(dgs10, dgs20, by = "date", suffix = c(".DGS10", ".DGS20"))
-# df <- left_join(df, dgs30, by = "date")
-# df <- df[, c("date", "value.DGS10", "value.DGS20", "value")]
-# colnames(df) <- c("date", "DGS10", "DGS20", "DGS30")
-# df <- df %>% gather("bond", "rate", -date)
-# saveRDS(df, "data/FRED_daily")
-```
-
-```{r yields2, fig.cap="Taxas diárias dos \\emph{treasuries bonds} desde janeiro/1990."}
-df_daily <- readRDS("data/FRED_daily")
-ggplot(data = df_daily[which(df_daily$date >= as.Date("1990-01-01")), ], 
-       aes(x = date, y = rate, color = bond)) +
-  geom_line() +
-  labs(
-    title = "US Treasuries-bonds",
-    subtitle = "10, 20 and 30 years",
-    caption = "Fonte: Board of Governors of the Federal Reserve System (US)"
-  ) +
-  xlab("Ano")+
-  ylab("Taxa (a.a.)") +
-  scale_y_continuous(labels = scales::label_percent(scale = 1,
-                                                    decimal.mark = ",")) +
-  theme(legend.position = "bottom") +
-  geom_rect(data=recessions.df[which(recessions.df$Peak >= as.Date("1990-01-01")), ], 
-            aes(xmin=Peak, xmax=Trough, ymin=-Inf, ymax=+Inf),
-            inherit.aes=F, fill='grey', alpha=0.5)
-```
-\bcenter
-Fonte: O autor, à partir de dados do \gls{FRED}.
-\ecenter
-
-No momento em que se escreve deste trabalho, a taxa de juros dos títulos de mais
-longa maturidade, ou seja, de 30 anos, está em `r brf(tail(df_daily, n = 1)$rate)`% a.a. 
-
-Para os títulos com vencimento em 20 anos, a taxa está em `r brf(tail(df_daily[which(df_daily$bond == 'DGS20'), ], n = 1)$rate)`
-% a.a. e para os títulos com vencimento em 10 anos está em `r brf(tail(df_daily[which(df_daily$bond == 'DGS10'), ], n = 1)$rate)`% a.a., 
-todos muito perto dos seus valores mínimos da série histórica, que foram 
-atingidos em `r  df_daily[which.min(df_daily$rate), ]$date`, quando os títulos
-com maturidade de 10 anos atingiram impressionantes `r brf(pull(df_daily[which(df_daily$date == as.Date("2020-03-09")), ], rate)[1])`% a.a.
-
-Segundo Krugman [-@krugman2020], no entanto, isto não está a ocorrer apenas nos
-EUA, mas em todo o mundo desenvolvido, com maior ou menor gravidade, já há 
-alguns anos, e não deve ser interpretado apenas como um efeito de curto prazo
-de uma crise com a do Corona vírus, que só fez agravar ainda mais um quadro
-que já vem de longo prazo:
-
-\begin{citacao}
-What this tells us is that the bond market isn’t just pricing in a global
-recession driven by the coronavirus, but that it expects the Fed funds rate to
-be near zero a lot of the time looking forward. That is, the market sees a
-future of secular stagnation, in which the economy is in a liquidity trap, that
-is, a situation in which monetary policy loses most of its traction, much if not
-most of the time. We were in a liquidity trap for 8 of the past 12 years; the
-market now appears to believe that something like this is the new normal.
-\end{citacao}
-
-
-
-```{r fred, out.width="\\textwidth", fig.cap="Taxas mensais dos \\emph{treasuries bonds} desde abril/1953."}
-ggplot(data = df, aes(x = date, y = rate, color = bond)) +
-  geom_line() +
-  labs(
-    title = "US Treasuries-bonds",
-    subtitle = "10, 20 and 30 years",
-    caption = "Fonte: Board of Governors of the Federal Reserve System (US)"
-  ) +
-  xlab("Ano")+
-  ylab("Taxa (a.a.)") +
-  scale_y_continuous(labels = scales::label_percent(scale = 1,
-                                                    decimal.mark = ",")) +
-  theme(legend.position = "bottom") +
-  geom_rect(data=recessions.df[which(recessions.df$Peak >= as.Date("1953-04-01")), ], 
-            aes(xmin=Peak, xmax=Trough, ymin=-Inf, ymax=+Inf),
-            inherit.aes=F, fill='grey', alpha=0.5)
-```
-\bcenter
-Fonte: O autor, à partir de dados do \gls{FRED}.
-\ecenter
-
-Esta longa e sustentada tendência de queda de longo prazo, com esta persistência
-não pode ser atribuída a uma bolha especulativa, *i.e.* um desvio de curto prazo
-de uma tendência de longo prazo, mas sim a uma tendência estrutural, sistêmica.
-
-As taxas de juros das hipotecas são influenciadas pelas taxas dos títulos da
-dívida pública: os títulos da dívida pública são considerados ativos sem risco,
-Por isto os investimentos em títulos públicos possuem as menores taxas do
-mercado: o governo, que emite a dívida, também emite a moeda necessária para
-pagá-la. Ou seja, não há risco verdadeiro quando um governo emite um título de
-dívida, a não ser o risco da própria desvalorização da moeda (inflação). É
-natural, portanto, que os investidores exijam, para que invistam em ativos
-diferentes dos títulos da dívida pública, um prêmio de risco. Para o mercado
-imobiliário, este risco é mínimo, pois o empréstimo se dá com o imóvel em
-garantia. É esperado, portanto, que as taxas de juros das hipotecas sejam apenas
-um pouco superiores aos títulos da dívida pública.
-
-```{r}
-# mortgage30us <- fredr(series_id = "MORTGAGE30US",
-#              observation_start = as.Date("1971-04-02"))
-# df <- left_join(mortgage30us, dgs30, by = "date",
-#                 suffix = c(".MORTGAGE30US", ".DGS30"))
-# df <- df[, c("date", "value.MORTGAGE30US", "value.DGS30")]
-# colnames(df) <- c("date", "MORTGAGE30US", "DGS30")
-# df <- df %>% gather("index", "rate", -date)
-# saveRDS(df, "data/FRED_mortgages")
-```
-
-```{r mortagages, out.width="\\textwidth", fig.cap = "Juros hipotecários médios (30 anos) e taxas de títulos de maturidade constante de 30 anos."}
-df_mortgages <- readRDS("data/FRED_mortgages")
-ggplot(data = df_mortgages, aes(x = date, y = rate, color = index)) +
-  geom_line() +
-  labs(
-    title = "30-year fixed rate Mortgage average",
-    subtitle = "Compared with 30-year treasury constant maturity rate",
-    caption = "Fonte: Board of Governors of the Federal Reserve System (US)"
-  ) +
-  xlab("Ano")+
-  ylab("Taxa (a.a.)") +
-  scale_y_continuous(labels = scales::label_percent(scale = 1,
-                                                    decimal.mark = ",")) +
-  theme(legend.position = "bottom") +
-  geom_rect(data=recessions.df[which(recessions.df$Peak >= as.Date("1971-04-02")), ], 
-            aes(xmin=Peak, xmax=Trough, ymin=-Inf, ymax=+Inf),
-            inherit.aes=F, fill='grey', alpha=0.5)
-```
-
-
-Esta alta queda das taxas de juros dos ativos financeiros de longo prazo é uma
-das causadoras da elevação dos preços dos mesmos ativos, assim como a elevação
-do preço dos imóveis.
-
-De fato, @goodhart2008 encontraram uma ligação multidirecional entre \gls{MV} 
-relacionadas à oferta monetária (base monetária, crédito, entre outras) e o
-preço dos imóveis.
-
-A grande diferença então da recente alta dos preços dos imóveis (desde 2012) da
-alta anterior (até Dez/2005) é que a alta mais recente é plenamente justificada
-pela altíssima liquidez dos mercados. Ou seja, não se pode atribuir a recente
-alta dos preços dos imóveis à especulação imobiliária, ou pelo menos não se pode
-atribuir a recente alta somente a especulação: há fundamento para a alta, o que
-se discute com mais propriedade na seção \@ref(micro).
-
-Em um cenário de longo prazo, a tendência é que a crise de 2008 apenas tenha
-acelerado em demasia, momentaneamente, o que já era uma tendência de longo
-prazo, portanto estrutural, da economia.

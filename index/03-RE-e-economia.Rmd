@@ -281,7 +281,7 @@ os sinais enviados ao mercado e podem exacerbar o problema original.
 
 Segundo @LEUNG, há um reconhecimento relativamente recente e crescente
 sobre a importância da interação entre os diversos mercados imobiliários entre
-si e entre o mercado imobiliário como um todo e a macroeconomia.
+si e entre o \gls{MI} como um todo e a macroeconomia.
 
 Pesquisas em economia habitacional convencional e em economia urbana
 praticamente ignoram as interações com a macroeconomia. Na melhor das hipóteses,
@@ -329,117 +329,6 @@ mostra forte rigidez pra baixo, porque os donos de imóveis residenciais tendem 
 resistir a venda da propriedade sob períodos de recessão econômica [@Case2000,
 129].
 
-### Variáveis macroeconômicas e variáveis do mercado imobiliário
-
-Leung e Ng [-@macroHousing] classificaram as variáveis importantes para a
-aferição do comportamento do \gls{MI} e sua correlação com a Macroeconomia em
-variáveis macroeconômicas -- \gls{MV}) -- e variáveis do mercado residencial -- 
-\gls{HMV}). Entre as \gls{MV} estão o \gls{PIB}, a taxa de desemprego, taxa de 
-inflação e entre as \gls{HMV} encontram-se não apenas os índices de preços, mas 
-também variáveis como o número de novas residências vendidas, a taxa de vacância 
-e o investimento residencial.
-
-A Figura \@ref(fig:vacancyRate) mostra a taxa de vacância de imóveis próprios (A)
-e de aluguel (B) para os EUA.
-
-```{r}
-RHVRUSQ156N <- fredr(series_id = "RHVRUSQ156N", 
-               observation_start = as.Date("1956-01-01")) # Homeowner vacancy rate
-USHOWN <- fredr(series_id = "USHOWN", 
-               observation_start = as.Date("1984-01-01")) # Homeownership rate
-RRVRUSQ156N <- fredr(series_id = "RRVRUSQ156N", 
-               observation_start = as.Date("1956-01-01")) # Rental vacancy rate
-RHVRUSQ156N$date <- seq(ISOdate(1956,1,1), ISOdate(2020,4,1), by = "quarters")
-RRVRUSQ156N$date <- seq(ISOdate(1956,1,1), ISOdate(2020,4,1), by = "quarters")
-```
-
-```{r recessionsDF3}
-recessions.df <- read.csv("data/us_recessions.csv")
-recessions.df <- within(recessions.df, {
-  Peak <- as.POSIXct(Peak)
-  Trough <- as.POSIXct(Trough)
-  })
-```
-
-```{r format-quarters}
-format_quarters <- function(x) {
-  format(as.yearqtr(x), format = "%qT%Y")
-}
-```
-
-
-```{r vacancyRate, fig.cap="Home Price Index, de Case e Shiller, em termos reais.", out.width="100%"}
-recessions.trim = subset(recessions.df, Peak >= "1956-01-01" )
-recessions.trim$Peak <- as.POSIXct(recessions.trim$Peak)
-recessions.trim$Trough <- as.POSIXct(recessions.trim$Trough)
-p1 <- ggplot(RHVRUSQ156N, aes(x = date, y = value)) +
-  geom_line() +
-   labs(
-     title = "Imóveis próprios", 
-     subtitle = "Não ajustada sazonalmente | Frequência: trimestral", 
-     caption = "1951-2020",
-     x = "Data", 
-     y = "%") +
-  stat_peaks(colour = "red", span = 25) +
-  # stat_peaks(geom = "text", colour = "red", 
-  #            vjust = -0.5, x.label.fmt = "%m/%y", span = 25) +
-  stat_valleys(colour = "blue", span = 25) +
-  # stat_valleys(geom = "text", colour = "blue", 
-  #            vjust = 1.5, x.label.fmt = "%b/%Y", span = 25) +   
-  scale_x_datetime(expand = expansion(mult = c(0, .05)),
-                   date_breaks = "60 months",
-                   date_minor_breaks = "12 months",
-                   labels = format_quarters) +
-  theme(panel.grid.major = element_line(colour="gray", size=0.5),
-        panel.grid.minor.x = element_line(colour="gray", size=0.1),
-        axis.text.x=element_text(angle=-45, hjust=0.001)) +
-  geom_rect(data=recessions.trim, aes(xmin=Peak, xmax=Trough,
-                                    ymin=-Inf, ymax=+Inf),
-          inherit.aes=F,
-          fill='grey', alpha=0.5)
-p2 <- ggplot(RRVRUSQ156N, aes(x = date, y = value)) +
-  geom_line() +
-   labs(
-     title = "Imóveis de aluguel", 
-     subtitle = "Não ajustada sazonalmente | Frequência: trimestral", 
-     caption = "1951-2020",
-     x = "Data", 
-     y = "%") +
-  stat_peaks(colour = "red", span = 61) +
-  # stat_peaks(geom = "text", colour = "red", 
-  #            vjust = -0.5, x.label.fmt = "%m/%y", span = 61) +
-  stat_valleys(colour = "blue", span = 61) +
-  # stat_valleys(geom = "text", colour = "blue", 
-  #            vjust = 1.5, x.label.fmt = "%b/%Y", span = 61) +
-  scale_x_datetime(expand = expansion(mult = c(0, .05)),
-                   date_breaks = "60 months",
-                   date_minor_breaks = "12 months",
-                   labels = format_quarters) +
-  theme(panel.grid.major = element_line(colour="gray", size=0.5),
-        panel.grid.minor.x = element_line(colour="gray", size=0.1),
-        axis.text.x=element_text(angle=-45, hjust=0.001)) +
-  geom_rect(data=recessions.trim, aes(xmin=Peak, xmax=Trough,
-                                    ymin=-Inf, ymax=+Inf),
-          inherit.aes=F,
-          fill='grey', alpha=0.5)
-plot_row <- plot_grid(p1, p2)
-title <- ggdraw() +
-  draw_label(
-    "Taxa de Vacância (EUA)",
-    fontface = 'bold',
-    x = 0,
-    hjust = 0
-  ) +
-  theme(
-    # add margin on the left of the drawing canvas,
-    # so title is aligned with left edge of first plot
-    plot.margin = margin(0, 0, 0, 0)
-  )
-plot_grid(title, plot_row, ncol = 1,
-          # rel_heights values control vertical title margins
-          rel_heights = c(0.1, 1))
-```
-
 ### Correlação entre os mercados imobiliários
 
 Em geral, é costume entre os economistas dizer que os mercados imobiliários são
@@ -478,10 +367,10 @@ A figura \@ref(fig:nhpi) ilustra o comportamento do \gls{MI} residencial
 norte-americano desde 1990. 
 
 ```{r}
-# nhpi <- Quandl("YALE/NHPI", type="ts", start_date="1990-01-01")
-# rhpi <- Quandl("YALE/RHPI", type="ts")
-# saveRDS(nhpi, file = "data/nhpi")
-# saveRDS(rhpi, file = "data/rhpi")
+nhpi <- Quandl("YALE/NHPI", type="ts", start_date="1990-01-01")
+rhpi <- Quandl("YALE/RHPI", type="ts")
+saveRDS(nhpi, file = "data/nhpi")
+saveRDS(rhpi, file = "data/rhpi")
 ```
 
 ```{r}
@@ -489,14 +378,23 @@ norte-americano desde 1990.
 #   series_id = "USREC",
 #   observation_start = as.Date("1857-01-01")
 # )
-nhpi <- readRDS("data/nhpi")
-rhpi <- readRDS("data/rhpi")
 global_rhpi <- read.csv("data/GlobalHousePriceIndex.csv")
 #global_rhpi <- read.zoo(global_rhpi, index = "dateq", FUN = as.yearqtr, format = "%Yq%q")
 #global_rhpi$dateq <- as.yearqtr(seq(ISOdate(2000,3,1), ISOdate(2019,3,1), by = "quarters"))
 global_rhpi$dateq <- seq(ISOdate(2000,1,1), ISOdate(2019,1,1), by = "quarters")
 ```
 
+```{r recessionsDF3}
+recessions.df <- read.csv("data/us_recessions.csv")
+# recessions.df <- within(recessions.df, {
+#                           Peak <- as.Date(Peak)
+#                           Trough <- as.Date(Trough)
+#                         })
+recessions.df <- within(recessions.df, {
+  Peak <- as.POSIXct(Peak)
+  Trough <- as.POSIXct(Trough)
+  })
+```
 
 
 ```{r nhpi, fig.cap="Home Price Index (HPI), de Case e Shiller, em termos nominais."}
@@ -566,16 +464,30 @@ Fonte: @regulation [p. 5]
 \ecenter
 
 A alta volatilidade do \gls{MI} tal como apresentada nos últimos anos, como será
-visto, não é comum. Neste capítulo serão analisados os motivos que levaram o
-\gls{MI} norte-americano e mundial a este aumento de volatilidade e os efeitos
-desta grande volatilidade, não apenas no \gls{MI}, mas na Economia como um todo.
+visto, não é comum. No capítulo \@ref(indices) serão analisados os motivos que
+levaram o \gls{MI} norte-americano e mundial a este forte aumento de
+volatilidade e os efeitos desta grande volatilidade, não apenas no \gls{MI}, mas
+na Economia como um todo. A próxima seção apresenta os modelos teóricos por trás
+das análises que serão efetuadas no próximo capítulo.
 
-### Modelos macroeconômicos para o \gls{MI}
+### Modelos econométricos para o \gls{MI}
 
-@ADAMS2010 mostraram, com a observação de dados em painéis de 15 países por um 
+A elaboração de modelos econométricos ajuda a explicar o comportamento dos
+preços no \gls{MI}. Geralmente são elaborados modelos estáticos, que visam
+descobrir o preço de equilíbrio do \gls{MI} no longo prazo. Estes modelos
+inicialmente aplicavam-se apenas a países onde estavam disponíveis séries
+temporais de longo prazo de preços de imóveis, como os EUA e o Reino Unido, já
+que as abordagens padrão para cointegração de dados em painel de diversos países
+requerem uma quantidade grande de dados para testar as relações de longo prazo
+[@ADAMS2010, 2].
+
+Para contornar o problema da falta de séries temporais de mais longo prazo,
+@ADAMS2010 aplicaram uma abordagem de integração de dados em painel proposta por
+Pedroni e mostraram, com a observação de dados em painel de 15 países por um
 período de 30 anos, que variáveis macroeconômicas apresentam um significativo
-impacto no preço de imóveis residenciais em longo prazo. @fan também chegou a
-essa conclusão para mercados de imóveis em 5 diferentes regiões da China.
+impacto no preço de imóveis residenciais em longo prazo. @FAN201937 [p. 51] 
+também chegaram a essa conclusão para mercados de imóveis em 5 diferentes 
+regiões da China, utilizando modelos dinâmicos.
 
 Segundo @ADAMS2010 [p. 18], particularmente variáveis como emprego, produção
 industrial e aumento da base monetária demonstraram-se propensas a aumentar a
@@ -596,24 +508,78 @@ características do mercado hipotecário, houve um alto grau de variação entre
 países, embora os resultados sejam muito similares mesmo com a variação dos
 métodos de estimação.
 
-#### Modelo de oferta e demanda
+@goodhart2008 foram além e mostram a existência de uma ligação multidirecional 
+entre os preços dos imóveis, a base monetária (ampla), o crédito, e a 
+macroeconomia.
 
-O equilíbrio no mercado de bens imobiliários se dá através da equalização das
-equações de oferta e demanda por bens imóveis.
+\begin{citacao}
+O aumento da base monetária tem um efeito significativo nos preços das
+residências e crédito, o crédito influencia a base monetária e os preços das 
+residências e os preços das residências influenciam crédito e a base monetária. 
+Este link é considerado mais forte em relação a um sub-amostra de 1985 
+a 2006 do que em uma amostra mais longa que remonta ao início dos anos 1970, uma 
+descoberta que provavelmente reflete os efeitos das liberalizações do sistema 
+financeiro em países industrializados durante os anos 1970 e início dos anos 
+1980. Devido à grandes bandas de confiança das respostas ao impulso, este 
+resultado não é, no entanto, estatisticamente significante. Os resultados 
+sugerem ainda que choques nos preços das residências, crédito e base monetária, 
+todos tem repercussões significativas sobre a atividade econômica e a inflação 
+agregada de preços. Choques no PIB, IPC e taxa de juros, por sua vez, têm 
+efeitos significantes sobre preços das residências, dinheiro e crédito.
+\cite[31]{goodhart2008}
+\end{citacao}
 
-Segundo @ADAMS2010, a demanda do mercado de bens imóveis pode ser modelada de
-acordo com a equação \@ref(eq:demanda-bens).
+@macroHousing mostraram, no entanto, que a relação entre algumas variáveis
+macroeconômicas e o mercado imobiliário podem ter modificado depois da crise
+de 2008, o que ainda deve ser confirmado com novas pesquisas, no entanto.
+
+#### Modelo de equilíbrio do \gls{MI} no longo prazo
+
+Para @ADAMS2010 [p. 6], pode-se elaborar um modelo para demanda de bens imóveis 
+em diferentes países de acordo com a equação \@ref(eq:demanda-geral), onde 
+$x_t^D$ é um vetor de variáveis macroeconômicas afetando a demanda, $z_t^D$ é
+um vetor de características específicas de cada país com influência na demanda
+por bens imóveis, como características do mercado de hipotecas, impostos 
+incidentes e depreciação.
+
+\begin{equation}
+\gls{D}_t = \alpha - \beta' x_t^D + \delta' z_t^D + \varepsilon_t
+(\#eq:demanda-geral)
+\end{equation}
+
+A oferta por bens imóveis, por sua vez, é modelada conforme a equação
+\@ref(eq:oferta-geral), onde $x_t^S$ é um vetor de variáveis macroeconômicas
+afetando a oferta, $z_t^S$ é um vetor de características específicas de cada
+país com influência na oferta por bens imóveis, como provisões de moradias
+sociais pelo governo e outras.
+
+\begin{equation}
+\gls{S}_t = \eta - \gamma' x_t^S + \lambda' z_t^S + \upsilon_t
+(\#eq:oferta-geral)
+\end{equation}
+
+
+Para um número de países grande o suficiente, pode-se assumir que os efeitos das
+variáveis $z_t^D$ e $z_t^S$ são absorvidas pelos termos de erros $\varepsilon_t$ 
+e $\upsilon_t$.
+
+Assim, o equilíbrio no mercado de bens imobiliários, assim como em outros
+mercados de bens, se dá no ponto onde a curva de oferta de bens imóveis encontra
+com a curva da demanda por estes bens, *i.e.* no ponto onde as equações de 
+oferta \@ref(eq:oferta-bens) e demanda \@ref(eq:demanda-bens) por bens 
+imóveis se encontram é atingido um preço, dito preço de equilíbrio, a que 
+corresponde uma quantidade de bens produzidos.
 
 \begin{equation}
 \gls{D}_t = \alpha - \beta_1 \gls{hp}_t + \beta_2 \gls{EA}_t - 
-\beta_3 \gls{long}_t - \beta_4 \gls{short}_t + \hat \epsilon_t
+\beta_3 \gls{long}_t - \beta_4 \gls{short}_t + \tilde \varepsilon_t
 (\#eq:demanda-bens)
 \end{equation}
 
 Na equação \@ref(eq:demanda-bens), presume-se que a demanda por bens imóveis
-seja afetada negativamente pelos preços dos imóves ($hp_t$), pela taxa de juros
-de longo prazo ($long_t$) e pela taxa de juros de curto prazo ($short_t$) e
-positivamente pelo nível da atividade econômica ($EA_t$).
+$\gls{D}_t$ seja afetada negativamente pelos preços dos imóves ($hp_t$), pela
+taxa de juros de longo prazo ($long_t$) e pela taxa de juros de curto prazo
+($short_t$) e positivamente pelo nível da atividade econômica ($EA_t$).
 
 De acordo com @ADAMS2010 [p. 7-8], uma taxa de juros de longo prazo mais alta
 tende a desviar a demanda por investimento em imóveis para títulos da dívida
@@ -625,23 +591,28 @@ por causa do aumento que acarreta nas taxas das hipotecas.
 A oferta do mercado de bens, por sua vez, pode ser modelada de acordo com a 
 equação \@ref(eq:oferta-bens).
 
-Na equação \@ref(eq:oferta-bens), presume-se que a oferta de bens imóveis seja
-positivamente afetada pelos preços dos imóveis ($hp_t$) e negativamente pela
-taxa de juros de curto prazo ($short_t$) e pelos custos de construção
-($constr_t$).
-
 \begin{equation}
 \gls{S}_t = \eta + \gamma_1 \gls{hp}_t - \gamma_2 \gls{short}_t - 
-\gamma_3 \gls{constr}_t + \hat \nu_t
+\gamma_3 \gls{constr}_t + \tilde \upsilon_t
 (\#eq:oferta-bens)
 \end{equation}
 
 Para @ADAMS2010 [p. 7-8], um aumento da taxa de juros de curto prazo tende a 
 aumentar os custos de financiamento para construção de moradias, o que impacta
-negativamente a oferta.
+negativamente a oferta, o que é modelado na equação \@ref(eq:oferta-bens) pelo
+sinal negativo do termo $\gls{short}_t$. Outra variável que impacta 
+negativamente na oferta de bens imóveis é a variável custos de construção, 
+representada na equação \@ref(eq:oferta-bens) pela variável $\gls{constr}_t$.
+Finalmente, a variável $\gls{hp}_t$, que representa o preço médio dos imóveis,
+normalmente obtida de algum índice de preços do mercado que se está a modelar, 
+tem um impacto positivo na quantidade ofertada de imóveis ($\gls{S}_t$).
 
 O equilíbrio do mercado se dá no ponto de encontro entre as equações de oferta e
-procura, ou seja, o equilíbrio é atingido quando o preço dos imóveis é:
+procura, ou seja, o equilíbrio é atingido quando o preço dos imóveis é obtido de
+acordo com a equação \@ref(eq:equilibrio-bens), onde o índice $i$ foi incluso
+para simbolizar a estrutura dos dados em painel (ou seja, o índice $i$ 
+representa cada país da amostra, enquanto o índice $t$ representa cada intervalo
+de tempo amostrado).
 
 \begin{equation}
 \gls{hp}_{it} = \alpha^*_i - \beta_{2i}^* \gls{EA}_{it} + 
@@ -656,7 +627,8 @@ $\gamma^*_{3i} = \dfrac{\gamma_{3i}}{\gamma_{1i}-\beta_{1i}}$,
 $\epsilon^*_{it} = \hat \epsilon_{it} - \hat \eta_{it}$ e   
 $\beta^*_{ji} = \dfrac{\beta_{ji}}{\gamma_{1i} - \beta_{1i}} \quad para \quad j = 2, 3$
 
-@ADAMS2010 salienta que, pela análise das equações acima, o efeito total da taxa
+
+@ADAMS2010 salientam que, pela análise das equações acima, o efeito total da taxa
 de juros de curto prazo é ambíguo, dependendo da força relativa dos coeficientes
 $\gamma_2$ e $\beta_4$. Para o mundo desenvolvido, segundo @ADAMS2010 [p. 15], 
 a magnitude do coeficiente $\gamma_2$ é maior do que a do coeficiente $\beta_4$,
@@ -664,12 +636,12 @@ ou seja, o aumento de custo impacta mais a oferta do que o aumento das hipotecas
 afeta a demanda, exceção apenas para EUA e Itália, onde as taxas hipotecárias
 preferidas são as ajustáveis.
 
-A figura \@ref(fig:adams) mostra como, teoricamente, as variações nas variáveis 
-macroeconômicas impactam na formação de preços do mercado imobiliário. Por 
-exemplo, no painel central é ilustrado como se propaga para o mercado 
+A figura \@ref(fig:adams) mostra como, teoricamente, uma mudança nas variáveis
+macroeconômicas impactam na formação de preços do mercado imobiliário. Por
+exemplo, no painel central é ilustrado como se propaga para o mercado
 imobiliário um aumento na taxa de juros de longo prazo: um aumento nos juros de
-longo prazo diminui os preços dos imóveis, que por sua vez diminuem o apetite 
-dos investidores por imóveis, fazendo diminuir o ritmo das construções, o que 
+longo prazo diminui os preços dos imóveis, que por sua vez diminuem o apetite
+dos investidores por imóveis, fazendo diminuir o ritmo das construções, o que
 por sua vez tende a diminuir o estoque de imóveis (baixa entrada de imóveis
 novos no mercado), o que por sua vez tende a aumentar o valor dos aluguéis.
 
@@ -680,7 +652,7 @@ knitr::include_graphics("./images/adams_crop.pdf")
 Fonte: @ADAMS2010.
 \ecenter
 
-#### Possíveis adequações necessárias ao modelo no Brasil
+##### Possíveis adequações necessárias ao modelo no Brasil
 
 É importante notar que na equação \@ref(eq:demanda-bens) as taxa de juros de 
 curto e longo prazo afetam negativamente a demanda por bens imóveis, exatamente 
@@ -704,22 +676,146 @@ pública no curto prazo. Outra hipótese a ser verificada é quanto ao impacto d
 taxas de juros de curto prazo nos juros hipotecários, o que parece não ocorrer
 no Brasil.
 
-### Desvios em relação aos fundamentos econômicos - choques de demanda
+#### Modelos dinâmicos
 
 O mercado imobiliário, assim como acontece com  o mercado mobiliário, deve
 seguir os fundamentos da Economia no longo prazo. No entanto, eventuais
 descolamentos dos preços no mercado imobiliário dos fundamentos econômicos podem
-ocorrer, especialmente pela inelasticidade de oferta no \gls{MI} e pela inércia
-nos preços.
+ocorrer, especialmente pela inelasticidade de oferta em alguns \gls{MI} e pela 
+inércia nos preços.
 
-Segundo @regulation [p. 4], um ciclo de preços no mercado imobiliário pode durar
-décadas. Existe, dessa forma uma propensão à formação de bolhas especulativas,
-atribuídas a diversos motivos, como "expectativas exuberantes" e problemas de
-informações de preços, que são difíceis devido às particularidades do \gls{MI} 
-[@ADAMS2010, 3].
+Desta maneira, pode ser conveniente a elaboração de modelos dinâmicos para o
+\gls{MI}, que modelem o comportamento dos preços devido à mudanças de conjuntura
+antes que o mercado volte a se equilibrar, o que pode demorar muitos anos, o que
+varia, é claro, de mercado para mercado. Segundo @regulation [p. 4], um ciclo de
+preços no mercado imobiliário pode durar décadas. Existe, dessa forma uma
+propensão à formação de bolhas especulativas, atribuídas a diversos motivos,
+como "expectativas exuberantes" e problemas de informações de preços, que são
+difíceis devido às particularidades do \gls{MI} [@ADAMS2010, 3].
 
-Devido a estes fatos, são importantes os modelos dinâmicos, conforme demonstrado
-por @fan. 
+## O Mercado Imobiliário e a Microeconomia {#micro}
+
+O mercado imobiliário, como visto na seção anterior, não pode ser 
+considerado um simples mercado de bens, como outros bens de consumo em geral,
+como automóveis, móveis ou eletrodomésticos. Sua análise em nível macroeconômico,
+portanto, requer um estudo mais aprofundado das variáveis da Economia do país,
+o que não quer dizer que não se dispense de analisar também o seu comportamento 
+microeconômico, o que aliás a NBR 14.653-01 [-@NBR1465301] parece ter acabado de 
+perceber e recomendar.
+
+### Estruturas básicas de mercado
+
+A nova versão da NBR 14.653-01 [-@NBR1465301, ix] traz uma evolução quanto à 
+consideração das diversas estruturas de mercado possíveis para a avaliação de um
+bem.
+
+> As estruturas básicas do mercado podem ser, resumidamente:
+>
+>* **Concorrência Perfeita**: situação em que o número de vendedores e de
+> compradores é suficientemente elevado para que um agente isolado não seja 
+> capaz de influenciar o comportamento dos preços;
+>
+>* **Monopólio**: É constituído por um único vendedor;
+>
+>* **Monopsônio**: é constituído por um único comprador;
+>
+>* **Oligopólio**: é constituído por um número pequeno de vendedores;
+>
+>* **Oligopsônio**: é constituído por um número pequeno de compradores.
+
+No entanto, a NBR 14.653-01 [-@NBR1465301] não deixa claro de que modo cada
+estrutura de mercado deve impactar o valor final de mercado.
+
+### Particularidades do mercado imobiliário
+
+Também em nível microeconômico o mercado imobiliário é um mercado diferenciado 
+dos outros mercados de bens de consumo. Apesar de toda a indústria da construção
+ter evoluído muito ao longo das últimas décadas, ainda persiste no Brasil um
+forte componente artesanal na construção civil, o que implica em bens imóveis
+de características muito heterogêneas, a depender da mão-de-obra aplicada na sua
+execução. Também a questão do projeto arquitetônico implica numa singularidade
+para cada bem imobiliário. Mas mais importante ainda é a questão da localização,
+que torna cada imóvel único. Isto não ocorre em qualquer outro mercado de bens 
+de consumo. A não ser por questões de natureza sentimental, um carro, uma 
+geladeira, ou praticamente qualquer outro bem de consumo é produzido em série: 
+existem milhares de itens iguais no mercado. Isto nunca ocorre com os imóveis.
+Mesmo apartamento vizinhos, em um mesmo prédio, tem características diferentes,
+dada a sua posição solar, localização do andar em relação ao prédio, a vista
+que cada um possui, entre outras questões. 
+
+Segundo a NBR 14.653-01 [-@NBR1465301, x], "o mercado imobiliário caracteriza-se
+como um 'mercado imperfeito', com bens não homogêneos, estoque limitado,
+liquidez diferenciada e grande influência de fatores externos."
+
+De acordo com @ADAMS2010 [p. 3], a forte inércia dos preços do mercado
+imobiliário influencia o comportamento do mercado durante os *booms* econômicos,
+já que a exuberância das expectativas (exuberância irracional) dos investidores
+e proprietários de imóveis facilita a formação de bolhas nestes mercados. Além
+disto, a falta de informação a respeito de preços no mercado imobiliário, pelo
+motivo deste ser um mercado segmentado, ou seja, os preços obedecem uma lógica
+local, também é uma facilitadora da formação de bolhas.
+
+### Diagnóstico de mercado
+
+A NBR 14.653-01 [-@NBR1465301, 12], estabelece que, "o profissional, conforme o
+tipo de bem, as condições de contratação, o método empregado e a finalidade da
+avaliação, pode **tecer considerações sobre o mercado do bem avaliando**, de
+forma a indicar, tanto quanto possível, **a estrutura, a conduta e o desempenho
+do mercado**."
+
+### O imóvel visto como um investimento
+
+Segundo @Malpezzi2002TheRO, um imóvel é um ativo que rende um fluxo de serviços
+ao longo do tempo. O Quadro \@ref(qua:Quadro-1) mostra a diferenciação entre os
+conceitos de Estoque e Fluxo, muito utilizados na Economia. 
+
+\begin{quadro}[htb]
+	\centering
+	\caption{\label{qua:Quadro-1}Distinção entre estoque e fluxo.}	
+	\begin{tabular}{|l|l|}
+		\hline
+		\textbf{Riqueza}  & \textbf{Fluxo}\\ \hline
+		 Riqueza          & Renda         \\ \hline
+		 Dívida Pública   & Déficit       \\ \hline
+		 Valor do imóvel  & Aluguel       \\ \hline
+	\end{tabular}
+	\fonte{\textcite[3]{Malpezzi2002TheRO}.}
+\end{quadro}
+
+O quadro acima poderia ser facilmente expandido para incorporar outras formas de 
+investimentos, como títulos (que rendem coupons), ações (que rendem dividendos)
+e outros.
+
+Na ótica do investidor, o imóvel é como um título de longo prazo. Racionalmente
+ou não, o comprador de um imóvel com fins de investimento espera que o imóvel
+comprado vá gerar um fluxo de aluguéis (constantes ou não) ao longo do tempo, de
+maneira que este fluxo de aluguéis compense o investimento inicial na compra do
+imóvel.
+
+Segundo @Malpezzi2002TheRO [p. 4], o valor presente $V$ de um imóvel pode ser 
+calculado conforme a equação \@ref(eq:VPImovel), onde $\gls{R}_t$ é a renda
+bruta dos aluguéis, $C_t$ é o custo recorrente com a manutenção do imóvel e $i$
+é a taxa de desconto.
+
+\begin{equation}
+V = \sum_{t=0}^T \frac{\mathbb{E}[R_t-C_t]}{(1+i)^t}
+(\#eq:VPImovel)
+\end{equation}
+
+Diferentemente do que hoje ocorre com os investimentos capitalistas, onde o 
+*payback* esperado gira em torno de 5 a 10 anos, o comprador de um imóvel
+esperar que este gere um fluxo de renda ao longo de décadas. 
+
+Assim, a compra de um imóvel assemelha-se à compra dos títulos de renda fixa de
+maior *duration* disponíveis no mercado.
+
+Ora, como se sabe, o valor de face destes títulos, ou seja, o valor do resgate
+destes títulos no vencimento, é dado. Porém, estes títulos são negociados no
+mercado secundário a valor de mercado, sendo que os títulos de longo prazo são
+altamente sensíveis a variações nas taxas de juros de longo prazo. A saber, o
+preço destes títulos é inversamente proporcional às taxas de juros, ou seja,
+quanto menor as taxas, maior o valor presente dos títulos, ou valor de mercado,
+e vice-versa.
 
 De acordo com @regulation [p. 11], os padrões de *boom* e *boost* no \gls{MI},
 ou seja, a formação e estouro de bolhas, podem ser explicados por modelos
@@ -731,13 +827,19 @@ No entanto, para @regulation [p. 1], a oferta inelástica em alguns mercados é
 uma condição necessária para a formação de bolhas, porém não suficiente: a
 formação de bolhas também está relacionada a choques de demanda.
 
-O detalhamento destes modelos dinâmicos está fora do escopo deste trabalho. É
-possível compreender o problema da inelasticidade da oferta no \gls{MI},
-contudo, através de simples modelos de oferta e demanda, como pode ser visto nas
-Figuras \@ref(fig:choque) A e B: na Figura \@ref(fig:choque) A, um mercado inicialmente com preço de equilíbrio $P_1$, com um aumento na demanda, modelado
-com o deslocamento da curva da demanda $D_1$ para a direita (curva $D_2$), leva 
-os preços de equilíbrio inicial $P_1$ ao novo preço de equilíbrio $P_2$, um 
-pouco maior que $P_1$. Com a mudança subsequente da estrutura da oferta no longo prazo, o preço de equilíbrio retorna ao ponto $P_3$.
+Devido a estes fatos, são importantes na análise do \gls{MI} os modelos 
+dinâmicos. Descrever estes modelos, no entanto, está além do escopo deste 
+trabalho. Alguns trabalhos importantes de se destacar, visando pesquisas 
+futuras são: @wheaton1999, @FAN201937 e @Malpezzi2002TheRO.
+
+É possível compreender o problema da inelasticidade da oferta no \gls{MI},
+contudo, através de simples gráficos de oferta e demanda, como pode ser visto
+nas Figuras \@ref(fig:choque) A e B: na Figura \@ref(fig:choque) A, um mercado
+inicialmente com preço de equilíbrio $P_1$, com um aumento na demanda, modelado
+com o deslocamento da curva da demanda $D_1$ para a direita (curva $D_2$), leva
+os preços de equilíbrio inicial $P_1$ ao novo preço de equilíbrio $P_2$, um
+pouco maior que $P_1$. Com a mudança subsequente da estrutura da oferta no longo
+prazo, o preço de equilíbrio retorna ao ponto $P_3$.
 
 Já num mercado com uma oferta mais inelástica, a volatilidade é muito maior, o
 que pode ser visto na Figura \@ref(fig:choque) B: o deslocamento da curva da
@@ -961,126 +1063,111 @@ Segundo @Malpezzi2002TheRO [p. 19], o processo descrito na Figura
 \@ref(fig:choque2) não se trata de mera curiosidade, mas foi documentado em
 diversos estudos.
 
-Reformas adequadas na regulação do \gls{MI} serão apresentadas no capítulo \@ref(politicas).
+### O papel da especulação no \gls{MI}
 
-Algumas referências importantes para trabalhos futuros de modelos dinâmicos são:
-@wheaton1999, @FAN201937
+@Malpezzi2002TheRO [p. 5] fazem um bom apanhado de diversos conceitos relacionados à 
+"especulação". Primeiramente, argumentam que é polêmica a definição do termo
+*especulador*, especialmente se comparado ao termo *investidor*: seria o 
+especulador um investidor que negocia o bem em prazos mais curtos? Não existe
+uma definição para tal.
+
+Então @Malpezzi2002TheRO [p. 12] apresentam diversas maneiras de se modelar as
+expectativas (expectativas racionais, adaptativas, etc.), e apresentam (p. 14),
+um modelo do valor presente de um imóvel calculado de acordo com o valor 
+esperado da renda líquida com aluguéis futuros, $\gls{R_L}$, trazidos ao Valor
+Presente através da aplicação de uma taxa de desconto $i$, de acordo com a 
+expressão vista na equação \@ref(eq:valor-presente):
+
+\begin{equation}
+V = \sum_{t = 0}^T \frac{\mathbb{E}[R_{Lt}]}{(1+i)^t}
+(\#eq:valor-presente)
+\end{equation}
+
+Supondo que se possa calcular um valor presente para um imóvel baseado apenas 
+nos fundamentos econômicos $V^*$, o valor em torno do qual se negociaria o 
+imóvel com expectativas racionais, com expectativas adaptativas[^3], um imóvel
+com preço igual ao da equação \@ref(eq:valor-presente-adptativo) também seria
+negociado, caso o comprador considerasse que grau de supervalorização do imóvel
+continuasse a crescer nos períodos subsequentes por uma taxa maior ou igual à
+taxa de desconto [@Malpezzi2002TheRO, 15].
+
+\begin{equation}
+V_t = V_t^* + b_t, \qquad com \quad \mathbb{E}_t[b_{t+1}] = (1+i)b_t
+(\#eq:valor-presente-adptativo)
+\end{equation}
 
 
-## O Mercado Imobiliário e o setor bancário {#MI-e-o-setor-bancario}
+[^3]: Expecativas adaptativas assumem que as pessoas presumem que os ganhos 
+futuros serão iguais aos do passado recente analisado.
 
-A participação dos produtos financeiros relacionados ao setor imobiliário
-constituem uma grande parte dos portfolios bancários. Justamente por isto,
-crises bancárias estão frequentemente associadas a superexposição do setor
-bancário no mercado imobiliário [@Case2000, 148]. Segundo Claessens *et al.*
-(2010) [*apud* @silver, 3], de 46 crises bancárias sistêmicas para quais há dados
-disponíveis, mais de dois terços foram precedidas por padrões de aumento-estouro
-de preços de imóveis.
+Em suma, isto implica que a autocorrelação serial nos aumentos de preços dos 
+imóveis é uma condição necessária para a formação de bolhas. Segundo 
+@Malpezzi2002TheRO [p. 15], muitos estudos documentam a existência de correlação 
+serial em preços, porém a evidência de que isso leva a formação de bolhas é 
+controversa.
 
-Não apenas pelo estouro de uma bolha especulativa pode haver quedas nos preços
-dos bens imóveis, mas também por conta de uma inversão dos fundamentos
-econômicos que sustentavam os preços [@Case2000, 129], como aliás parece ser o
-caso no momento, devido a um fator exógeno, a saber, a pandemia do corona vírus.
+### O papel da regulação do \gls{MI} na prevenção da formação de bolhas especulativas
 
-(**AUMENTAR**)
+Conforme anteriormente mencionado, para @Malpezzi2002TheRO [p. 26], o efeito da
+especulação na volatilidade do \gls{MI} depende das condições de oferta.
 
-## O Mercado Imobiliário e a Microeconomia {#micro}
+Reformas adequadas na regulação do \gls{MI} serão apresentadas no capítulo 
+\@ref(politicas) com base nestes achados.
 
-O mercado imobiliário, como visto na seção anterior, não pode ser 
-considerado um simples mercado de bens, como outros bens de consumo em geral,
-como automóveis, móveis ou eletrodomésticos. Sua análise em nível macroeconômico,
-portanto, requer um estudo mais aprofundado das variáveis da Economia do país,
-o que não quer dizer que não se dispense de analisar também o seu comportamento 
-microeconômico, o que aliás a NBR 14.653-01 [-@NBR1465301] parece ter acabado de 
-perceber e recomendar.
+### O impacto das variáveis macroeconômicas no preços dos imóveis e formação de bolhas especulativas
 
-### Estruturas básicas de mercado
+Na análise de @Malpezzi2002TheRO a respeito da formação de bolhas, a variável
+taxa de desconto ($i$) é considerada como uma variável exógena, isto é, não 
+foram considerados os efeitos do preço dos imóveis sobre esta variável, tampouco
+foram consideradas os efeitos de possíveis mudanças no patamar desta variável 
+sobre o preço dos imóveis.
 
-De acordo com a NBR 14.653-01 [-@NBR1465301, ix]:
+Como visto no \@ref(qua:Quadro-1), um imóvel pode ser visto como um investimento.
+O seu valor presente depende de um fluxo estimado de aluguéis trazidos a
+valor presente através da aplicação de uma taxa de desconto, assim como ocorre
+com outros ativos financeiros, como os títulos da dívida pública, por exemplo.
 
-> As estruturas básicas do mercado podem ser, resumidamente:
->
->* **Concorrência Perfeita**: situação em que o número de vendedores e de
-> compradores é suficientemente elevado para que um agente isolado não seja 
-> capaz de influenciar o comportamento dos preços;
->
->* **Monopólio**: É constituído por um único vendedor;
->
->* **Monopsônio**: é constituído por um único comprador;
->
->* **Oligopólio**: é constituído por um número pequeno de vendedores;
->
->* **Oligopsônio**: é constituído por um número pequeno de compradores.
+Os títulos da dívida pública são vistos, normalmente, como os ativos livres de
+risco da economia. Por isso, a taxa de desconto destes ativos é chamada de taxa
+livre de risco. A taxa de desconto de quaisquer outros ativos na Economia de um
+país será maior do que essa taxa livre de risco, pois nela estará embutida uma
+taxa devido ao risco de carregamento daquele investimento, que se soma à taxa de
+livre de risco da economia[^4]. Dessa maneira, o que ocorre quando a taxa livre
+de risco oscila é que também oscilam os Valores Presentes dos imóveis e dos
+outros investimentos.
 
-### Particularidades do mercado imobiliário
+Se estas oscilações de preços dos imóveis devido às taxas de juros podem causar
+bolhas especulativas, no entanto, é uma outra história. Este assunto será abordado com mais profundidade no capítulo \@ref(crise).
 
-Também em nível microeconômico o mercado imobiliário é um mercado diferenciado 
-dos outros mercados de bens de consumo. Apesar de toda a indústria da construção
-ter evoluído muito ao longo das últimas décadas, ainda persiste no Brasil um
-forte componente artesanal na construção civil, o que implica em bens imóveis
-de características muito distintas, a depender da mão-de-obra aplicada na sua
-execução. Também a questão do projeto arquitetônico implica numa singularidade
-para cada bem imobiliário. Mas mais importante ainda é a questão da localização,
-que torna cada imóvel único. Isto não ocorre em qualquer outro mercado de bens 
-de consumo. A não ser por questões de natureza sentimental, um carro, uma 
-geladeira, ou praticamente qualquer outro bem de consumo é produzido em série: 
-existem milhares de itens iguais no mercado. Isto nunca ocorre com os imóveis.
-Mesmo apartamento vizinhos, em um mesmo prédio, tem características diferentes,
-dada a sua posição solar, localização do andar em relação ao prédio, a vista
-que cada um possui, entre outras questões. 
-
-Segundo a NBR 14.653-01 [-@NBR1465301, x], "o mercado imobiliário caracteriza-se 
-como um 'mercado imperfeito', com bens não homogêneos, estoque limitado, liquidez 
-diferenciada e grande influência de fatores externos."
-
-De acordo com @ADAMS2010 [-@ADAMS2010, 3], a forte inércia dos preços do 
-mercado imobiliário influencia o comportamento do mercado durante os booms 
-econômicos, já que a exuberância das expectativas (exuberância irracional) dos 
-proprietários de imóveis facilita a formação de bolhas nestes mercados. Além
-disto, a falta de informação a respeito de preços no mercado imobiliário, pelo
-motivo deste ser um mercado segmentado, ou seja, os preços obedecem uma
-lógica local, também é uma facilitadora da formação de bolhas.
-
-### Diagnóstico de mercado
-
-A NBR 14.653-01 [-@NBR1465301, 12], estabelece que, "o profissional, conforme o
-tipo de bem, as condições de contratação, o método empregado e a finalidade da
-avaliação, pode **tecer considerações sobre o mercado do bem avaliando**, de
-forma a indicar, tanto quanto possível, **a estrutura, a conduta e o desempenho
-do mercado**."
-
-### O imóvel visto como um investimento
-
-Na ótica do investidor (e não do especulador, que pretende ganhar com a 
-volatilidade do mercado, ou seja, comprando na baixa e vendendo na alta), o
-imóvel é como um título de longo prazo. Racionalmente ou não, o comprador de um
-imóvel com fins de investimento espera que o imóvel comprado vá gerar um fluxo
-de aluguéis (constantes ou não) ao longo do tempo, de maneira que este fluxo de
-aluguéis compense o investimento inicial na compra do imóvel.
-
-Diferentemente do que hoje ocorre com os investimentos capitalistas, onde o 
-payback esperado gira em torno de 5 a 10 anos, o comprador de um imóvel
-esperar que este gere um fluxo de renda ao longo de décadas. 
-
-Assim, a compra de um imóvel assemelha-se à compra dos títulos de renda fixa de
-maior *duration* disponíveis no mercado.
-
-Ora, como se sabe, o valor de face destes títulos, ou seja, o valor do resgate
-destes títulos no vencimento, é dado. Porém, estes títulos são negociados no
-mercado secundário a valor de mercado, sendo que os títulos de longo prazo são
-altamente sensíveis a variações nas taxas de juros de longo prazo. A saber, o
-preço destes títulos é inversamente proporcional às taxas de juros, ou seja,
-quanto menor as taxas, maior o valor presente dos títulos, ou valor de mercado,
-e vice-versa.
+[^4]: O capítulo \@ref(crise) ilustra como as taxas praticadas no mercado de 
+crédito de hipotecas, por exemplo, são compostas de uma taxa adicional de risco
+em relação à taxa livre de risco.
 
 ### Rendimentos de aluguel
 
-Os rendimentos de aluguel são taxas brutas de retorno dos recebimento de
-aluguéis comparados ao valor de venda de um imóvel.
+A taxa de rendimento do aluguel de um imóvel é obtida invertendo-se os termos
+da equação \@ref(eq:valor-presente), de maneira a isolar a taxa de desconto.
+
+Para facilitar os cálculos, é conveniente a utilização da simplificação da 
+equação \@ref(eq:valor-presente), fazendo a hipótese de que a série de 
+pagamentos é tão longa, que pode ser considerada perpétua. Geralmente esta é
+uma boa hipótese no caso de imóveis, acima de 20 anos quaiquer séries podem ser 
+consideradas perpétuas.
+
+Assim, o Valor Presente $VP$ de uma série de pagamentos perpétua de valor 
+periódico $\gls{R_L}$, descontados de uma taxa de juros $i$ é igual a:
+
+\begin{equation}
+VP = \lim_{n \to \infty} R_L \frac{(1+i)^t-1}{i(1+i)^t}= \frac{R_L}{i}
+(\#eq:perpetua)
+\end{equation}
+
+Os rendimentos de aluguel $\gls{y_r}$ são taxas brutas de retorno dos 
+recebimento de aluguéis comparados ao valor de venda de um imóvel.
 
 Por exemplo, para um imóvel avaliado em R$1.000.000,00, com um rendimento de 
-aluguéis de R$1.500,00 reais mensais, o rendimento bruto do aluguel deste imóvel
-seria:
+aluguéis de R$1.500,00 reais mensais, o rendimento bruto do aluguel 
+deste imóvel seria:
 
 $$y_r = \frac{12*1.500}{1.000.000} = 3,6\% \ a.a.$$
 Esta taxa tem sido utilizada para comparar o rendimento do investimento em 
@@ -1090,25 +1177,34 @@ investimento em imóveis [@gpg].
 #### Duration de um título de renda fixa
 
 Segundo @marins1, a *duration* de um título, ou de um conjunto de títulos de 
-renda fixa pode ser calculada de acordo com a fórmula a seguir, de Macaulay:
-
-$$D = \frac{\sum\limits_{t = 1}^{n} t \times \frac{F_t}{(1+i)^t}}{\sum\limits_{t = 1}^{n} \frac{F_t}{(1+i)^t}}$$
-
-#### Séries Perpétuas
-
-Uma série perpétua é uma série suficientemente longa de maneira que as entradas
-ou saídas de caixa possam ser consideradas infinitas (geralmente séries acima de 
-20 anos podem ser consideradas perpétuas).
-
-Assim, o Valor Presente $VP$ de uma série de pagamentos perpétua de valor 
-periódico $A$, descontados de uma taxa de juros $i$ é igual a:
+renda fixa pode ser calculada de acordo com a equação \@ref(eq:duration), 
+de Macaulay:
 
 \begin{equation}
-VP = \lim_{n \to \infty} A \frac{(1+i)^n-1}{i(1+i)^n}= \frac{A}{i}
-(\#eq:perpetua)
+D = \frac{\sum\limits_{t = 1}^{n} t \times \frac{F_t}{(1+i)^t}}{\sum\limits_{t = 1}^{n} \frac{F_t}{(1+i)^t}}
+(\#eq:duration)
 \end{equation}
 
-#### Cálculo do valor justo de um imóvel
+A medida tem por finalidade comparar títulos com diferentes características. Por
+exemplo, existem títulos no mercado de renda fixa que não fazem pagamentos 
+constantes de coupons, sendo que o retorno integral do capital investido e juros
+associado a este título só retornam ao investidor no vencimento do título 
+(normalmente são títulos de vencimento mais curto), enquanto outros títulos 
+fazem pagamentos constantes de coupons (semestralmente, p.ex.), ou seja,
+uma parte do valor investido no título volta ao investidor na forma de coupons, 
+e no vencimento do título é resgatado o valor principal (normalmente são títulos
+com vencimentos mais longos). 
+
+Para comparar então um título com vencimento em 5 anos que não faz pagamento de
+coupons e um título com vencimento em 7 anos que faz pagamentos de coupons, 
+utiliza-se a equação \@ref(eq:duration) para calcular a *duration* de cada
+título.
+
+O investimento em imóveis será, via de regra, o investimento de maior *duration*
+do mercado, haja vista que um imóvel pode ter vida útil de 50 anos ou mais, 
+enquanto os títulos de renda fixa normalmente tem prazo máximo de 30 anos.
+
+#### Cálculo do valor justo de um imóvel em função da taxa de desconto
 
 O cálculo do valor justo de um imóvel pode ser feito considerando-se o método
 do fluxo de caixa descontado, assim como é feito o *valuation* de uma empresa
@@ -1121,17 +1217,17 @@ taxa de juros de 3% ao ano, o valor presente do imóvel, considerando-se que est
 fluxo seja constante ao longo de toda a vida útil do imóvel (não menor do que 20
 anos), é:
 
-$$P = \frac{12 \times 2.000}{0,03} = 800.000$$
+$$VP = \frac{12 \times 2.000}{0,03} = 800.000$$
 
 Uma queda moderada da taxa de juros de longo prazo, digamos, para 2% a.a.,
 teria o seguinte impacto no valor presente deste imóvel:
 
-$$P = \frac{12 \times 2.000}{0,02} = 1.200.000$$
+$$VP = \frac{12 \times 2.000}{0,02} = 1.200.000$$
 
 Já uma queda da taxa de juros de longo prazo mais agressiva, digamos para 1%
 a.a., teria o seguinte impacto:
 
-$$P = \frac{12 \times 2.000}{0,01} = 2.400.000$$
+$$VP = \frac{12 \times 2.000}{0,01} = 2.400.000$$
 
 A figura \@ref(fig:valores-juros) mostra como varia, *coeteris paribus*, o valor 
 justo de um imóvel em função da taxa de juros de longo prazo.
@@ -1157,7 +1253,9 @@ ggplot(data.frame(x = c(.1/100, 6/100)), aes(x = x)) +
 Fonte: Do autor.
 \ecenter
 
-A tabela \@ref(tab:tabela-valor-justo) mostra...
+A tabela \@ref(tab:tabela-valor-justo) mostra alguns valores calculados de 
+acordo com a \@ref(eq:valor-presente) para um imóvel, supondo receita líquida de
+aluguel mensal constante de R$2.000,00, em função da taxa de desconto.
 
 
 ```{r tabela-valor-justo}
@@ -1175,4 +1273,21 @@ kable(valorJusto, format = "latex", booktabs = TRUE,
 \bcenter
 Fonte: Do autor.
 \ecenter
+
+## O Mercado Imobiliário e o setor bancário {#MI-e-o-setor-bancario}
+
+A participação dos produtos financeiros relacionados ao setor imobiliário
+constituem uma grande parte dos portfolios bancários. Justamente por isto,
+crises bancárias estão frequentemente associadas a superexposição do setor
+bancário no mercado imobiliário [@Case2000, 148]. Segundo Claessens *et al.*
+(2010) [*apud* @silver, 3], de 46 crises bancárias sistêmicas para quais há dados
+disponíveis, mais de dois terços foram precedidas por padrões de aumento-estouro
+de preços de imóveis.
+
+Não apenas pelo estouro de uma bolha especulativa pode haver quedas nos preços
+dos bens imóveis, mas também por conta de uma inversão dos fundamentos
+econômicos que sustentavam os preços [@Case2000, 129], como aliás parece ser o
+caso no momento, devido a um fator exógeno, a saber, a pandemia do corona vírus.
+
+(**AUMENTAR**)
 
