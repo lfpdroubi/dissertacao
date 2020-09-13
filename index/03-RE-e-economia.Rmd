@@ -817,252 +817,6 @@ preço destes títulos é inversamente proporcional às taxas de juros, ou seja,
 quanto menor as taxas, maior o valor presente dos títulos, ou valor de mercado,
 e vice-versa.
 
-De acordo com @regulation [p. 11], os padrões de *boom* e *boost* no \gls{MI},
-ou seja, a formação e estouro de bolhas, podem ser explicados por modelos
-dinâmicos e tem maior relação com problemas na inelasticidade da oferta de
-alguns mercados do que propriamente com a ação de especuladores, que são quase
-sempre eleitos os culpados no noticiário econômico.
-
-No entanto, para @regulation [p. 1], a oferta inelástica em alguns mercados é
-uma condição necessária para a formação de bolhas, porém não suficiente: a
-formação de bolhas também está relacionada a choques de demanda.
-
-Devido a estes fatos, são importantes na análise do \gls{MI} os modelos 
-dinâmicos. Descrever estes modelos, no entanto, está além do escopo deste 
-trabalho. Alguns trabalhos importantes de se destacar, visando pesquisas 
-futuras são: @wheaton1999, @FAN201937 e @Malpezzi2002TheRO.
-
-É possível compreender o problema da inelasticidade da oferta no \gls{MI},
-contudo, através de simples gráficos de oferta e demanda, como pode ser visto
-nas Figuras \@ref(fig:choque) A e B: na Figura \@ref(fig:choque) A, um mercado
-inicialmente com preço de equilíbrio $P_1$, com um aumento na demanda, modelado
-com o deslocamento da curva da demanda $D_1$ para a direita (curva $D_2$), leva
-os preços de equilíbrio inicial $P_1$ ao novo preço de equilíbrio $P_2$, um
-pouco maior que $P_1$. Com a mudança subsequente da estrutura da oferta no longo
-prazo, o preço de equilíbrio retorna ao ponto $P_3$.
-
-Já num mercado com uma oferta mais inelástica, a volatilidade é muito maior, o
-que pode ser visto na Figura \@ref(fig:choque) B: o deslocamento da curva da
-demanda $D_1$ para a curva $D_2$ provoca um aumento mais lento da oferta, fazendo 
-com que o preço inicial de equilíbrio $P_1$ aumente, muito mais pronunciadamente 
-do que no caso anterior, para $P_2$, voltando no longo prazo a um preço de 
-equilíbrio $P_3$, após a mudança da estrutura da oferta, muito menor do que 
-$P_2$, o que configura um padrão de *boom e bust*: no primeiro momento, como a
-oferta é inelástica, ocorre um grande aumento dos preços, ou seja, a bolha é
-inflada, para num segundo momento estourar, voltando para um preço de equilíbrio
-muito menor do que o alcançado durante o *boom*.
-
-```{r choque, fig.cap="Efeitos de um choque de demanda em diferentes mercados.", out.width="100%"}
-# curve1 and curve2 should be data.frames with an x and y column
-# For instance, as_data_frame(Hmisc::bezier(c(1, 8, 9), c(1, 5, 9)))
-#
-curve_intersect <- function(curve1, curve2) {
-  # Approximate the functional form of both curves
-  curve1_f <- approxfun(curve1$x, curve1$y, rule = 2)
-  curve2_f <- approxfun(curve2$x, curve2$y, rule = 2)
-  
-  # Calculate the intersection of curve 1 and curve 2 along the x-axis
-  point_x <- uniroot(function(x) curve1_f(x) - curve2_f(x), 
-                     c(min(curve1$x), max(curve1$x)))$root
-  
-  # Find where point_x is in curve 2
-  point_y <- curve2_f(point_x)
-  
-  # All done!
-  return(list(x = point_x, y = point_y))
-}
-
-supplye1 <- Hmisc::bezier(c(1, 8, 9),
-                        c(1, 5, 9)) %>%
-  data.frame()
-
-demand1 <- Hmisc::bezier(c(1, 3, 9),
-                         c(9, 3, 1)) %>%
-  data.frame()
-
-supplye2 <- Hmisc::bezier(c(1, 8, 12),
-                         c(3, 3.5, 6)) %>%
-  data.frame()
-
-demand2 <- Hmisc::bezier(c(3, 5, 11),
-                         c(11, 5, 3)) %>%
-  data.frame()
-
-# Calculate the intersections of the two curves
-intere1 <- curve_intersect(supplye1, demand1)
-intere2 <- curve_intersect(supplye1, demand2)
-intere3 <- curve_intersect(supplye2, demand2)
-
-intersections <- bind_rows(intere1, intere2, intere3)
-
-plot_labels <- data_frame(label = c("O[1]", "O[2]", "D[1]", "D[2]"),
-                          x = c(8.25, 11.5, 1, 4),
-                          y = c(8.5, 6.25, 8, 10))
-
-p1 <- ggplot(mapping = aes(x = x, y = y)) + 
-  geom_path(data = supplye1, color = "#0073D9", size = 1, linetype = "dashed") + 
-  geom_path(data = supplye2, color = "#0073D9", size = 1) + 
-  geom_path(data = demand1, color = "#FF4036", size = 1, linetype = "dashed") + 
-  geom_path(data = demand2, color = "#FF4036", size = 1) + 
-  geom_segment(data = intersections, 
-               aes(x = x, y = 0, xend = x, yend = y), lty = "dotted") +
-  geom_segment(data = intersections, 
-               aes(x = 0, y = y, xend = x, yend = y), lty = "dotted") + 
-  geom_text(data = plot_labels,
-            aes(x = x, y = y, label = label), parse = TRUE,
-            family = "Source Sans Pro") +
-  annotate("segment", x = 1.5, xend = 3.5, y = 8, yend = 9.5,
-           arrow = arrow(length = unit(1, "lines")), colour = "grey50") +
-  geom_point(data = intersections, size = 3) +
-  scale_x_continuous(expand = c(0, 0), breaks = intersections$x,
-                     labels = expression(Q[1], Q[2], Q[3])) +
-  scale_y_continuous(expand = c(0, 0), breaks = intersections$y,
-                     labels = expression(P[1], P[2], P[3])) +
-  labs(x = "Quantidade", y = "Preço",
-       title = "Oferta Elástica",
-       subtitle = "Mercado com oferta elástica") +
-  coord_equal() +
-  theme_classic(base_family = "Source Sans Pro") + 
-  theme(plot.title = element_text(family = "Source Sans Pro Semibold", size = rel(1.3)))
-
-supplyi1 <- Hmisc::bezier(c(1, 5, 8),
-                          c(1, 2, 12)) %>%
-  data.frame()
-
-supplyi2 <- Hmisc::bezier(c(1, 4.5, 12),
-                          c(4.5, 2, 7)) %>%
-  data.frame()
-
-# Calculate the intersections of the two curves
-interi1 <- curve_intersect(supplyi1, demand1)
-interi2 <- curve_intersect(supplyi1, demand2)
-interi3 <- curve_intersect(supplyi2, demand2)
-
-intersections <- bind_rows(interi1, interi2, interi3)
-
-plot_labels <- data_frame(label = c("O[1]", "O[2]", "D[1]", "D[2]"),
-                          x = c(7, 11.25, 1, 4),
-                          y = c(11.5, 7.25, 8, 10))
-
-p2 <- ggplot(mapping = aes(x = x, y = y)) + 
-  geom_path(data = supplyi1, color = "#0073D9", size = 1, linetype = "dashed") + 
-  geom_path(data = supplyi2, color = "#0073D9", size = 1) + 
-  geom_path(data = demand1, color = "#FF4036", size = 1, linetype = "dashed") + 
-  geom_path(data = demand2, color = "#FF4036", size = 1) + 
-  geom_segment(data = intersections, 
-               aes(x = x, y = 0, xend = x, yend = y), lty = "dotted") +
-  geom_segment(data = intersections, 
-               aes(x = 0, y = y, xend = x, yend = y), lty = "dotted") + 
-  geom_text(data = plot_labels,
-            aes(x = x, y = y, label = label), parse = TRUE,
-            family = "Source Sans Pro") +
-  annotate("segment", x = 1.5, xend = 3.5, y = 8, yend = 9.5,
-           arrow = arrow(length = unit(1, "lines")), colour = "grey50") +
-  geom_point(data = intersections, size = 3) +
-  scale_x_continuous(expand = c(0, 0), breaks = intersections$x,
-                     labels = expression(Q[1], Q[2], Q[3])) +
-  scale_y_continuous(expand = c(0, 0), breaks = intersections$y,
-                     labels = expression(P[1], P[2], P[3])) +
-  labs(x = "Quantidade", y = "Preço",
-       title = "Oferta inelástica",
-       subtitle = "Mercado com oferta inelástica") +
-  coord_equal() +
-  theme_classic(base_family = "Source Sans Pro") + 
-  theme(plot.title = element_text(family = "Source Sans Pro Semibold", size = rel(1.3)))
-
-plot_row <- plot_grid(p1, p2, labels = "AUTO")
-title <- ggdraw() +
-  draw_label(
-    "Choques de demanda",
-    fontface = 'bold',
-    x = 0,
-    hjust = 0
-  ) +
-  theme(
-    # add margin on the left of the drawing canvas,
-    # so title is aligned with left edge of first plot
-    plot.margin = margin(0, 0, 0, 0)
-  )
-plot_grid(title, plot_row, ncol = 1,
-          # rel_heights values control vertical title margins
-          rel_heights = c(0.1, 1))
-```
-\bcenter
-Fonte: Adaptado de @regulation [p. 10].
-\ecenter
-
-Para @regulation [p. 11], ainda, além do problema da oferta inelástica pode
-ocorrer também o problema de uma resposta mal desenhada pelo governo ao aumento
-de preços inicial, como ilustrado na Figura \@ref(fig:choque2): algumas medidas
-podem funcionar a médio prazo, como as grandes intervenções governamentais que
-se destinam a promover uma grande oferta de imóveis de uma só vez (programas do
-tipo "1 milhão de casas"), mas seu efeito é equivalente a deslocar a curva de
-oferta inicial $O_1$ para $O_2$. Aumentando a oferta temporariamente, evita-se
-uma grande alta dos preços, que são estabilizados no preço de equilíbrio $P_3$.
-No longo prazo, porém, um posterior novo choque de demanda pode vir a elevar os
-preços a níveis muito mais altos ($P_4$), superiores inclusive aos preços
-atingidos durante o primeiro choque ($P_2$).
-
-```{r choque2, fig.cap="Efeitos de uma resposta governamental inadequada.", warning=FALSE}
-supplyi2 <- Hmisc::bezier(c(4, 8, 11),
-                          c(1, 3, 12)) %>%
-  data.frame()
-
-demand3 <- Hmisc::bezier(c(5, 7, 13),
-                         c(13, 7, 5)) %>%
-  data.frame()
-
-# Calculate the intersections of the two curves
-interi1 <- curve_intersect(supplyi1, demand1)
-interi2 <- curve_intersect(supplyi1, demand2)
-interi3 <- curve_intersect(supplyi2, demand2)
-interi4 <- curve_intersect(supplyi2, demand3)
-
-intersections <- bind_rows(interi1, interi2, interi3, interi4)
-
-plot_labels <- data_frame(label = c("O[1]", "O[2]", "D[1]", "D[2]", "D[3]"),
-                          x = c(8.75, 11.75, 1.5, 4, 6),
-                          y = c(11.5, 11.5, 9.5, 11, 12.5))
-
-p3 <- ggplot(mapping = aes(x = x, y = y)) + 
-  geom_path(data = supplyi1, color = "#0073D9", size = 1, linetype = "dashed") + 
-  geom_path(data = supplyi2, color = "#0073D9", size = 1) + 
-  geom_path(data = demand1, color = "#FF4036", size = 1, linetype = "dashed") + 
-  geom_path(data = demand2, color = "#FF4036", size = 1) + 
-  geom_path(data = demand3, color = "#FF4036", size = 1) + 
-  geom_segment(data = intersections, 
-               aes(x = x, y = 0, xend = x, yend = y), lty = "dotted") +
-  geom_segment(data = intersections, 
-               aes(x = 0, y = y, xend = x, yend = y), lty = "dotted") + 
-  geom_text(data = plot_labels,
-            aes(x = x, y = y, label = label), parse = TRUE,
-            family = "Source Sans Pro") +
-  annotate("segment", x = 1.5, xend = 3.5, y = 8, yend = 9.5,
-           arrow = arrow(length = unit(1, "lines")), colour = "grey50") +
-  annotate("segment", x = 3.5, xend = 5.5, y = 9.5, yend = 11,
-           arrow = arrow(length = unit(1, "lines")), colour = "grey50") +
-  geom_point(data = intersections, size = 3) +
-  scale_x_continuous(expand = c(0, 0), breaks = intersections$x,
-                     labels = expression(Q[1], Q[2], Q[3], Q[4])) +
-  scale_y_continuous(expand = c(0, 0), breaks = intersections$y,
-                     labels = expression(P[1], P[2], P[3], P[4])) +
-  labs(x = "Quantidade", y = "Preço",
-       title = "Choque de demanda",
-       subtitle = "Intervenção governamental mal calculada") +
-  coord_equal() +
-  theme_classic(base_family = "Source Sans Pro") + 
-  theme(plot.title = element_text(family = "Source Sans Pro Semibold", size = rel(1.3)))
-
-p3
-```
-\bcenter
-Fonte: @regulation [p. 11]
-\ecenter
-
-Segundo @Malpezzi2002TheRO [p. 19], o processo descrito na Figura 
-\@ref(fig:choque2) não se trata de mera curiosidade, mas foi documentado em
-diversos estudos.
-
 ### O papel da especulação no \gls{MI}
 
 @Malpezzi2002TheRO [p. 5] fazem um bom apanhado de diversos conceitos relacionados à 
@@ -1083,13 +837,13 @@ V = \sum_{t = 0}^T \frac{\mathbb{E}[R_{Lt}]}{(1+i)^t}
 (\#eq:valor-presente)
 \end{equation}
 
-Supondo que se possa calcular um valor presente para um imóvel baseado apenas 
-nos fundamentos econômicos $V^*$, o valor em torno do qual se negociaria o 
+Supondo que se possa calcular um valor presente para um imóvel baseado apenas
+nos fundamentos econômicos $V^*$, o valor em torno do qual se negociaria o
 imóvel com expectativas racionais, com expectativas adaptativas[^3], um imóvel
 com preço igual ao da equação \@ref(eq:valor-presente-adptativo) também seria
-negociado, caso o comprador considerasse que grau de supervalorização do imóvel
-continuasse a crescer nos períodos subsequentes por uma taxa maior ou igual à
-taxa de desconto [@Malpezzi2002TheRO, 15].
+negociado 'racionalmente', caso o comprador considerasse que o grau de
+supervalorização do imóvel continuasse a crescer nos períodos subsequentes por
+uma taxa maior ou igual à taxa de desconto [@Malpezzi2002TheRO, 15].
 
 \begin{equation}
 V_t = V_t^* + b_t, \qquad com \quad \mathbb{E}_t[b_{t+1}] = (1+i)b_t
@@ -1097,22 +851,22 @@ V_t = V_t^* + b_t, \qquad com \quad \mathbb{E}_t[b_{t+1}] = (1+i)b_t
 \end{equation}
 
 
-[^3]: Expecativas adaptativas assumem que as pessoas presumem que os ganhos 
-futuros serão iguais aos do passado recente analisado.
+[^3]: Expectativas adaptativas assumem que os agentes do mercado presumem que os 
+ganhos futuros serão iguais aos do passado recente analisado.
 
 Em suma, isto implica que a autocorrelação serial nos aumentos de preços dos 
 imóveis é uma condição necessária para a formação de bolhas. Segundo 
 @Malpezzi2002TheRO [p. 15], muitos estudos documentam a existência de correlação 
-serial em preços, porém a evidência de que isso leva a formação de bolhas é 
-controversa.
+serial em preços, porém a evidência de que isso leva, por si só, a formação de 
+bolhas é controversa. No capítulo \@ref(crise) serão vistos com mais detalhes os
+fatores que levam à formação de bolhas.
 
 ### O papel da regulação do \gls{MI} na prevenção da formação de bolhas especulativas
 
-Conforme anteriormente mencionado, para @Malpezzi2002TheRO [p. 26], o efeito da
-especulação na volatilidade do \gls{MI} depende das condições de oferta.
-
-Reformas adequadas na regulação do \gls{MI} serão apresentadas no capítulo 
-\@ref(politicas) com base nestes achados.
+Conforme será visto no capítulo \@ref(crise), para @Malpezzi2002TheRO [p. 26], o
+efeito da especulação na volatilidade do \gls{MI} depende das condições de
+oferta em cada mercado. Reformas adequadas na regulação do \gls{MI} com base
+nesta hipótese serão apresentadas no capítulo \@ref(politicas).
 
 ### O impacto das variáveis macroeconômicas no preços dos imóveis e formação de bolhas especulativas
 
@@ -1151,8 +905,9 @@ da equação \@ref(eq:valor-presente), de maneira a isolar a taxa de desconto.
 Para facilitar os cálculos, é conveniente a utilização da simplificação da 
 equação \@ref(eq:valor-presente), fazendo a hipótese de que a série de 
 pagamentos é tão longa, que pode ser considerada perpétua. Geralmente esta é
-uma boa hipótese no caso de imóveis, acima de 20 anos quaiquer séries podem ser 
-consideradas perpétuas.
+uma boa hipótese no caso de imóveis, pois para séries de pagamentos constantes 
+com duração superior a 20 anos a hipótese da perpetuidade é considerada razoável,
+haja vista que a vida útil de qualquer imóvel costuma ultrapassar esse prazo.
 
 Assim, o Valor Presente $VP$ de uma série de pagamentos perpétua de valor 
 periódico $\gls{R_L}$, descontados de uma taxa de juros $i$ é igual a:

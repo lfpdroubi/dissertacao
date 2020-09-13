@@ -1,0 +1,100 @@
+---
+title: "modelo_Malpezzi"
+author: "Luiz Fernando Palin Droubi"
+date: "12/09/2020"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+library(ggplot2)
+```
+
+```{r}
+t <- 0
+p_0 <- log(1) # preço inicial
+k_0 <- log(1000) #  estoque inicial
+k_1 <- log(1200) # choque de 20%
+alpha_1 <- -.8 # elasticidade-preço da demanda
+delta <- .5 # parâmetro de ajuste do estoque
+alpha_4<- .1 # elasticidade-preço da demanda quando sujeita a alteração de preços
+alpha_0 <- -.8
+```
+
+## Oferta elástica
+
+```{r}
+beta_0 <- 10 # elasticidade preço da oferta inicial (.2 - 10 - altamente inelástica para razoavelmente elástico)
+beta_1 <- 10
+# vetor dos preços sem especulação
+p <- vector(length = 11); p[1] <- log(1)
+# vetor do estoque com especulação
+p1 <- vector(length = 11); p1[1] <- log(1)
+k <- vector(length = 11); k[1] <- log(1000)
+q <- vector(length = 11)
+k_estrela <- log(1200)
+k_estrela_espec <- log(1200)
+for (i in 1:10) {
+  p[i+1] <- beta_1/(beta_0-delta*alpha_0)*p[i] + delta/(beta_0-delta*alpha_0)*k_estrela - delta/(beta_0-delta*alpha_0)*k[i]
+  p1[i+1] <- beta_1/(beta_0-delta*alpha_0)*p[i] + delta/(beta_0-delta*alpha_0)*k_estrela_espec - delta/(beta_0-delta*alpha_0)*k[i]
+  D <- log(1200) - alpha_1*p[1]
+  k_estrela <- D + alpha_1*p[i+1]
+  k_estrela_espec <- log(1200) + alpha_1*p[i+1] + alpha_4*(p[i+1] - p[i])
+  q[i] <- beta_0*p[i+1] + beta_1*p[i]
+  k[i+1] <- k[i] + q[i]
+}
+#Q_s <- beta_0*p_1 + beta_1*p_0
+#k_2 <- k_1 + Q_s
+#p_2 <- beta_1/(beta_0-delta*alpha_0)*p_1 + delta/(beta_0-delta*alpha_0)*k_2 - delta/(beta_0-delta*alpha_0)*k_1
+```
+
+
+```{r}
+df <- data.frame(year = 0:10, price = p, price1 = p1)
+ggplot(df, aes(x = year, y = price)) + 
+  geom_point() + 
+  geom_line() + 
+  geom_path(aes(y = price1), color = "red") + 
+  geom_point(aes(y = price1), color = "red") +
+  geom_hline(yintercept = 0) +
+  scale_y_continuous(limits = c(-.2, .4))
+```
+
+## Oferta inelástica
+
+```{r}
+beta_0 <- .2 # elasticidade preço da oferta inicial (.2 - 10 - altamente inelástica para razoavelmente elástico)
+beta_1 <- .2
+# vetor dos preços sem especulação
+p <- vector(length = 11); p[1] <- log(1)
+# vetor do estoque com especulação
+p1 <- vector(length = 11); p1[1] <- log(1)
+k <- vector(length = 11); k[1] <- log(1000)
+q <- vector(length = 11)
+k_estrela <- log(1200)
+k_estrela_espec <- log(1200)
+for (i in 1:10) {
+  p[i+1] <- beta_1/(beta_0-delta*alpha_0)*p[i] + delta/(beta_0-delta*alpha_0)*k_estrela - delta/(beta_0-delta*alpha_0)*k[i]
+  p1[i+1] <- beta_1/(beta_0-delta*alpha_0)*p[i] + delta/(beta_0-delta*alpha_0)*k_estrela_espec - delta/(beta_0-delta*alpha_0)*k[i]
+  D <- log(1200) - alpha_1*p[1]
+  k_estrela <- D + alpha_1*p[i+1]
+  k_estrela_espec <- log(1200) + alpha_1*p[i+1] + alpha_4*(p[i+1] - p[i])
+  q[i] <- beta_0*p[i+1] + beta_1*p[i]
+  k[i+1] <- k[i] + q[i]
+}
+#Q_s <- beta_0*p_1 + beta_1*p_0
+#k_2 <- k_1 + Q_s
+#p_2 <- beta_1/(beta_0-delta*alpha_0)*p_1 + delta/(beta_0-delta*alpha_0)*k_2 - delta/(beta_0-delta*alpha_0)*k_1
+```
+
+
+```{r}
+df <- data.frame(year = 0:10, price = p, price1 = p1)
+ggplot(df, aes(x = year, y = price)) + 
+  geom_point() + 
+  geom_line() + 
+  geom_path(aes(y = price1), color = "red") + 
+  geom_point(aes(y = price1), color = "red") +
+  geom_hline(yintercept = 0) +
+  scale_y_continuous(limits = c(-.2, .4))
+```
