@@ -167,7 +167,8 @@ aprofundamento da crise agrária (que como vimos reflete nas cidades) "morrer"
 com a estabilidade da moeda alcançada pela economia brasileira desde meados da
 década de 90 do século passado, ou ao menos mais recentemente, nos últimos anos,
 quando a inflação brasileira parece ancorada, a despeito da prática de taxas de 
-juros internas (e externas) muito próximas de zero?
+juros internas (e externas) muito próximas de zero? Pelo menos enquanto a 
+perdurar a estabilidade da moeda, ao menos, é esta a realidade.
 
 Na atualidade, a economia brasileira pode estar no caminho de experimentar um
 fenômeno novo: a armadilha da liquidez [ver @krugman-emergentes], problema que
@@ -724,7 +725,288 @@ bem.
 >* **Oligopsônio**: é constituído por um número pequeno de compradores.
 
 No entanto, a NBR 14.653-01 [-@NBR1465301] não deixa claro de que modo cada
-estrutura de mercado deve impactar o valor final de mercado.
+estrutura de mercado deve impactar o valor final de mercado do imóvel. 
+
+Outro problema com a NBR 14.653-01 é que os mercados não deveriam ser
+classificados apenas em relação à sua estrutura concorrencial, mas também de
+acordo com as suas restrições geográficas e/ou regulatórias: existem mercados em
+que não é possível aumentar a oferta, mesmo com o aumento da demanda, porque
+existem limitações geográficas que impedem que isto ocorra, ou ao menos impedem
+que isto seja feito sem que antes sejam feitas grandes intervenções urbanas que,
+inicialmente, permitam que a área seja loteada. Em outros mercados, existem 
+questões regulatórias fortes que impedem um aumento da oferta de bens imóveis,
+como é o caso de Brasília, por exemplo: na região do plano-piloto existem 
+questões de gabarito que impedem uma maior verticalização e também existe um
+grande número de imóveis em propriedade do Estado brasileiro, que distorcem o
+funcionamento do mercado.
+
+#### Equilíbrio de mercado
+
+O preço de equilíbrio de um bem se dá, geometricamente falando, no cruzamento 
+das curvas de oferta e demanda, ou seja, o prelço de equilíbrio, em qualquer
+mercado, é o ponto onde a oferta e a demanda do mercado são iguais [@varian, p. 310].
+
+Há de se discernir, no entanto, entre equilíbrio de curto e de longo prazo.
+
+A Figura \@ref(fig:equilibrioMercado) ilustra o equilíbrio num mercado
+hipotético, modelado pelas curvas **O** (oferta) e **D** (demanda). Para este
+mercado, o equilíbrio se dá no ponto de coordenadas ($\tilde Q, \tilde P$). Às
+quantidades $\tilde P$ e $\tilde Q$ dão-se o nome de preço e quantidade de 
+equilíbrio.
+
+```{r equilibrioMercado, fig.cap="Equilíbrio de mercado."}
+source("curve_intersect.R")
+demand <- Hmisc::bezier(c(1, 3, 9),
+                        c(9, 3, 1)) %>%
+  as_data_frame()
+
+supply <- Hmisc::bezier(x = c(1, 8, 9),
+                        y = c(1, 5, 9)) %>%
+  as_data_frame()
+
+intersection_xy <- curve_intersect(supply, demand)
+
+intersections <- intersection_xy %>% as_data_frame()
+
+plot_labels <- data_frame(label = c("D", "O"),
+                          x = c(1, 8.25),
+                          y = c(8, 8))
+
+p1 <- ggplot(mapping = aes(x = x, y = y)) + 
+  geom_path(data = supply, color = "#0073D9", size = 1) + 
+  geom_path(data = demand, color = "#FF4036", size = 1) + 
+  geom_segment(data = intersections, 
+               aes(x = x, y = 0, xend = x, yend = y), lty = "dotted") +
+  geom_segment(data = intersections, 
+               aes(x = 0, y = y, xend = x, yend = y), lty = "dotted") + 
+  geom_text(data = plot_labels,
+            aes(x = x, y = y, label = label), parse = TRUE,
+            family = "Source Sans Pro") +
+  geom_point(data = intersections, size = 3) +
+  labs(x = "Quantidade", y = "Preço") +
+  theme_classic() + 
+  coord_equal() +
+  scale_x_continuous(expand = c(0, 0), breaks = intersections$x,
+                     labels = expression(tilde(Q))) +
+  scale_y_continuous(expand = c(0, 0), breaks = intersections$y,
+                     labels = expression(tilde(P)))
+p1
+```
+
+O equilíbrio de um mercado, no entanto, denominado equilíbrio estático ou de
+curto prazo, está sujeito a choques que podem perturbar este equilíbrio.
+
+De acordo com @varian [p. 310], um mercado competitivo (concorrência perfeita),
+é um mercado em que cada agente econômico, ofertante ou demandante, considera os
+preços como dados, *i.e.* fora de seu controle. Não há, portanto, num mercado
+competitivo, restrições à entrada de novas empresas [@varian, p. 433]. Neste
+mercado, o que determina o preço é a ação conjunta de todos os agentes do 
+mercado.
+
+#### Elasticidade da demanda
+
+##### Elasticidade-preço da demanda
+
+A elasticidade-preço da demanda $\varepsilon_p$, definida conforme a equação
+\@ref(eq:epdemanda) [@varian, p. 302], mede a quantidade marginal que será
+demandada do mercado se o preço de uma mercadoria aumenta ou diminui em uma
+unidade de preço. Geralmente a elasticidade-preço da oferta é, então, um número
+negativo [@varian, 289]
+
+\begin{equation}
+\varepsilon_p = \frac{p}{q}\frac{\mathrm{d} q}{\mathrm{d} p}
+(\#eq:epdemanda)
+\end{equation}
+
+Uma maneira mais conveniente (e exata) de se escrever a equação da elasticidade 
+é a apresentada na equação \@ref(eq:elasticidadeLN), em função do logaritmo
+natural das variáveis [@varian, p.307-308]:
+
+\begin{equation}
+\varepsilon_p = \frac{\mathrm{d} \ln(q)}{\mathrm{d} \ln(p)}
+(\#eq:elasticidadeLN)
+\end{equation}
+
+Segundo Mayo (1981) e Olsen (1986) [*apud* @Malpezzi2002TheRO, p.23], uma boa 
+estimativa para o valor da elasticidade-preço da demanda é algo em torno de -0,8. 
+
+##### Elasticidade-renda
+
+A elasticidade-renda da demanda $\varepsilon_r$ mede como muda a quantidade
+demandada quando a renda do consumidor varia [@varian, p.300]. De acordo com a
+elasticidade-renda os bens podem ser classificados em bens normais, *i.e.* bens 
+cuja demanda aumenta com o aumento da renda; bens inferiores, *i.e.* bens cuja 
+demanda diminui com o aumento da renda; e bens de luxo ($\varepsilon_r > 1$), 
+*i.e.* bens cujo aumento na demanda é mais do que proporcional ao aumento da 
+renda (um aumento de 1% na renda conduz a um aumento de mais de 1% da demanda).
+
+#### Elasticidade-preço da oferta
+
+Na Figura \@ref(fig:equilibrioMercado) foi apresentado o conceito de equilíbrio 
+em um determinado mercado, a partir de curvas de oferta e de demanda.
+
+Outros tipos de curvas, porém, podem ocorrer. Segundo @varian [p. 311-312], dois
+tipos diferentes de oferta ocorrem com frequência: a oferta fixa ou
+perfeitamente inelástica (Figura \@ref(fig:casosEspeciais) A), onde a quantidade
+de equilíbrio é determinada inteiramente pelas condições de oferta e o preço de
+equilíbrio é determinado inteiramente pelas condições de demanda; e a oferta
+perfeitamente elástica, onde qualquer quantidade desejada do bem é ofertada a um
+preço constante, determinado pela oferta e a quantidade de equilíbrio é
+determinada pela curva de demanda (Figura \@ref(fig:casosEspeciais) B).
+
+
+```{r casosEspeciais, fig.cap="Equilíbrio de mercado.", out.width="100%"}
+supply <- Hmisc::bezier(x = c(4, 4, 4),
+                        y = c(1, 5, 9)) %>%
+  as_data_frame()
+
+supply2 <- Hmisc::bezier(x = c(1, 5, 9),
+                        y =  c(4, 4, 4)) %>%
+  as_data_frame()
+
+#intersection_xy <- curve_intersect(supply, demand)
+
+#intersections <- intersection_xy %>% as_data_frame()
+
+plot_labels <- data_frame(label = c("D", "O"),
+                          x = c(1.75, 4.25),
+                          y = c(8, 8))
+
+plot_labels2 <- data_frame(label = c("D", "O"),
+                          x = c(1.75, 8),
+                          y = c(8, 4.25))
+
+p1 <- ggplot(mapping = aes(x = x, y = y)) + 
+  geom_path(data = supply, color = "#0073D9", size = 1) + 
+  geom_path(data = demand, color = "#FF4036", size = 1) + 
+  # geom_segment(data = intersections, 
+  #              aes(x = x, y = 0, xend = x, yend = y), lty = "dotted") +
+  # geom_segment(data = intersections, 
+  #              aes(x = 0, y = y, xend = x, yend = y), lty = "dotted") + 
+  geom_text(data = plot_labels,
+            aes(x = x, y = y, label = label), parse = TRUE,
+            family = "Source Sans Pro") +
+  # geom_point(data = intersections, size = 3) +
+  labs(x = "Quantidade", y = "Preço") +
+  theme_classic() + 
+  coord_equal() +
+  scale_x_continuous(expand = c(0, 0), breaks = NULL,
+                    labels = expression(tilde(Q))) +
+  scale_y_continuous(expand = c(0, 0), breaks = NULL,
+                    labels = expression(tilde(P)))
+p2 <- ggplot(mapping = aes(x = x, y = y)) + 
+  geom_path(data = supply2, color = "#0073D9", size = 1) + 
+  geom_path(data = demand, color = "#FF4036", size = 1) + 
+  # geom_segment(data = intersections, 
+  #              aes(x = x, y = 0, xend = x, yend = y), lty = "dotted") +
+  # geom_segment(data = intersections, 
+  #              aes(x = 0, y = y, xend = x, yend = y), lty = "dotted") + 
+  geom_text(data = plot_labels2,
+            aes(x = x, y = y, label = label), parse = TRUE,
+            family = "Source Sans Pro") +
+  # geom_point(data = intersections, size = 3) +
+  labs(x = "Quantidade", y = "Preço") +
+  theme_classic() + 
+  coord_equal() +
+  scale_x_continuous(expand = c(0, 0), breaks = NULL,
+                    labels = expression(tilde(Q))) +
+  scale_y_continuous(expand = c(0, 0), breaks = NULL,
+                    labels = expression(tilde(P)))
+plot_grid(p1, p2, labels = "AUTO")
+```
+
+Na prática, o valor da elasticidade-preço da oferta, segundo pesquisas efetuadas
+em diferentes \gls{MI} varia de praticamente zero (perfeitamente inelástica), em
+mercados fortemente restritos [@malaysia] a praticamente infinito (perfeitamente
+elástica) em outros mercados. @supplyelasticity argumentam que, no entanto, esta 
+grande variação encontrada em diversos trabalhos pode ser explicada pelas 
+diferentes janelas de tempo utilizadas para o cálculo da elasticidade e que há 
+evidências de que, no longo prazo, para a maioria das regiões metropolitanas dos
+EUA, as elasticidades da oferta tendem a ser altas (>10).
+
+#### Equações de oferta e demanda
+
+Hipóteses sobre as elasticidades de ofeta e demanda de um \gls{MI} em específico
+podem ser testadas a partir de modelos de fluxo do \gls{MI} em análise como o
+apresentado nas equações \@ref(eq:flowModel1) a \@ref(eq:flowModel3), onde $Q_S$
+é a quantidade ofertada, $Q_D$ é a quantidade demandanda, $P_h$ é o preço
+relativo das residências, $Y$ é a renda e $N$ é a população 
+[@longrunsupplyelasticity p. 282].
+
+\begin{align} 
+Q_D &= \alpha_0 + \alpha_1 P_h + \alpha_2 Y + \alpha_3 N (\#eq:flowModel1)\\ 
+Q_S &= \beta_0 + \beta_1 P_h (\#eq:flowModel2)\\
+Q_D &= Q_S (\#eq:flowModel3)
+\end{align}
+
+De acordo com @longrunsupplyelasticity [p. 282], se os modelos forem elaborados
+com o logaritmo natural das variáveis (logaritmo dos preços, logaritmo das
+quantidades ofertadas e demandadas, logaritmo da renda e logaritmo da
+população), os coeficientes $\alpha_i$ e $\beta_i$ podem ser interpretados
+como as elasticidades do mercado.
+
+O modelo das equações \@ref(eq:flowModel1) a \@ref(eq:flowModel3) pode ser
+escrito em sua forma reduzida, de acordo com a equação \@ref(eq:flowModel) 
+[@longrunsupplyelasticity p. 283]:
+
+\begin{equation}
+P_h = \frac{\alpha_0 - \beta_0}{\beta_1 - \alpha_1} + \frac{\alpha2}{\beta_1 - \alpha_1}Y + \frac{\alpha3}{\beta_1 - \alpha_1} N
+(\#eq:flowModel)
+\end{equation}
+
+Segundo @longrunsupplyelasticity [p. 285], sobre este modelo podem ser feitas 
+hipóteses simplificadoras, tal como a hipótese de que o estoque $K$ de 
+residências não se ajusta completamente em cada período, o que está implícito
+no modelo acima, mas de acordo com um parâmetro de ajuste do estoque $\delta$ 
+(usualmente igual a 0,3 [@longrunsupplyelasticity, p. 285]). Assim:
+
+\begin{align} 
+Q_D &= \delta (K^* - K_{-1}) (\#eq:flowModela1)\\ 
+K^* = \alpha_0 + \alpha_1 P_h + \alpha_2 Y + \alpha_3 N (\#eq:flowModela2)\\ 
+Q_S &= \beta_0 + \beta_1 P_h (\#eq:flowModela3)\\
+Q_D &= Q_S (\#eq:flowModela4)
+\end{align}
+
+O modelo das equações \@ref(eq:flowModela1) a \@ref(eq:flowModela4) pode ser
+então escrito de maneira reduzida, conforme equação \@ref(eq:flowModela):
+
+\begin{equation}
+P_h = \frac{\delta \alpha_0 - \beta_0}{\beta_1 - \delta \alpha_1} + \frac{\delta \alpha2}{\beta_1 - \delta \alpha_1}Y + \frac{\delta \alpha3}{\beta_1 - \delta \alpha_1} N - \frac{\delta}{\beta_1 - \delta \alpha_1}K_{-1}
+(\#eq:flowModela)
+\end{equation}
+
+E pode ser estimado de acordo com a equação \@ref(eq:flowModelEstimate):
+
+\begin{equation}
+P_h = \gamma_0 + \gamma_1 Y + \gamma_2 N + \gamma_3 K_{-1} + \varepsilon
+(\#eq:flowModelEstimate)
+\end{equation}
+
+Segundo @longrunsupplyelasticity [p. 285], a elasticidade-preço da oferta do 
+\gls{MI} residencial pode ser, então, estimada a partir da equação abaixo, 
+parametricamente em função de $\alpha_1$ e $\alpha_2$, que a princípio são 
+desconhecidos:
+
+$$\beta_1 = \frac{\delta \alpha_2}{\gamma_1} + \delta \alpha_1$$
+
+#### Choques no mercado
+
+Qualquer mercado está sujeito a choques, seja de oferta ou de demanda. Um choque
+de oferta se daria com a quebra de um dos ofertantes, por exemplo, situação em
+que a quantidade ofertada poderia vir a ser diminuída abruptamente, dependendo
+da estrutura do mercado. Já choque de demanda ocorre quando há, por exemplo, por 
+fatores que são exógenos ao \gls{MI}, um aumento abrupto da demanda, que pode
+ocorrer pela abertura de linhas de créditos antes não existentes ou pelo aumento
+da renda da população. Quaisquer que sejam as causas que levem a um choque no
+\gls{MI}, seus efeitos devem ser investigados. Se o mercado impactado tiver uma
+estrutura fortemente concorrencial, a tendência é que um choque de demanda seja
+absorvido a médio e longo prazo sem grandes flutuações de preços, devido à
+entrada de novos ofertantes no mercado. Por outro lado, se o mercado em análise
+sofre de algum tipo de restrição geográfica ou mesmo econômica que dificulte a 
+entrada de novos atores como ofertantes, a tendência é que os choques de demanda 
+tenham maior impacto. Os detalhes por trás deste raciocínio serão melhor 
+esclarecidos no capítulo \@ref(crise2008).
+
 
 ### Particularidades do mercado imobiliário
 
@@ -858,17 +1140,17 @@ Em suma, isto implica que a autocorrelação serial nos aumentos de preços dos
 imóveis é uma condição necessária para a formação de bolhas. Segundo 
 @Malpezzi2002TheRO [p. 15], muitos estudos documentam a existência de correlação 
 serial em preços, porém a evidência de que isso leva, por si só, a formação de 
-bolhas é controversa. No capítulo \@ref(crise) serão vistos com mais detalhes os
+bolhas é controversa. No capítulo \@ref(crise2008) serão vistos com mais detalhes os
 fatores que levam à formação de bolhas.
 
 ### O papel da regulação do \gls{MI} na prevenção da formação de bolhas especulativas
 
-Conforme será visto no capítulo \@ref(crise), para @Malpezzi2002TheRO [p. 26], o
+Conforme será visto no capítulo \@ref(crise2008), para @Malpezzi2002TheRO [p. 26], o
 efeito da especulação na volatilidade do \gls{MI} depende das condições de
 oferta em cada mercado. Reformas adequadas na regulação do \gls{MI} com base
 nesta hipótese serão apresentadas no capítulo \@ref(politicas).
 
-### O impacto das variáveis macroeconômicas no preços dos imóveis e formação de bolhas especulativas
+### Formação de bolhas especulativas
 
 Na análise de @Malpezzi2002TheRO a respeito da formação de bolhas, a variável
 taxa de desconto ($i$) é considerada como uma variável exógena, isto é, não 
@@ -891,9 +1173,9 @@ de risco oscila é que também oscilam os Valores Presentes dos imóveis e dos
 outros investimentos.
 
 Se estas oscilações de preços dos imóveis devido às taxas de juros podem causar
-bolhas especulativas, no entanto, é uma outra história. Este assunto será abordado com mais profundidade no capítulo \@ref(crise).
+bolhas especulativas, no entanto, é uma outra história. Este assunto será abordado com mais profundidade no capítulo \@ref(crise2008).
 
-[^4]: O capítulo \@ref(crise) ilustra como as taxas praticadas no mercado de 
+[^4]: O capítulo \@ref(crise2008) ilustra como as taxas praticadas no mercado de 
 crédito de hipotecas, por exemplo, são compostas de uma taxa adicional de risco
 em relação à taxa livre de risco.
 
@@ -984,7 +1266,7 @@ a.a., teria o seguinte impacto:
 
 $$VP = \frac{12 \times 2.000}{0,01} = 2.400.000$$
 
-A figura \@ref(fig:valores-juros) mostra como varia, *coeteris paribus*, o valor 
+A Figura \@ref(fig:valores-juros) mostra como varia, *coeteris paribus*, o valor 
 justo de um imóvel em função da taxa de juros de longo prazo.
 
 ```{r valores-juros, fig.cap = "Variação do valor justo de um imóvel em função da taxa de juros."}
@@ -1008,9 +1290,10 @@ ggplot(data.frame(x = c(.1/100, 6/100)), aes(x = x)) +
 Fonte: Do autor.
 \ecenter
 
-A tabela \@ref(tab:tabela-valor-justo) mostra alguns valores calculados de 
-acordo com a \@ref(eq:valor-presente) para um imóvel, supondo receita líquida de
-aluguel mensal constante de R$2.000,00, em função da taxa de desconto.
+A Tabela \@ref(tab:tabela-valor-justo) mostra alguns valores calculados de
+acordo com a equação \@ref(eq:valor-presente) para um imóvel, supondo receita
+líquida de aluguel mensal constante de R$2.000,00, em função da taxa de
+desconto.
 
 
 ```{r tabela-valor-justo}
@@ -1028,6 +1311,17 @@ kable(valorJusto, format = "latex", booktabs = TRUE,
 \bcenter
 Fonte: Do autor.
 \ecenter
+
+Prentende-se mostrar com a exposição dos valores da Tabela 
+\@ref(tab:tabela-valor-justo), assim como com o gráfico da Figura 
+\@ref(fig:valores-juros) que a taxa de juros de referência impacta fortemente
+na variação dos preços dos imóveis a partir de um determinado patamar. Isto se 
+deve, é claro, à grande vida útil (ou grande *duration*) de um imóvels e à
+capacidade de extração de renda deste imóvel durante esta vida útil. Uma 
+diminuição na taxa de juros de longo prazo de referência de apenas 0,25 p.p. 
+pode acarretar numa mudança do valor presente (ou valor justo) de um imóvel da
+ordem de milhões de reais. Isto impacta o \gls{MI} de uma maneira muito forte e,
+como será mostrado no capítulo \@ref(crise2008), sem precedentes históricos. 
 
 ## O Mercado Imobiliário e o setor bancário {#MI-e-o-setor-bancario}
 

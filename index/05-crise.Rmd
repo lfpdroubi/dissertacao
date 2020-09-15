@@ -101,7 +101,7 @@ dos preços no \gls{MI} é seguida por uma série de eventos, como uma crise
 bancária, uma crise no balanço de pagamentos, uma crise financeira e um estouro
 de um ciclo de negócios.
 
-## O papel da oferta na prevenção de bolhas
+### O papel da oferta na prevenção de bolhas
 
 De acordo com @regulation [p. 11], os padrões de *boom* e *boost* no \gls{MI},
 ou seja, a formação e estouro de bolhas, podem ser explicados por modelos
@@ -139,25 +139,7 @@ inflada, para num segundo momento estourar, voltando para um preço de equilíbr
 muito menor do que o alcançado durante o *boom*.
 
 ```{r choque, fig.cap="Efeitos de um choque de demanda em diferentes mercados.", out.width="100%"}
-# curve1 and curve2 should be data.frames with an x and y column
-# For instance, as_data_frame(Hmisc::bezier(c(1, 8, 9), c(1, 5, 9)))
-#
-curve_intersect <- function(curve1, curve2) {
-  # Approximate the functional form of both curves
-  curve1_f <- approxfun(curve1$x, curve1$y, rule = 2)
-  curve2_f <- approxfun(curve2$x, curve2$y, rule = 2)
-  
-  # Calculate the intersection of curve 1 and curve 2 along the x-axis
-  point_x <- uniroot(function(x) curve1_f(x) - curve2_f(x), 
-                     c(min(curve1$x), max(curve1$x)))$root
-  
-  # Find where point_x is in curve 2
-  point_y <- curve2_f(point_x)
-  
-  # All done!
-  return(list(x = point_x, y = point_y))
-}
-
+source("curve_intersect.R")
 supplye1 <- Hmisc::bezier(c(1, 8, 9),
                         c(1, 5, 9)) %>%
   data.frame()
@@ -274,7 +256,7 @@ plot_grid(title, plot_row, ncol = 1,
           rel_heights = c(0.1, 1))
 ```
 \bcenter
-Fonte: Adaptado de @regulation [p. 10].
+Fonte: Adaptado de @Malpezzi2002TheRO [p. 19].
 \ecenter
 
 Para @regulation [p. 11], ainda, além do problema da oferta inelástica pode
@@ -342,14 +324,176 @@ p3 <- ggplot(mapping = aes(x = x, y = y)) +
 p3
 ```
 \bcenter
-Fonte: @regulation [p. 11]
+Fonte: @Malpezzi2002TheRO [p. 19]
 \ecenter
 
 Segundo @Malpezzi2002TheRO [p. 19], o processo descrito na Figura 
-\@ref(fig:choque2) não se trata de mera curiosidade, mas foi documentado em
+\@ref(fig:choque2) não se trata de mera curiosidade, tendo sido documentado em
 diversos estudos.
 
-## Medidas macroprudenciais de prevenção de bolhas
+### Modelo dinâmico
+
+No capítulo \@ref(economia) foi mostrado que é possível modelar o mercado a
+partir de equações de oferta e demanda (equações \@ref(eq:flowModel1) a 
+\@ref(eq:flowModel3)).
+
+Nas equações \@ref(eq:flow1) a \@ref(eq:flow4)...
+
+\begin{align}
+Q_D &= \delta (K^* - K_{-1}) (\#eq:flow1)\\
+K^* &= D + \alpha_1 P_t + \alpha_4 (P_t - P_{t-1}) (\#eq:flow2) \\
+Q_S &= \beta_0 + \beta_1 P_t + \beta_2 P_{t-1} (\#eq:flow3) \\
+Q_D &= Q_S (\#eq:flow4)
+\end{align}
+
+Supondo $\beta_0 = 0$ e igualando a equação \@ref(eq:flow3), tem-se a equação:
+
+$$\beta_1 P_t + \beta_2 P_{t-1} = \delta[K^* - K_{-1}]$$
+
+Substituindo \@ref(eq:flow2) em \@ref(eq:flow1):
+
+$$\beta_1 P_t + \beta_2 P_{t-1} = \delta[D +\alpha_1 P_t + \alpha_4 (P_t - P_{t-1}) - K_{-1}]$$
+Isolando $P_t$, tem-se:
+
+$$\beta_1 P_t - \delta \alpha_1 P_t -\delta \alpha_4 P_t = \delta D - \delta \alpha_4 P_{t-1} - \beta_2 P_{t-1} - \delta K_{-1}$$
+
+$$P_t = \frac{\delta}{\beta_1 - \delta \alpha_1 - \delta \alpha_4} D - \frac{\beta_2 + \delta \alpha_4}{\beta_1 - \delta \alpha_1 - \delta \alpha_4} P_{t-1} - \frac{\delta}{\beta_1 - \delta \alpha_1 - \delta \alpha_4} K_{-1}$$
+Onde o ajuste do estoque é feito a cada período a partir das equações 
+\@ref(eq:stock) e \@ref(eq:supply):
+
+\begin{align}
+K_t &= K_{t-1} + Q_S (\#eq:stock)\\
+Q_S &= \beta_1 P_t + \beta_2 P_{t-1} (\#eq:supply)
+\end{align}
+
+Nas Figuras \@ref(fig:TheRole1) e \@ref(fig:TheRole2) são apresentadas as
+variações dos preços ao longo dos anos subsequentes a um choque de demanda,
+conforme simulado por @Malpezzi2002TheRO. Segundo @Malpezzi2002TheRO [p. 25],
+como mostram as simulações, num mercado com oferta elástica a volatilidade dos
+preços é muito menos, com ou sem especulação.
+
+```{r TheRole1, fig.cap="Resposta do \\gls{MI} com oferta elástica a um choque de demanda."}
+knitr::include_graphics("images/TheRole_1.png")
+```
+\bcenter
+Fonte: @Malpezzi2002TheRO [p. 24]
+\ecenter
+
+```{r TheRole2, fig.cap="Resposta do \\gls{MI} com oferta inelástica a um choque de demanda."}
+knitr::include_graphics("images/TheRole_2.png")
+```
+\bcenter
+Fonte: @Malpezzi2002TheRO [p. 24]
+\ecenter
+
+Deve-se notar que, apesar do modelo ser teoricamente razoável, os resultados das
+simulações não o são: especialmente para o mercado com oferta elástica, mesmo 
+sem especulação, a Figura \@ref(fig:TheRole1) mostra um aumento da volatilidade
+ao longo do tempo, o que não parece ser correto. Num \gls{MI} real, a tendência
+deveria ser a dissipação do choque ao longo dos períodos.
+
+Foram, então, elaboradas simulações próprias a partir do modelo proposto por 
+@Malpezzi2002TheRO, com os mesmos parâmetros adotados. Os resultados das 
+simulações podem ser vistos nas Figuras \@ref(fig:elastico) e 
+\@ref(fig:inelastico).
+
+```{r}
+t <- 0
+p_0 <- log(1) # preço inicial
+k_0 <- log(1000) #  estoque inicial
+k_1 <- log(1200) # choque de 20%
+alpha_1 <- -.8 # elasticidade-preço da demanda
+delta <- .5 # parâmetro de ajuste do estoque
+```
+
+```{r}
+beta_1 <- 10
+beta_2 <- 10
+p <- vector(length = 11); p[1] <- log(1)
+p1 <- vector(length = 11); p1[1] <- log(1)
+k <- vector(length = 11); k[1] <- log(1000)
+k1 <- vector(length = 11); k1[1] <- log(1000)
+q <- vector(length = 11)
+q1 <- vector(length = 11)
+alpha_4<- 0.1 # elasticidade-preço da demanda quando sujeita a alteração de preços
+for (i in 1:10) {
+  p[i+1] <- delta/(beta_1 - delta*alpha_1)*log(1200) - (beta_2)/(beta_1 - delta*alpha_1)*p[i] - delta/(beta_1 - delta*alpha_1)*k[i]
+  p1[i+1] <- delta/(beta_1 - delta*alpha_1 - delta*alpha_4)*log(1200) - (beta_2+alpha_4)/(beta_1 - delta*alpha_1 - delta*alpha_4)*p1[i] - delta/(beta_1 - delta*alpha_1 - delta*alpha_4)*k1[i]
+  q[i+1] <- beta_1*p[i+1] + beta_2*p[i]
+  q1[i+1] <- beta_1*p1[i+1] + beta_2*p1[i]
+  k[i+1] <- k[i] + q[i+1]
+  k1[i+1] <- k1[i] + q1[i+1]
+}
+```
+
+```{r elastico, fig.cap="Simulações próprias para mercado com oferta elástica."}
+df <- data.frame(year = 0:10, price = p, price1 = p1)
+pl1 <- ggplot(df, aes(x = year, y = price)) + 
+  geom_point() + 
+  geom_line() + 
+  geom_path(aes(y = price1), color = "red") + 
+  geom_point(aes(y = price1), color = "red") +
+  geom_hline(yintercept = 0)  +
+  scale_y_continuous(name = "Preço", breaks = seq(-0.1, 0.2, by=.05), 
+                     expand = c(0, 0), limits = c(-0.1, 0.2)) + 
+  scale_x_continuous(name = "Ano", breaks = 1:10,
+                     expand = c(0, 0), limits = c(0, 10)) +
+  labs(title = "Reação de mercado elástico à choque de demanda", 
+       subtitle = expression(beta[1] == 10~','~beta[2] == 10~','~alpha[1] == -0.8~','~alpha[4]==0.1~','~delta==0.5)
+       )
+pl1
+```
+\bcenter
+Fonte: O autor. Adaptado de @Malpezzi2002TheRO.
+\ecenter
+
+```{r}
+beta_1 <- .2
+beta_2 <- .2
+p <- vector(length = 11); p[1] <- log(1)
+p1 <- vector(length = 11); p1[1] <- log(1)
+k <- vector(length = 11); k[1] <- log(1000)
+k1 <- vector(length = 11); k1[1] <- log(1000)
+q <- vector(length = 11)
+q1 <- vector(length = 11)
+alpha_4<- 0.1 # elasticidade-preço da demanda quando sujeita a alteração de preços
+for (i in 1:10) {
+  p[i+1] <- delta/(beta_1 - delta*alpha_1)*log(1200) - (beta_2)/(beta_1 - delta*alpha_1)*p[i] - delta/(beta_1 - delta*alpha_1)*k[i]
+  p1[i+1] <- delta/(beta_1 - delta*alpha_1 - delta*alpha_4)*log(1200) - (beta_2+alpha_4)/(beta_1 - delta*alpha_1 - delta*alpha_4)*p1[i] - delta/(beta_1 - delta*alpha_1 - delta*alpha_4)*k1[i]
+  q[i+1] <- beta_1*p[i+1] + beta_2*p[i]
+  q1[i+1] <- beta_1*p1[i+1] + beta_2*p1[i]
+  k[i+1] <- k[i] + q[i+1]
+  k1[i+1] <- k1[i] + q1[i+1]
+}
+```
+
+```{r inelastico, fig.cap="Simulações próprias para mercado com oferta inelástica."}
+df <- data.frame(year = 0:10, price = p, price1 = p1)
+pl2 <- ggplot(df, aes(x = year, y = price)) + 
+  geom_point() + 
+  geom_line() + 
+  geom_path(aes(y = price1), color = "red") + 
+  geom_point(aes(y = price1), color = "red") +
+  geom_hline(yintercept = 0) +
+  scale_y_continuous(name = "Preço", breaks = seq(-0.1, 0.2, by=.05), 
+                     expand = c(0, 0), limits = c(-0.1, 0.2)) + 
+  scale_x_continuous(name = "Ano", breaks = 1:10,
+                     expand = c(0, 0), limits = c(0, 10)) +
+  labs(title = "Reação de mercado inelástico à choque de demanda", 
+       subtitle = expression(beta[1] == 0.2~','~beta[2] == 0.2~','~alpha[1] == -0.8~','~alpha[4]==0.1~','~delta==0.5)
+       )
+pl2
+```
+\bcenter
+Fonte: O autor. Adaptado de @Malpezzi2002TheRO.
+\ecenter
+
+# ```{r ambas, fig.cap="CCC", out.width="100%"}
+# plot_grid(pl1, pl2, labels = "AUTO")
+# ```
+
+
+### Medidas macroprudenciais de prevenção de bolhas
 
 Isto poderia ser indício da formação de nova bolha imobiliária, nos moldes da
 que estourou em meados de 2006, com consequências catastróficas para a economia
@@ -655,7 +799,9 @@ Em um cenário de longo prazo, a tendência é que a crise de 2008 apenas tenha
 acelerado em demasia, momentaneamente, o que já era uma tendência de longo
 prazo, portanto estrutural, da economia.
 
-## A dinâmica da crise
+## A Crise imobiliário-financeira de 2008
+
+### A dinâmica da crise
 
 Em 2001 o \gls{FED} reduziu a taxa básica da economia americana para 1,5% a.a.,
 para combater a recessão econômica, atingindo um dos níveis mais baixos da
@@ -719,7 +865,7 @@ bancos começaram a ficar receosos de emprestar uns para os outros, por causa
 da alta presença de ativos tóxicos nos seus balanços, os derivativos de crédito
 que compraram durante o *boom* imobiliário, o que causou uma crise de liquidez.
 
-## A raiz da crise
+### A raiz da crise
 
 Segundo Donnelly e Embrechts [-@devil, 3], a raiz da crise financeira de 2008
 estava nos derivativos de crédito, \gls{CDO}, lastreados em ativos de crédito
@@ -762,7 +908,7 @@ que estes eram securitizandos, mas também na crença de que, em última instân
 os governos seriam obrigados a socorrer as instituições denominadas *too big to
 fail* (grandes demais para quebrar) [@devil, 4-5].
 
-### Derivativos de crédito
+#### Derivativos de crédito
 
 \gls{CDO} são um tipo de instrumento financeiro do grupo dos denominados 
 derivativos de crédito, lastreados em \gls{ABS}, construídos através do
@@ -914,7 +1060,7 @@ sequer com estes ativos. Em 2008 o prejuízo líquido da AIG foi de
 US\$ 99 bilhões, sendo US\$ 62 bi apenas no último trimestre, auge da crise do 
 *subprime*.
 
-### Precificação
+##### Precificação
 
 De acordo com @watts, apesar de terem sido criados há algum tempo, uma década e
 meia teve que se passar para que o mercado de \gls{CDO} se tornasse grande. E o
@@ -995,78 +1141,3 @@ empréstimos *subprime*, pois sentiriam a necessidade de controlar o seu própri
 risco de *default*. Por fim, se não houvesse tanta liquidez devido a todo o
 crédito oferecido pelas instituições hipotecárias, muito provavelmente não teria 
 se formado uma bolha especulativa.
-
-Segundo @copulas, Copulas são funções que permitem separar as distribuições
-marginais da estrutura de dependência de uma dada distribuição multivariada.
-
-Por definição, uma copula d-dimensional é uma função de distribuição de
-probabilidade cumulativa com distribuições marginais uniformes [@copulas, 1].
-
-
-
-## Teorema de Sklars
-
-## Tipos de Copulas
-
-Em tese, qualquer distribuição multivariada pode ser utilizada para construir
-uma Copula.
-
-A Copula Gaussiana, como visto no capítulo \@ref(economia), foi vastamente 
-utilizada na precificação de derivativos financeiros dos empréstimos 
-imobiliários, os \gls{CDO}s.
-
-Segundo @devil, a Copula Gaussiana foi adotada "entusiasticamente" pela 
-indústria (financeira) pela sua simplicidade, embora ela não seja capaz de 
-captar as principais características do que se pretendia modelar.
-
-Isto ocorre porque a Copula Gaussina tende a minimizar a probabilidade de 
-ocorrência de eventos extremos, *i.e* nas caudas da distribuição de 
-probabilidade.
-
-
-### Copulas elípticas
-
-#### A Copula gaussiana
-
-Segundo @formula, a primeira aparição de modelos hoje conhecidos como Copula
-Gaussiana se deu entre 1987 e 1991, por Oldrich Vasicek, um matemático teórico.
-
-#### A Copula t
-
-### Copulas Arquimedianas
-
-#### A Copula Clayton
-
-#### A Copula de Gumbel
-
-#### Outras Copulas Arquimedianas
-
-## Medidas de dependência
-
-### Coeficiente de correlação de Pearson
-
-$$Corr(X, Y ) = \frac{Cov(X, Y )}{Var(X)Var(Y)}$$
-
-#### Propriedades
-
-### Coeficiente de correlação local de Pearson
-
-$$\rho_{local}(x, y) = \frac{E[(X - E(X|Y = y))(Y - E(Y|X = x))]}{\sqrt{E(X - E(X|Y = y))^2 E(Y - E(Y |X = x))^2}}$$
-
-
-#### Propriedades
-
-
-### Coeficiente de correlação de Spearman
-
-$$\rho(X, Y ) = 3P[(X - X')(Y - Y') > 0] - P[(X - X')(Y - Y'' ) < 0]$$
-
-#### Propriedades
-
-
-### Coeficiente de Kendall
-
-$$\tau(X, Y ) = P[(X - X')(Y - Y')) > 0] - P[(X - X')(Y - Y') < 0]$$
-
-#### Propriedades
-
