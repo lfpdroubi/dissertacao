@@ -1,5 +1,403 @@
 # Políticas do solo {#politicas}
 
+Um dos objetivos deste trabalho é entender de onde viemos e onde estamos no
+Brasil, em termos de desenvolvimento urbano, para tentar entender e definir os
+rumos para onde vamos.
+
+No capítulo \@ref(historico), espera-se ter respondido à primeira pergunta: de
+onde viemos?, cuja resposta, resumidamente é: O Brasil é um país cujo processo
+de desenvolvimento capitalista se deu através da **via prussiana**, que 
+consiste no desenvolvimento do capitalismo sem a prévia execução de uma reforma
+agrária no sentido de fixar no campo os pequenos agricultores. Isso ocasionou
+um crescimento desornado dos principais polos urbanos, situação que persiste até
+os dias de hoje.
+
+Nos capítulos \@ref(economia) a \@ref(crise2008), espera-se ter respondido à 
+segunda pergunta: onde estamos?, cuja resposta é: o Brasil é país capitalista
+cuja economia de mercado está suficientemente desenvolvida e em compasso com o
+resto do mundo. Com isto se quer dizer que não existe mais no Brasil um 
+comportamento anômalo do preço dos imóveis em função de ciclos inflacionários 
+que estiveram presente ao longo de boa parte da história econômica brasileira, 
+que, em virtude da penalização da liquidez que promoviam, incentivavam a 
+imobilização do capital, fazendo com que o preço da terra se elevasse nos 
+períodos de fraca conjuntura[^6].
+
+[^6]: No Brasil, durante grande parte do século XX, a inflação se elevava
+durante os períodos de fraca conjuntura, ao contrário senso comum.
+
+Desta maneira, pode-se dizer que hoje o Brasil não precisa desenvolver políticas
+baseadas em ideias heterodoxas para o \gls{MI}, haja vista que o seu
+funcionamento hoje se dá em linha com os \gls{MI} internacionais. Pelo contrário,
+a experiência internacional, hoje, nos serve de referência. Obviamente que não
+há nos países desenvolvidos, hoje, o problema crônico habitacional que se 
+instalou no Brasil durante o seu processo de desenvolvimento econômico durante o
+século XX, mas há nestes países hoje também um problema habitacional devido ao
+processo de financeirização da moradia. 
+
+...
+
+## Regulação do \gls{MI}
+
+Segundo @externalities [p. 209], a regulação do \gls{MI} deve ser pensada em
+termos dos custos e benefícios da regulação. Enquanto os custos da regulação
+geralmente são claros -- com mais regulação em um mercado, menos imóveis podem
+ser construídos, portanto o preço de um imóvel neste mercado regulado é maior do
+que o preço que se obteria se o mesmo mercado não tivesse regulação alguma, os
+benefícios da regulação advém das diversas fontes de externalidades inerentes a
+este mercado.
+
+O custo da regulação de um mercado, segundo @malpezzi_affordable_2018, pode ser
+entendido pela análise da Figura \@ref(fig:externalities), onde a oferta
+privada, *i.e* a oferta que seria disponibilizada ao mercado sem regulação
+alguma, é representada pela reta $O_1$ e a oferta incluindo o custo da regulação
+é representada pela reta $O_2$: sem regulação, mais imóveis seriam ofertados
+($Q_1$), e os preços seriam relativamente menores ($P_1$) do que os obtidos com
+regulação ($P_2$). O custo regulatório do mercado pode ser geometricamente
+representado pelo segmento de reta roxo na Figura \@ref(fig:externalities), que
+mede a diferença entre o preço de equilíbrio do mercado regulado ($P_2$) e o
+preço que se obteria para produzir a mesma quantidade ($Q_2$) com a oferta
+privada.
+
+Isto significa que um mercado regulado é menos eficiente do que um mercado sem 
+regulação. Contudo, isto não deve ser interpretado como uma maneira de afastar 
+qualquer tipo de regulação do \gls{MI}, pois os custos regulatórios, apesar de
+não se expressarem em nível privado, dentro da relação comercial entre os 
+consumidores e os incorporadores, realmente existem: para que o mercado opere
+no nível $Q_1$, com preços $P_1$, a sociedade como um todo teria que bancar os 
+custos regulatórios na forma de mais infraestrutura, mais congestionamento, e
+outras tantas *externalidades*.
+
+Enfim, uma boa regulação deve sempre buscar encontrar um ponto de equilíbrio
+entre a perda de eficiêcia do \gls{MI} e os benefícios regulatórios impostos.
+
+
+```{r externalities, fig.cap="Custo regulatório no \\gls{MI}."}
+plot_labels <- data_frame(label = expression("D", "O[1]", "O[2]"),
+                          x = c(1, 9, 9),
+                          y = c(8.5, 8.5, 11.5))
+points <- data.frame(x = c(5, 3.5, 3.5), y = c(5, 6.5, 3.5))
+
+p1 <- ggplot(mapping = aes(x = x, y = y)) + 
+  geom_segment(aes(x = 1, y = 1, xend = 9, yend = 9), color = "#0073D9", size = 1) + 
+  geom_segment(aes(x = 1, y = 9, xend = 9, yend = 1), color = "#FF4036", size = 1) +
+  geom_segment(aes(x = 1, y = 4, xend = 9, yend = 12), color = "#0073D9", size = 1) + 
+  geom_segment(aes(x = 3.5, y = 3.5, xend = 3.5, yend = 6.5), color = "purple", size = 2) +
+  geom_segment(aes(x = 5, y = 0, xend = 5, yend = 5), lty = "dotted") +
+  geom_segment(aes(x = 0, y = 5, xend = 5, yend = 5), lty = "dotted") + 
+  geom_segment(aes(x = 3.5, y = 0, xend = 3.5, yend = 6.5), lty = "dotted") +
+  geom_segment(aes(x = 0, y = 6.5, xend = 3.5, yend = 6.5), lty = "dotted") + 
+  geom_segment(aes(x = 0, y = 3.5, xend = 3.5, yend = 3.5), lty = "dotted") + 
+  geom_text(data = plot_labels,
+            aes(x = x, y = y, label = label), parse = TRUE) +
+  geom_point(data = points, aes(x = x, y = y), size = 2) +
+  labs(x = "Quantidade", y = "Preço") +
+  theme_classic() + 
+  coord_equal() +
+  scale_x_continuous(expand = c(0, 0), breaks = c(3.5, 5), limits = c(0,13),
+                     labels = expression(Q[1], Q[2])) +
+  scale_y_continuous(expand = c(0, 0), breaks = c(3.5, 5, 6.5), limits = c(0,13),
+                     labels = expression(P[3], P[1], P[2]))
+p1
+```
+\bcenter
+\small Fonte -- Adaptado de @malpezzi_affordable_2018.
+\ecenter
+
+Na prática, a teoria pode ser verificada através da aferição dos preços medianos
+relativos de vários \gls{MI} em relação a um índice regulatório. É o que se vê
+na Figura \@ref(fig:regulation-price), em que @malpezzi_affordable_2018 plota o
+preço dos imóveis residenciais em relação a renda mediana em cada estado, contra
+o índice regulatório Wharton para os estados da federação norte-americana. Nesta
+Figura, os círculos são proporcionais a população de cada estado. Apesar de 
+alguns *outliers*, nota-se uma correlação relativamente forte entre regulação e 
+os preços dos imóveis residenciais.
+
+```{r regulation-price, fig.cap="Preços em função do índice regulatório do \\gls{MI}."}
+knitr::include_graphics("images/figure_01_Malpezzi_Affordable.png")
+```
+\bcenter
+\small Fonte -- @malpezzi_affordable_2018.
+\ecenter
+
+### Externalidades
+
+Externalidades são custos que são impostos às partes fora de uma transação 
+econômica [@malpezzi_affordable_2018]. Entre as possíveis externalidades do
+\gls{MI} que causam aumentos dos preços dos imóveis se encontram 
+[@externalities, p. 210-211]:
+
+1. Congestionamento;
+2. Impactos ambientais;
+3. Custos de infraestrutura;
+4. Efeitos fiscais e;
+5. Efeitos de composição da vizinhança.
+
+No entanto, nem todas as externalidades devem ser associadas a um aumento de 
+custos [@externalities, p. 212]:
+
+1. Produtividade e emprego;
+2. Benefícios de saúde;
+3. Integração racial e;
+4. Benefícios relacionados a propriedade de um imóvel.
+
+### Por que os governos devem intervir?
+
+Existem diversos motivos segundo os quais o governo deve intervir em um mercado.
+Falhas de mercado podem ocorrer devido a...
+
+Existem diversas formas de interferência governamental na Economia. Segundo 
+@urbandevelopment [p. 6], governos do mundo todo intervem nos mercados através 
+da:
+
+1. definição e aplicação dos direitos de propriedade;
+2. taxação;
+3. concessão de subsídios;
+4. regulação e planejamento e;
+5. provisão pública direta.
+
+...
+
+Os problemas do funcionamento do \gls{MI} tem de ser equacionados tanto do lado
+da demanda quanto do lado da oferta, embora o lado da oferta seja muitas vezes
+negligenciado. Do lado da demanda incentiva-se o \gls{MI} através da 
+disponibilização de crédito, concessão de aluguel social (*vouchers*), subsídios
+de diversas espécies e outros. Já do lado da oferta deve-se pensar em mecanismos
+que incentivem o aumento da oferta através de uma regulação menos restringente,
+por exemplo, ou através da implantação de infraestrutura que possibilite 
+expandir os limites urbanos, aumento assim as áreas loteáveis.
+
+### Programas habitacionais
+
+Segundo @malpezzi_affordable_2018_1, uma política habitacional efetiva e robusta
+deve ter uma abordagem dupla: reformar o ambiente regulatório de maneira a
+permitir uma melhor resposta do lado da oferta, com menos restrições
+construtivas; e, na questão das moradias para famílias de baixa renda, mudar da
+concessão de subsídios proporcionados para edificações específicas -- *i.e.* de
+subsídios concedidos do lado da oferta para a construção de habitações populares, 
+para os subsídios focados nas pessoas, como o aluguel social ou locação social.
+
+Deve-se ponderar, no entanto, que isto é válido para o mercado norte-americano e
+pode não se aplicar a outros mercados imobiliários, como no Brasil, devido às
+particularidades de cada um. No entanto, o esquema geral da análise de 
+@malpezzi_affordable_2018_1 é válido e interessante para a aplicação em outros
+mercados.
+
+#### Programas habitacionais que atuam pelo lado da oferta
+
+Tradicionalmente os programas de promoção da moradia focam na concessão de
+subsídios do lado da oferta: desde a construção pelo próprio estado da habitação
+social (moradias populares), através das CDHU, até a concessão de subsídios para
+a construção de projetos específicos, como o \gls{PMCMV}. No entanto, haja vista
+que a moradia própria, no Brasil, assim como nos EUA e talvez no mundo todo, não
+é um direito (*entitlement*) do cidadão, que ele pode requerer a qualquer
+momento, mas uma concessão, sujeita a uma restrição orçamentária, o que acaba
+causando a violação do princípio da equidade horizontal, ou seja, o princípio
+segundo o qual o Estado deveria tratar igualmente os iguais
+[@malpezzi_affordable_2018_2]: nestes programas, enquanto uma parte da população
+de baixa renda é agraciada com uma unidade habitacional, outra parte da
+população não recebe nada. 
+
+Nos EUA, segundo @malpezzi_affordable_2018_2, apenas um terço dos cidadãos 
+elegíveis são contemplados com algum dos benefícios de promoção de moradia digna.
+
+Outros problemas com os programas de incentivo à moradia digna se situam na 
+questão da eficiência. @malpezzi_affordable_2018_1 estabelece três princípios de
+eficiência aplicáveis aos programas habitacionais do \gls{MI}: a eficiência da
+produção, a eficiência da transferência e a eficiência administrativa.
+
+A eficência da produção diz respeito ao custo pago pelo governo para a construção
+de uma unidade, comparado com o custo do produtor mais eficiente do mercado. 
+
+A eficiência administrativa diz respeito à burocracia necessária para a 
+operacionalização dos programas, o que, em geral, não é desprezível.
+
+Já a eficiência da transferência é mais complexa. 
+
+Uma ilustração de como medir a eficiência da transferência pode ser  vista na
+Figura \@ref(fig:eficiencia), onde a curva $D$ representa a curva de preferência
+do consumidor (e não a demanda do mercado!), de maneira que ao preço de mercado
+$P_m$, a escolha do consumidor seria comprar uma unidade com $Q_m$ $m^2$.
+
+Suponha que o governo ofereça uma unidade habitacional com um desconto razoável 
+($P_c$) em relação aos preço de mercado ($P_m$). Ao preço $Q_c$, no entanto, a
+escolha do consumidor seria comprar $\tilde{Q}$ unidades de área, mas apenas lhe
+é oferecida a possibilidade de comprar $Q_c$ unidades ao preço $P_c$. Desta
+maneira, segundo @malpezzi_affordable_2018_1, a preferência do consumidor é 
+violada e, ao mesmo tempo em que ele ganha o bem-estar por poder comprar $Q_c$ 
+unidades a um preço $(P_m-P_c)$, igual a área do retângulo $a-b-c-d$ da Figura
+\@ref(fig:eficiencia), ele perde bem-estar de magnitude igual à área do 
+triângulo $e-c-f$. Assim, geometricamente, se a área $a-b-c-d$ é maior do que a 
+área do triângulo $e-c-f$, o consumidor estará obtendo um benefício líquido e 
+optará pela compra da unidade subsidiada. Caso contrário, o benefício líquido
+seria negativo e o consumidor optaria por não comprar a unidade.
+
+```{r eficiencia, fig.cap=""}
+plot_labels <- data_frame(label = expression("D", "P[m]", "P[c]", "d", "c", "e", "f"),
+                          x = c(1,     9, 9, 3.25, 3.25, 3.5, 5.5),
+                          y = c(8.5, 5.5, 4, 3.25, 5.25, 7, 5.5))
+points <- data.frame(x = c(5, 3.5, 3.5, 3.5, 0, 0), y = c(5, 6.5, 3.5, 5, 3.5, 5))
+
+p1 <- ggplot(mapping = aes(x = x, y = y)) + 
+  geom_segment(aes(x = 1, y = 9, xend = 9, yend = 1), color = "#FF4036", size = 1) +
+  geom_hline(aes(yintercept = 5)) +
+  geom_hline(aes(yintercept = 3.5)) +
+  geom_segment(aes(x = 5, y = 0, xend = 5, yend = 5), lty = "dotted") +
+  geom_segment(aes(x = 0, y = 5, xend = 5, yend = 5), lty = "dotted") + 
+  geom_segment(aes(x = 3.5, y = 0, xend = 3.5, yend = 6.5), lty = "dotted") +
+  geom_segment(aes(x = 0, y = 3.5, xend = 3.5, yend = 3.5), lty = "dotted") + 
+  geom_segment(aes(x = 6.5, y = 0, xend = 6.5, yend = 3.5), lty = "dotted") +
+  geom_text(data = plot_labels,
+            aes(x = x, y = y, label = label), parse = TRUE) +
+  geom_point(data = points, aes(x = x, y = y), size = 2) +
+  labs(x = expression("Quantidade"~(m^2)), y = expression("Preço por "~m^2)) +
+  theme_classic() + 
+  coord_equal() +
+  scale_x_continuous(expand = c(0, 0), breaks = c(3.5, 5, 6.5), limits = c(0,13),
+                     labels = expression(Q[c], Q[m], tilde(Q))) +
+  scale_y_continuous(expand = c(0, 0), breaks = c(3.5, 5), limits = c(0,13),
+                     labels = expression(b, a))
+p1
+```
+\bcenter
+\small Fonte -- Adaptado de @malpezzi_affordable_2018_1.
+\ecenter
+
+A eficiência é simplesmente a razão entre o benefício líquido obtido pelo
+consumidor ($\overline{a-b-c-d} - \overline{e-c-f}$) e o custo de transferência
+arcada pelo governo ($a-b-c-d$).
+
+Os programas habitacionais que atuam pelo lado da oferta, nos EUA, tem
+eficiência média de transferência de 72%. A eficiência de produção de moradias 
+públicas, nos EUA, segundo diversos estudos, é, em média, de 63%.
+
+A eficiência microeconômica total é o produto das três eficiência citadas. A
+eficiência adminstrativa não foi medida e não deve ser muito importante em
+termos comparativos (cada programa exigirá um tipo de burocracia diferente, mas
+sempre será necessária alguma burocracia para a operacionalização de cada 
+programa). Deste modo, a eficiência microeconômica, desconsiderando-se a 
+eficiência admnistrativa, é, em média, nos EUA, para o programa de construção de
+moradias sociais, de 47% ($0,63 \cdot 0,73$) [@malpezzi_affordable_2018_1].
+
+Além disto, programas de construção de habitações promovidos pelos governos
+tem efeitos que podem ser ruins sobre a oferta privada. Isto pode ser 
+compreendido através da Figura @\ref(fig:cohab): considere-se um mercado em 
+equilíbrio com preços em nível $P_1$ e quantidades $Q_1$, até que entre em vigor 
+um programa habitacional do governo, que tenderá a diminuir a demanda privada, 
+levando, no curto prazo, para o preço de equilíbrio $P_2$. Com os preços 
+reduzidos no mercado privado, no médio prazo a tendência é que algumas unidades 
+do mercado privado sejam remodeladas para outros usos e outras abandonadas, de 
+maneira que o estoque tende a cair para $Q_2$ e os preços do mercado privado
+sobem para $P_3$. No longo prazo, a tendência é que mais e mais unidades saim
+do estoque privado e os preços voltam ao preço original de equilíbrio $P_1$.
+
+```{r cohab, fig.cap="Custo regulatório no \\gls{MI}."}
+plot_labels <- data_frame(label = expression("O[1]", "O[2]", "D[2]", "D[1]"),
+                          x = c(5.5, 9, 1, 2),
+                          y = c(12, 8.5, 10.5, 12.5))
+points <- data.frame(x = c(5, 5, 4, 2), y = c(6, 9, 7, 9))
+
+p1 <- ggplot(mapping = aes(x = x, y = y)) + 
+  geom_segment(aes(x = 1, y = 5, xend = 9, yend = 10), color = "#0073D9", size = 1) + 
+  geom_segment(aes(x = 1, y = 10, xend = 10, yend = 1), color = "#FF4036", size = 1) +
+  geom_segment(aes(x = 2, y = 12, xend = 11, yend = 3), color = "#FF4036", size = 1) +
+  #geom_segment(aes(x = 1, y = 4, xend = 9, yend = 12), color = "#0073D9", size = 1) + 
+  geom_vline(aes(xintercept = 5), color = "#0073D9", size = 1) +
+  geom_segment(aes(x = 5, y = 6, xend = 5, yend = 9), color = "purple", size = 2) +
+  geom_segment(aes(x = 2, y = 0, xend = 2, yend = 12), lty = "dotted") +
+  geom_segment(aes(x = 0, y = 6, xend = 5, yend = 6), lty = "dotted") + 
+  geom_segment(aes(x = 4, y = 0, xend = 4, yend = 7), lty = "dotted") +
+  geom_segment(aes(x = 0, y = 7, xend = 4, yend = 7), lty = "dotted") + 
+  geom_segment(aes(x = 0, y = 9, xend = 5, yend = 9), lty = "dotted") + 
+  geom_text(data = plot_labels,
+            aes(x = x, y = y, label = label), parse = TRUE) +
+  geom_point(data = points, aes(x = x, y = y), size = 2) +
+  labs(x = "Quantidade", y = "Preço") +
+  theme_classic() + 
+  coord_equal() +
+  scale_x_continuous(expand = c(0, 0), breaks = c(2, 4, 5), limits = c(0,13),
+                     labels = expression(Q[3], Q[2], Q[1])) +
+  scale_y_continuous(expand = c(0, 0), breaks = c(6, 7, 9), limits = c(0,13),
+                     labels = expression(P[2], P[3], P[1]))
+p1
+```
+Deve-se ter em mente que tal programa será bem avaliado pelo contemplado, o 
+consumidor privado também acabará sendo beneficiado por uma redução de preços de
+curto/médio prazos, porém o programa desincentiva o mercado privado e afeta os
+proprietários de imóveis neste mercado quando do lançamento do programa.
+
+#### Programas habitacionais que atuam pelo lado da demanda
+
+Do ponto de vista microeconômico, os incentivos habitacionais que atuam pelo 
+lado da demanda são mais eficientes (82%), segundo @malpezzi_affordable_2018_1.
+Porém, este cálculo supõe que os preços não se alteram com a emissão de 
+*vouchers* para aluguéis, por exemplo, o que nem sempre pode ser verdade.
+
+Na Figura \@ref(fig:vouchers) é apresentado como o programa de distribuição de
+*vouchers* (aluguel social) deve impactar o mercado: no curto prazo, a oferta
+está dada ($O_1$) quando da emissão dos *vouchers*, portanto o preço de
+equilíbrio original se altera (no caso, dos aluguéis) de $P_1$ para $P_2$, por
+conta do repentino aumento da demanda (deslocamento de $D_1$ para $D_2$). No
+entanto, a médio prazo, a oferta aumenta com o aumento dos preços ($O_2$): a
+quantidade oferta passa a ser $Q_2$ e o preço passa para $P_3$. Se a oferta for
+elástica no longo prazo, a quantidade de unidades ofertadas para aluguel vai
+aumentar paulatinamente até que os preços voltam a $P_1$, correspondentes agora
+a uma quantidade maior $Q_3$.
+
+```{r vouchers, fig.cap="Custo regulatório no \\gls{MI}."}
+plot_labels <- data_frame(label = expression("O[1]", "O[2]", "D[1]", "D[2]"),
+                          x = c(5.5, 9, 1, 3),
+                          y = c(12, 8.5, 8.5, 10.5))
+points <- data.frame(x = c(5, 5, 7, 9), y = c(5, 9, 7, 5))
+
+p1 <- ggplot(mapping = aes(x = x, y = y)) + 
+  geom_segment(aes(x = 1, y = 1, xend = 9, yend = 9), color = "#0073D9", size = 1) + 
+  geom_segment(aes(x = 1, y = 9, xend = 9, yend = 1), color = "#FF4036", size = 1) +
+  geom_segment(aes(x = 3, y = 11, xend = 11, yend = 3), color = "#FF4036", size = 1) +
+  #geom_segment(aes(x = 1, y = 4, xend = 9, yend = 12), color = "#0073D9", size = 1) + 
+  geom_vline(aes(xintercept = 5), color = "#0073D9", size = 1) +
+  geom_segment(aes(x = 5, y = 5, xend = 5, yend = 9), color = "purple", size = 2) +
+  geom_segment(aes(x = 9, y = 0, xend = 9, yend = 5), lty = "dotted") +
+  geom_segment(aes(x = 0, y = 5, xend = 9, yend = 5), lty = "dotted") + 
+  geom_segment(aes(x = 7, y = 0, xend = 7, yend = 7), lty = "dotted") +
+  geom_segment(aes(x = 0, y = 7, xend = 7, yend = 7), lty = "dotted") + 
+  geom_segment(aes(x = 0, y = 9, xend = 5, yend = 9), lty = "dotted") + 
+  geom_text(data = plot_labels,
+            aes(x = x, y = y, label = label), parse = TRUE) +
+  geom_point(data = points, aes(x = x, y = y), size = 2) +
+  labs(x = "Quantidade", y = "Preço") +
+  theme_classic() + 
+  coord_equal() +
+  scale_x_continuous(expand = c(0, 0), breaks = c(5, 7, 9), limits = c(0,13),
+                     labels = expression(Q[1], Q[2], Q[3])) +
+  scale_y_continuous(expand = c(0, 0), breaks = c(7, 5, 9), limits = c(0,13),
+                     labels = expression(P[3], P[1], P[2]))
+p1
+```
+\bcenter
+\small Fonte -- Adaptado de @malpezzi_affordable_2018_2.
+\ecenter
+
+Desta maneira, segundo @malpezzi_affordable_2018_2, o parâmetro chave o mercado
+é a elasticidade da oferta: se a oferta for bem elástica, no longo prazo,
+programas governamentais que atuam pelo lado da oferta não tem efeito nos
+preços, mas aumentam o estoque, já que a oferta aumenta para atender a nova
+demanda. Por outro lado, se a oferta for inelástica, os preços sobem e não há
+um aumento no estoque, já que a oferta não acompanha a maior demanda.
+
+#### Considerações
+
+Como visto nos itens anteriores, os programas habitacionais que atuam pelo lado
+da oferta, além de ter uma maior eficiência, estimulam o mercado privado e podem
+não ter efeito sobre os preços, caso a oferta do mercado seja elástica. Desta 
+maneira, justifica-se a dupla abordagem proposta por 
+@malpezzi_affordable_2018_1: atuar do lado da da demanda na disponibilização de
+*vouchers* para as famílias de baixa renda, buscando universalizar o máximo 
+possível o acesso a estes *vouchers*, evitando assim os problemas de inequidade
+horizontal e reformar os mercados de maneira a tornar a oferta do mercado
+habitacional elástica, que é o assunto da próxima seção.
+
+## Instrumentos de política de solo
+
 Os instrumentos tradicionais da política de solo historicamente não se mostraram
 capazes de satisfazer a grande demanda por imóveis urbanos nos países da \gls{AL},
 especialmente no Brasil. A grande falência das políticas de solo podem ser
@@ -44,7 +442,7 @@ ocorreu e, conforme visto no capítulo \@ref(economia), não se pode prever que
 acontecerá.
 
 Claro está também que o pleno desenvolvimento do mercado financeiro, como 
-exposto nos capítulos \@ref(economia) e \@ref(copulas) não deve trazer consigo
+exposto no capítulo \@ref(crise2008)) não deve trazer consigo
 uma solução para o problema. Pelo contrário, o maior desenvolvimento de 
 instrumentos financeiros, como foi visto, tende a gerar bolhas no mercado
 imobiliário, o que tende a agravar o problema habitacional, prejudicando as

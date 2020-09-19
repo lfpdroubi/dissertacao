@@ -75,9 +75,7 @@ mercados forem atingidos por choques de demanda.
 
 No entanto, em alguns mercados isto não é tão simples: muitos mercados estão
 limitados por condições geográficas e simplesmente não é possível tornar a 
-oferta elástica nestes tipos de mercado. Em outros mercados, apesar da oferta
-ser relativamente elástica, o choque de demanda pode ser tão forte que mesmo com
-o aumento da oferta, os preços oscilem muito. Ademais, em alguns mercados, como
+oferta elástica nestes tipos de mercado. Ademais, em alguns mercados, como
 visto no item anterior, o tempo de desenvolvimento é maior, o que faz com que 
 um aumento de demanda leve alguns anos até que possa ser absorvido pelo mercado.
 
@@ -256,7 +254,7 @@ plot_grid(title, plot_row, ncol = 1,
           rel_heights = c(0.1, 1))
 ```
 \bcenter
-Fonte: Adaptado de @Malpezzi2002TheRO [p. 19].
+\small Fonte -- Adaptado de @Malpezzi2002TheRO [p. 19].
 \ecenter
 
 Para @regulation [p. 11], ainda, além do problema da oferta inelástica pode
@@ -324,7 +322,7 @@ p3 <- ggplot(mapping = aes(x = x, y = y)) +
 p3
 ```
 \bcenter
-Fonte: @Malpezzi2002TheRO [p. 19]
+\small Fonte -- @Malpezzi2002TheRO [p. 19]
 \ecenter
 
 Segundo @Malpezzi2002TheRO [p. 19], o processo descrito na Figura 
@@ -376,14 +374,14 @@ preços é muito menos, com ou sem especulação.
 knitr::include_graphics("images/TheRole_1.png")
 ```
 \bcenter
-Fonte: @Malpezzi2002TheRO [p. 24]
+\small Fonte -- @Malpezzi2002TheRO [p. 24]
 \ecenter
 
 ```{r TheRole2, fig.cap="Resposta do \\gls{MI} com oferta inelástica a um choque de demanda."}
 knitr::include_graphics("images/TheRole_2.png")
 ```
 \bcenter
-Fonte: @Malpezzi2002TheRO [p. 24]
+\small Fonte -- @Malpezzi2002TheRO [p. 24]
 \ecenter
 
 Deve-se notar que, apesar do modelo ser teoricamente razoável, os resultados das
@@ -444,7 +442,7 @@ pl1 <- ggplot(df, aes(x = year, y = price)) +
 pl1
 ```
 \bcenter
-Fonte: O autor. Adaptado de @Malpezzi2002TheRO.
+\small Fonte -- O autor. Adaptado de @Malpezzi2002TheRO.
 \ecenter
 
 ```{r}
@@ -485,12 +483,12 @@ pl2 <- ggplot(df, aes(x = year, y = price)) +
 pl2
 ```
 \bcenter
-Fonte: O autor. Adaptado de @Malpezzi2002TheRO.
+\small Fonte -- O autor. Adaptado de @Malpezzi2002TheRO.
 \ecenter
 
-# ```{r ambas, fig.cap="CCC", out.width="100%"}
-# plot_grid(pl1, pl2, labels = "AUTO")
-# ```
+<!-- # ```{r ambas, fig.cap="CCC", out.width="100%"} -->
+<!-- # plot_grid(pl1, pl2, labels = "AUTO") -->
+<!-- # ``` -->
 
 
 ### Medidas macroprudenciais de prevenção de bolhas
@@ -584,7 +582,7 @@ ilustra o fenômeno desde meados do século XIX.
 knitr::include_graphics("images/wrp-2.png")
 ```
 \bcenter
-Fonte: @roberts2020, adaptado de @crisis.
+\small Fonte -- @roberts2020, adaptado de @crisis.
 \ecenter
 
 A queda nas taxas de lucro obviamente impactam as taxas de juros dos títulos
@@ -640,7 +638,7 @@ ggplot(data = df[which(df$date >= as.Date("1990-01-01")), ],
             inherit.aes=F, fill='grey', alpha=0.5)
 ```
 \bcenter
-Fonte: O autor, à partir de dados do \gls{FRED}.
+\small Fonte -- O autor, à partir de dados do \gls{FRED}.
 \ecenter
 
 Mesmo uma análise mais ampla (desde 1953) das taxas de juros mostram que o 
@@ -682,7 +680,7 @@ ggplot(data = df_daily[which(df_daily$date >= as.Date("1990-01-01")), ],
             inherit.aes=F, fill='grey', alpha=0.5)
 ```
 \bcenter
-Fonte: O autor, à partir de dados do \gls{FRED}.
+\small Fonte -- O autor, à partir de dados do \gls{FRED}.
 \ecenter
 
 No momento em que se escreve deste trabalho, a taxa de juros dos títulos de mais
@@ -730,7 +728,7 @@ ggplot(data = df, aes(x = date, y = rate, color = bond)) +
             inherit.aes=F, fill='grey', alpha=0.5)
 ```
 \bcenter
-Fonte: O autor, à partir de dados do \gls{FRED}.
+\small Fonte -- O autor, à partir de dados do \gls{FRED}.
 \ecenter
 
 Esta longa e sustentada tendência de queda de longo prazo, com esta persistência
@@ -778,7 +776,9 @@ ggplot(data = df_mortgages, aes(x = date, y = rate, color = index)) +
             aes(xmin=Peak, xmax=Trough, ymin=-Inf, ymax=+Inf),
             inherit.aes=F, fill='grey', alpha=0.5)
 ```
-
+\bcenter
+\small Fonte -- O autor, à partir de dados do \gls{FRED}.
+\ecenter
 
 Esta alta queda das taxas de juros dos ativos financeiros de longo prazo é uma
 das causadoras da elevação dos preços dos mesmos ativos, assim como a elevação
@@ -971,7 +971,7 @@ SPV -> Equity [label = '3º']
 # knitr::include_graphics("images/CDO.png")
 ```
 \bcenter
-Fonte: Do autor. Adaptado de @devil.
+\small Fonte -- Do autor. Adaptado de @devil.
 \ecenter
 
 Na figura \@ref(fig:CDO) pode ser visto um esquemático do funcionamento de um
@@ -1025,7 +1025,7 @@ Segundo @watts, a duração típica de um contrato de \gls{CDO} era de 5 anos.
 Table: Parte da matriz de risco de default da Fitch.
 
 
-Fonte: @watts.
+\small Fonte -- @watts.
 
 
 | **Tranche (Rating)**   | **Attachment Points** |
@@ -1038,7 +1038,7 @@ Fonte: @watts.
 | Equity (NA)            | 0% -- 11%             |
 Table: Exemplo de parcelamento de \gls{CDO}.
 
-Fonte: @watts.
+\small Fonte -- @watts.
 
 Para Donnelly e Embrechts [@devil, 20], os *equity tranches* são produtos com
 muito risco, portanto de pouco valor, o que interessa aos grandes especuladores,

@@ -61,6 +61,8 @@ desordenado das cidades, com a inevitável formação dos cortiços e favelas pa
 acomodar a parte mais carente da população que, expulsa do campo, vai se
 aglomerar nos grandes centros urbanos em busca da sua sobrevivência.
 
+## População rural e população urbana
+
 Dados compilados pelas Nacões Unidas foram organizados na tabela 
 \@ref(tab:pop-table) com o intuito de demonstrar a evolução e o atual tamanho 
 deste problema.
@@ -106,13 +108,13 @@ knitr::kable(pop_table[c(13, 8, 7, 5, 4, 12, 6, 10, 3, 9, 11, 1, 2),
   pack_rows("América", 7, 13)
 ```
 \bcenter
-Fonte: @doi:10.1177/0959683609356587
+\small Fonte -- @doi:10.1177/0959683609356587
 \ecenter
 
 Ainda, para melhor ilustrar, foram elaborados os gráficos das figuras 
 \@ref(fig:pop-urb-mundo) a \@ref(fig:pop-urb-brazil-brics).
 
-Na figura \@ref(fig:pop-urb-mundo), pode-se notar que a população urbana no 
+Na Figura \@ref(fig:pop-urb-mundo), pode-se notar que a população urbana no 
 Brasil vem aumentando, desde 1950, numa taxa superior à média dos países em
 desenvolvimento (*Less developed regions*), atingindo uma proporção superior 
 inclusive à dos países mais desenvolvidos (*More developed regions*).
@@ -135,10 +137,10 @@ pop_urb %>%
   guides(color=guide_legend(title="País/Região"))
 ```
 \bcenter
-Fonte: @doi:10.1177/0959683609356587
+\small Fonte -- @doi:10.1177/0959683609356587
 \ecenter
 
-Na figura \@ref(fig:pop-urb-continents) pode-se ver as séries da população
+Na Figura \@ref(fig:pop-urb-continents) pode-se ver as séries da população
 urbana em diversos continentes desde 1800. Percebe-se neste gráfico também uma
 maior aceleração do crescimento da população urbana na América Latina e Caribe a
 partir de meados da década de 40, chegando esta região a ultrapassar a população
@@ -170,14 +172,14 @@ pop_urb %>%
   guides(color=guide_legend(title="País/Região"))
 ```
 \bcenter
-Fonte: @doi:10.1177/0959683609356587
+\small Fonte -- @doi:10.1177/0959683609356587
 \ecenter
 
-A figura \@ref(fig:pop-urb-brazil-latinAmerica) mostra a evolução da população
-urbana no Brasil em comparação com o continente sul-americano e a América Latina,
+A Figura \@ref(fig:pop-urb-brazil-latinAmerica) mostra a evolução da população
+urbana no Brasil em comparação com o continente sul-americano e a \gls{AL},
 dando destaque para alguns vizinhos. 
 
-```{r pop-urb-brazil-latinAmerica, out.width = "80%", fig.cap = "População Urbana - Brasil vs. AL."}
+```{r pop-urb-brazil-latinAmerica, out.width = "80%", fig.cap = "População Urbana - Brasil vs. \\gls{AL}."}
 cols <- gg_color_hue(8)
 pop_urb %>%
   filter( 
@@ -201,10 +203,10 @@ pop_urb %>%
   guides(color=guide_legend(title="País/Região"))
 ```
 \bcenter
-Fonte: @doi:10.1177/0959683609356587
+\small Fonte -- @doi:10.1177/0959683609356587
 \ecenter
 
-A figura \@ref(fig:pop-urb-brazil-developed) mostra o comparativo da população
+A Figura \@ref(fig:pop-urb-brazil-developed) mostra o comparativo da população
 urbana no Brasil com uma seleção de países desenvolvidos desde 1800.  Quanto aos
 países desenvolvidos, nota-se que tiveram, primeiramente, uma ascenção um pouco
 mais lenta da população urbana (excessão para a Grã-Bretanha, primeira nação a
@@ -248,13 +250,13 @@ pop_urb %>%
   guides(color=guide_legend(title="País/Região"))
 ```
 \bcenter
-Fonte: @doi:10.1177/0959683609356587
+\small Fonte -- @doi:10.1177/0959683609356587
 \ecenter
 
-E a figura \@ref(fig:pop-urb-brazil-brics) mostra a comparação dos dados do 
-Brasil com os outros países do grupo dos BRICS.
+E a Figura \@ref(fig:pop-urb-brazil-brics) mostra a comparação dos dados do 
+Brasil com os outros países do grupo dos \gls{BRICS}.
 
-```{r pop-urb-brazil-brics, out.width = "80%", fig.cap = "População Urbana - Brasil vs. BRICS."}
+```{r pop-urb-brazil-brics, out.width = "80%", fig.cap = "População Urbana - Brasil vs. \\gls{BRICS}."}
 pop_urb %>%
   filter( 
     Entity == "Brazil" |    
@@ -274,7 +276,7 @@ pop_urb %>%
   guides(color=guide_legend(title="País/Região"))
 ```
 \bcenter
-Fonte: @doi:10.1177/0959683609356587
+\small Fonte -- @doi:10.1177/0959683609356587
 \ecenter
 
 Em meados dos anos 60, apenas 46,1% da população brasileira era urbana, uma

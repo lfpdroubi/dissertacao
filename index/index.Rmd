@@ -45,14 +45,14 @@ output:
 abstract: |
   `r if(knitr:::is_latex_output()) paste(readLines("00-abstract.Rmd"), 
   collapse = '\n  ')`
-palavras-chave: [Mercado Imobiliário, Macroeconomia, Microeconomia]
+palavras-chave: [Desenvolvimento Urbano, Macroeconomia, Microeconomia]
 foreignabstract: |
   `r if(knitr:::is_latex_output()) paste(readLines("00-foreignabstract.Rmd"), 
   collapse = '\n  ')`
 # If you'd rather include the preliminary content in files instead of inline
 # like below, use a command like that for the abstract above.  Note that a tab 
 # is needed on the line after the `|`.
-keyword: [Real Estate, Macroeconomics,  Microeconomics]
+keyword: [Urban Development, Macroeconomics,  Microeconomics]
 epigrafe: |
   | "Eppur si muove!"  
   | (Galileu Galilei, 1633)
@@ -136,6 +136,7 @@ gg_color_hue <- function(n) {
   hues = seq(15, 375, length = n + 1)
   hcl(h = hues, l = 65, c = 100)[1:n]
 }
+warnings(file = "E:/ufsc/dissertacao/index/R-warnings.txt")
 ```
 
 <!-- On ordering the chapter files:
@@ -198,10 +199,12 @@ sociais e econômicas e às restrições da lei e dos ônus legais [@realestate,
 
 ## O Mercado Imobiliário
 
-O mercado imobiliário urbano pode ser dividido basicamente em:
+O mercado imobiliário urbano pode ser dividido basicamente em [@wheaton1999]:
 
-1. Mercado de imóveis residenciais e;
-2. Mercado de imóveis comerciais.
+1. Mercado de imóveis residenciais;
+2. Mercado de imóveis comerciais para escritórios;
+3. Mercado de imóveis comerciais para o varejo (incluso shopping centers) e;
+4. Mercado de imóveis industriais
 
 @Case2000 identificaram quatro canais em que o Mercado Imobiliário se
 conecta à macroeconomia:
@@ -303,10 +306,10 @@ o que pode ser observado na tabela abaixo.
 Table: População habitando favelas no Brasil.
 
 \bcenter
-Fonte: Do autor, a partir de dados do Banco Mundial.
+\small Fonte -- Do autor, a partir de dados do Banco Mundial.
 \ecenter
 
-A figura \@ref(fig:slums) mostra graficamente a evolução da população urbana em
+A Figura \@ref(fig:slums) mostra graficamente a evolução da população urbana em
 favelas (em vermelho) e a população urbana total (em azul). Nota-se que o 
 aumento da população urbana ocorreu com a quase estagnada população das 
 favelas.
@@ -329,7 +332,7 @@ reflete um fenômeno de migração da cidade para o campo.
 knitr::include_graphics("images/urban-pop-in-out-of-slums.png")
 ```
 \bcenter
-Fonte: @ritchie_urbanization_2018
+\small Fonte -- @ritchie_urbanization_2018
 \ecenter
 
 Já para o IBGE [@ibge], segundo dados do censo de 2010, o Brasil possuía 11,4

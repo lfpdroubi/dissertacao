@@ -1,5 +1,40 @@
 # Conclusão {#conclusao}
 
+A armadilha de liquidez tende a deprimir os investimentos. Com juros no limite
+inferior (zero) e sem inflação, não é possível estimular os investimentos
+através da política monetária. Por outro lado, como visto no capítulo
+\@ref(politicas) as melhores políticas em relação aos programas habitacionais
+são as que focam no lado da demanda, que tem como efeito a elevação inicial dos
+preços e o consequente estímulo aos investimentos. Conforme visto no capítulo
+\@ref(economia), existe uma correlação bidirecional entre o aumento no preço dos
+imóveis com as taxas de inflação, o \gls{PIB} e outras variáveis
+macroeconômicas. Numa situação como uma armadilha de liquidez, é desejável que
+haja alta nos preços no geral, pois a inflação deprime as taxas de juros reais,
+incentivando os investimentos na Economia como um todo, não apenas no setor
+habitacional, ou seja, não há momento melhor, em termos macroeconômicos, do que
+este para a implantação de programas que incentivem a demanda por imóveis.
+
+Dado o grande déficit habitacional no Brasil, os investimentos devem ser
+grandes, se os programas habitacionais forem bem dimensionados. O maior
+investimento na construção de moradias tem o poder de puxar a demanda da
+indústria da construção (cimento, siderúrgicas, cerâmicas, etc.), da indústria
+leve (utensílios domésticos), do varejo (depósitos de construção, lojas de
+eletrodomésticos), entre outras. Pelo lado da oferta, estes incentivos devem ser
+acompanhados, é claro, com o investimento em infraestrutura urbana, visando
+dissolver os pontos de estrangulamento do mercado. Com nova infraestrutura,
+tem-se novos loteamentos e a oferta torna-se elástica. Também o setor de
+infraestrutura tem um impacto na indústrica de materiais de construção. Do lado
+fiscal, se o Governo Federal deverá ser o grande financiador do novo modelo, por
+outro lado terá um adicional de arrecadação via efeito multiplicador dos
+investimentos. Finalmente, o aumento do \gls{PIB} tenderá a compensar eventuais
+déficits orçamentários, mantendo a relação Dívida/\gls{PIB} em níveis razoáveis.
+
+## Objetivo 1
+
+## Objetivo 2
+
+## Objetivo 3
+
 Os tempos que se aproximam são de uma tendência de queda brutal das taxas de
 juros de longo prazo. Estas taxas apenas refletem uma imensa sobra de capital no
 sistema, decorrente da falta de oportunidades de inversões em atividades
@@ -23,7 +58,7 @@ desenfreada, atraindo ainda mais capitais para o mercado imobiliário.
 
 O problema destes juros muito baixos já se fez sentir nos países desenvolvidos,
 onde o excesso de capitais teve papel principal na criação de bolhas
-imobiliárias, como a do \gls{glo:subprime} norte-americano. Os principais prejudicados,
+imobiliárias, como a do *subprime* norte-americano. Os principais prejudicados,
 no final, são os mutuários, que perdem suas casas e suas poupanças, já que os
 especuladores tendem a lucrar com a liquidação forçada dos imóveis,
 revendendo-os depois de alguns anos com a recuperação dos preços, como foi 

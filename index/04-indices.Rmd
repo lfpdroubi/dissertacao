@@ -457,7 +457,7 @@ plot_grid(title, plot_row, ncol = 1,
           rel_heights = c(0.1, 1))
 ```
 \bcenter
-Fonte: O autor, com dados obtidos do FRED [@RHVRUSQ156N; @RRVRUSQ156N].
+\small Fonte -- O autor, com dados obtidos do FRED [@RHVRUSQ156N; @RRVRUSQ156N].
 \ecenter
 
 Outra \gls{HMV} importante não citada por @macroHousing é a *Homeownership rate*,
@@ -475,7 +475,7 @@ ggplot(USHOWN, aes(x = date, y = value)) +
      y = "%") 
 ```
 \bcenter
-Fonte: O autor, com dados obtidos do FRED [@RSAHORUSQ156S].
+\small Fonte -- O autor, com dados obtidos do FRED [@RSAHORUSQ156S].
 \ecenter
 
 É usual encontrar análises sobre o \gls{MI} com estas séries plotadas num 
@@ -547,7 +547,7 @@ legend("topleft",legend=c("HomeOwnership","HPI"),
 #   ggtitle("Temperature down, price up")
 ```
 \bcenter
-Fonte: O autor, com dados obtidos do FRED [@RSAHORUSQ156S; @CSUSHPINSA].
+\small Fonte -- O autor, com dados obtidos do FRED [@RSAHORUSQ156S; @CSUSHPINSA].
 \ecenter
 
 ## Comportamento recente dos índices de preços e relação com \gls{MV} e \gls{HMV}
@@ -567,7 +567,7 @@ A figura \@ref(fig:nhpi) mostra a evolução do *Home Price Index* de Case e
 Shiller, desde 1990. 
 
 É possível notar pela análise do índice que os preços dos imóveis que, após o
-estouro da bolha do \gls{glo:subprime}, os preços sofrem uma nítida tendência de
+estouro da bolha do *subprime*, os preços sofrem uma nítida tendência de
 alta, desde janeiro de 2012, ultrapassando já, em termos nominais, os níveis de
 preços anteriores à crise de 2008.
 
@@ -621,7 +621,7 @@ ggplot(window(rhpi, start = 1990 + 0/12), as.numeric = FALSE) +
           fill='grey', alpha=0.5)
 ```
 \bcenter
-Fonte: O autor, à partir de dados de @QuandlWIKI.
+\small Fonte -- O autor, à partir de dados de @QuandlWIKI.
 \ecenter
 
 Na atualidade este índice se encontra em `r brf(last(rhpi))` pontos, sendo 
@@ -680,7 +680,7 @@ ggplot(window(rhpi, start = 1953 + 0/12), as.numeric = FALSE) +
             fill='grey', alpha=0.5)
 ```
 \bcenter
-Fonte: O autor, à partir de dados de @QuandlWIKI.
+\small Fonte -- O autor, à partir de dados de @QuandlWIKI.
 \ecenter
 
 O valor mínimo da série histórica (não mostrado no gráfico) foi atingido em  
@@ -742,7 +742,7 @@ ggplot(global_rhpi, aes(x = dateq, y = equally.weighted)) +
 #  stat_smooth()
 ```
 \bcenter
-Fonte: O autor, à partir de dados de @QuandlWIKI.
+\small Fonte -- O autor, à partir de dados de @QuandlWIKI.
 \ecenter
 
 Deve-se reparar que, ao contrário do que aconteceu nos EUA, o pico em termos 

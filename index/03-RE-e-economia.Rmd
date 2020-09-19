@@ -14,7 +14,7 @@
 	\end{flushright}
 \end{epigrafe}
 
-## Os vários significados do termo \emph{economia}
+## Os vários significados do termo \emph{Economia}
 
 A economia é uma ciência social. Apesar do desenvolvimento recente das ciências
 econômicas ter levado muitos dos economistas da atualidade, em sua prática, a se
@@ -266,9 +266,8 @@ digraph nicegraph {
 ")
 ```
 \bcenter
-Fonte: Adaptado de @shelter [p. 189]
+\small Fonte -- Adaptado de @shelter [p. 189]
 \ecenter
-
 
 Para @shelter [p. 189], então, o problema dos \gls{MI} residenciais usualmente 
 se concentram no mercado de insumos, onde as intervenções governamentais 
@@ -276,6 +275,762 @@ deveriam se concentrar. Contudo, nem sempre é isto que ocorre: muitos governos
 decidem intervir diretamente no processo de produção ou no controle de preços ao
 consumidor final, como o controle de aluguéis, no entanto isto apenas distorce 
 os sinais enviados ao mercado e podem exacerbar o problema original.
+
+Ao longo das próximas seções serão apresentados conceitos econômicos 
+relacionados à modelagem do \gls{MI}, tanto em nívem micro, quanto 
+macroeconômico.
+
+### Particularidades do mercado imobiliário
+
+Também em nível microeconômico o mercado imobiliário é um mercado diferenciado 
+dos outros mercados de bens de consumo. Apesar de toda a indústria da construção
+ter evoluído muito ao longo das últimas décadas, ainda persiste no Brasil um
+forte componente artesanal na construção civil, o que implica em bens imóveis
+de características muito heterogêneas, a depender da mão-de-obra aplicada na sua
+execução. Também a questão do projeto arquitetônico implica numa singularidade
+para cada bem imobiliário. Mas mais importante ainda é a questão da localização,
+que torna cada imóvel único. Isto não ocorre em qualquer outro mercado de bens 
+de consumo. A não ser por questões de natureza sentimental, um carro, uma 
+geladeira, ou praticamente qualquer outro bem de consumo é produzido em série: 
+existem milhares de itens iguais no mercado. Isto nunca ocorre com os imóveis.
+Mesmo apartamento vizinhos, em um mesmo prédio, tem características diferentes,
+dada a sua posição solar, localização do andar em relação ao prédio, a vista
+que cada um possui, entre outras questões. 
+
+Segundo a NBR 14.653-01 [-@NBR1465301, x], "o mercado imobiliário caracteriza-se
+como um 'mercado imperfeito', com bens não homogêneos, estoque limitado,
+liquidez diferenciada e grande influência de fatores externos."
+
+De acordo com @ADAMS2010 [p. 3], a forte inércia dos preços do mercado
+imobiliário influencia o comportamento do mercado durante os *booms* econômicos,
+já que a exuberância das expectativas (exuberância irracional) dos investidores
+e proprietários de imóveis facilita a formação de bolhas nestes mercados. Além
+disto, a falta de informação a respeito de preços no mercado imobiliário, pelo
+motivo deste ser um mercado segmentado, ou seja, os preços obedecem uma lógica
+local, também é uma facilitadora da formação de bolhas.
+
+## O Mercado Imobiliário e a Microeconomia {#micro}
+
+O \gls{MI}, por sua pujança e importância, não pode ser considerado um simples
+mercado de bens, como outros bens de consumo em geral, como automóveis, móveis
+ou eletrodomésticos. Sua análise requer um estudo mais aprofundado das variáveis
+da Economia do país, não apenas por conta do seu fator exógeno sobre o \gls{MI},
+mas também pela interação que este mercado apresenta com estas variáveis. Isto
+não quer dizer, contudo, que se dispensa a análise do \gls{MI} em nível
+microeconômico, o que aliás a NBR 14.653-01 [-@NBR1465301] parece ter acabado de
+perceber e recomendar, como será visto na próxima seção. A análise do \gls{MI} a 
+nível microeconômico é importante, sobretudo, para o desenvolvimento dos 
+aspectos regulatórios deste mercado em nível local: para desenvolver uma 
+regulação balanceada é importante entender não apenas os aspectos positivos da
+regulação, mas é preciso conhecer também os seus efeitos sobre os preços dos 
+imóveis, sobretudo os efeitos da regulação sobre a volatilidade dos mesmos.
+
+
+### Estruturas básicas de mercado
+
+A nova versão da NBR 14.653-01 [-@NBR1465301, ix] traz uma evolução quanto à 
+consideração das diversas estruturas de mercado possíveis para a avaliação de um
+bem.
+
+> As estruturas básicas do mercado podem ser, resumidamente:
+>
+>* **Concorrência Perfeita**: situação em que o número de vendedores e de
+> compradores é suficientemente elevado para que um agente isolado não seja 
+> capaz de influenciar o comportamento dos preços;
+>
+>* **Monopólio**: É constituído por um único vendedor;
+>
+>* **Monopsônio**: é constituído por um único comprador;
+>
+>* **Oligopólio**: é constituído por um número pequeno de vendedores;
+>
+>* **Oligopsônio**: é constituído por um número pequeno de compradores.
+
+No entanto, a NBR 14.653-01 [-@NBR1465301] não deixa claro de que modo cada
+estrutura de mercado deve impactar na avaliação do valor final de mercado do 
+imóvel.
+
+Outro problema com a NBR 14.653-01 [-@NBR1465301] é que os mercados não deveriam
+ser classificados apenas em relação à sua estrutura concorrencial, mas também de
+acordo com as suas restrições geográficas e/ou regulatórias: existem mercados em
+que não é possível aumentar a oferta, mesmo com o aumento da demanda, porque
+existem limitações geográficas que impedem que isto ocorra, ou ao menos impedem
+que isto seja feito sem que antes sejam feitas grandes intervenções urbanas que,
+inicialmente, permitam que a área seja loteada. Em outros mercados, existem
+questões regulatórias fortes que impedem um aumento da oferta de bens imóveis. É
+o caso de Brasília, por exemplo: na região do plano-piloto existem questões de 
+gabarito que impedem uma maior verticalização e também existe um grande número 
+de imóveis em propriedade do Estado brasileiro, que distorcem o funcionamento do 
+mercado.
+
+#### Equilíbrio de mercado
+
+O preço de equilíbrio de um bem se dá, geometricamente falando, no cruzamento 
+das curvas de oferta e demanda, ou seja, o prelço de equilíbrio, em qualquer
+mercado, é o ponto onde a oferta e a demanda do mercado são iguais 
+[@varian, p. 310].
+
+Há de se discernir, no entanto, entre equilíbrio de curto e de longo prazo.
+
+A Figura \@ref(fig:equilibrioMercado) ilustra o equilíbrio num mercado
+hipotético, modelado pelas curvas **O** (oferta) e **D** (demanda). Para este
+mercado, o equilíbrio se dá no ponto de coordenadas ($\tilde Q, \tilde P$). Às
+quantidades $\tilde P$ e $\tilde Q$ dão-se o nome de preço e quantidade de 
+equilíbrio.
+
+```{r equilibrioMercado, fig.cap="Equilíbrio de mercado."}
+source("curve_intersect.R")
+demand <- Hmisc::bezier(c(1, 3, 9),
+                        c(9, 3, 1)) %>%
+  as_data_frame()
+
+supply <- Hmisc::bezier(x = c(1, 8, 9),
+                        y = c(1, 5, 9)) %>%
+  as_data_frame()
+
+intersection_xy <- curve_intersect(supply, demand)
+
+intersections <- intersection_xy %>% as_data_frame()
+
+plot_labels <- data_frame(label = c("D", "O"),
+                          x = c(1, 8.25),
+                          y = c(8, 8))
+
+p1 <- ggplot(mapping = aes(x = x, y = y)) + 
+  geom_path(data = supply, color = "#0073D9", size = 1) + 
+  geom_path(data = demand, color = "#FF4036", size = 1) + 
+  geom_segment(data = intersections, 
+               aes(x = x, y = 0, xend = x, yend = y), lty = "dotted") +
+  geom_segment(data = intersections, 
+               aes(x = 0, y = y, xend = x, yend = y), lty = "dotted") + 
+  geom_text(data = plot_labels,
+            aes(x = x, y = y, label = label), parse = TRUE) +
+  geom_point(data = intersections, size = 3) +
+  labs(x = "Quantidade", y = "Preço") +
+  theme_classic() + 
+  coord_equal() +
+  scale_x_continuous(expand = c(0, 0), breaks = intersections$x,
+                     labels = expression(tilde(Q))) +
+  scale_y_continuous(expand = c(0, 0), breaks = intersections$y,
+                     labels = expression(tilde(P)))
+p1
+```
+
+O equilíbrio de um mercado, no entanto, denominado equilíbrio estático ou de
+curto prazo, está sujeito a choques que podem perturbar este equilíbrio.
+
+De acordo com @varian [p. 310], um mercado competitivo (concorrência perfeita),
+é um mercado em que cada agente econômico, ofertante ou demandante, considera os
+preços como dados, *i.e.* fora de seu controle. Não há, portanto, num mercado
+competitivo, restrições à entrada de novas empresas [@varian, p. 433]. Neste
+mercado, o que determina o preço é a ação conjunta de todos os agentes do 
+mercado.
+
+#### Elasticidades
+
+Para a correta descrição do funcionamento de um \gls{MI} em particular é
+importante que sejam conhecidas, ainda que aproximadamente, as elasticidades da
+oferta e da demanda do mercado em relação aos preços e outras variáveis
+relevantes, como a renda da população. Basicamente, o conceito de elasticidade
+está relacionado a quantidades marginais: qual a quantidade marginal de uma
+mercadoria será demandada (ou ofertada) se a variável de referência aumenta (ou
+diminui) em uma unidade.
+
+##### Elasticidade-preço da demanda
+
+A elasticidade-preço da demanda, \gls{varepsilon_p}, definida conforme a equação
+\@ref(eq:epdemanda) [@varian, p. 302], mede a quantidade marginal que será
+demandada do mercado se o preço de uma mercadoria aumenta ou diminui em uma
+unidade de preço. Geralmente a elasticidade-preço da oferta é, então, um número
+negativo [@varian, 289].
+
+\begin{equation}
+\varepsilon_p = \frac{p}{q}\frac{\mathrm{d} q}{\mathrm{d} p}
+(\#eq:epdemanda)
+\end{equation}
+
+Uma maneira mais conveniente (e exata) de se escrever a equação da elasticidade 
+é a apresentada na equação \@ref(eq:elasticidadeLN), em função do logaritmo
+natural das variáveis [@varian, p.307-308]:
+
+\begin{equation}
+\varepsilon_p = \frac{\mathrm{d} \ln(q)}{\mathrm{d} \ln(p)}
+(\#eq:elasticidadeLN)
+\end{equation}
+
+Segundo Mayo (1981) e Olsen (1986) [*apud* @Malpezzi2002TheRO, p.23], uma boa 
+estimativa para o valor da elasticidade-preço da demanda é algo em torno de -0,8. 
+
+##### Elasticidade-renda da demanda
+
+A elasticidade-renda da demanda, \gls{varepsilon_r}, mede como muda a quantidade
+demandada quando a renda do consumidor varia [@varian, p.300]. De acordo com a
+elasticidade-renda os bens podem ser classificados em bens normais, *i.e.* bens
+cuja demanda aumenta com o aumento da renda; bens inferiores, *i.e.* bens cuja
+demanda diminui com o aumento da renda; e bens de luxo ($\varepsilon_r > 1$),
+*i.e.* bens cujo aumento na demanda é mais do que proporcional ao aumento da
+renda (um aumento de 1% na renda conduz a um aumento de mais de 1% da demanda).
+
+A análise da elasticidade-renda da demanda pode ser feita a partir das curvas
+de Engel, como na Figura \@ref(fig:engel1):
+
+```{r engel1, fig.cap="Curvas de Engel no Espaço Aluguéis vs. Renda."}
+engel1 <- Hmisc::bezier(c(2, 5, 9),
+                        c(3, 8, 7)) %>%
+  as_data_frame()
+
+engel2 <- Hmisc::bezier(x = c(2, 8, 7),
+                        y = c(1, 5, 9)) %>%
+  as_data_frame()
+
+plot_labels <- data_frame(label = expression("epsilon > 1", "epsilon < 1", 
+                                             "epsilon == 1"),
+                          x = c(7.5, 8.25, 9.5),
+                          y = c(9, 6.5, 9))
+
+p1 <- ggplot(mapping = aes(x = x, y = y)) + 
+  geom_path(data = engel1, color = "#0073D9", size = 1) + 
+  geom_path(data = engel2, color = "#FF4036", size = 1) +
+  geom_abline() +
+  geom_text(data = plot_labels,
+            aes(x = x, y = y, label = label), parse = TRUE) +
+  labs(x = "Renda", y = "Aluguel") +
+  theme_classic() + 
+  coord_equal() +
+  scale_x_continuous(expand = c(0, 0), limits = c(0, 10), breaks = NULL) +
+  scale_y_continuous(expand = c(0, 0), limits = c(0, 10), breaks = NULL)
+p1
+```
+\bcenter
+\small Fonte: O autor.
+\ecenter
+
+
+No entanto, segundo @regulation [p. 12-13], uma transformação conveniente pode
+ser feita para a melhor compreensão da diferença entre o consumo necessário e o
+consumo de luxo, como pode ser visto na Figura \@ref(fig:engel2): no caso de um
+mercado de bens de luxo ($\varepsilon_r > 1$), com o aumento da renda as pessoas
+podem ficar mais *dispostas a comprometer* uma parte um pouco maior do orçamento 
+neste mercado, enquanto em um mercado de bens normal ($\varepsilon_r < 1$), as 
+pessoas podem estar *obrigadas a comprometer* boa parte do seu orçamento neste
+mercado, mas, à medida que a renda aumenta, a proporção da renda aplicada neste
+mercado diminui.
+
+```{r engel2, fig.cap="Curvas de Engel no Espaço Aluguéis/Renda vs. Renda."}
+engel1 <- Hmisc::bezier(c(.5, 1, 5),
+                        c(2.5, 1, .5)) %>%
+  as_data_frame()
+
+engel2 <- Hmisc::bezier(x = c(.5, 1, 5),
+                        y = c(.1, 1, 1.5)) %>%
+  as_data_frame()
+
+plot_labels <- data_frame(label = expression("epsilon[r] < 1", "epsilon[r] > 1", 
+                                             "epsilon[r] == 1"),
+                          x = c(.5, .5, .5),
+                          y = c(2.6, .3, 1.15))
+
+p1 <- ggplot(mapping = aes(x = x, y = y)) + 
+  geom_path(data = engel1, color = "#0073D9", size = 1) + 
+  geom_path(data = engel2, color = "#FF4036", size = 1) +
+  geom_hline(yintercept = 1.05) +
+  geom_text(data = plot_labels,
+            aes(x = x, y = y, label = label), parse = TRUE) +
+  labs(x = "Renda", y = "Aluguel/Renda") +
+  theme_classic() + 
+  coord_equal() +
+  scale_x_continuous(expand = c(0, 0), limits = c(0, 5), breaks = NULL) +
+  scale_y_continuous(expand = c(0, 0), limits = c(0, 3), breaks = NULL)
+p1
+```
+\bcenter
+\small Fonte: Adaptado de @regulation [p. 13]
+\ecenter
+
+Segundo @regulation [p. 13], evidências empíricas a partir de dados coletados 
+em uma diversa gama de países mostram que a elasticidade-renda da demanda para o
+\gls{MI} geralmente apresenta valores entre 0,5 e 1,0.
+
+#### Elasticidade da oferta
+
+Analogamente à elasticidade-preço da demanda, a elasticidade-preço da oferta 
+mede a variação na quantidade ofertada de uma mercadoria quando os preços variam
+em uma unidade, sendo portanto, em geral, um número positivo (quando os preços
+aumentam, a quantidade ofertada aumenta). 
+
+Na Figura \@ref(fig:equilibrioMercado) foi apresentado o conceito de equilíbrio 
+em um determinado mercado, a partir de curvas de oferta e de demanda.
+
+Outros tipos de curvas, porém, podem ocorrer. Segundo @varian [p. 311-312], dois
+tipos diferentes de oferta ocorrem com frequência: a oferta fixa ou
+perfeitamente inelástica (Figura \@ref(fig:casosEspeciais) A), onde a quantidade
+de equilíbrio é determinada inteiramente pelas condições de oferta e o preço de
+equilíbrio é determinado inteiramente pelas condições de demanda; e a oferta
+perfeitamente elástica, onde qualquer quantidade desejada do bem é ofertada a um
+preço constante, determinado pela oferta e a quantidade de equilíbrio é
+determinada pela curva de demanda (Figura \@ref(fig:casosEspeciais) B).
+
+
+```{r casosEspeciais, fig.cap="Equilíbrio de mercado.", out.width="100%"}
+supply <- Hmisc::bezier(x = c(4, 4, 4),
+                        y = c(1, 5, 9)) %>%
+  as_data_frame()
+
+supply2 <- Hmisc::bezier(x = c(1, 5, 9),
+                        y =  c(4, 4, 4)) %>%
+  as_data_frame()
+
+#intersection_xy <- curve_intersect(supply, demand)
+
+#intersections <- intersection_xy %>% as_data_frame()
+
+plot_labels <- data_frame(label = c("D", "O"),
+                          x = c(1.75, 4.25),
+                          y = c(8, 8))
+
+plot_labels2 <- data_frame(label = c("D", "O"),
+                          x = c(1.75, 8),
+                          y = c(8, 4.25))
+
+p1 <- ggplot(mapping = aes(x = x, y = y)) + 
+  geom_path(data = supply, color = "#0073D9", size = 1) + 
+  geom_path(data = demand, color = "#FF4036", size = 1) + 
+  # geom_segment(data = intersections, 
+  #              aes(x = x, y = 0, xend = x, yend = y), lty = "dotted") +
+  # geom_segment(data = intersections, 
+  #              aes(x = 0, y = y, xend = x, yend = y), lty = "dotted") + 
+  geom_text(data = plot_labels,
+            aes(x = x, y = y, label = label), parse = TRUE) +
+  # geom_point(data = intersections, size = 3) +
+  labs(x = "Quantidade", y = "Preço") +
+  theme_classic() + 
+  coord_equal() +
+  scale_x_continuous(expand = c(0, 0), breaks = NULL,
+                    labels = expression(tilde(Q))) +
+  scale_y_continuous(expand = c(0, 0), breaks = NULL,
+                    labels = expression(tilde(P)))
+p2 <- ggplot(mapping = aes(x = x, y = y)) + 
+  geom_path(data = supply2, color = "#0073D9", size = 1) + 
+  geom_path(data = demand, color = "#FF4036", size = 1) + 
+  # geom_segment(data = intersections, 
+  #              aes(x = x, y = 0, xend = x, yend = y), lty = "dotted") +
+  # geom_segment(data = intersections, 
+  #              aes(x = 0, y = y, xend = x, yend = y), lty = "dotted") + 
+  geom_text(data = plot_labels2,
+            aes(x = x, y = y, label = label), parse = TRUE) +
+  # geom_point(data = intersections, size = 3) +
+  labs(x = "Quantidade", y = "Preço") +
+  theme_classic() + 
+  coord_equal() +
+  scale_x_continuous(expand = c(0, 0), breaks = NULL,
+                    labels = expression(tilde(Q))) +
+  scale_y_continuous(expand = c(0, 0), breaks = NULL,
+                    labels = expression(tilde(P)))
+plot_grid(p1, p2, labels = "AUTO")
+```
+\bcenter
+\small Fonte -- Adaptado de @varian [p. 312].
+\ecenter
+
+Segundo @Malpezzi2002TheRO [p. 17], os parâmetros da demanda no \gls{MI} são
+muito mais previsíveis e estáveis mesmo em diferentes mercados, enquanto os
+parâmetros da oferta contém uma variância muito maior. Na prática, o valor da
+elasticidade-preço da oferta, deve variar nos diferentes \gls{MI} entre
+praticamente zero (perfeitamente inelástica), em mercados fortemente restritos
+[@malaysia] a praticamente infinito (perfeitamente elástica)
+
+@supplyelasticity argumentam que, no entanto, esta 
+grande variação encontrada em diversos trabalhos pode ser explicada pelas 
+diferentes janelas de tempo utilizadas para o cálculo da elasticidade e que há 
+evidências de que, no longo prazo, para a maioria das regiões metropolitanas dos
+EUA, as elasticidades da oferta tendem a ser altas (>10).
+
+```{r supplyCurves, fig.cap="Curvas de oferta para diversos \\gls{MI}."}
+knitr::include_graphics("images/supplyCurves.png")
+```
+\bcenter
+\small Fonte -- @regulation [p. 19].
+\ecenter
+
+##### Estimação da elasticidade-preço da oferta
+
+Hipóteses sobre as elasticidades de oferta e demanda de um \gls{MI} em específico
+podem ser testadas a partir de modelos de fluxo do \gls{MI} em análise como o
+apresentado nas equações \@ref(eq:flowModel1) a \@ref(eq:flowModel3), onde 
+\gls{Q_S} é a quantidade ofertada, \gls{Q_D} é a quantidade demandanda, 
+\gls{P_h} é o preço relativo das residências, \gls{Y} é a renda e \gls{N} é a 
+população [@longrunsupplyelasticity p. 282].
+
+\begin{align} 
+Q_D &= \alpha_0 + \alpha_1 P_h + \alpha_2 Y + \alpha_3 N (\#eq:flowModel1)\\ 
+Q_S &= \beta_0 + \beta_1 P_h (\#eq:flowModel2)\\
+Q_D &= Q_S (\#eq:flowModel3)
+\end{align}
+
+De acordo com @longrunsupplyelasticity [p. 282], se os modelos forem elaborados
+com o logaritmo natural das variáveis (logaritmo dos preços, logaritmo das
+quantidades ofertadas e demandadas, logaritmo da renda e logaritmo da
+população), os coeficientes $\alpha_i$ e $\beta_i$ podem ser interpretados
+como as elasticidades do mercado.
+
+O modelo das equações \@ref(eq:flowModel1) a \@ref(eq:flowModel3) pode ser
+escrito em sua forma reduzida, de acordo com a equação \@ref(eq:flowModel) 
+[@longrunsupplyelasticity p. 283]:
+
+\begin{equation}
+P_h = \frac{\alpha_0 - \beta_0}{\beta_1 - \alpha_1} + \frac{\alpha2}{\beta_1 - \alpha_1}Y + \frac{\alpha3}{\beta_1 - \alpha_1} N
+(\#eq:flowModel)
+\end{equation}
+
+Segundo @longrunsupplyelasticity [p. 285], sobre este modelo podem ser feitas
+hipóteses, tal como a hipótese de que o estoque \gls{K} de residências não se
+ajusta completamente em cada período, o que está implícito no modelo acima, mas
+de acordo com um parâmetro de ajuste do estoque \gls{delta}, usualmente igual a
+0,3 [@longrunsupplyelasticity, p. 285]. Desta forma, a quantidade demandada
+fica restrita a diferença entre o estoque desejado \gls{K^*} e o estoque real do
+período anterio $K_{-1}$, multiplicada pelo fator de ajuste \gls{delta}. Assim:
+
+\begin{align} 
+Q_D &= \delta (K^* - K_{-1}) (\#eq:flowModela1)\\ 
+K^* &= \alpha_0 + \alpha_1 P_h + \alpha_2 Y + \alpha_3 N (\#eq:flowModela2)\\ 
+Q_S &= \beta_0 + \beta_1 P_h (\#eq:flowModela3)\\
+Q_D &= Q_S (\#eq:flowModela4)
+\end{align}
+
+O modelo das equações \@ref(eq:flowModela1) a \@ref(eq:flowModela4) pode ser
+então escrito de maneira reduzida, conforme equação \@ref(eq:flowModela):
+
+\begin{equation}
+P_h = \frac{\delta \alpha_0 - \beta_0}{\beta_1 - \delta \alpha_1} + \frac{\delta \alpha_2}{\beta_1 - \delta \alpha_1}Y + \frac{\delta \alpha_3}{\beta_1 - \delta \alpha_1} N - \frac{\delta}{\beta_1 - \delta \alpha_1}K_{-1}
+(\#eq:flowModela)
+\end{equation}
+
+E pode ser estimado de acordo com a equação \@ref(eq:flowModelEstimate):
+
+\begin{equation}
+P_h = \gamma_0 + \gamma_1 Y + \gamma_2 N + \gamma_3 K_{-1} + \varepsilon
+(\#eq:flowModelEstimate)
+\end{equation}
+
+Onde $\gamma_0 = \frac{\delta \alpha_0 - \beta_0}{\beta_1 - \delta \alpha_1}$, $\gamma_1 = \frac{\delta \alpha_2}{\beta_1 - \delta \alpha_1}$, $\gamma_2=\frac{\delta \alpha_3}{\beta_1 - \delta \alpha_1}$ e $\gamma_3 = \frac{\delta}{\beta_1 - \delta \alpha_1}$.
+
+Segundo @longrunsupplyelasticity [p. 285], a elasticidade-preço da oferta do 
+\gls{MI} residencial pode ser, então, estimada a partir da equação abaixo, 
+parametricamente em função de $\alpha_1$ e $\alpha_2$, que a princípio são 
+desconhecidos:
+
+$$\beta_1 = \frac{\delta \alpha_2}{\gamma_1} + \delta \alpha_1$$
+
+#### Choques no mercado
+
+Qualquer mercado está sujeito a choques, seja de oferta ou de demanda. Um choque
+de oferta se daria com a quebra de um dos ofertantes, por exemplo, situação em
+que a quantidade ofertada poderia vir a ser diminuída abruptamente, dependendo
+da estrutura do mercado. Já choque de demanda ocorre quando há, por exemplo, por
+fatores que são exógenos ao \gls{MI}, um aumento abrupto da demanda, que pode
+ocorrer pela abertura de linhas de créditos antes inexistentes ou pelo aumento
+da renda da população. Quaisquer que sejam as causas que levem a um choque no
+\gls{MI}, seus efeitos devem ser investigados. Se o mercado impactado tiver uma
+estrutura fortemente concorrencial e não tiver restrições geográficas
+significantes, a tendência é que um choque de demanda seja absorvido a médio e
+longo prazo sem grandes flutuações de preços, devido à entrada de novos
+ofertantes no mercado. Por outro lado, se o mercado em análise sofre de algum
+tipo de restrição geográfica ou mesmo econômica que dificulte a entrada de novos
+atores como ofertantes, a tendência é que os choques de demanda tenham maior
+impacto. Os detalhes por trás deste raciocínio serão melhor esclarecidos no
+capítulo \@ref(crise2008).
+
+### Diagnóstico de mercado
+
+A NBR 14.653-01 [-@NBR1465301, 12], estabelece que, "o profissional, conforme o
+tipo de bem, as condições de contratação, o método empregado e a finalidade da
+avaliação, pode **tecer considerações sobre o mercado do bem avaliando**, de
+forma a indicar, tanto quanto possível, **a estrutura, a conduta e o desempenho
+do mercado**."
+
+### O imóvel visto como um investimento
+
+Segundo @Malpezzi2002TheRO, um imóvel é um ativo que rende um fluxo de serviços
+ao longo do tempo. O Quadro \@ref(qua:Quadro-1) mostra a diferenciação entre os
+conceitos de Estoque e Fluxo, muito utilizados na Economia. 
+
+\begin{quadro}[htb]
+	\centering
+	\caption{\label{qua:Quadro-1}Distinção entre estoque e fluxo.}	
+	\begin{tabular}{|l|l|}
+		\hline
+		\textbf{Riqueza}  & \textbf{Fluxo}\\ \hline
+		 Riqueza          & Renda         \\ \hline
+		 Dívida Pública   & Déficit       \\ \hline
+		 Valor do imóvel  & Aluguel       \\ \hline
+	\end{tabular}
+	\fonte{\textcite[3]{Malpezzi2002TheRO}.}
+\end{quadro}
+
+O quadro acima poderia ser facilmente expandido para incorporar outras formas de 
+investimentos, como títulos (que rendem coupons), ações (que rendem dividendos)
+e outros.
+
+Na ótica do investidor, o imóvel é como um título de longo prazo. Racionalmente
+ou não, o comprador de um imóvel com fins de investimento espera que o imóvel
+comprado vá gerar um fluxo de aluguéis (constantes ou não) ao longo do tempo, de
+maneira que este fluxo de aluguéis compense o investimento inicial na compra do
+imóvel.
+
+Segundo @Malpezzi2002TheRO [p. 4], o valor presente $V$ de um imóvel pode ser 
+calculado conforme a equação \@ref(eq:VPImovel), onde $\gls{R}_t$ é a renda
+bruta dos aluguéis, $C_t$ é o custo recorrente com a manutenção do imóvel e $i$
+é a taxa de desconto.
+
+\begin{equation}
+V = \sum_{t=0}^T \frac{\mathbb{E}[R_t-C_t]}{(1+i)^t}
+(\#eq:VPImovel)
+\end{equation}
+
+Diferentemente do que hoje ocorre com os investimentos capitalistas, onde o 
+*payback* esperado gira em torno de 5 a 10 anos, o comprador de um imóvel
+esperar que este gere um fluxo de renda ao longo de décadas. 
+
+Assim, a compra de um imóvel assemelha-se à compra dos títulos de renda fixa de
+maior *duration* disponíveis no mercado.
+
+Ora, como se sabe, o valor de face destes títulos, ou seja, o valor do resgate
+destes títulos no vencimento, é dado. Porém, estes títulos são negociados no
+mercado secundário a valor de mercado, sendo que os títulos de longo prazo são
+altamente sensíveis a variações nas taxas de juros de longo prazo. A saber, o
+preço destes títulos é inversamente proporcional às taxas de juros, ou seja,
+quanto menor as taxas, maior o valor presente dos títulos, ou valor de mercado,
+e vice-versa.
+
+### O papel da especulação no \gls{MI}
+
+Um dos assuntos mais polêmicos do \gls{MI} diz respeito à especulação com 
+imóveis. Especulação, aliás, é um assunto em polêmico em diversos tipos de 
+mercados, não apenas no \gls{MI}. 
+
+@Malpezzi2002TheRO [p. 5] fazem um bom apanhado de diversos conceitos 
+relacionados à "especulação". Primeiramente, argumentam que é polêmica a 
+definição do termo *especulador*, especialmente se comparado ao termo 
+*investidor*: seria o especulador um investidor que negocia o bem em prazos 
+mais curtos? Não existe uma definição para tal.
+
+Então @Malpezzi2002TheRO [p. 12] apresentam diversas maneiras de se modelar as
+expectativas (expectativas racionais, adaptativas, etc.), e apresentam (p. 14),
+um modelo do valor presente de um imóvel calculado de acordo com o valor 
+esperado da renda líquida com aluguéis futuros, $\gls{R_L}$, trazidos ao Valor
+Presente através da aplicação de uma taxa de desconto $i$, de acordo com a 
+expressão vista na equação \@ref(eq:valor-presente):
+
+\begin{equation}
+V = \sum_{t = 0}^T \frac{\mathbb{E}[R_{Lt}]}{(1+i)^t}
+(\#eq:valor-presente)
+\end{equation}
+
+Supondo que se possa calcular um valor presente para um imóvel baseado apenas
+nos fundamentos econômicos $V^*$, o valor em torno do qual se negociaria o
+imóvel com expectativas racionais, com expectativas adaptativas[^3], um imóvel
+com preço igual ao da equação \@ref(eq:valor-presente-adptativo) também seria
+negociado 'racionalmente', caso o comprador considerasse que o grau de
+supervalorização do imóvel continuasse a crescer nos períodos subsequentes por
+uma taxa maior ou igual à taxa de desconto [@Malpezzi2002TheRO, 15].
+
+\begin{equation}
+V_t = V_t^* + b_t, \qquad com \quad \mathbb{E}_t[b_{t+1}] = (1+i)b_t
+(\#eq:valor-presente-adptativo)
+\end{equation}
+
+
+[^3]: Expectativas adaptativas assumem que os agentes do mercado presumem que os 
+ganhos futuros serão iguais aos do passado recente analisado.
+
+Em suma, isto implica que a autocorrelação serial nos aumentos de preços dos 
+imóveis é uma condição necessária para a formação de bolhas. Segundo 
+@Malpezzi2002TheRO [p. 15], muitos estudos documentam a existência de correlação 
+serial em preços, porém a evidência de que isso leva, por si só, a formação de 
+bolhas é controversa. No capítulo \@ref(crise2008) serão vistos com mais detalhes os
+fatores que levam à formação de bolhas.
+
+### O papel da regulação do \gls{MI} na prevenção da formação de bolhas especulativas
+
+Conforme será visto no capítulo \@ref(crise2008), para @Malpezzi2002TheRO [p. 26], o
+efeito da especulação na volatilidade do \gls{MI} depende das condições de
+oferta em cada mercado. Reformas adequadas na regulação do \gls{MI} com base
+nesta hipótese serão apresentadas no capítulo \@ref(politicas).
+
+### Formação de bolhas especulativas
+
+Na análise de @Malpezzi2002TheRO a respeito da formação de bolhas, a variável
+taxa de desconto ($i$) é considerada como uma variável exógena, isto é, não 
+foram considerados os efeitos do preço dos imóveis sobre esta variável, tampouco
+foram modelados ou quantificados os impactos das mudanças no patamar das taxas
+de juros sobre o preço dos imóveis.
+
+Como visto no Quadro \@ref(qua:Quadro-1), um imóvel pode ser visto como um
+investimento. O seu valor presente depende de um fluxo estimado de aluguéis
+trazidos a valor presente através da aplicação de uma taxa de desconto, assim
+como ocorre com outros ativos financeiros, como os títulos da dívida pública,
+por exemplo.
+
+Os títulos da dívida pública são vistos, normalmente, como os ativos livres de
+risco da economia. Por isso, a taxa de desconto destes ativos é chamada de taxa
+livre de risco. A taxa de desconto de quaisquer outros ativos na Economia de um
+país será maior do que essa taxa livre de risco, pois nela estará embutida uma
+taxa devido ao risco de carregamento daquele investimento, que se soma à taxa de
+livre de risco da economia[^4]. Dessa maneira, o que ocorre quando a taxa livre
+de risco oscila é que também oscilam os Valores Presentes dos imóveis e dos
+outros investimentos.
+
+Se estas oscilações de preços dos imóveis devido às taxas de juros podem causar
+bolhas especulativas, no entanto, é uma outra história. Este assunto será 
+abordado com mais profundidade no capítulo \@ref(crise2008).
+
+[^4]: O capítulo \@ref(crise2008) ilustra como as taxas praticadas no mercado de 
+crédito de hipotecas, por exemplo, são compostas de uma taxa adicional de risco
+em relação à taxa livre de risco.
+
+### Rendimentos de aluguel
+
+A taxa de rendimento do aluguel de um imóvel é obtida invertendo-se os termos
+da equação \@ref(eq:valor-presente), de maneira a isolar a taxa de desconto.
+
+Para facilitar os cálculos, é conveniente a utilização da simplificação da 
+equação \@ref(eq:valor-presente), fazendo a hipótese de que a série de 
+pagamentos é tão longa, que pode ser considerada perpétua. Geralmente esta é
+uma boa hipótese no caso de imóveis, pois para séries de pagamentos constantes 
+com duração superior a 20 anos a hipótese da perpetuidade é considerada razoável,
+haja vista que a vida útil de qualquer imóvel costuma ultrapassar esse prazo.
+
+Assim, o Valor Presente $VP$ de uma série de pagamentos perpétua de valor 
+periódico $\gls{R_L}$, descontados de uma taxa de juros $i$ é igual a:
+
+\begin{equation}
+VP = \lim_{n \to \infty} R_L \frac{(1+i)^t-1}{i(1+i)^t}= \frac{R_L}{i}
+(\#eq:perpetua)
+\end{equation}
+
+Os rendimentos de aluguel $\gls{y_r}$ são taxas brutas de retorno dos 
+recebimento de aluguéis comparados ao valor de venda de um imóvel.
+
+Por exemplo, para um imóvel avaliado em R$1.000.000,00, com um rendimento de 
+aluguéis de R$1.500,00 reais mensais, o rendimento bruto do aluguel 
+deste imóvel seria:
+
+$$y_r = \frac{12*1.500}{1.000.000} = 3,6\% \ a.a.$$
+Esta taxa tem sido utilizada para comparar o rendimento do investimento em 
+imóveis em todo o planeta, através de sítios de internet especializados em
+investimento em imóveis [@gpg].
+
+#### Duration de um título de renda fixa
+
+Segundo @marins1, a *duration* de um título, ou de um conjunto de títulos de 
+renda fixa pode ser calculada de acordo com a equação \@ref(eq:duration), 
+de Macaulay:
+
+\begin{equation}
+D = \frac{\sum\limits_{t = 1}^{n} t \times \frac{F_t}{(1+i)^t}}{\sum\limits_{t = 1}^{n} \frac{F_t}{(1+i)^t}}
+(\#eq:duration)
+\end{equation}
+
+A medida tem por finalidade comparar títulos com diferentes características. Por
+exemplo, existem títulos no mercado de renda fixa que não fazem pagamentos 
+constantes de coupons, sendo que o retorno integral do capital investido e juros
+associado a este título só retornam ao investidor no vencimento do título 
+(normalmente são títulos de vencimento mais curto), enquanto outros títulos 
+fazem pagamentos constantes de coupons (semestralmente, p.ex.), ou seja,
+uma parte do valor investido no título volta ao investidor na forma de coupons, 
+e no vencimento do título é resgatado o valor principal (normalmente são títulos
+com vencimentos mais longos). 
+
+Para comparar então um título com vencimento em 5 anos que não faz pagamento de
+coupons e um título com vencimento em 7 anos que faz pagamentos de coupons, 
+utiliza-se a equação \@ref(eq:duration) para calcular a *duration* de cada
+título.
+
+O investimento em imóveis será, via de regra, o investimento de maior *duration*
+do mercado, haja vista que um imóvel pode ter vida útil de 50 anos ou mais, 
+enquanto os títulos de renda fixa normalmente tem prazo máximo de 30 anos.
+
+#### Cálculo do valor justo de um imóvel em função da taxa de desconto
+
+O cálculo do valor justo de um imóvel pode ser feito considerando-se o método
+do fluxo de caixa descontado, assim como é feito o *valuation* de uma empresa
+capitalista.
+
+Por exemplo, se um investidor estima que os rendimentos líquidos de um
+determinado imóvel (aqui definida como o valor dos aluguéis descontados de
+taxas, custos de manutenção e outras despesas) será de R$2.000,00 mensais, a uma
+taxa de juros de 3% ao ano, o valor presente do imóvel, considerando-se que este
+fluxo seja constante ao longo de toda a vida útil do imóvel (não menor do que 20
+anos), é:
+
+$$VP = \frac{12 \times 2.000}{0,03} = 800.000$$
+
+Uma queda moderada da taxa de juros de longo prazo, digamos, para 2% a.a.,
+teria o seguinte impacto no valor presente deste imóvel:
+
+$$VP = \frac{12 \times 2.000}{0,02} = 1.200.000$$
+
+Já uma queda da taxa de juros de longo prazo mais agressiva, digamos para 1%
+a.a., teria o seguinte impacto:
+
+$$VP = \frac{12 \times 2.000}{0,01} = 2.400.000$$
+
+A Figura \@ref(fig:valores-juros) mostra como varia, *coeteris paribus*, o valor 
+justo de um imóvel em função da taxa de juros de longo prazo.
+
+```{r valores-juros, fig.cap = "Variação do valor justo de um imóvel em função da taxa de juros."}
+eq = function(x) 12*2000/(x)
+# curve(eq, from=.1/100, to = 6/100,
+#       xlab = "Taxa de juros",
+#       ylab = "Valor justo do Imóvel"
+#       )
+ggplot(data.frame(x = c(.1/100, 6/100)), aes(x = x)) + 
+  stat_function(fun = eq) + 
+  xlab("Taxa de juros (ao ano)") +
+  ylab("Valor justo do imóvel") +
+  scale_y_continuous(labels = function(l) {trans = l / 10^6}) +
+  scale_x_continuous(labels = scales::percent) +
+  labs(title = "Valor justo de um imóvel", 
+       subtitle = "Em milhões de reais.",
+       caption = "Supondo uma receita líquida constante de R$2.000/mês.") 
+  
+```
+\bcenter
+\small Fonte -- Do autor.
+\ecenter
+
+A Tabela \@ref(tab:tabela-valor-justo) mostra alguns valores calculados de
+acordo com a equação \@ref(eq:valor-presente) para um imóvel, supondo receita
+líquida de aluguel mensal constante de R$2.000,00, em função da taxa de
+desconto.
+
+
+```{r tabela-valor-justo}
+valorJusto <- data.frame(i = c(0.1, .25, .5, .75, 1, 1.5, 2, 3, 4, 5, 6))
+valorJusto$valor <- 12*2000/(valorJusto$i/100)
+kable(valorJusto, format = "latex", booktabs = TRUE,
+      caption = "Valor justo de um imóvel em função do valor do aluguel.",
+      format.args = list(decimal.mark = ",", big.mark = ".", scientific = F),
+      col.names = c("Taxa de Juros(%)", "Valor Justo (R$)")) %>%
+  kable_styling(latex_options = "HOLD_position") %>% 
+  footnote(general = c("Supondo um aluguel constante de R$2.000/mês.",
+                       "Taxas de juros anuais."),
+           general_title = "Notas:")
+```
+\bcenter
+\small Fonte -- Do autor.
+\ecenter
+
+Prentende-se mostrar com a exposição dos valores da Tabela 
+\@ref(tab:tabela-valor-justo), assim como com o gráfico da Figura 
+\@ref(fig:valores-juros) que a taxa de juros de referência impacta fortemente
+na variação dos preços dos imóveis a partir de um determinado patamar. Isto se 
+deve, é claro, à grande vida útil (ou grande *duration*) de um imóvels e à
+capacidade de extração de renda deste imóvel durante esta vida útil. Uma 
+diminuição na taxa de juros de longo prazo de referência de apenas 0,25 p.p. 
+pode acarretar numa mudança do valor presente (ou valor justo) de um imóvel da
+ordem de milhões de reais. Isto impacta o \gls{MI} de uma maneira muito forte e,
+como será mostrado no capítulo \@ref(crise2008), sem precedentes históricos. 
 
 
 ## O Mercado Imobiliário e a Macroeconomia {#macro}
@@ -361,7 +1116,7 @@ macroeconômicas em cada país.
 knitr::include_graphics("./images/adams2_crop.pdf")
 ```
 \bcenter
-Fonte: @ADAMS2010.
+\small Fonte -- @ADAMS2010.
 \ecenter
 
 A figura \@ref(fig:nhpi) ilustra o comportamento do \gls{MI} residencial
@@ -423,7 +1178,7 @@ ggplot(nhpi, as.numeric = FALSE) +
           fill='grey', alpha=0.5)
 ```
 \bcenter
-Fonte: O autor, à partir de dados de @QuandlWIKI.
+\small Fonte -- O autor, à partir de dados de @QuandlWIKI.
 \ecenter
 
 Nota-se que após o derretimento do \gls{MI} norte-americano depois da crise
@@ -441,7 +1196,7 @@ knitr::include_graphics("images/several_indices_regulations.png")
 ```
 
 \bcenter
-Fonte: @regulation [p. 3]
+\small Fonte -- @regulation [p. 3]
 \ecenter
 
 A comparação de índices de preços dos diversos países, no entanto, deve ser
@@ -461,7 +1216,19 @@ knitr::include_graphics("images/land.png")
 ```
 
 \bcenter
-Fonte: @regulation [p. 5]
+\small Fonte -- @regulation [p. 5]
+\ecenter
+
+A Figura \@ref(fig:land2) mostra a evolução dos preços dos imóveis e dos
+custos reais de construção nos EUA desde 1980, deixando claro que os custos de
+construção não são suficientes para explicar a significativa volatilidade do
+\gls{MI} nos EUA.
+
+```{r land2, fig.cap="Preços reais de imóveis e custos de construção nos EUA."}
+knitr::include_graphics("images/constructionvshp.png")
+```
+\bcenter
+\small Fonte -- @HDT [p. 5]
 \ecenter
 
 A alta volatilidade do \gls{MI} tal como apresentada nos últimos anos, como será
@@ -650,7 +1417,7 @@ novos no mercado), o que por sua vez tende a aumentar o valor dos aluguéis.
 knitr::include_graphics("./images/adams_crop.pdf")
 ```
 \bcenter
-Fonte: @ADAMS2010.
+\small Fonte -- @ADAMS2010.
 \ecenter
 
 ##### Possíveis adequações necessárias ao modelo no Brasil
@@ -694,634 +1461,6 @@ propensão à formação de bolhas especulativas, atribuídas a diversos motivos
 como "expectativas exuberantes" e problemas de informações de preços, que são
 difíceis devido às particularidades do \gls{MI} [@ADAMS2010, 3].
 
-## O Mercado Imobiliário e a Microeconomia {#micro}
-
-O mercado imobiliário, como visto na seção anterior, não pode ser 
-considerado um simples mercado de bens, como outros bens de consumo em geral,
-como automóveis, móveis ou eletrodomésticos. Sua análise em nível macroeconômico,
-portanto, requer um estudo mais aprofundado das variáveis da Economia do país,
-o que não quer dizer que não se dispense de analisar também o seu comportamento 
-microeconômico, o que aliás a NBR 14.653-01 [-@NBR1465301] parece ter acabado de 
-perceber e recomendar.
-
-### Estruturas básicas de mercado
-
-A nova versão da NBR 14.653-01 [-@NBR1465301, ix] traz uma evolução quanto à 
-consideração das diversas estruturas de mercado possíveis para a avaliação de um
-bem.
-
-> As estruturas básicas do mercado podem ser, resumidamente:
->
->* **Concorrência Perfeita**: situação em que o número de vendedores e de
-> compradores é suficientemente elevado para que um agente isolado não seja 
-> capaz de influenciar o comportamento dos preços;
->
->* **Monopólio**: É constituído por um único vendedor;
->
->* **Monopsônio**: é constituído por um único comprador;
->
->* **Oligopólio**: é constituído por um número pequeno de vendedores;
->
->* **Oligopsônio**: é constituído por um número pequeno de compradores.
-
-No entanto, a NBR 14.653-01 [-@NBR1465301] não deixa claro de que modo cada
-estrutura de mercado deve impactar o valor final de mercado do imóvel. 
-
-Outro problema com a NBR 14.653-01 é que os mercados não deveriam ser
-classificados apenas em relação à sua estrutura concorrencial, mas também de
-acordo com as suas restrições geográficas e/ou regulatórias: existem mercados em
-que não é possível aumentar a oferta, mesmo com o aumento da demanda, porque
-existem limitações geográficas que impedem que isto ocorra, ou ao menos impedem
-que isto seja feito sem que antes sejam feitas grandes intervenções urbanas que,
-inicialmente, permitam que a área seja loteada. Em outros mercados, existem 
-questões regulatórias fortes que impedem um aumento da oferta de bens imóveis,
-como é o caso de Brasília, por exemplo: na região do plano-piloto existem 
-questões de gabarito que impedem uma maior verticalização e também existe um
-grande número de imóveis em propriedade do Estado brasileiro, que distorcem o
-funcionamento do mercado.
-
-#### Equilíbrio de mercado
-
-O preço de equilíbrio de um bem se dá, geometricamente falando, no cruzamento 
-das curvas de oferta e demanda, ou seja, o prelço de equilíbrio, em qualquer
-mercado, é o ponto onde a oferta e a demanda do mercado são iguais [@varian, p. 310].
-
-Há de se discernir, no entanto, entre equilíbrio de curto e de longo prazo.
-
-A Figura \@ref(fig:equilibrioMercado) ilustra o equilíbrio num mercado
-hipotético, modelado pelas curvas **O** (oferta) e **D** (demanda). Para este
-mercado, o equilíbrio se dá no ponto de coordenadas ($\tilde Q, \tilde P$). Às
-quantidades $\tilde P$ e $\tilde Q$ dão-se o nome de preço e quantidade de 
-equilíbrio.
-
-```{r equilibrioMercado, fig.cap="Equilíbrio de mercado."}
-source("curve_intersect.R")
-demand <- Hmisc::bezier(c(1, 3, 9),
-                        c(9, 3, 1)) %>%
-  as_data_frame()
-
-supply <- Hmisc::bezier(x = c(1, 8, 9),
-                        y = c(1, 5, 9)) %>%
-  as_data_frame()
-
-intersection_xy <- curve_intersect(supply, demand)
-
-intersections <- intersection_xy %>% as_data_frame()
-
-plot_labels <- data_frame(label = c("D", "O"),
-                          x = c(1, 8.25),
-                          y = c(8, 8))
-
-p1 <- ggplot(mapping = aes(x = x, y = y)) + 
-  geom_path(data = supply, color = "#0073D9", size = 1) + 
-  geom_path(data = demand, color = "#FF4036", size = 1) + 
-  geom_segment(data = intersections, 
-               aes(x = x, y = 0, xend = x, yend = y), lty = "dotted") +
-  geom_segment(data = intersections, 
-               aes(x = 0, y = y, xend = x, yend = y), lty = "dotted") + 
-  geom_text(data = plot_labels,
-            aes(x = x, y = y, label = label), parse = TRUE,
-            family = "Source Sans Pro") +
-  geom_point(data = intersections, size = 3) +
-  labs(x = "Quantidade", y = "Preço") +
-  theme_classic() + 
-  coord_equal() +
-  scale_x_continuous(expand = c(0, 0), breaks = intersections$x,
-                     labels = expression(tilde(Q))) +
-  scale_y_continuous(expand = c(0, 0), breaks = intersections$y,
-                     labels = expression(tilde(P)))
-p1
-```
-
-O equilíbrio de um mercado, no entanto, denominado equilíbrio estático ou de
-curto prazo, está sujeito a choques que podem perturbar este equilíbrio.
-
-De acordo com @varian [p. 310], um mercado competitivo (concorrência perfeita),
-é um mercado em que cada agente econômico, ofertante ou demandante, considera os
-preços como dados, *i.e.* fora de seu controle. Não há, portanto, num mercado
-competitivo, restrições à entrada de novas empresas [@varian, p. 433]. Neste
-mercado, o que determina o preço é a ação conjunta de todos os agentes do 
-mercado.
-
-#### Elasticidade da demanda
-
-##### Elasticidade-preço da demanda
-
-A elasticidade-preço da demanda $\varepsilon_p$, definida conforme a equação
-\@ref(eq:epdemanda) [@varian, p. 302], mede a quantidade marginal que será
-demandada do mercado se o preço de uma mercadoria aumenta ou diminui em uma
-unidade de preço. Geralmente a elasticidade-preço da oferta é, então, um número
-negativo [@varian, 289]
-
-\begin{equation}
-\varepsilon_p = \frac{p}{q}\frac{\mathrm{d} q}{\mathrm{d} p}
-(\#eq:epdemanda)
-\end{equation}
-
-Uma maneira mais conveniente (e exata) de se escrever a equação da elasticidade 
-é a apresentada na equação \@ref(eq:elasticidadeLN), em função do logaritmo
-natural das variáveis [@varian, p.307-308]:
-
-\begin{equation}
-\varepsilon_p = \frac{\mathrm{d} \ln(q)}{\mathrm{d} \ln(p)}
-(\#eq:elasticidadeLN)
-\end{equation}
-
-Segundo Mayo (1981) e Olsen (1986) [*apud* @Malpezzi2002TheRO, p.23], uma boa 
-estimativa para o valor da elasticidade-preço da demanda é algo em torno de -0,8. 
-
-##### Elasticidade-renda
-
-A elasticidade-renda da demanda $\varepsilon_r$ mede como muda a quantidade
-demandada quando a renda do consumidor varia [@varian, p.300]. De acordo com a
-elasticidade-renda os bens podem ser classificados em bens normais, *i.e.* bens 
-cuja demanda aumenta com o aumento da renda; bens inferiores, *i.e.* bens cuja 
-demanda diminui com o aumento da renda; e bens de luxo ($\varepsilon_r > 1$), 
-*i.e.* bens cujo aumento na demanda é mais do que proporcional ao aumento da 
-renda (um aumento de 1% na renda conduz a um aumento de mais de 1% da demanda).
-
-#### Elasticidade-preço da oferta
-
-Na Figura \@ref(fig:equilibrioMercado) foi apresentado o conceito de equilíbrio 
-em um determinado mercado, a partir de curvas de oferta e de demanda.
-
-Outros tipos de curvas, porém, podem ocorrer. Segundo @varian [p. 311-312], dois
-tipos diferentes de oferta ocorrem com frequência: a oferta fixa ou
-perfeitamente inelástica (Figura \@ref(fig:casosEspeciais) A), onde a quantidade
-de equilíbrio é determinada inteiramente pelas condições de oferta e o preço de
-equilíbrio é determinado inteiramente pelas condições de demanda; e a oferta
-perfeitamente elástica, onde qualquer quantidade desejada do bem é ofertada a um
-preço constante, determinado pela oferta e a quantidade de equilíbrio é
-determinada pela curva de demanda (Figura \@ref(fig:casosEspeciais) B).
-
-
-```{r casosEspeciais, fig.cap="Equilíbrio de mercado.", out.width="100%"}
-supply <- Hmisc::bezier(x = c(4, 4, 4),
-                        y = c(1, 5, 9)) %>%
-  as_data_frame()
-
-supply2 <- Hmisc::bezier(x = c(1, 5, 9),
-                        y =  c(4, 4, 4)) %>%
-  as_data_frame()
-
-#intersection_xy <- curve_intersect(supply, demand)
-
-#intersections <- intersection_xy %>% as_data_frame()
-
-plot_labels <- data_frame(label = c("D", "O"),
-                          x = c(1.75, 4.25),
-                          y = c(8, 8))
-
-plot_labels2 <- data_frame(label = c("D", "O"),
-                          x = c(1.75, 8),
-                          y = c(8, 4.25))
-
-p1 <- ggplot(mapping = aes(x = x, y = y)) + 
-  geom_path(data = supply, color = "#0073D9", size = 1) + 
-  geom_path(data = demand, color = "#FF4036", size = 1) + 
-  # geom_segment(data = intersections, 
-  #              aes(x = x, y = 0, xend = x, yend = y), lty = "dotted") +
-  # geom_segment(data = intersections, 
-  #              aes(x = 0, y = y, xend = x, yend = y), lty = "dotted") + 
-  geom_text(data = plot_labels,
-            aes(x = x, y = y, label = label), parse = TRUE,
-            family = "Source Sans Pro") +
-  # geom_point(data = intersections, size = 3) +
-  labs(x = "Quantidade", y = "Preço") +
-  theme_classic() + 
-  coord_equal() +
-  scale_x_continuous(expand = c(0, 0), breaks = NULL,
-                    labels = expression(tilde(Q))) +
-  scale_y_continuous(expand = c(0, 0), breaks = NULL,
-                    labels = expression(tilde(P)))
-p2 <- ggplot(mapping = aes(x = x, y = y)) + 
-  geom_path(data = supply2, color = "#0073D9", size = 1) + 
-  geom_path(data = demand, color = "#FF4036", size = 1) + 
-  # geom_segment(data = intersections, 
-  #              aes(x = x, y = 0, xend = x, yend = y), lty = "dotted") +
-  # geom_segment(data = intersections, 
-  #              aes(x = 0, y = y, xend = x, yend = y), lty = "dotted") + 
-  geom_text(data = plot_labels2,
-            aes(x = x, y = y, label = label), parse = TRUE,
-            family = "Source Sans Pro") +
-  # geom_point(data = intersections, size = 3) +
-  labs(x = "Quantidade", y = "Preço") +
-  theme_classic() + 
-  coord_equal() +
-  scale_x_continuous(expand = c(0, 0), breaks = NULL,
-                    labels = expression(tilde(Q))) +
-  scale_y_continuous(expand = c(0, 0), breaks = NULL,
-                    labels = expression(tilde(P)))
-plot_grid(p1, p2, labels = "AUTO")
-```
-
-Na prática, o valor da elasticidade-preço da oferta, segundo pesquisas efetuadas
-em diferentes \gls{MI} varia de praticamente zero (perfeitamente inelástica), em
-mercados fortemente restritos [@malaysia] a praticamente infinito (perfeitamente
-elástica) em outros mercados. @supplyelasticity argumentam que, no entanto, esta 
-grande variação encontrada em diversos trabalhos pode ser explicada pelas 
-diferentes janelas de tempo utilizadas para o cálculo da elasticidade e que há 
-evidências de que, no longo prazo, para a maioria das regiões metropolitanas dos
-EUA, as elasticidades da oferta tendem a ser altas (>10).
-
-#### Equações de oferta e demanda
-
-Hipóteses sobre as elasticidades de ofeta e demanda de um \gls{MI} em específico
-podem ser testadas a partir de modelos de fluxo do \gls{MI} em análise como o
-apresentado nas equações \@ref(eq:flowModel1) a \@ref(eq:flowModel3), onde $Q_S$
-é a quantidade ofertada, $Q_D$ é a quantidade demandanda, $P_h$ é o preço
-relativo das residências, $Y$ é a renda e $N$ é a população 
-[@longrunsupplyelasticity p. 282].
-
-\begin{align} 
-Q_D &= \alpha_0 + \alpha_1 P_h + \alpha_2 Y + \alpha_3 N (\#eq:flowModel1)\\ 
-Q_S &= \beta_0 + \beta_1 P_h (\#eq:flowModel2)\\
-Q_D &= Q_S (\#eq:flowModel3)
-\end{align}
-
-De acordo com @longrunsupplyelasticity [p. 282], se os modelos forem elaborados
-com o logaritmo natural das variáveis (logaritmo dos preços, logaritmo das
-quantidades ofertadas e demandadas, logaritmo da renda e logaritmo da
-população), os coeficientes $\alpha_i$ e $\beta_i$ podem ser interpretados
-como as elasticidades do mercado.
-
-O modelo das equações \@ref(eq:flowModel1) a \@ref(eq:flowModel3) pode ser
-escrito em sua forma reduzida, de acordo com a equação \@ref(eq:flowModel) 
-[@longrunsupplyelasticity p. 283]:
-
-\begin{equation}
-P_h = \frac{\alpha_0 - \beta_0}{\beta_1 - \alpha_1} + \frac{\alpha2}{\beta_1 - \alpha_1}Y + \frac{\alpha3}{\beta_1 - \alpha_1} N
-(\#eq:flowModel)
-\end{equation}
-
-Segundo @longrunsupplyelasticity [p. 285], sobre este modelo podem ser feitas 
-hipóteses simplificadoras, tal como a hipótese de que o estoque $K$ de 
-residências não se ajusta completamente em cada período, o que está implícito
-no modelo acima, mas de acordo com um parâmetro de ajuste do estoque $\delta$ 
-(usualmente igual a 0,3 [@longrunsupplyelasticity, p. 285]). Assim:
-
-\begin{align} 
-Q_D &= \delta (K^* - K_{-1}) (\#eq:flowModela1)\\ 
-K^* = \alpha_0 + \alpha_1 P_h + \alpha_2 Y + \alpha_3 N (\#eq:flowModela2)\\ 
-Q_S &= \beta_0 + \beta_1 P_h (\#eq:flowModela3)\\
-Q_D &= Q_S (\#eq:flowModela4)
-\end{align}
-
-O modelo das equações \@ref(eq:flowModela1) a \@ref(eq:flowModela4) pode ser
-então escrito de maneira reduzida, conforme equação \@ref(eq:flowModela):
-
-\begin{equation}
-P_h = \frac{\delta \alpha_0 - \beta_0}{\beta_1 - \delta \alpha_1} + \frac{\delta \alpha2}{\beta_1 - \delta \alpha_1}Y + \frac{\delta \alpha3}{\beta_1 - \delta \alpha_1} N - \frac{\delta}{\beta_1 - \delta \alpha_1}K_{-1}
-(\#eq:flowModela)
-\end{equation}
-
-E pode ser estimado de acordo com a equação \@ref(eq:flowModelEstimate):
-
-\begin{equation}
-P_h = \gamma_0 + \gamma_1 Y + \gamma_2 N + \gamma_3 K_{-1} + \varepsilon
-(\#eq:flowModelEstimate)
-\end{equation}
-
-Segundo @longrunsupplyelasticity [p. 285], a elasticidade-preço da oferta do 
-\gls{MI} residencial pode ser, então, estimada a partir da equação abaixo, 
-parametricamente em função de $\alpha_1$ e $\alpha_2$, que a princípio são 
-desconhecidos:
-
-$$\beta_1 = \frac{\delta \alpha_2}{\gamma_1} + \delta \alpha_1$$
-
-#### Choques no mercado
-
-Qualquer mercado está sujeito a choques, seja de oferta ou de demanda. Um choque
-de oferta se daria com a quebra de um dos ofertantes, por exemplo, situação em
-que a quantidade ofertada poderia vir a ser diminuída abruptamente, dependendo
-da estrutura do mercado. Já choque de demanda ocorre quando há, por exemplo, por 
-fatores que são exógenos ao \gls{MI}, um aumento abrupto da demanda, que pode
-ocorrer pela abertura de linhas de créditos antes não existentes ou pelo aumento
-da renda da população. Quaisquer que sejam as causas que levem a um choque no
-\gls{MI}, seus efeitos devem ser investigados. Se o mercado impactado tiver uma
-estrutura fortemente concorrencial, a tendência é que um choque de demanda seja
-absorvido a médio e longo prazo sem grandes flutuações de preços, devido à
-entrada de novos ofertantes no mercado. Por outro lado, se o mercado em análise
-sofre de algum tipo de restrição geográfica ou mesmo econômica que dificulte a 
-entrada de novos atores como ofertantes, a tendência é que os choques de demanda 
-tenham maior impacto. Os detalhes por trás deste raciocínio serão melhor 
-esclarecidos no capítulo \@ref(crise2008).
-
-
-### Particularidades do mercado imobiliário
-
-Também em nível microeconômico o mercado imobiliário é um mercado diferenciado 
-dos outros mercados de bens de consumo. Apesar de toda a indústria da construção
-ter evoluído muito ao longo das últimas décadas, ainda persiste no Brasil um
-forte componente artesanal na construção civil, o que implica em bens imóveis
-de características muito heterogêneas, a depender da mão-de-obra aplicada na sua
-execução. Também a questão do projeto arquitetônico implica numa singularidade
-para cada bem imobiliário. Mas mais importante ainda é a questão da localização,
-que torna cada imóvel único. Isto não ocorre em qualquer outro mercado de bens 
-de consumo. A não ser por questões de natureza sentimental, um carro, uma 
-geladeira, ou praticamente qualquer outro bem de consumo é produzido em série: 
-existem milhares de itens iguais no mercado. Isto nunca ocorre com os imóveis.
-Mesmo apartamento vizinhos, em um mesmo prédio, tem características diferentes,
-dada a sua posição solar, localização do andar em relação ao prédio, a vista
-que cada um possui, entre outras questões. 
-
-Segundo a NBR 14.653-01 [-@NBR1465301, x], "o mercado imobiliário caracteriza-se
-como um 'mercado imperfeito', com bens não homogêneos, estoque limitado,
-liquidez diferenciada e grande influência de fatores externos."
-
-De acordo com @ADAMS2010 [p. 3], a forte inércia dos preços do mercado
-imobiliário influencia o comportamento do mercado durante os *booms* econômicos,
-já que a exuberância das expectativas (exuberância irracional) dos investidores
-e proprietários de imóveis facilita a formação de bolhas nestes mercados. Além
-disto, a falta de informação a respeito de preços no mercado imobiliário, pelo
-motivo deste ser um mercado segmentado, ou seja, os preços obedecem uma lógica
-local, também é uma facilitadora da formação de bolhas.
-
-### Diagnóstico de mercado
-
-A NBR 14.653-01 [-@NBR1465301, 12], estabelece que, "o profissional, conforme o
-tipo de bem, as condições de contratação, o método empregado e a finalidade da
-avaliação, pode **tecer considerações sobre o mercado do bem avaliando**, de
-forma a indicar, tanto quanto possível, **a estrutura, a conduta e o desempenho
-do mercado**."
-
-### O imóvel visto como um investimento
-
-Segundo @Malpezzi2002TheRO, um imóvel é um ativo que rende um fluxo de serviços
-ao longo do tempo. O Quadro \@ref(qua:Quadro-1) mostra a diferenciação entre os
-conceitos de Estoque e Fluxo, muito utilizados na Economia. 
-
-\begin{quadro}[htb]
-	\centering
-	\caption{\label{qua:Quadro-1}Distinção entre estoque e fluxo.}	
-	\begin{tabular}{|l|l|}
-		\hline
-		\textbf{Riqueza}  & \textbf{Fluxo}\\ \hline
-		 Riqueza          & Renda         \\ \hline
-		 Dívida Pública   & Déficit       \\ \hline
-		 Valor do imóvel  & Aluguel       \\ \hline
-	\end{tabular}
-	\fonte{\textcite[3]{Malpezzi2002TheRO}.}
-\end{quadro}
-
-O quadro acima poderia ser facilmente expandido para incorporar outras formas de 
-investimentos, como títulos (que rendem coupons), ações (que rendem dividendos)
-e outros.
-
-Na ótica do investidor, o imóvel é como um título de longo prazo. Racionalmente
-ou não, o comprador de um imóvel com fins de investimento espera que o imóvel
-comprado vá gerar um fluxo de aluguéis (constantes ou não) ao longo do tempo, de
-maneira que este fluxo de aluguéis compense o investimento inicial na compra do
-imóvel.
-
-Segundo @Malpezzi2002TheRO [p. 4], o valor presente $V$ de um imóvel pode ser 
-calculado conforme a equação \@ref(eq:VPImovel), onde $\gls{R}_t$ é a renda
-bruta dos aluguéis, $C_t$ é o custo recorrente com a manutenção do imóvel e $i$
-é a taxa de desconto.
-
-\begin{equation}
-V = \sum_{t=0}^T \frac{\mathbb{E}[R_t-C_t]}{(1+i)^t}
-(\#eq:VPImovel)
-\end{equation}
-
-Diferentemente do que hoje ocorre com os investimentos capitalistas, onde o 
-*payback* esperado gira em torno de 5 a 10 anos, o comprador de um imóvel
-esperar que este gere um fluxo de renda ao longo de décadas. 
-
-Assim, a compra de um imóvel assemelha-se à compra dos títulos de renda fixa de
-maior *duration* disponíveis no mercado.
-
-Ora, como se sabe, o valor de face destes títulos, ou seja, o valor do resgate
-destes títulos no vencimento, é dado. Porém, estes títulos são negociados no
-mercado secundário a valor de mercado, sendo que os títulos de longo prazo são
-altamente sensíveis a variações nas taxas de juros de longo prazo. A saber, o
-preço destes títulos é inversamente proporcional às taxas de juros, ou seja,
-quanto menor as taxas, maior o valor presente dos títulos, ou valor de mercado,
-e vice-versa.
-
-### O papel da especulação no \gls{MI}
-
-@Malpezzi2002TheRO [p. 5] fazem um bom apanhado de diversos conceitos relacionados à 
-"especulação". Primeiramente, argumentam que é polêmica a definição do termo
-*especulador*, especialmente se comparado ao termo *investidor*: seria o 
-especulador um investidor que negocia o bem em prazos mais curtos? Não existe
-uma definição para tal.
-
-Então @Malpezzi2002TheRO [p. 12] apresentam diversas maneiras de se modelar as
-expectativas (expectativas racionais, adaptativas, etc.), e apresentam (p. 14),
-um modelo do valor presente de um imóvel calculado de acordo com o valor 
-esperado da renda líquida com aluguéis futuros, $\gls{R_L}$, trazidos ao Valor
-Presente através da aplicação de uma taxa de desconto $i$, de acordo com a 
-expressão vista na equação \@ref(eq:valor-presente):
-
-\begin{equation}
-V = \sum_{t = 0}^T \frac{\mathbb{E}[R_{Lt}]}{(1+i)^t}
-(\#eq:valor-presente)
-\end{equation}
-
-Supondo que se possa calcular um valor presente para um imóvel baseado apenas
-nos fundamentos econômicos $V^*$, o valor em torno do qual se negociaria o
-imóvel com expectativas racionais, com expectativas adaptativas[^3], um imóvel
-com preço igual ao da equação \@ref(eq:valor-presente-adptativo) também seria
-negociado 'racionalmente', caso o comprador considerasse que o grau de
-supervalorização do imóvel continuasse a crescer nos períodos subsequentes por
-uma taxa maior ou igual à taxa de desconto [@Malpezzi2002TheRO, 15].
-
-\begin{equation}
-V_t = V_t^* + b_t, \qquad com \quad \mathbb{E}_t[b_{t+1}] = (1+i)b_t
-(\#eq:valor-presente-adptativo)
-\end{equation}
-
-
-[^3]: Expectativas adaptativas assumem que os agentes do mercado presumem que os 
-ganhos futuros serão iguais aos do passado recente analisado.
-
-Em suma, isto implica que a autocorrelação serial nos aumentos de preços dos 
-imóveis é uma condição necessária para a formação de bolhas. Segundo 
-@Malpezzi2002TheRO [p. 15], muitos estudos documentam a existência de correlação 
-serial em preços, porém a evidência de que isso leva, por si só, a formação de 
-bolhas é controversa. No capítulo \@ref(crise2008) serão vistos com mais detalhes os
-fatores que levam à formação de bolhas.
-
-### O papel da regulação do \gls{MI} na prevenção da formação de bolhas especulativas
-
-Conforme será visto no capítulo \@ref(crise2008), para @Malpezzi2002TheRO [p. 26], o
-efeito da especulação na volatilidade do \gls{MI} depende das condições de
-oferta em cada mercado. Reformas adequadas na regulação do \gls{MI} com base
-nesta hipótese serão apresentadas no capítulo \@ref(politicas).
-
-### Formação de bolhas especulativas
-
-Na análise de @Malpezzi2002TheRO a respeito da formação de bolhas, a variável
-taxa de desconto ($i$) é considerada como uma variável exógena, isto é, não 
-foram considerados os efeitos do preço dos imóveis sobre esta variável, tampouco
-foram consideradas os efeitos de possíveis mudanças no patamar desta variável 
-sobre o preço dos imóveis.
-
-Como visto no \@ref(qua:Quadro-1), um imóvel pode ser visto como um investimento.
-O seu valor presente depende de um fluxo estimado de aluguéis trazidos a
-valor presente através da aplicação de uma taxa de desconto, assim como ocorre
-com outros ativos financeiros, como os títulos da dívida pública, por exemplo.
-
-Os títulos da dívida pública são vistos, normalmente, como os ativos livres de
-risco da economia. Por isso, a taxa de desconto destes ativos é chamada de taxa
-livre de risco. A taxa de desconto de quaisquer outros ativos na Economia de um
-país será maior do que essa taxa livre de risco, pois nela estará embutida uma
-taxa devido ao risco de carregamento daquele investimento, que se soma à taxa de
-livre de risco da economia[^4]. Dessa maneira, o que ocorre quando a taxa livre
-de risco oscila é que também oscilam os Valores Presentes dos imóveis e dos
-outros investimentos.
-
-Se estas oscilações de preços dos imóveis devido às taxas de juros podem causar
-bolhas especulativas, no entanto, é uma outra história. Este assunto será abordado com mais profundidade no capítulo \@ref(crise2008).
-
-[^4]: O capítulo \@ref(crise2008) ilustra como as taxas praticadas no mercado de 
-crédito de hipotecas, por exemplo, são compostas de uma taxa adicional de risco
-em relação à taxa livre de risco.
-
-### Rendimentos de aluguel
-
-A taxa de rendimento do aluguel de um imóvel é obtida invertendo-se os termos
-da equação \@ref(eq:valor-presente), de maneira a isolar a taxa de desconto.
-
-Para facilitar os cálculos, é conveniente a utilização da simplificação da 
-equação \@ref(eq:valor-presente), fazendo a hipótese de que a série de 
-pagamentos é tão longa, que pode ser considerada perpétua. Geralmente esta é
-uma boa hipótese no caso de imóveis, pois para séries de pagamentos constantes 
-com duração superior a 20 anos a hipótese da perpetuidade é considerada razoável,
-haja vista que a vida útil de qualquer imóvel costuma ultrapassar esse prazo.
-
-Assim, o Valor Presente $VP$ de uma série de pagamentos perpétua de valor 
-periódico $\gls{R_L}$, descontados de uma taxa de juros $i$ é igual a:
-
-\begin{equation}
-VP = \lim_{n \to \infty} R_L \frac{(1+i)^t-1}{i(1+i)^t}= \frac{R_L}{i}
-(\#eq:perpetua)
-\end{equation}
-
-Os rendimentos de aluguel $\gls{y_r}$ são taxas brutas de retorno dos 
-recebimento de aluguéis comparados ao valor de venda de um imóvel.
-
-Por exemplo, para um imóvel avaliado em R$1.000.000,00, com um rendimento de 
-aluguéis de R$1.500,00 reais mensais, o rendimento bruto do aluguel 
-deste imóvel seria:
-
-$$y_r = \frac{12*1.500}{1.000.000} = 3,6\% \ a.a.$$
-Esta taxa tem sido utilizada para comparar o rendimento do investimento em 
-imóveis em todo o planeta, através de sítios de internet especializados em
-investimento em imóveis [@gpg].
-
-#### Duration de um título de renda fixa
-
-Segundo @marins1, a *duration* de um título, ou de um conjunto de títulos de 
-renda fixa pode ser calculada de acordo com a equação \@ref(eq:duration), 
-de Macaulay:
-
-\begin{equation}
-D = \frac{\sum\limits_{t = 1}^{n} t \times \frac{F_t}{(1+i)^t}}{\sum\limits_{t = 1}^{n} \frac{F_t}{(1+i)^t}}
-(\#eq:duration)
-\end{equation}
-
-A medida tem por finalidade comparar títulos com diferentes características. Por
-exemplo, existem títulos no mercado de renda fixa que não fazem pagamentos 
-constantes de coupons, sendo que o retorno integral do capital investido e juros
-associado a este título só retornam ao investidor no vencimento do título 
-(normalmente são títulos de vencimento mais curto), enquanto outros títulos 
-fazem pagamentos constantes de coupons (semestralmente, p.ex.), ou seja,
-uma parte do valor investido no título volta ao investidor na forma de coupons, 
-e no vencimento do título é resgatado o valor principal (normalmente são títulos
-com vencimentos mais longos). 
-
-Para comparar então um título com vencimento em 5 anos que não faz pagamento de
-coupons e um título com vencimento em 7 anos que faz pagamentos de coupons, 
-utiliza-se a equação \@ref(eq:duration) para calcular a *duration* de cada
-título.
-
-O investimento em imóveis será, via de regra, o investimento de maior *duration*
-do mercado, haja vista que um imóvel pode ter vida útil de 50 anos ou mais, 
-enquanto os títulos de renda fixa normalmente tem prazo máximo de 30 anos.
-
-#### Cálculo do valor justo de um imóvel em função da taxa de desconto
-
-O cálculo do valor justo de um imóvel pode ser feito considerando-se o método
-do fluxo de caixa descontado, assim como é feito o *valuation* de uma empresa
-capitalista.
-
-Por exemplo, se um investidor estima que os rendimentos líquidos de um
-determinado imóvel (aqui definida como o valor dos aluguéis descontados de
-taxas, custos de manutenção e outras despesas) será de R$2.000,00 mensais, a uma
-taxa de juros de 3% ao ano, o valor presente do imóvel, considerando-se que este
-fluxo seja constante ao longo de toda a vida útil do imóvel (não menor do que 20
-anos), é:
-
-$$VP = \frac{12 \times 2.000}{0,03} = 800.000$$
-
-Uma queda moderada da taxa de juros de longo prazo, digamos, para 2% a.a.,
-teria o seguinte impacto no valor presente deste imóvel:
-
-$$VP = \frac{12 \times 2.000}{0,02} = 1.200.000$$
-
-Já uma queda da taxa de juros de longo prazo mais agressiva, digamos para 1%
-a.a., teria o seguinte impacto:
-
-$$VP = \frac{12 \times 2.000}{0,01} = 2.400.000$$
-
-A Figura \@ref(fig:valores-juros) mostra como varia, *coeteris paribus*, o valor 
-justo de um imóvel em função da taxa de juros de longo prazo.
-
-```{r valores-juros, fig.cap = "Variação do valor justo de um imóvel em função da taxa de juros."}
-eq = function(x) 12*2000/(x)
-# curve(eq, from=.1/100, to = 6/100,
-#       xlab = "Taxa de juros",
-#       ylab = "Valor justo do Imóvel"
-#       )
-ggplot(data.frame(x = c(.1/100, 6/100)), aes(x = x)) + 
-  stat_function(fun = eq) + 
-  xlab("Taxa de juros (ao ano)") +
-  ylab("Valor justo do imóvel") +
-  scale_y_continuous(labels = function(l) {trans = l / 10^6}) +
-  scale_x_continuous(labels = scales::percent) +
-  labs(title = "Valor justo de um imóvel", 
-       subtitle = "Em milhões de reais.",
-       caption = "Supondo uma receita líquida constante de R$2.000/mês.") 
-  
-```
-\bcenter
-Fonte: Do autor.
-\ecenter
-
-A Tabela \@ref(tab:tabela-valor-justo) mostra alguns valores calculados de
-acordo com a equação \@ref(eq:valor-presente) para um imóvel, supondo receita
-líquida de aluguel mensal constante de R$2.000,00, em função da taxa de
-desconto.
-
-
-```{r tabela-valor-justo}
-valorJusto <- data.frame(i = c(0.1, .25, .5, .75, 1, 1.5, 2, 3, 4, 5, 6))
-valorJusto$valor <- 12*2000/(valorJusto$i/100)
-kable(valorJusto, format = "latex", booktabs = TRUE,
-      caption = "Valor justo de um imóvel em função do valor do aluguel.",
-      format.args = list(decimal.mark = ",", big.mark = ".", scientific = F),
-      col.names = c("Taxa de Juros(%)", "Valor Justo (R$)")) %>%
-  kable_styling(latex_options = "HOLD_position") %>% 
-  footnote(general = c("Supondo um aluguel constante de R$2.000/mês.",
-                       "Taxas de juros anuais."),
-           general_title = "Notas:")
-```
-\bcenter
-Fonte: Do autor.
-\ecenter
-
-Prentende-se mostrar com a exposição dos valores da Tabela 
-\@ref(tab:tabela-valor-justo), assim como com o gráfico da Figura 
-\@ref(fig:valores-juros) que a taxa de juros de referência impacta fortemente
-na variação dos preços dos imóveis a partir de um determinado patamar. Isto se 
-deve, é claro, à grande vida útil (ou grande *duration*) de um imóvels e à
-capacidade de extração de renda deste imóvel durante esta vida útil. Uma 
-diminuição na taxa de juros de longo prazo de referência de apenas 0,25 p.p. 
-pode acarretar numa mudança do valor presente (ou valor justo) de um imóvel da
-ordem de milhões de reais. Isto impacta o \gls{MI} de uma maneira muito forte e,
-como será mostrado no capítulo \@ref(crise2008), sem precedentes históricos. 
 
 ## O Mercado Imobiliário e o setor bancário {#MI-e-o-setor-bancario}
 
