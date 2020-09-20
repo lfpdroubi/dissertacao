@@ -525,7 +525,7 @@ engel2 <- Hmisc::bezier(x = c(.5, 1, 5),
                         y = c(.1, 1, 1.5)) %>%
   as_data_frame()
 
-plot_labels <- data_frame(label = expression("epsilon[r] < 1", "epsilon[r] > 1", 
+plot_labels <- tibble(label = expression("epsilon[r] < 1", "epsilon[r] > 1", 
                                              "epsilon[r] == 1"),
                           x = c(.5, .5, .5),
                           y = c(2.6, .3, 1.15))
@@ -1404,20 +1404,107 @@ ou seja, o aumento de custo impacta mais a oferta do que o aumento das hipotecas
 afeta a demanda, exceção apenas para EUA e Itália, onde as taxas hipotecárias
 preferidas são as ajustáveis.
 
-A figura \@ref(fig:adams) mostra como, teoricamente, uma mudança nas variáveis
-macroeconômicas impactam na formação de preços do mercado imobiliário. Por
-exemplo, no painel central é ilustrado como se propaga para o mercado
-imobiliário um aumento na taxa de juros de longo prazo: um aumento nos juros de
-longo prazo diminui os preços dos imóveis, que por sua vez diminuem o apetite
-dos investidores por imóveis, fazendo diminuir o ritmo das construções, o que
-por sua vez tende a diminuir o estoque de imóveis (baixa entrada de imóveis
-novos no mercado), o que por sua vez tende a aumentar o valor dos aluguéis.
+A Figura \@ref(fig:macroInfluence) mostra como se dá a propagação de um choque 
+de demanda no \gls{MI} através da Economia: um choque de demanda acarreta, 
+inicialmente, um aumento no valor dos aluguéis (**I**), o que acarreta uma mudança
+nos preços dos ativos imobiliários (**II**), que por sua vez aquece o setor de
+construções (**III**), que finalmente elevará o estoque de imóveis (**IV**).
+ 
+```{r}
+demand_property <- Hmisc::bezier(c(1, 1.5, 7), c(7, 3, 1)) %>%
+  as_data_frame()
+
+demand_property_1 <- Hmisc::bezier(c(3, 3.5, 9), c(9, 3.5, 3)) %>%
+  as_data_frame()
+
+
+plot_labels <- tibble(label = expression("D[1]", "D[2]"),
+                          x = c(1, 3.5),
+                          y = c(7.5, 9.5))
+axis_labels <- tibble(label = expression("Aluguéis", "Estoque", 
+                                         "Preço dos \n Imóveis", "Construção"),
+                          x = c(-1.5, 9, -8.5, 2),
+                          y = c(10, .5, 0, -10))
+
+Mercados <- tibble(
+  label = expression("Mercado de Bens: \n Determinação dos Preços",
+                     "Mercado de Bens: \n Determinação da Construção",
+                     "Mercado Imobiliário: \n Determinação dos Aluguéis",
+                     "Mercado Imobiliário: \n Determinação do Estoque \n Residencial"), 
+                       x = c(-7, -7, 7, 7), y = c(8, -8, 8, -8)) 
+Romans <- tibble(label = c("I", "II", "III", "IV"), 
+                 x = c(8, -8, -8, 8),
+                 y = c(4.5, 4.5, -4.5, -4.5))
+```
+
+```{r macroInfluence, fig.cap="Propagação de um choque de demanda no \\gls{MI}."}
+p1 <- ggplot(mapping = aes(x = x, y = y)) + 
+  # geom_path(data = supply, color = "#0073D9", size = 1) + 
+  geom_path(data = demand_property, color = "#FF4036", size = 1) +
+  geom_path(data = demand_property_1, color = "#FF4036", size = 1) +
+  geom_hline(aes(yintercept = 0)) + 
+  # geom_abline(slope = -1, size = 1) +
+  geom_segment(aes(x = -7, y = 7, xend = 7, yend = -7), size = 1) +
+  geom_vline(aes(xintercept = 0)) +
+  geom_segment(aes(x = -8, y = -7.5, xend = -.75, yend = 0), size = 1) +
+  geom_segment(aes(x = 3, y = 3.25, xend = -3.5, yend = 3.25), lty = "dotted") +
+  geom_segment(aes(x = -3.5, y = 3.25, xend = -3.5, yend = -3), lty = "dotted") +
+  geom_segment(aes(x = -3.5, y = -3, xend = 3, yend = -3), lty = "dotted") +
+  geom_segment(aes(x = 3, y = -3, xend = 3, yend = 3.25), lty = "dotted") +
+  geom_segment(aes(x = 4.5, y = 5, xend = -5.25, yend = 5), lty = "dashed") +
+  geom_segment(aes(x = -5.25, y = 5, xend = -5.25, yend = -4.5), lty = "dashed") +
+  geom_segment(aes(x = -5.25, y = -4.5, xend = 4.5, yend = -4.5), lty = "dashed") +
+  geom_segment(aes(x = 4.5, y = -4.5, xend = 4.5, yend = 5), lty = "dashed") +
+  geom_text(data = plot_labels, aes(x = x, y = y, label = label), 
+            parse = TRUE)  +
+  geom_text(data = axis_labels, aes(x = x, y = y, label = label))  +
+  geom_text(data = Mercados, aes(x = x, y = y, label = label), 
+            size = 2.5) +
+  geom_text(data = Romans, aes(x = x, y = y, label = label), 
+            size = 3.5, fontface = "bold") +
+  coord_equal() +
+  labs(x = NULL, y = NULL) +
+  theme_classic() +
+  theme(axis.line=element_blank(), 
+        axis.title.y = element_text(angle = 0, hjust = .9)) +
+  scale_x_continuous(expand = c(.025, .025), breaks = NULL, limits = c(-10, 10)) +
+  scale_y_continuous(expand = c(.025, .025), breaks = NULL, limits = c(-10, 10))
+p1
+```
+\bcenter
+\small Fonte -- Adaptado de @ADAMS2010.
+\ecenter
+
+A Figura \@ref(fig:adams) mostra, além desta propagação descrita acima, em seu
+painel superior, o efeito de uma mudança nas variáveis macroeconômicas na
+formação de preços do mercado imobiliário. No painel central, por exemplo, é
+ilustrado como se propaga para o \gls{MI} um aumento na taxa de juros de longo
+prazo: inicialmente o aumento das taxas de juros de longo prazo diminui o Valor
+Presente dos imóveis, diminuindo o apetite dos investidores (**II**), o que faz
+diminuir o ritmo das construções (**III**), o que por sua vez tende a diminuir o
+estoque de imóveis (**IV**), o que, por fim, acaba por aumentar o valor dos
+aluguéis (**I**).
+
+Já no painel inferior, é mostrado o efeito de um aumento nas taxas de juros de
+curto prazo (e, consequentemente, nos custos de construção): o aumento nos
+custos de construção devido ao aumento das taxas de curto prazo desaquece o
+setor de construção (**III**), o que por sua vez faz diminuir os estoques
+(**IV**), elevando o valor dos aluguéis (**I**), o que acaba por elevar o valor 
+dos imóveis no mercado de bens (**II**).
+
+Obviamente que estes são apenas esquemáticos genéricos dos mecanismos de
+propagação, que deverão ter diferentes efeitos em cada mercado, a depender da
+elasticidade da oferta no \gls{MI}, por exemplo, ou da composição do estoque de
+imóveis (em mercados com imóveis relativamente novos, os estoques tendem a se
+manter por um tempo maior, enquanto num mercado mais velho a tendência é que
+mais imóveis deixem o estoque mais rapidamente, por conta do obsoletismo ou pela
+eventual má-conservação).
 
 ```{r adams, out.width="\\textwidth", fig.cap = "O impacto das variáveis macroeconômicas no preço dos imóveis residenciais."}
 knitr::include_graphics("./images/adams_crop.pdf")
 ```
 \bcenter
-\small Fonte -- @ADAMS2010.
+\small Fonte -- @ADAMS2010 [p. 6].
 \ecenter
 
 ##### Possíveis adequações necessárias ao modelo no Brasil

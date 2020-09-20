@@ -1,18 +1,52 @@
 # Conclusão {#conclusao}
 
-A armadilha de liquidez tende a deprimir os investimentos. Com juros no limite
-inferior (zero) e sem inflação, não é possível estimular os investimentos
-através da política monetária. Por outro lado, como visto no capítulo
-\@ref(politicas) as melhores políticas em relação aos programas habitacionais
-são as que focam no lado da demanda, que tem como efeito a elevação inicial dos
-preços e o consequente estímulo aos investimentos. Conforme visto no capítulo
-\@ref(economia), existe uma correlação bidirecional entre o aumento no preço dos
-imóveis com as taxas de inflação, o \gls{PIB} e outras variáveis
-macroeconômicas. Numa situação como uma armadilha de liquidez, é desejável que
-haja alta nos preços no geral, pois a inflação deprime as taxas de juros reais,
-incentivando os investimentos na Economia como um todo, não apenas no setor
-habitacional, ou seja, não há momento melhor, em termos macroeconômicos, do que
-este para a implantação de programas que incentivem a demanda por imóveis.
+Como mostrado no capítulo \@ref(historico), durante boa parte do século XX a
+inflação brasileira tinha um comportamento diferente do esperado, elevando-se em
+períodos de baixa conjuntura. A inflação, portanto, tinha um papel de incentivar
+as imobilizações, o que fazia com que o preço da terra no Brasil se elevasse em
+períodos de crise, quando a inflação se elevava. Com as reformas da Economia
+brasileira desde meados da década de 90, estabilizando-se a moeda, os motivos
+que levavam a tendência de imobilização de capital na forma de imóveis nos
+períodos de crise desapareceram. A injeção de capital externo na economia
+brasileira, através da abertura econômica, por outro lado, não deixou os preços
+dos imóveis desabarem, o que, segundo Rangel, traria uma reforma agrária através
+dos próprios mecanismos do mercado.
+
+Com a crise que se lida atualmente a economia brasileira, está claro, ao menos
+por enquanto, que o problema se inverteu: se os preços dos imóveis não caíram
+em termos nominais, o fizeram em termos reais, através da corrosão de valor
+inflacionária. As taxas de juros caíram consideravelmente no Brasil nos últimos
+anos e junto com elas as taxas de inflação. A inflação não dá sinal que voltará
+a galopar, apesar da liberação dos preços dos combustíveis e dos preços dos 
+alimentos, cujos estoques reguladores estão zerados. A demanda é fraca e a 
+capacidade ociosa instalada na Economia ainda é grande, razão pela qual os 
+investimentos não tendem a aparecer tão cedo. No \gls{MI}, a tendência é que, se
+muito, os investimentos voltem apenas voltados para a construção de imóveis para
+as classes altas e média-altas, muitas vezes voltados para a concessão de 
+serviços do tipo Airbnb ou quetais.
+
+Com as taxas de juros em nível tão baixos, como mostrado no capítulo
+\@ref(crise2008), o \gls{Bacen} pouco pode fazer para estimular a economia, a
+não ser eventuais aumentos na base monetária, como ocorreu nas economias
+desenvolvidas, porém sem o mesmo poder de fogo da política monetária ortodoxa. A
+armadilha de liquidez não permite que o \gls{Bacen}, mesmo que quisesse, torne
+viáveis investimentos com taxas de retorno negativas, já que não há inflação .
+Com juros no limite inferior (zero) e sem inflação, não é possível estimular os
+investimentos através da política monetária.
+
+Por outro lado, como visto no capítulo \@ref(politicas) as melhores políticas em
+relação aos programas habitacionais são as que focam no lado da demanda, que tem
+como efeito a elevação inicial dos preços no \gls{MI} residencial e o
+consequente estímulo aos investimentos neste mercado.
+
+Conforme visto no capítulo \@ref(economia), existe uma correlação bidirecional
+entre o aumento no preço dos imóveis com as taxas de inflação, o \gls{PIB} e
+outras variáveis macroeconômicas. Numa situação como a atual, numa armadilha de
+liquidez, é desejável que haja alguma pressão inflacionária, pois a inflação
+deprime as taxas de juros reais, incentivando os investimentos na Economia como
+um todo, não apenas no setor habitacional. Ou seja, não há momento melhor, em
+termos macroeconômicos, do que o presente para a implantação de programas que
+incentivem a demanda por imóveis.
 
 Dado o grande déficit habitacional no Brasil, os investimentos devem ser
 grandes, se os programas habitacionais forem bem dimensionados. O maior
@@ -27,7 +61,29 @@ infraestrutura tem um impacto na indústrica de materiais de construção. Do la
 fiscal, se o Governo Federal deverá ser o grande financiador do novo modelo, por
 outro lado terá um adicional de arrecadação via efeito multiplicador dos
 investimentos. Finalmente, o aumento do \gls{PIB} tenderá a compensar eventuais
-déficits orçamentários, mantendo a relação Dívida/\gls{PIB} em níveis razoáveis.
+déficits orçamentários, ajudando a equilibrar a relação Dívida/\gls{PIB}.
+
+Pelo lado da oferta, o Brasil tem uma vantagem enorme em relação a outros países
+para colocar em marcha o \gls{MI}: a quantidade de terra e imóveis da União por
+todo o Brasil é significante, incluso as terras de marinha, muitas das quais já
+contando com relevante infraestrutura urbana. É possível, desta maneira, quem
+sabe, vencer um dos maiores obstáculos na política urbana hoje, que é a
+concatenação dos esforços entre as diversas esferas da administração pública,
+federal, estadual e municipal. cabe ao governo federal tomar a iniciativa,
+exigindo contrapartidas dos estados e municípios na liberação dos terrenos de
+marinha, buscando a viabilização dos empreendimentos de mais baixa renda, onde
+a elasticidade da oferta do mercado tende a ser menor. A venda de terrenos de
+marinha somente deveria ser feita com a contrapartida da execução de um 
+empreendimento habitacional. Os preços de venda podem ser subsidiados (ou 
+zerados) para os empreendimentos de baixa renda, viabilizando-os. Não faz sentido
+o governo federal vender os terrenos de marinha para depois subsidiar os 
+investimentos no \gls{PMCMV}, pois desta maneira estará subsidiando a compra da
+terra que ele mesmo vendeu inicialmente. Com o menor preço da terra, mais
+empreendimentos se viabilizam e/ou os imóveis construídos podem ter maior 
+qualidade, melhorando a composição do estoque residencial, o que irá ser sentido
+a longo prazo. Além disto, o *retrofit* dos imóveis construídos, como o célebre
+Edifício "A Noite", transformando o seu uso, de comercial para residencial, 
+tem o poder de aumentar a elasticidade da oferta de maneira muito rápida.
 
 ## Objetivo 1
 
