@@ -280,9 +280,9 @@ pop_urb %>%
 \ecenter
 
 Em meados dos anos 60, apenas 46,1% da população brasileira era urbana, uma
-proporção bem menor do que a dos países do então *primeiro mundo* (EUA e Europa
-Ocidental), hoje ditos *desenvolvidos*, que girava então em torno dos 70% da
-população.
+proporção bem menor do que a dos países do então *primeiro mundo* (\gls{EUA} e
+Europa Ocidental), hoje ditos *desenvolvidos*, que girava então em torno dos 70%
+da população.
 
 Em apenas 10 anos, já em meados da década de 70, este número sofria um aumento
 vertiginoso de quase 10 pontos percentuais, com 55,9% da população urbana. A
@@ -296,8 +296,8 @@ Chegado os anos 90, a população urbana brasileira atingiu notáveis 73,9% da
 população brasileira, número equiparado ao da população urbana do mundo
 desenvolvido (74% na Europa Ocidental). Em meados dos anos 2000, já então no
 século atual, ela ultrapassou, em proporção, a população urbana da Europa
-Ocidental e a dos EUA, chegando ao último dado de 2015, com 85,8% da população
-brasileira vivendo nas cidades.
+Ocidental e a dos \gls{EUA}, chegando ao último dado de 2015, com 85,8% da
+população brasileira vivendo nas cidades.
 
 Há de se levar em consideração, ainda, que este "êxodo rural" ainda foi
 acompanhado de um crescimento demográfico expressivo.
@@ -391,7 +391,7 @@ reflete uma realidade que, em certa medida, continua a ser a nossa
 \end{citacao}
 
 Em outras palavras, para @rangel1956, os economistas dos países
-subdesenvolvidos, ou mais modernamente, países ``em desenvolvimento'', devem
+subdesenvolvidos, ou mais modernamente, países "em desenvolvimento", devem
 utilizar em sua análise as teorias clássicas, neoclássicas, keynesianas, à
 medida que subsistem nestes países características próprias da realidade
 econômica que imperavam no Velho Mundo quando elas foram concebidas.
@@ -400,22 +400,62 @@ Desta maneira, o feudalismo tal como concebido na Europa não teve a mesma
 estrutura que o feudalismo no Brasil, assim como o sistema feudal brasileiro foi
 não-concomitante com o sistema feudal europeu.
 
-Segundo Rangel [-@rangel1989, 726], através da bula papal de Alexandre IV, de 
-4 de maio de 1493 (ainda que tenha sido depois alterada pelo tratado de 
-Tordesilhas), toda a terra onde hoje encontra-se a América Latina era declarada 
-propriedade do rei. Isto é, estava satisfeito o primeiro princípio para a 
-implantação do feudalismo nos trópicos: *all land is king's land*. A propriedade 
-sobre as terras era total, de maneira que podesse dizer que, juridicamente, em 
-nenhum momento a propriedade fundiária esteve mais concentrada do que naquele 
-primeiro momento.
+Segundo @furtado2009 [p. 227], "nas regiões de processo milenar de povoamento, a
+economia agrícola se desenvolveu partindo do sistema de produção para
+subsistência das populações locais para alcançar formas mais complexas de
+divisão social do trabalho que se traduziam em diferenciação locacional de
+atividade econômica", enquanto no Brasil, ao contrário destas regiões e de
+outros países de povoamento recente, como os \gls{EUA}, a agricultura nasceu sob
+a forma de grande empresa comercial, antecendente ao próprio país, ou seja, a
+agricultura aqui nasceu não para o abastecimento da população fixada no
+território, mas voltada à exportação. A estrutura agrária brasileira, dessa
+forma, se moldou não pela escassez de terras, como na Europa, ou pela escassez
+de mão-de-obra, como nos \gls{EUA}, mas pela escassez de capital e capacidade
+empresarial [@furtado2009, 228].
 
-O segundo princípio, no entanto, *nulle terre sans seigneur*, ou seja, o 
-princípio de que não deve haver terra sem senhor, também indispensável para a 
-existência do feudalismo -- no surgimento do feudalismo na Europa, sem que todas 
-as  terras  social e economicamente significativas estivessem apropriadas, a 
-tendência natural do escravo liberto seria o retorno às condições de vida 
-tribal -- não era possível em território tão vasto e inexplorado como era o 
-território latino-americano naquele momento [@rangel1989, 726].
+Diferem o Brasil e outros países da \gls{AL} também em seu processo de
+desenvolvimento em relação a outros países de povoamento recente, como os
+\gls{EUA}. Isto decorre do fato que Portugal e Espanha, quando promoveram a
+colonização no Brasil, encontravam-se afligidos por uma permanente escassez de
+mão-de-obra, ao contrário da situação da Inglaterra do século XVII, que graças
+aos *enclosures*, havia criado um enorme excedente populacional, da qual podia
+se desfazer, em parte, enviando parte do excedente populacional para o 
+povoamento das colônicas, sem comprometimento dos custos de mão-de-obra na
+metrópole [@furtado2005, 27]. 
+
+Segundo Rangel [-@rangel1989, 726], através da bula papal de Alexandre IV, de 4
+de maio de 1493 (ainda que tenha sido depois alterada pelo tratado de
+Tordesilhas), toda a terra onde hoje encontra-se a América Latina era declarada
+propriedade do rei. Isto é, estava satisfeito o primeiro princípio para a
+implantação do feudalismo nos trópicos: *all land is king's land*. A propriedade
+sobre as terras era total, de maneira que pode-se dizer que, juridicamente, em
+nenhum momento a propriedade fundiária esteve mais concentrada do que naquele
+primeiro momento. 
+
+É importante destacar, porém, que a coroa portuguesa, assim como a espanhola,
+encontravam-se pressionadas politicamente pelas demais nações européias, que
+questionavam o direito à totalidade das terras, reconhecendo o direto apenas às
+terras efetivamente ocupadas. No caso da coroa espanhola, a exploração de metais
+preciosos logo permitiu que esta estabelecesse a defesa das novas terras, ainda
+que não em toda a sua extensão [@furtado2005, p. 13]. Já no caso da coroa
+portuguesa, a ocupação das novas terras exigiu, a princípio, a exploração
+agrícola do território brasileiro[^1], com a utilização de mão-de-obra escrava,
+então a única forma encontrada para a ocupação economicamente viável das novas
+terras [@furtado2005, p. 17], o que foi feito inclusive desviando recursos de
+empresas mais produtivas, como as Companhia das Índias Orientais [@furtado2005,
+p. 12].
+
+[^1]: a descoberta e exploração de metais preciosos no Brasil só ocorreu muito 
+mais tarde, nos primeiros decênios do século XVIII [@furtado2005, p. 79].
+
+O segundo princípio necessário para a implantação do feudalismo, portanto,
+*nulle terre sans seigneur*, ou seja, o princípio de que não deve haver terra
+sem senhor, também indispensável para a existência do feudalismo -- no
+surgimento do feudalismo na Europa, sem que todas as  terras  social e
+economicamente significativas estivessem apropriadas, a tendência natural do
+escravo liberto seria o retorno às condições de vida tribal -- não era possível
+em território tão vasto e inexplorado como era o território latino-americano
+naquele momento [@rangel1989, 726].
 
 Desta maneira, os feudos que aqui se iam estabelecendo, através do instituto da
 enfiteuse [@rangel1989, 726], os pactos de suserania-vassalagem que iam do servo 
@@ -502,6 +542,17 @@ A crise do feudalismo, sistema eminentemente agrário, e o consequente surgiment
 do capitalismo, com o surgimento das cidades modernas, se dá no contexto da 
 dissolução do Complexo Rural, o que descreve-se nas seções a seguir.
 
+
+Na Europa, onde havia um estoque limitado de terra, o aumento da população
+forçou a valorização da terra. A inexistência de novas terras para exploração de
+novas fronteiras agrícolas exigiu o desenvolvimento da técnica agrícola, visando
+a elevação do rendimento da terra, *i. e.* a tentativa de extrair maior
+produção por hectare de terra, visando poupar terra. Nos \gls{EUA}, no entanto,
+a grande abundância de terras permitiu desde cedo uma organização tal que o
+desenvolvimento se trazia pela incorporação de novas terras, limitada apenas
+pela mão-de-obra, o que estimulou a mecanização da agricultura, visando poupar
+mão-de-obra [@furtado2009, p.227].
+
 ### A crise do feudalismo no Brasil
 
 O feudalismo no Brasil desenvolveu-se a partir da Abolição-República,
@@ -585,9 +636,9 @@ b. as que buscam forçar a abertura do complexo a partir de dentro, provocando
 uma deterioração da produtividade das atividades manufatureiras dentro do
 complexo.
 
-As medidas do tipo a) tem seu exemplo mais típico nos EUA e também na França,
-enquanto as medidas do tipo b) predominaram na Inglaterra, Alemanha e Japão
-[@rangel1954, 114-115].
+As medidas do tipo a) tem seu exemplo mais típico nos \gls{EUA} e também na
+França, enquanto as medidas do tipo b) predominaram na Inglaterra, Alemanha e
+Japão [@rangel1954, 114-115].
 
 ### Êxodo rural e industrialização
 
@@ -710,6 +761,8 @@ capacidade do camponês de comprá-la, o que deveria ter se tornado possível
 devido ao esperado declínio do preço da terra que viria com a expansão das
 fronteiras agrícolas, mas que não ocorreu, devido à *demanda especulativa*, o
 que é um *problema financeiro*.
+
+@faoro...
 
 ### A tendência à elevação de preços nos períodos de recessão econômica
 

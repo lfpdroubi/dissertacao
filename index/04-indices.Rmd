@@ -321,13 +321,13 @@ um país com outros mercados em perspectiva [@indicators, 7].
 		 informais) produzida por ano por 1.000 habitantes       \\ \hline
 		 Investimento residencial & Investimento total no \gls{MI} residencial, em 
 		 porcentagem do \gls{PIB}       \\ \hline
-		 Área útil por habitante  & Área útil total disponível por habitante       \\ \hline
+		 Área útil por habitante  & Área útil total disponível por habitante \\ \hline
 		 Estruturas permanentes   & Porcentagem de unidades residenciais em 
 		 estruturas construídas por material permanente       \\ \hline
 		 Estruturas irregulares   & Porcentagem do estoque total residencial na área 
 		 urbana em desacordo com a regulamentação corrente.       \\ \hline
 		 Carteira de crédito residencial & Razão do crédito total hipotecários em 
-		 relação ao crédito total (instituições comerciais e governamentais)       \\ \hline
+		 relação ao crédito total (instituições comerciais e governamentais)  \\ \hline
 		 Multiplicador de terra loteada & Raiz média entre o preço mediano da terra 
 		 loteada nos extremos urbanos em um loteamento típico e o preço mediano da 
 		 terra nua, não loteada, próxima ao perímetro urbano       \\ \hline
@@ -336,6 +336,17 @@ um país com outros mercados em perspectiva [@indicators, 7].
 	\end{tabular}
 	\fonte{\textcite[4]{indicators}.}
 \end{quadro}
+
+Outro índice importante para a caracterização de um \gls{MI} é um índice baseado
+em regulação. Segundo @malpezzi_affordable_2018_5, é possível tomar conclusões a
+respeito da regulação de um \gls{MI} de duas maneiras: a primeira, mais custosa,
+é elaborar um estudo detalhado dos custos e benefícios das regulações impostas
+em um \gls{MI} específico; a segunda é efetuar estudos comparativos dos efeitos
+das medidas regulatórias em diferentes \gls{MI}.
+
+o \gls{WRLURI} [@wharton]...
+
+@externalities desenvolveu um índice próprio. 
 
 ## Variáveis macroeconômicas e variáveis do mercado imobiliário
 
@@ -354,7 +365,7 @@ variáveis como o número de novas residências vendidas, a taxa de vacância e 
 investimento residencial.
 
 A Figura \@ref(fig:vacancyRate) mostra a taxa de vacância de imóveis próprios (A)
-e de aluguel (B) para os EUA.
+e de aluguel (B) para os \gls{EUA}.
 
 ```{r}
 RHVRUSQ156N <- fredr(series_id = "RHVRUSQ156N", 
@@ -464,7 +475,7 @@ Outra \gls{HMV} importante não citada por @macroHousing é a *Homeownership rat
 *i.e* a proporção da população que vive em imóveis próprios. A Figura 
 \@ref(fig:USHOWN) mostra a evolução da *Homeownership rate* desde 1984.
 
-```{r USHOWN, fig.cap = "Proporção da população vivendo em imóveis próprios (EUA)."}
+```{r USHOWN, fig.cap = "Proporção da população vivendo em imóveis próprios (\\gls{EUA})."}
 ggplot(USHOWN, aes(x = date, y = value)) +
   geom_line() +
    labs(
@@ -647,12 +658,12 @@ série, apesar da aleatoriedade.
 
 De fato, @supplyelasticity [p. 290-291] mostraram que não há, ou melhor, não
 havia, até a publicação daquele trabalho, tendência de longo prazo para o preço
-dos imóveis nos EUA. No entanto, o que se tem observado num período que vai
-desde meados de princípios do século atual é que, ao menos graficamente, existe
-uma clara e forte tendência de alta de preços, não apenas nos EUA, como mostram
-a análise do HPI de Case e Shiller, mas também em nível global, como mostra a
-Figura \@ref(fig:global-rhpi), do índice de preços global de imóveis do
-\gls{FMI}, que será apresentado na próxima seção.
+dos imóveis nos \gls{EUA}. No entanto, o que se tem observado num período que
+vai desde meados de princípios do século atual é que, ao menos graficamente,
+existe uma clara e forte tendência de alta de preços, não apenas nos \gls{EUA},
+como mostram a análise do HPI de Case e Shiller, mas também em nível global,
+como mostra a Figura \@ref(fig:global-rhpi), do índice de preços global de
+imóveis do \gls{FMI}, que será apresentado na próxima seção.
 
 A possível presença de uma tendência de longo prazo para os preços dos imóveis
 deve ser investigada. No capítulo \@ref(crise2008) isto será abordado.
@@ -745,16 +756,17 @@ ggplot(global_rhpi, aes(x = dateq, y = equally.weighted)) +
 \small Fonte -- O autor, à partir de dados de @QuandlWIKI.
 \ecenter
 
-Deve-se reparar que, ao contrário do que aconteceu nos EUA, o pico em termos 
-globais só foi alcançado no último trimestre de 2007. Deve ser observado ainda
-que a queda, em termos globais, foi muito menos abrupta que a queda ocorrida
-nos EUA. O ponto de retomada, no entanto, tem grande coincidência: enquanto nos
-EUA a retomada começa à partir de Jan/2012, tanto para o índice nominal quanto
-para o índice real, globalmente esta retomada ocorre à partir do final do
-primeiro trimestre de 2012. Se levar-se em conta que, diferentemente dos índices
-norte-americanos, o índice global é trimestral, pode-se dizer que a retomada
-global da alta dos preços dos imóveis é praticamente simultânea.
+Deve-se reparar que, ao contrário do que aconteceu nos \gls{EUA}, o pico em
+termos globais só foi alcançado no último trimestre de 2007. Deve ser observado
+ainda que a queda, em termos globais, foi muito menos abrupta que a queda
+ocorrida nos \gls{EUA}. O ponto de retomada, no entanto, tem grande
+coincidência: enquanto nos \gls{EUA} a retomada começa à partir de Jan/2012,
+tanto para o índice nominal quanto para o índice real, globalmente esta retomada
+ocorre à partir do final do primeiro trimestre de 2012. Se levar-se em conta
+que, diferentemente dos índices norte-americanos, o índice global é trimestral,
+pode-se dizer que a retomada global da alta dos preços dos imóveis é
+praticamente simultânea.
 
-No entanto, deve-se ter em conta que o preço dos imóveis nos EUA afeta o índice
-global.
+No entanto, deve-se ter em conta que o preço dos imóveis nos \gls{EUA} afeta o
+índice global.
 

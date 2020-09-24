@@ -278,7 +278,7 @@ profissionais. Isto não significa, no entanto, que o \gls{MI} destes países
 esteja imune à especulação do capital financeiro, o que ficou claro com a crise
 financeiro-imobiliária de 2008. Também o setor financeiro não está livre dos
 impactos causados por fortes variações de preços no \gls{MI} e choques de preços
-como o de 2007/2008 nos EUA mostraram que, numa economia capitalista
+como o de 2007/2008 nos \gls{EUA} mostraram que, numa economia capitalista
 desenvolvida, crises setoriais que antes se restringiriam ao setor atingido,
 atualmente tendem a se propagar rapidamente pelos diversos setores da Economia,
 especialmente as crises advindas do mercado imobiliário.
@@ -319,14 +319,14 @@ habitando as favelas: a década de 90 e o início da década de 2000 são perío
 sabidamente de crescimento baixo e intermitente, intercalados por graves
 recessões na economia brasileira. Já a baixa considerável desta população
 desfavorecida entre os períodos de 2009 e 2014 (aprox. 11%) sugere que houve um
-impacto do crescimento econômico do período[^1], que veio acompanhado de
-programas habitacionais destinados à população de baixa renda, como o Minha Casa
-Minha Vida e, ainda que mais timidamente, do instituto da regularização
-fundiária. Deve-se lembrar que neste período houve aumento da proporção de
-população urbana, ou seja, a diminuição da população favelada com certeza não
-reflete um fenômeno de migração da cidade para o campo.
+impacto do crescimento econômico do período (especialmente no que tange à
+manutenção de baixas taxas de desemprego), que veio acompanhado de programas
+habitacionais destinados à população de baixa renda, como o Minha Casa Minha
+Vida e, ainda que mais timidamente, do instituto da regularização fundiária.
+Deve-se lembrar que neste período houve aumento da proporção de população
+urbana, ou seja, a diminuição da população favelada com certeza não reflete um
+fenômeno de migração da cidade para o campo.
 
-[^1]: Especialmente no que tange à manutenção de baixas taxas de desemprego.
 
 ```{r slums, fig.cap = "População urbana e população em favelas."}
 knitr::include_graphics("images/urban-pop-in-out-of-slums.png")

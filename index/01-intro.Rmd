@@ -53,7 +53,7 @@ O **Capítulo \@ref(indices) (Índices de preços de imóveis e correlação com
 traz um apanhado teórico sobre a confecção de índices de preços de imóvei, dá
 diretrizes para a eventual construção de um índice brasileiro e também traz um
 histórico recente dos índices de preços de imóveis e das taxas de juros de longo
-prazo nos EUA, fazendo considerações a respeito da correlação entre estas 
+prazo nos \gls{EUA}, fazendo considerações a respeito da correlação entre estas 
 variáveis.
 
 O **Capítulo \@ref(crise2008) (A crise imobiliário-financeira de 2007-2008 revisitada)** faz

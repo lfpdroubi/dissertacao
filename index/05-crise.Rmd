@@ -33,11 +33,11 @@ regulatórios.
 De acordo com @wheaton1999 [p. 212], alguns mercados parecem não apresentar um
 componente cíclico intrínseco: o investimento nestes imóveis aumenta ou diminui
 de acordo com os choques econômicos, como no mercado de apartamentos ou no
-mercado de imóveis industriais nos EUA. Já para outros mercados, a oscilação
-natural dos investimentos parece não ter ligação alguma com a economia: existe
-uma oscilação, mas que parece ser uma característica intrínseca daqueles
-mercados, como o mercado de imóveis de escritório e o mercado de imóveis para o
-varejo (*shopping centers*, p. ex.) nos EUA.
+mercado de imóveis industriais nos \gls{EUA}. Já para outros mercados, a
+oscilação natural dos investimentos parece não ter ligação alguma com a
+economia: existe uma oscilação, mas que parece ser uma característica intrínseca
+daqueles mercados, como o mercado de imóveis de escritório e o mercado de
+imóveis para o varejo (*shopping centers*, p. ex.) nos \gls{EUA}.
 
 @wheaton1999 elaborou então um modelo econométrico que leva em conta o tempo de
   desenvolvimento de um projeto nos diferentes mercados, assim como a taxa de
@@ -74,10 +74,11 @@ mais elástica, de maneira a evitar grandes oscilações de preços quando estes
 mercados forem atingidos por choques de demanda.
 
 No entanto, em alguns mercados isto não é tão simples: muitos mercados estão
-limitados por condições geográficas e simplesmente não é possível tornar a 
-oferta elástica nestes tipos de mercado. Ademais, em alguns mercados, como
-visto no item anterior, o tempo de desenvolvimento é maior, o que faz com que 
-um aumento de demanda leve alguns anos até que possa ser absorvido pelo mercado.
+limitados por condições geográficas e pode ser muito difícil, se não impossível
+tornar a oferta elástica nestes tipos de mercado. Ademais, em alguns mercados,
+como visto no item anterior, o tempo de desenvolvimento é maior, o que faz com
+que um aumento de demanda leve alguns anos até que possa ser absorvido pelo
+mercado.
 
 Estas grandes oscilações de preços são indesejáveis por uma série de motivos. 
 A dinâmica do mercado pode ser assim descrita:
@@ -178,7 +179,7 @@ p1 <- ggplot(mapping = aes(x = x, y = y)) +
             aes(x = x, y = y, label = label), parse = TRUE,
             family = "Source Sans Pro") +
   annotate("segment", x = 1.5, xend = 3.5, y = 8, yend = 9.5,
-           arrow = arrow(length = unit(1, "lines")), colour = "grey50") +
+           arrow = arrow(length = unit(.75, "lines")), colour = "grey50") +
   geom_point(data = intersections, size = 3) +
   scale_x_continuous(expand = c(0, 0), breaks = intersections$x,
                      labels = expression(Q[1], Q[2], Q[3])) +
@@ -223,7 +224,7 @@ p2 <- ggplot(mapping = aes(x = x, y = y)) +
             aes(x = x, y = y, label = label), parse = TRUE,
             family = "Source Sans Pro") +
   annotate("segment", x = 1.5, xend = 3.5, y = 8, yend = 9.5,
-           arrow = arrow(length = unit(1, "lines")), colour = "grey50") +
+           arrow = arrow(length = unit(.75, "lines")), colour = "grey50") +
   geom_point(data = intersections, size = 3) +
   scale_x_continuous(expand = c(0, 0), breaks = intersections$x,
                      labels = expression(Q[1], Q[2], Q[3])) +
@@ -304,9 +305,9 @@ p3 <- ggplot(mapping = aes(x = x, y = y)) +
             aes(x = x, y = y, label = label), parse = TRUE,
             family = "Source Sans Pro") +
   annotate("segment", x = 1.5, xend = 3.5, y = 8, yend = 9.5,
-           arrow = arrow(length = unit(1, "lines")), colour = "grey50") +
-  annotate("segment", x = 3.5, xend = 5.5, y = 9.5, yend = 11,
-           arrow = arrow(length = unit(1, "lines")), colour = "grey50") +
+           arrow = arrow(length = unit(.75, "lines")), colour = "grey50") +
+  annotate("segment", x = 3.5, xend = 5.75, y = 9.5, yend = 11.25,
+           arrow = arrow(length = unit(.75, "lines")), colour = "grey50") +
   geom_point(data = intersections, size = 3) +
   scale_x_continuous(expand = c(0, 0), breaks = intersections$x,
                      labels = expression(Q[1], Q[2], Q[3], Q[4])) +
@@ -521,32 +522,36 @@ Porém, além das medidas macroprudenciais citadas, considera-se que existem
 outros fundamentos que indicam a não existência de uma bolha especulativa, mas
 que indicam que o preço dos imóveis estão seguindo os fundamentos econômicos.
 
-### Bolhas Especulativas e taxas de juros
+### Bolhas Especulativas, taxas de juros e mobilidade de capitais
 
-Como demonstraram @joebges, um dos grandes dogmas da Economia, de que políticas 
+Como demonstraram @joebges, um dos grandes dogmas da Economia, de que políticas
 monetarárias frouxas causam bolhas no \gls{MI} não tem fundamentação científica,
-tanto teorica, como empiricamente falando. Bolhas especulativas foram 
-documentadas tanto em países com política monetária frouxa quanto em países que 
-praticavam política monetária apertada. Isto não quer dizer, no entanto, que
-as taxas de juros não tenham impacto sobre os preços dos imóveis, como mostram
-diversos trabalhos. Para a ocorrência de bolhas especulativas, no entanto, é
-necessário que existam outras características presentes: a inelasticidade da 
-oferta, como citado no capítulo \@ref(economia), a entrada no mercado de 
-grandes especuladores, geralmente fundos de hedge, a desregulamentação 
-financeira, com o lançamento de novos produtos financeiros de risco duvidosos, 
-etc. 
+tanto teorica, como empiricamente falando. Bolhas especulativas foram
+documentadas tanto em países com política monetária frouxa quanto em países que
+praticavam política monetária apertada. Isto não quer dizer, no entanto, que as
+taxas de juros não tenham impacto sobre os preços dos imóveis, como mostram
+diversos trabalhos citados no capítulo \@ref(economia) [@macroHousing;
+@goodhart2008; @ADAMS2010]. Para a ocorrência de bolhas especulativas, no
+entanto, é necessário que existam outras características presentes: a
+inelasticidade da oferta, como citado no capítulo \@ref(economia), a entrada no
+mercado de grandes especuladores, geralmente fundos de hedge, a
+desregulamentação financeira, com o lançamento de novos produtos financeiros de
+risco duvidosos, etc.
 
-No entanto, é sabido que os bancos centrais praticam (ou deveriam praticar) 
+A livre mobilidade de capitais, aliada a prática de baixas taxas de juros e 
+desregulamentação do mercado, como mostrado por [@estonia].
+
+No entanto, é sabido que os bancos centrais praticam (ou deveriam praticar)
 políticas monetárias frouxas visando estimular uma economia em crise, visando
 aumentar a liquidez monetária do mercado e com isso, fazer com  que a economia
 volte ao seu ritmo de crescimento 'natural'. Ora, ocorre que nestes momentos em
-que os bancos centrais estão praticando esta política monetária frouxa, 
-usualmente esta política monetária vem acompanhada de uma série de 
+que os bancos centrais estão praticando esta política monetária frouxa,
+usualmente esta política monetária vem acompanhada de uma série de
 desregulamentações financeiras, visando o aumento do volume de crédito, e também
-que os grandes investidores, com as baixas taxas de juros, tendem a procurar 
+que os grandes investidores, com as baixas taxas de juros, tendem a procurar
 alternativas mais rentáveis de investimento, ao custo do aumento do risco destes
-investimentos. A dinâmica que levou a crise imobiliário-financeira nos EUA foi
-essa e será melhor detalhada no capítulo \@ref(crise).
+investimentos. A dinâmica que levou a crise imobiliário-financeira nos \gls{EUA}
+foi essa e será melhor detalhada no capítulo \@ref(crise).
 
 Por ora o que interessa é o entendimento das razões da queda das taxas de lucro 
 da economia capitalista e porque isto é um fator estrutural, não conjuntural, o
@@ -693,7 +698,7 @@ atingidos em `r  df_daily[which.min(df_daily$rate), ]$date`, quando os títulos
 com maturidade de 10 anos atingiram impressionantes `r brf(pull(df_daily[which(df_daily$date == as.Date("2020-03-09")), ], rate)[1])`% a.a.
 
 Segundo Krugman [-@krugman2020], no entanto, isto não está a ocorrer apenas nos
-EUA, mas em todo o mundo desenvolvido, com maior ou menor gravidade, já há 
+\gls{EUA}, mas em todo o mundo desenvolvido, com maior ou menor gravidade, já há 
 alguns anos, e não deve ser interpretado apenas como um efeito de curto prazo
 de uma crise com a do Corona vírus, que só fez agravar ainda mais um quadro
 que já vem de longo prazo:
@@ -1097,6 +1102,8 @@ extremos não são suficientemente bem representados, o que não ocorre com outr
 modelos de Copulas, como  a de Gumbel, Clayton ou Copula-t. A apresentação
 destes modelos será vista com detalhe no capítulo \@ref(copulas) ([O Método
 Copulas]).
+
+### As lições da crise
 
 Em suma, os fatores que levaram à crise imobiliário financeira pode ser assim
 resumidos:
