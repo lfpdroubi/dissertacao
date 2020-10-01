@@ -1,5 +1,18 @@
 # Índices de preços e indicadores de performance do \gls{MI} {#indices}
 
+No capítulo \@ref(economia) foram apresentados modelos para os preços dos
+imóveis em relação a diversas variáveis de nível macro e microeconômico. Este
+capítulo tem o objetivo de apresentar, então, como estes preços podem ser
+medidos, através da criação de índices, e como estes índices podem ser
+utilizados nos mais diversos aspectos, a depender da maneira como foram
+projetados.
+
+Por outro lado, não apenas os preços são suficientes para a caracterização dos
+\gls{MI}. Diversos indicadores de performance do \gls{MI} podem ser 
+estabelecidos e mesmo simples variáveis, como a número de construção de
+residências iniciadas, podem ser um bom indicador se um determinado \gls{MI} 
+responde bem às mudanças nos preços. 
+
 ## Índices de preços de imóveis
 
 Diversos países hoje contam com índices de preços de imóveis nacionais, oficiais
@@ -212,7 +225,7 @@ O FMI, através do observatório Global Housing Watch...
 
 #### Índices em países desenvolvidos
 
-a. Índice de Case-Shiller
+a. *Home Price Index* de Case-Shiller
 
 @NBERw2506 desenvolveram...
 
@@ -396,10 +409,8 @@ format_quarters <- function(x) {
 ```
 
 
-```{r vacancyRate, fig.cap="Home Price Index, de Case e Shiller, em termos reais.", out.width="100%"}
+```{r vacancyRate, fig.cap="Taxa de vacância.", out.width="100%"}
 recessions.trim = subset(recessions.df, Peak >= "1956-01-01" )
-recessions.trim$Peak <- as.POSIXct(recessions.trim$Peak)
-recessions.trim$Trough <- as.POSIXct(recessions.trim$Trough)
 p1 <- ggplot(RHVRUSQ156N, aes(x = date, y = value)) +
   geom_line() +
    labs(
@@ -572,20 +583,94 @@ análise do comportamento dos preços nos países centrais da economia mundial
 tende a representar o que ocorrerá, com maior ou menor *lag*, nos outros países,
 influenciados pelas variáveis e decisões ocorridas nestes países.
 
-### Uma análise do HPI de Case e Shiller
+### Uma análise do \emph{Home Price Index} de Case e Shiller
 
-A figura \@ref(fig:nhpi) mostra a evolução do *Home Price Index* de Case e
-Shiller, desde 1990. 
+Nas figuras \@ref(fig:nhpi) e \@ref(fig:rhpi) pode-se ver o comportamento dos 
+preços no \gls{MI} residencial norte-americano, com base no \gls{HPI} de Case e 
+Shiller [@NBERw2506]. A Figura \@ref(fig:nhpi) mostra a evolução dos preços 
+desde 1975, enquanto a Figura \@ref(fig:rhpi) mostra a evolução dos preços 
+das residências em termos reais desde 1890. 
+
+Em ambas as séries foram aplicados testes de mudança estrutural do mercado no 
+\proglang{R}, versão `r paste(version$major, version$minor, sep = ".")` [@R]. 
+Para a série de valores nominais, estes pontos de mudança foram extraídos pelo 
+pacote \pkg{changepoint}. Já para a série de valores reais foi utilizado o 
+pacote \pkg{strucchange}. As linhas tracejadas em vermelho representam estes 
+pontos de corte.
+
+```{r}
+nhpi <- Quandl("YALE/NHPI", type="ts", start_date="1975-01-01")
+rhpi <- Quandl("YALE/RHPI", type="ts", collapse = "annual")
+saveRDS(nhpi, file = "data/nhpi")
+#saveRDS(rhpi, file = "data/rhpi")
+```
+
+```{r nhpi, fig.cap="\\gls{HPI} de Case e Shiller, em termos nominais."}
+autoplot(cpt.meanvar(nhpi)) +
+  labs(x = "Ano", y = "Índice (jan/2000 = 100)")
+#autoplot(breakpoints(nhpi ~ 1), cpt.colour = 'red', cpt.linetype = 'dashed')
+```
+\bcenter
+\small Fonte -- O autor, à partir de dados de @QuandlWIKI.
+\ecenter
+
+```{r rhpi, fig.cap="\\gls{HPI} de Case e Shiller, em termos reais."}
+autoplot(breakpoints(rhpi ~ 1), cpt.colour = 'red', cpt.linetype = 'dashed') +
+  labs(x = "Ano", y = "Índice (1890 = 100)")
+```
+\bcenter
+\small Fonte -- O autor, à partir de dados de @QuandlWIKI.
+\ecenter
+
+Pode-se notar que, tanto para os valores nominais quanto para os valores reais,
+há uma mudança estrutural perto do início da primeira década deste século. Com
+um olhar mais amplo, nota-se que houve outras mudanças de paradigma ao longo do
+século XX, em 1916, 1945 e 1977, mas é claro que numa visão tão ampla, há de
+se considerar fatos históricos relevantes, como o período entre-guerras.
+
+Nota-se que após o derretimento do \gls{MI} norte-americano depois da crise
+imobiliário-financeira de 2007-2008, este mercado voltou a se aquecer fortemente
+desde Janeiro de 2012, tendo o nível de preços já ultrapassado o último pico,
+atingido em julho de 2006.
+
+Na figura \@ref(fig:nhpi1) pode-se visualizar a evolução do \gls{HPI}, de Case e 
+Shiller, desde 1975. 
+
+```{r}
+nhpi <- readRDS("data/nhpi")
+rhpi <- Quandl("YALE/RHPI", type="ts")
+saveRDS(nhpi, file = "data/rhpi")
+```
+
+```{r nhpi1, fig.cap="\\gls{HPI} de Case e Shiller, em termos nominais."}
+recessions.trim = subset(recessions.df, Peak >= "1975-01-01")
+ggplot(nhpi, as.numeric = FALSE) +
+  geom_line() +
+   labs(
+     title = "Índice de Case-Shiller (EUA) HPI Nacional Nominal", 
+     subtitle = "Não ajustado sazonalmente | Frequência: Mensal", 
+     caption = "1975-2019",
+     x = "Ano", 
+     y = "Índice Jan 2000 = 100") +
+   scale_y_continuous(expand=c(0,0),
+                      breaks = c(seq(50, 200, 50)),
+                      minor_breaks = seq(80, 200, 10)) +
+  stat_peaks(colour = "red", span = 61) +
+  stat_peaks(geom = "text", colour = "red", 
+             vjust = -0.5, x.label.fmt = "%b/%Y", span = 61) +
+  stat_valleys(colour = "blue", span = 61) +
+  stat_valleys(geom = "text", colour = "blue", 
+             vjust = 1.5, x.label.fmt = "%b/%Y", span = 61) +
+  geom_rect(data=recessions.trim, aes(xmin=Peak, xmax=Trough, 
+                                    ymin=-Inf, ymax=+Inf),
+          inherit.aes=F,
+          fill='grey', alpha=0.5)
+```
 
 É possível notar pela análise do índice que os preços dos imóveis que, após o
 estouro da bolha do *subprime*, os preços sofrem uma nítida tendência de
 alta, desde janeiro de 2012, ultrapassando já, em termos nominais, os níveis de
 preços anteriores à crise de 2008.
-
-```{r}
-nhpi <- readRDS("data/nhpi")
-rhpi <- readRDS("data/rhpi")
-```
 
 
 ```{r}
@@ -609,7 +694,7 @@ Em termos reais, no entanto, os preços ainda são inferiores ao pico registrado
 mas há uma nítida tendência de alta, conforme pode ser visto na figura 
 \@ref(fig:rhpi).
 
-```{r rhpi, fig.cap="Home Price Index (HPI), de Case e Shiller, em termos reais."}
+```{r rhpi1, fig.cap="\\gls{HPI} de Case e Shiller, em termos reais."}
 recessions.trim = subset(recessions.df, Peak >= "1990-01-01" )
 ggplot(window(rhpi, start = 1990 + 0/12), as.numeric = FALSE) +
   geom_line() +
@@ -650,7 +735,7 @@ imóveis é relativamente recente. O gráfico da Figura \@ref(fig:rhpi2) ilustra
 isto: apesar de alguns períodos de picos e vales relevantes, no longo prazo, não
 há uma tendência clara dos preços, até fins do século XX. Isto contrasta com as
 séries de preços de ativos de renda variável, por exemplo. Em séries temporais,
-usa-se o termo passei aleatório (*random walk*) para se referir à séries como o
+usa-se o termo passeio aleatório (*random walk*) para se referir à séries como o
 HPI (até fins do século XX), onde não é possível estabelecer uma padrão claro de
 ciclos ou uma tendência. Já para as séries de ativos de renda variável (ações) 
 ou do \gls{PIB}, há evidências que há uma tendência de longo prazo (*drift*) na 
@@ -668,7 +753,7 @@ imóveis do \gls{FMI}, que será apresentado na próxima seção.
 A possível presença de uma tendência de longo prazo para os preços dos imóveis
 deve ser investigada. No capítulo \@ref(crise2008) isto será abordado.
 
-```{r rhpi2, fig.cap="HPI, em termos reais."}
+```{r rhpi2, fig.cap="\\gls{HPI} em termos reais."}
 recessions.trim = subset(recessions.df, Peak >= "1953-01-01" )
 ggplot(window(rhpi, start = 1953 + 0/12), as.numeric = FALSE) +
   geom_line() +
@@ -696,7 +781,7 @@ ggplot(window(rhpi, start = 1953 + 0/12), as.numeric = FALSE) +
 
 O valor mínimo da série histórica (não mostrado no gráfico) foi atingido em  
 `r month.abb[(time(rhpi)[which.min(rhpi)] %% 1)*12+1]` de 
-`r floor(time(rhpi)[which.min(rhpi)])`, quando o índice atingiu a marca de 
+`r floor(time(rhpi)[which.min(rhpi)])`, quando o \gls{HPI} atingiu a marca de 
 `r brf(rhpi[which.min(rhpi)])` pontos.
 
 É interessante notar que, em um século, desde 1890, o índice de preços reais de
@@ -704,7 +789,7 @@ imóveis atingiu um valor máximo de apenas `r brf(range_rhpi_1989_1997[2])`
 pontos, o que ocorreu em agosto de 1989.
 
 Ou seja, em relação ao topo histórico  de um século (agosto de 1989) à partir do
-início da coleta do índice (1890), o índice hoje se encontra 
+início da coleta do índice (1890), o \gls{HPI} hoje se encontra 
 `r brf(last(rhpi) - range_rhpi_1989_1997[2])` pontos percentuais acima daquela 
 marca e a apenas `r brf(range_rhpi_1989_1997[2] - last(rhpi))` pontos 
 percentuais abaixo de atingir o topo histórico de dezembro de 2005.
@@ -721,10 +806,19 @@ simples de preços reais de residências em 57 países [@fmitwa], mostra também
 nítida e forte tendência de alta, como pode ser observado na Figura 
 \@ref(fig:global-rhpi).
 
+```{r}
+# fredr(
+#   series_id = "USREC",
+#   observation_start = as.Date("1857-01-01")
+# )
+global_rhpi <- read.csv("data/GlobalHousePriceIndex.csv")
+#global_rhpi <- read.zoo(global_rhpi, index = "dateq", FUN = as.yearqtr, format = "%Yq%q")
+#global_rhpi$dateq <- as.yearqtr(seq(ISOdate(2000,3,1), ISOdate(2019,3,1), by = "quarters"))
+global_rhpi$dateq <- seq(ISOdate(2000,1,1), ISOdate(2019,1,1), by = "quarters")
+```
+
 
 ```{r global-rhpi, fig.cap = "HPI real do FMI."}
-# library(cowplot)
-# theme_set(theme_cowplot(14))
 format_quarters <- function(x) {
   format(as.yearqtr(x), format = "%qT%Y")
 }

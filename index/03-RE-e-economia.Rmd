@@ -502,7 +502,7 @@ p1 <- ggplot(mapping = aes(x = x, y = y)) +
 p1
 ```
 \bcenter
-\small Fonte: O autor.
+\small Fonte -- O autor.
 \ecenter
 
 
@@ -791,12 +791,12 @@ maneira que este fluxo de aluguéis compense o investimento inicial na compra do
 imóvel.
 
 Segundo @Malpezzi2002TheRO [p. 4], o valor presente $V$ de um imóvel pode ser 
-calculado conforme a equação \@ref(eq:VPImovel), onde $\gls{R}_t$ é a renda
+calculado conforme a equação \@ref(eq:VPImovel), onde $\gls{R_B}_t$ é a renda
 bruta dos aluguéis, $C_t$ é o custo recorrente com a manutenção do imóvel e $i$
 é a taxa de desconto.
 
 \begin{equation}
-V = \sum_{t=0}^T \frac{\mathbb{E}[R_t-C_t]}{(1+i)^t}
+V = \sum_{t=0}^T \frac{\mathbb{E}[\gls{R_B}_t-C_t]}{(1+i)^t}
 (\#eq:VPImovel)
 \end{equation}
 
@@ -808,12 +808,12 @@ Assim, a compra de um imóvel assemelha-se à compra dos títulos de renda fixa 
 maior *duration* disponíveis no mercado.
 
 Ora, como se sabe, o valor de face destes títulos, ou seja, o valor do resgate
-destes títulos no vencimento, é dado. Porém, estes títulos são negociados no
+destes títulos no vencimento, é dado. Porém, os títulos são negociados no
 mercado secundário a valor de mercado, sendo que os títulos de longo prazo são
-altamente sensíveis a variações nas taxas de juros de longo prazo. A saber, o
-preço destes títulos é inversamente proporcional às taxas de juros, ou seja,
-quanto menor as taxas, maior o valor presente dos títulos, ou valor de mercado,
-e vice-versa.
+os mais sensíveis a variações nas taxas de juros. A saber, o preço destes
+títulos é inversamente proporcional às taxas de juros, ou seja, quanto menor as
+taxas, maior o valor presente descontado dos títulos, ou valor de mercado, e
+vice-versa [@resende, 79].
 
 ### O papel da especulação no \gls{MI}
 
@@ -825,30 +825,36 @@ mercados, não apenas no \gls{MI}.
 relacionados à "especulação". Primeiramente, argumentam que é polêmica a 
 definição do termo *especulador*, especialmente se comparado ao termo 
 *investidor*: seria o especulador um investidor que negocia o bem em prazos 
-mais curtos? Não existe uma definição para tal. 
+mais curtos? Ou, no caso do \gls{MI}, aquele que compra uma parcela de terra nua
+e assim a mantém esperando uma expectativa futura de implantação de um 
+empreendimento lucrativo? Não existe uma definição formal para tal. 
 
 No Brasil, como já anteriormente mencionado, pelos problemas inflacionários
-enfrentados durante boa parte do século XX havia uma tendência à imobilização do 
-capital, ao contrário do que acontece nos países desenvolvidos, onde é conhecida 
-a chamada preferência pela liquidez dos investidores. Esta tendência no Brasil à 
-imobilização do capital levava, como foi visto no capítulo \@ref(historico), a 
-um aumento do preço da terra nos períodos de crise econômica, agravando a crise
-agrária. Convencionou-se, então, no Brasil, dizer que havia "especulação" no 
-setor imobiliário quando na verdade o que havia era, em grande parte, simples
-reserva de valor, devido à inoportunidade de outros investimentos, já que a 
-inflação se elevava em períodos de baixa conjuntura e à corrosão monetária.
+enfrentados durante boa parte do século XX, havia uma tendência à imobilização
+do capital, ao contrário do que acontece nos países desenvolvidos, onde é
+conhecida a chamada preferência pela liquidez dos investidores [@blanchard,
+546]. Esta tendência no Brasil à imobilização do capital levava, como foi visto
+no capítulo \@ref(historico), a um aumento do preço da terra nos períodos de
+crise econômica, agravando a crise agrária. Prevaleceu durante anos, no Brasil,
+a segunda definição de "especulação" no setor imobiliário, *i.e.* a compra de 
+terra nua para assim mantê-la por longo período de tempo. No entanto, em grande 
+parte, o que havia era uma simples reserva de valor, devido a ocorrência 
+simultânea da corrosão monetária devido à alta inflação e das poucas 
+oportunidades de investimentos rentáveis na Economia, já que a inflação se 
+elevava em períodos de baixa conjuntura.
 
-Como se sabe, este problema não é, contudo, atual: com o advento da 
-estabilização da moeda, a manutenção de imóveis na carteria do investidor por um 
-longo período de tempo só poderia ser atribuída à especulação. O \gls{MI}, no
-entanto, não é o *per se* um mercado ideal para a especulação, haja vista que:
-os custos das transações (gastos com taxas, corretagens) são altos, a liquidez
-é baixa (o tempo necessário para a venda de um imóvel é incerto e pode passar
-um longo tempo entre o anúncio e a concretização da venda) e ainda há os custos
-de carregamento (impostos, manutenção, etc.). Desta maneira, pode-se dizer que
-existem mercados muito mais propícios do que o \gls{MI} para a prática da 
-especulação, como o mercado de ações. Não é possível dizer, no entanto, que a
-prática da especulação no \gls{MI} seja inexistente.
+Como se sabe, este problema não é, contudo, atual: com a estabilização da moeda,
+a manutenção de imóveis na carteria do investidor por um longo período de tempo
+só poderia ser atribuída à uma perspectiva de alta real dos valores dos imóveis
+em longo prazo, já que o \gls{MI}, não é, *per se*, um mercado ideal para a
+especulação, haja vista que: os custos das transações (gastos com taxas,
+corretagens) são altos, a liquidez é baixa (o tempo necessário para a venda de
+um imóvel é incerto e pode passar um longo tempo entre o anúncio e a
+concretização da venda) e ainda há os custos de carregamento (impostos,
+manutenção, etc.). Desta maneira, pode-se dizer que existem mercados muito mais
+propícios do que o \gls{MI} para a prática da especulação, como o mercado de
+ações. Não é possível dizer, no entanto, que a prática da especulação no
+\gls{MI} seja inexistente.
 
 Para conceituar a especulação e averiguar seus possíveis efeitos,
 @Malpezzi2002TheRO [p. 12] apresentam diversas maneiras de se modelar as
@@ -1033,7 +1039,7 @@ ggplot(data.frame(x = c(.1/100, 6/100)), aes(x = x)) +
   
 ```
 \bcenter
-\small Fonte -- Do autor.
+\small Fonte -- O autor.
 \ecenter
 
 A Tabela \@ref(tab:tabela-valor-justo) mostra alguns valores calculados de
@@ -1055,7 +1061,7 @@ kable(valorJusto, format = "latex", booktabs = TRUE,
            general_title = "Notas:")
 ```
 \bcenter
-\small Fonte -- Do autor.
+\small Fonte -- O autor.
 \ecenter
 
 Prentende-se mostrar com a exposição dos valores da Tabela 
@@ -1156,97 +1162,94 @@ knitr::include_graphics("./images/adams2_crop.pdf")
 \small Fonte -- @ADAMS2010.
 \ecenter
 
-A figura \@ref(fig:nhpi) ilustra o comportamento do \gls{MI} residencial
-norte-americano desde 1990. 
-
-```{r}
-nhpi <- Quandl("YALE/NHPI", type="ts", start_date="1990-01-01")
-rhpi <- Quandl("YALE/RHPI", type="ts")
-saveRDS(nhpi, file = "data/nhpi")
-saveRDS(rhpi, file = "data/rhpi")
-```
-
-```{r}
-# fredr(
-#   series_id = "USREC",
-#   observation_start = as.Date("1857-01-01")
-# )
-global_rhpi <- read.csv("data/GlobalHousePriceIndex.csv")
-#global_rhpi <- read.zoo(global_rhpi, index = "dateq", FUN = as.yearqtr, format = "%Yq%q")
-#global_rhpi$dateq <- as.yearqtr(seq(ISOdate(2000,3,1), ISOdate(2019,3,1), by = "quarters"))
-global_rhpi$dateq <- seq(ISOdate(2000,1,1), ISOdate(2019,1,1), by = "quarters")
-```
-
-```{r recessionsDF3}
-recessions.df <- read.csv("data/us_recessions.csv")
-# recessions.df <- within(recessions.df, {
-#                           Peak <- as.Date(Peak)
-#                           Trough <- as.Date(Trough)
-#                         })
-recessions.df <- within(recessions.df, {
-  Peak <- as.POSIXct(Peak)
-  Trough <- as.POSIXct(Trough)
-  })
-```
-
-
-```{r nhpi, fig.cap="Home Price Index (HPI), de Case e Shiller, em termos nominais."}
-recessions.trim = subset(recessions.df, Peak >= "1990-01-01")
-ggplot(nhpi, as.numeric = FALSE) +
-  geom_line() +
-   labs(
-     title = "Índice de Case-Shiller (EUA) HPI Nacional Nominal", 
-     subtitle = "Não ajustado sazonalmente | Frequência: Mensal", 
-     caption = "1990-2019",
-     x = "Ano", 
-     y = "Índice Jan 2000 = 100") +
-   scale_y_continuous(expand=c(0,0),
-                      breaks = c(seq(50, 200, 50)),
-                      minor_breaks = seq(80, 200, 10)) +
-  stat_peaks(colour = "red", span = 61) +
-  stat_peaks(geom = "text", colour = "red", 
-             vjust = -0.5, x.label.fmt = "%b/%Y", span = 61) +
-  stat_valleys(colour = "blue", span = 61) +
-  stat_valleys(geom = "text", colour = "blue", 
-             vjust = 1.5, x.label.fmt = "%b/%Y", span = 61) +
-  geom_rect(data=recessions.trim, aes(xmin=Peak, xmax=Trough, 
-                                    ymin=-Inf, ymax=+Inf),
-          inherit.aes=F,
-          fill='grey', alpha=0.5)
-```
-\bcenter
-\small Fonte -- O autor, à partir de dados de @QuandlWIKI.
-\ecenter
-
-Nota-se que após o derretimento do \gls{MI} norte-americano depois da crise
-imobiliário-financeira de 2007-2008, este mercado voltou a se aquecer fortemente
-desde Janeiro de 2012, tendo o nível de preços já ultrapassado o último pico,
-atingido em julho de 2006.
-
 @regulation também notaram um aumento generalizado nos preços dos imóveis em
 diversos países, especialmente após a segunda metade da década de 90, com 
 exceção do Japão e da Alemanha, conforme pode ser visto na Figura 
 \@ref(fig:several-indices).
 
+A comparação de índices de preços dos diversos países, no entanto, deve ser
+feita com cautela, haja vista que os países compõem os seus índices de maneira
+diferente, além das estruturas de oferta e demanda destes países serem 
+diferentes [ver @regulation, p. 4; @silver]. Uma análise pormenorizada sobre a
+construção de índices será vista no capítulo \@ref(indices).
+
 ```{r several-indices, fig.cap="Evolução dos índices de preços de imóveis em diversos países."}
 knitr::include_graphics("images/several_indices_regulations.png")
 ```
-
 \bcenter
 \small Fonte -- @regulation [p. 3]
 \ecenter
 
-A comparação de índices de preços dos diversos países, no entanto, deve ser
-feita com cautela, haja vista que os países compõem os seus índices de maneira
-diferente, além das estruturas de oferta e demanda destes países serem 
-diferentes [ver @regulation, p. 4; @silver].
+### \gls{MI} e fluxo de capitais
 
-Segundo @regulation [p. 4-5], o aumento do preço dos imóveis está fortemente 
-ligado ao aumento do preço da terra, ou seja, os custos de construção tem um
-papel secundário no aumento do preço dos imóveis. Segundo Davis e Palumbo 
-[*apud* @regulation, p. 4], é o preço da terra que governa o aumento dos preços 
-dos imóveis nos \gls{EUA}, o que se confirma também na China, como pode ser visto na 
-Figura \@ref(fig:land).
+O comportamento dos preços dos \gls{MI} devem seguir os fundamentos da Economia
+no longo prazo. No curto prazo, porém, como já foi observados, os preços flutuam
+devido à diversos fatores (como renda, aspectos regulatórios, entre outros) que 
+desequilibram a oferta e a demanda nestes mercados, ocasionando uma determinada
+volatilidade nos preços, como é comum em praticamente todos os mercados abertos.
+
+Como será visto melhor nos capítulos \@ref(indices) e \@ref(crise2008), existem
+diversas fases ou eras na Economia capitalista, *i.e.* não apenas há flutuações
+de preços nos \gls{MI} devido à desequilíbrios momentâneos de curto e médio
+prazo, porém há também as mudanças de preços devido à mudanças estruturais na
+Economia, ou seja, grandes mudanças nas variáveis macroecômicas que levam a
+alterar a maneira como os mercados normalmente se comportam em termos
+históricos, a exemplo do que ocorreu no Brasil, como citado anteriormente,
+quando do advento da estabilização da moeda, com o Plano Real, quebrando-se a
+tendência de forte imobilização de capital que a alta inflação gerava, o que
+ocasionava uma correlação negativa entre atividade econômica e preços no
+\gls{MI}.
+
+De maneira análoga, mudanças significantes no comportamento dos preços do
+\gls{MI} residencial norte-americano se deram desde meados da década de 1990,
+como se pode inferir pela análise da Figura \@ref(fig:rhpi-Malpezzi): pode-se
+notar que, de 1975 até princípíos deste século, a série de preços reais flutuava
+em torno de uma valor médio (linha azul cheia), permanecendo entre as linhas
+tracejadas, que nada mais são do que a linha de tendência central (calculada
+para o período 1975--1995) deslocada de $\pm$ duas vezes o erro-padrão de
+estimação. De princíos do século XXI em diante, a volatilidade aumenta
+exacerbadamente. Segundo @malpezziCapitalFlows, durante vinte anos, de 1975 a
+1995, os imóveis se valorizaram, em média, apenas 0,4% a.a. em termos reais,
+enquanto que nos dez anos seguintes, de 1996 a 2006, o crescimento real foi de
+7% a.a.
+
+```{r}
+rhpi <- Quandl("YALE/RHPI", type="raw", collapse = "quarterly", start_date = "1974-12-31")
+```
+
+```{r rhpi-Malpezzi, fig.cap="Análise do \\gls{HPI} em termos reais."}
+#knitr::include_graphics("images/rhpi_malpezzi.png")
+# buildFun <- function(x) {
+#  dlmModPoly(1, dV = x[1], dW = x[2])
+# }
+# fit <- dlmMLE(rhpi, parm = c(0, 0), build = buildFun)
+# dlmRHPI <- buildFun(fit$par)
+# filtered <- dlmFilter(rhpi, dlmRHPI)
+# smoothed <- dlmSmooth(filtered)
+# p <- autoplot(filtered)
+# autoplot(smoothed, ts.colour = 'blue', p = p)
+fit <- lm(Index ~ Date, data = rhpi[94:179, ])
+coefs <- coef(fit)
+s <- summary(fit)
+ggplot(rhpi[94:179, ], aes(x = Date, y = Index)) + 
+  geom_line(color = "blue") +
+  geom_smooth(method = "lm", level = 0.99, fullrange = FALSE, se = FALSE, size = 2) +
+  geom_abline(intercept = coefs[1], slope = coefs[2], lty = 'dashed') +
+  geom_abline(intercept = coefs[1] + 2*s$sigma, slope = coefs[2], lty = 'dotted')+
+  geom_abline(intercept = coefs[1] - 2*s$sigma, slope = coefs[2], lty = 'dotted') +
+  geom_path(data = rhpi[1:94, ], color = "red") +
+  labs(x = "Ano", y = "Índice (1890 = 100)")
+```
+\bcenter
+\small Fonte -- Adaptado de @malpezziCapitalFlows.
+\ecenter
+
+Segundo @regulation [p. 4-5], o aumento do preço dos imóveis está fortemente
+ligado ao aumento do preço da terra, ou seja, os custos de construção
+(geralmente) tem um papel secundário no aumento do preço dos imóveis. Segundo
+Davis e Palumbo [*apud* @regulation, p. 4], é o preço da terra que governa o
+aumento dos preços dos imóveis nos \gls{EUA}, o que se confirma também na China,
+como pode ser visto na Figura \@ref(fig:land).
 
 ```{r land, fig.cap="Aumento nominal e real do valor da terra na China."}
 knitr::include_graphics("images/land.png")
@@ -1256,8 +1259,8 @@ knitr::include_graphics("images/land.png")
 \small Fonte -- @regulation [p. 5]
 \ecenter
 
-A Figura \@ref(fig:land2) mostra a evolução dos preços dos imóveis e dos
-custos reais de construção nos \gls{EUA} desde 1980, deixando claro que os custos de
+A Figura \@ref(fig:land2) mostra a evolução dos preços dos imóveis e dos custos 
+reais de construção nos \gls{EUA} desde 1980, deixando claro que os custos de
 construção não são suficientes para explicar a significativa volatilidade do
 \gls{MI} nos \gls{EUA}.
 
@@ -1268,12 +1271,136 @@ knitr::include_graphics("images/constructionvshp.png")
 \small Fonte -- @gyourku [p. 1291]
 \ecenter
 
-A alta volatilidade do \gls{MI} tal como apresentada nos últimos anos, como será
-visto, não é comum. No capítulo \@ref(indices) serão analisados os motivos que
-levaram o \gls{MI} norte-americano e mundial a este forte aumento de
-volatilidade e os efeitos desta grande volatilidade, não apenas no \gls{MI}, mas
-na Economia como um todo. A próxima seção apresenta os modelos teóricos por trás
-das análises que serão efetuadas no próximo capítulo.
+Segundo @malpezziAftermath [p. 34], as taxas de juros tem um profundo impacto
+no \gls{MI}, embora não se possa dizer de fato qual é a relação real entre elas.
+
+No entanto, @malpezziAftermath enxerga relativa correlação das séries de taxas 
+de juros de curto prazo com as taxas das hipotecas de 30 anos nos EUA, como 
+mostra a Figura \@ref(fig:rates).
+
+```{r rates, fig.cap="Comparação das taxas das hipotecas com taxas de curto prazo."}
+knitr::include_graphics("images/Malpezzi_rates.png")
+```
+\bcenter
+\small Fonte -- @malpezziAftermath [p. 35]
+\ecenter
+
+Esta comparação não parece ser muito apropriada: é óbvio que a comparação
+apropriada deve ser feita com taxas de prazos semelhantes. 
+
+Ainda que as taxas de curto prazo, as chamadas taxas de referência da Economia,
+definidas pelos bancos centrais, influenciem toda a estrutura a termo dos juros
+[@resende, 79], as decisões de investimento normalmente são feitas, pelos
+grandes investidores, baseadas nas taxas de longo prazo, já que as taxas de
+curto prazo são muito mais voláteis.
+
+Os títulos da dívida pública são considerados ativos sem risco na Economia. Por
+isto os investimentos em títulos públicos na grande maioria dos países remuneram
+às menores taxas do mercado: o governo, que emite a dívida (interna), também
+emite a moeda necessária para pagá-la. Ou seja, não há risco verdadeiro quando
+um governo emite um título de dívida em sua própria moeda, a não ser o risco da
+própria desvalorização da moeda, ou seja, o risco da criação da inflação que
+pode vir a ser gerada caso o governo decida emitir mais moeda para resgatar os
+títulos do mercado. Com os acontecidos desde a crise imbiliário-financeira de
+2007-8, muitos paradigmas vem mudando em relação ao real efeito inflacionário da 
+emissão de dívida ou de moeda pelo Estado, especialmente depois da emissão de 
+uma quantia absurda de moeda pelos bancos centrais dos países desenvolvidos
+visando combater os efeitos da crise [@resendeFSP], mas esta discussão está além 
+do escopo deste trabalho. 
+
+É natural, portanto, que os investidores exijam, para que invistam em ativos
+diferentes dos títulos da dívida pública, um prêmio de risco. Para o \gls{MI}, o
+empréstimo se dá com a tomada do imóvel em garantia, razão pela qual o risco de
+calote individual é pequeno. É esperado, portanto, que as taxas de juros das
+hipotecas sejam apenas um pouco superiores aos títulos da dívida pública. É o
+que se verifica pela análise da Figura \@ref(fig:mortgages), em que são
+comparadas as taxas de juros das hipotecas com as taxas de juros de longo prazo
+nos EUA.
+
+```{r}
+mortgage30us <- fredr(series_id = "MORTGAGE30US",
+              observation_start = as.Date("1971-04-02"))
+dgs30 <- fredr(series_id = "DGS30",
+               observation_start = as.Date("1962-01-02"))
+ df <- left_join(mortgage30us, dgs30, by = "date",
+                 suffix = c(".MORTGAGE30US", ".DGS30"))
+ df <- df[, c("date", "value.MORTGAGE30US", "value.DGS30")]
+ colnames(df) <- c("date", "MORTGAGE30US", "DGS30")
+ df <- df %>% gather("index", "rate", -date)
+ saveRDS(df, "data/FRED_mortgages")
+```
+
+```{r recessionsDF3}
+recessions.df <- read.csv("data/us_recessions.csv")
+recessions.df <- within(recessions.df, {
+                          Peak <- as.Date(Peak)
+                          Trough <- as.Date(Trough)
+                        })
+```
+
+
+```{r mortgages, out.width="\\textwidth", fig.cap = "Juros hipotecários médios (30 anos) e taxas de títulos de maturidade constante de 30 anos."}
+df_mortgages <- readRDS("data/FRED_mortgages")
+ggplot(data = df_mortgages, aes(x = date, y = rate, color = index)) +
+  geom_line() +
+  labs(
+    title = "Taxa hipotecária média fixa de 30 anos no mercado norte-americano",
+    subtitle = "Comparada com a taxas de maturidade constante (30 anos) dos títulos da dívida pública norte-americana.",
+    caption = "Fonte: Board of Governors of the Federal Reserve System (US)"
+  ) +
+  xlab("Ano")+
+  ylab("Taxa (a.a.)") +
+  scale_y_continuous(labels = scales::label_percent(scale = 1,
+                                                    decimal.mark = ",")) +
+  theme(legend.position = "bottom") +
+  geom_rect(data=recessions.df[which(recessions.df$Peak >= as.Date("1971-04-02")), ], 
+            aes(xmin=Peak, xmax=Trough, ymin=-Inf, ymax=+Inf),
+            inherit.aes=F, fill='grey', alpha=0.5)
+```
+\bcenter
+\small Fonte -- O autor, à partir de dados do \gls{FRED}.
+\ecenter
+
+Para @malpezziAftermath, no entanto, mais importante do que as taxas de juros 
+são os fluxos de capital, ou seja, o volume do que é efetivamente emprestado
+àquelas taxas praticadas e não as taxas em si e argumenta que:
+
+\begin{citacao}
+Claro, esta relação entre os fluxos de hipotecas e os preços da habitação traz à
+tona a mãe de todos os problemas de endogeneidade. A causalidade é dupla: mais
+capital fortalece os mercados imobiliários e habitacionais, e os mercados
+habitacionais e imobiliários mais fortes atraem mais capital. A força relativa
+desses efeitos e seus ciclos de retroalimentação ainda não foram bem
+especificados.
+\end{citacao}
+
+```{r}
+knitr::include_graphics("images/Malpezzi_mortgage_flows.png")
+```
+\bcenter
+\small Fonte -- @malpezziAftermath [p. 38]
+\ecenter
+
+Segundo @resende [p. 78-79], o consenso pré-crise de 2007-8 era que a política
+monetária dos bancos centrais deveriam focar no controle da inflação dos preços
+ao consumidor, não sendo objeto dos bancos centrais o controle da inflação dos 
+ativos. Após a crise, no entanto, este consenso se modificou e os preços dos 
+ativos começaram a ser controlados pelos bancos centrais através de medidas
+macroprudenciais.
+
+@resende ainda argumenta que metas de inflação de ativos poderiam ser adotadas
+pelos bancos centrais como forma de controlar a volatilidade da economia real,
+haja vista que "há um ciclo, que se autoreforça e que tende a produzir bolhas e
+crises, com consequências potencialmente funestas para a economia real. A 
+liquidez alimenta a inflação dos preços dos ativos, que por sua vez realimenta a
+liquidez através da maior alavancagem [@resende, 79-80]."
+
+A próxima seção apresenta alguns modelos teóricos sobre a relação entre
+as variáveis macroeconômicas e o preço dos imóveis, o que será posteriormente
+analisado com mais profundidade no capítulo \@ref(crise2008), em que serão 
+analisados os motivos que levaram o \gls{MI} residencial norte-americano e 
+mundial a este forte aumento de volatilidade e os efeitos desta grande 
+volatilidade, não apenas no \gls{MI}, mas na Economia como um todo. 
 
 ### Modelos econométricos para o \gls{MI}
 

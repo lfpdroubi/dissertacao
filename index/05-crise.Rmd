@@ -614,16 +614,21 @@ alocação do capital naquele mercado.
 # saveRDS(df, "data/FRED")
 ```
 
-```{r yields, fig.cap="Taxas dos \\emph{treasuries bonds} desde janeiro/1990."}
-# xyplot.ts(ycAll[, c(9:12)], 
-#           superpose=TRUE, 
-#           auto.key=list(columns=4), 
-#           ylab="Yield (%)")
+```{r recessionsDF5}
 recessions.df <- read.csv("data/us_recessions.csv")
 recessions.df <- within(recessions.df, {
                           Peak <- as.Date(Peak)
                           Trough <- as.Date(Trough)
                         })
+```
+
+
+
+```{r yields, fig.cap="Taxas dos \\emph{treasuries bonds} desde janeiro/1990."}
+# xyplot.ts(ycAll[, c(9:12)], 
+#           superpose=TRUE, 
+#           auto.key=list(columns=4), 
+#           ylab="Yield (%)")
 df <- readRDS("data/FRED")
 ggplot(data = df[which(df$date >= as.Date("1990-01-01")), ], 
        aes(x = date, y = rate, color = bond)) +
@@ -739,51 +744,6 @@ ggplot(data = df, aes(x = date, y = rate, color = bond)) +
 Esta longa e sustentada tendência de queda de longo prazo, com esta persistência
 não pode ser atribuída a uma bolha especulativa, *i.e.* um desvio de curto prazo
 de uma tendência de longo prazo, mas sim a uma tendência estrutural, sistêmica.
-
-As taxas de juros das hipotecas são influenciadas pelas taxas dos títulos da
-dívida pública: os títulos da dívida pública são considerados ativos sem risco,
-Por isto os investimentos em títulos públicos possuem as menores taxas do
-mercado: o governo, que emite a dívida, também emite a moeda necessária para
-pagá-la. Ou seja, não há risco verdadeiro quando um governo emite um título de
-dívida, a não ser o risco da própria desvalorização da moeda (inflação). É
-natural, portanto, que os investidores exijam, para que invistam em ativos
-diferentes dos títulos da dívida pública, um prêmio de risco. Para o mercado
-imobiliário, este risco é mínimo, pois o empréstimo se dá com o imóvel em
-garantia. É esperado, portanto, que as taxas de juros das hipotecas sejam apenas
-um pouco superiores aos títulos da dívida pública.
-
-```{r}
-# mortgage30us <- fredr(series_id = "MORTGAGE30US",
-#              observation_start = as.Date("1971-04-02"))
-# df <- left_join(mortgage30us, dgs30, by = "date",
-#                 suffix = c(".MORTGAGE30US", ".DGS30"))
-# df <- df[, c("date", "value.MORTGAGE30US", "value.DGS30")]
-# colnames(df) <- c("date", "MORTGAGE30US", "DGS30")
-# df <- df %>% gather("index", "rate", -date)
-# saveRDS(df, "data/FRED_mortgages")
-```
-
-```{r mortagages, out.width="\\textwidth", fig.cap = "Juros hipotecários médios (30 anos) e taxas de títulos de maturidade constante de 30 anos."}
-df_mortgages <- readRDS("data/FRED_mortgages")
-ggplot(data = df_mortgages, aes(x = date, y = rate, color = index)) +
-  geom_line() +
-  labs(
-    title = "30-year fixed rate Mortgage average",
-    subtitle = "Compared with 30-year treasury constant maturity rate",
-    caption = "Fonte: Board of Governors of the Federal Reserve System (US)"
-  ) +
-  xlab("Ano")+
-  ylab("Taxa (a.a.)") +
-  scale_y_continuous(labels = scales::label_percent(scale = 1,
-                                                    decimal.mark = ",")) +
-  theme(legend.position = "bottom") +
-  geom_rect(data=recessions.df[which(recessions.df$Peak >= as.Date("1971-04-02")), ], 
-            aes(xmin=Peak, xmax=Trough, ymin=-Inf, ymax=+Inf),
-            inherit.aes=F, fill='grey', alpha=0.5)
-```
-\bcenter
-\small Fonte -- O autor, à partir de dados do \gls{FRED}.
-\ecenter
 
 Esta alta queda das taxas de juros dos ativos financeiros de longo prazo é uma
 das causadoras da elevação dos preços dos mesmos ativos, assim como a elevação
