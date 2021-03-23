@@ -9,6 +9,12 @@ The {#rmd-basics} text after the chapter declaration will allow us to link throu
 
 ## Objetivos
 
+A proposta desta pesquisa é aprofundar o conhecimento referente à dinâmica do
+mercado imobiliário e das políticas de solo, de maneira a planejar a utilização
+dos instrumentos de política do solo no sentido de resolver os problemas do
+crônico déficit habitacional brasileiro, onde milhões de pessoas vivem em
+situação precária.
+
 ### Objetivo Geral
 
 Estudar o comportamento histórico e recente do mercado imobiliário à luz das
@@ -39,36 +45,36 @@ estrutura do trabalho.
 O **Capítulo 2 (Método)** traz considerações a respeito do método de análise e
 de pesquisa.
 
-O **Capítulo \@ref(historico) (Aspectos Históricos)** faz uma contextualização histórica do 
-problema do acesso à terra e moradia no Brasil, dado o modelo de desenvolvimento
-econômico que aqui se instalou, e compara com o ocorrido em outros países do
-mundo ocidental.
+O **Capítulo \@ref(historico) (Aspectos Históricos)** faz uma contextualização
+histórica do problema do acesso à terra e moradia no Brasil, dado o modelo de
+desenvolvimento econômico que aqui se instalou, e compara com o ocorrido em
+outros países do mundo ocidental.
 
-O **Capítulo \@ref(economia) (O Mercado Imobiliário e a Economia)** aborda os aspectos 
-teóricos e conceituais mais modernos relevantes à interligação do mercado 
-imobiliário com as variáveis macroecômicas do país, explicando como o \gls{MI}
-influencia na Economia do país e vice-versa.
+O **Capítulo \@ref(economia) (O Mercado Imobiliário e a Economia)** aborda os
+aspectos teóricos e conceituais mais modernos relevantes à interligação do
+mercado imobiliário com as variáveis macroecômicas do país, explicando como o
+\gls{MI} influencia na Economia do país e vice-versa.
 
-O **Capítulo \@ref(indices) (Índices de preços de imóveis e correlação com variáveis macroeconômicas)**
-traz um apanhado teórico sobre a confecção de índices de preços de imóvei, dá
-diretrizes para a eventual construção de um índice brasileiro e também traz um
-histórico recente dos índices de preços de imóveis e das taxas de juros de longo
-prazo nos \gls{EUA}, fazendo considerações a respeito da correlação entre estas 
-variáveis.
+O **Capítulo \@ref(indices) (Índices de preços de imóveis e correlação com
+variáveis macroeconômicas)** traz um apanhado teórico sobre a confecção de
+índices de preços de imóvei, dá diretrizes para a eventual construção de um
+índice brasileiro e também traz um histórico recente dos índices de preços de
+imóveis e das taxas de juros de longo prazo nos \gls{EUA}, fazendo considerações
+a respeito da correlação entre estas variáveis.
 
-O **Capítulo \@ref(crise2008) (A crise imobiliário-financeira de 2007-2008 revisitada)** faz
-uma reanálise da crise financeira-habitacional de 2008 a luz dos recentes
-acontecimentos e suas consequências até os tempos presentes, passando pelas 
-origens da crise, a queda acentuada das taxas de lucros da economia capitalista,
-os erros de análise de risco com a precifição dos derivativos de crédito 
-imobiliário, e, finalmente, o pós-crise, ou seja, que medidas tomaram os países
-mais atingidos pela crise e como ela continua a produzir seus efeitos até os 
-dias atuais.
+O **Capítulo \@ref(crise2008) (A crise imobiliário-financeira de 2007-2008
+revisitada)** faz uma reanálise da crise financeira-habitacional de 2008 a luz
+dos recentes acontecimentos e suas consequências até os tempos presentes,
+passando pelas origens da crise, a queda acentuada das taxas de lucros da
+economia capitalista, os erros de análise de risco com a precifição dos
+derivativos de crédito imobiliário, e, finalmente, o pós-crise, ou seja, que
+medidas tomaram os países mais atingidos pela crise e como ela continua a
+produzir seus efeitos até os dias atuais.
 
 O **Capítulo \@ref(politicas) (Políticas do solo)** faz um histórico a
 respeito das principais abordagens utilizadas no mundo ocidental para solução da
 crise habitacional de fins do século XIX/início do século XX e faz considerações
 a respeito da atual crise habitacional e como ela vem sendo enfrentada no mundo.
 
-Finalmente, o **Capítulo \@ref(conclusao) (Conclusão)** traz as propostas de regulação baseadas
-nos resultados obtidos.
+Finalmente, o **Capítulo \@ref(conclusao) (Conclusão)** traz as propostas de 
+regulação baseadas nos resultados obtidos.

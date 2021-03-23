@@ -26,9 +26,9 @@ comportamento anômalo do preço dos imóveis em função de ciclos inflacionár
 que estiveram presente ao longo de boa parte da história econômica brasileira, 
 que, em virtude da penalização da liquidez que promoviam, incentivavam a 
 imobilização do capital, fazendo com que o preço da terra se elevasse nos 
-períodos de fraca conjuntura[^6].
+períodos de fraca conjuntura[^7].
 
-[^6]: No Brasil, durante grande parte do século XX, a inflação se elevava
+[^7]: No Brasil, durante grande parte do século XX, a inflação se elevava
 durante os períodos de fraca conjuntura, ao contrário senso comum.
 
 Desta maneira, pode-se dizer que hoje o Brasil não precisa desenvolver políticas

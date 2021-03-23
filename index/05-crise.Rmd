@@ -93,9 +93,9 @@ da bolha se dissolver, ela estoura;
 5. Muitos investimentos no setor imobiliário são feitos por um empreendedor 
 financiado por empréstimos bancários: uma grande queda nos preços pode levar
 ao desequilíbrio econômico financeiro do empreendedor, o que desencadeia uma 
-série de problemas posteriores[^5]
+série de problemas posteriores[^6]
 
-[^5]: Segundo @Malpezzi2002TheRO[p. 2], nas economias mais afetadas,o colapso
+[^6]: Segundo @Malpezzi2002TheRO[p. 2], nas economias mais afetadas,o colapso
 dos preços no \gls{MI} é seguida por uma série de eventos, como uma crise
 bancária, uma crise no balanço de pagamentos, uma crise financeira e um estouro
 de um ciclo de negócios.

@@ -314,6 +314,63 @@ transações repetidas. Outros países, que têm uma realidade diferente da
 americana, buscam alternativas para fazer o cálculo.
 \end{citacao}
 
+### Problemas relacionados aos principais índices de preços
+
+Um dos principais problemas relacionados aos índices de preços existentes é que
+estes normalmente não são capazes de fornecer, por si só, informações a respeito
+do comportamento e tendências do \gls{MI}. Não é possível dizer, por exemplo,
+pela simples análise de um índice de preços, se o \gls{MI} encontra-se
+superaquecido ou se uma bolha especulativa está inflando neste mercado.
+
+Algumas análises comparam o comportamento dos índices de preços de imóveis com
+índices de outros mercados, como o mercado de ações, por exemplo, para tentar
+inferir se o \gls{MI} está a seguir os fundamentos da Economia. Ocorre que esta
+metodologia também é falha, dado que uma bolha imobiliária pode estar a inflar
+concomitantemente com uma bolha imobiliária em outros setores da Economia, como
+o mercado de ações. 
+
+Segundo @washington [pp. 16-17], durante um ciclo de inflação e posterior 
+estouro de uma bolha imobiliária, os preços da terra tendem a se elevar de 
+maneira não uniforme, sendo sentida mais fortemente nos preços da terra iniciais 
+mais baixos, o que é seguido de uma posterior diminuição de preços também muito 
+mais forte nestes imóveis. A Figura \@ref(fig:washington) ilustra isto. As 
+Figuras \@ref{fig:washington2} e \@ref{fig:washington3} mostram que os aumentos
+e diminuições nos preços dos imóveis durante a inflação e estouro da bolha são
+devidos principalmente à variação dos valores da terra. Este estudo traz como
+possíveis conclusões: (a) o \gls{MI} pode ser melhor analisado pela evolução dos 
+preços da terra e não pela evolução dos preços dos imóveis acabados; (b) índices 
+de preços de terras baseados em regressão quantílica poderiam fornecer melhores 
+parâmetros para um diagnóstico mais completo do \gls{MI}, talvez até dispensando 
+a necessidade de comparação da evolução do índice de preços com outras variáveis macroeconômicas, *i.e.*  com a simples análise do comportamento do índice e (c)
+o planejador deve dedicar especial atenção aos impactos de eventuais programas
+habitacionais nas periferias das cidades, onde os preços da terra são mais 
+baixos, pois a forte valorização destas terras pode levar à inflação dos preços
+do mercado como um todo.
+
+```{r whasington, fig.cap="Preços da terra divididos em quantis ao longo de um ciclo do \\gls{MI}."}
+knitr::include_graphics("images/PrecoTerraQuantis.png")
+```
+\bcenter
+\small Fonte -- @washington
+\ecenter
+
+
+```{r whasington2, fig.cap="Inflação dos preços dos imóveis divididos em componentes."}
+knitr::include_graphics("images/LandPricesInflation.png")
+```
+\bcenter
+\small Fonte -- @washington
+\ecenter
+
+```{r whasington3, fig.cap="Desinflação dos preços dos imóveis divididos em componentes."}
+knitr::include_graphics("images/LandPricesDisinflation.png")
+```
+\bcenter
+\small Fonte -- @washington
+\ecenter
+
+
+
 ## Indicadores de performance do setor imobiliário residencial
 
 O Quadro \@ref(qua:Quadro-2) traz uma coleção de dez indicadores que podem 
@@ -390,8 +447,8 @@ NHPI <- fredr(series_id = "CSUSHPINSA",
               frequency = "q")
 RRVRUSQ156N <- fredr(series_id = "RRVRUSQ156N", 
                observation_start = as.Date("1956-01-01")) # Rental vacancy rate
-RHVRUSQ156N$date <- seq(ISOdate(1956,1,1), ISOdate(2020,4,1), by = "quarters")
-RRVRUSQ156N$date <- seq(ISOdate(1956,1,1), ISOdate(2020,4,1), by = "quarters")
+RHVRUSQ156N$date <- seq(ISOdate(1956,1,1), ISOdate(2020,10,1), by = "quarters")
+RRVRUSQ156N$date <- seq(ISOdate(1956,1,1), ISOdate(2020,10,1), by = "quarters")
 ```
 
 ```{r recessionsDF4}
@@ -863,4 +920,5 @@ praticamente simultânea.
 
 No entanto, deve-se ter em conta que o preço dos imóveis nos \gls{EUA} afeta o
 índice global.
+
 

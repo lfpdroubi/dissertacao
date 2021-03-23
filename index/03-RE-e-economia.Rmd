@@ -14,7 +14,8 @@
 	\end{flushright}
 \end{epigrafe}
 
-## Os vários significados do termo \emph{Economia}
+
+## A Economia
 
 A economia é uma ciência social. Apesar do desenvolvimento recente das ciências
 econômicas ter levado muitos dos economistas da atualidade, em sua prática, a se
@@ -48,8 +49,10 @@ no cerne da própria `realidade' social.
 \cite[p.~15]{zizek}
 \end{citacao}
 
-Da mesma forma, para Singer [-@singer, 7], é possível distinguir pelo menos três
-significados do termo *economia*:
+### Os vários significados do termo \emph{Economia}
+
+Para Singer [-@singer, 7], é possível distinguir pelo menos três significados do 
+termo *economia*:
 
 * a qualidade de ser estrito ou austero no uso de recursos ou valores;
 * a característica comum de uma ampla gama de atividades que compõe a *economia*
@@ -196,6 +199,38 @@ disponíveis.
 
 ## O Mercado Imobiliário
 
+O mercado imobiliário urbano pode ser dividido basicamente em [@wheaton1999]:
+
+1. Mercado de imóveis residenciais;
+2. Mercado de imóveis comerciais para escritórios;
+3. Mercado de imóveis comerciais para o varejo (incluso shopping centers) e;
+4. Mercado de imóveis industriais
+
+@Case2000 identificaram quatro canais em que o Mercado Imobiliário se
+conecta à macroeconomia:
+
+1. Através do setor de construção civil, pelo seu papel na atividade econômica 
+como um todo, apesar de, segundo os autores, este setor não ser grande o 
+suficiente para orientar toda a economia de um país;
+2. Através da formação da demanda agregada, já que existe uma conexão entre a 
+propensão marginal a consumir com o efeito riqueza do Mercado Imobiliário;
+3. Através do setor bancário, haja vista que os bancos possuem grande parte de
+seu portfolio ligado a produtos conectados de alguma forma com o mercado
+imobiliário
+4. E, por fim, porém não menos importante, o \gls{MI} desempenha um relevante
+papel na Macroeconomia através da sua capacidade de alocar os trabalhadores de
+maneira eficiente, ou seja, em regiões de maior produtividade do trabalho, o que
+tem um potencial de aumentar a produtividade da Economia como um todo.
+
+Especialmente devido a sua relação com o setor bancário, o \gls{MI} tem um papel
+importante na estabilidade financeira e na calibragem da política monetária
+[@Zhu]. Esta razão, por si só, seria suficiente para justificar intervenções
+por parte dos governos no \gls{MI}. Mas ainda, pelo importante papel do \gls{MI} 
+na eficiente alocação dos trabalhadores em áreas de maior produtividade de 
+Economia, esta intervenção estatal no \gls{MI} deve ser justificada, já que isto
+afeta a renda e o bem-estar de toda a população, propiciando um funcionamento 
+mais eficiente das engrenagens econômicas.
+
 Segundo @shelter [p. 188-189], o funcionamento do \gls{MI} residencial pode
 ser compreendido de acordo com o diagrama da Figura \@ref(fig:MIResidencial):
 existe um mercado de residências que pode ser considerado competitivo. No
@@ -309,7 +344,60 @@ disto, a falta de informação a respeito de preços no mercado imobiliário, pe
 motivo deste ser um mercado segmentado, ou seja, os preços obedecem uma lógica
 local, também é uma facilitadora da formação de bolhas.
 
-## O Mercado Imobiliário e a Microeconomia {#micro}
+## A Economia e o mercado imobiliário
+
+Uma questão sempre presente nas discussões econômicas diz respeito ao papel do
+Estado na Economia, seja como ofertante, através de empresas públicas,
+geralmente criadas em setores onde não há atratividade para empresas privadas,
+como demandante -- em muitos casos o Estado é o maior demandante do setor -- ou
+ainda como interventor/regulador. Em relação ao \gls{MI}, então, qual deveria
+ser o papel do Estado junto a este mercado? Deveria o Estado intervir de alguma
+forma, seja como ofertante, demandante ou interventor, ou deveria o Estado
+tentar permanecer neutro em relação ao \gls{MI}, deixando que o mercado se
+auto-regule, através do equilíbrio da demanda e da oferta por bens imóveis?
+
+Diversos autores tem manifestado que o \gls{MI}, por sua pujança e
+particularidades, não deveria ser estudado apenas como mais um mercado de bens
+da Economia, haja vista sua forte interação com o bem-estar da população, da
+saúde pública, e do seu impacto nas variáveis macroeconômicas e *vice-versa*.
+
+De acordo com @Case2000 [p. 149-150], a análise econômica padrão sugeriria que a
+terra é uma mercadoria como qualquer outra e o seu preço reflete as forças de
+mercado de oferta e demanda, e que por este motivo o Estado não deveria intervir
+neste mercado, assim como no mercado de outros produtos. No entanto, @Case2000
+ponderam que o alto preço dos imóveis em alguns dos mercados mais aquecidos tem
+menos a ver com as forças de mercado do que com políticas regulatórias
+governamentais, como o zoneamento urbano, que restringem muito a possibilidade
+de novos empreendimentos e acabam por valorizar demais os imóveis já
+construídos, muitas vezes sem motivos técnicos que as justifiquem.
+
+Ainda há de se considerar a inelasticidade da oferta e a inércia dos preços como 
+fatores preponderantes que devem levar a uma necessária intervenção do Estado no 
+\gls{MI}. Devido a estes fatores, choques macroeconômicos afetam diferentemente 
+o lado da oferta e o lado da demanda no \gls{MI}, podendo levar a formação de 
+bolhas especulativas.
+
+Historicamente, nos países de mercado de capitais menos desenvolvidos, como o 
+Brasil, o \gls{MI} é utilizado como reserva de valor, o que tende a se agravar
+em tempos de crise econômica, em que os investidores tendem a procurar 
+investimentos de menor risco.
+
+Nos países desenvolvidos do sistema, os mercados de capitais mais desenvolvidos
+propiciam alternativas de investimento que possibilitam aos grandes investidores
+institucionais diversos produtos de investimento que tornam praticamente
+desnecessário e contraproducente o investimento direto no \gls{MI}, haja vista
+todas as taxas de negociação envolvidas, o que costuma espantar os investidores
+profissionais. Isto não significa, no entanto, que o \gls{MI} destes países
+esteja imune à especulação do capital financeiro, o que ficou claro com a crise
+financeiro-imobiliária de 2008. Também o setor financeiro não está livre dos
+impactos causados por fortes variações de preços no \gls{MI} e choques de preços
+como o de 2007/2008 nos \gls{EUA} mostraram que, numa economia capitalista
+desenvolvida, crises setoriais que antes se restringiriam ao setor atingido,
+atualmente tendem a se propagar rapidamente pelos diversos setores da Economia,
+especialmente as crises advindas do mercado imobiliário.
+
+
+### O Mercado Imobiliário e a Microeconomia {#micro}
 
 O \gls{MI}, por sua pujança e importância, não pode ser considerado um simples
 mercado de bens, como outros bens de consumo em geral, como automóveis, móveis
@@ -326,7 +414,7 @@ regulação, mas é preciso conhecer também os seus efeitos sobre os preços do
 imóveis, sobretudo os efeitos da regulação sobre a volatilidade dos mesmos.
 
 
-### Estruturas básicas de mercado
+#### Estruturas básicas de mercado
 
 A nova versão da NBR 14.653-01 [-@NBR1465301, ix] traz uma evolução quanto à 
 consideração das diversas estruturas de mercado possíveis para a avaliação de um
@@ -564,7 +652,7 @@ knitr::include_graphics("images/income_elasticity.png")
 \small Fonte: @green_2003 *apud* Malpezzi [-@malpezzi_2017].
 \ecenter
 
-#### Elasticidade da oferta
+##### Elasticidade da oferta
 
 Analogamente à elasticidade-preço da demanda, a elasticidade-preço da oferta 
 mede a variação na quantidade ofertada de uma mercadoria quando os preços variam
@@ -753,7 +841,7 @@ atores como ofertantes, a tendência é que os choques de demanda tenham maior
 impacto. Os detalhes por trás deste raciocínio serão melhor esclarecidos no
 capítulo \@ref(crise2008).
 
-### Diagnóstico de mercado
+#### Diagnóstico de mercado
 
 A NBR 14.653-01 [-@NBR1465301, 12], estabelece que, "o profissional, conforme o
 tipo de bem, as condições de contratação, o método empregado e a finalidade da
@@ -761,7 +849,7 @@ avaliação, pode **tecer considerações sobre o mercado do bem avaliando**, de
 forma a indicar, tanto quanto possível, **a estrutura, a conduta e o desempenho
 do mercado**."
 
-### O imóvel visto como um investimento
+#### O imóvel visto como um investimento
 
 Segundo @Malpezzi2002TheRO, um imóvel é um ativo que rende um fluxo de serviços
 ao longo do tempo. O Quadro \@ref(qua:Quadro-1) mostra a diferenciação entre os
@@ -815,7 +903,7 @@ títulos é inversamente proporcional às taxas de juros, ou seja, quanto menor 
 taxas, maior o valor presente descontado dos títulos, ou valor de mercado, e
 vice-versa [@resende, 79].
 
-### O papel da especulação no \gls{MI}
+#### O papel da especulação no \gls{MI}
 
 Um dos assuntos mais polêmicos do \gls{MI} diz respeito à especulação com 
 imóveis. Especulação, aliás, é um assunto em polêmico em diversos tipos de 
@@ -871,7 +959,7 @@ V = \sum_{t = 0}^T \frac{\mathbb{E}[R_{Lt}]}{(1+i)^t}
 
 Supondo que se possa calcular um valor presente para um imóvel baseado apenas
 nos fundamentos econômicos $V^*$, o valor em torno do qual se negociaria o
-imóvel com expectativas racionais, com expectativas adaptativas[^3], um imóvel
+imóvel com expectativas racionais, com expectativas adaptativas[^4], um imóvel
 com preço igual ao da equação \@ref(eq:valor-presente-adptativo) também seria
 negociado 'racionalmente', caso o comprador considerasse que o grau de
 supervalorização do imóvel continuasse a crescer nos períodos subsequentes por
@@ -883,7 +971,7 @@ V_t = V_t^* + b_t, \qquad com \quad \mathbb{E}_t[b_{t+1}] = (1+i)b_t
 \end{equation}
 
 
-[^3]: Expectativas adaptativas assumem que os agentes do mercado presumem que os 
+[^4]: Expectativas adaptativas assumem que os agentes do mercado presumem que os 
 ganhos futuros serão iguais aos do passado recente analisado.
 
 Em suma, isto implica que a autocorrelação serial nos aumentos de preços dos 
@@ -893,14 +981,14 @@ serial em preços, porém a evidência de que isso leva, por si só, a formaçã
 bolhas é controversa. No capítulo \@ref(crise2008) serão vistos com mais detalhes os
 fatores que levam à formação de bolhas.
 
-### O papel da regulação do \gls{MI} na prevenção da formação de bolhas especulativas
+#### O papel da regulação do \gls{MI} na prevenção da formação de bolhas especulativas
 
-Conforme será visto no capítulo \@ref(crise2008), para @Malpezzi2002TheRO [p. 26], o
-efeito da especulação na volatilidade do \gls{MI} depende das condições de
-oferta em cada mercado. Reformas adequadas na regulação do \gls{MI} com base
+Conforme será visto no capítulo \@ref(crise2008), para @Malpezzi2002TheRO [p.
+26], o efeito da especulação na volatilidade do \gls{MI} depende das condições
+de oferta em cada mercado. Reformas adequadas na regulação do \gls{MI} com base
 nesta hipótese serão apresentadas no capítulo \@ref(politicas).
 
-### Formação de bolhas especulativas
+##### Formação de bolhas especulativas
 
 Na análise de @Malpezzi2002TheRO a respeito da formação de bolhas, a variável
 taxa de desconto ($i$) é considerada como uma variável exógena, isto é, não 
@@ -919,7 +1007,7 @@ risco da economia. Por isso, a taxa de desconto destes ativos é chamada de taxa
 livre de risco. A taxa de desconto de quaisquer outros ativos na Economia de um
 país será maior do que essa taxa livre de risco, pois nela estará embutida uma
 taxa devido ao risco de carregamento daquele investimento, que se soma à taxa de
-livre de risco da economia[^4]. Dessa maneira, o que ocorre quando a taxa livre
+livre de risco da economia[^5]. Dessa maneira, o que ocorre quando a taxa livre
 de risco oscila é que também oscilam os Valores Presentes dos imóveis e dos
 outros investimentos.
 
@@ -927,11 +1015,11 @@ Se estas oscilações de preços dos imóveis devido às taxas de juros podem ca
 bolhas especulativas, no entanto, é uma outra história. Este assunto será 
 abordado com mais profundidade no capítulo \@ref(crise2008).
 
-[^4]: O capítulo \@ref(crise2008) ilustra como as taxas praticadas no mercado de 
+[^5]: O capítulo \@ref(crise2008) ilustra como as taxas praticadas no mercado de 
 crédito de hipotecas, por exemplo, são compostas de uma taxa adicional de risco
 em relação à taxa livre de risco.
 
-### Rendimentos de aluguel
+##### Rendimentos de aluguel
 
 A taxa de rendimento do aluguel de um imóvel é obtida invertendo-se os termos
 da equação \@ref(eq:valor-presente), de maneira a isolar a taxa de desconto.
@@ -963,7 +1051,7 @@ Esta taxa tem sido utilizada para comparar o rendimento do investimento em
 imóveis em todo o planeta, através de sítios de internet especializados em
 investimento em imóveis [@gpg].
 
-#### Duration de um título de renda fixa
+##### Duration de um título de renda fixa
 
 Segundo @marins1, a *duration* de um título, ou de um conjunto de títulos de 
 renda fixa pode ser calculada de acordo com a equação \@ref(eq:duration), 
@@ -993,7 +1081,7 @@ O investimento em imóveis será, via de regra, o investimento de maior *duratio
 do mercado, haja vista que um imóvel pode ter vida útil de 50 anos ou mais, 
 enquanto os títulos de renda fixa normalmente tem prazo máximo de 30 anos.
 
-#### Cálculo do valor justo de um imóvel em função da taxa de desconto
+##### Cálculo do valor justo de um imóvel em função da taxa de desconto
 
 O cálculo do valor justo de um imóvel pode ser feito considerando-se o método
 do fluxo de caixa descontado, assim como é feito o *valuation* de uma empresa

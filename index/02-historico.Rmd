@@ -439,13 +439,13 @@ terras efetivamente ocupadas. No caso da coroa espanhola, a exploração de meta
 preciosos logo permitiu que esta estabelecesse a defesa das novas terras, ainda
 que não em toda a sua extensão [@furtado2005, p. 13]. Já no caso da coroa
 portuguesa, a ocupação das novas terras exigiu, a princípio, a exploração
-agrícola do território brasileiro[^1], com a utilização de mão-de-obra escrava,
+agrícola do território brasileiro[^2], com a utilização de mão-de-obra escrava,
 então a única forma encontrada para a ocupação economicamente viável das novas
 terras [@furtado2005, p. 17], o que foi feito inclusive desviando recursos de
 empresas mais produtivas, como as Companhia das Índias Orientais [@furtado2005,
 p. 12].
 
-[^1]: a descoberta e exploração de metais preciosos no Brasil só ocorreu muito 
+[^2]: a descoberta e exploração de metais preciosos no Brasil só ocorreu muito 
 mais tarde, nos primeiros decênios do século XVIII [@furtado2005, p. 79].
 
 O segundo princípio necessário para a implantação do feudalismo, portanto,
@@ -666,13 +666,13 @@ economia natural, causando por isso mesmo, o fenômeno do **êxodo rural**"
 
 O caso brasileiro, porém, não é único: "a industrialização da Inglaterra fez-se
 também, originariamente, nas condições de um enorme excedente de mão de obra,
-causado pelo *enclosure*[^2] ...". No caso inglês, porém, "o motor primário" do
+causado pelo *enclosure*[^3] ...". No caso inglês, porém, "o motor primário" do
 desenvolvimento foi a produção manufatureira para exportação, enquanto no Brasil
 a industrialização teve seu desenvolvimento estimulado, "nas condições de uma
 crônica crise cambial", pela política de substituição de importações
 [@rangel1962, 43-44].
 
-[^2]: *Enclosure* - literalmente, cercamento. Movimento pelo qual os pequenos 
+[^3]: *Enclosure* - literalmente, cercamento. Movimento pelo qual os pequenos 
 agricultores ingleses foram expulsos de terras, convertidas estas à pecuária, e
 amontoados nos *slums*, ou favelas das cidades industriais nascentes, na 
 primeira metade do século XIX.

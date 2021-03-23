@@ -163,21 +163,65 @@ on chapters.
 
 O território é a base das atividades econômicas e sociais do país. Um eficiente
 planejamento territorial passa por desenvolver políticas públicas que garantam
-um desenvolvimento equânime de todo o território. A proposta desta pesquisa é
-aprofundar o conhecimento referente à dinâmica do mercado imobiliário e das
-políticas de solo, de maneira a planejar a utilização dos instrumentos de
-política do solo no sentido de resolver os problemas do crônico déficit
-habitacional brasileiro, onde milhões de pessoas vivem em situação precária.
+um desenvolvimento equânime de todo o território.
 
-O mundo vive uma situação de crise habitacional que se agrava desde a crise
-financeiro-habitacional de 2008, por diversos motivos. No caso brasileiro, a
-crise habitacional é crônica.
+O mundo vive na atualidade uma situação de crise habitacional sem precedentes,
+que se agrava desde a Grande Recessão de 2007-2009. Os reflexos da crise
+habitacional e financeira global que foi deflagrada em 2007 pela crise das
+hipotecas *subprime*[^1] nos EUA e se espalhou pelo mundo ainda podem ser
+sentidos, especialmente em seu contexto habitacional. Se o mundo foi capaz de
+equacionar o lado financeiro do problema, salvando as instituições financeiras
+da bancarrota, o mesmo não aconteceu no setor habitacional. Pelo contrário, 
+neste setor a crise foi duramente agravada, seja nos países desenvolvidos, onde 
+a crise teve origem, seja nos países em desenvolvimento.
 
-A precariedade de grande parte do estoque de moradias atualmente no Brasil, 
-a falta de infraestrutura básica, e o grande número de pessoas dividindo o mesmo 
-cômodo é uma situação que afeta a saúde pública em tempos de normalidade e se
-agrava fortemente em tempos de crises epidêmicas, com a atual pandemia de 
+[^1]: O termo *subprime* refere-se a um grupo de mutuários com capacidade de 
+pagamento duvidosa. Na prática, no entanto, é comum a utilização do termo de 
+"hipotecas *subprime*" para referir-se às hipotecas direcionadas a este segmento 
+de mutuários.
+
+No caso brasileiro, contudo, a crise habitacional é crônica. A precariedade de
+grande parte do estoque de moradias, a falta de infraestrutura básica, e o
+grande número de pessoas dividindo o mesmo lar, as vezes até o mesmo cômodo, é
+um fato social de muitos países em desenvolvimento e isto não é diferente no
+Brasil.Estes fatores, por sua vez, afetam a saúde pública seja em tempos de
+normalidade, seja em tempo de crises sanitárias, como a atual pandemia de
 COVID-19.
+
+A complexidade do setor habitacional, sua relação com os outros setores da 
+economia capitalista e sua importância nas questões de saúde pública e no 
+bem-estar da população, assim como aspectos históricos e culturais dos diversos 
+países, infelizmente, não permitem a implementação de soluções pré-definidas: as 
+políticas habitacionais devem ser estudadas e implementadas *ad-hoc*.
+
+Em países desenvolvidos a atual crise habitacional não necessariamente tem
+relação com a falta de moradias disponíveis. Pelo contrário: nos EUA, por
+exemplo, estima-se que existam em torno de seiscentas mil pessoas sem moradia,
+enquanto o número de residências desocupadas e disponíveis para aluguel gira em
+torno de três milhões de unidades, ou seja, existem praticamente seis vezes mais
+moradias disponíveis para locação do que pessoas desabrigadas. Saliente-se que o
+número de residências desocupadas nos EUA, segundo o último censo de 2019, é
+ainda maior: em torno de 16,5 milhões de unidades habitacionais encontram-se
+desocupadas. Desta maneira, pode-se argumentar que a crise habitacional na 
+maioria dos países desenvolvidos, senão em todos, está mais relacionada à 
+falta de renda das pessoas para o acesso à moradia do que à falta de moradias.
+O número de unidades habitacionais disponíveis para locação é tão superior ao
+número de pessoas desabrigadas que os especialistas defendem que o déficit 
+habitacional nestes países seja resolvido com a simples emissão de *vouchers*
+para as pessoas que não podem arcar com os atuais custos de moradia.
+
+No Brasil, assim como em outros países em desenvolvimento, este não é o caso.
+Apesar de alguns relatos de que existem no Brasil em torno de cinco ou seis 
+milhões de unidades habitacionais vazias, este número não é muito superior ao
+número de pessoas desabrigadas e nem todas estas unidades habitacionais estão
+disponíveis, apesar de se encontrarem vazias. Além disto, muitas famílias
+ainda vivem em moradias de condições precárias, de maneira que é possível dizer
+que a solução para o déficit habitacional dificilmente deixaria de passar pelo
+estímulo à construção de novas unidades, seja para a absorver as pessoas 
+desabrigadas, seja para melhorar as condições de moradia de boa parte da 
+população abrigada.
+
+
 
 ## O conceito de terra e a importância do território
 
@@ -199,92 +243,6 @@ formação de valor dos bens imóveis, um conceito ligado à Economia. Para isto
 Avaliadores devem entender o mercado no qual estes bens estão inseridos. É o
 mercado que reflete a atitude dos atores econômicos em resposta às forças
 sociais e econômicas e às restrições da lei e dos ônus legais [@realestate, 10].
-
-## O Mercado Imobiliário
-
-O mercado imobiliário urbano pode ser dividido basicamente em [@wheaton1999]:
-
-1. Mercado de imóveis residenciais;
-2. Mercado de imóveis comerciais para escritórios;
-3. Mercado de imóveis comerciais para o varejo (incluso shopping centers) e;
-4. Mercado de imóveis industriais
-
-@Case2000 identificaram quatro canais em que o Mercado Imobiliário se
-conecta à macroeconomia:
-
-1. Através do setor de construção civil, pelo seu papel na atividade econômica 
-como um todo, apesar de, segundo os autores, este setor não ser grande o 
-suficiente para orientar toda a economia de um país;
-2. Através da formação da demanda agregada, já que existe uma conexão entre a 
-propensão marginal a consumir com o efeito riqueza do Mercado Imobiliário;
-3. Através do setor bancário, haja vista que os bancos possuem grande parte de
-seu portfolio ligado a produtos conectados de alguma forma com o mercado
-imobiliário
-4. E, por fim, porém não menos importante, o \gls{MI} desempenha um relevante
-papel na Macroeconomia através da sua capacidade de alocar os trabalhadores de
-maneira eficiente, ou seja, em regiões de maior produtividade do trabalho, o que
-tem um potencial de aumentar a produtividade da Economia como um todo.
-
-Especialmente devido a sua relação com o setor bancário, o \gls{MI} tem um papel
-importante na estabilidade financeira e na calibragem da política monetária
-[@Zhu]. Esta razão, por si só, seria suficiente para justificar intervenções
-por parte dos governos no \gls{MI}. Mas ainda, pelo importante papel do \gls{MI} 
-na eficiente alocação dos trabalhadores em áreas de maior produtividade de 
-Economia, esta intervenção estatal no \gls{MI} deve ser justificada, já que isto
-afeta a renda e o bem-estar de toda a população, propiciando um funcionamento 
-mais eficiente das engrenagens econômicas.
-
-## A Economia e o mercado imobiliário
-
-Uma questão sempre presente nas discussões econômicas diz respeito ao papel do
-Estado na Economia, seja como ofertante, através de empresas públicas,
-geralmente criadas em setores onde não há atratividade para empresas privadas,
-como demandante -- em muitos casos o Estado é o maior demandante do setor -- ou
-ainda como interventor/regulador. Em relação ao \gls{MI}, então, qual deveria
-ser o papel do Estado junto a este mercado? Deveria o Estado intervir de alguma
-forma, seja como ofertante, demandante ou interventor, ou deveria o Estado
-tentar permanecer neutro em relação ao \gls{MI}, deixando que o mercado se
-auto-regule, através do equilíbrio da demanda e da oferta por bens imóveis?
-
-Diversos autores tem manifestado que o \gls{MI}, por sua pujança e
-particularidades, não deveria ser estudado apenas como mais um mercado de bens
-da Economia, haja vista sua forte interação com o bem-estar da população, da
-saúde pública, e do seu impacto nas variáveis macroeconômicas e *vice-versa*.
-
-De acordo com @Case2000 [p. 149-150], a análise econômica padrão sugeriria que a
-terra é uma mercadoria como qualquer outra e o seu preço reflete as forças de
-mercado de oferta e demanda, e que por este motivo o Estado não deveria intervir
-neste mercado, assim como no mercado de outros produtos. No entanto, @Case2000
-ponderam que o alto preço dos imóveis em alguns dos mercados mais aquecidos tem
-menos a ver com as forças de mercado do que com políticas regulatórias
-governamentais, como o zoneamento urbano, que restringem muito a possibilidade
-de novos empreendimentos e acabam por valorizar demais os imóveis já
-construídos, muitas vezes sem motivos técnicos que as justifiquem.
-
-Ainda há de se considerar a inelasticidade da oferta e a inércia dos preços como 
-fatores preponderantes que devem levar a uma necessária intervenção do Estado no 
-\gls{MI}. Devido a estes fatores, choques macroeconômicos afetam diferentemente 
-o lado da oferta e o lado da demanda no \gls{MI}, podendo levar a formação de 
-bolhas especulativas.
-
-Historicamente, nos países de mercado de capitais menos desenvolvidos, como o 
-Brasil, o \gls{MI} é utilizado como reserva de valor, o que tende a se agravar
-em tempos de crise econômica, em que os investidores tendem a procurar 
-investimentos de menor risco.
-
-Nos países desenvolvidos do sistema, os mercados de capitais mais desenvolvidos
-propiciam alternativas de investimento que possibilitam aos grandes investidores
-institucionais diversos produtos de investimento que tornam praticamente
-desnecessário e contraproducente o investimento direto no \gls{MI}, haja vista
-todas as taxas de negociação envolvidas, o que costuma espantar os investidores
-profissionais. Isto não significa, no entanto, que o \gls{MI} destes países
-esteja imune à especulação do capital financeiro, o que ficou claro com a crise
-financeiro-imobiliária de 2008. Também o setor financeiro não está livre dos
-impactos causados por fortes variações de preços no \gls{MI} e choques de preços
-como o de 2007/2008 nos \gls{EUA} mostraram que, numa economia capitalista
-desenvolvida, crises setoriais que antes se restringiriam ao setor atingido,
-atualmente tendem a se propagar rapidamente pelos diversos setores da Economia,
-especialmente as crises advindas do mercado imobiliário.
 
 ## Crise habitacional crônica
 
