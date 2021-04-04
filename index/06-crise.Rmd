@@ -1,0 +1,1462 @@
+# Ciclos, bolhas especulativas e a crise financeira-habitacional de 2007-2008 {#crise2008}
+
+\begin{epigrafe}
+	\vspace*{\fill}
+	\begin{flushright}
+    \textit{``The boom years of the 1990s created a business atmosphere\\
+    akin to a gold rush, and led many people to distort their business\\
+    decisions, the results of which will weigh upon us for many years\\
+    to come. Part of this change in business atmosphere was a decline\\
+    in ethical standards, a decline in the belief in integrity, honesty,\\
+    patience, and trust in business. A string of scandals affecting\\ 
+    corporate boards, accounting firms, and mutual funds surfaced after\\
+    the market dropped.''\\
+    \cite[p. xiv]{shiller}}
+	\end{flushright}
+\end{epigrafe}
+    
+No capítulo \@ref(economia) foi mostrado um modelo econométrico que correlaciona
+os preços residenciais a variáveis macroeconômicas. Estes modelos podem ser 
+elaborados relacionando os preços dos imóveis a diversas variáveis 
+macroeconômicas como o \gls{PIB}, à atividade econômica \gls{EA} ou à índices de
+mercados de capitais, como o \gls{IBOVESPA} ou o \gls{SP500}. Estes modelos
+testa estatisticamente a significância destas diversas variáveis na explicação
+do preço dos imóveis, num espaço razoável de tempo (longo prazo). No entanto,
+descolamentos momentâneos dos preços dos imóveis do preço de equilíbrio de 
+longo prazo podem acontecer, iniciando um ciclo no \gls{MI}. A partir do início
+do ciclo, oferta e demanda vão se ajustar, até que um novo equilíbrio do mercado
+seja atingido. Segundo @regulation [p. 18] este novo equilíbrio pode levar "uma 
+década ou mais".
+
+Os ciclos do \gls{MI}, portanto, muitas vezes são atribuídos a um único fator
+exógeno a este mercado. Por exemplo, pode-se atribuir a criação de um ciclo a um
+incentivo fiscal do governo ou a um choque de demanda na economia. Porém,
+segundo @wheaton1999 [p. 209-210], diferentes tipos de imóveis apresentam
+diferentes tipos de comportamento cíclico. Alguns tipos de imóveis apresentam
+movimentos de preços mais ligados à economia enquanto outros apresentam períodos
+de oscilação muito mais longos e apresentam quase nenhuma relação com oscilação
+da economia.
+
+Neste capítulo serão abordados as características dos diversos \gls{MI}, como
+se constituem os seus ciclos e como pode ocorrer o surgimento de bolhas 
+especulativas neste mercados, a depender do impacto de variáveis exógenas, assim
+como das características intrínsecas destes mercados e dos seus aspectos 
+regulatórios.
+
+## Ciclos do \gls{MI}
+
+De acordo com @wheaton1999 [p. 212], alguns mercados parecem não apresentar um
+componente cíclico intrínseco: o investimento nestes imóveis aumenta ou diminui
+de acordo com os choques econômicos, como no mercado de apartamentos ou no
+mercado de imóveis industriais nos \gls{EUA}. Já para outros mercados, a
+oscilação natural dos investimentos parece não ter ligação alguma com a
+economia: existe uma oscilação, mas que parece ser uma característica intrínseca
+daqueles mercados, como o mercado de imóveis de escritório e o mercado de
+imóveis para o varejo (*shopping centers*, p. ex.) nos \gls{EUA}.
+
+@wheaton1999 elaborou então um modelo econométrico que leva em conta o tempo de
+  desenvolvimento de um projeto nos diferentes mercados, assim como a taxa de
+  depreciação em cada um deles, assim como outras variáveis como a
+  elasticidade-preço da demanda e da oferta nestes mercados e concluiu que se a
+  demanda é mais elástica do que a oferta (ou mesmo que ainda menos elástica,
+  porém com tempo de desenvolvimento curto e a taxa de depreciação baixa),
+  existe uma estabilidade de preços nestes mercados. Contudo, se a oferta é mais
+  elástica que a demanda e o tempo de desenvolvimento é longo, o mercado
+  apresenta instabilidade.
+
+Para @wheaton1999 [p. 228], com isto é possível explicar a diferença dos ciclos
+nos diversos mercados, já que o tempo de desenvolvimento geralmente é curto nos
+mercados de apartamentos e industrial, enquanto no mercado de escritórios e se
+imóveis comerciais o tempo de desenvolvimento é maior.
+
+Quanto às elasticidades, no mercado residencial geralmente a demanda é 
+inelástica, porém também é a oferta. Já para o caso dos escritórios, a demanda
+também é inelástica, porém estudos sugerem haver relativa elasticidade da oferta,
+o que explica os vários casos de *overbuilding*, ou seja, de construção além do
+que o mercado pode absorver [@wheaton1999, p. 228].
+
+Finalmente, segundo @wheaton1999 [p. 228], a única coisa em comum nos vários 
+mercados é o alto grau de durabilidade dos bens. Porém mesmo pequenas diferenças
+na durabilidade entre os diversos mercados podem fazer uma diferença 
+considerável na estabilidade desses mercados, assim como os diferentes prazos de
+desenvolvimento dos projetos e das elasticidades de oferta e demanda.
+
+## Bolhas Especulativas no Mercado Imobiliário
+
+Conforme antecipado no capítulo \@ref(economia), mecanismos regulatórios para o 
+\gls{MI} podem ser utilizados visando uma melhora da curva da oferta, tornando-a
+mais elástica, de maneira a evitar grandes oscilações de preços quando estes
+mercados forem atingidos por choques de demanda.
+
+No entanto, em alguns mercados isto não é tão simples: muitos mercados estão
+limitados por condições geográficas e pode ser muito difícil, se não impossível
+tornar a oferta elástica nestes tipos de mercado. Ademais, em alguns mercados,
+como visto no item anterior, o tempo de desenvolvimento é maior, o que faz com
+que um aumento de demanda leve alguns anos até que possa ser absorvido pelo
+mercado.
+
+Estas grandes oscilações de preços são indesejáveis por uma série de motivos. 
+A dinâmica do mercado pode ser assim descrita:
+
+1. Com os preços acima (abaixo) dos fundamentos, ao longo do tempo, a oferta 
+aumenta (diminui);
+2. Há superinvestimento (subinvestimento) no setor de construção, devido aos 
+preços acima (abaixo) dos fundamentos;
+3. Com a oferta muito alta (baixa), os preços tendem a cair (subir);
+4. Se a volatilidade é muito alta, estes movimentos podem ser bruscos: ao invés
+da bolha se dissolver, ela estoura;
+5. Muitos investimentos no setor imobiliário são feitos por um empreendedor 
+financiado por empréstimos bancários: uma grande queda nos preços pode levar
+ao desequilíbrio econômico financeiro do empreendedor, o que desencadeia uma 
+série de problemas posteriores[^6]
+
+[^6]: Segundo @Malpezzi2002TheRO[p. 2], nas economias mais afetadas,o colapso
+dos preços no \gls{MI} é seguida por uma série de eventos, como uma crise
+bancária, uma crise no balanço de pagamentos, uma crise financeira e um estouro
+de um ciclo de negócios.
+
+### O papel da oferta na prevenção de bolhas
+
+De acordo com @regulation [p. 11], os padrões de *boom* e *boost* no \gls{MI},
+ou seja, a formação e estouro de bolhas, podem ser explicados por modelos
+dinâmicos e tem maior relação com problemas na inelasticidade da oferta de
+alguns mercados do que propriamente com a ação de especuladores, que são quase
+sempre eleitos os culpados no noticiário econômico.
+
+No entanto, para @regulation [p. 1], a oferta inelástica em alguns mercados é
+uma condição necessária para a formação de bolhas, porém não suficiente: a
+formação de bolhas também está relacionada a choques de demanda.
+
+Devido a estes fatos, são importantes na análise do \gls{MI} os modelos 
+dinâmicos. Descrever estes modelos, no entanto, está além do escopo deste 
+trabalho. Alguns trabalhos importantes de se destacar, visando pesquisas 
+futuras são: @wheaton1999, @FAN201937 e @Malpezzi2002TheRO.
+
+É possível compreender o problema da inelasticidade da oferta no \gls{MI},
+contudo, através de simples gráficos de oferta e demanda, como pode ser visto
+nas Figuras \@ref(fig:choque) A e B: na Figura \@ref(fig:choque) A, um mercado
+inicialmente com preço de equilíbrio $P_1$, com um aumento na demanda, modelado
+com o deslocamento da curva da demanda $D_1$ para a direita (curva $D_2$), leva
+os preços de equilíbrio inicial $P_1$ ao novo preço de equilíbrio $P_2$, um
+pouco maior que $P_1$. Com a mudança subsequente da estrutura da oferta no longo
+prazo, o preço de equilíbrio retorna ao ponto $P_3$.
+
+Já num mercado com uma oferta mais inelástica, a volatilidade é muito maior, o
+que pode ser visto na Figura \@ref(fig:choque) B: o deslocamento da curva da
+demanda $D_1$ para a curva $D_2$ provoca um aumento mais lento da oferta, fazendo 
+com que o preço inicial de equilíbrio $P_1$ aumente, muito mais pronunciadamente 
+do que no caso anterior, para $P_2$, voltando no longo prazo a um preço de 
+equilíbrio $P_3$, após a mudança da estrutura da oferta, muito menor do que 
+$P_2$, o que configura um padrão de *boom e bust*: no primeiro momento, como a
+oferta é inelástica, ocorre um grande aumento dos preços, ou seja, a bolha é
+inflada, para num segundo momento estourar, voltando para um preço de equilíbrio
+muito menor do que o alcançado durante o *boom*.
+
+```{r choque, fig.cap="Efeitos de um choque de demanda em diferentes mercados.", out.width="100%"}
+source("curve_intersect.R")
+supplye1 <- Hmisc::bezier(c(1, 8, 9),
+                        c(1, 5, 9)) %>%
+  data.frame()
+
+demand1 <- Hmisc::bezier(c(1, 3, 9),
+                         c(9, 3, 1)) %>%
+  data.frame()
+
+supplye2 <- Hmisc::bezier(c(1, 8, 12),
+                         c(3, 3.5, 6)) %>%
+  data.frame()
+
+demand2 <- Hmisc::bezier(c(3, 5, 11),
+                         c(11, 5, 3)) %>%
+  data.frame()
+
+# Calculate the intersections of the two curves
+intere1 <- curve_intersect(supplye1, demand1)
+intere2 <- curve_intersect(supplye1, demand2)
+intere3 <- curve_intersect(supplye2, demand2)
+
+intersections <- bind_rows(intere1, intere2, intere3)
+
+plot_labels <- data_frame(label = c("O[1]", "O[2]", "D[1]", "D[2]"),
+                          x = c(8.25, 11.5, 1, 4),
+                          y = c(8.5, 6.25, 8, 10))
+
+p1 <- ggplot(mapping = aes(x = x, y = y)) + 
+  geom_path(data = supplye1, color = "#0073D9", size = 1, linetype = "dashed") + 
+  geom_path(data = supplye2, color = "#0073D9", size = 1) + 
+  geom_path(data = demand1, color = "#FF4036", size = 1, linetype = "dashed") + 
+  geom_path(data = demand2, color = "#FF4036", size = 1) + 
+  geom_segment(data = intersections, 
+               aes(x = x, y = 0, xend = x, yend = y), lty = "dotted") +
+  geom_segment(data = intersections, 
+               aes(x = 0, y = y, xend = x, yend = y), lty = "dotted") + 
+  geom_text(data = plot_labels,
+            aes(x = x, y = y, label = label), parse = TRUE,
+            family = "Source Sans Pro") +
+  annotate("segment", x = 1.5, xend = 3.5, y = 8, yend = 9.5,
+           arrow = arrow(length = unit(.75, "lines")), colour = "grey50") +
+  geom_point(data = intersections, size = 3) +
+  scale_x_continuous(expand = c(0, 0), breaks = intersections$x,
+                     labels = expression(Q[1], Q[2], Q[3])) +
+  scale_y_continuous(expand = c(0, 0), breaks = intersections$y,
+                     labels = expression(P[1], P[2], P[3])) +
+  labs(x = "Quantidade", y = "Preço",
+       title = "Oferta Elástica",
+       subtitle = "Mercado com oferta elástica") +
+  coord_equal() +
+  theme_classic(base_family = "Source Sans Pro") + 
+  theme(plot.title = element_text(family = "Source Sans Pro Semibold", size = rel(1.3)))
+
+supplyi1 <- Hmisc::bezier(c(1, 5, 8),
+                          c(1, 2, 12)) %>%
+  data.frame()
+
+supplyi2 <- Hmisc::bezier(c(1, 4.5, 12),
+                          c(4.5, 2, 7)) %>%
+  data.frame()
+
+# Calculate the intersections of the two curves
+interi1 <- curve_intersect(supplyi1, demand1)
+interi2 <- curve_intersect(supplyi1, demand2)
+interi3 <- curve_intersect(supplyi2, demand2)
+
+intersections <- bind_rows(interi1, interi2, interi3)
+
+plot_labels <- data_frame(label = c("O[1]", "O[2]", "D[1]", "D[2]"),
+                          x = c(7, 11.25, 1, 4),
+                          y = c(11.5, 7.25, 8, 10))
+
+p2 <- ggplot(mapping = aes(x = x, y = y)) + 
+  geom_path(data = supplyi1, color = "#0073D9", size = 1, linetype = "dashed") + 
+  geom_path(data = supplyi2, color = "#0073D9", size = 1) + 
+  geom_path(data = demand1, color = "#FF4036", size = 1, linetype = "dashed") + 
+  geom_path(data = demand2, color = "#FF4036", size = 1) + 
+  geom_segment(data = intersections, 
+               aes(x = x, y = 0, xend = x, yend = y), lty = "dotted") +
+  geom_segment(data = intersections, 
+               aes(x = 0, y = y, xend = x, yend = y), lty = "dotted") + 
+  geom_text(data = plot_labels,
+            aes(x = x, y = y, label = label), parse = TRUE,
+            family = "Source Sans Pro") +
+  annotate("segment", x = 1.5, xend = 3.5, y = 8, yend = 9.5,
+           arrow = arrow(length = unit(.75, "lines")), colour = "grey50") +
+  geom_point(data = intersections, size = 3) +
+  scale_x_continuous(expand = c(0, 0), breaks = intersections$x,
+                     labels = expression(Q[1], Q[2], Q[3])) +
+  scale_y_continuous(expand = c(0, 0), breaks = intersections$y,
+                     labels = expression(P[1], P[2], P[3])) +
+  labs(x = "Quantidade", y = "Preço",
+       title = "Oferta inelástica",
+       subtitle = "Mercado com oferta inelástica") +
+  coord_equal() +
+  theme_classic(base_family = "Source Sans Pro") + 
+  theme(plot.title = element_text(family = "Source Sans Pro Semibold", size = rel(1.3)))
+
+plot_row <- plot_grid(p1, p2, labels = "AUTO")
+title <- ggdraw() +
+  draw_label(
+    "Choques de demanda",
+    fontface = 'bold',
+    x = 0,
+    hjust = 0
+  ) +
+  theme(
+    # add margin on the left of the drawing canvas,
+    # so title is aligned with left edge of first plot
+    plot.margin = margin(0, 0, 0, 0)
+  )
+plot_grid(title, plot_row, ncol = 1,
+          # rel_heights values control vertical title margins
+          rel_heights = c(0.1, 1))
+```
+\bcenter
+\small Fonte -- Adaptado de @Malpezzi2002TheRO [p. 19].
+\ecenter
+
+Para @regulation [p. 11], ainda, além do problema da oferta inelástica pode
+ocorrer também o problema de uma resposta mal desenhada pelo governo ao aumento
+de preços inicial, como ilustrado na Figura \@ref(fig:choque2): algumas medidas
+podem funcionar a médio prazo, como as grandes intervenções governamentais que
+se destinam a promover uma grande oferta de imóveis de uma só vez (programas do
+tipo "1 milhão de casas"), mas seu efeito é equivalente a deslocar a curva de
+oferta inicial $O_1$ para $O_2$. Aumentando a oferta temporariamente, evita-se
+uma grande alta dos preços, que são estabilizados no preço de equilíbrio $P_3$.
+No longo prazo, porém, um posterior novo choque de demanda pode vir a elevar os
+preços a níveis muito mais altos ($P_4$), superiores inclusive aos preços
+atingidos durante o primeiro choque ($P_2$).
+
+```{r choque2, fig.cap="Efeitos de uma resposta governamental inadequada.", warning=FALSE}
+supplyi2 <- Hmisc::bezier(c(4, 8, 11),
+                          c(1, 3, 12)) %>%
+  data.frame()
+
+demand3 <- Hmisc::bezier(c(5, 7, 13),
+                         c(13, 7, 5)) %>%
+  data.frame()
+
+# Calculate the intersections of the two curves
+interi1 <- curve_intersect(supplyi1, demand1)
+interi2 <- curve_intersect(supplyi1, demand2)
+interi3 <- curve_intersect(supplyi2, demand2)
+interi4 <- curve_intersect(supplyi2, demand3)
+
+intersections <- bind_rows(interi1, interi2, interi3, interi4)
+
+plot_labels <- data_frame(label = c("O[1]", "O[2]", "D[1]", "D[2]", "D[3]"),
+                          x = c(8.75, 11.75, 1.5, 4, 6),
+                          y = c(11.5, 11.5, 9.5, 11, 12.5))
+
+p3 <- ggplot(mapping = aes(x = x, y = y)) + 
+  geom_path(data = supplyi1, color = "#0073D9", size = 1, linetype = "dashed") + 
+  geom_path(data = supplyi2, color = "#0073D9", size = 1) + 
+  geom_path(data = demand1, color = "#FF4036", size = 1, linetype = "dashed") + 
+  geom_path(data = demand2, color = "#FF4036", size = 1) + 
+  geom_path(data = demand3, color = "#FF4036", size = 1) + 
+  geom_segment(data = intersections, 
+               aes(x = x, y = 0, xend = x, yend = y), lty = "dotted") +
+  geom_segment(data = intersections, 
+               aes(x = 0, y = y, xend = x, yend = y), lty = "dotted") + 
+  geom_text(data = plot_labels,
+            aes(x = x, y = y, label = label), parse = TRUE,
+            family = "Source Sans Pro") +
+  annotate("segment", x = 1.5, xend = 3.5, y = 8, yend = 9.5,
+           arrow = arrow(length = unit(.75, "lines")), colour = "grey50") +
+  annotate("segment", x = 3.5, xend = 5.75, y = 9.5, yend = 11.25,
+           arrow = arrow(length = unit(.75, "lines")), colour = "grey50") +
+  geom_point(data = intersections, size = 3) +
+  scale_x_continuous(expand = c(0, 0), breaks = intersections$x,
+                     labels = expression(Q[1], Q[2], Q[3], Q[4])) +
+  scale_y_continuous(expand = c(0, 0), breaks = intersections$y,
+                     labels = expression(P[1], P[2], P[3], P[4])) +
+  labs(x = "Quantidade", y = "Preço",
+       title = "Choque de demanda",
+       subtitle = "Intervenção governamental mal calculada") +
+  coord_equal() +
+  theme_classic(base_family = "Source Sans Pro") + 
+  theme(plot.title = element_text(family = "Source Sans Pro Semibold", size = rel(1.3)))
+
+p3
+```
+\bcenter
+\small Fonte -- @Malpezzi2002TheRO [p. 19]
+\ecenter
+
+Segundo @Malpezzi2002TheRO [p. 19], o processo descrito na Figura 
+\@ref(fig:choque2) não se trata de mera curiosidade, tendo sido documentado em
+diversos estudos.
+
+### Modelo dinâmico
+
+No capítulo \@ref(economia) foi mostrado que é possível modelar o mercado a
+partir de equações de oferta e demanda (equações \@ref(eq:flowModel1) a 
+\@ref(eq:flowModel3)).
+
+Nas equações \@ref(eq:flow1) a \@ref(eq:flow4)...
+
+\begin{align}
+Q_D &= \delta (K^* - K_{-1}) (\#eq:flow1)\\
+K^* &= D + \alpha_1 P_t + \alpha_4 (P_t - P_{t-1}) (\#eq:flow2) \\
+Q_S &= \beta_0 + \beta_1 P_t + \beta_2 P_{t-1} (\#eq:flow3) \\
+Q_D &= Q_S (\#eq:flow4)
+\end{align}
+
+Supondo $\beta_0 = 0$ e igualando a equação \@ref(eq:flow3), tem-se a equação:
+
+$$\beta_1 P_t + \beta_2 P_{t-1} = \delta[K^* - K_{-1}]$$
+
+Substituindo \@ref(eq:flow2) em \@ref(eq:flow1):
+
+$$\beta_1 P_t + \beta_2 P_{t-1} = \delta[D +\alpha_1 P_t + \alpha_4 (P_t - P_{t-1}) - K_{-1}]$$
+Isolando $P_t$, tem-se:
+
+$$\beta_1 P_t - \delta \alpha_1 P_t -\delta \alpha_4 P_t = \delta D - \delta \alpha_4 P_{t-1} - \beta_2 P_{t-1} - \delta K_{-1}$$
+
+$$P_t = \frac{\delta}{\beta_1 - \delta \alpha_1 - \delta \alpha_4} D - \frac{\beta_2 + \delta \alpha_4}{\beta_1 - \delta \alpha_1 - \delta \alpha_4} P_{t-1} - \frac{\delta}{\beta_1 - \delta \alpha_1 - \delta \alpha_4} K_{-1}$$
+Onde o ajuste do estoque é feito a cada período a partir das equações 
+\@ref(eq:stock) e \@ref(eq:supply):
+
+\begin{align}
+K_t &= K_{t-1} + Q_S (\#eq:stock)\\
+Q_S &= \beta_1 P_t + \beta_2 P_{t-1} (\#eq:supply)
+\end{align}
+
+Nas Figuras \@ref(fig:TheRole1) e \@ref(fig:TheRole2) são apresentadas as
+variações dos preços ao longo dos anos subsequentes a um choque de demanda,
+conforme simulado por @Malpezzi2002TheRO. Segundo @Malpezzi2002TheRO [p. 25],
+como mostram as simulações, num mercado com oferta elástica a volatilidade dos
+preços é muito menos, com ou sem especulação.
+
+```{r TheRole1, fig.cap="Resposta do \\gls{MI} com oferta elástica a um choque de demanda."}
+knitr::include_graphics("images/TheRole_1.png")
+```
+\bcenter
+\small Fonte -- @Malpezzi2002TheRO [p. 24]
+\ecenter
+
+```{r TheRole2, fig.cap="Resposta do \\gls{MI} com oferta inelástica a um choque de demanda."}
+knitr::include_graphics("images/TheRole_2.png")
+```
+\bcenter
+\small Fonte -- @Malpezzi2002TheRO [p. 24]
+\ecenter
+
+Deve-se notar que, apesar do modelo ser teoricamente razoável, os resultados das
+simulações não o são: especialmente para o mercado com oferta elástica, mesmo 
+sem especulação, a Figura \@ref(fig:TheRole1) mostra um aumento da volatilidade
+ao longo do tempo, o que não parece ser correto. Num \gls{MI} real, a tendência
+deveria ser a dissipação do choque ao longo dos períodos.
+
+Foram, então, elaboradas simulações próprias a partir do modelo proposto por 
+@Malpezzi2002TheRO, com os mesmos parâmetros adotados. Os resultados das 
+simulações podem ser vistos nas Figuras \@ref(fig:elastico) e 
+\@ref(fig:inelastico).
+
+```{r}
+t <- 0
+p_0 <- log(1) # preço inicial
+k_0 <- log(1000) #  estoque inicial
+k_1 <- log(1200) # choque de 20%
+alpha_1 <- -.8 # elasticidade-preço da demanda
+delta <- .5 # parâmetro de ajuste do estoque
+```
+
+```{r}
+beta_1 <- 10
+beta_2 <- 10
+p <- vector(length = 11); p[1] <- log(1)
+p1 <- vector(length = 11); p1[1] <- log(1)
+k <- vector(length = 11); k[1] <- log(1000)
+k1 <- vector(length = 11); k1[1] <- log(1000)
+q <- vector(length = 11)
+q1 <- vector(length = 11)
+alpha_4<- 0.1 # elasticidade-preço da demanda quando sujeita a alteração de preços
+for (i in 1:10) {
+  p[i+1] <- delta/(beta_1 - delta*alpha_1)*log(1200) - (beta_2)/(beta_1 - delta*alpha_1)*p[i] - delta/(beta_1 - delta*alpha_1)*k[i]
+  p1[i+1] <- delta/(beta_1 - delta*alpha_1 - delta*alpha_4)*log(1200) - (beta_2+alpha_4)/(beta_1 - delta*alpha_1 - delta*alpha_4)*p1[i] - delta/(beta_1 - delta*alpha_1 - delta*alpha_4)*k1[i]
+  q[i+1] <- beta_1*p[i+1] + beta_2*p[i]
+  q1[i+1] <- beta_1*p1[i+1] + beta_2*p1[i]
+  k[i+1] <- k[i] + q[i+1]
+  k1[i+1] <- k1[i] + q1[i+1]
+}
+```
+
+```{r elastico, fig.cap="Simulações próprias para mercado com oferta elástica."}
+df <- data.frame(year = 0:10, price = p, price1 = p1)
+pl1 <- ggplot(df, aes(x = year, y = price)) + 
+  geom_point() + 
+  geom_line() + 
+  geom_path(aes(y = price1), color = "red") + 
+  geom_point(aes(y = price1), color = "red") +
+  geom_hline(yintercept = 0)  +
+  scale_y_continuous(name = "Preço", breaks = seq(-0.1, 0.2, by=.05), 
+                     expand = c(0, 0), limits = c(-0.1, 0.2)) + 
+  scale_x_continuous(name = "Ano", breaks = 1:10,
+                     expand = c(0, 0), limits = c(0, 10)) +
+  labs(title = "Reação de mercado elástico à choque de demanda", 
+       subtitle = expression(beta[1] == 10~','~beta[2] == 10~','~alpha[1] == -0.8~','~alpha[4]==0.1~','~delta==0.5)
+       )
+pl1
+```
+\bcenter
+\small Fonte -- O autor. Adaptado de @Malpezzi2002TheRO.
+\ecenter
+
+```{r}
+beta_1 <- .2
+beta_2 <- .2
+p <- vector(length = 11); p[1] <- log(1)
+p1 <- vector(length = 11); p1[1] <- log(1)
+k <- vector(length = 11); k[1] <- log(1000)
+k1 <- vector(length = 11); k1[1] <- log(1000)
+q <- vector(length = 11)
+q1 <- vector(length = 11)
+alpha_4<- 0.1 # elasticidade-preço da demanda quando sujeita a alteração de preços
+for (i in 1:10) {
+  p[i+1] <- delta/(beta_1 - delta*alpha_1)*log(1200) - (beta_2)/(beta_1 - delta*alpha_1)*p[i] - delta/(beta_1 - delta*alpha_1)*k[i]
+  p1[i+1] <- delta/(beta_1 - delta*alpha_1 - delta*alpha_4)*log(1200) - (beta_2+alpha_4)/(beta_1 - delta*alpha_1 - delta*alpha_4)*p1[i] - delta/(beta_1 - delta*alpha_1 - delta*alpha_4)*k1[i]
+  q[i+1] <- beta_1*p[i+1] + beta_2*p[i]
+  q1[i+1] <- beta_1*p1[i+1] + beta_2*p1[i]
+  k[i+1] <- k[i] + q[i+1]
+  k1[i+1] <- k1[i] + q1[i+1]
+}
+```
+
+```{r inelastico, fig.cap="Simulações próprias para mercado com oferta inelástica."}
+df <- data.frame(year = 0:10, price = p, price1 = p1)
+pl2 <- ggplot(df, aes(x = year, y = price)) + 
+  geom_point() + 
+  geom_line() + 
+  geom_path(aes(y = price1), color = "red") + 
+  geom_point(aes(y = price1), color = "red") +
+  geom_hline(yintercept = 0) +
+  scale_y_continuous(name = "Preço", breaks = seq(-0.1, 0.2, by=.05), 
+                     expand = c(0, 0), limits = c(-0.1, 0.2)) + 
+  scale_x_continuous(name = "Ano", breaks = 1:10,
+                     expand = c(0, 0), limits = c(0, 10)) +
+  labs(title = "Reação de mercado inelástico à choque de demanda", 
+       subtitle = expression(beta[1] == 0.2~','~beta[2] == 0.2~','~alpha[1] == -0.8~','~alpha[4]==0.1~','~delta==0.5)
+       )
+pl2
+```
+\bcenter
+\small Fonte -- O autor. Adaptado de @Malpezzi2002TheRO.
+\ecenter
+
+<!-- # ```{r ambas, fig.cap="CCC", out.width="100%"} -->
+<!-- # plot_grid(pl1, pl2, labels = "AUTO") -->
+<!-- # ``` -->
+
+
+### Medidas macroprudenciais de prevenção de bolhas
+
+Isto poderia ser indício da formação de nova bolha imobiliária, nos moldes da
+que estourou em meados de 2006, com consequências catastróficas para a economia
+global?
+
+Bolhas imobiliárias são difíceis de serem identificadas. Bolhas são fenômenos
+de curto prazo que representam descolamentos dos preços em relação aos seus
+fundamentos. Logo, para se afirmar que existe uma bolha, é necessário mostrar
+que inexiste uma correlação entre os fundamentos e os preços dos ativos
+imobiliários.
+
+@fmitwa elencam uma série de motivos que podem nos levar a conclusão que desta
+vez é diferente, como a falta de sincronicidade em diversos países, o que 
+ocorreu durante a bolha dos anos 2000, e a maior vigilância por parte das 
+autoridades monetários no que tange às medidas macroprudenciais na prevenção, 
+que incluem [@fmiem]:
+
+* Limite a razão empréstimo/valor (*loan-to-value ratio*), o que limita o valor
+da hipoteca relativa ao valor da propriedade.
+* Limites a razão dívida/renda, que limita o tamanho do pagamento do serviço da 
+dívida a um limite fixo da renda do mutuário.
+* Requerimentos de capitais setoriais, que forçam os bancos a manter capital 
+extra contra empréstimos a setores específicos, como o mercado imobiliário.
+* Requerimentos de provisionamento para pagamentos duvidosos.
+
+Porém, além das medidas macroprudenciais citadas, considera-se que existem 
+outros fundamentos que indicam a não existência de uma bolha especulativa, mas
+que indicam que o preço dos imóveis estão seguindo os fundamentos econômicos.
+
+### Bolhas Especulativas, taxas de juros e mobilidade de capitais
+
+Como demonstraram @joebges, um dos grandes dogmas da Economia, de que políticas
+monetarárias frouxas causam bolhas no \gls{MI} não tem fundamentação científica,
+tanto teorica, como empiricamente falando. Bolhas especulativas foram
+documentadas tanto em países com política monetária frouxa quanto em países que
+praticavam política monetária apertada. Isto não quer dizer, no entanto, que as
+taxas de juros não tenham impacto sobre os preços dos imóveis, como mostram
+diversos trabalhos citados no capítulo \@ref(economia) [@macroHousing;
+@goodhart2008; @ADAMS2010]. Para a ocorrência de bolhas especulativas, no
+entanto, é necessário que existam outras características presentes: a
+inelasticidade da oferta, como citado no capítulo \@ref(economia), a entrada no
+mercado de grandes especuladores, geralmente fundos de hedge, a
+desregulamentação financeira, com o lançamento de novos produtos financeiros de
+risco duvidosos, etc.
+
+A livre mobilidade de capitais, aliada a prática de baixas taxas de juros e 
+desregulamentação do mercado, como mostrado por [@estonia].
+
+No entanto, é sabido que os bancos centrais praticam (ou deveriam praticar)
+políticas monetárias frouxas visando estimular uma economia em crise, visando
+aumentar a liquidez monetária do mercado e com isso, fazer com  que a economia
+volte ao seu ritmo de crescimento 'natural'. Ora, ocorre que nestes momentos em
+que os bancos centrais estão praticando esta política monetária frouxa,
+usualmente esta política monetária vem acompanhada de uma série de
+desregulamentações financeiras, visando o aumento do volume de crédito, e também
+que os grandes investidores, com as baixas taxas de juros, tendem a procurar
+alternativas mais rentáveis de investimento, ao custo do aumento do risco destes
+investimentos. A dinâmica que levou a crise imobiliário-financeira nos \gls{EUA}
+foi essa e será melhor detalhada no capítulo \@ref(crise).
+
+Por ora o que interessa é o entendimento das razões da queda das taxas de lucro 
+da economia capitalista e porque isto é um fator estrutural, não conjuntural, o
+que é o assunto do próximo item.
+
+#### A tendência a queda das taxas de lucro
+
+Como anteriormente mencionado, uma das variáveis macroeconômicas que afetam o
+mercado imobiliário são as taxas de juros de longo prazo. Uma diminuição das
+taxas de juros de longo prazo tende a reduzir a demanda por títulos públicos de 
+longo prazo e a aumentar a demanda por outros investimentos, ou seja, uma 
+diminuição nas taxas de juros da dívida pública aumenta a propensão ao risco dos
+investidores, que são obrigados a procurar investimentos mais rentáveis, já que
+a rentabilidade dos títulos é muito baixa.
+
+Estas taxas de juros de mais longo prazo tem caído no mundo todo, especialmente
+nas economias desenvolvidas, como ilustra o gráfico da figura \@ref(fig:yields),
+elaboradas a partir de dados obtidos do @fredgs10, @fredgs20, @fredgs30. Esta
+ mostra as taxas de juros dos títulos da dívida do tesouro norte-americano,
+em periodicidade mensal. 
+
+A causa da queda destas taxas de juros de mais longo prazo (assim como as de
+curto prazo) são atribuídas a diversos fatores, o que vai muito além do escopo
+deste trabalho. Em resumo, diversas escolas de pensamento econômico tem 
+diagnósticos diferentes: a escola marginalista atribui a queda das taxas de 
+juros à chamada estagnação secular da Economia dos países desenvolvidos. Uma boa 
+discussão pode ser vista em @bresser2018 e @krugman2020. Já os marxistas 
+teorizam sobre uma queda natural das taxas de lucros no sistema capitalista, 
+o que já era previsto pelo próprio Marx [@roberts2020]. A Figura \@ref(fig:roberts) 
+ilustra o fenômeno desde meados do século XIX.
+
+```{r roberts, fig.cap="Diminuição da taxa de lucro na economia capitalista.", out.width="100%"}
+knitr::include_graphics("images/wrp-2.png")
+```
+\bcenter
+\small Fonte -- @roberts2020, adaptado de @crisis.
+\ecenter
+
+A queda nas taxas de lucro obviamente impactam as taxas de juros dos títulos
+públicos, que apenas refletem as taxas de lucro das empresas capitalistas, que 
+são compostas pelas taxas de juros livres de risco mais um prêmio de risco pela
+alocação do capital naquele mercado.
+
+```{r}
+#ycAll <- Quandl("USTREASURY/YIELD", type = "ts")
+```
+
+```{r ratesData}
+efr <- fredr(series_id = "DFF",
+             observation_start = as.Date("1954-07-01"),
+             frequency = "w")
+# gs10 <- fredr(series_id = "GS10",
+#               observation_start = as.Date("1953-04-01"))
+# gs20 <- fredr(series_id = "GS20",
+#               observation_start = as.Date("1953-04-01"))
+# gs30 <- fredr(series_id = "GS30",
+#               observation_start = as.Date("1953-04-01"))
+# df <- left_join(gs10, gs20, by = "date", suffix = c(".GS10", ".GS20"))
+# df <- left_join(df, gs30, by = "date")
+# df <- df[, c("date", "value.GS10", "value.GS20", "value")]
+# colnames(df) <- c("date", "GS10", "GS20", "GS30")
+# df <- df %>% gather("bond", "rate", -date)
+# saveRDS(df, "data/FRED")
+```
+
+```{r recessionsDF5}
+recessions.df <- read.csv("data/us_recessions.csv")
+recessions.df <- within(recessions.df, {
+                          Peak <- as.Date(Peak)
+                          Trough <- as.Date(Trough)
+                        })
+```
+
+```{r eff, fig.cap="Taxa efetiva dos fundos federais (FED)"}
+ggplot(data = efr, aes(x = date, y = value)) +
+  geom_line() +  
+  xlab("Ano") +
+  ylab("Taxa (a.a.)") +
+  #scale_x_continuous(expand = c(0, 0)) +
+  scale_y_continuous(expand = c(0, 0), 
+                     labels = scales::label_percent(scale = 1, decimal.mark = ",")) +
+  geom_rect(data=recessions.df[which(recessions.df$Peak >= as.Date("1954-07-01")), ], 
+            aes(xmin=Peak, xmax=Trough, ymin=-Inf, ymax=+Inf),
+            inherit.aes=F, fill='grey', alpha=0.5)
+```
+
+
+
+```{r yields, fig.cap="Taxas dos \\emph{treasuries bonds} desde janeiro/1990."}
+# xyplot.ts(ycAll[, c(9:12)], 
+#           superpose=TRUE, 
+#           auto.key=list(columns=4), 
+#           ylab="Yield (%)")
+df <- readRDS("data/FRED")
+ggplot(data = df[which(df$date >= as.Date("1990-01-01")), ], 
+       aes(x = date, y = rate, color = bond)) +
+  geom_line() +
+  labs(
+    title = "US Treasuries-bonds",
+    subtitle = "10, 20 and 30 years",
+    caption = "Fonte: Board of Governors of the Federal Reserve System (US)"
+  ) +
+  xlab("Ano")+
+  ylab("Taxa (a.a.)") +
+  scale_y_continuous(labels = scales::label_percent(scale = 1,
+                                                    decimal.mark = ",")) +
+  theme(legend.position = "bottom") +
+  geom_rect(data=recessions.df[which(recessions.df$Peak >= as.Date("1990-01-01")), ], 
+            aes(xmin=Peak, xmax=Trough, ymin=-Inf, ymax=+Inf),
+            inherit.aes=F, fill='grey', alpha=0.5)
+```
+\bcenter
+\small Fonte -- O autor, à partir de dados do \gls{FRED}.
+\ecenter
+
+Mesmo uma análise mais ampla (desde 1953) das taxas de juros mostram que o 
+período recente é o período de menor taxa de juros em termos históricos, o que 
+pode ser visto na figura \@ref(fig:fred).
+
+```{r}
+# dgs10 <- fredr(series_id = "DGS10",
+#               observation_start = as.Date("1962-01-02"))
+# dgs20 <- fredr(series_id = "DGS20",
+#               observation_start = as.Date("1962-01-02"))
+# dgs30 <- fredr(series_id = "DGS30",
+#               observation_start = as.Date("1962-01-02"))
+# df <- left_join(dgs10, dgs20, by = "date", suffix = c(".DGS10", ".DGS20"))
+# df <- left_join(df, dgs30, by = "date")
+# df <- df[, c("date", "value.DGS10", "value.DGS20", "value")]
+# colnames(df) <- c("date", "DGS10", "DGS20", "DGS30")
+# df <- df %>% gather("bond", "rate", -date)
+# saveRDS(df, "data/FRED_daily")
+```
+
+```{r yields2, fig.cap="Taxas diárias dos \\emph{treasuries bonds} desde janeiro/1990."}
+df_daily <- readRDS("data/FRED_daily")
+ggplot(data = df_daily[which(df_daily$date >= as.Date("1990-01-01")), ], 
+       aes(x = date, y = rate, color = bond)) +
+  geom_line() +
+  labs(
+    title = "US Treasuries-bonds",
+    subtitle = "10, 20 and 30 years",
+    caption = "Fonte: Board of Governors of the Federal Reserve System (US)"
+  ) +
+  xlab("Ano")+
+  ylab("Taxa (a.a.)") +
+  scale_y_continuous(labels = scales::label_percent(scale = 1,
+                                                    decimal.mark = ",")) +
+  theme(legend.position = "bottom") +
+  geom_rect(data=recessions.df[which(recessions.df$Peak >= as.Date("1990-01-01")), ], 
+            aes(xmin=Peak, xmax=Trough, ymin=-Inf, ymax=+Inf),
+            inherit.aes=F, fill='grey', alpha=0.5)
+```
+\bcenter
+\small Fonte -- O autor, à partir de dados do \gls{FRED}.
+\ecenter
+
+No momento em que se escreve deste trabalho, a taxa de juros dos títulos de mais
+longa maturidade, ou seja, de 30 anos, está em `r brf(tail(df_daily, n = 1)$rate)`% a.a. 
+
+Para os títulos com vencimento em 20 anos, a taxa está em `r brf(tail(df_daily[which(df_daily$bond == 'DGS20'), ], n = 1)$rate)`
+% a.a. e para os títulos com vencimento em 10 anos está em `r brf(tail(df_daily[which(df_daily$bond == 'DGS10'), ], n = 1)$rate)`% a.a., 
+todos muito perto dos seus valores mínimos da série histórica, que foram 
+atingidos em `r  df_daily[which.min(df_daily$rate), ]$date`, quando os títulos
+com maturidade de 10 anos atingiram impressionantes `r brf(pull(df_daily[which(df_daily$date == as.Date("2020-03-09")), ], rate)[1])`% a.a.
+
+Segundo Krugman [-@krugman2020], no entanto, isto não está a ocorrer apenas nos
+\gls{EUA}, mas em todo o mundo desenvolvido, com maior ou menor gravidade, já há 
+alguns anos, e não deve ser interpretado apenas como um efeito de curto prazo
+de uma crise com a do Corona vírus, que só fez agravar ainda mais um quadro
+que já vem de longo prazo:
+
+\begin{citacao}
+What this tells us is that the bond market isn’t just pricing in a global
+recession driven by the coronavirus, but that it expects the Fed funds rate to
+be near zero a lot of the time looking forward. That is, the market sees a
+future of secular stagnation, in which the economy is in a liquidity trap, that
+is, a situation in which monetary policy loses most of its traction, much if not
+most of the time. We were in a liquidity trap for 8 of the past 12 years; the
+market now appears to believe that something like this is the new normal.
+\end{citacao}
+
+
+
+```{r fred, out.width="\\textwidth", fig.cap="Taxas mensais dos \\emph{treasuries bonds} desde abril/1953."}
+ggplot(data = df, aes(x = date, y = rate, color = bond)) +
+  geom_line() +
+  labs(
+    title = "US Treasuries-bonds",
+    subtitle = "10, 20 and 30 years",
+    caption = "Fonte: Board of Governors of the Federal Reserve System (US)"
+  ) +
+  xlab("Ano")+
+  ylab("Taxa (a.a.)") +
+  scale_y_continuous(labels = scales::label_percent(scale = 1,
+                                                    decimal.mark = ",")) +
+  theme(legend.position = "bottom") +
+  geom_rect(data=recessions.df[which(recessions.df$Peak >= as.Date("1953-04-01")), ], 
+            aes(xmin=Peak, xmax=Trough, ymin=-Inf, ymax=+Inf),
+            inherit.aes=F, fill='grey', alpha=0.5)
+```
+\bcenter
+\small Fonte -- O autor, à partir de dados do \gls{FRED}.
+\ecenter
+
+Esta longa e sustentada tendência de queda de longo prazo, com esta persistência
+não pode ser atribuída a uma bolha especulativa, *i.e.* um desvio de curto prazo
+de uma tendência de longo prazo, mas sim a uma tendência estrutural, sistêmica.
+
+Esta alta queda das taxas de juros dos ativos financeiros de longo prazo é uma
+das causadoras da elevação dos preços dos mesmos ativos, assim como a elevação
+do preço dos imóveis.
+
+De fato, @goodhart2008 encontraram uma ligação multidirecional entre \gls{MV} 
+relacionadas à oferta monetária (base monetária, crédito, entre outras) e o
+preço dos imóveis.
+
+A grande diferença então da recente alta dos preços dos imóveis (desde 2012) da
+alta anterior (até Dez/2005) é que a alta mais recente é plenamente justificada
+pela altíssima liquidez dos mercados. Ou seja, não se pode atribuir a recente
+alta dos preços dos imóveis à especulação imobiliária, ou pelo menos não se pode
+atribuir a recente alta somente a especulação: há fundamento para a alta, o que
+se discute com mais propriedade na seção \@ref(micro).
+
+Em um cenário de longo prazo, a tendência é que a crise de 2008 apenas tenha
+acelerado em demasia, momentaneamente, o que já era uma tendência de longo
+prazo, portanto estrutural, da economia.
+
+## A Crise imobiliário-financeira de 2008
+
+Nesta seção serão discutidos os mais plausíveis causadores da crise 
+imobiliário-financeria de 2008, baseado na literatura existente sobre o tema.
+
+### O financiamento imobilário nos países desenvolvidos
+
+Alguns autores defendem que o financiamento imobiliário é uma grande ferramenta
+para o desenvolvimento do \gls{MI} de um país. Para @green [p. 21], a
+disponibilidade e o custo do financiamento são determinantes no bom
+funcionamento do mercado imobilário residencial em todo o mundo. 
+
+Não necessariamente, no entanto, o financiamento imobiliário deve estar ligado
+ao mercado de capitais. Durante décadas os \gls{MI} de países desenvolvidos,
+como os EUA e o Reino Unido tiveram fontes de financiamento locais, fortemente
+reguladas por entidades administradas pelos governos [@green, p. 23], totalmente
+separadas do restante da Economia.
+
+As tradicionais instituições de incentivo ao financiamento imobiliário nos EUA
+foram criadas durante o *New Deal*, em meados da década de 30, buscando
+restaurar a liquidez do \gls{MI} residencial, que havia sido fortemente
+impactado pela Grande Depressão. A legislação sobre financiamento imobiliário
+criou dois importantes precedentes: a intervenção governamental no \gls{MI},
+através da compra de hipotecas podres e a substituição destas pelas então novas
+\gls{FRM}, ou hipotecas de taxas fixas, com amortização constante e a longo
+prazo, diferente das hipotecas \gls{ARM} pré-existentes, que eram geralmente de
+curto prazo, não amortizáveis (o pagamento do principal era usualmente feito
+através de um balão no final do contrato) e de taxas de juros ajustáveis
+[@green, p. 41-42].
+
+Este primeiro sistema moderno de hipotecas nos EUA durou até a década de 70. No
+final da década de 60 e início da década de 70, contudo, o aumento das taxas de
+inflação, seguida de fortes aumentos das taxas de juros nominais levaram a
+problemas nas instituição tradicionais de *saving and loans* nos EUA: dado que
+havia um teto estabelecido para as taxas de juros cobradas dos tomadores, os
+poupadores começaram a migrar os seus recursos para os então novos fundos (de
+pensão, fundos mútuos, etc) que pagavam taxas maiores e tinham se tornado
+acessíveis aos pequenos poupadores. Com as saídas de recursos das instituições
+tradicionais de *savings e loans*, os governos tiveram que rever algumas das
+restrições para a concessão de hipotecas, como a remoção dos tetos de juros e a
+possibilidade de concessão de \gls{ARM} [@green, p.39]. Com a permissão da
+emissão deste tipo de hipotecas, a sua participação no mercado aumentou
+rapidamente [@green, p.47].
+
+Segundo @green [p. 26], na Europa mudanças similares aconteceram
+concomitantemente: "From heavily regulated and rationed systems, modern housing
+ﬁnance emerged with funding increasingly supplied through market-oriented
+commercial banks [...] The result has been the explosion of mortgage growth
+throughout Europe". Para @green [p. 26-27], esta mudança de paradigma estava
+relacionada ao "grande declínio das taxas de juros mundialmente", que 
+tornou propício a disponibilização de financiamento de baixo custo para
+hipotecas em países que adotaram políticas monetárias para controlar
+a inflação e assim permitir as ligações aos mercados de capitais globais.
+
+\begin{citacao}
+Forces of deregulation operating in many markets throughout the world also 
+contributed to the development of commercial banks as primary providers of 
+housing ﬁnance globally. Governments increasingly recognized that markets could 
+deliver lower cost ﬁnancing with less rationing. A consensus emerged that the 
+most effective way to increase access to credit and to secure sustainable ﬁnance 
+was through market-based systems linked to capital markets. This did not 
+necessarily imply securitization. Rather, commercial banks emerged as the major 
+mortgage lenders in Europe and in developed Asian economies as well.  
+\cite[p. 26]{green}
+\end{citacao}
+
+### Riscos no mercado de hipotecas
+
+Os investidores no mercado de hipotecas estão sujeitos a dois tipos de riscos: o
+risco das flutuações das taxas de juros e os riscos de crédito (*default*). 
+
+O risco da flutuação das taxas de juros afeta os investidores da seguinte
+maneira: em caso de queda das taxas de juros, há uma tendência do pré-pagamento
+das hipotecas negociadas anteriormente com juros mais altos, visando ou não a
+realização de nova hipoteca à taxas de juros mais baixas. Em caso de aumento dos
+juros, os investidores, que se financiam no curto prazo,  ficam sujeitos a ter
+que se financiar a taxas de juros mais altas enquanto mantém as hipotecas para
+os tomadores efetuadas a taxas de juros mais baixas.
+
+O risco de crédito, muito mais grave, é o riscoda inadimplência do contrato por
+parte do tomador. Apesar do impacto do risco de crédito ser maior do que o risco
+de oscilações nas taxas de juros, teoricamente ele tem como garantia o ativo, ou
+seja a residência, que pode ser tomada pelo emprestador em caso de inadimplência.
+Além disto, o risco de crédito geralmente é controlado através de subscrições das
+empresas governamentais, que tem um grande controle sobre a originação das 
+hipotecas. 
+
+Em alguns países, como nos EUA, as hipotecas são, em sua grande maioria [^7],
+não-recursivas, *i.e.*, os tomadores não respondem pelas dívidas das hipotecas
+em valor maior do que o valor dos imóveis. Caso o imóvel seja tomado e o seu
+valor não for suficiente para o pagamento da dívida, o tomador do empréstimo não
+pode ter outros ativos tomados para o pagamento da dívida. Isto incentiva o
+default quando os \gls{LTV} passam dos 100% [@ghent].
+
+[^7]: A possibilidade ou não dos devedores terem que arcar com a dúvida
+remanescente, não quitada com a liquidação do bem, no EUA, varia de um estado
+para outro.
+
+Em alguns mercados, como o \gls{MI} da Alemanha, o risco devido às oscilações
+das taxas de juros é eliminado através de cláusulas que previnem o
+refinanciamento ou pagamento antecipado das hipotecas [@green, p.58].
+
+As hipotecas do tipo \gls{ARM} eliminam o risco da flutuação da taxa de juros
+para os emprestadores, ficando estes expostos exclusivamente ao risco de crédito.
+
+### O mercado de securitização de hipotecas
+
+Segundo @simkovic [p. 214-215], o mercado de securitização de hipotecas divide
+os empréstimos em quatro diferentes tipos de instituições financeiras: (a) as
+instituições especilizadas na **originação**, o passo inicial de conceder
+empréstimos aos mutuários; (b) as especializadas no **gerenciamento** do
+relacionamento com os mutuários, coletando os pagamentos dos empréstimos
+tomados; (c) as especializadas na **securitização**, o processo de compra de um
+grande número de empréstimos dos originadores e empacotamento destes empréstimos
+em investimentos que podem ser vendidos para investidores do mercado de capitais
+e (d) as especializadas no **financiamento**, *i.e.* na compra de \gls{MBS},
+títulos lastreados em hipotecas, provenientes dos securitizadores, e manutenção 
+destes títulos em carteira como um investimento.
+
+Desta maneira, a securitização tem o objetivo de prover uma fonte de
+financiamento de longo prazo e reduzir a exposição das instituições financeiras
+ao risco de flutuações de taxas de juros e ao risco de *default* de crédito das
+hipotecas originadas.
+
+Após duas tentativas frustadas de criação de um mercado de securitização de
+hipotecas nos EUA, a securitização se estabeleceu com sucesso neste país após a
+"devastação causada pelo ambiente de aumento das taxas de juros de finais da
+década de 70 e início da década de 80" [@simkovic, p. 215].
+
+Esta devastação, a conhecida crise das associações de *Savings and Loans* se deu
+porque as instituição de financiamento tradicionais financiam as hipotecas de
+longo prazo a taxas fixas com depósitos de curto prazo. Desta maneira, em um
+ambiente de aumento das taxas de juros de curto prazo, estas instituições
+encaram um aumento nos custos de capitais de curto prazo, ao mesmo tempo em que
+há uma diminuição nos valores dos empréstimos de longo prazo em seus portfolios
+[@simkovic, p. 215].
+
+Até os anos 2003-2004, o mercado de securitização funcionou relativamente bem.
+Apesar de alguns analistas indicarem que o início da formação da bolha que
+estourou em 2007-2008 se deu em 1997, o aumento de preços entre os anos de 1997
+e 2003-2004 pode ser explicado pelos fundamentos do mercado [@levitin2012, p.
+1182]. Isto se deve, segundo @levitin2012 [p. 1183], porque a securitização
+tradicional, que era feita pelas \gls{GSE}, *i.e.* *Fannie Mae* (*Federal
+National Mortgage Association*), *Freddie Mac* (*Federal Home Loan Mortgage
+Corporation*) e *Ginnie Mae* (*Government National Mortgage Association*),
+entidades reguladas pelo governo norte-americano, foi rapidamente substituída
+pela securitização privada, através dos \gls{PLS}, à partir de 2003-2004. Ocorre
+que a centralização da securitização nas \gls{GSE} era benéfica à saúde do
+mercado, por diversos motivos, especialmente porque estas entidades
+historicamente monitoravam e disciplinavam os originadores de hipotecas,
+enquanto que, com a competição privada, o monitoramento dos originadores foi
+deixado de lado.
+
+Segundo @simkovic [p. 213], os legisladores norte-americanos frequentemente
+tratam o mercado competitivo como uma panaceia. Ocorre que, em determinados
+mercados, como o mercado de securitizações, a competição não é benéfica, haja
+vista que a competição apresentou neste mercado um efeito de aumentar
+significativamente o risco aos investidores de maneira opaca (o risco não podia
+ser percebido pelos investidores), levando a uma crise financeira sem
+precedentes na história do capitalismo moderno. Segundo @levitin2009,
+historicamente o mercado de hipotecas era dominado por instituições de *savings
+and loans* e bancos comerciais, que securitizavam seus empréstimos unicamente
+através das \gls{GSE}, que garantiam o pagamento do principal e dos juros dos
+empréstimos originaos, porém apenas para as hipotecas com grau de investimento.
+Ou seja, os originadores que fizessem empréstimos sem grau de investimento eram
+forçados a mantê-los na sua contabilidade, sem securitização, o que acabava por
+desincentivar este tipo de empréstimos, mantendo o mercado saudável.
+
+As pressões do mercado competitivo, segundo @simkovic [p. 216], incentivaram as
+instituições a tomar riscos. Os riscos de *default* no mercado imobiliário são
+cíclicos, independente da qualidade dos empréstimos, sendo menores em tempos de
+*boom* econômico e maiores em tempos de recessão e desemprego [@simkovic p.
+228].
+
+Em suma, mercados competitivos podem ser mais eficientes em uma série de
+aplicações, porém isto não é verdadeiro no mercado de securitizações. A 
+desregulamentação deste mercado foi um fator preponderante para a eclosão da 
+crise imobiliário-financeira de 2008.
+
+### Crise
+
+```{r, fig.cap="HPI, Custos de Construção, População e Taxa de Juros nos EUA, desde 1890."}
+knitr::include_graphics("images/shiller.png")
+```
+\bcenter
+\small Fonte -- Adaptada de @shiller [p. 13].
+\ecenter
+
+Diversos trabalhos discorrem sobre as origens da bolha imobiliária que acarretou
+na grande crise financeira de 2008. As principais causas que desencadearam a
+formação da bolha e acabaram por eclodir na crise financeira de 2008, no
+entanto, variam. @levitin2012 fazem uma breve exposição das muitas supostas
+causas da crise imobiliário-financeira residencial elecandas por estes diversos
+autores: taxas de juros básicas mantidas em níveis muito baixos, excesso de
+poupança, excessivo incentivo governamental às políticas de habitação popular,
+encorajando empréstimos para tomadores duvidosos, além de outras explicações do
+lado da demanda que vieram a se tornar dominantes, como a irracionalidade
+exuberante dos consumidores/investidores do mercado imobiliário, estabelecida na
+crença de que os preços das residências sempre aumentam [@shiller].
+
+Claro está que todos os motivos acima contribuiram, de fato, para a formação da
+bolha imobiliária. @levitin2012, no entanto, entendem que o *primer driver* da
+formação da bolha tenha sido a excessiva oferta de financiamento no mercado
+imobiliário, provocada por uma mudança na estrutura do mercado de securitização
+das hipotecas, que foi desregulamentado e privatizado. Tal explicação, como será
+visto, parece ser a mais abrangente e convincente, condição *sine qua non* para
+a formação da bolha.
+
+@simkovic também argumenta que na raiz da crise estava a competição criada no 
+mercado de securitização de hipotecas, o que já havia sido tentado anteriormente 
+nos EUA por outras duas vezes, em 1880 e em 1920, sem sucesso.
+
+#### A dinâmica da crise
+
+A crise imobiliário-financeria de 2008 pode ser dividida em uma crise
+imobiliário-financeira comercial e uma crise imobiliário-financeira residencial.
+Segundo @levitin2013 [p. 84], entre 2004 e 2008 estas duas bolhas foram geradas
+em paralelo, embora a crise residencial/habitacional tenha atraído uma muito
+maior atenção da população, da mídia, dos acadêmicos e dos reguladores, 
+obviamente, dado o seu maior impacto sobre a economia e o bem-estar da 
+população em geral.
+
+Em 2001 o \gls{FED} reduziu a taxa básica da economia americana para 1,5% a.a.,
+para combater a recessão econômica, atingindo um dos níveis mais baixos da
+história. Um dos grandes problemas que emergem com níveis tão baixos de juros é
+que os maiores investidores institucionais do mercado de títulos de dívida
+pública, como os fundos de pensão, possuem metas atuariais que só são atingidas
+com taxas mais altas. Estes investidores, então, pressionados a atingir estas
+metas atuariais, são obrigados a procurar opções de investimentos mais rentáveis
+do que os títulos públicos. Estas instituições, no entanto, tem em seus
+estatutos algumas limitações, como investir apenas em produtos financeiros acima
+de determinados *ratings*, ou seja, classificações dos produtos, que são
+elaboradas pelas agências de classificação de risco.
+
+Desta maneira, havia demanda no mercado para ativos de melhores classificação de
+risco, porém com rentabilidade mais altas do que os ativos da dívida pública.
+Para suprir esta demanda, houve o advento dos \gls{CDO}, que são derivativos
+financeiros compostos de ativos financeiros, \gls{ABS}, que podem ser compostos
+de diversos tipos de empréstimos. No caso do mercado imobiliário, estes ativos
+são os \gls{MBS}, que são grupos de ativos constituídos de hipotecas. Este tipo
+de derivativos, \gls{CDO}, tem uma estrutura que permite às instituições agrupar
+uma série de ativos de menor *rating*, criando assim um \gls{CDO} compostos de
+ativos com maior e menor *rating*. A estrutura destes derivativos se verá com
+mais detalhes na próxima seção.
+
+No entanto, em virtude das taxas muito baixas praticadas pelo \gls{FED}, esta
+demanda estava tão grande, que os bancos se sentiram incentivados a produzir
+cada vez mais empréstimos imobiliários, com o intuito de vender estes
+empréstimos na forma de \gls{CDO}. Desta maneira, os bancos se livravam dos
+riscos de crédito e liberavam mais capital para possibilitar a realização de
+novos empréstimos.
+
+Neste ínterim, porém, surgiram empréstimos exóticos, em que o mutuário pagava
+por alguns anos apenas o valor dos juros. Depois deste período, o mutuário passa
+a pagar também uma parte do principal. Este tipo de empréstimos eram chamados
+de *interest-only loans*. No caso específico do mercado imobiliário, eram
+chamados de *interest-only mortgages*. Convencionou-se chamar este tipo de
+empréstimos também de empréstimos *subprime*, o que é terminologicamente
+incorreto. Tecnicamente, *subprime* é o nome que se dá aos clientes cujo
+histórico de crédito não é bom e, portanto, são mais propensos a *default*. Como
+o risco destes empréstimos é maior, os juros destes empréstimos também são
+maiores. Com juros maiores, o risco de *default* aumenta ainda mais. Os
+empréstimos do tipo *interest-only* ajudavam a possibilitar a este tipo de
+cliente a compra de um imóvel, pois a prestação era bem diminuída no início e,
+em tese, enquanto o mercado imobiliário continuasse subindo, o tomador do
+empréstimo sempre poderia, em todo caso, revendê-lo com preço maior no futuro,
+caso não conseguisse arcar com as prestações, especialmente quando do início do
+pagamento do principal. Porém, neste tipo de empréstimo também era permitido aos 
+emprestadores ajustar a taxa de juros.
+
+Com a grande liquidez inserida no mercado por estes empréstimos, o preço dos 
+imóveis tendia a continuar aumentando. Porém, em 2004 o \gls{FED} iniciou um
+ciclo de alta dos juros para conter possíver surtos inflacionários. Em junho de
+2006 a taxa básica do \gls{FED} chegou a 5,25% a.a. Com o aumento das taxas de
+juros, a demanda por residências começou a diminuir e os preços dos imóveis
+começaram a cair. Os mutuários começaram a perceber que não conseguiriam
+pagar as suas prestações e tampouco revender as suas casas a preços maiores. A 
+queda dos mercados em geral foi grande e com a queda dos mercados, ou seja, com
+a queda dos valores das companhias, estas não conseguiam oferecer garantias 
+suficientes para conseguir novos empréstimos no mercado financeiro. Ainda, os 
+bancos começaram a ficar receosos de emprestar uns para os outros, por causa
+da alta presença de ativos tóxicos nos seus balanços, os derivativos de crédito
+que compraram durante o *boom* imobiliário, o que causou uma crise de liquidez.
+
+1. FED diminui os juros para incentivar a Economia - um dos canais de 
+transmissão da política monetária é, justamente, o \gls{MI}.
+
+2. Com as taxas de juros baixas, o consumo e investimento em imóveis torna-se 
+atrativo;
+
+3. Com as taxas de juros baixas e a economia desaquecida, os investidores tem 
+que procurar outros investimentos com melhor remuneração do que os títulos da 
+dívida pública;
+
+4. Aumenta a oferta de crédito no \gls{MI};
+
+5. Aumentam os preços dos imóveis, devido às baixas taxas de juros e à grande
+oferta de crédito no \gls{MI}. Como a oferta de crédito é muito alta e não
+haveria demanda para satisfazer a oferta, constroem-se derivativos de crédito
+que, em tese, são capazes de diluir o risco de crédito, tornando possível os
+empréstimos aos tomadores *subprime*. Estes tomadores *subprime* geralmente
+compram imóveis de valores inicialmente mais baixos, nas zonas menos valorizadas
+das cidades, fazendo com que os preços dos imóveis nestas localidades aumente
+em magnitude superior aos aumentos das áreas mais valorizadas, que já eram
+acessíveis aos tomadores *prime*;
+
+6. A Economia aquece e o FED aumenta as taxas de juros;
+
+7. Com o aumento das taxas de juros e os preços dos imóveis em alta, os 
+investidores tendem a voltar para os investimentos mais seguros, os títulos da
+dívida pública.
+
+8. O crédito disponível no \gls{MI} diminui, diminuindo a demanda por imóveis;
+
+9. Com a diminuição da demanda por imóveis, a economia desaquece. O desemprego
+aumenta, tornando a demanda por imóveis ainda menor. Os tomadores *subprime*
+são mais suscetíveis a ficarem desempregados;
+
+10. O preço dos imóveis cai, tornando as dívidas dos imóveis mais altas do que
+os preços dos imóveis (LTV passam a ser maiores que 100%);
+
+11. Desempregados e endividados, com os valores das dívidas superiores aos
+valores dos imóveis, os mutuários abandonam seus imóveis, inundando o mercado de
+imóveis. O preço dos imóveis cai ainda mais;
+
+12. Com o aumento dos *default*, as instituições expostas ao risco de crédito
+tem problemas para saldar seus compromissos. Elas tomam os imóveis dos 
+inadimplentes e os colocam no mercado para fazer caixa, inundando ainda mais o
+mercado de imóveis. Os preços dos imóveis caem ainda mais.
+
+
+
+#### A raiz da crise
+
+Segundo Donnelly e Embrechts [-@devil, 3], a raiz da crise financeira de 2008
+estava nos derivativos de crédito, \gls{CDO}, lastreados em ativos de crédito
+imobiliário, \gls{MBS}, que tinham por objetivo transferir o risco de uma
+hipoteca dos emprestadores ao mercado financeiro em geral, ou seja, aos bancos,
+fundos de *hedge* e companhias seguradoras. Esta transferência de risco, ou
+securitização, transformou o que seria apenas uma crise setorial das
+instituições hipotecárias, numa crise financeira que atingiu praticamente todos
+os setores financeiros e, por consequência, toda a economia real.
+
+O propósito da venda destes seguros era a liberação de capital dos bancos: uma
+vez que os bancos necessitam manter provisões de capital em seus balanços contra
+os empréstimos realizados, a venda destes derivativos de risco a outros
+investidores possibilitava a liberação desse capital, tornando possível aos
+bancos efetuar mais empréstimos.
+
+Esta dispersão do risco do setor bancário era vista como um fator de diminuição
+da vulnerabilidade do setor aos choques econômicos. Na prática, porém, a 
+diminuição dos riscos levou os bancos a uma maior tolerância na análise de
+risco dos tomadores de empréstimos, o que não foi percebido de imediato pelos
+compradores dos \gls{CDO}s.
+
+Segundo Donnelly e Embrechts [-@devil, 5]:
+
+\begin{citacao}
+If a bank is not exposed to the risk of mortgage default, then it has no
+incentive to control and maintain the quality of the loans it makes. To protect
+against this, the theory was that the banks should retain the riskiest part of
+the mortgage pool. In practice, this did not always happen, which led to a
+reduction in lending standards [...] This possibility was foreseen some fifteen
+years before the Crisis with remarkable prescience by Stiglitz, as he points out
+in Stiglitz (2008).
+\end{citacao}
+
+No mercado financeiro é comum a utilização da expressão "risco moral" (*moral 
+hazard*), para descrever os mecanismos que podem levar a um desequilíbrio de um
+mercado. Na crise de 2008, este risco moral esteve presente não apenas neste
+desincentivo aos emprestadores para a diminuição dos riscos dos empréstimos, já 
+que estes eram securitizandos, mas também na crença de que, em última instância,
+os governos seriam obrigados a socorrer as instituições denominadas *too big to
+fail* (grandes demais para quebrar) [@devil, 4-5].
+
+De acordo com @levitin2012 [p. 1203-1206], duas evidências de que o *primer
+driver* para a formação da bolha estava no excesso de oferta de crédito ao setor
+imobiliário são: (a) os menores *spreads* dos créditos securitizados lastreados
+em ativos imóveis em comparação ao *spreads* de outros créditos securitizados
+baseados em dívida corporativa e (b) o fato de que estes menores *spreads* só
+podem ser explicados por um deslocamento da curva de oferta para direita, como
+ilustrado na Figura \@ref(fig:excessHousingFinanceSupply), já que: se houvesse
+apenas um excesso de demanda no mercado de crédito, com o deslocamento da curva
+de demanda de $D_1$ para $D_2$, seria observado um aumento do *spread* do
+crédito neste setor, levando os preços de $P_1$ para $P_2$. Os menores *spreads* 
+observados só podem ser explicados por um forte descolamento da curva de oferta,
+de $O_1$ para $O_2$, que mais do que compensa o aumento de *spread* que se 
+observaria apenas com o deslocamento da curva da demanda, levando os preços de 
+equilíbrio para $P_3$.
+
+```{r excessHousingFinanceSupply, fig.cap="Excesso de oferta de crédito no \\gls{MI}."}
+plot_labels <- tibble(label = expression("D[1]", "D[2]", "O[1]", "O[2]"),
+                          x = c(7.5, 8,7, 9),
+                          y = c(.75, 1.5, 6.5, 6.5))
+points <- data.frame(x = c(4, 4.5, 6), y = c(4, 4.5, 3))
+
+p1 <- ggplot(mapping = aes(x = x, y = y)) + 
+  geom_segment(aes(x = 1, y = 1, xend = 7, yend = 7), color = "#0073D9", size = 1) + #O1
+  geom_segment(aes(x = 1, y = 7, xend = 7, yend = 1), color = "#FF4036", size = 1) + #D1
+  geom_segment(aes(x = 1.5, y = 7.5, xend = 7.5, yend = 1.5), color = "#FF4036", size = 1) + #D2
+  geom_segment(aes(x = 4, y = 1, xend = 10, yend = 7), color = "#0073D9", size = 1) +  #O2
+  geom_segment(aes(x = 4.5, y = 0, xend = 4.5, yend = 4.5), lty = "dotted") + # Q2
+  geom_segment(aes(x = 0, y = 4.5, xend = 4.5, yend = 4.5), lty = "dotted") + # P1
+  geom_segment(aes(x = 4, y = 0, xend = 4, yend = 4), lty = "dotted") + # Q1
+  geom_segment(aes(x = 0, y = 3, xend = 6, yend = 3), lty = "dotted") + # P3
+  geom_segment(aes(x = 0, y = 4, xend = 4, yend = 4), lty = "dotted") + # P2
+  geom_segment(aes(x = 6, y = 0, xend = 6, yend = 3), lty = "dotted") + # Q3
+  geom_text(data = plot_labels,
+            aes(x = x, y = y, label = label), parse = TRUE) +
+  geom_point(data = points, aes(x = x, y = y), size = 2) +
+  labs(x = "Quantidade", y = "Preço") +
+  theme_classic() + 
+  coord_equal() +
+  scale_x_continuous(expand = c(0, 0), breaks = c(4, 4.5, 6), limits = c(0,10),
+                     labels = expression(Q[1], Q[2], Q[3])) +
+  scale_y_continuous(expand = c(0, 0), breaks = c(4, 4.5, 3), limits = c(0,10),
+                     labels = expression(P[1], P[2], P[3]))
+p1
+```
+\bcenter
+\small Fonte -- Adaptado de @levitin2012 [p. 1205].
+\ecenter
+
+##### Derivativos de crédito
+
+\gls{CDO} são um tipo de instrumento financeiro do grupo dos denominados 
+derivativos de crédito, lastreados em \gls{ABS}, construídos através do
+empacotamento de ativos de crédito financeiros, com o intuito da diluição do
+risco. Os \gls{CDO} tiveram papel central na eclosão da crise 
+imobilário-financeira de 2007-2008.
+
+Segundo @watts, os \gls{MBS}, *i.e.* seguros baseados em empréstimos hipotecários,
+surgiram nos anos 70. Pouco tempo depois, vieram os \gls{CMO}, que eram 
+derivativos de crédito similares aos \gls{MBS}, porém com a característica de 
+serem fatiados em *tranches*.
+
+A diferença entre os \gls{CDO} e \gls{CMO} é que os \gls{CDO} podem ser baseados
+em qualquer tipo de ativos ou dívidas, inclusive outros \gls{CDO}.
+
+Este tipo de instrumento é utilizado tanto no mercado imobiliário como em geral
+para a diluição do risco dos empréstimos. No caso do mercado imobiliário, das
+hipotecas [@watts, 2].
+
+Este tipo de instrumento é oferecido pelos emprestadores através de veículos de
+propósito específicos, ou \gls{SPV}, que, apesar de patrocinados pelos bancos,
+não transferem a ele o risco de falência institucional. Ou seja, a falência da
+instituição bancária não afeta o risco de recebimento dos \gls{CDO}.
+
+```{r CDO, fig.cap = "Esquemático do funcionamento de um CDO."}
+grViz("
+
+digraph boxes_and_circles{
+
+rankdir = LR
+
+# add node statements
+node [shape = box
+      fontname = Helvetica
+      penwidth = 2.0]
+'Pool of Assets'; SPV; Senior; Mezzanine; Equity
+
+# add edge statements
+
+'Pool of Assets' -> SPV [label = 'Coupons']
+
+#SPV -> {Senior Mezzanine Equity}
+
+SPV -> Senior [label = '1º']
+SPV -> Mezzanine [label = '2º']
+SPV -> Equity [label = '3º']
+}
+")
+# m <- mermaid("
+# graph LR
+# 
+# A[Pool of Assets]-->|Coupons|B{SPV}
+# B-->|1º|C[Senior]
+# B-->|2º|D[Mezzanine]
+# B-->|3º|E[Equity]
+# ", height = '100%', width = '100%')
+# 
+# networkD3::saveNetwork(m, "m.html")
+# webshot::webshot("m.html", file = "images/CDO.png")
+# knitr::include_graphics("images/CDO.png")
+```
+\bcenter
+\small Fonte -- Do autor. Adaptado de @devil.
+\ecenter
+
+Na figura \@ref(fig:CDO) pode ser visto um esquemático do funcionamento de um
+CDO simples, dividido em três *tranches* ou parcelas. Cada *tranche* tem uma
+prioridade no recebimento de cupons. Após o pagamento das despesas, a prioridade
+é para o pagamento do *Senior tranche*, depois do *Mezzanine tranche* e então do
+*Equity tranche*. Se ocorrer um *default* em um dos ativos lastreados, esta
+perda é descontada primeiramente do *Equity tranche*, que tem os valores de seus
+cupons reduzidos. Depois de mais alguns *defaults*, os cupons do *Equity
+tranche* vão a zero, e perdas adicionais serão descontadas do *Mezzanine
+tranche* e assim por diante [@devil, 6].
+
+Desta maneira, a cada *tranche* será atribuída pelas agências de risco uma nota 
+de crédito (*rating*) diferente. Segundo @devil, tipicamente um \gls{CDO} possui
+composição de em torno de 80% de *senior tranches*, o que significa que 
+aproximadamente 20% do portfolio de ativos base devem entrar em *default* antes
+do *senior tranche* ser afetado. Na classificação dos *tranches* pelas agências 
+de risco normalmente era atribuída ao *senior tranche* uma nota AAA. Aos
+*mezzanine tranches* normalmente era atribuída uma nota BBB-, enquanto que aos
+*equity tranches* não era atribuída nenhuma classificação de risco, ou seja,
+estas parcelas dos \gls{CDO} eram consideradas de grau especulativo.
+
+Deve-se salientar que existem ainda outros tipos de \gls{CDO}, com maior número
+de parcelas, sejam parcelas intermediárias (vários níveis de *mezzanine
+tranches*), ou parcelas mais seguras, com as *super-senior tranches*, aos quais
+eram atribuídas notas de crédito superiores à AAA, dos *senior tranches*.
+
+Segundo @watts, a duração típica de um contrato de \gls{CDO} era de 5 anos.
+
+\bcenter
+
+| **Rating at issuance** | **5-yr default probability (%)** |
+|:-----------------------|---------------------------------:|
+| AAA                    | 0,05                             |
+| AA+                    | 0,19                             |
+| AA                     | 0,26                             |
+| AA-                    | 0,36                             |
+| A+                     | 0,56                             |
+| A                      | 0,62                             |
+| A-                     | 0,92                             |
+| BBB+                   | 1,20                             |
+| BBB                    | 1,89                             |
+| BBB-                   | 3,63                             |
+| BB+                    | 5,74                             |
+| BB                     | 8,11                             |
+| BB-                    | 12,50                            |
+| B+                     | 17,09                            |
+| B                      | 21,36                            |
+| B-                     | 27,08                            |
+| CCC+                   | 33,64                            |
+| CCC                    | 37,64                            |
+Table: Parte da matriz de risco de default da Fitch.
+
+
+\small Fonte -- @watts.
+
+
+| **Tranche (Rating)**   | **Attachment Points** |
+|:-----------------------|:---------------------:|
+| Senior (AAA)           | 42% -- 100%           |
+| Mezzanine 1 (AA-)      | 34% -- 42%            |
+| Mezzanine 4 (A-)       | 28% -- 34%            |
+| Mezzanine 4 (BBB-)     | 20% -- 28%            |
+| Mezzanine 4 (BB-)      | 11% -- 20%            |
+| Equity (NA)            | 0% -- 11%             |
+Table: Exemplo de parcelamento de \gls{CDO}.
+
+\small Fonte -- @watts.
+
+\ecenter
+
+Para Donnelly e Embrechts [@devil, 20], os *equity tranches* são produtos com
+muito risco, portanto de pouco valor, o que interessa aos grandes especuladores,
+como os *hedge funds*, enquanto os *senior tranches* eram vistos pelas grandes
+instituições como ativos muito seguros. Já os *mezzanine tranches* nem eram tão
+seguros e nem tão baratos, não interessando nem aos investidores mais cautelosos,
+nem aos grandes especuladores. Desta maneira, o *mezzanine tranches* eram 
+também empacotados em outros \gls{CDO}, os chamados \gls{CDO}-squared, o que, em 
+tradução literal seria um \gls{CDO} ao quadrado. Este tipo de instrumento 
+financeiro, ainda mais complexo, é de precificação ainda mais difícil e isto 
+contribuiu ainda mais para aumentar o risco moral do mercado.
+
+Segundo Donnelly e Embrechts [@devil, 7], o fato de que as grandes instituições
+financeiras viam os *senior tranches* como ativos muito seguros teve uma grande
+influência na crise financeira de 2008. Segundo Donnelly e Embrechts 
+[@devil, 24], um executivo de uma subsidiária da AIG chegou a dizer, em agosto
+de 2007 que era difícil vislumbrar um cenário onde a AIG poderia perder um dólar
+sequer com estes ativos. Em 2008 o prejuízo líquido da AIG foi de 
+US\$ 99 bilhões, sendo US\$ 62 bi apenas no último trimestre, auge da crise do 
+*subprime*.
+
+Segundo @simkovic [p. 262], estes instrumentos sintéticos existiam mais por uma
+necessidade de atender a demanda dos investidores por ativos ligados ao \gls{MI}
+do que o \gls{MI} era capaz de prover.
+
+###### Precificação
+
+De acordo com @watts, apesar de terem sido criados há algum tempo, uma década e
+meia teve que se passar para que o mercado de \gls{CDO} se tornasse grande. E o
+motivo era que faltava um modelo que servisse de *benchmark*, ou seja, um modelo
+que permitisse ao mercado basilar o preço dos \gls{CDO} para que desse uma 
+relativa segurança aos investidores.
+
+As condições para a precificação destes ativos vieram apenas na primeira década
+do presente século, após a publicação do trabalho seminal de @Li.
+
+De acordo com Donnelly e Embrechts [-@devil, 7], a chave para a valorização dos
+\gls{CDO} é a modelagem dos *defaults*. Para isto, foi adotado pelo mercado
+(agências de risco de crédito como Fitch, Moody's e Standard & Poor's) o modelo
+da Copula Gaussiana [@devil, 14], que tem algumas vantagens, como rapidez de
+computação e facilidade de calibração. No entanto, foram desconsideradas pelo
+mercado algumas desvantagens do modelo, a saber [@devil, 15]:
+
+* modelagem insuficiente do agrupamento de *defaults* no portfolio (quando uma 
+companhia quebra, é provável que outras companhias do mesmo setor também quebrem,
+isto não pode ser modelado pela Copula Gaussiana);
+* Diferentes correlações entre os *tranches* do CDO, o que não ocorre na 
+prática; e
+* ausência de modelagem dos fatores que levam aos *defaults*.
+
+Especialmente no que tange à primeira desvantagem, a Copula Gaussiana é
+indesejável para a aferição de risco. Como enfatizam Donnelly e Embrechts
+[-@devil, 16]: não é sábio confiar em um modelo baseado na distribuição normal
+para verificar a probabilidade de ocorrência de eventos extremos.
+
+Pela própria estrutura dos \gls{CDO}, havia uma concepção que muito raramente
+ocorreriam tantos *defaults* simultâneos a ponto de um *senior tranche* ser
+afetado. Ocorre que pela própria característica da Copula Gaussiana, os eventos
+extremos não são suficientemente bem representados, o que não ocorre com outros
+modelos de Copulas, como  a de Gumbel, Clayton ou Copula-t. A apresentação
+destes modelos será vista com detalhe no capítulo \@ref(copulas) ([O Método
+Copulas]).
+
+#### As lições da crise
+
+Em suma, os fatores que levaram à crise imobiliário financeira pode ser assim
+resumidos:
+
+* O **risco moral** presente na análise de risco de financiamento de imóveis 
+devido ao surgimento de ativos financeiros (\gls{CDO}) que possibilitavam às 
+instituições hipotecárias transferir o risco dos seus empréstimos aos 
+compradores destes ativos, o que fez com que a análise de capacidade de 
+pagamento dos mutuários fosse negligenciada;
+
+* O **risco moral** devido à longa cadeia entre os empréstimos originais e as
+pessoas/instituições que acabavam assumindo o risco final dos *default*, o que 
+tornou o entendimento do risco por parte dos compradores de \gls{CDO} quase
+impossível, tendo estes que confiar quase que cegamente nas classifações das
+agências de risco de crédito;
+
+* O **risco moral** nas agências de classificação de risco, por conflito de 
+interesse, já que ao mesmo tempo em que aconselhavam seus clientes como 
+securitizar os seus produtos, também faziam o *rating* destes mesmos produtos;
+
+* O **risco moral** na crença de instituições consideradas grandes demais para 
+quebrar, que seriam sempre socorridas pelos governos, em última instância;
+
+* O **excesso de liquidez** do sistema que levou à formação de uma bolha 
+especulativa no setor imobiliário;
+
+* A **falta de controles adequados de risco** por parte de algumas instituições
+que negociavam os derivativos de crédito, assim como as agências de
+classificação de risco de crédito, que se basearam somente no modelo da Copula
+Gaussiana, subestimando a probabilidade de *default* em *clusters*, o que
+eventualmente levou à falta de liquidez pelo não pagamento dos coupons dos
+*senior tranches* dos \gls{CDO}, e portanto à eclosão da crise financeira.
+
+Este capítulo tem como objetivo demonstrar os problemas teóricos que levaram
+a este último fator, que está na raiz da formação da bolha imobiliária.
+
+Deve-se lembrar que, se houvesse controle adequado do risco, não haveria mercado
+para os \gls{CDO}, especialmente para os lastreados em créditos do tipo
+*subprime*, que estão na raiz da crise. Sem possiblidade de transferência de
+riscos, as instituições hipotecárias provavelmente não teriam efetuados tantos
+empréstimos *subprime*, pois sentiriam a necessidade de controlar o seu próprio
+risco de *default*. Por fim, se não houvesse tanta liquidez devido a todo o
+crédito oferecido pelas instituições hipotecárias, muito provavelmente não teria 
+se formado uma bolha especulativa.

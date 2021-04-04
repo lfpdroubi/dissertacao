@@ -1,18 +1,153 @@
 # Conclusão {#conclusao}
 
-Como mostrado no capítulo \@ref(historico), durante boa parte do século XX a
-inflação brasileira tinha um comportamento diferente do esperado, elevando-se em
-períodos de baixa conjuntura. A inflação, portanto, tinha um papel de incentivar
-as imobilizações, o que fazia com que o preço da terra no Brasil se elevasse em
-períodos de crise, quando a inflação se elevava. Com as reformas da Economia
-brasileira desde meados da década de 90, estabilizando-se a moeda, os motivos
-que levavam a tendência de imobilização de capital na forma de imóveis nos
-períodos de crise desapareceram. A injeção de capital externo na economia
-brasileira, através da abertura econômica, por outro lado, não deixou os preços
-dos imóveis desabarem, o que, segundo Rangel, traria uma reforma agrária através
-dos próprios mecanismos do mercado.
+\begin{epigrafe}
+	\vspace*{\fill}
+	\begin{flushright}
+    \textit{``The boom years of the 1990s created a business atmosphere\\
+    akin to a gold rush, and led many people to distort their business\\
+    decisions, the results of which will weigh upon us for many years\\
+    to come. Part of this change in business atmosphere was a decline\\
+    in ethical standards, a decline in the belief in integrity, honesty,\\
+    patience, and trust in business. A string of scandals affecting\\ 
+    corporate boards, accounting firms, and mutual funds surfaced after\\
+    the market dropped.''\\
+    \cite[p. xiv]{shiller}}
+	\end{flushright}
+\end{epigrafe}
 
-Com a crise que se lida atualmente a economia brasileira, está claro, ao menos
+Conforme analisado ao longo dos capítulos anteriores, todas as evidências apontam 
+que, dentro os diversos fatores, é a terra o problema central das crises 
+habitacionais, seja quando se analisa a crise habitacional global, seja quando 
+se analisa a crise habitacional crônica que vive o Brasil e outros países em 
+desenvolvimento, que por sua vez é fortemente influenciada pela questão do 
+financiamento. Isto não quer dizer que os outros fatores, como mão-de-obra, 
+materiais de construção e infraestrutura não façam parte da solução do problema,
+especialmente quando se trata dos países em desenvolvimento, como o Brasil, em
+que a solução da crise necessariamente passa pelo aumento da oferta de moradias,
+que deverão ser construídas em locais com infraestrura adequada e com material e
+mão-de-obra adequados, diferentemente do que ocorre em pelo menos alguns dos 
+países desenvolvidos, onde a crise habitacional se apresenta mais como um 
+problema de distribuição de renda do que como um problema de falta de moradias
+dignas para abrigar a população destes países.
+
+Como mostrado no capítulo \@ref(historico), por questões estruturais que estão
+além do escopo deste trabalho, durante boa parte do século XX a inflação
+brasileira apresentava um comportamento anômalo, diferente do esperado,
+elevando-se em períodos de baixa conjuntura e arrefecendo com o aquecimento da
+Economia. A inflação, portanto, tinha um papel de incentivar as imobilizações, o
+que fazia com que o preço da terra no Brasil se elevasse em períodos de crise,
+quando a inflação se elevava. Isto era ainda agravado pelo êxodo rural. Com a
+grande migração de pessoas do campo para as cidades, sem que estas tivessem
+condições de planejamento para recebê-las, sobrava aos migrantes a ocupação de
+terrenos urbanos sem infraestrutura adequada, muitas vezes em áreas de risco,
+sem regras adequadas de urbanização, para construir moradias precárias, muitas
+vezes provisórias, com materiais de baixíssima qualidade, dada a possibilidade
+de remoção a que estavam sujeitos. Com as reformas da Economia brasileira desde
+meados da década de 90, que estabalizaram a moeda, os motivos que levavam a
+tendência de imobilização de capital na forma de terra e imóveis nos períodos de
+crise econômica desapareceram. Outros fatores, no entanto, como a valorização 
+das *commodities* agrícolas e a injeção de capital externo na economia
+brasileira, no entanto, ocorrida pela abertura da economia brasileira aos
+capitais externos, não deixaram que os preços das terras caíssem, como previa 
+Rangel, o que, segundo ele, traria uma reforma agrária espontânea, através dos 
+próprios mecanismos do mercado.
+
+No capítulo \@ref(economia), mostrou-se o comportamento esperado do mercado
+imobiliário numa Economia de livre mercado, com inflação controlada, como é a
+Economia brasileira na atualidade. Nesta configuração, os preços dos imóveis
+tendem a ser influenciados pelas taxas de juros, em razão inversa: quanto menor
+as taxas de juros, mais valorizados devem se tornar os imóveis. 
+
+De uma maneira,
+a situação é similar à situação provocada pela alta inflação: em períodos de
+crise, os bancos centrais tendem a abaixar as taxas de juros nominais, buscando
+incentivar a retomada da economia. Contudo, em patamares extremamente baixos
+pelos padrões históricos, mesmo diante de baixíssimas taxas de inflação, as
+taxas de juros reais tendem a ficar negativas, o que implica, a exemplo do que
+ocorria com as altas taxas de inflação vigentes durante o século XX, em erosão
+monetária. Devido à erosão monetária, os preços dos imóveis tendem a elevar-se,
+pelo aumento da demanda por imobilização do capital, dado que as oportunidades
+de inversão nos outros setores da Economia são escassos, pela baixa demanda
+agregada. Desta forma, pode-se dizer que a causa das crises habitacionais, como
+aconteceu no Brasil no século XX, não é propriamente a inflação alta, como
+assinalava Rangel [-@rangel], mas as taxas de juros reais baixas ou negativas a
+que ela levava. Isto pode ocorrer, no entanto, tanto em cenários de taxas de
+inflação relativamente altas, como ocorreu no século XX, tanto em cenários de
+inflação moderada, porém com taxas de juros nominais relativamente baixas, como
+é a atual realidade da economia mundial.
+
+No capítulo \@ref(indices), mostrou-se que a imensa maioria dos índices de 
+preços existentes possuem metodologia que os tornas insuficientes para um
+completo diagnóstico do \gls{MI}. Com o método de vendas repetidas, 
+utilizado pelo índice de preços de imóveis mais conhecido, de *Case e Shiller*, 
+por exemplo, sequer é possível saber o nível de preços atual, mas apenas a 
+variação dos níveis de preços em relação aos períodos anteriores. Com os índices 
+de preços hedônicos é possível saber o nível médio de preços dos imóveis,
+porém não se pode dizer, pela análise exclusiva destes níveis médios de preços, 
+se o \gls{MI} encontra-se ou não em consonância com os fundamentos econômicos. 
+Além disto, a não ser com os índices de preços hedônicos, não é possível separar
+os valores dos imóveis dos valores da terra, o que, como se viu, é o ideal, haja
+vista que há fortes evidências de que as bolhas são provocadas mais por conta de
+uma sobrevalorização da terra do que por conta de eventuais aumentos dos custos
+das construção.
+
+Outro problema mostrado com a grande maioria dos índices de preços é que estes
+refletem apenas o comportamento médio do mercado, o que, como foi visto, não
+é suficiente para um diagnóstico completo do \gls{MI}.
+
+Um índice de preços mais adequado para diagnosticar o \gls{MI}, portante, seria
+um índice de preços de terras, ou ainda um índice de preços de imóveis hedônico
+com o qual seja possível separar os preços da terra dos preços dos imóveis,
+ajustado em quantis, para aferir o comportamento relativo dos preços das terras
+*a priori* mais valorizadas e menos valorizadas. Um índice de preços assim
+ajustado disponível seria o ideal para o monitoramento do comportamento do 
+\gls{MI} no Brasil.
+
+Não se pode dar ao luxo de esperar, contudo, a criação de um índice para que 
+as políticas públicas passem a ser implementadas. Na impossibilidade de medição,
+no entanto, as políticas devem ser desenhadas de maneira a evitar com que os
+eventuais estímulos sejam transformados em menor *affordability*. 
+
+No capítulo \@ref(crise2008) mostraram-se os efeitos deletérios que as finanças
+desreguladas podem ter sobre o \gls{MI}, levando à padrões de *booms* seguidos
+de *busts* neste mercado, o que acaba levando a problemas de inadimplência que
+afetam os financiadores e/ou seguradores destes financiamentos. A esperada
+atuação dos governos no sentido de salvar o sistema financeiro levam ao problema
+do *moral hazard*, incentivando que o problema se repita. O salvamento do
+sistema financeiro, no entanto, é feito com dinheiro público, que deveria ser
+utilizado para socorrer os verdadeiros prejudicados pela crise 
+financeiro-habitacional, *i.e.* os mutuários, e não os responsáveis pela crise, 
+*i.e.* os financiadores, o que historicamente, infelizmente, não ocorre.
+
+No capítulo \@ref(politicas) mostraram-se os principais equívocos das políticas
+habitacionais anteriores e o que pode ser feito para estimular o \gls{MI} de
+maneira responsável, com o máximo de eficiência possível. As antigas políticas
+de grandes programas de construção de moradias devem ser substituídas por
+políticas mais eficientes, que atuem do lado da demanda. A implementação destas
+políticas, no entanto, tendem a aquecer o \gls{MI}. Deve-se cuidar, portanto,
+para que  o aquecimento do \gls{MI} ocasionado pelo aumento da demanda tenha 
+condições de ser absorvido pelo mercado de uma maneira mais elástica, evitando 
+assim que ocorra a formação de bolhas especulativas, o que teria o efeito 
+contrário ao desejado, ou seja, diminuiria o *affordability*. 
+
+Assumindo-se que os custos de construção mantenham-se constantes, independente 
+do aquecimento do \gls{MI}, a exemplo do que ocorreu nos EUA durante o período
+de formação da última bolha imobiliária, pode-se controlar os preços dos imóveis
+simplesmente através da disponibilização de terrenos para construções. A 
+destinação de terras públicas para a execução de empreendimentos imobiliários 
+para a baixa renda, portanto, está na ordem natural das coisas. Com a destinação
+de terras públicas, a necessidade de financiamento fica reduzida. Além disto,
+com a disponibilização de terras públicas para a construção de empreendimentos,
+ou ainda com a disponibilização de terras públicas no mercado, a demanda por 
+terra pode ser suavizada, impedindo a formação de bolhas.
+
+---
+
+Para isto, é necessária a articulação do governo federal com as administrações
+municipais e estaduais, de maneira a favorecer a instalação de novos
+loteamentos, com o necessário acompanhamento da infraestrutura urbana.           
+
+Com a crise que lida atualmente a economia brasileira, está claro, ao menos
 por enquanto, que o problema se inverteu: se os preços dos imóveis não caíram
 em termos nominais, o fizeram em termos reais, através da corrosão de valor
 inflacionária. As taxas de juros caíram consideravelmente no Brasil nos últimos
@@ -24,20 +159,6 @@ investimentos não tendem a aparecer tão cedo. No \gls{MI}, a tendência é que
 muito, os investimentos voltem apenas voltados para a construção de imóveis para
 as classes altas e média-altas, muitas vezes voltados para a concessão de 
 serviços do tipo Airbnb ou quetais.
-
-Com as taxas de juros em nível tão baixos, como mostrado no capítulo
-\@ref(crise2008), o \gls{Bacen} pouco pode fazer para estimular a economia, a
-não ser eventuais aumentos na base monetária, como ocorreu nas economias
-desenvolvidas, porém sem o mesmo poder de fogo da política monetária ortodoxa. A
-armadilha de liquidez não permite que o \gls{Bacen}, mesmo que quisesse, torne
-viáveis investimentos com taxas de retorno negativas, já que não há inflação .
-Com juros no limite inferior (zero) e sem inflação, não é possível estimular os
-investimentos através da política monetária.
-
-Por outro lado, como visto no capítulo \@ref(politicas) as melhores políticas em
-relação aos programas habitacionais são as que focam no lado da demanda, que tem
-como efeito a elevação inicial dos preços no \gls{MI} residencial e o
-consequente estímulo aos investimentos neste mercado.
 
 Conforme visto no capítulo \@ref(economia), existe uma correlação bidirecional
 entre o aumento no preço dos imóveis com as taxas de inflação, o \gls{PIB} e

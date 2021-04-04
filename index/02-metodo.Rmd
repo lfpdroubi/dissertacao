@@ -1,0 +1,67 @@
+# Método {#metodo}
+
+Inicialmente foi elaborada uma pesquisa histórica que busca as causas da crise 
+habitacional crônica que se estabeleceu no Brasil ao longo de todo o século XX,
+chegando até os dias atuais.
+
+Para melhor análise, foi contextualizado o fenômeno da urbanização no Brasil em
+relação a urbanização de outros países do mundo ocidental, o que se deu em
+diferentes tempos históricos. Procurou-se destacar e traçar um paralelo entre os
+países que tiveram desenvolvimento similar ao brasileiro.
+
+Então, deu-se início à pesquisa sobre a presente crise habitacional dos países
+desenvolvidos, com início pós-crise financeiro-habitacional de 2008, para a
+qual foi essencial a pesquisa sobre o que estava na raiz desta crise e a 
+identificação dos motivos que levaram ao surgimento da nova crise habitacional
+que atinge os países desenvolvidos.
+
+
+
+Para o desenvolvimento do trabalho será pesquisado o que os países com
+desenvolvimento similar ao do Brasil, guardadas as épocas distintas em que
+ocorreram, fizeram para equacionar a crise habitacional gerada pela suas
+respectivas crises agrárias. Baseado no estudo das políticas habitacionais
+utilizadas nestes países de referências, prentende-se pesquisar os meios pelos
+quais poderia o Brasil tratar de implementar em seu território estes
+instrumentos identificados, com as devidas adaptações necessárias.
+
+## Etapas
+
+A figura\@ref(fig:fluxo) mostra resumidamente o fluxograma da pesquisa.
+
+```{r fluxo, fig.cap="Fluxograma de pesquisa", out.width="80%"}
+grViz("
+digraph boxes_and_circles{
+  
+  rankdir = TD
+  
+  # add node statements
+  node [shape = box
+        fontname = Helvetica
+        penwidth = 2.0]
+  Introdução; 'Aspectos Históricos'; 'O Mercado Imobiliário\ne a Economia'; 'Índices de preços e\nindicadores de performance do MI'; 'Ciclos, bolhas e\ncrise de 2008'; 'Políticas Hab.'; Conclusão
+  
+  # add edge statements
+  
+  Introdução -> 'Aspectos Históricos' [headlabel = 'Origens dos\nproblemas hab.:\nQuestão Agrária'
+                                       labeldistance=7 
+                                       labelangle=45]
+  Introdução -> 'O Mercado Imobiliário\ne a Economia' [label = 'Funcionamento Atual']
+  'O Mercado Imobiliário\ne a Economia' -> 'Ciclos, bolhas e\ncrise de 2008' [label = 'Fatores da\nCrise Financeira?']
+  'O Mercado Imobiliário\ne a Economia' -> 'Índices de preços e\nindicadores de performance do MI' [headlabel = 'Como prever\nnovas crises?'
+                                                                labeldistance=5
+                                                                labelangle=45]
+  'O Mercado Imobiliário\ne a Economia' -> 'Políticas Hab.' [headlabel = 'Novas crises\nhab.'
+                                                                labeldistance=6
+                                                                labelangle=-25]
+  'Aspectos Históricos' -> 'Políticas Hab.' [headlabel = 'Crise hab. \ncrônica'
+                                                labeldistance=4
+                                                labelangle=25]
+  'Índices de preços e\nindicadores de performance do MI' -> 'Políticas Hab.'
+  'Ciclos, bolhas e\ncrise de 2008' -> 'Políticas Hab.'
+  'Políticas Hab.' -> Conclusão [headlabel = 'O que fazer?'
+                                      labeldistance=4
+                                      labelangle=65]
+}
+")
+```

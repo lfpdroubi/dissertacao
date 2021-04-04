@@ -1,0 +1,1020 @@
+# Aspectos históricos {#historico}
+
+
+\begin{epigrafe}
+	\vspace*{\fill}
+	\begin{flushright}
+		\textit{``Do ponto de vista social, todos os fatores se resumem\\ 
+		em um `recurso' elementar: o homem. Logo, não é possível seguir\\ 
+		conceptualmente o processo de industrialização se não sabemos como\\ 
+		o homem aplicava antes o seu tempo de trabalho, como o aplica depois,\\ 
+		o que ocorre quando passa de um modo de produzir a outra e em que\\ 
+		condições realiza essa passagem.[ \ldots ] Considerando que na estrutura\\ 
+		da economia que precede a industrialização quase toda a população está\\ 
+		na `agricultura', é preciso estudar detidamente a organização deste setor.\\ 
+		Em outras palavras, se o problema da `agricultura' não foi entendido,\\ 
+		tampouco será possível compreender o problema da `indústria', ou manufatura,\\ 
+		nem o papel que os serviços desempenham. Falando de modo sucinto, a \\
+		`manufatura' e os serviços são novas formas de aplicação de parte do\\ 
+		tempo de trabalho da população que antes estava na `agricultura'. Mas,\\
+		por sua vez, a própria `agricultura' se reorganiza quando a transferência ocorre.''\\
+		(RANGEL, 1954)}
+	\end{flushright}
+\end{epigrafe}
+
+O Capitalismo é um sistema político-econômico que, historicamente, substitui o
+Feudalismo, sistema em que a população encontrava-se toda concentrada no campo.
+
+Nas sociedades pré-capitalistas, a população predominante rural organizava-se no
+chamado 'Complexo Rural', ou seja, num ambiente rural onde eram produzidos não
+apenas os produtos agrícolas, mas onde também eram produzidos, pelos próprios
+camponeses, em uma muito baixa produtividade, todo o ferramental necessário para
+as suas atividades agrícolas, assim como suas vestes, utensílios domésticos e
+outros itens.
+
+A passagem do sistema feudal para o sistema capitalista ocorre com a *divisão
+social do trabalho*, ou seja, com o desenvolvimento de indústrias que vão aos
+poucos absorver as atividades não-agrícolas realizadas no campo.
+
+\begin{citacao}
+Numa economia em expansão, com crescente industrialização, comercialização e
+urbanização, numerosos processos anteriormente levados a efeito antes dentro da
+casa da família ou unidade (econômica) familiar, ou são completamente
+abandonados ou substituídos por processos semelhantes em bases
+comerciais. \cite[p. 41]{kuznets} \textit{apud} \cite[p. 218]{rangel1956}.
+\end{citacao}
+
+O desenvolvimento do capitalismo brasileiro no século XX se deu pela chamada
+"via prussiana" ou *junker* [@rangel1988, 155], que é um tipo de reforma agrária
+que consiste na substituição do latifúndio feudal pelo latifúndio capitalista.
+Este tipo de desenvolvimento tem como característica se dar sem a execução
+prévia da reforma agrária no sentido clássico, *i.e.* no sentido da distribuição
+dos latifúndios em pequenas propriedades, a chamada via clássica ou democrática.
+Apesar de permitir imprimir um "impulso extraordinário e energético" à
+industrialização, a via prussiana "promove uma distribuição muito desigual da
+renda" [@rangel1988, 155]. A característica talvez mais perniciosa do
+desenvolvimento capitalista por esta via se dá pela formação de um "exército
+industrial de reserva" demasiado grande, ou seja, um aumento da população urbana
+desproporcional à necessidade de mão-de-obra necessária nas indústrias do
+capitalismo nascente nas cidades. O resultado é o crescimento acelerado e
+desordenado das cidades, com a inevitável formação dos cortiços e favelas para
+acomodar a parte mais carente da população que, expulsa do campo, vai se
+aglomerar nos grandes centros urbanos em busca da sua sobrevivência.
+
+\newpage
+
+## População rural e população urbana
+
+Dados compilados pelas Nacões Unidas foram organizados na tabela 
+\@ref(tab:pop-table) com o intuito de demonstrar a evolução e o atual tamanho 
+deste problema.
+
+```{r}
+pop_urb <- read.csv("data/urbanization-last-500-years.csv")
+```
+
+```{r}
+pop_urb_selection <- pop_urb[
+  which(pop_urb$Entity == "World" |
+    pop_urb$Entity == "More developed regions" |
+    pop_urb$Entity == "Less developed regions" |
+    pop_urb$Entity == "Europe" |  
+    pop_urb$Entity == "Eastern Europe" |  
+    pop_urb$Entity == "Western Europe" |  
+    pop_urb$Entity == "Latin America and the Caribbean" |  
+    pop_urb$Entity == "South America" |  
+    pop_urb$Entity == "Central America" |    
+    pop_urb$Entity == "Northern America" | 
+    pop_urb$Entity == "United States" |
+    pop_urb$Entity == "Argentina" |
+    pop_urb$Entity == "Brazil"), ]
+pop_table <- reshape(pop_urb_selection, timevar = "Year", idvar = c("Entity", "Code"), direction = "wide")
+colnames(pop_table) <- stringr::str_replace_all(colnames(pop_table), "Urban.....", "")
+pop_table <- pop_table[, c(1, 2, order(as.numeric(colnames(pop_table)[3:91])))]
+```
+
+
+```{r pop-table}
+knitr::kable(pop_table[c(13, 8, 7, 5, 4, 12, 6, 10, 3, 9, 11, 1, 2), 
+          c("Entity", "1960", "1970", "1980", "1990", "2000", "2014")],
+          row.names = FALSE, 
+          format = "latex",
+          caption = "População Urbana (\\%).", digits = 1,
+          format.args = list(big.mark = ".", decimal.mark = ","),  
+          booktabs = TRUE) %>% 
+  kable_styling(latex_options = c("striped", "HOLD_position"),
+                stripe_index = c(1, 4, 7)) %>%
+  add_header_above(c("", "Ano" = 6)) %>%
+  pack_rows("Mundo", 1, 3) %>%
+  pack_rows("Europa", 4, 6) %>%
+  pack_rows("América", 7, 13)
+```
+\bcenter
+\small Fonte -- @doi:10.1177/0959683609356587
+\ecenter
+
+Ainda, para melhor ilustrar, foram elaborados os gráficos das figuras 
+\@ref(fig:pop-urb-mundo) a \@ref(fig:pop-urb-brazil-brics).
+
+Na Figura \@ref(fig:pop-urb-mundo), pode-se notar que a população urbana no 
+Brasil vem aumentando, desde 1950, numa taxa superior à média dos países em
+desenvolvimento (*Less developed regions*), atingindo uma proporção superior 
+inclusive à dos países mais desenvolvidos (*More developed regions*).
+
+Na Figura \@ref(fig:pop-urb-continents) pode-se ver as séries da população
+urbana em diversos continentes desde 1800. Percebe-se neste gráfico também uma
+maior aceleração do crescimento da população urbana na América Latina e Caribe a
+partir de meados da década de 40, chegando esta região a ultrapassar a população
+urbana da Europa Ocidental no início do século corrente.
+
+```{r pop-urb-mundo, out.width = "80%", fig.cap = "População Urbana - Brasil vs. Mundo."}
+pop_urb %>%
+  filter(Entity == "World" | 
+         Entity == "More developed regions" | 
+         Entity == "Less developed regions" |
+         Entity == "Brazil") %>%
+  ggplot(., aes(x = Year, y = Urban...., color = Entity)) +
+  geom_line() +
+  labs(title = "População Urbana", 
+       subtitle = "Brasil vs. Mundo.", 
+       caption = "Desde 1950 ") +
+  ylab("%") +
+  coord_cartesian(xlim = c(1950, 2016)) +
+  scale_x_continuous(expand=c(0,0),
+                     breaks = seq(1950, 2010, 10)) +
+  guides(color=guide_legend(title="País/Região"))
+```
+\bcenter
+\small Fonte -- @doi:10.1177/0959683609356587
+\ecenter
+
+A Figura \@ref(fig:pop-urb-brazil-latinAmerica) mostra a evolução da população
+urbana no Brasil em comparação com o continente sul-americano e a \gls{AL},
+dando destaque para alguns vizinhos. 
+
+```{r pop-urb-continents, out.width = "80%", fig.cap = "População Urbana - Nos diferentes Continentes."}
+pop_urb %>%
+  filter( 
+    Entity == "Latin America and the Caribbean" |
+    Entity == "Europe" |
+    Entity == "Western Europe" |  
+    Entity == "Asia" |
+    Entity == "Oceania" |
+    Entity == "Africa") %>%
+  ggplot(., aes(x = Year, y = Urban...., color = Entity)) +
+  geom_line() +
+  labs(title = "População Urbana", 
+       subtitle = "Nos diferentes continentes.", 
+       caption = "Desde 1800 ") +
+  ylab("%") +
+  coord_cartesian(xlim = c(1800, 2016)) +
+  scale_x_continuous(expand=c(0,0),
+                     breaks = seq(1800, 2010, 50)) +
+  annotate("rect", 
+           xmin= c(1914, 1939), 
+           xmax = c(1919, 1946), 
+           ymin = -Inf, ymax = +Inf, 
+           alpha = .2) +
+  guides(color=guide_legend(title="País/Região"))
+```
+\bcenter
+\small Fonte -- @doi:10.1177/0959683609356587
+\ecenter
+
+
+
+```{r pop-urb-brazil-latinAmerica, out.width = "80%", fig.cap = "População Urbana - Brasil vs. \\gls{AL}."}
+cols <- gg_color_hue(8)
+pop_urb %>%
+  filter( 
+    Entity == "Latin America and the Caribbean" |
+    Entity == "South America" |  
+    Entity == "Brazil" |    
+    Entity == "Argentina" |
+    Entity == "Chile" |
+    Entity == "Uruguay"  ) %>%
+  ggplot(., aes(x = Year, y = Urban...., color = Entity)) +
+  geom_line() +
+  labs(title = "População Urbana", 
+       subtitle = "Brasil vs. América Latina.", 
+       caption = "Desde 1950 ") +
+  ylab("%") +
+  coord_cartesian(xlim = c(1950, 2016)) +
+  scale_x_continuous(expand=c(0,0),
+                     breaks = seq(1950, 2010, 10)) + 
+  scale_color_manual(values=c( cols[3],  cols[1],  cols[2],  
+                               cols[5],  cols[6],  cols[4])) +
+  guides(color=guide_legend(title="País/Região"))
+```
+\bcenter
+\small Fonte -- @doi:10.1177/0959683609356587
+\ecenter
+
+A Figura \@ref(fig:pop-urb-brazil-developed) mostra o comparativo da população
+urbana no Brasil com uma seleção de países desenvolvidos desde 1800.  Quanto aos
+países desenvolvidos, nota-se que tiveram, primeiramente, uma ascenção um pouco
+mais lenta da população urbana (excessão para a Grã-Bretanha, primeira nação a
+industrializar-se), que essa ascenção teve lugar já na década de 1850 e que
+houve uma estabilização gradual, por volta da década de 1970. Já quanto ao
+Brasil nota-se uma grande aceleração no crescimento da população urbana
+brasileira após a década de 1950, o que reflete o nascimento tardio do
+capitalismo por aqui e, por fim, que, ao contrário dos países desenvolvidos, não
+houve ainda uma estabilização da proporção de população urbana e esta segue em
+crescimento, tendo chegado a níveis maiores aqui do que no resto do mundo
+desenvolvido.
+
+```{r pop-urb-brazil-developed, out.width = "80%", fig.cap = "População Urbana - Brasil vs. Países Desenvolvidos."}
+pop_urb %>%
+  filter( 
+    Entity == "Brazil" |    
+    Entity == "United States" |
+    Entity == "Germany" |
+    Entity == "France"|
+    Entity == "United Kingdom" |
+    Entity == "England and Wales" |
+    Entity == "Netherlands" |
+    Entity == "Switzerland"
+      ) %>%
+  ggplot(., aes(x = Year, y = Urban...., color = Entity)) +
+  geom_line() +
+  labs(title = "População Urbana", 
+       subtitle = "Brasil vs. Países Desenvolvidos.", 
+       caption = "Desde 1800 ") +
+  ylab("%") +
+  coord_cartesian(xlim = c(1800, 2016)) +
+  scale_x_continuous(expand=c(0,0),
+                     breaks = seq(1800, 2010, 50)) + 
+  scale_color_manual(values=c(cols[8], cols[1], cols[2], cols[3], cols[4], cols[6], 
+                              cols[7], cols[2], cols[5])) +
+  annotate("rect", 
+       xmin= c(1914, 1939), 
+       xmax = c(1919, 1946), 
+       ymin = -Inf, ymax = +Inf, 
+       alpha = .2) + 
+  guides(color=guide_legend(title="País/Região"))
+```
+\bcenter
+\small Fonte -- @doi:10.1177/0959683609356587
+\ecenter
+
+E a Figura \@ref(fig:pop-urb-brazil-brics) mostra a comparação dos dados do 
+Brasil com os outros países do grupo dos \gls{BRICS}.
+
+```{r pop-urb-brazil-brics, out.width = "80%", fig.cap = "População Urbana - Brasil vs. \\gls{BRICS}."}
+pop_urb %>%
+  filter( 
+    Entity == "Brazil" |    
+    Entity == "Russia" |
+    Entity == "India" |
+    Entity == "China" |
+    Entity == "South Africa") %>%
+  ggplot(., aes(x = Year, y = Urban...., color = Entity)) +
+  geom_line() +
+  labs(title = "População Urbana", 
+       subtitle = "Brasil vs. BRICS.", 
+       caption = "Desde 1950 ") +
+  ylab("%") +
+  coord_cartesian(xlim = c(1950, 2016)) +
+  scale_x_continuous(expand=c(0,0),
+                     breaks = seq(1950, 2010, 10)) +
+  guides(color=guide_legend(title="País/Região"))
+```
+\bcenter
+\small Fonte -- @doi:10.1177/0959683609356587
+\ecenter
+
+Em meados dos anos 60, apenas 46,1% da população brasileira era urbana, uma
+proporção bem menor do que a dos países do então *primeiro mundo* (\gls{EUA} e
+Europa Ocidental), hoje ditos *desenvolvidos*, que girava então em torno dos 70%
+da população.
+
+Em apenas 10 anos, já em meados da década de 70, este número sofria um aumento
+vertiginoso de quase 10 pontos percentuais, com 55,9% da população urbana. A
+população urbana brasileira equiparava-se à da Europa Oriental.
+Já na década de 80 a população urbana no Brasil ultrapassaria a da Europa
+Oriental, chegando à valores próximos da média para o continente europeu como um
+todo (ocidental e oriental), enquanto a população urbana no mundo desenvolvido
+se estagnava.
+
+Chegado os anos 90, a população urbana brasileira atingiu notáveis 73,9% da
+população brasileira, número equiparado ao da população urbana do mundo
+desenvolvido (74% na Europa Ocidental). Em meados dos anos 2000, já então no
+século atual, ela ultrapassou, em proporção, a população urbana da Europa
+Ocidental e a dos \gls{EUA}, chegando ao último dado de 2015, com 85,8% da
+população brasileira vivendo nas cidades.
+
+Há de se levar em consideração, ainda, que este "êxodo rural" ainda foi
+acompanhado de um crescimento demográfico expressivo.
+
+Todo este crescimento expressivo seria salutar se tivesse se dado no contexto do
+rápido desenvolvimento da economia nacional. Isto, porém, não ocorreu durante
+todo o período analisado. O crescimento da economia brasileira acelerou-se na
+segunda quadra da década de 60 e manteve-se alto até fins da década seguinte,
+porém estagnou-se na década de 80, a chamada década perdida, sem que com isso a
+população urbana deixasse de crescer vertiginosamente.
+
+Para Rangel [-@rangel1986a, 151]:
+
+\begin{citacao}
+"essa redistribuição da população entre os quadros urbano e rural não tem, em si
+mesma, nada de anormal.[...] A urbanização, em si mesma, é um fenômeno
+perfeitamente normal, numa economia em processo de industrialização. O que não é
+normal é o ritmo que imprimimos ao \emph{nosso} processo de urbanização, que
+implica criar, nas cidades, uma oferta de mão-de-obra em descompasso com a
+demanda que a industrialização vai criando."
+\end{citacao}
+
+Todo este processo só poderia, então, ter desaguado no inchaço das principais
+cidades brasileiras. Desnecessário dizer que o planejamento urbano nestas
+condições é praticamente inviável. As administrações municipais, nem que fossem
+as mais eficientes, teriam capacidade de planejar e disciplinar o uso do solo
+urbano nesta "velocidade migratória".
+
+Segundo Rangel, com o desenvolvimento da indústria pesada no Brasil, a crise 
+agrária, antes cíclica, tornou-se crônica, criando um [-@rangel1988, 156-157]:
+
+\begin{citacao}
+"vasto deslocamento de população, na direção geral campo-cidade. Esse movimento
+se faz escalonadamente, das áreas rurais para as cidades pequenas; destas para
+as médias e grandes, e posteriormente para as metrópoles gigantes. No fim da
+linha, portanto, vamos encontrar as cidades de São Paulo e do Rio de Janeiro".
+\end{citacao}
+
+De fato, os dados parecem mostrar a pertinência desta análise. 
+
+Enfim, para Rangel, a origem deste "multitudinário deslocamento demográfico",
+está "o modo como o país preparou sua estrutura agrária para a industrialização".
+
+## A questão agrária
+
+Segundo Rangel, a Questão Agrária, embora nascida na área rural, é um fenômeno
+urbano. Com isto Rangel quer dizer que a crise agrária, a crise que se dá na
+transição do feudalismo para o capitalismo, começa no campo, onde se passa o 
+enredo do feudalismo, para a cidade moderna, onde se desenvolve o capitalismo.
+
+Para uma melhor compreensão da questão se faz mister compreender os mecanismos 
+de funcionamento dos sistemas citados, isto é, do feudalismo e do capitalismo, 
+especialmente no que tange a transição entre eles, nos motivos que levam ao
+fim de um sistema e desembocam quase que inequivocamente (excetos raras 
+exceções) no outro.
+
+### Feudalismo
+
+As "leis", ou princípios, ou ainda os "motores primários" do feudalismo são
+[@rangel1985, 126]:
+
+* *All land is king's land* 
+* *Nulle terre sans seigneur*
+
+O primeiro princípio, *all land is king's land*, ou "toda a terra pertence ao
+rei", quer dizer, mais precisamente, que todo o domínio da terra está
+concentrada nas mãos do rei, que as explora através dos laços de suserania e
+vassalagem, típicos do feudalismo. Já o segundo princípio, segundo Rangel
+[-@rangel1961, 219], *nulle terre sans seigneur*, quer dizer que "a existência
+de terra livre é incompatível com o feudalismo", ou seja, toda a terra deve ter
+um senhor, que a administra a serviço da Coroa e lhe paga tributo. Na existência
+de terra livre, como será visto, o feudalismo não se pode desenvolver, e a
+tendência é que haja ou a formação de comunidades em estado tribal, ou que sejam
+estabelecidas formas de escravidão. Ou seja, a terra, "nas condições feudais,
+não tem preço e é, de fato ou de direito, inalienável" [@rangel1960, 206].
+
+#### O feudalismo no Brasil
+
+Segundo @faoro [p. 155] o feudalismo no Brasil é uma polêmica instaurada na
+historiografia brasileira. Para Faoro, "a tese mais convincente em nossa
+história repele o chamado feudalismo brasileiro", segundo a qual "a empresa de
+plantação teve nítido cunho capitalista -- dentro do capitalismo mercantil e
+politicamente orientado do século XVI português".
+
+Estes argumentos presentes na historiografia brasileira, contudo, tentam
+inutilmente classificar o sistema vigente no Brasil colonial (e em outros países
+de formação análoga) levando em conta diversas características econômicas,
+sociais, etc, dos sistemas "originais", sem levar em conta as peculiaridades
+duais da nossa formação histórica que, é claro, "não retração fielmente a
+história universal" [@dualidade-basica, p. 296].
+
+O "caos aparente" da economia brasileira, faz parecer insolúvel o problema de
+classificar o sistema econômico vigente no Brasil em qualquer tempo, haja vista
+a concomitância de todas as etapas de desenvolvimento da sociedade humana, como
+o comunismo primitivo das sociedades tribais, a escravidão, o feudalismo em
+diversas formas e o capitalismo em todas as suas etapas [@dualidade-basica, p.
+293]. Desta forma, é claro que o "latifúndio brasileiro não é idêntico ao
+feudalismo medieval europeu ou asiático" [@dualidade-basica, p. 293]. "O senhor
+de escravos brasileiro era ao mesmo tempo um *dominus*, no sentido romano, e um
+comerciante, no sentido holandês do século XVII, ou um industrial, no sentido
+inglês, dos séculos XVIII e XIX" [@dualidade-basica, p. 297].
+
+Ainda, deve-se estar ciente de que esta dualidade é dividida em um lado interno
+e um lado externo, *i.e* dizer que o latifúndio brasileiro era
+feudal-capitalista quer dizer: *internamente* feudal -- no interior da fazenda,
+nas relações entre o latifundiário e os "agregados", a enfiteuse -- e
+*externamente* capitalista -- nas relações entre o latifúndio e as outras
+unidades da economia nacional e com o mercado mundial [@dualidade-basica, p.
+297].
+
+Ensina @dualidade-basica [p. 307-308], que o capital comercial surgente na
+Europa, ainda "fundamentalmente feudal", em fins do século XVIII:
+
+\begin{citacao}
+estava suscitando, por essa época, na Europa, um tipo novo de organização da
+produção, a manufatura, pela subordinação ao seu comando de artesãos
+individuais. Desta lado do oceano, suscitava formas igualmente novas de
+organização da produção, de acordo com as circunstâncias. Onde a população
+nativa atingira certo grau de desenvolvimento, mostrando-se capaz de praticar
+uma agricultura estável, limitava-se a controlar a terra, pois esta lhe bastava
+para garantir o controle sobre a população. Onde, como aqui, a população nativa
+era ainda muito primitiva, não havendo estrutura social estável ou hábitos de
+trabalho arraigados, a própria experiência imporia, aos poucos, relações de
+produção ainda mais primitivas, isto é, a escravidão.
+\end{citacao}
+
+Segundo @rangel1956 [p. 206], a atitude do economista do país subdesenvolvido
+não pode ser a mesma do economista dos países mais desenvolvidos, que, *tendo
+vivido o processo histórico completo, assistiram simultaneamente à morte do ser
+antigo e à sua representação*.
+
+\begin{citacao} 
+a absorção sem crítica do \emph{dernier cri} em matéria de ciência econômica por
+ele lhe será fatal, porque implica mudar o reflexo ideal da realidade sem que
+essa realidade mesma tenha mudado, ou sem que tenha mudado senão em parte. Para
+nós, o pensamento dos antigos guarda muito de sua primitiva validade porque
+reflete uma realidade que, em certa medida, continua a ser a nossa
+\cite[p.~206-207]{rangel1956}.
+\end{citacao}
+
+Em outras palavras, para @rangel1956, os economistas dos países
+subdesenvolvidos, ou mais modernamente, países "em desenvolvimento", devem
+utilizar em sua análise as teorias clássicas, neoclássicas, keynesianas, à
+medida que subsistem nestes países características próprias da realidade
+econômica que imperavam no Velho Mundo quando elas foram concebidas.
+
+Desta maneira, o feudalismo tal como concebido na Europa não teve a mesma 
+estrutura que o feudalismo no Brasil, assim como o sistema feudal brasileiro foi
+não-concomitante com o sistema feudal europeu.
+
+Segundo @furtado2009 [p. 227], "nas regiões de processo milenar de povoamento, a
+economia agrícola se desenvolveu partindo do sistema de produção para
+subsistência das populações locais para alcançar formas mais complexas de
+divisão social do trabalho que se traduziam em diferenciação locacional de
+atividade econômica", enquanto no Brasil, ao contrário destas regiões e de
+outros países de povoamento recente, como os \gls{EUA}, a agricultura nasceu sob
+a forma de grande empresa comercial, antecendente ao próprio país, ou seja, a
+agricultura aqui nasceu não para o abastecimento da população fixada no
+território, mas voltada à exportação. A estrutura agrária brasileira, dessa
+forma, se moldou não pela escassez de terras, como na Europa, ou pela escassez
+de mão-de-obra, como nos \gls{EUA}, mas pela escassez de capital e capacidade
+empresarial [@furtado2009, 228].
+
+Diferem o Brasil e outros países da \gls{AL} também em seu processo de
+desenvolvimento em relação a outros países de povoamento recente, como os
+\gls{EUA}. Isto decorre do fato que Portugal e Espanha, quando promoveram a
+colonização no Brasil, encontravam-se afligidos por uma permanente escassez de
+mão-de-obra, ao contrário da situação da Inglaterra do século XVII, que graças
+aos *enclosures*, havia criado um enorme excedente populacional, da qual podia
+se desfazer, em parte, enviando parte do excedente populacional para o 
+povoamento das colônicas, sem comprometimento dos custos de mão-de-obra na
+metrópole [@furtado2005, 27]. 
+
+Segundo Rangel [-@rangel1989, 726], através da bula papal de Alexandre IV, de 4
+de maio de 1493 (ainda que tenha sido depois alterada pelo tratado de
+Tordesilhas), toda a terra onde hoje encontra-se a América Latina era declarada
+propriedade do rei. Isto é, estava satisfeito o primeiro princípio para a
+implantação do feudalismo nos trópicos: *all land is king's land*. A propriedade
+sobre as terras era total, de maneira que pode-se dizer que, juridicamente, em
+nenhum momento a propriedade fundiária esteve mais concentrada do que naquele
+primeiro momento. 
+
+É importante destacar, porém, que a coroa portuguesa, assim como a espanhola,
+encontrava-se pressionada politicamente pelas demais nações européias, que
+questionavam o direito à totalidade das terras, reconhecendo o direto apenas às
+terras efetivamente ocupadas. No caso da coroa espanhola, a exploração de metais
+preciosos logo permitiu que esta estabelecesse a defesa das novas terras, ainda
+que não em toda a sua extensão [@furtado2005, p. 13]. Já no caso da coroa
+portuguesa, a ocupação das novas terras exigiu, a princípio, a exploração
+agrícola do território brasileiro[^2], com a utilização de mão-de-obra escrava,
+então a única forma encontrada para a ocupação economicamente viável das novas
+terras [@furtado2005, p. 17], o que foi feito inclusive desviando recursos de
+empresas mais produtivas, como as Companhia das Índias Orientais [@furtado2005,
+p. 12].
+
+[^2]: a descoberta e exploração de metais preciosos no Brasil só ocorreu muito 
+mais tarde, nos primeiros decênios do século XVIII [@furtado2005, p. 79].
+
+O segundo princípio necessário para a implantação do feudalismo, portanto,
+*nulle terre sans seigneur*, ou seja, o princípio de que não deve haver terra
+sem senhor, também indispensável para a existência do feudalismo -- no
+surgimento do feudalismo na Europa, sem que todas as  terras  social e
+economicamente significativas estivessem apropriadas, a tendência natural do
+escravo liberto seria o retorno às condições de vida tribal -- não era possível
+em território tão vasto e inexplorado como era o território latino-americano
+naquele momento [@rangel1989, 726].
+
+Desta maneira, os feudos que aqui se iam estabelecendo, através do instituto da
+enfiteuse [@rangel1989, 726], os pactos de suserania-vassalagem que iam do servo 
+do gleba ao rei, passando por diversos patamares, muito diferiam dos feudos 
+europeus da Alta Idade Média, que ao contrário dos pactos aqui estabelecidos, 
+começavam a ser constituídos pela base, convertendo os escravos libertos em 
+servos e constituindo a pequena e a grande nobreza, "tendendo afinal a, com o 
+tempo, colocar no píncaro o rei" [@rangel1989, 727].
+
+A esse respeito também escreveu Alceu Amoroso Lima [-@amoroso, 51], na grande
+obra organizada por Vicente Licínio Cardoso:
+
+\begin{citacao}
+Foi-se vendo pouco a pouco – e até hoje o vemos ainda com surpresa, por vezes –
+que o Brasil se formara às avessas, começara pelo fim. Tivera Coroa antes de ter
+Povo. Tivera parlamentarismo antes de ter eleições. Tivera escolas superiores
+antes de ter alfabetismo. Tivera bancos antes de ter economias. Tivera salões
+antes de ter educação popular. Tivera artistas antes de ter arte. Tivera
+conceito exterior antes de ter consciência interna. Fizera empréstimos antes de
+ter riqueza consolidada. Aspirara a potência mundial antes de ter a paz e a
+força interior. Começara em quase tudo pelo fim. Fora uma obra de inversão.
+\end{citacao}
+
+Segundo Rangel [-@rangel1989, 729], as condições em que operavam os nossos
+feudos mais se assemelhavam às vigentes na República Romana e nos primeiros
+tempos do Império, o que quer dizer que, aqui, internamente, até que o monopólio
+da terra estivesse garantido, somente haveria viabilidade para o sistema
+escravagista.
+
+Com efeito, é sabido que foi necessário importar o escravo africano, que era 
+socialmente mais avançado que os índios que aqui habitavam, fazendo-o 
+prisioneiro do latifúndio, haja vista que o índio estava habituado a prover o 
+seu sustento de forma natural nas terras que aqui habitavam.
+
+A Coroa portuguesa [@rangel1989, 731]:
+
+\begin{citacao}
+não tinha pressa em dispor de todas as suas terras, mas apenas das suficientes
+para implantar fazendas e estâncias, deixando aberta a porta para novas doações,
+que comprassem novas vassalagens, aumentando o poder, a riqueza e a glória da
+Coroa.
+\end{citacao}
+
+Assim, sobravam terras entre uma fazenda e outra, o que impossibilitava o modo
+de produção feudal (pela não satisfação do princípio *nulle terre sans
+seigneur*), mas apenas o modo de produção escravista. Exceto por algumas regiões
+do Brasil onde a pecuária extensiva logrou ocupar uma vasta extensão contínua de
+terra, como no Rio Grande do Sul, o feudalismo só viria a se estabelecer muito
+tempo depois, com a abolição da escravidão (1888) e a Proclamação da República
+(1889) [@rangel1989, 732-733].
+
+Porém, para que fosse possível o fim da escravidão sem que houvesse retorno às
+formas primitivas de produção pré-escravagistas, foi necessário um longo
+processo que teve início com a Lei do Tráfico e a Lei de Terras, ambas de 1850
+[@rangel1989, 732].
+
+Enquanto a Lei do Tráfico levaria inevitavelmente ao fim da escravidão em algum
+ponto futuro, já que a "lei demográfica peculiar ao escravismo é a reprodução
+restrita, o que supõe aportes constantes de mão de obra alienígena", a Lei de
+Terras preparava o território para o novo regime que teria lugar, o feudalismo,
+através da promoção da efetiva ocupação do território, ou seja, de todas as
+terras acessíves, habitáveis e agricultáveis [@rangel1989, 732-733].
+
+Vale dizer que, onde a condição *nulle terre sans seigneur* não logrou após a
+abolição da escravidão, como no estado do Maranhão, houve retrocesso a relações
+de produção pré-escravistas [@rangel1989, 733-734].
+
+### A crise do feudalismo
+
+A crise clássica da sociedade feudal ocorre quando a produção agrícola não
+consegue suprir a demanda da superpopulação gerada. Segundo Rangel
+[-@rangel1961, 219]:
+
+\begin{citacao} 
+"tempo houve em que a expansão do estoque populacional era objetivamente a
+maneira mais eficaz de expandir as forças produtivas e o produto social. Nesse
+tempo (regime feudal), a riqueza dos príncipes se media pelas almas dos seus
+domínios, e aumentar o número destas era a maneira óbvia de expandir aquela
+riqueza e também a do corpo social. Este foi forjando para si uma ética, um
+direito e uma política conducentes a esse resultado".
+\end{citacao}
+
+A crise do feudalismo, sistema eminentemente agrário, e o consequente surgimento
+do capitalismo, com o surgimento das cidades modernas, se dá no contexto da 
+dissolução do Complexo Rural, o que descreve-se nas seções a seguir.
+
+
+Na Europa, onde havia um estoque limitado de terra, o aumento da população
+forçou a valorização da terra. A inexistência de novas terras para exploração de
+novas fronteiras agrícolas exigiu o desenvolvimento da técnica agrícola, visando
+a elevação do rendimento da terra, *i. e.* a tentativa de extrair maior
+produção por hectare de terra, visando poupar terra. Nos \gls{EUA}, no entanto,
+a grande abundância de terras permitiu desde cedo uma organização tal que o
+desenvolvimento se trazia pela incorporação de novas terras, limitada apenas
+pela mão-de-obra, o que estimulou a mecanização da agricultura, visando poupar
+mão-de-obra [@furtado2009, p.227].
+
+### A crise do feudalismo no Brasil
+
+O feudalismo no Brasil desenvolveu-se a partir da Abolição-República,
+concomitantemente com a implantação, especialmente no quadro urbano, de uma
+vigorosa economia capitalista. No campo, ao lado do velho latifúndio feudal,
+logo surgiu outro latifúndio que, em vez de distribuir lotes entre os agregados
+-- como seria natural na desintegração do feudalismo clássico -- empreendeu, ele
+próprio, a atividade agrícola, usando mão-de-obra assalariada [@rangel1989,
+738-739].
+
+Segundo Rangel [-@rangel1989, 739], o latifúndio feudal, então, percebendo-se
+que havia tendência de seus agregados deixarem de lado o trabalho nos lotes
+que haviam recebido no processo de abolição da escravidão, para trabalhar nas 
+novas fazendas capitalistas, logo comecou a deslocar esses agregados, dando 
+origem ao processo do êxodo rural.
+
+#### O Complexo Rural
+
+Segundo Rangel [-@rangel1956, p.98], a unidade agrícola fechada é 
+
+\begin{citacao}
+um microcosmo econômico no qual as pessoas distribuem seu tempo entre numerosas
+atividades. Cada uma dessas atividades representa o estado rudimentar daquilo
+que, com o desenvolvimento, se tornará uma 'indústria' (...) É evidente que o
+camponês não tem consciência da multiplicidade de suas atividades. Ele considera
+que elas formam um todo indivisível. Essa inespecialização é sua especialidade.
+(\ldots) Chamaremos esse microcosmo econômico, essa 'matriz de insumo-produto' em
+miniatura, de 'complexo rural'.
+\end{citacao}
+
+O estudo do desenvolvimento do capitalismo não pode ser feito sem o estudo das
+bases para o seu desenvolvimento. O capitalismo é um sistema político-econômico
+que tem surgimento com a queda do feudalismo, outro sistema político-econômico
+cujo enredo se passa, basicamente, no campo. A classe burguesa, aliás, como diz
+a história, era formada inicialmente pelos habitantes dos burgos, que se
+localizavam no entorno dos feudos. Estes formavam, no entanto, uma minoria.
+Durante a idade média, a maior parte da população vivia nos feudos, que se
+constituiam de grandes áreas cercadas e isoladas umas das outras, com economia
+quase auto-suficiente.
+
+Na economia feudal, portanto, não existia grande grau de especialização das
+atividades econômicas, como há hoje. Devido à precariedade do comércio, era
+praticamente imperioso que, no interior de cada feudo todas as atividades
+econômicas fossem executadas para a própria sustentabilidade do mesmo.
+
+Segundo Lenin (*apud* @rangel1954 [p. 99]), mesmo após o surgimento do capitalismo,
+nos países periféricos, esta realidade feudal ou quase-feudal, deve ser levada
+em consideração:
+
+\begin{citacao} 
+A população de um país de economia mercantil debilmente desenvolvida (ou não 
+desenvolvida de todo) é quase exclusivamente agrícola. Todavia, não se deve 
+deduzir daí que ela se ocupa só da agricultura. Significa apenas que a população 
+ocupada na agricultura transforma, ela mesma, os produtos da terra, sendo quase 
+inexistentes o intercâmbio e a divisão do trabalho. 
+\end{citacao}
+
+#### Condições e Métodos de abertura do Complexo Rural
+
+Para a abertura do Complexo Rural é necessário que haja vantajosidade para a
+economia de mercado e para a economia natural do próprio Complexo.
+
+\begin{citacao} 
+A Abertura do Complexo Rural não é uma operação momentânea, mas sim um largo
+processo, com altos e baixos e problemas sempre novos. Sua história está muito
+longe de ser idílica. Ao contrário, está cheia de violência. Uma planificação
+econômica que não resolva preliminarmente este problema é inconcebível.
+Alternadamente, pode conduzir à liberação de mais fatores que aqueles que os
+setores não agrícolas podem usar, fazendo toda a economia submergir em uma crise
+profunda, ou condenar esses setores à estagnação por insuficiência de
+fatores \cite[p.~118]{rangel1954}
+\end{citacao}
+
+As medidas tendentes a romper o complexo rural podem ser classificadas em dois
+grupos [@rangel1954, 113]:
+
+a. as que oferecem um incentivo positivo para a incorporação, à economia de
+mercado, dos fatores usados pelo complexo e;
+
+b. as que buscam forçar a abertura do complexo a partir de dentro, provocando
+uma deterioração da produtividade das atividades manufatureiras dentro do
+complexo.
+
+As medidas do tipo a) tem seu exemplo mais típico nos \gls{EUA} e também na
+França, enquanto as medidas do tipo b) predominaram na Inglaterra, Alemanha e
+Japão [@rangel1954, 114-115].
+
+### Êxodo rural e industrialização
+
+\begin{citacao}
+A revolução democrático-burguesa, nos casos em que a gleba feudal é -- como
+aconteceu na Europa Ocidental (principalmente, na França) e nos Estados Unidos
+-- substituída pela pequena propriedade familiar ou *homestead*, ao fortalecer
+as bases da economia natural ou de autoconsumo, resolve satisfatoriamente o
+problema na absorção dos excedentes de mão-de-obra no seio da própria economia
+camponesa, estancando ou reduzindo drasticamente o fluxo populacional
+responsável pelo êxodo campo-cidade \cite[p.~133]{rangel1986b}. 
+\end{citacao}
+
+Segundo Rangel [-@rangel1986b, 133], no entanto, "esse tipo de superação das
+relações de produção feudais", ou seja, a revolução democrático-burguesa, "não é
+característico do Brasil. Sem embargo do surgimento de algumas 'ilhas' de
+pequena propriedade camponesa, notadamente nas áreas de colonização européia e
+japonesa nos estados do Sul, que mais confirmam a regra."
+
+Pelo contrário, "o modelo de desenvolvimento do capitalismo na agricultura
+brasileira foi e é a grande exploração capitalista, cada dia mais propensa ao
+uso de mão-de-obra assalariada e tendendo sempre ao desmantelamento das bases da
+economia natural, causando por isso mesmo, o fenômeno do **êxodo rural**"
+[@rangel1986b, 134, grifo nosso].
+
+O caso brasileiro, porém, não é único: "a industrialização da Inglaterra fez-se
+também, originariamente, nas condições de um enorme excedente de mão de obra,
+causado pelo *enclosure*[^3] ...". No caso inglês, porém, "o motor primário" do
+desenvolvimento foi a produção manufatureira para exportação, enquanto no Brasil
+a industrialização teve seu desenvolvimento estimulado, "nas condições de uma
+crônica crise cambial", pela política de substituição de importações
+[@rangel1962, 43-44].
+
+[^3]: *Enclosure* - literalmente, cercamento. Movimento pelo qual os pequenos 
+agricultores ingleses foram expulsos de terras, convertidas estas à pecuária, e
+amontoados nos *slums*, ou favelas das cidades industriais nascentes, na 
+primeira metade do século XIX.
+
+Ocorre que, de acordo com Rangel [-@rangel1986b, 134], "a superabundância e a
+barateza da mão-de-obra não costumam ser bons condicionantes do processo de
+industrialização, dado que desestimulam a formação de capital, isto é, o
+investimento. Ora, numa economia capitalista, o investimento é o motor primário
+do desenvolvimento ...".
+
+Por este motivo, a "economia brasileira, nas condições de uma crise agrária
+profunda e crônica que, entre outras coisas, **causava uma urbanização
+monstruosa**, sem comparação possível com a demanda de mão-de-obra que a
+indústria e os serviços não-agrícolas estavam suscitando nas cidades (perto de
+três milhões de novos citadinos a cada ano)..." [@rangel1986b, 134].
+
+#### O êxodo rural como obstáculo ao desenvolvimento
+
+\begin{citacao}
+Ordinariamentem a industrialização pressupõe certa escassez latente de 
+mão-de-obra, levando o empresário capitalista a buscar, pelo emprego de bens
+modernos de equipamento, economizar o fator trabalho. O resultado é a elevação 
+da taxa de investimento, o aumento da procura de bens de capital e de novas
+construções, para o que se torna mister empregar mais mão-de-obra 
+\cite[p.~43]{rangel1962}.
+\end{citacao}
+
+No capitalismo, é conhecido o papel do investimento ou formação de capital nas
+taxas de desemprego. Segundo Rangel [-@rangel1988, 156], "por um lado, via
+efeito multiplicador (efeito para trás), o investimento cria emprego de
+mão-de-obra; por outro lado, via implementação de nova tecnologia, promove
+dispensa de mão-de-obra (efeito para frente)".
+
+Segundo Rangel [@rangel1986c, 142], um "'exército industrial de reserva'
+limitado, isto é, algum desemprego, pode ser considerado útil, do ponto de vista
+da produção capitalista, porque serve de instrumento de coerção para os
+trabalhadores livres, fortalecendo assim a disciplina no trabalho". No entanto,
+quando este torna-se excessivo, "pode converter-se em obstáculo ao
+desenvolvimento da própria economia capitalista. Ora, aqui está o nosso
+problema, dado que o 'exército industrial de reserva' brasileiro tornou-se
+teratologicamente grande. Por isso mesmo, a questão agrária, que se exprime
+precipuamente pela formação desse 'exército', não interessa apenas aos
+camponeses, mas à sociedade como um todo."
+
+De acordo com Rangel [-@rangel1988, 156], "a via democrática -- divisão dos
+latifúndios em pequenas propriedades -- ao favorecer uma distribuição menos
+desigualitária de renda, cria condições para um vigoroso efeito multiplicador
+dos investimentos, isto é, forte efeito para trás. Inversamente, a via
+prussiana, ao promover uma distribuição de renda mais desigualitária, debilita o
+efeito multiplicador, isto é, para trás, mas, por força da concentração de
+renda, aumenta o peso relativo dos investimentos dispensando mão-de-obra e, por
+isso mesmo, aumentando o efeito para diante."
+
+### Reforma agrária
+
+Como foi visto, o assunto é complexo e requer uma análise de todo o contexto
+econômico, social e político vigente. A tão sonhada "reforma agrária" a que
+normalmente se refere a mídia, os movimentos sociais ou a população em geral,
+deveria ter tido lugar ainda na década de 1930, ou seja, em fase anterior ao
+início da industrialização brasileira. Para Rangel [@rangel1986a, 154], a
+"reforma agrária, no sentido convencional da expressão, isto é, a implantação de
+propriedade familiar suficientemente ampla, para permitir, ao lado da produção
+agrícola para o mercado, uma produção complementar agrícola e não-agrícola, isto
+é, para autoconsumo, pode justificar-se em certos casos, especialmente quando
+seja possível o renascimento da policultura tradicional e onde a fazenda
+capitalista, mono ou oligoculturista, ainda não tenha aparecido". No atual
+contexto econômico, porém, esta reforma, com a dissolução do latifúndio
+produtivo para assentamento de famílias, levaria a uma regressão tecnológica no
+campo, o que seria altamente prejudicial para a economia brasileira como um
+todo.
+
+Isto dito, Rangel então propõe então que, no Brasil, com a agricultura
+capitalista plenamente desenvolvida, uma segunda variante de reforma agrária,
+"*não necessariamente rural*", com a finalidade de "recompor a economia natural
+onde quer que isto seja possível", viabilizando "uma produção complementar,
+deixando a produção agrícola para o mercado a cargo da fazenda capitalista com
+mão-de-obra assalariada",seja implementada [@rangel1986a, 155].
+
+## Considerações a respeito da valorização da terra no Brasil
+
+Historicamente, a terra passa a ter valor de mercado a partir do momento em que
+ela passa a ser negociável, *i.e.* com o fim do feudalismo, sistema de produção
+no qual, como foi visto, as condições *All land is king's land* e 
+*Nulle terre sans seigneur* impossibilitam a negociação da terra como 
+mercadoria.
+
+Segundo Rangel, isto se daria no Brasil apenas após a Abolição da Escravidão/
+Proclamação da República, eventos que ele relacionou como a "versão brasileira 
+da revolução democrático-burguesa na Europa" [@dualidade-basica, p. 314].
+
+Não é que Rangel desconhecesse que a estrutura agrária do Brasil da primeira
+república fosse basicamente feudal. É que, para @dualidade-basica [p. 316],
+assim como a escravidão brasileira não era um instituto puramente escravista, o
+latifúndio brasileiro não era puramente feudal: "assim como a fazenda de
+escravos foi a versão brasileira da manufatura flamenga do século XVII, o
+latifúndio seria a versão brasileira da fábrica inglesa do século XIX" (após a
+Abolição-República).
+
+Assim, de acordo com @rangel1960 [p. 206-207], apesar do código civil brasileiro
+de 1916 estabelecer normas de alienação da terra, "tudo parece ter sido feito
+para impedir tal coisa. Entretanto, a jurisprudência, sensível às pressões
+suscitadas pelas novas condições criadas pela industrialização, deu conteúdo às
+formas ocas de alienabilidade que está no texo básico".
+
+### A terra como mercadoria
+
+Segundo @rangel1960 [p. 207], "o mercado imobiliário é o primeiro mercado 
+organizado de valores do Brasil". A criação do mercado mobiliário no Brasil 
+possibilitou o direcionamento da poupança livre, que se dirigia, por falta deste
+mercado à "aquisição estéril de terra", a outros destinos. Porém isto só 
+aconteceria no Brasil com a chegada da indústria, à partir de 1930.
+
+\begin{citacao}
+Convertida em mercadoria, a terra passou a comportar-se como um item de capital.
+Isto condiciona, de parte do latifundiário, uma mudança fundamental de atitude.
+Como senhor feudal, ele deseja ter tanta terra quanto possível, mesmo que não
+careça dela, a fim de que não reste terra livre entre sua propriedade e a do 
+vizinho. Sem isso, o camponês escaparia ao seu controle, e seria preciso 
+escravizá-lo de novo, o que não é possível. Como capitalista, ele deseja ter 
+apenas a terra necessária à sua lavoura, para não inflar seu investimento, 
+reduzindo por isso mesmo a rentabilidade.  
+Entretanto, como mercadoria, a terra passa a ser suscetível de valorização, 
+dependendo de sua situação, propriedades agrícolas e habitabilidade. 
+Comportando-se como capitalista, o latifundiário brasileiro forçou o governo a
+construir estradas, investir em obras de irrigação e sanamento. Ao fazê-lo, 
+valoriza a própria terra, mas, ao mesmo tempo, faz com que ela se torne 
+nacionalmente superabundante, o que debilita o aspecto feudal do latifúndio.
+Como capitalista, o latifundiário tende a dispor de parte de suas terras para 
+adquirir adubos, equipamento etc. Ao fazê-lo, entretanto, abre a porta para a 
+criação de pequenas propriedades independentes, com as quais ele terá que 
+competir pela mão-de-obra, oferecendo nível de vida melhor que o facultado pela
+exploração individual, e só a técnica superior lhe pode dar razão nesta disputa.
+\end{citacao}
+
+Segundo @rangel1960, a taxa de valorização da terra era, para fins práticos, uma
+taxa de juros, que deveria se equilibrar com a taxa de juros do mercado 
+imobiliário. Era do interesse, portanto, dos industriais, a depressão deste taxa
+de valorização, haja vista que eram eles emissores de títulos no mercado 
+imobiliário. Cria Rangel, então, que com a criação do mercado mobiliário e o seu
+desenvolvimento, haja vista que "as condições jurídicas e institucionais para a 
+reforma" estavam dadas, com a convergência da taxa de valorização da terra e as
+taxas deste mercado, seguiria-se uma verdadeira reforma agrária através dos
+próprios mecanismos do mercado.
+
+No entanto, por problemas estruturais da economia brasileira que vão além do 
+escopo deste texto, a elevada inflação no Brasil durante quase todo o século XX
+continuaria criando uma demanda artificial pela terra, tornando-a extremamente
+cara e inacessível, o que se discute no próximo item.
+
+Para @rangel1986b [p. 138-139], portanto, o problema da terra é uma questão
+financeira. Quer com isso dizer que, ultrapassados os problemas jurídicos da
+nossa legislação pré-capitalista (Lei de Terras de 1850), que dificultava a
+comercialização da terra, o problema do acesso à terra resume-se ao problema da
+capacidade do camponês de comprá-la, o que deveria ter se tornado possível
+devido ao esperado declínio do preço da terra que viria com a expansão das
+fronteiras agrícolas, mas que não ocorreu, devido à *demanda especulativa*, o
+que é um *problema financeiro*.
+
+
+
+@faoro...
+
+### A tendência à elevação de preços nos períodos de recessão econômica
+
+Considerando-se que a *demanda especulativa* aumenta nos períodos de recessão,
+quando não há melhores oportunidades de investimento, a tendência é que o preço
+da terra varie inversamente à *eficácia marginal do capital* (ver \@ref(capital)).
+
+Isto se explica pelo motivo que, em períodos de recessão econômica, a
+atratividade dos investimentos na economia real diminui. Os capitais sobrantes
+do período anterior de expansão/acumulação, então, na falta de boas
+oportunidades de aplicação, torna-se 'excessivo' e ocasionando a diminuição da
+*eficácia marginal do capital*, o que se reflete na taxa de juros básica da
+economia. Esta diminuição da rentabilidade do capital faz com que os
+investidores procurem formas alternativas de alocação financeira destes
+capitais, ou seja, há um aumento da *demanda especulativa*, seja no mercado
+imobiliário, seja no mercado mobiliário.
+
+Outros fatores também podem agravar o problema. A entrada do Estado no mercado 
+fundiário como comprador com fins de realização de reforma agrária, por exemplo,
+de acordo com Rangel [-@rangel1985, 128], promoveria a elevação do preço da 
+terra, o que aumentaria ainda mais o problema agrário.
+
+Desta forma, a reforma agrária viria naturalmente com a solução do problema 
+financeiro da economia, ou seja, com a abertura de novas possibilidades de 
+investimentos que diminuíssem a demanda especulativa sobre a terra. Como a 
+demanda de terra para cultivo e construção seria pequena em relação à demanda 
+especulativa, o preço da terra tenderia a cair naturalmente [@rangel1986b, 139].
+
+## Pressupostos da análise de Rangel
+
+Ora, lá se vão quase 35 anos da análise de Rangel. Seria no mínimo questionável
+ainda, senão a validade da análise, mas pelo menos a sua atualidade.
+
+Em primeiro lugar, deve-se ter em conta a questão da inflação brasileira. É de
+Rangel também a tese de que a inflação brasileira se exacerba(va) em períodos de
+conjuntura fraca, ao contrário do senso comum, de que a inflação é um fenômeno
+advindo do superaquecimento da economia [@inflacao-brasileira]. Segundo @rangel,
+a inflação brasileira desempenhava "_um papel bloqueador das quedas de
+conjuntura, via penalização da liquidez, que induzia investimentos que, de outro
+modo, isto é, nas condições de moeda estável, não se fariam_". Quer dizer com
+isso que, dada a baixa eficácia marginal do capital em períodos de baixa 
+conjuntura (ver Apêndice \@ref(capital)), o incentivo aos investimentos
+vinham através das taxas reais de juros negativas (pelo efeito da alta inflação)
+que induziam os investidores a fugir da liquidez, já que a inflação
+desvalorizava a  moeda, tornando rentável aplicar recursos em investimentos nem
+tão rentáveis, talvez até com retornos negativos, porém que acarretariam perda
+menor do que o investidor teria se mantivesse a sua posição em moeda.
+
+Desta forma, a inflação era um grande indutor da imobilização de capital em
+terras, seja para pura reserva de valor, seja por motivos especulativos,
+aguardando a sua valorização. Segundo @rangel1986b, estudos levados a cabo pelo
+IPEA *a posteriori* confirmaram a sua hipótese da variação do preço da terra em
+sentido inverso da eficácia marginal do capital que, *coeteris paribus*,
+determina o preço dos valores mobiliários.
+
+Com o advento da estabilidade da moeda, no entanto, a análise de Rangel caducou.
+Essa demanda por terra para proteção do processo inflacionário não mais se 
+justifica.
+
+Por outro lado, não consta que a demanda especulativa sobre a terra tenha caído, 
+pelo menos não a ponto do preço da terra cair a um nível que possibilitasse uma 
+verdadeira reforma agrária, conforme previa Rangel. Deve-se buscar, portanto os
+motivos por trás desta nova onda de especulação em torno do valor da terra, o 
+que será feito no capítulo \@ref(economia).
+
+Deve-se levar em conta, no entanto, que a análise de Rangel é prévia à abertura
+das contas de capital do balanço de pagamento, ou seja, do estabelecimento do
+livre (in)fluxo de capital estrangeiro no país, o que deve ter sido o
+responsável pela manutenção da demanda especulativa sobre o preço da terra até
+os tempos recentes. 
+
+Ainda há de se considerar que a crise agrária crônica não cessou. Pelo contrário,
+se agravou e vem se agravando cada vez mais, tendo o Brasil atingido uma 
+proporção de população urbana muito maior do que o seu grau de desenvolvimento
+econômico possibilitaria.
+
+No entanto, outro fator que deve ser levado em conta é estrutural: as taxas de
+juros, sejam de curto ou longo prazo, atingiram os patamares mais baixos da 
+série histórica, desde 1954, como será visto no capítulo \@ref(economia). 
+
+A grave crise econômica de 2008 e seus efeitos que o mundo vive até os dias
+atuais teve grandes consequências sobre o preço dos ativos imobiliários mundo
+afora. A crise de 2008 gerou uma resposta por parte dos Bancos Centrais de
+praticamente todo o mundo, mas em especial os Bancos Centrais dos países
+desenvolvidos, no sentido de um aumento nunca antes visto da liquidez dos
+sistemas financeiros mundiais, através da redução aos limites mínimos das taxas
+de juros de curto prazo, mas também da aplicação de medidas de recompra de
+títulos de mais longo prazo, reduzindo-se assim também a níveis baixíssimos toda
+a estrutura a termo da taxa de juros. Talvez Rangel nem tivesse cogitado que as
+taxas de juros um dia chegariam a patamares tão baixos que levariam a enormes
+valorizações do preço da terra de maneira não-especulativa, mas de acordo com os
+fundamentos econômicos.
+
+Estas taxas de juros muito baixas, tanto a curto quanto a longo prazo, tem
+estimulado financiamentos imobiliários a taxas de juros negativas no mundo
+desenvolvido [@serapicos], criando um aumento vertiginoso dos preços dos
+imóveis, muito acima dos fundamentos econômicos de um mundo em estagnação
+econômica crônica, o que vem levando os governos destes países a tomarem medidas
+não-usuais para a regulação do mercado imobiliário, especialmente no que se
+refere ao controle dos preços dos aluguéis, devido à crise habitacional que se
+instalou nestes países desde a crise de 2008 [@berlim; @londres; @california;
+@suecia; @newzeland; @finlandia].
+
+## Efeitos da falta de reforma agrária no cadastro urbano
+
+As altas proporções da população urbana nos países ditos *em desenvolvimento* em
+comparação aos *países desenvolvidos* não nos permite imaginar que as
+ferramentas de planejamento urbano desenvolvidas no primeiro mundo surtam o
+efeito esperado em outras regiões menos desenvolvidas do globo, pelo menos não
+na atual realidade econômico-social. E isto também se aplica, é claro, ao
+cadastro territorial multifinalitário.
+
+Enquanto a reforma agrária ideal almejada por muitos infelizmente não tem lugar,
+são o cadastro e as outras ferramentas de planejamento urbano que devem se
+adaptar a essa outra realidade particular da paisagem dos países
+subdesenvolvidos. Tentar, pelo contrário, promover a fórceps a modificação da
+terrível paisagem urbana destes locais para que se enquadrem nos modelos
+teóricos do mundo desenvolvido passaria, necessariamente, pela expulsão das
+classes menos favorecidas das grandes cidades, sem que exista do outro lado uma
+porta de saída.
+
+Obviamente, compreendido este contexto histórico do desenvolvimento do
+capitalismo no Brasil, que não difere muito do desenvolvimento capitalista dos
+outros países da América Latina, não seria de se esperar que o cadastro
+territorial multifinalitário, assim como outras ferramentas do planejamento
+urbano, como concebidos nos países desenvolvidos, possam ser replicadas, sem as
+devidas adaptações, nessa outra realidade, quase que completamente oposta.
+
+Desta maneira, vem em boa hora a implantação de núcleos de estudos específicos
+para o estudo e disseminação do cadastro na América Latina [@lalan], em que
+entende-se que deve-se, contudo, concentrar os esforços destes núcleos na
+adaptação das ferramentas clássicas do CTM à realidade regional.

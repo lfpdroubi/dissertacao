@@ -1,11 +1,11 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/W32TeX) (preloaded format=pdflatex 2020.4.29)  18 MAY 2020 16:17
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/W32TeX) (preloaded format=pdflatex 2020.12.10)  3 APR 2021 18:56
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
 **thesis.tex
 (./thesis.tex
-LaTeX2e <2020-02-02> patch level 5
-L3 programming layer <2020-04-06>
+LaTeX2e <2020-10-01> patch level 2
+L3 programming layer <2020-12-07> xparse <2020-03-03>
 (c:/Users/lfpdr/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/abntex2/abntex2.cl
 s
 Document Class: abntex2 2018/11/24 v-1.9.7 abnTeX2
@@ -13,14 +13,13 @@ Document Class: abntex2 2018/11/24 v-1.9.7 abnTeX2
 Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
 ) (c:/Users/lfpdr/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/memoir/memoir.cl
 s
-Document Class: memoir 2020/03/25 v3.7k configurable book, report, article docu
+Document Class: memoir 2020/10/04 v3.7n configurable book, report, article docu
 ment class
 \onelineskip=\skip47
 \lxvchars=\skip48
 \xlvchars=\skip49
-\@memcnta=\count167
-\c@@memmarkcntra=\count168
-LaTeX Info: Redefining \InputIfFileExists on input line 140.
+\@memcnta=\count177
+\c@@memmarkcntra=\count178
 (c:/Users/lfpdr/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/iftex/iftex.sty
 Package: iftex 2020/03/06 v1.0d TeX engine tests
 )
@@ -41,20 +40,20 @@ File: mem12.clo 2010/10/19 v0.4b memoir class 12pt size option
 \mem@maxheadheight=\skip61
 \mem@maxfootheight=\skip62
 \headwidth=\skip63
-\c@storedpagenumber=\count169
-\memPD=\dimen134
+\c@storedpagenumber=\count179
+\memPD=\dimen138
 \m@mabparskip=\skip64
 \thanksmarkwidth=\skip65
 \thanksmarksep=\skip66
 \droptitle=\skip67
-\c@book=\count170
-\c@part=\count171
-\c@chapter=\count172
-\c@section=\count173
-\c@subsection=\count174
-\c@subsubsection=\count175
-\c@paragraph=\count176
-\c@subparagraph=\count177
+\c@book=\count180
+\c@part=\count181
+\c@chapter=\count182
+\c@section=\count183
+\c@subsection=\count184
+\c@subsubsection=\count185
+\c@paragraph=\count186
+\c@subparagraph=\count187
 \beforechapskip=\skip68
 \midchapskip=\skip69
 \afterchapskip=\skip70
@@ -76,10 +75,10 @@ File: mem12.clo 2010/10/19 v0.4b memoir class 12pt size option
 \beforesubparaskip=\skip86
 \aftersubparaskip=\skip87
 \pfbreakskip=\skip88
-\c@@ppsavesec=\count178
-\c@@ppsaveapp=\count179
-\ragrparindent=\dimen135
-\everylistparindent=\dimen136
+\c@@ppsavesec=\count188
+\c@@ppsaveapp=\count189
+\ragrparindent=\dimen139
+\everylistparindent=\dimen140
 \parsepi=\skip89
 \topsepi=\skip90
 \itemsepi=\skip91
@@ -95,38 +94,38 @@ File: mem12.clo 2010/10/19 v0.4b memoir class 12pt size option
 \@enLab=\toks15
 \abstitleskip=\skip101
 \absleftindent=\skip102
-\abs@leftindent=\dimen137
+\abs@leftindent=\dimen141
 \absrightindent=\skip103
 \absparindent=\skip104
 \absparsep=\skip105
-\c@vslineno=\count180
-\c@poemline=\count181
-\c@modulo@vs=\count182
-\c@memfvsline=\count183
+\c@vslineno=\count190
+\c@poemline=\count191
+\c@modulo@vs=\count192
+\c@memfvsline=\count193
 \vleftskip=\skip106
 \vrightskip=\skip107
 \stanzaskip=\skip108
 \versewidth=\skip109
 \vgap=\skip110
 \vindent=\skip111
-\vleftmargin=\dimen138
-\c@verse=\count184
-\c@chrsinstr=\count185
+\vleftmargin=\dimen142
+\c@verse=\count194
+\c@chrsinstr=\count195
 \beforepoemtitleskip=\skip112
 \afterpoemtitleskip=\skip113
-\c@poem=\count186
+\c@poem=\count196
 \beforePoemTitleskip=\skip114
 \midPoemTitleskip=\skip115
 \afterPoemTitleskip=\skip116
 (c:/Users/lfpdr/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/tools/array.sty
-Package: array 2019/08/31 v2.4l Tabular extension package (FMi)
-\col@sep=\dimen139
-\ar@mcellbox=\box45
-\extrarowheight=\dimen140
+Package: array 2020/10/01 v2.5c Tabular extension package (FMi)
+\col@sep=\dimen143
+\ar@mcellbox=\box47
+\extrarowheight=\dimen144
 \NC@list=\toks16
 \extratabsurround=\skip117
 \backup@length=\skip118
-\ar@cellbox=\box46
+\ar@cellbox=\box48
 ) (c:/Users/lfpdr/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/tools/dcolumn.st
 y
 Package: dcolumn 2014/10/28 v1.06 decimal alignment package (DPC)
@@ -136,41 +135,41 @@ Package: delarray 2014/10/28 v1.01 array delimiter package (DPC)
 )
 (c:/Users/lfpdr/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/tools/tabularx.sty
 Package: tabularx 2020/01/15 v2.11c `tabularx' package (DPC)
-\TX@col@width=\dimen141
-\TX@old@table=\dimen142
-\TX@old@col=\dimen143
-\TX@target=\dimen144
-\TX@delta=\dimen145
-\TX@cols=\count187
+\TX@col@width=\dimen145
+\TX@old@table=\dimen146
+\TX@old@col=\dimen147
+\TX@target=\dimen148
+\TX@delta=\dimen149
+\TX@cols=\count197
 \TX@ftn=\toks17
 )
-\heavyrulewidth=\dimen146
-\lightrulewidth=\dimen147
-\cmidrulewidth=\dimen148
-\belowrulesep=\dimen149
-\belowbottomsep=\dimen150
-\aboverulesep=\dimen151
-\abovetopsep=\dimen152
-\cmidrulesep=\dimen153
-\cmidrulekern=\dimen154
-\defaultaddspace=\dimen155
-\@cmidla=\count188
-\@cmidlb=\count189
-\@aboverulesep=\dimen156
-\@belowrulesep=\dimen157
-\@thisruleclass=\count190
-\@lastruleclass=\count191
-\@thisrulewidth=\dimen158
+\heavyrulewidth=\dimen150
+\lightrulewidth=\dimen151
+\cmidrulewidth=\dimen152
+\belowrulesep=\dimen153
+\belowbottomsep=\dimen154
+\aboverulesep=\dimen155
+\abovetopsep=\dimen156
+\cmidrulesep=\dimen157
+\cmidrulekern=\dimen158
+\defaultaddspace=\dimen159
+\@cmidla=\count198
+\@cmidlb=\count199
+\@aboverulesep=\dimen160
+\@belowrulesep=\dimen161
+\@thisruleclass=\count266
+\@lastruleclass=\count267
+\@thisrulewidth=\dimen162
 \ctableftskip=\skip119
 \ctabrightskip=\skip120
-\abovecolumnspenalty=\count192
-\@linestogo=\count193
-\@cellstogo=\count194
-\@cellsincolumn=\count195
+\abovecolumnspenalty=\count268
+\@linestogo=\count269
+\@cellstogo=\count270
+\@cellsincolumn=\count271
 \crtok=\toks18
-\@mincolumnwidth=\dimen159
-\c@newflo@tctr=\count196
-\mem@margin@floatbox=\box47
+\@mincolumnwidth=\dimen163
+\c@newflo@tctr=\count272
+\mem@margin@floatbox=\box49
 \@contcwidth=\skip121
 \@contindw=\skip122
 \abovecaptionskip=\skip123
@@ -180,29 +179,29 @@ Package: tabularx 2020/01/15 v2.11c `tabularx' package (DPC)
 \subfloatcaptopadj=\skip127
 \subfloatbottomskip=\skip128
 \subfloatlabelskip=\skip129
-\subfloatcapmargin=\dimen160
-\c@@contsubnum=\count197
-\m@mscap@capbox=\box48
-\m@mscap@fbox=\box49
-\sidecapsep=\dimen161
-\sidecapwidth=\dimen162
-\m@m@tempdima=\dimen163
-\m@mscapraise=\dimen164
-\sidecapraise=\dimen165
-\m@mscapmainwidth=\dimen166
-\m@mscaplkern=\dimen167
+\subfloatcapmargin=\dimen164
+\c@@contsubnum=\count273
+\m@mscap@capbox=\box50
+\m@mscap@fbox=\box51
+\sidecapsep=\dimen165
+\sidecapwidth=\dimen166
+\m@m@tempdima=\dimen167
+\m@mscapraise=\dimen168
+\sidecapraise=\dimen169
+\m@mscapmainwidth=\dimen170
+\m@mscaplkern=\dimen171
 \beforeepigraphskip=\skip130
 \afterepigraphskip=\skip131
 \epigraphwidth=\skip132
 \epigraphrule=\skip133
-LaTeX Info: Redefining \em on input line 7664.
-LaTeX Info: Redefining \emph on input line 7672.
+LaTeX Info: Redefining \em on input line 7678.
+LaTeX Info: Redefining \emph on input line 7686.
 \tocentryskip=\skip134
 \tocbaseline=\skip135
 \cftparskip=\skip136
 \cftbeforebookskip=\skip137
-\cftbookindent=\dimen168
-\cftbooknumwidth=\dimen169
+\cftbookindent=\dimen172
+\cftbooknumwidth=\dimen173
 \cftbeforepartskip=\skip138
 \cftpartindent=\skip139
 \cftpartnumwidth=\skip140
@@ -224,18 +223,18 @@ LaTeX Info: Redefining \emph on input line 7672.
 \cftbeforesubparagraphskip=\skip156
 \cftsubparagraphindent=\skip157
 \cftsubparagraphnumwidth=\skip158
-\prechapterprecisshift=\dimen170
-\c@maxsecnumdepth=\count198
-\bibindent=\dimen171
+\prechapterprecisshift=\dimen174
+\c@maxsecnumdepth=\count274
+\bibindent=\dimen175
 \bibitemsep=\skip159
 \indexcolsep=\skip160
 \indexrule=\skip161
 \indexmarkstyle=\toks19
-\@indexbox=\insert199
-\glossarycolsep=\dimen172
-\glossaryrule=\dimen173
+\@indexbox=\insert252
+\glossarycolsep=\dimen176
+\glossaryrule=\dimen177
 \sideparvshift=\skip162
-\sideins=\insert252
+\sideins=\insert251
 \sidebartopsep=\skip163
 \sidebarhsep=\skip164
 \sidebarvsep=\skip165
@@ -244,69 +243,67 @@ LaTeX Info: Redefining \emph on input line 7672.
 \footmarksep=\skip168
 \footparindent=\skip169
 \footinsdim=\skip170
-\footinsv@r=\insert251
-\@mpfootinsv@r=\insert250
-\m@m@k=\count266
-\m@m@h=\dimen174
+\footinsv@r=\insert250
+\@mpfootinsv@r=\insert249
+\m@m@k=\count275
+\m@m@h=\dimen178
 \m@mipn@skip=\skip171
-\sidefootins=\insert249
+\sidefootins=\insert248
 \sidefootadjust=\skip172
 \sidefootheight=\skip173
 \sidefoothsep=\skip174
 \sidefootvsep=\skip175
 \sidefootwidth=\skip176
 \m@mdownsf=\skip177
-\c@sidefootnote=\count267
+\c@sidefootnote=\count276
 \sidefootmarkwidth=\skip178
 \sidefootmarksep=\skip179
 \sidefootparindent=\skip180
-\c@pagenote=\count268
-\c@pagenoteshadow=\count269
+\c@pagenote=\count277
+\c@pagenoteshadow=\count278
 \mem@pn@lastkern=\skip181
 \every@verbatim=\toks20
 \afterevery@verbatim=\toks21
 \verbatim@line=\toks22
-\tab@position=\count270
+\tab@position=\count279
 \verbatim@in@stream=\read2
 \verbatimindent=\skip182
 \verbatim@out=\write3
 \bvboxsep=\skip183
-\c@memfbvline=\count271
-\c@bvlinectr=\count272
+\c@memfbvline=\count280
+\c@bvlinectr=\count281
 \bvnumlength=\skip184
-\fb@frw=\dimen175
-\fb@frh=\dimen176
-\FrameRule=\dimen177
-\FrameSep=\dimen178
-\c@cp@cntr=\count273
-LaTeX Info: Redefining \: on input line 12191.
-LaTeX Info: Redefining \! on input line 12193.
-\c@ism@mctr=\count274
-\c@xsm@mctr=\count275
-\c@csm@mctr=\count276
-\c@ksm@mctr=\count277
-\c@xksm@mctr=\count278
-\c@cksm@mctr=\count279
-\c@msm@mctr=\count280
-\c@xmsm@mctr=\count281
-\c@cmsm@mctr=\count282
-\c@bsm@mctr=\count283
-\c@workm@mctr=\count284
-\c@sheetsequence=\count285
-\c@lastsheet=\count286
-\c@lastpage=\count287
+\fb@frw=\dimen179
+\fb@frh=\dimen180
+\FrameRule=\dimen181
+\FrameSep=\dimen182
+\c@cp@cntr=\count282
+\c@ism@mctr=\count283
+\c@xsm@mctr=\count284
+\c@csm@mctr=\count285
+\c@ksm@mctr=\count286
+\c@xksm@mctr=\count287
+\c@cksm@mctr=\count288
+\c@msm@mctr=\count289
+\c@xmsm@mctr=\count290
+\c@cmsm@mctr=\count291
+\c@bsm@mctr=\count292
+\c@workm@mctr=\count293
+\c@sheetsequence=\count294
+\c@lastsheet=\count295
+\c@lastpage=\count296
 
 (c:/Users/lfpdr/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/textcase/textcase.
 sty
 Package: textcase 2019/09/14 v1.00 Text only upper/lower case changing (DPC)
 )
-\c@figure=\count288
-\c@lofdepth=\count289
+\c@figure=\count297
+\c@lofdepth=\count298
 \cftbeforefigureskip=\skip185
 \cftfigureindent=\skip186
 \cftfigurenumwidth=\skip187
-\c@table=\count290
-\c@lotdepth=\count291
+\c@table=\count299
+\c@lotdepth=\count300
 \cftbeforetableskip=\skip188
 \cfttableindent=\skip189
 \cfttablenumwidth=\skip190
@@ -344,15 +341,15 @@ Package verse [2008/07/23] emulated by memoir.
 )
 (c:/Users/lfpdr/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/hyperref/hyperref.
 sty
-Package: hyperref 2020/01/14 v7.00d Hypertext links for LaTeX
+Package: hyperref 2020-05-15 v7.00e Hypertext links for LaTeX
 
 (c:/Users/lfpdr/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/ltxcmds/ltxcmds.
 sty
-Package: ltxcmds 2019/12/15 v1.24 LaTeX kernel commands for general use (HO)
+Package: ltxcmds 2020-05-10 v1.25 LaTeX kernel commands for general use (HO)
 )
-(c:/Users/lfpdr/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/pdftexcmds/pdftexc
-mds.sty
-Package: pdftexcmds 2019/11/24 v0.31 Utility functions of pdfTeX for LuaTeX (HO
+(c:/Users/lfpdr/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pdftexcmds/pdfte
+xcmds.sty
+Package: pdftexcmds 2020-06-27 v0.33 Utility functions of pdfTeX for LuaTeX (HO
 )
 
 (c:/Users/lfpdr/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/infwarerr/infwar
@@ -394,15 +391,15 @@ Package: auxhook 2019-12-17 v1.6 Hooks for auxiliary files (HO)
 )
 (c:/Users/lfpdr/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/kvoptions/kvoption
 s.sty
-Package: kvoptions 2019/11/29 v3.13 Key value format for package options (HO)
+Package: kvoptions 2020-10-07 v3.14 Key value format for package options (HO)
 )
-\@linkdim=\dimen179
-\Hy@linkcounter=\count292
-\Hy@pagecounter=\count293
+\@linkdim=\dimen183
+\Hy@linkcounter=\count301
+\Hy@pagecounter=\count302
 
 (c:/Users/lfpdr/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/hyperref/pd1enc.de
 f
-File: pd1enc.def 2020/01/14 v7.00d Hyperref: PDFDocEncoding definition (HO)
+File: pd1enc.def 2020-05-15 v7.00e Hyperref: PDFDocEncoding definition (HO)
 Now handling font encoding PD1 ...
 ... no UTF-8 mapping file for font encoding PD1
 )
@@ -414,21 +411,21 @@ Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
 s.sty
 Package: etexcmds 2019/12/15 v1.7 Avoid name clashes with e-TeX commands (HO)
 )
-\Hy@SavedSpaceFactor=\count294
-Package hyperref Info: Hyper figures OFF on input line 4547.
-Package hyperref Info: Link nesting OFF on input line 4552.
-Package hyperref Info: Hyper index ON on input line 4555.
-Package hyperref Info: Plain pages OFF on input line 4562.
-Package hyperref Info: Backreferencing OFF on input line 4567.
+\Hy@SavedSpaceFactor=\count303
+Package hyperref Info: Hyper figures OFF on input line 4464.
+Package hyperref Info: Link nesting OFF on input line 4469.
+Package hyperref Info: Hyper index ON on input line 4472.
+Package hyperref Info: Plain pages OFF on input line 4479.
+Package hyperref Info: Backreferencing OFF on input line 4484.
 Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
-Package hyperref Info: Bookmarks ON on input line 4800.
-\c@Hy@tempcnt=\count295
+Package hyperref Info: Bookmarks ON on input line 4717.
+\c@Hy@tempcnt=\count304
 (c:/Users/lfpdr/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/url/url.sty
 \Urlmuskip=\muskip16
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
-LaTeX Info: Redefining \url on input line 5159.
-\XeTeXLinkMargin=\dimen180
+LaTeX Info: Redefining \url on input line 5076.
+\XeTeXLinkMargin=\dimen184
 
 (c:/Users/lfpdr/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/bitset/bitset.st
 y
@@ -439,47 +436,50 @@ tcalc.sty
 Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO
 )
 ))
-\Fld@menulength=\count296
-\Field@Width=\dimen181
-\Fld@charsize=\dimen182
-Package hyperref Info: Hyper figures OFF on input line 6430.
-Package hyperref Info: Link nesting OFF on input line 6435.
-Package hyperref Info: Hyper index ON on input line 6438.
-Package hyperref Info: backreferencing OFF on input line 6445.
-Package hyperref Info: Link coloring OFF on input line 6450.
-Package hyperref Info: Link coloring with OCG OFF on input line 6455.
-Package hyperref Info: PDF/A mode OFF on input line 6460.
-LaTeX Info: Redefining \ref on input line 6500.
-LaTeX Info: Redefining \pageref on input line 6504.
+\Fld@menulength=\count305
+\Field@Width=\dimen185
+\Fld@charsize=\dimen186
+Package hyperref Info: Hyper figures OFF on input line 6347.
+Package hyperref Info: Link nesting OFF on input line 6352.
+Package hyperref Info: Hyper index ON on input line 6355.
+Package hyperref Info: backreferencing OFF on input line 6362.
+Package hyperref Info: Link coloring OFF on input line 6367.
+Package hyperref Info: Link coloring with OCG OFF on input line 6372.
+Package hyperref Info: PDF/A mode OFF on input line 6377.
+LaTeX Info: Redefining \ref on input line 6417.
+LaTeX Info: Redefining \pageref on input line 6421.
 
-(c:/Users/lfpdr/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/atbegshi/atbegsh
-i.sty
-Package: atbegshi 2019/12/05 v1.19 At begin shipout hook (HO)
+(c:/Users/lfpdr/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/base/atbegshi-ltx.
+sty
+Package: atbegshi-ltx 2020/08/17 v1.0a Emulation of the original atbegshi packa
+ge
+with kernel methods
 )
-\Hy@abspage=\count297
-\c@Item=\count298
-\c@Hfootnote=\count299
+\Hy@abspage=\count306
+\c@Item=\count307
+\c@Hfootnote=\count308
 )
 (c:/Users/lfpdr/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/memoir/memhfixc.st
 y
 Package: memhfixc 2019/10/24 v1.18 nameref/hyperref package fixes for memoir cl
 ass
-\c@memhycontfloat=\count300
-\c@Hpagenote=\count301
+\c@memhycontfloat=\count309
+\c@Hpagenote=\count310
 )
 Package hyperref Info: Driver (autodetected): hpdftex.
 
 (c:/Users/lfpdr/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/hyperref/hpdftex.d
 ef
-File: hpdftex.def 2020/01/14 v7.00d Hyperref driver for pdfTeX
+File: hpdftex.def 2020-05-15 v7.00e Hyperref driver for pdfTeX
 
-(c:/Users/lfpdr/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/atveryend/atveryen
-d.sty
-Package: atveryend 2019-12-11 v1.11 Hooks at the very end of document (HO)
-Package atveryend Info: \enddocument detected (standard20110627).
+(c:/Users/lfpdr/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/base/atveryend-ltx
+.sty
+Package: atveryend-ltx 2020/08/19 v1.0a Emulation of the original atvery packag
+e
+with kernel methods
 )
-\Fld@listcount=\count302
-\c@bookmark@seq@number=\count303
+\Fld@listcount=\count311
+\c@bookmark@seq@number=\count312
 
 (c:/Users/lfpdr/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/rerunfilecheck/rer
 unfilecheck.sty
@@ -496,26 +496,41 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 )
 (c:/Users/lfpdr/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/bookmark/bookmark.
 sty
-Package: bookmark 2019/12/03 v1.28 PDF bookmarks (HO)
+Package: bookmark 2020-11-06 v1.29 PDF bookmarks (HO)
 
 (c:/Users/lfpdr/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/bookmark/bkm-pdfte
 x.def
-File: bkm-pdftex.def 2019/12/03 v1.28 bookmark driver for pdfTeX (HO)
-\BKM@id=\count304
+File: bkm-pdftex.def 2020-11-06 v1.29 bookmark driver for pdfTeX (HO)
+\BKM@id=\count313
 )) (c:/Users/lfpdr/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/babel/babel.s
 ty
-Package: babel 2020/04/28 3.43 The Babel package
+Package: babel 2020/10/27 3.51 The Babel package
 (c:/Users/lfpdr/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/babel/babel.def
-File: babel.def 2020/04/28 3.43 Babel common definitions
-\babel@savecnt=\count305
-\U@D=\dimen183
+File: babel.def 2020/10/27 3.51 Babel common definitions
+\babel@savecnt=\count314
+\U@D=\dimen187
+\l@babelnohyphens=\language6
 
 (c:/Users/lfpdr/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/babel/txtbabel.d
 ef)
 \bbl@readstream=\read3
 )
-\bbl@dirlevel=\count306
+\bbl@dirlevel=\count315
 
+(c:/Users/lfpdr/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/babel-english/en
+glish.ldf
+Language: english 2017/06/06 v3.3r English support from the babel system
+Package babel Info: \l@british = using hyphenrules for english
+(babel)             (\language0) on input line 82.
+Package babel Info: \l@UKenglish = using hyphenrules for english
+(babel)             (\language0) on input line 83.
+Package babel Info: \l@canadian = using hyphenrules for english
+(babel)             (\language0) on input line 102.
+Package babel Info: \l@australian = using hyphenrules for english
+(babel)             (\language0) on input line 105.
+Package babel Info: \l@newzealand = using hyphenrules for english
+(babel)             (\language0) on input line 108.
+)
 (c:/Users/lfpdr/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/babel-portuges/b
 razil.ldf
 Language: portuges 2020/05/04 v1.2r Portuguese support from the babel system
@@ -527,22 +542,22 @@ Package babel Info: Making " an active character on input line 143.
 sty
 Package: enumitem 2019/06/20 v3.9 Customized lists
 \labelindent=\skip192
-\enit@outerparindent=\dimen184
+\enit@outerparindent=\dimen188
 \enit@toks=\toks24
-\enit@inbox=\box50
-\enit@count@id=\count307
-\enitdp@description=\count308
+\enit@inbox=\box52
+\enit@count@id=\count316
+\enitdp@description=\count317
 ) (c:/Users/lfpdr/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/tools/calc.sty
 Package: calc 2017/05/25 v4.3 Infix arithmetic (KKT,FJ)
-\calc@Acount=\count309
-\calc@Bcount=\count310
-\calc@Adimen=\dimen185
-\calc@Bdimen=\dimen186
+\calc@Acount=\count318
+\calc@Bcount=\count319
+\calc@Adimen=\dimen189
+\calc@Bdimen=\dimen190
 \calc@Askip=\skip193
 \calc@Bskip=\skip194
 LaTeX Info: Redefining \setlength on input line 80.
 LaTeX Info: Redefining \addtolength on input line 81.
-\calc@Ccount=\count311
+\calc@Ccount=\count320
 \calc@Cskip=\skip195
 )
 
@@ -565,29 +580,29 @@ Sidefoothsep and sidefootwidth: 7pt and 42pt
 Sidefootvsep and sidefootheight: 14.5pt and 590.14995pt
 ******************************************************
 
-\c@abntex@bookmarkcounter=\count312
+\c@abntex@bookmarkcounter=\count321
 \cftlastnumwidth=\skip196
 \chapternamenumlength=\skip197
 \ABNTEXcitacaorecuo=\skip198
-\c@alineasi=\count313
-\c@alineasii=\count314
-\enitdp@alineas=\count315
-\c@subalineasi=\count316
-\enitdp@subalineas=\count317
-\c@incisosi=\count318
-\enitdp@incisos=\count319
-\ABNTEXsignwidth=\skip256
-\ABNTEXsignthickness=\skip257
-\ABNTEXsignskip=\skip258
+\c@alineasi=\count322
+\c@alineasii=\count323
+\enitdp@alineas=\count324
+\c@subalineasi=\count325
+\enitdp@subalineas=\count326
+\c@incisosi=\count327
+\enitdp@incisos=\count328
+\ABNTEXsignwidth=\skip199
+\ABNTEXsignthickness=\skip256
+\ABNTEXsignskip=\skip257
 ) (./setup/ufscthesisA4-alf.sty (c:/Users/lfpdr/AppData/Roaming/TinyTeX/texmf-d
 ist/tex/latex/base/fontenc.sty
-Package: fontenc 2020/02/11 v2.0o Standard LaTeX package
+Package: fontenc 2020/08/10 v2.0s Standard LaTeX package
 ) (c:/Users/lfpdr/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/psnfss/helvet.st
 y
 Package: helvet 2020/03/25 PSNFSS-v9.3 (WaS) 
 ) (c:/Users/lfpdr/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/base/inputenc.st
 y
-Package: inputenc 2018/08/11 v1.3c Input encoding file
+Package: inputenc 2020/08/01 v1.3d Input encoding file
 \inpenc@prehook=\toks25
 \inpenc@posthook=\toks26
 )
@@ -596,7 +611,7 @@ sty
 Package: indentfirst 1995/11/23 v1.03 Indent first paragraph (DPC)
 )
 (c:/Users/lfpdr/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/graphics/color.sty
-Package: color 2019/11/23 v1.2a Standard LaTeX Color (DPC)
+Package: color 2020/02/24 v1.2b Standard LaTeX Color (DPC)
 
 (c:/Users/lfpdr/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/graphics-cfg/color
 .cfg
@@ -606,15 +621,15 @@ Package color Info: Driver file: pdftex.def on input line 147.
 
 (c:/Users/lfpdr/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/graphics-def/pdfte
 x.def
-File: pdftex.def 2018/01/08 v1.0l Graphics/color driver for pdftex
+File: pdftex.def 2020/10/05 v1.2a Graphics/color driver for pdftex
 ))
 (c:/Users/lfpdr/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/graphics/graphicx.
 sty
-Package: graphicx 2019/11/30 v1.2a Enhanced LaTeX Graphics (DPC,SPQR)
+Package: graphicx 2020/09/09 v1.2b Enhanced LaTeX Graphics (DPC,SPQR)
 
 (c:/Users/lfpdr/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/graphics/graphics.
 sty
-Package: graphics 2019/11/30 v1.4a Standard LaTeX Graphics (DPC,SPQR)
+Package: graphics 2020/08/30 v1.4c Standard LaTeX Graphics (DPC,SPQR)
 (c:/Users/lfpdr/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/graphics/trig.sty
 Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
 )
@@ -624,32 +639,31 @@ File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
 )
 Package graphics Info: Driver file: pdftex.def on input line 105.
 )
-\Gin@req@height=\dimen187
-\Gin@req@width=\dimen188
+\Gin@req@height=\dimen191
+\Gin@req@width=\dimen192
 )
 (c:/Users/lfpdr/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/microtype/microtyp
 e.sty
-Package: microtype 2019/11/18 v2.7d Micro-typographical refinements (RS)
+Package: microtype 2020/12/07 v2.8 Micro-typographical refinements (RS)
 \MT@toks=\toks27
-\MT@count=\count320
-LaTeX Info: Redefining \textls on input line 790.
-\MT@outer@kern=\dimen189
-LaTeX Info: Redefining \textmicrotypecontext on input line 1354.
-\MT@listname@count=\count321
+\MT@count=\count329
+LaTeX Info: Redefining \textls on input line 788.
+\MT@outer@kern=\dimen193
+LaTeX Info: Redefining \textmicrotypecontext on input line 1358.
+\MT@listname@count=\count330
 
 (c:/Users/lfpdr/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/microtype/microtyp
 e-pdftex.def
-File: microtype-pdftex.def 2019/11/18 v2.7d Definitions specific to pdftex (RS)
-
-LaTeX Info: Redefining \lsstyle on input line 914.
-LaTeX Info: Redefining \lslig on input line 914.
-\MT@outer@space=\skip259
+File: microtype-pdftex.def 2020/12/07 v2.8 Definitions specific to pdftex (RS)
+LaTeX Info: Redefining \lsstyle on input line 915.
+LaTeX Info: Redefining \lslig on input line 915.
+\MT@outer@space=\skip258
 )
 Package microtype Info: Loading configuration file microtype.cfg.
 
 (c:/Users/lfpdr/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/microtype/microtyp
 e.cfg
-File: microtype.cfg 2019/11/18 v2.7d microtype main configuration file (RS)
+File: microtype.cfg 2020/12/07 v2.8 microtype main configuration file (RS)
 ))
 (c:/Users/lfpdr/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/pdfpages/pdfpages.
 sty
@@ -657,21 +671,23 @@ Package: pdfpages 2020/01/28 v0.5q Insert pages of external PDF documents (AM)
 
 (c:/Users/lfpdr/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/eso-pic/eso-pic.st
 y
-Package: eso-pic 2018/04/12 v2.0h eso-pic (RN)
+Package: eso-pic 2020/10/14 v3.0a eso-pic (RN)
+\ESO@tempdima=\dimen194
+\ESO@tempdimb=\dimen195
 )
-\AM@pagewidth=\dimen190
-\AM@pageheight=\dimen191
+\AM@pagewidth=\dimen196
+\AM@pageheight=\dimen197
 
 (c:/Users/lfpdr/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/pdfpages/pppdftex.
 def
 File: pppdftex.def 2020/01/28 v0.5q Pdfpages driver for pdfTeX (AM)
 )
-\AM@pagebox=\box51
+\AM@pagebox=\box53
 \AM@global@opts=\toks28
-\AM@pagecnt=\count322
+\AM@pagecnt=\count331
 \AM@toc@title=\toks29
-\c@AM@survey=\count323
-\AM@templatesizebox=\box52
+\c@AM@survey=\count332
+\AM@templatesizebox=\box54
 )
 (c:/Users/lfpdr/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/csquotes/csquotes.
 sty
@@ -679,15 +695,15 @@ Package: csquotes 2019-12-06 v5.2j context-sensitive quotations (JAW)
 
 (c:/Users/lfpdr/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/etoolbox/etoolbox.
 sty
-Package: etoolbox 2019/09/21 v2.5h e-TeX tools for LaTeX (JAW)
-\etb@tempcnta=\count324
+Package: etoolbox 2020/10/05 v2.5k e-TeX tools for LaTeX (JAW)
+\etb@tempcnta=\count333
 )
-\csq@reset=\count325
-\csq@gtype=\count326
-\csq@glevel=\count327
-\csq@qlevel=\count328
-\csq@maxlvl=\count329
-\csq@tshold=\count330
+\csq@reset=\count334
+\csq@gtype=\count335
+\csq@glevel=\count336
+\csq@qlevel=\count337
+\csq@maxlvl=\count338
+\csq@tshold=\count339
 \csq@ltx@everypar=\toks30
 
 (c:/Users/lfpdr/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/csquotes/csquotes.
@@ -707,7 +723,7 @@ Package: glossaries 2020/03/19 v4.46 (NLCT)
 
 (c:/Users/lfpdr/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/xkeyval/xkeyval.st
 y
-Package: xkeyval 2014/12/03 v2.7a package option processing (HA)
+Package: xkeyval 2020/11/20 v2.8 package option processing (HA)
 
 (c:/Users/lfpdr/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/xkeyval/xkeyval.
 tex
@@ -716,7 +732,7 @@ tex
 \XKV@toks=\toks31
 \XKV@tempa@toks=\toks32
 )
-\XKV@depth=\count331
+\XKV@depth=\count340
 File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
 ))
 (c:/Users/lfpdr/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/mfirstuc/mfirstuc.
@@ -733,8 +749,8 @@ Package: datatool-base 2019/09/27 v2.32 (NLCT)
 
 (c:/Users/lfpdr/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/amsmath/amsmath.st
 y
-Package: amsmath 2020/01/20 v2.17e AMS math features
-\@mathmargin=\skip260
+Package: amsmath 2020/09/23 v2.17i AMS math features
+\@mathmargin=\skip259
 For additional information on amsmath, use the `?' option.
 
 (c:/Users/lfpdr/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/amsmath/amstext.st
@@ -744,56 +760,56 @@ Package: amstext 2000/06/29 v2.01 AMS text
 (c:/Users/lfpdr/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/amsmath/amsgen.sty
 File: amsgen.sty 1999/11/30 v2.0 generic functions
 \@emptytoks=\toks35
-\ex@=\dimen192
+\ex@=\dimen198
 ))
 (c:/Users/lfpdr/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/amsmath/amsbsy.sty
 Package: amsbsy 1999/11/29 v1.2d Bold Symbols
-\pmbraise@=\dimen193
+\pmbraise@=\dimen199
 )
 (c:/Users/lfpdr/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/amsmath/amsopn.sty
 Package: amsopn 2016/03/08 v2.02 operator names
 )
-\inf@bad=\count332
-LaTeX Info: Redefining \frac on input line 227.
-\uproot@=\count333
-\leftroot@=\count334
-LaTeX Info: Redefining \overline on input line 389.
-\classnum@=\count335
-\DOTSCASE@=\count336
-LaTeX Info: Redefining \ldots on input line 486.
-LaTeX Info: Redefining \dots on input line 489.
-LaTeX Info: Redefining \cdots on input line 610.
-\Mathstrutbox@=\box53
-\strutbox@=\box54
-\big@size=\dimen194
-LaTeX Font Info:    Redeclaring font encoding OML on input line 733.
-LaTeX Font Info:    Redeclaring font encoding OMS on input line 734.
-\macc@depth=\count337
-\c@MaxMatrixCols=\count338
+\inf@bad=\count341
+LaTeX Info: Redefining \frac on input line 234.
+\uproot@=\count342
+\leftroot@=\count343
+LaTeX Info: Redefining \overline on input line 399.
+\classnum@=\count344
+\DOTSCASE@=\count345
+LaTeX Info: Redefining \ldots on input line 496.
+LaTeX Info: Redefining \dots on input line 499.
+LaTeX Info: Redefining \cdots on input line 620.
+\Mathstrutbox@=\box55
+\strutbox@=\box56
+\big@size=\dimen256
+LaTeX Font Info:    Redeclaring font encoding OML on input line 743.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 744.
+\macc@depth=\count346
+\c@MaxMatrixCols=\count347
 \dotsspace@=\muskip17
-\c@parentequation=\count339
-\dspbrk@lvl=\count340
+\c@parentequation=\count348
+\dspbrk@lvl=\count349
 \tag@help=\toks36
-\row@=\count341
-\column@=\count342
-\maxfields@=\count343
+\row@=\count350
+\column@=\count351
+\maxfields@=\count352
 \andhelp@=\toks37
-\eqnshift@=\dimen195
-\alignsep@=\dimen196
-\tagshift@=\dimen197
-\tagwidth@=\dimen198
-\totwidth@=\dimen256
-\lineht@=\dimen257
+\eqnshift@=\dimen257
+\alignsep@=\dimen258
+\tagshift@=\dimen259
+\tagwidth@=\dimen260
+\totwidth@=\dimen261
+\lineht@=\dimen262
 \@envbody=\toks38
-\multlinegap=\skip261
-\multlinetaggap=\skip262
+\multlinegap=\skip260
+\multlinetaggap=\skip261
 \mathdisplay@stack=\toks39
-LaTeX Info: Redefining \[ on input line 2859.
-LaTeX Info: Redefining \] on input line 2860.
+LaTeX Info: Redefining \[ on input line 2923.
+LaTeX Info: Redefining \] on input line 2924.
 ) (c:/Users/lfpdr/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/substr/substr.st
 y
 Package: substr 2009/10/20 v1.2 Handle substrings
-\c@su@anzahl=\count344
+\c@su@anzahl=\count353
 )
 (c:/Users/lfpdr/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/datatool/datatool-
 fp.sty
@@ -803,18 +819,18 @@ Package: fp 1995/04/02
 `Fixed Point Package', Version 0.8, April 2, 1995 (C) Michael Mehlich (c:/Users
 /lfpdr/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/fp/defpattern.sty
 Package: defpattern 1994/10/12
-\actioncount=\count345
+\actioncount=\count354
 ) (c:/Users/lfpdr/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/fp/fp-basic.sty
 Package: fp-basic 1996/05/13
-\FP@xs=\count346
-\FP@xia=\count347
-\FP@xib=\count348
-\FP@xfa=\count349
-\FP@xfb=\count350
-\FP@rega=\count351
-\FP@regb=\count352
-\FP@regs=\count353
-\FP@times=\count354
+\FP@xs=\count355
+\FP@xia=\count356
+\FP@xib=\count357
+\FP@xfa=\count358
+\FP@xfb=\count359
+\FP@rega=\count360
+\FP@regb=\count361
+\FP@regs=\count362
+\FP@times=\count363
 ) (c:/Users/lfpdr/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/fp/fp-addons.sty
 Package: fp-addons 1995/03/15
 ) (c:/Users/lfpdr/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/fp/fp-snap.sty
@@ -827,7 +843,7 @@ Package: fp-trigo 1995/04/14
 Package: fp-pas 1994/08/29
 ) (c:/Users/lfpdr/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/fp/fp-random.sty
 Package: fp-random 1995/02/23
-\FPseed=\count355
+\FPseed=\count364
 ) (c:/Users/lfpdr/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/fp/fp-eqn.sty
 Package: fp-eqn 1995/04/03
 ) (c:/Users/lfpdr/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/fp/fp-upn.sty
@@ -836,14 +852,14 @@ Package: fp-upn 1996/10/21
 Package: fp-eval 1995/04/03
 )))
 \@dtl@toks=\toks40
-\@dtl@tmpcount=\count356
-\dtl@tmplength=\skip263
-\dtl@sortresult=\count357
-\@dtl@numgrpsepcount=\count358
-\@dtl@datatype=\count359
-\dtl@codeA=\count360
-\dtl@codeB=\count361
-\@dtl@foreach@level=\count362
+\@dtl@tmpcount=\count365
+\dtl@tmplength=\skip262
+\dtl@sortresult=\count366
+\@dtl@numgrpsepcount=\count367
+\@dtl@datatype=\count368
+\dtl@codeA=\count369
+\dtl@codeB=\count370
+\@dtl@foreach@level=\count371
 )
 (c:/Users/lfpdr/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/glossaries/base/gl
 ossaries-compatible-307.sty
@@ -851,7 +867,7 @@ Package: glossaries-compatible-307 2020/03/19 v4.46 (NLCT)
 )
 (c:/Users/lfpdr/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/tracklang/tracklan
 g.sty
-Package: tracklang 2019/11/30 v1.4 (NLCT) Track Languages
+Package: tracklang 2020/06/30 v1.5 (NLCT) Track Languages
 
 (c:/Users/lfpdr/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/tracklang/trackl
 ang.tex))
@@ -865,13 +881,13 @@ File: glossaries-pt-BR.ldf 2014/11/23 v1.0
 
 (c:/Users/lfpdr/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/glossaries-portuge
 s/glossaries-portuges-utf8.ldf))
-\gls@level=\count363
+\gls@level=\count372
 \@gls@tmpb=\toks41
-\gls@tmplen=\skip264
+\gls@tmplen=\skip263
 
 Package glossaries Warning: Overriding \printglossary on input line 5939.
 
-\c@glossarysubentry=\count364
+\c@glossarysubentry=\count373
 
 Package glossaries Warning: Overriding `theglossary' environment on input line 
 6545.
@@ -888,7 +904,7 @@ Package: glossary-hypernav 2020/03/19 v4.46 (NLCT)
 (c:/Users/lfpdr/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/glossaries/styles/
 glossary-list.sty
 Package: glossary-list 2020/03/19 v4.46 (NLCT)
-\glslistdottedwidth=\skip265
+\glslistdottedwidth=\skip264
 )
 (c:/Users/lfpdr/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/glossaries/styles/
 glossary-long.sty
@@ -897,29 +913,29 @@ Package: glossary-long 2020/03/19 v4.46 (NLCT)
 (c:/Users/lfpdr/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/tools/longtable.st
 y
 Package: longtable 2020/01/07 v4.13 Multi-page Table package (DPC)
-\LTleft=\skip266
-\LTright=\skip267
-\LTpre=\skip268
-\LTpost=\skip269
-\LTchunksize=\count365
-\LTcapwidth=\dimen258
-\LT@head=\box55
-\LT@firsthead=\box56
-\LT@foot=\box57
-\LT@lastfoot=\box58
-\LT@cols=\count366
-\LT@rows=\count367
-\c@LT@tables=\count368
-\c@LT@chunks=\count369
+\LTleft=\skip265
+\LTright=\skip266
+\LTpre=\skip267
+\LTpost=\skip268
+\LTchunksize=\count374
+\LTcapwidth=\dimen263
+\LT@head=\box57
+\LT@firsthead=\box58
+\LT@foot=\box59
+\LT@lastfoot=\box60
+\LT@cols=\count375
+\LT@rows=\count376
+\c@LT@tables=\count377
+\c@LT@chunks=\count378
 \LT@p@ftn=\toks46
 )
-\glsdescwidth=\skip270
-\glspagelistwidth=\skip271
+\glsdescwidth=\skip269
+\glspagelistwidth=\skip270
 )
 (c:/Users/lfpdr/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/glossaries/styles/
 glossary-tree.sty
 Package: glossary-tree 2020/03/19 v4.46 (NLCT)
-\glstreeindent=\skip272
+\glstreeindent=\skip271
 ))
 (c:/Users/lfpdr/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/fourier/fourier.st
 y
@@ -931,7 +947,7 @@ Now handling font encoding FMS ...
 Now handling font encoding FMX ...
 ... no UTF-8 mapping file for font encoding FMX
 (c:/Users/lfpdr/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/base/fontenc.sty
-Package: fontenc 2020/02/11 v2.0o Standard LaTeX package
+Package: fontenc 2020/08/10 v2.0s Standard LaTeX package
 LaTeX Font Info:    Trying to load font information for T1+futs on input line 1
 12.
 (c:/Users/lfpdr/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/fourier/t1futs.fd
@@ -1109,186 +1125,213 @@ LaTeX Font Info:    Overwriting math alphabet `\Mathtt' in version `bold'
 )
 (c:/Users/lfpdr/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/biblatex/biblatex.
 sty
-Package: biblatex 2019/12/01 v3.14 programmable bibliographies (PK/MW)
+Package: biblatex 2020/08/23 v3.15a programmable bibliographies (PK/MW)
 (c:/Users/lfpdr/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/logreq/logreq.sty
 Package: logreq 2010/08/04 v1.0 xml request logger
-\lrq@indent=\count370
+\lrq@indent=\count379
 (c:/Users/lfpdr/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/logreq/logreq.def
 File: logreq.def 2010/08/04 v1.0 logreq spec v1.0
 ))
-\c@tabx@nest=\count371
-\c@listtotal=\count372
-\c@listcount=\count373
-\c@liststart=\count374
-\c@liststop=\count375
-\c@citecount=\count376
-\c@citetotal=\count377
-\c@multicitecount=\count378
-\c@multicitetotal=\count379
-\c@instcount=\count380
-\c@maxnames=\count381
-\c@minnames=\count382
-\c@maxitems=\count383
-\c@minitems=\count384
-\c@citecounter=\count385
-\c@maxcitecounter=\count386
-\c@savedcitecounter=\count387
-\c@uniquelist=\count388
-\c@uniquename=\count389
-\c@refsection=\count390
-\c@refsegment=\count391
-\c@maxextratitle=\count392
-\c@maxextratitleyear=\count393
-\c@maxextraname=\count394
-\c@maxextradate=\count395
-\c@maxextraalpha=\count396
-\c@abbrvpenalty=\count397
-\c@highnamepenalty=\count398
-\c@lownamepenalty=\count399
-\c@maxparens=\count400
-\c@parenlevel=\count401
-\blx@tempcnta=\count402
-\blx@tempcntb=\count403
-\blx@tempcntc=\count404
-\blx@maxsection=\count405
-\blx@maxsegment@0=\count406
-\blx@notetype=\count407
-\blx@parenlevel@text=\count408
-\blx@parenlevel@foot=\count409
-\blx@sectionciteorder@0=\count410
-\blx@entrysetcounter=\count411
-\labelnumberwidth=\skip273
-\labelalphawidth=\skip274
-\biblabelsep=\skip275
-\bibnamesep=\skip276
-\bibinitsep=\skip277
-\bibparsep=\skip278
-\bibhang=\skip279
+\c@tabx@nest=\count380
+\c@listtotal=\count381
+\c@listcount=\count382
+\c@liststart=\count383
+\c@liststop=\count384
+\c@citecount=\count385
+\c@citetotal=\count386
+\c@multicitecount=\count387
+\c@multicitetotal=\count388
+\c@instcount=\count389
+\c@maxnames=\count390
+\c@minnames=\count391
+\c@maxitems=\count392
+\c@minitems=\count393
+\c@citecounter=\count394
+\c@maxcitecounter=\count395
+\c@savedcitecounter=\count396
+\c@uniquelist=\count397
+\c@uniquename=\count398
+\c@refsection=\count399
+\c@refsegment=\count400
+\c@maxextratitle=\count401
+\c@maxextratitleyear=\count402
+\c@maxextraname=\count403
+\c@maxextradate=\count404
+\c@maxextraalpha=\count405
+\c@abbrvpenalty=\count406
+\c@highnamepenalty=\count407
+\c@lownamepenalty=\count408
+\c@maxparens=\count409
+\c@parenlevel=\count410
+\blx@tempcnta=\count411
+\blx@tempcntb=\count412
+\blx@tempcntc=\count413
+\blx@maxsection=\count414
+\blx@maxsegment@0=\count415
+\blx@notetype=\count416
+\blx@parenlevel@text=\count417
+\blx@parenlevel@foot=\count418
+\blx@sectionciteorder@0=\count419
+\blx@entrysetcounter=\count420
+\blx@biblioinstance=\count421
+\labelnumberwidth=\skip272
+\labelalphawidth=\skip273
+\biblabelsep=\skip274
+\bibnamesep=\skip275
+\bibinitsep=\skip276
+\bibparsep=\skip277
+\bibhang=\skip278
 \blx@bcfin=\read4
 \blx@bcfout=\write4
-\blx@langwohyphens=\language6
-\c@mincomprange=\count412
-\c@maxcomprange=\count413
-\c@mincompwidth=\count414
+\blx@langwohyphens=\language7
+\c@mincomprange=\count422
+\c@maxcomprange=\count423
+\c@mincompwidth=\count424
 Package biblatex Info: Trying to load biblatex default data model...
 Package biblatex Info: ... file 'blx-dm.def' found.
 
 (c:/Users/lfpdr/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/biblatex/blx-dm.de
 f
-File: blx-dm.def 2019/12/01 v3.14 biblatex localization (PK/MW)
+File: blx-dm.def 2020/08/23 v3.15a biblatex localization (PK/MW)
 )
 Package biblatex Info: Trying to load biblatex style data model...
 Package biblatex Info: ... file 'abnt.dbx' not found.
 Package biblatex Info: Trying to load biblatex custom data model...
 Package biblatex Info: ... file 'biblatex-dm.cfg' not found.
-\c@afterword=\count415
-\c@savedafterword=\count416
-\c@annotator=\count417
-\c@savedannotator=\count418
-\c@author=\count419
-\c@savedauthor=\count420
-\c@bookauthor=\count421
-\c@savedbookauthor=\count422
-\c@commentator=\count423
-\c@savedcommentator=\count424
-\c@editor=\count425
-\c@savededitor=\count426
-\c@editora=\count427
-\c@savededitora=\count428
-\c@editorb=\count429
-\c@savededitorb=\count430
-\c@editorc=\count431
-\c@savededitorc=\count432
-\c@foreword=\count433
-\c@savedforeword=\count434
-\c@holder=\count435
-\c@savedholder=\count436
-\c@introduction=\count437
-\c@savedintroduction=\count438
-\c@namea=\count439
-\c@savednamea=\count440
-\c@nameb=\count441
-\c@savednameb=\count442
-\c@namec=\count443
-\c@savednamec=\count444
-\c@translator=\count445
-\c@savedtranslator=\count446
-\c@shortauthor=\count447
-\c@savedshortauthor=\count448
-\c@shorteditor=\count449
-\c@savedshorteditor=\count450
-\c@labelname=\count451
-\c@savedlabelname=\count452
-\c@institution=\count453
-\c@savedinstitution=\count454
-\c@lista=\count455
-\c@savedlista=\count456
-\c@listb=\count457
-\c@savedlistb=\count458
-\c@listc=\count459
-\c@savedlistc=\count460
-\c@listd=\count461
-\c@savedlistd=\count462
-\c@liste=\count463
-\c@savedliste=\count464
-\c@listf=\count465
-\c@savedlistf=\count466
-\c@location=\count467
-\c@savedlocation=\count468
-\c@organization=\count469
-\c@savedorganization=\count470
-\c@origlocation=\count471
-\c@savedoriglocation=\count472
-\c@origpublisher=\count473
-\c@savedorigpublisher=\count474
-\c@publisher=\count475
-\c@savedpublisher=\count476
-\c@language=\count477
-\c@savedlanguage=\count478
-\c@origlanguage=\count479
-\c@savedoriglanguage=\count480
-\c@pageref=\count481
-\c@savedpageref=\count482
-\shorthandwidth=\skip280
-\shortjournalwidth=\skip281
-\shortserieswidth=\skip282
-\shorttitlewidth=\skip283
-\shortauthorwidth=\skip284
-\shorteditorwidth=\skip285
-\locallabelnumberwidth=\skip286
-\locallabelalphawidth=\skip287
-\localshorthandwidth=\skip288
-\localshortjournalwidth=\skip289
-\localshortserieswidth=\skip290
-\localshorttitlewidth=\skip291
-\localshortauthorwidth=\skip292
-\localshorteditorwidth=\skip293
+\c@afterword=\count425
+\c@savedafterword=\count426
+\c@annotator=\count427
+\c@savedannotator=\count428
+\c@author=\count429
+\c@savedauthor=\count430
+\c@bookauthor=\count431
+\c@savedbookauthor=\count432
+\c@commentator=\count433
+\c@savedcommentator=\count434
+\c@editor=\count435
+\c@savededitor=\count436
+\c@editora=\count437
+\c@savededitora=\count438
+\c@editorb=\count439
+\c@savededitorb=\count440
+\c@editorc=\count441
+\c@savededitorc=\count442
+\c@foreword=\count443
+\c@savedforeword=\count444
+\c@holder=\count445
+\c@savedholder=\count446
+\c@introduction=\count447
+\c@savedintroduction=\count448
+\c@namea=\count449
+\c@savednamea=\count450
+\c@nameb=\count451
+\c@savednameb=\count452
+\c@namec=\count453
+\c@savednamec=\count454
+\c@translator=\count455
+\c@savedtranslator=\count456
+\c@shortauthor=\count457
+\c@savedshortauthor=\count458
+\c@shorteditor=\count459
+\c@savedshorteditor=\count460
+\c@labelname=\count461
+\c@savedlabelname=\count462
+\c@institution=\count463
+\c@savedinstitution=\count464
+\c@lista=\count465
+\c@savedlista=\count466
+\c@listb=\count467
+\c@savedlistb=\count468
+\c@listc=\count469
+\c@savedlistc=\count470
+\c@listd=\count471
+\c@savedlistd=\count472
+\c@liste=\count473
+\c@savedliste=\count474
+\c@listf=\count475
+\c@savedlistf=\count476
+\c@location=\count477
+\c@savedlocation=\count478
+\c@organization=\count479
+\c@savedorganization=\count480
+\c@origlocation=\count481
+\c@savedoriglocation=\count482
+\c@origpublisher=\count483
+\c@savedorigpublisher=\count484
+\c@publisher=\count485
+\c@savedpublisher=\count486
+\c@language=\count487
+\c@savedlanguage=\count488
+\c@origlanguage=\count489
+\c@savedoriglanguage=\count490
+\c@pageref=\count491
+\c@savedpageref=\count492
+\shorthandwidth=\skip279
+\shortjournalwidth=\skip280
+\shortserieswidth=\skip281
+\shorttitlewidth=\skip282
+\shortauthorwidth=\skip283
+\shorteditorwidth=\skip284
+\locallabelnumberwidth=\skip285
+\locallabelalphawidth=\skip286
+\localshorthandwidth=\skip287
+\localshortjournalwidth=\skip288
+\localshortserieswidth=\skip289
+\localshorttitlewidth=\skip290
+\localshortauthorwidth=\skip291
+\localshorteditorwidth=\skip292
 Package biblatex Info: Trying to load compatibility code...
 Package biblatex Info: ... file 'blx-compat.def' found.
 
 (c:/Users/lfpdr/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/biblatex/blx-compa
 t.def
-File: blx-compat.def 2019/12/01 v3.14 biblatex compatibility (PK/MW)
+File: blx-compat.def 2020/08/23 v3.15a biblatex compatibility (PK/MW)
+)
+(c:/Users/lfpdr/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/l3kernel/expl3.sty
+Package: expl3 2020-12-07 L3 programming layer (loader) 
+
+(c:/Users/lfpdr/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/l3backend/l3backen
+d-pdftex.def
+File: l3backend-pdftex.def 2020-09-24 L3 backend support: PDF output (pdfTeX)
+\l__kernel_color_stack_int=\count493
+\l__pdf_internal_box=\box61
+))
+Package biblatex Info: expl3
+(biblatex)             2020-12-07 L3 programming layer (loader) 
+(biblatex)             is new enough (at least 2020/04/06),
+(biblatex)             setting 'casechanger=expl3'.
+Package biblatex Info: Trying to load expl3 case changing code...
+Package biblatex Info: ... file 'blx-case-expl3.def' found.
+
+(c:/Users/lfpdr/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/biblatex/blx-case-
+expl3.def
+(c:/Users/lfpdr/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/l3packages/xparse/
+xparse.sty
+Package: xparse 2020-10-27 L3 Experimental document command parser
+
+(c:/Users/lfpdr/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/l3packages/xparse/
+xparse-generic.tex))
+File: blx-case-expl3 2020/08/23 v3.15a expl3 case changing code for biblatex
 )
 Package biblatex Info: Trying to load generic definitions...
 Package biblatex Info: ... file 'biblatex.def' found.
 
 (c:/Users/lfpdr/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/biblatex/biblatex.
 def
-File: biblatex.def 2019/12/01 v3.14 biblatex compatibility (PK/MW)
-\c@textcitecount=\count483
-\c@textcitetotal=\count484
-\c@textcitemaxnames=\count485
-\c@biburlbigbreakpenalty=\count486
-\c@biburlbreakpenalty=\count487
-\c@biburlnumpenalty=\count488
-\c@biburlucpenalty=\count489
-\c@biburllcpenalty=\count490
+File: biblatex.def 2020/08/23 v3.15a biblatex compatibility (PK/MW)
+\c@textcitecount=\count494
+\c@textcitetotal=\count495
+\c@textcitemaxnames=\count496
+\c@biburlbigbreakpenalty=\count497
+\c@biburlbreakpenalty=\count498
+\c@biburlnumpenalty=\count499
+\c@biburlucpenalty=\count500
+\c@biburllcpenalty=\count501
 \biburlbigskip=\muskip21
 \biburlnumskip=\muskip22
 \biburlucskip=\muskip23
 \biburllcskip=\muskip24
-\c@smartand=\count491
+\c@smartand=\count502
 )
 Package biblatex Info: Trying to load bibliography style 'abnt'...
 Package biblatex Info: ... file 'abnt.bbx' found.
@@ -1296,25 +1339,7 @@ Package biblatex Info: ... file 'abnt.bbx' found.
 (c:/Users/lfpdr/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/biblatex-abnt/abnt
 .bbx
 File: abnt.bbx 2018-11-17 v3.4 ABNT BibLaTeX citation style
-
-(c:/Users/lfpdr/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/l3packages/xparse/
-xparse.sty
-(c:/Users/lfpdr/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/l3kernel/expl3.sty
-Package: expl3 2020-04-06 L3 programming layer (loader) 
-
-(c:/Users/lfpdr/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/l3backend/l3backen
-d-pdfmode.def
-File: l3backend-pdfmode.def 2020-03-12 L3 backend support: PDF mode
-\l__kernel_color_stack_int=\count492
-\l__pdf_internal_box=\box59
-))
-Package: xparse 2020-03-06 L3 Experimental document command parser
-\l__xparse_current_arg_int=\count493
-\g__xparse_grabber_int=\count494
-\l__xparse_m_args_int=\count495
-\l__xparse_v_nesting_int=\count496
-) (c:/Users/lfpdr/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/xpatch/xpatch.st
-y
+(c:/Users/lfpdr/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/xpatch/xpatch.sty
 Package: xpatch 2020/03/25 v0.3a Extending etoolbox patching commands
 )
 Package biblatex Info: Trying to load bibliography style 'standard'...
@@ -1322,9 +1347,9 @@ Package biblatex Info: ... file 'standard.bbx' found.
 
 (c:/Users/lfpdr/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/biblatex/bbx/stand
 ard.bbx
-File: standard.bbx 2019/12/01 v3.14 biblatex bibliography style (PK/MW)
-\c@bbx:relatedcount=\count497
-\c@bbx:relatedtotal=\count498
+File: standard.bbx 2020/08/23 v3.15a biblatex bibliography style (PK/MW)
+\c@bbx:relatedcount=\count503
+\c@bbx:relatedtotal=\count504
 ))
 Package biblatex Info: Trying to load citation style 'abnt'...
 Package biblatex Info: ... file 'abnt.cbx' found.
@@ -1337,7 +1362,7 @@ Package biblatex Info: ... file 'authoryear-comp.cbx' found.
 
 (c:/Users/lfpdr/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/biblatex/cbx/autho
 ryear-comp.cbx
-File: authoryear-comp.cbx 2019/12/01 v3.14 biblatex citation style (PK/MW)
+File: authoryear-comp.cbx 2020/08/23 v3.15a biblatex citation style (PK/MW)
 Package biblatex Info: Redefining '\cite'.
 Package biblatex Info: Redefining '\parencite'.
 Package biblatex Info: Redefining '\footcite'.
@@ -1367,23 +1392,23 @@ Package biblatex Info: ... file 'biblatex.cfg' found.
 cfg
 File: biblatex.cfg 
 ))
-LaTeX Font Info:    Redeclaring symbol font `largesymbols' on input line 83.
+LaTeX Font Info:    Redeclaring symbol font `largesymbols' on input line 84.
 LaTeX Font Info:    Encoding `FMX' has changed to `OMX' for symbol font
 (Font)              `largesymbols' in the math version `normal' on input line 8
-3.
+4.
 LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `normal'
-(Font)                  FMX/futm/m/n --> OMX/helvet/m/n on input line 83.
+(Font)                  FMX/futm/m/n --> OMX/helvet/m/n on input line 84.
 LaTeX Font Info:    Encoding `FMX' has changed to `OMX' for symbol font
-(Font)              `largesymbols' in the math version `bold' on input line 83.
+(Font)              `largesymbols' in the math version `bold' on input line 84.
 
 LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `bold'
-(Font)                  FMX/futm/m/n --> OMX/helvet/m/n on input line 83.
-LaTeX Font Info:    Redeclaring math accent \wideparen on input line 84.
-\c@quadro=\count499
-\c@loqdepth=\count500
-\cftbeforequadroskip=\skip294
-\cftquadroindent=\skip295
-\cftquadronumwidth=\skip296
+(Font)                  FMX/futm/m/n --> OMX/helvet/m/n on input line 84.
+LaTeX Font Info:    Redeclaring math accent \wideparen on input line 85.
+\c@quadro=\count505
+\c@loqdepth=\count506
+\cftbeforequadroskip=\skip293
+\cftquadroindent=\skip294
+\cftquadronumwidth=\skip295
 ) (c:/Users/lfpdr/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/xcolor/xcolor.st
 y
 Package: xcolor 2016/05/11 v2.12 LaTeX color extensions (UK)
@@ -1398,10 +1423,10 @@ Package xcolor Info: Driver file: pdftex.def on input line 225.
 sty
 Package: colortbl 2020/01/04 v1.0e Color table columns (DPC)
 \everycr=\toks51
-\minrowclearance=\skip297
+\minrowclearance=\skip296
 )
 LaTeX Info: Redefining \color on input line 709.
-\rownum=\count501
+\rownum=\count507
 Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1348.
 Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1352.
 Package xcolor Info: Model `RGB' extended on input line 1364.
@@ -1418,51 +1443,55 @@ Package: floatrow 2008/08/02 v0.3b floatrow: float package extension
 
 (c:/Users/lfpdr/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/caption/caption3.s
 ty
-Package: caption3 2020/01/03 v1.8h caption3 kernel (AR)
-Package caption3 Info: TeX engine: e-TeX on input line 61.
-\captionmargin=\dimen259
-\captionmargin@=\dimen260
-\captionwidth=\dimen261
-\caption@tempdima=\dimen262
-\caption@indent=\dimen263
-\caption@parindent=\dimen264
-\caption@hangindent=\dimen265
+Package: caption3 2020/10/21 v2.2e caption3 kernel (AR)
+\captionmargin=\dimen264
+\captionmargin@=\dimen265
+\captionwidth=\dimen266
+\caption@tempdima=\dimen267
+\caption@indent=\dimen268
+\caption@parindent=\dimen269
+\caption@hangindent=\dimen270
 Package caption Info: memoir document class detected.
-)
-\c@float@type=\count502
+
+(c:/Users/lfpdr/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/caption/caption-me
+moir.sto
+File: caption-memoir.sto 2020/10/10 v2.1 Adaption of the caption package to the
+ memoir document class (AR)
+))
+\c@float@type=\count508
 \float@exts=\toks52
-\float@box=\box60
-\@floatcapt=\box61
+\float@box=\box62
+\@floatcapt=\box63
 Package floatrow Info: Modified float package code loaded on input line 455.
 Package floatrow Info: Modified rotfloat package code loaded on input line 473.
 
 \FR@everyfloat=\toks53
-\flrow@foot=\insert248
-\FB@wd=\dimen266
-\FBo@wd=\dimen267
-\FBc@wd=\dimen268
-\FBo@ht=\skip298
-\FBc@ht=\skip299
-\FBf@ht=\skip300
-\FBo@max=\skip301
-\FBc@max=\skip302
-\FBf@max=\skip303
-\c@FBl@b=\count503
-\floatbox@depth=\count504
-\c@FRobj=\count505
-\c@FRsobj=\count506
-\Xhsize=\skip304
-\sXhsize=\skip305
-\Zhsize=\skip306
-\sZhsize=\skip307
-\flrow@rowbox=\box62
-\FR@Zunitlength=\dimen269
-\c@FBcnt=\count507
-\FPOScnt=\count508
-\LTleft=\skip308
-\LTright=\skip309
-\LTleft=\skip310
-\LTright=\skip311
+\flrow@foot=\insert247
+\FB@wd=\dimen271
+\FBo@wd=\dimen272
+\FBc@wd=\dimen273
+\FBo@ht=\skip297
+\FBc@ht=\skip298
+\FBf@ht=\skip299
+\FBo@max=\skip300
+\FBc@max=\skip301
+\FBf@max=\skip302
+\c@FBl@b=\count509
+\floatbox@depth=\count510
+\c@FRobj=\count511
+\c@FRsobj=\count512
+\Xhsize=\skip303
+\sXhsize=\skip304
+\Zhsize=\skip305
+\sZhsize=\skip306
+\flrow@rowbox=\box64
+\FR@Zunitlength=\dimen274
+\c@FBcnt=\count513
+\FPOScnt=\count514
+\LTleft=\skip307
+\LTright=\skip308
+\LTleft=\skip309
+\LTright=\skip310
 \flrow@types=\toks54
 )
 Package hyperref Info: Option `colorlinks' set `true' on input line 163.
@@ -1482,56 +1511,54 @@ Package csquotes Info: Checking for multilingual support...
 Package csquotes Info: ... found 'babel' package.
 Package csquotes Info: Adjusting default style.
 Package csquotes Info: Redefining alias 'default' -> 'brazil'.
-(./thesis.aux)
+LaTeX Font Info:    Trying to load font information for T1+phv on input line 19
+6.
+(c:/Users/lfpdr/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/psnfss/t1phv.fd
+File: t1phv.fd 2020/03/25 scalable font definitions for T1/phv.
+) (./thesis.aux)
 \openout1 = `thesis.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 193.
-LaTeX Font Info:    ... okay on input line 193.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 193.
-LaTeX Font Info:    ... okay on input line 193.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 193.
-LaTeX Font Info:    ... okay on input line 193.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 193.
-LaTeX Font Info:    ... okay on input line 193.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 193.
-LaTeX Font Info:    ... okay on input line 193.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 193.
-LaTeX Font Info:    ... okay on input line 193.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 193.
-LaTeX Font Info:    ... okay on input line 193.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 193.
-LaTeX Font Info:    ... okay on input line 193.
-LaTeX Font Info:    Checking defaults for FML/futm/m/it on input line 193.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 196.
+LaTeX Font Info:    ... okay on input line 196.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 196.
+LaTeX Font Info:    ... okay on input line 196.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 196.
+LaTeX Font Info:    ... okay on input line 196.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 196.
+LaTeX Font Info:    ... okay on input line 196.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 196.
+LaTeX Font Info:    ... okay on input line 196.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 196.
+LaTeX Font Info:    ... okay on input line 196.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 196.
+LaTeX Font Info:    ... okay on input line 196.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 196.
+LaTeX Font Info:    ... okay on input line 196.
+LaTeX Font Info:    Checking defaults for FML/futm/m/it on input line 196.
 LaTeX Font Info:    Trying to load font information for FML+futm on input line 
-193.
+196.
 
 (c:/Users/lfpdr/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/fourier/fmlfutm.fd
 File: fmlfutm.fd 2004/10/30 Fontinst v1.926 font definitions for FML/futm.
 )
-LaTeX Font Info:    ... okay on input line 193.
-LaTeX Font Info:    Checking defaults for FMS/futm/m/n on input line 193.
+LaTeX Font Info:    ... okay on input line 196.
+LaTeX Font Info:    Checking defaults for FMS/futm/m/n on input line 196.
 LaTeX Font Info:    Trying to load font information for FMS+futm on input line 
-193.
+196.
 
 (c:/Users/lfpdr/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/fourier/fmsfutm.fd
 File: fmsfutm.fd 2004/10/30 Fontinst v1.926 font definitions for FMS/futm.
 )
-LaTeX Font Info:    ... okay on input line 193.
-LaTeX Font Info:    Checking defaults for FMX/futm/m/n on input line 193.
+LaTeX Font Info:    ... okay on input line 196.
+LaTeX Font Info:    Checking defaults for FMX/futm/m/n on input line 196.
 LaTeX Font Info:    Trying to load font information for FMX+futm on input line 
-193.
+196.
 
 (c:/Users/lfpdr/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/fourier/fmxfutm.fd
 File: fmxfutm.fd futm-extension
 )
-LaTeX Font Info:    ... okay on input line 193.
-LaTeX Font Info:    Trying to load font information for T1+phv on input line 19
-3.
-(c:/Users/lfpdr/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/psnfss/t1phv.fd
-File: t1phv.fd 2020/03/25 scalable font definitions for T1/phv.
-)
-\AtBeginShipoutBox=\box63
-Package hyperref Info: Link coloring ON on input line 193.
+LaTeX Font Info:    ... okay on input line 196.
+Package hyperref Info: Link coloring ON on input line 196.
 
 (c:/Users/lfpdr/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/hyperref/nameref.s
 ty
@@ -1545,16 +1572,16 @@ Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
 ettitlestring.sty
 Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
-\c@section@level=\count509
+\c@section@level=\count515
 )
 Redoing nameref's sectioning
 Redoing nameref's label
-LaTeX Info: Redefining \nameref on input line 193.
-LaTeX Info: Redefining \ref on input line 193.
-LaTeX Info: Redefining \pageref on input line 193.
-LaTeX Info: Redefining \nameref on input line 193.
-\myptabbox=\box64
-\myptabboxwidth=\skip312
+LaTeX Info: Redefining \nameref on input line 196.
+LaTeX Info: Redefining \ref on input line 196.
+LaTeX Info: Redefining \pageref on input line 196.
+LaTeX Info: Redefining \nameref on input line 196.
+\myptabbox=\box65
+\myptabboxwidth=\skip311
 
 (c:/Users/lfpdr/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/epstopdf-pkg/epsto
 pdf-base.sty
@@ -1567,15 +1594,15 @@ df-sys.cfg
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-LaTeX Info: Redefining \microtypecontext on input line 193.
+LaTeX Info: Redefining \microtypecontext on input line 196.
 Package microtype Info: Generating PDF output.
 Package microtype Info: Character protrusion enabled (level 2),
 (microtype)             factor: 1100.
 Package microtype Info: Using default protrusion set `alltext'.
 Package microtype Info: Automatic font expansion enabled (level 2),
 (microtype)             stretch: 10, shrink: 10, step: 1, non-selected.
-Package microtype Info: Using default expansion set `basictext'.
-LaTeX Info: Redefining \showhyphens on input line 193.
+Package microtype Info: Using default expansion set `alltext-nott'.
+LaTeX Info: Redefining \showhyphens on input line 196.
 Package microtype Info: No adjustment of tracking.
 Package microtype Info: No adjustment of interword spacing.
 Package microtype Info: No adjustment of character kerning.
@@ -1590,12 +1617,12 @@ Package: pdflscape 2019/12/05 v0.12 Display of landscape pages in PDF (HO)
 
 (c:/Users/lfpdr/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/graphics/lscape.st
 y
-Package: lscape 2000/10/22 v3.01 Landscape Pages (DPC)
+Package: lscape 2020/05/28 v3.02 Landscape Pages (DPC)
 )
 Package pdflscape Info: Auto-detected driver: pdftex on input line 81.
 )
 Package mathastext Info: current meaning of amsmath \resetMathstrut@ saved on i
-nput line 193.
+nput line 196.
 Package biblatex Info: Trying to load language 'brazil' -> 'brazil-abnt'...
 Package biblatex Info: ... file 'brazil-abnt.lbx' found.
 
@@ -1625,7 +1652,7 @@ Package biblatex Info: ... file 'brazilian.lbx' found.
 
 (c:/Users/lfpdr/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/biblatex/lbx/brazi
 lian.lbx
-File: brazilian.lbx 2019/12/01 v3.14 biblatex localization (PK/MW)
+File: brazilian.lbx 2020/08/23 v3.15a biblatex localization (PK/MW)
 )))
 Package biblatex Info: Trying to load language 'brazilian-abnt'...
 Package biblatex Info: ... file 'brazilian-abnt.lbx' found.
@@ -1645,27 +1672,27 @@ Package biblatex Info: ... file 'brazilian.lbx' found.
 
 (c:/Users/lfpdr/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/biblatex/lbx/brazi
 lian.lbx
-File: brazilian.lbx 2019/12/01 v3.14 biblatex localization (PK/MW)
+File: brazilian.lbx 2020/08/23 v3.15a biblatex localization (PK/MW)
 )
 Package biblatex Info: Trying to load language 'brazil'...
 Package biblatex Info: ... file 'brazil.lbx' found.
 
 (c:/Users/lfpdr/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/biblatex/lbx/brazi
 l.lbx
-File: brazil.lbx 2019/12/01 v3.14 biblatex localization (PK/MW)
+File: brazil.lbx 2020/08/23 v3.15a biblatex localization (PK/MW)
 Package biblatex Info: Trying to load language 'brazilian'...
 Package biblatex Info: ... file 'brazilian.lbx' found.
 
 (c:/Users/lfpdr/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/biblatex/lbx/brazi
 lian.lbx
-File: brazilian.lbx 2019/12/01 v3.14 biblatex localization (PK/MW)
+File: brazilian.lbx 2020/08/23 v3.15a biblatex localization (PK/MW)
 )))
 Package biblatex Info: Trying to load language 'brazil'...
 Package biblatex Info: ... file 'brazil.lbx' found.
 
 (c:/Users/lfpdr/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/biblatex/lbx/brazi
 l.lbx
-File: brazil.lbx 2019/12/01 v3.14 biblatex localization (PK/MW)
+File: brazil.lbx 2020/08/23 v3.15a biblatex localization (PK/MW)
 Package biblatex Info: Trying to load language 'brazilian' -> 'brazilian-abnt'.
 ..
 Package biblatex Info: ... file 'brazilian-abnt.lbx' found.
@@ -1678,21 +1705,48 @@ Package biblatex Info: ... file 'brazilian.lbx' found.
 
 (c:/Users/lfpdr/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/biblatex/lbx/brazi
 lian.lbx
-File: brazilian.lbx 2019/12/01 v3.14 biblatex localization (PK/MW)
+File: brazilian.lbx 2020/08/23 v3.15a biblatex localization (PK/MW)
 )
 Package biblatex Info: Trying to load language 'brazil'...
 Package biblatex Info: ... file 'brazil.lbx' found.
 
 (c:/Users/lfpdr/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/biblatex/lbx/brazi
 l.lbx
-File: brazil.lbx 2019/12/01 v3.14 biblatex localization (PK/MW)
+File: brazil.lbx 2020/08/23 v3.15a biblatex localization (PK/MW)
 Package biblatex Info: Trying to load language 'brazilian'...
 Package biblatex Info: ... file 'brazilian.lbx' found.
 
 (c:/Users/lfpdr/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/biblatex/lbx/brazi
 lian.lbx
-File: brazilian.lbx 2019/12/01 v3.14 biblatex localization (PK/MW)
+File: brazilian.lbx 2020/08/23 v3.15a biblatex localization (PK/MW)
 ))))))
+Package biblatex Info: Trying to load language 'english' -> 'english-abnt'...
+Package biblatex Info: ... file 'english-abnt.lbx' found.
+
+(c:/Users/lfpdr/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/biblatex-abnt/engl
+ish-abnt.lbx
+File: english-abnt.lbx 2018-11-17 v3.4 ABNT BibLaTeX citation style
+Package biblatex Info: Trying to load language 'english'...
+Package biblatex Info: ... file 'english.lbx' found.
+
+(c:/Users/lfpdr/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/biblatex/lbx/engli
+sh.lbx
+File: english.lbx 2020/08/23 v3.15a biblatex localization (PK/MW)
+)
+Package biblatex Info: Trying to load language 'english'...
+Package biblatex Info: ... file 'english.lbx' found.
+
+(c:/Users/lfpdr/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/biblatex/lbx/engli
+sh.lbx
+File: english.lbx 2020/08/23 v3.15a biblatex localization (PK/MW)
+)
+Package biblatex Info: Trying to load language 'english'...
+Package biblatex Info: ... file 'english.lbx' found.
+
+(c:/Users/lfpdr/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/biblatex/lbx/engli
+sh.lbx
+File: english.lbx 2020/08/23 v3.15a biblatex localization (PK/MW)
+))
 Package biblatex Info: Input encoding 'utf8' detected.
 Package biblatex Info: Automatic encoding selection.
 (biblatex)             Assuming data encoding 'utf8'.
@@ -1703,62 +1757,134 @@ Package biblatex Info: ... file 'thesis.bbl' found.
 (./thesis.bbl
 
 Package biblatex Warning: Biber reported the following issues
-(biblatex)                with 'Bresser-Pereira1973':
-(biblatex)                - Entry 'Bresser-Pereira1973' (bib/cap3.bib): Invalid
- format '28 mai. 2017' of date field 'urldate' - ignoring.
+(biblatex)                with 'lei14011':
+(biblatex)                - Entry 'lei14011' (bib/cap7.bib): Invalid format '22
+ set. 2020' of date field 'urldate' - ignoring.
+
+
+Package biblatex Warning: Biber reported the following issues
+(biblatex)                with 'lei9636':
+(biblatex)                - Entry 'lei9636' (bib/cap7.bib): Invalid format '22 
+set. 2020' of date field 'urldate' - ignoring.
+
+
+Package biblatex Warning: Biber reported the following issues
+(biblatex)                with 'economist-rent-control':
+(biblatex)                - Entry 'economist-rent-control' (bib/cap7.bib): Inva
+lid format '07 jun. 2020' of date field 'urldate' - ignoring.
 
 
 Package biblatex Warning: Biber reported the following issues
 (biblatex)                with 'economist':
-(biblatex)                - Entry 'economist' (bib/cap3.bib): Invalid format '0
+(biblatex)                - Entry 'economist' (bib/cap5.bib): Invalid format '0
 4 mai. 2020' of date field 'urldate' - ignoring.
 
 
 Package biblatex Warning: Biber reported the following issues
+(biblatex)                with 'terraredonda':
+(biblatex)                - Entry 'terraredonda' (bib/cap7.bib): Invalid format
+ '24 mai. 2020' of date field 'urldate' - ignoring.
+
+
+Package biblatex Warning: Biber reported the following issues
 (biblatex)                with 'fmitwa':
-(biblatex)                - Entry 'fmitwa' (bib/cap3.bib): Invalid format '28 m
+(biblatex)                - Entry 'fmitwa' (bib/cap5.bib): Invalid format '28 m
 ar. 2020' of date field 'urldate' - ignoring.
 
 
 Package biblatex Warning: Biber reported the following issues
 (biblatex)                with 'krugman2020':
-(biblatex)                - Entry 'krugman2020' (bib/cap3.bib): Invalid format 
+(biblatex)                - Entry 'krugman2020' (bib/cap4.bib): Invalid format 
 '27 mar. 2020' of date field 'urldate' - ignoring.
 
 
 Package biblatex Warning: Biber reported the following issues
+(biblatex)                with 'sigsc':
+(biblatex)                - Entry 'sigsc' (bib/cap7.bib): Invalid format '07 ju
+n. 2020' of date field 'urldate' - ignoring.
+
+
+Package biblatex Warning: Biber reported the following issues
+(biblatex)                with 'paraisopolis':
+(biblatex)                - Entry 'paraisopolis' (bib/cap7.bib): Invalid format
+ '24 mai. 2020' of date field 'urldate' - ignoring.
+
+
+Package biblatex Warning: Biber reported the following issues
 (biblatex)                with 'pereira':
-(biblatex)                - Entry 'pereira' (bib/cap3.bib): Invalid format '27 
+(biblatex)                - Entry 'pereira' (bib/cap4.bib): Invalid format '27 
 mai. 2017' of date field 'urldate' - ignoring.
 
 
 Package biblatex Warning: Biber reported the following issues
 (biblatex)                with 'gpg':
-(biblatex)                - Entry 'gpg' (bib/cap3.bib): Invalid format '9 mai. 
+(biblatex)                - Entry 'gpg' (bib/cap4.bib): Invalid format '9 mai. 
 2020' of date field 'urldate' - ignoring.
 
 
 Package biblatex Warning: Biber reported the following issues
+(biblatex)                with 'rolnik':
+(biblatex)                - Entry 'rolnik' (bib/cap7.bib): Invalid format '25 m
+ai. 2020' of date field 'urldate' - ignoring.
+
+
+Package biblatex Warning: Biber reported the following issues
+(biblatex)                with 'CSUSHPINSA':
+(biblatex)                - Entry 'CSUSHPINSA' (bib/cap5.bib): Invalid format '
+2020-9-9' of date field 'urldate' - ignoring.
+
+
+Package biblatex Warning: Biber reported the following issues
 (biblatex)                with 'serapicos':
-(biblatex)                - Entry 'serapicos' (bib/cap2.bib): Invalid format '0
+(biblatex)                - Entry 'serapicos' (bib/cap3.bib): Invalid format '0
 7 mar. 2020' of date field 'urldate' - ignoring.
 
 
 Package biblatex Warning: Biber reported the following issues
 (biblatex)                with 'singer':
-(biblatex)                - Entry 'singer' (bib/cap3.bib): Invalid format '12 a
+(biblatex)                - Entry 'singer' (bib/cap4.bib): Invalid format '12 a
 br 2017' of date field 'urldate' - ignoring.
 
 
 Package biblatex Warning: Biber reported the following issues
+(biblatex)                with 'RHVRUSQ156N':
+(biblatex)                - Entry 'RHVRUSQ156N' (bib/cap5.bib): Invalid format 
+'2020-9-9' of date field 'urldate' - ignoring.
+
+
+Package biblatex Warning: Biber reported the following issues
+(biblatex)                with 'RSAHORUSQ156S':
+(biblatex)                - Entry 'RSAHORUSQ156S' (bib/cap5.bib): Invalid forma
+t '2020-9-9' of date field 'urldate' - ignoring.
+
+
+Package biblatex Warning: Biber reported the following issues
+(biblatex)                with 'ERENTUSQ176N':
+(biblatex)                - Entry 'ERENTUSQ176N' (bib/cap5.bib): Invalid format
+ '2021-3-23' of date field 'urldate' - ignoring.
+
+
+Package biblatex Warning: Biber reported the following issues
+(biblatex)                with 'EVACANTUSQ176N':
+(biblatex)                - Entry 'EVACANTUSQ176N' (bib/cap5.bib): Invalid form
+at '2021-3-23' of date field 'urldate' - ignoring.
+
+
+Package biblatex Warning: Biber reported the following issues
+(biblatex)                with 'RRVRUSQ156N':
+(biblatex)                - Entry 'RRVRUSQ156N' (bib/cap5.bib): Invalid format 
+'2020-9-9' of date field 'urldate' - ignoring.
+
+
+Package biblatex Warning: Biber reported the following issues
 (biblatex)                with 'fmiera':
-(biblatex)                - Entry 'fmiera' (bib/cap3.bib): Invalid format '28 m
+(biblatex)                - Entry 'fmiera' (bib/cap5.bib): Invalid format '28 m
 ar. 2020' of date field 'urldate' - ignoring.
 
 
 Package biblatex Warning: Biber reported the following issues
 (biblatex)                with 'fmiem':
-(biblatex)                - Entry 'fmiem' (bib/cap3.bib): Invalid format '28 ma
+(biblatex)                - Entry 'fmiem' (bib/cap5.bib): Invalid format '28 ma
 r. 2020' of date field 'urldate' - ignoring.
 
 
@@ -1768,17 +1894,10 @@ Package biblatex Warning: The following entry could not be found
 (biblatex)                Please verify the spelling and rerun
 (biblatex)                LaTeX afterwards.
 
-
-Package biblatex Warning: The following entry could not be found
-(biblatex)                in the database:
-(biblatex)                rosseti
-(biblatex)                Please verify the spelling and rerun
-(biblatex)                LaTeX afterwards.
-
 )
-LaTeX Info: Redefining \firstsecond on input line 193.
-Package biblatex Info: Reference section=0 on input line 193.
-Package biblatex Info: Reference segment=0 on input line 193.
+LaTeX Info: Redefining \firstsecond on input line 196.
+Package biblatex Info: Reference section=0 on input line 196.
+Package biblatex Info: Reference segment=0 on input line 196.
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
 
@@ -1786,9 +1905,9 @@ Package caption Info: End \AtBeginDocument code.
 ble.sty
 Package: fr-longtable 2007/11/28 v0.1b (beta) floatrow: additions for longtable
 
-\flrow@LT@lasthead=\box65
-\flrow@LT@prelastfoot=\box66
-\c@FBLTpage=\count510
+\flrow@LT@lasthead=\box66
+\flrow@LT@prelastfoot=\box67
+\c@FBLTpage=\count516
 )
 
 pdfTeX warning: pdflatex.exe (file ./setup/vertical_sigla_fundo_claro.pdf): PDF
@@ -1797,7 +1916,7 @@ pdfTeX warning: pdflatex.exe (file ./setup/vertical_sigla_fundo_claro.pdf): PDF
 File: setup/vertical_sigla_fundo_claro.pdf Graphic file (type pdf)
 <use setup/vertical_sigla_fundo_claro.pdf>
 Package pdftex.def Info: setup/vertical_sigla_fundo_claro.pdf  used on input li
-ne 219.
+ne 222.
 (pdftex.def)             Requested size: 52.35297pt x 71.9434pt.
 [1
 
@@ -1805,20 +1924,22 @@ ne 219.
 
 
 
+
+
 {c:/Users/lfpdr/AppData/Roaming/TinyTeX/texmf-var/fonts/map/pdftex/updmap/pdfte
 x.map} <./setup/vertical_sigla_fundo_claro.pdf>]
-Overfull \hbox (16.0585pt too wide) in paragraph at lines 228--228
+Overfull \hbox (16.0585pt too wide) in paragraph at lines 231--231
 []\T1/phv/m/n/10 (-10) Dissertação sub-me-tida ao Pro-grama de Pós-Graduação
  []
 
 
-Overfull \hbox (22.67914pt too wide) in paragraph at lines 228--228
+Overfull \hbox (22.67914pt too wide) in paragraph at lines 231--231
 \T1/phv/m/n/10 (-10) em En-ge-nha-ria de Trans-por-tes e Ges-tão Ter-ri-to-rial
  da Uni-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 228--228
+Underfull \hbox (badness 10000) in paragraph at lines 231--231
 
  []
 
@@ -1826,7 +1947,7 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.228 
+l.231 
        [1
 
 
@@ -1835,40 +1956,40 @@ l.228
 <Ficha_Catalografica.pdf, id=20, 597.55246pt x 845.19763pt>
 File: Ficha_Catalografica.pdf Graphic file (type pdf)
 <use Ficha_Catalografica.pdf>
-Package pdftex.def Info: Ficha_Catalografica.pdf  used on input line 234.
+Package pdftex.def Info: Ficha_Catalografica.pdf  used on input line 237.
 (pdftex.def)             Requested size: 597.551pt x 845.19557pt.
 File: Ficha_Catalografica.pdf Graphic file (type pdf)
 <use Ficha_Catalografica.pdf>
-Package pdftex.def Info: Ficha_Catalografica.pdf  used on input line 234.
+Package pdftex.def Info: Ficha_Catalografica.pdf  used on input line 237.
 (pdftex.def)             Requested size: 597.551pt x 845.19557pt.
 <Ficha_Catalografica.pdf, id=23, page=1, 597.55246pt x 845.19763pt>
 File: Ficha_Catalografica.pdf Graphic file (type pdf)
 <use Ficha_Catalografica.pdf, page 1>
-Package pdftex.def Info: Ficha_Catalografica.pdf , page1 used on input line 234
+Package pdftex.def Info: Ficha_Catalografica.pdf , page1 used on input line 237
 .
 (pdftex.def)             Requested size: 597.551pt x 845.19557pt.
 File: Ficha_Catalografica.pdf Graphic file (type pdf)
 <use Ficha_Catalografica.pdf, page 1>
-Package pdftex.def Info: Ficha_Catalografica.pdf , page1 used on input line 234
+Package pdftex.def Info: Ficha_Catalografica.pdf , page1 used on input line 237
 .
 (pdftex.def)             Requested size: 597.57834pt x 845.23425pt.
 File: Ficha_Catalografica.pdf Graphic file (type pdf)
 <use Ficha_Catalografica.pdf, page 1>
-Package pdftex.def Info: Ficha_Catalografica.pdf , page1 used on input line 234
+Package pdftex.def Info: Ficha_Catalografica.pdf , page1 used on input line 237
 .
 (pdftex.def)             Requested size: 597.57834pt x 845.23425pt.
 File: Ficha_Catalografica.pdf Graphic file (type pdf)
 <use Ficha_Catalografica.pdf, page 1>
-Package pdftex.def Info: Ficha_Catalografica.pdf , page1 used on input line 234
+Package pdftex.def Info: Ficha_Catalografica.pdf , page1 used on input line 237
 .
 (pdftex.def)             Requested size: 597.57834pt x 845.23425pt.
 File: Ficha_Catalografica.pdf Graphic file (type pdf)
 <use Ficha_Catalografica.pdf, page 1>
-Package pdftex.def Info: Ficha_Catalografica.pdf , page1 used on input line 234
+Package pdftex.def Info: Ficha_Catalografica.pdf , page1 used on input line 237
 .
 (pdftex.def)             Requested size: 597.57834pt x 845.23425pt.
 [2 <./Ficha_Catalografica.pdf>]
-Underfull \hbox (badness 10000) in paragraph at lines 263--264
+Underfull \hbox (badness 10000) in paragraph at lines 266--267
 
  []
 
@@ -1877,38 +1998,38 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
 LaTeX Font Info:    Trying to load font information for FML+futmi on input line
- 264.
+ 267.
 
 (c:/Users/lfpdr/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/fourier/fmlfutmi.f
 d
 File: fmlfutmi.fd 2004/10/30 Fontinst v1.926 font definitions for FML/futmi.
 )
 LaTeX Font Info:    Trying to load font information for OMX+helvet on input lin
-e 264.
-LaTeX Font Info:    No file OMXhelvet.fd. on input line 264.
+e 267.
+LaTeX Font Info:    No file OMXhelvet.fd. on input line 267.
 
 LaTeX Font Warning: Font shape `OMX/helvet/m/n' undefined
-(Font)              using `OMX/cmex/m/n' instead on input line 264.
+(Font)              using `OMX/cmex/m/n' instead on input line 267.
 
 LaTeX Font Info:    Font shape `U/futm/m/n' will be
-(Font)              scaled to size 11.03998pt on input line 264.
+(Font)              scaled to size 11.03998pt on input line 267.
 LaTeX Font Info:    Font shape `U/futm/m/n' will be
-(Font)              scaled to size 9.19998pt on input line 264.
+(Font)              scaled to size 9.19998pt on input line 267.
 LaTeX Font Info:    Font shape `U/futm/m/n' will be
-(Font)              scaled to size 6.43999pt on input line 264.
+(Font)              scaled to size 6.43999pt on input line 267.
 LaTeX Font Info:    Font shape `T1/phv/m/it' in size <12> not available
-(Font)              Font shape `T1/phv/m/sl' tried instead on input line 264.
+(Font)              Font shape `T1/phv/m/sl' tried instead on input line 267.
 LaTeX Font Info:    Font shape `T1/phv/m/it' in size <10> not available
-(Font)              Font shape `T1/phv/m/sl' tried instead on input line 264.
+(Font)              Font shape `T1/phv/m/sl' tried instead on input line 267.
 LaTeX Font Info:    Font shape `T1/phv/m/it' in size <7> not available
-(Font)              Font shape `T1/phv/m/sl' tried instead on input line 264.
+(Font)              Font shape `T1/phv/m/sl' tried instead on input line 267.
 [3
 
 ] [4
 
 ]
 LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <12> not available
-(Font)              Font shape `T1/phv/b/n' tried instead on input line 297.
+(Font)              Font shape `T1/phv/b/n' tried instead on input line 300.
 [5
 
 
@@ -1916,7 +2037,7 @@ LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <12> not available
 
 ]
 LaTeX Font Info:    Trying to load font information for TS1+phv on input line 3
-27.
+29.
 (c:/Users/lfpdr/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/psnfss/ts1phv.fd
 File: ts1phv.fd 2020/03/25 scalable font definitions for TS1/phv.
 )
@@ -1924,277 +2045,1062 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `phv' (encoding: TS1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
+Package textcomp Info: Symbol \textasciiacute not provided by
+(textcomp)             font family phv in TS1 encoding.
+(textcomp)             Default family used instead on input line 335.
+
+(c:/Users/lfpdr/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/microtype/mt-cmr.c
+fg
+File: mt-cmr.cfg 2013/05/19 v2.2 microtype config. file: Computer Modern Roman 
+(RS)
+)
+Package textcomp Info: Symbol \textasciiacute not provided by
+(textcomp)             font family phv in TS1 encoding.
+(textcomp)             Default family used instead on input line 337.
 [7
 
+] [8
+
+] (./thesis.lof
+Overfull \hbox (1.41573pt too wide) detected at line 59
+ \T1/phv/m/n/12 100
+ []
+
+
+Overfull \hbox (1.41573pt too wide) detected at line 61
+ \T1/phv/m/n/12 101
+ []
+
+
+Overfull \hbox (1.41573pt too wide) detected at line 63
+ \T1/phv/m/n/12 101
+ []
+
+
+Overfull \hbox (1.41573pt too wide) detected at line 65
+ \T1/phv/m/n/12 102
+ []
+
+
+Overfull \hbox (1.41573pt too wide) detected at line 67
+ \T1/phv/m/n/12 103
+ []
+
+
+Overfull \hbox (1.41573pt too wide) detected at line 69
+ \T1/phv/m/n/12 104
+ []
+
+[9
+
 ]
-(c:/Users/lfpdr/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/babel/locale/en/
-babel-english.tex
-Package babel Info: Importing basic data for english
-(babel)             from babel-en.ini. Reported on input line 11.
-) [8
+Overfull \hbox (1.41573pt too wide) detected at line 71
+ \T1/phv/m/n/12 105
+ []
 
-] (./thesis.lof) [9
 
-] (./thesis.loq) [10
+Overfull \hbox (1.41573pt too wide) detected at line 73
+ \T1/phv/m/n/12 106
+ []
 
-] (./thesis.lot) [11
+
+Overfull \hbox (1.41573pt too wide) detected at line 75
+ \T1/phv/m/n/12 107
+ []
+
+
+Overfull \hbox (1.41573pt too wide) detected at line 77
+ \T1/phv/m/n/12 108
+ []
+
+
+Overfull \hbox (1.41573pt too wide) detected at line 79
+ \T1/phv/m/n/12 113
+ []
+
+
+Overfull \hbox (1.41573pt too wide) detected at line 81
+ \T1/phv/m/n/12 114
+ []
+
+
+Overfull \hbox (1.41573pt too wide) detected at line 83
+ \T1/phv/m/n/12 115
+ []
+
+
+Overfull \hbox (1.41573pt too wide) detected at line 85
+ \T1/phv/m/n/12 116
+ []
+
+
+Overfull \hbox (1.41573pt too wide) detected at line 87
+ \T1/phv/m/n/12 116
+ []
+
+
+Overfull \hbox (1.41573pt too wide) detected at line 89
+ \T1/phv/m/n/12 117
+ []
+
+
+Overfull \hbox (1.41573pt too wide) detected at line 91
+ \T1/phv/m/n/12 119
+ []
+
+
+Overfull \hbox (1.41573pt too wide) detected at line 93
+ \T1/phv/m/n/12 120
+ []
+
+
+Overfull \hbox (1.41573pt too wide) detected at line 95
+ \T1/phv/m/n/12 120
+ []
+
+
+Overfull \hbox (1.41573pt too wide) detected at line 97
+ \T1/phv/m/n/12 121
+ []
+
+
+Overfull \hbox (1.41573pt too wide) detected at line 99
+ \T1/phv/m/n/12 122
+ []
+
+
+Overfull \hbox (1.41573pt too wide) detected at line 101
+ \T1/phv/m/n/12 127
+ []
+
+
+Overfull \hbox (1.41573pt too wide) detected at line 103
+ \T1/phv/m/n/12 132
+ []
+
+
+Overfull \hbox (1.41573pt too wide) detected at line 105
+ \T1/phv/m/n/12 133
+ []
+
+
+Overfull \hbox (1.41573pt too wide) detected at line 107
+ \T1/phv/m/n/12 142
+ []
+
+
+Overfull \hbox (1.41573pt too wide) detected at line 109
+ \T1/phv/m/n/12 143
+ []
+
+
+Overfull \hbox (1.41573pt too wide) detected at line 111
+ \T1/phv/m/n/12 144
+ []
+
+
+Overfull \hbox (1.41573pt too wide) detected at line 113
+ \T1/phv/m/n/12 146
+ []
+
+
+Overfull \hbox (1.41573pt too wide) detected at line 115
+ \T1/phv/m/n/12 147
+ []
+
+
+Overfull \hbox (1.41573pt too wide) detected at line 117
+ \T1/phv/m/n/12 148
+ []
+
+
+Overfull \hbox (1.41573pt too wide) detected at line 119
+ \T1/phv/m/n/12 149
+ []
+
+
+Overfull \hbox (1.41573pt too wide) detected at line 121
+ \T1/phv/m/n/12 153
+ []
+
+
+Overfull \hbox (1.41573pt too wide) detected at line 123
+ \T1/phv/m/n/12 157
+ []
+
+
+Overfull \hbox (1.41573pt too wide) detected at line 125
+ \T1/phv/m/n/12 157
+ []
+
+
+Overfull \hbox (1.41573pt too wide) detected at line 127
+ \T1/phv/m/n/12 186
+ []
+
+
+Overfull \hbox (1.41573pt too wide) detected at line 129
+ \T1/phv/m/n/12 187
+ []
+
+) [10] (./thesis.loq) [11
+
+] (./thesis.lot
+Overfull \hbox (1.41573pt too wide) detected at line 11
+ \T1/phv/m/n/12 134
+ []
+
+
+Overfull \hbox (1.41573pt too wide) detected at line 13
+ \T1/phv/m/n/12 134
+ []
+
+) [12
 
 ]
 Using TeX to sort glossary entries---this may take a while
-[12
-
-
-
-]pdfTeX warning (ext4): destination with the same identifier (name{table.0.0}) 
-has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.413 	\imprimirlistadesimbolos
-                               
-Overfull \hbox (5.20578pt too wide) in alignment at lines 413--413
-[] [] 
- []
-
 [13
 
 
 
-] (./thesis.toc [14
+] [14]pdfTeX warning (ext4): destination with the same identifier (name{table.0
+.0}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.422 	\imprimirlistadesimbolos
+                               
+Overfull \hbox (5.20578pt too wide) in alignment at lines 422--422
+[] [] 
+ []
 
-] [15]) [16] [17
+
+Overfull \hbox (5.20578pt too wide) in alignment at lines 422--422
+[] [] 
+ []
+
+[15
 
 
-] [18] [19] [20
 
-] [21
+] (./thesis.toc
+LaTeX Font Info:    Font shape `T1/phv/bx/it' in size <12> not available
+(Font)              Font shape `T1/phv/b/it' tried instead on input line 80.
+LaTeX Font Info:    Font shape `T1/phv/b/it' in size <12> not available
+(Font)              Font shape `T1/phv/b/sl' tried instead on input line 80.
+[16
+
+] [17]
+Overfull \hbox (1.41573pt too wide) detected at line 196
+ \T1/phv/m/n/12 102
+ []
+
+
+Overfull \hbox (1.41573pt too wide) detected at line 198
+ \T1/phv/b/n/12 103
+ []
+
+
+Overfull \hbox (1.41573pt too wide) detected at line 200
+ \T1/phv/b/n/12 107
+ []
+
+
+Overfull \hbox (1.41573pt too wide) detected at line 204
+ \T1/phv/b/n/12 109
+ []
+
+
+Overfull \hbox (1.41573pt too wide) detected at line 206
+ \T1/phv/m/n/12 110
+ []
+
+
+Overfull \hbox (1.41573pt too wide) detected at line 208
+ \T1/phv/m/n/12 111
+ []
+
+
+Overfull \hbox (1.41573pt too wide) detected at line 210
+ \T1/phv/b/n/12 112
+ []
+
+
+Overfull \hbox (1.41573pt too wide) detected at line 212
+ \T1/phv/b/n/12 114
+ []
+
+
+Overfull \hbox (1.41573pt too wide) detected at line 214
+ \T1/phv/b/n/12 117
+ []
+
+
+Overfull \hbox (1.41573pt too wide) detected at line 216
+ \T1/phv/b/n/12 118
+ []
+
+
+Overfull \hbox (1.41573pt too wide) detected at line 218
+ \T1/phv/m/n/12 118
+ []
+
+
+Overfull \hbox (1.41573pt too wide) detected at line 220
+ \T1/phv/m/n/12 123
+ []
+
+
+Overfull \hbox (1.41573pt too wide) detected at line 222
+ \T1/phv/b/n/12 123
+ []
+
+
+Overfull \hbox (1.41573pt too wide) detected at line 224
+ \T1/phv/b/n/12 124
+ []
+
+
+Overfull \hbox (1.41573pt too wide) detected at line 226
+ \T1/phv/b/n/12 125
+ []
+
+
+Overfull \hbox (1.41573pt too wide) detected at line 228
+ \T1/phv/b/n/12 127
+ []
+
+
+Overfull \hbox (1.41573pt too wide) detected at line 230
+ \T1/phv/m/n/12 128
+ []
+
+
+Overfull \hbox (1.41573pt too wide) detected at line 232
+ \T1/phv/m/n/12 130
+ []
+
+
+Overfull \hbox (1.41573pt too wide) detected at line 234
+ \T1/phv/m/sl/12 132
+ []
+
+
+Overfull \hbox (1.41573pt too wide) detected at line 238
+ \T1/phv/m/n/12 136
+ []
+
+
+Overfull \hbox (1.41573pt too wide) detected at line 242
+ \T1/phv/b/n/12 138
+ []
+
+
+Overfull \hbox (1.41573pt too wide) detected at line 244
+ \T1/phv/m/n/12 140
+ []
+
+
+Overfull \hbox (1.41573pt too wide) detected at line 246
+ \T1/phv/b/n/12 140
+ []
+
+
+Overfull \hbox (1.41573pt too wide) detected at line 248
+ \T1/phv/b/n/12 140
+ []
+
+
+Overfull \hbox (1.41573pt too wide) detected at line 250
+ \T1/phv/b/n/12 144
+ []
+
+[18]
+Overfull \hbox (1.41573pt too wide) detected at line 252
+ \T1/phv/m/n/12 144
+ []
+
+
+Overfull \hbox (1.41573pt too wide) detected at line 254
+ \T1/phv/m/n/12 147
+ []
+
+
+Overfull \hbox (1.41573pt too wide) detected at line 256
+ \T1/phv/m/n/12 148
+ []
+
+
+Overfull \hbox (1.41573pt too wide) detected at line 258
+ \T1/phv/m/n/12 148
+ []
+
+
+Overfull \hbox (1.41573pt too wide) detected at line 260
+ \T1/phv/m/n/12 152
+ []
+
+
+Overfull \hbox (1.41573pt too wide) detected at line 262
+ \T1/phv/b/n/12 153
+ []
+
+
+Overfull \hbox (1.41573pt too wide) detected at line 264
+ \T1/phv/b/n/12 154
+ []
+
+
+Overfull \hbox (1.41573pt too wide) detected at line 266
+ \T1/phv/b/n/12 155
+ []
+
+
+Overfull \hbox (1.41573pt too wide) detected at line 268
+ \T1/phv/m/n/12 155
+ []
+
+
+Overfull \hbox (1.41573pt too wide) detected at line 270
+ \T1/phv/m/n/12 156
+ []
+
+
+Overfull \hbox (1.41573pt too wide) detected at line 272
+ \T1/phv/m/n/12 156
+ []
+
+
+Overfull \hbox (1.41573pt too wide) detected at line 274
+ \T1/phv/m/sl/12 156
+ []
+
+
+Overfull \hbox (1.41573pt too wide) detected at line 276
+ \T1/phv/b/n/12 158
+ []
+
+
+Overfull \hbox (1.41573pt too wide) detected at line 278
+ \T1/phv/m/n/12 158
+ []
+
+
+Overfull \hbox (1.41573pt too wide) detected at line 280
+ \T1/phv/m/n/12 159
+ []
+
+
+Overfull \hbox (1.41573pt too wide) detected at line 284
+ \T1/phv/b/n/12 161
+ []
+
+
+Overfull \hbox (1.41573pt too wide) detected at line 286
+ \T1/phv/m/n/12 166
+ []
+
+
+Overfull \hbox (1.41573pt too wide) detected at line 288
+ \T1/phv/m/n/12 167
+ []
+
+
+Overfull \hbox (1.41573pt too wide) detected at line 290
+ \T1/phv/m/n/12 167
+ []
+
+
+Overfull \hbox (1.41573pt too wide) detected at line 292
+ \T1/phv/m/n/12 167
+ []
+
+
+Overfull \hbox (1.41573pt too wide) detected at line 298
+ \T1/phv/b/n/12 169
+ []
+
+
+Overfull \hbox (1.41573pt too wide) detected at line 307
+ \T1/phv/b/n/12 186
+ []
+
+
+Overfull \hbox (1.41573pt too wide) detected at line 309
+ \T1/phv/m/n/12 186
+ []
+
+
+Overfull \hbox (1.41573pt too wide) detected at line 320
+ \T1/phv/b/n/12 189
+ []
+
+) [19]
+LaTeX Font Info:    Font shape `U/futm/m/n' will be
+(Font)              scaled to size 6.99199pt on input line 472.
+LaTeX Font Info:    Font shape `U/futm/m/n' will be
+(Font)              scaled to size 5.51999pt on input line 472.
+LaTeX Font Info:    Font shape `T1/phv/m/it' in size <7.6> not available
+(Font)              Font shape `T1/phv/m/sl' tried instead on input line 472.
+LaTeX Font Info:    Font shape `T1/phv/m/it' in size <6> not available
+(Font)              Font shape `T1/phv/m/sl' tried instead on input line 472.
+[20
+
 
 ]
-<images/pop-urb-mundo-1.png, id=481, 469.755pt x 325.215pt>
+Overfull \hbox (2.50531pt too wide) in paragraph at lines 536--537
+ []\T1/phv/m/n/12 (-10) Ano|
+ []
+
+
+Underfull \hbox (badness 10000) in alignment at lines 532--549
+[] [] [] [] [] []
+ []
+
+
+Overfull \hbox (2.50531pt too wide) in paragraph at lines 552--553
+ []\T1/phv/m/n/12 (-10) Ano|
+ []
+
+
+Underfull \hbox (badness 10000) in alignment at lines 549--565
+[] [] [] [] [] []
+ []
+
+
+Overfull \hbox (7.85184pt too wide) in paragraph at lines 567--568
+ []\T1/phv/m/n/12 (-10) 1990|
+ []
+
+
+Overfull \hbox (7.85184pt too wide) in paragraph at lines 580--581
+ []\T1/phv/m/n/12 (-10) 1995|
+ []
+
+
+Overfull \hbox (8.22383pt too wide) in paragraph at lines 593--594
+ []\T1/phv/m/n/12 (-10) 2000|
+ []
+
+
+Overfull \hbox (8.22383pt too wide) in paragraph at lines 606--607
+ []\T1/phv/m/n/12 (-10) 2005|
+ []
+
+
+Overfull \hbox (8.22383pt too wide) in paragraph at lines 619--620
+ []\T1/phv/m/n/12 (-10) 2009|
+ []
+
+
+Overfull \hbox (8.22383pt too wide) in paragraph at lines 632--633
+ []\T1/phv/m/n/12 (-10) 2014|
+ []
+
+
+Underfull \hbox (badness 10000) in alignment at lines 565--645
+[] [] [] [] [] []
+ []
+
+[21] [22]
+<images/urban-pop-in-out-of-slums.png, id=708, 3412.75pt x 2409.0pt>
+File: images/urban-pop-in-out-of-slums.png Graphic file (type png)
+<use images/urban-pop-in-out-of-slums.png>
+Package pdftex.def Info: images/urban-pop-in-out-of-slums.png  used on input li
+ne 692.
+(pdftex.def)             Requested size: 318.49861pt x 224.81396pt.
+[23 <./images/urban-pop-in-out-of-slums.png (PNG copy)>] [24] [25]
+<images/fluxo-1.png, id=769, 752.8125pt x 436.63126pt>
+File: images/fluxo-1.png Graphic file (type png)
+<use images/fluxo-1.png>
+Package pdftex.def Info: images/fluxo-1.png  used on input line 853.
+(pdftex.def)             Requested size: 364.00139pt x 211.12631pt.
+[26
+
+ <./images/fluxo-1.png>] [27
+
+] [28
+
+]
+<images/pop-urb-mundo-1.png, id=805, 469.755pt x 325.215pt>
 File: images/pop-urb-mundo-1.png Graphic file (type png)
 <use images/pop-urb-mundo-1.png>
-Package pdftex.def Info: images/pop-urb-mundo-1.png  used on input line 662.
+Package pdftex.def Info: images/pop-urb-mundo-1.png  used on input line 978.
 (pdftex.def)             Requested size: 364.00139pt x 251.99931pt.
-[22]
-<images/pop-urb-continents-1.png, id=490, 469.755pt x 325.215pt>
+[29]
+<images/pop-urb-continents-1.png, id=816, 469.755pt x 325.215pt>
 File: images/pop-urb-continents-1.png Graphic file (type png)
 <use images/pop-urb-continents-1.png>
-Package pdftex.def Info: images/pop-urb-continents-1.png  used on input line 67
-9.
+Package pdftex.def Info: images/pop-urb-continents-1.png  used on input line 99
+4.
 (pdftex.def)             Requested size: 364.00139pt x 251.99931pt.
-[23 <./images/pop-urb-mundo-1.png> <./images/pop-urb-continents-1.png>]
-<images/pop-urb-brazil-latinAmerica-1.png, id=500, 469.755pt x 325.215pt>
+<images/pop-urb-brazil-latinAmerica-1.png, id=819, 469.755pt x 325.215pt>
 File: images/pop-urb-brazil-latinAmerica-1.png Graphic file (type png)
 <use images/pop-urb-brazil-latinAmerica-1.png>
 Package pdftex.def Info: images/pop-urb-brazil-latinAmerica-1.png  used on inpu
-t line 693.
+t line 1006.
 (pdftex.def)             Requested size: 364.00139pt x 251.99931pt.
-<images/pop-urb-brazil-developed-1.png, id=504, 469.755pt x 325.215pt>
+[30 <./images/pop-urb-mundo-1.png> <./images/pop-urb-continents-1.png>]
+<images/pop-urb-brazil-developed-1.png, id=832, 469.755pt x 325.215pt>
 File: images/pop-urb-brazil-developed-1.png Graphic file (type png)
 <use images/pop-urb-brazil-developed-1.png>
 Package pdftex.def Info: images/pop-urb-brazil-developed-1.png  used on input l
-ine 717.
+ine 1031.
 (pdftex.def)             Requested size: 364.00139pt x 251.99931pt.
-[24 <./images/pop-urb-brazil-latinAmerica-1.png>]
-<images/pop-urb-brazil-brics-1.png, id=514, 469.755pt x 325.215pt>
+[31 <./images/pop-urb-brazil-latinAmerica-1.png>]
+<images/pop-urb-brazil-brics-1.png, id=842, 469.755pt x 325.215pt>
 File: images/pop-urb-brazil-brics-1.png Graphic file (type png)
 <use images/pop-urb-brazil-brics-1.png>
 Package pdftex.def Info: images/pop-urb-brazil-brics-1.png  used on input line 
-730.
+1046.
 (pdftex.def)             Requested size: 364.00139pt x 251.99931pt.
-[25 <./images/pop-urb-brazil-developed-1.png> <./images/pop-urb-brazil-brics-1.
-png>] [26] [27] [28] [29] [30] [31]
-LaTeX Font Info:    Font shape `U/futm/m/n' will be
-(Font)              scaled to size 6.99199pt on input line 1089.
-LaTeX Font Info:    Font shape `U/futm/m/n' will be
-(Font)              scaled to size 5.51999pt on input line 1089.
-LaTeX Font Info:    Font shape `T1/phv/m/it' in size <7.6> not available
-(Font)              Font shape `T1/phv/m/sl' tried instead on input line 1089.
-LaTeX Font Info:    Font shape `T1/phv/m/it' in size <6> not available
-(Font)              Font shape `T1/phv/m/sl' tried instead on input line 1089.
-[32] [33] [34]
-<./images/adams2_crop.pdf, id=651, 520.94624pt x 436.63126pt>
-File: ./images/adams2_crop.pdf Graphic file (type pdf)
-<use ./images/adams2_crop.pdf>
-Package pdftex.def Info: ./images/adams2_crop.pdf  used on input line 1254.
-(pdftex.def)             Requested size: 455.0pt x 381.3585pt.
-[35] [36 <./images/adams2_crop.pdf>] [37] [38
+[32 <./images/pop-urb-brazil-developed-1.png> <./images/pop-urb-brazil-brics-1.
+png>] [33] [34] [35] [36] [37] [38] [39] [40] [41] [42] [43] [44] [45] [46] [47
+]
 
-] [39
+LaTeX Font Warning: Font shape `T1/phv/m/scit' undefined
+(Font)              using `T1/phv/m/sc' instead on input line 1791.
 
-] [40] [41]
-<./images/adams_crop.pdf, id=788, 497.86pt x 695.59875pt>
-File: ./images/adams_crop.pdf Graphic file (type pdf)
-<use ./images/adams_crop.pdf>
-Package pdftex.def Info: ./images/adams_crop.pdf  used on input line 1565.
-(pdftex.def)             Requested size: 455.0pt x 635.73427pt.
-[42] [43 <./images/adams_crop.pdf>] [44] [45] [46] [47] [48]
-<images/nhpi-1.png, id=896, 469.755pt x 325.215pt>
-File: images/nhpi-1.png Graphic file (type png)
-<use images/nhpi-1.png>
-Package pdftex.def Info: images/nhpi-1.png  used on input line 1894.
-(pdftex.def)             Requested size: 318.49861pt x 220.49815pt.
-[49]
-<images/rhpi-1.png, id=906, 469.755pt x 325.215pt>
-File: images/rhpi-1.png Graphic file (type png)
-<use images/rhpi-1.png>
-Package pdftex.def Info: images/rhpi-1.png  used on input line 1915.
-(pdftex.def)             Requested size: 318.49861pt x 220.49815pt.
-[50 <./images/nhpi-1.png> <./images/rhpi-1.png>]
-<images/rhpi2-1.png, id=919, 469.755pt x 325.215pt>
-File: images/rhpi2-1.png Graphic file (type png)
-<use images/rhpi2-1.png>
-Package pdftex.def Info: images/rhpi2-1.png  used on input line 1939.
-(pdftex.def)             Requested size: 318.49861pt x 220.49815pt.
-<images/global-rhpi-1.png, id=926, 469.755pt x 325.215pt>
-File: images/global-rhpi-1.png Graphic file (type png)
-<use images/global-rhpi-1.png>
-Package pdftex.def Info: images/global-rhpi-1.png  used on input line 1971.
-(pdftex.def)             Requested size: 318.49861pt x 220.49815pt.
-[51 <./images/rhpi2-1.png>] [52 <./images/global-rhpi-1.png>]
-<images/yields-1.png, id=955, 469.755pt x 325.215pt>
-File: images/yields-1.png Graphic file (type png)
-<use images/yields-1.png>
-Package pdftex.def Info: images/yields-1.png  used on input line 2045.
-(pdftex.def)             Requested size: 318.49861pt x 220.49815pt.
-<images/yields2-1.png, id=958, 469.755pt x 325.215pt>
-File: images/yields2-1.png Graphic file (type png)
-<use images/yields2-1.png>
-Package pdftex.def Info: images/yields2-1.png  used on input line 2059.
-(pdftex.def)             Requested size: 318.49861pt x 220.49815pt.
-[53 <./images/yields-1.png>]
-<images/fred-1.png, id=972, 469.755pt x 325.215pt>
-File: images/fred-1.png Graphic file (type png)
-<use images/fred-1.png>
-Package pdftex.def Info: images/fred-1.png  used on input line 2093.
-(pdftex.def)             Requested size: 455.0pt x 315.00163pt.
-[54 <./images/yields2-1.png>]
-<images/mortagages-1.png, id=980, 469.755pt x 325.215pt>
-File: images/mortagages-1.png Graphic file (type png)
-<use images/mortagages-1.png>
-Package pdftex.def Info: images/mortagages-1.png  used on input line 2121.
-(pdftex.def)             Requested size: 455.0pt x 315.00163pt.
-[55 <./images/fred-1.png>] [56 <./images/mortagages-1.png>] [57] [58]
-<images/CDO-1.png, id=1041, 752.8125pt x 436.63126pt>
-File: images/CDO-1.png Graphic file (type png)
-<use images/CDO-1.png>
-Package pdftex.def Info: images/CDO-1.png  used on input line 2307.
-(pdftex.def)             Requested size: 318.49861pt x 184.73634pt.
-[59]
-Underfull \hbox (badness 10000) in alignment at lines 2348--2354
-[] []
- []
-
-
-Underfull \hbox (badness 10000) in alignment at lines 2354--2359
-[] []
- []
-
-
-Underfull \hbox (badness 10000) in alignment at lines 2359--2379
-[] []
- []
-
-[60 <./images/CDO-1.png>]
-Underfull \hbox (badness 10000) in alignment at lines 2380--2385
-[] []
- []
-
-
-Underfull \hbox (badness 10000) in alignment at lines 2385--2389
-[] []
- []
-
-
-Underfull \hbox (badness 10000) in alignment at lines 2389--2397
-[] []
- []
-
-[61] [62] [63] [64] [65]
-<images/valores-juros-1.png, id=1132, 469.755pt x 325.215pt>
-File: images/valores-juros-1.png Graphic file (type png)
-<use images/valores-juros-1.png>
-Package pdftex.def Info: images/valores-juros-1.png  used on input line 2639.
-(pdftex.def)             Requested size: 318.49861pt x 220.49815pt.
-[66 <./images/valores-juros-1.png>] [67] [68] [69] [70
-
-] [71]
-LaTeX Font Info:    Font shape `T1/phv/b/it' in size <12> not available
-(Font)              Font shape `T1/phv/b/sl' tried instead on input line 2924.
-
-Overfull \hbox (2.22668pt too wide) in paragraph at lines 2937--2937
- []|\T1/phv/m/n/12 (-10) R$52,06|
- []
-
-
-Overfull \hbox (2.22668pt too wide) in paragraph at lines 2938--2938
- []|\T1/phv/m/n/12 (-10) R$34,55|
- []
-
-
-Overfull \hbox (2.22668pt too wide) in paragraph at lines 2939--2939
- []|\T1/phv/m/n/12 (-10) R$33,70|
- []
-
-
-Overfull \hbox (2.22668pt too wide) in paragraph at lines 2940--2940
- []|\T1/phv/m/n/12 (-10) R$38,84|
- []
-
-
-Overfull \hbox (2.22668pt too wide) in paragraph at lines 2941--2941
- []|\T1/phv/m/n/12 (-10) R$40,74|
- []
-
-
-Overfull \hbox (2.22668pt too wide) in paragraph at lines 2942--2942
- []|\T1/phv/m/n/12 (-10) R$43,05|
- []
-
-
-Overfull \hbox (2.22668pt too wide) in paragraph at lines 2945--2945
- []|\T1/phv/m/n/12 (-10) R$34,39|
- []
-
-
-Overfull \hbox (2.22668pt too wide) in paragraph at lines 2946--2946
- []|\T1/phv/m/n/12 (-10) R$33,10|
- []
-
-
-Overfull \hbox (2.22668pt too wide) in paragraph at lines 2947--2947
- []|\T1/phv/m/n/12 (-10) R$34,70|
- []
-
-
-Overfull \hbox (8.83188pt too wide) in paragraph at lines 2950--2950
- []|\T1/phv/m/n/12 (-10) R$105,57|
- []
-
-[72]
-<images/valores-juros-rec-1.png, id=1206, 469.755pt x 325.215pt>
-File: images/valores-juros-rec-1.png Graphic file (type png)
-<use images/valores-juros-rec-1.png>
-Package pdftex.def Info: images/valores-juros-rec-1.png  used on input line 300
-9.
-(pdftex.def)             Requested size: 318.49861pt x 220.49815pt.
-[73]
-<images/valores-juros-log-1.png, id=1212, 469.755pt x 325.215pt>
-File: images/valores-juros-log-1.png Graphic file (type png)
-<use images/valores-juros-log-1.png>
-Package pdftex.def Info: images/valores-juros-log-1.png  used on input line 302
-0.
-(pdftex.def)             Requested size: 318.49861pt x 220.49815pt.
-[74 <./images/valores-juros-rec-1.png> <./images/valores-juros-log-1.png>] [75
-
-] [76] [77] [78
-
-] [79
-
-] [80
+[48
 
 ]
-LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 3
-171.
+LaTeX Font Info:    Font shape `T1/phv/b/it' in size <12> not available
+(Font)              Font shape `T1/phv/b/sl' tried instead on input line 1824.
+[49
+
+] [50] [51] [52]
+<images/MIResidencial-1.png, id=1199, 752.8125pt x 436.63126pt>
+File: images/MIResidencial-1.png Graphic file (type png)
+<use images/MIResidencial-1.png>
+Package pdftex.def Info: images/MIResidencial-1.png  used on input line 2030.
+(pdftex.def)             Requested size: 318.49861pt x 184.73634pt.
+[53 <./images/MIResidencial-1.png>] [54] [55]
+<images/equilibrioMercado-1.png, id=1257, 469.755pt x 325.215pt>
+File: images/equilibrioMercado-1.png Graphic file (type png)
+<use images/equilibrioMercado-1.png>
+Package pdftex.def Info: images/equilibrioMercado-1.png  used on input line 220
+9.
+(pdftex.def)             Requested size: 318.49861pt x 220.49815pt.
+[56] [57 <./images/equilibrioMercado-1.png>]
+<images/engel1-1.png, id=1294, 469.755pt x 325.215pt>
+File: images/engel1-1.png Graphic file (type png)
+<use images/engel1-1.png>
+Package pdftex.def Info: images/engel1-1.png  used on input line 2273.
+(pdftex.def)             Requested size: 318.49861pt x 220.49815pt.
+<images/engel2-1.png, id=1298, 469.755pt x 325.215pt>
+File: images/engel2-1.png Graphic file (type png)
+<use images/engel2-1.png>
+Package pdftex.def Info: images/engel2-1.png  used on input line 2295.
+(pdftex.def)             Requested size: 318.49861pt x 220.49815pt.
+[58 <./images/engel1-1.png>]
+<images/income_elasticity.png, id=1313, 722.7pt x 542.5068pt>
+File: images/income_elasticity.png Graphic file (type png)
+<use images/income_elasticity.png>
+Package pdftex.def Info: images/income_elasticity.png  used on input line 2317.
+
+(pdftex.def)             Requested size: 318.49861pt x 239.08452pt.
+[59 <./images/engel2-1.png>]
+LaTeX Font Info:    Font shape `T1/phv/m/it' in size <10.95> not available
+(Font)              Font shape `T1/phv/m/sl' tried instead on input line 2325.
+<images/casosEspeciais-1.png, id=1328, 469.755pt x 325.215pt>
+File: images/casosEspeciais-1.png Graphic file (type png)
+<use images/casosEspeciais-1.png>
+Package pdftex.def Info: images/casosEspeciais-1.png  used on input line 2349.
+(pdftex.def)             Requested size: 455.0pt x 315.00163pt.
+[60 <./images/income_elasticity.png>]
+<images/supplyCurves.png, id=1350, 470.50781pt x 330.48468pt>
+File: images/supplyCurves.png Graphic file (type png)
+<use images/supplyCurves.png>
+Package pdftex.def Info: images/supplyCurves.png  used on input line 2374.
+(pdftex.def)             Requested size: 318.49861pt x 223.713pt.
+[61 <./images/casosEspeciais-1.png>] [62 <./images/supplyCurves.png>] [63] [64]
+[65] [66] [67] [68]
+<images/valores-juros-1.png, id=1530, 469.755pt x 325.215pt>
+File: images/valores-juros-1.png Graphic file (type png)
+<use images/valores-juros-1.png>
+Package pdftex.def Info: images/valores-juros-1.png  used on input line 2725.
+(pdftex.def)             Requested size: 318.49861pt x 220.49815pt.
+[69 <./images/valores-juros-1.png>] [70] [71]
+<./images/adams2_crop.pdf, id=1597, 520.94624pt x 436.63126pt>
+File: ./images/adams2_crop.pdf Graphic file (type pdf)
+<use ./images/adams2_crop.pdf>
+Package pdftex.def Info: ./images/adams2_crop.pdf  used on input line 2865.
+(pdftex.def)             Requested size: 455.0pt x 381.3585pt.
+[72 <./images/adams2_crop.pdf>]
+<images/several_indices_regulations.png, id=1625, 474.27188pt x 336.50719pt>
+File: images/several_indices_regulations.png Graphic file (type png)
+<use images/several_indices_regulations.png>
+Package pdftex.def Info: images/several_indices_regulations.png  used on input 
+line 2888.
+(pdftex.def)             Requested size: 318.49861pt x 225.9875pt.
+[73 <./images/several_indices_regulations.png>]
+<images/rhpi-Malpezzi-1.png, id=1644, 469.755pt x 325.215pt>
+File: images/rhpi-Malpezzi-1.png Graphic file (type png)
+<use images/rhpi-Malpezzi-1.png>
+Package pdftex.def Info: images/rhpi-Malpezzi-1.png  used on input line 2934.
+(pdftex.def)             Requested size: 318.49861pt x 220.49815pt.
+<images/land.png, id=1655, 389.95688pt x 292.09125pt>
+File: images/land.png Graphic file (type png)
+<use images/land.png>
+Package pdftex.def Info: images/land.png  used on input line 2953.
+(pdftex.def)             Requested size: 318.49861pt x 238.57594pt.
+[74 <./images/rhpi-Malpezzi-1.png>]
+<images/constructionvshp.png, id=1669, 343.2825pt x 271.0125pt>
+File: images/constructionvshp.png Graphic file (type png)
+<use images/constructionvshp.png>
+Package pdftex.def Info: images/constructionvshp.png  used on input line 2970.
+(pdftex.def)             Requested size: 318.49861pt x 251.44353pt.
+[75 <./images/land.png> <./images/constructionvshp.png>]
+<images/Malpezzi_rates.png, id=1685, 1505.625pt x 1132.23pt>
+File: images/Malpezzi_rates.png Graphic file (type png)
+<use images/Malpezzi_rates.png>
+Package pdftex.def Info: images/Malpezzi_rates.png  used on input line 2989.
+(pdftex.def)             Requested size: 318.49861pt x 239.50296pt.
+[76 <./images/Malpezzi_rates.png>]
+<images/mortgages-1.png, id=1700, 469.755pt x 325.215pt>
+File: images/mortgages-1.png Graphic file (type png)
+<use images/mortgages-1.png>
+Package pdftex.def Info: images/mortgages-1.png  used on input line 3033.
+(pdftex.def)             Requested size: 455.0pt x 315.00163pt.
+<images/Malpezzi_mortgage_flows.png, id=1704, 1505.625pt x 1132.23pt>
+File: images/Malpezzi_mortgage_flows.png Graphic file (type png)
+<use images/Malpezzi_mortgage_flows.png>
+Package pdftex.def Info: images/Malpezzi_mortgage_flows.png  used on input line
+ 3055.
+(pdftex.def)             Requested size: 318.49861pt x 239.50296pt.
+[77 <./images/mortgages-1.png>] [78 <./images/Malpezzi_mortgage_flows.png>] [79
+] [80]
+<images/macroInfluence-1.png, id=1816, 469.755pt x 325.215pt>
+File: images/macroInfluence-1.png Graphic file (type png)
+<use images/macroInfluence-1.png>
+Package pdftex.def Info: images/macroInfluence-1.png  used on input line 3245.
+(pdftex.def)             Requested size: 318.49861pt x 220.49815pt.
+[81]
+<./images/adams_crop.pdf, id=1829, 497.86pt x 695.59875pt>
+File: ./images/adams_crop.pdf Graphic file (type pdf)
+<use ./images/adams_crop.pdf>
+Package pdftex.def Info: ./images/adams_crop.pdf  used on input line 3282.
+(pdftex.def)             Requested size: 455.0pt x 635.73427pt.
+[82 <./images/macroInfluence-1.png>] [83 <./images/adams_crop.pdf>] [84] [85] [
+86] [87] [88]
+
+LaTeX Font Warning: Font shape `T1/phv/m/scit' undefined
+(Font)              using `T1/phv/m/sc' instead on input line 3512.
+
+[89
+
+] [90
+
+] [91] [92] [93] [94] [95]
+
+LaTeX Warning: Reference `fig:washington' on page 96 undefined on input line 38
+69.
+
+<images/PrecoTerraQuantis.png, id=2065, 454.69875pt x 321.45094pt>
+File: images/PrecoTerraQuantis.png Graphic file (type png)
+<use images/PrecoTerraQuantis.png>
+Package pdftex.def Info: images/PrecoTerraQuantis.png  used on input line 3884.
+
+(pdftex.def)             Requested size: 318.49861pt x 225.16617pt.
+[96]
+<images/LandPricesInflation.png, id=2081, 542.025pt x 283.81032pt>
+File: images/LandPricesInflation.png Graphic file (type png)
+<use images/LandPricesInflation.png>
+Package pdftex.def Info: images/LandPricesInflation.png  used on input line 389
+6.
+(pdftex.def)             Requested size: 318.49861pt x 166.77539pt.
+<images/LandPricesDisinflation.png, id=2084, 396.7322pt x 221.32687pt>
+File: images/LandPricesDisinflation.png Graphic file (type png)
+<use images/LandPricesDisinflation.png>
+Package pdftex.def Info: images/LandPricesDisinflation.png  used on input line 
+3908.
+(pdftex.def)             Requested size: 318.49861pt x 177.6865pt.
+[97 <./images/PrecoTerraQuantis.png> <./images/LandPricesInflation.png>] [98 <.
+/images/LandPricesDisinflation.png>]
+<images/vacancyRate-1.png, id=2145, 469.755pt x 325.215pt>
+File: images/vacancyRate-1.png Graphic file (type png)
+<use images/vacancyRate-1.png>
+Package pdftex.def Info: images/vacancyRate-1.png  used on input line 3988.
+(pdftex.def)             Requested size: 455.0pt x 315.00163pt.
+[99]
+<images/vacancy-1.png, id=2155, 469.755pt x 325.215pt>
+File: images/vacancy-1.png Graphic file (type png)
+<use images/vacancy-1.png>
+Package pdftex.def Info: images/vacancy-1.png  used on input line 4000.
+(pdftex.def)             Requested size: 455.0pt x 315.00163pt.
+[100 <./images/vacancyRate-1.png>]
+<images/USHOWN-1.png, id=2172, 469.755pt x 325.215pt>
+File: images/USHOWN-1.png Graphic file (type png)
+<use images/USHOWN-1.png>
+Package pdftex.def Info: images/USHOWN-1.png  used on input line 4016.
+(pdftex.def)             Requested size: 318.49861pt x 220.49815pt.
+[101 <./images/vacancy-1.png> <./images/USHOWN-1.png>]
+<images/twoseries-1.png, id=2194, 469.755pt x 325.215pt>
+File: images/twoseries-1.png Graphic file (type png)
+<use images/twoseries-1.png>
+Package pdftex.def Info: images/twoseries-1.png  used on input line 4032.
+(pdftex.def)             Requested size: 455.0pt x 315.00163pt.
+[102 <./images/twoseries-1.png>]
+<images/nhpi-1.png, id=2231, 469.755pt x 325.215pt>
+File: images/nhpi-1.png Graphic file (type png)
+<use images/nhpi-1.png>
+Package pdftex.def Info: images/nhpi-1.png  used on input line 4072.
+(pdftex.def)             Requested size: 318.49861pt x 220.49815pt.
+<images/rhpi-1.png, id=2236, 469.755pt x 325.215pt>
+File: images/rhpi-1.png Graphic file (type png)
+<use images/rhpi-1.png>
+Package pdftex.def Info: images/rhpi-1.png  used on input line 4084.
+(pdftex.def)             Requested size: 318.49861pt x 220.49815pt.
+[103 <./images/nhpi-1.png>]
+Overfull \hbox (11.41841pt too wide) in paragraph at lines 4101--4105
+[]\T1/phv/m/n/12 (-10) Nota-se que após o der-re-ti-mento do [][][]MI[][] norte
+-americano de-pois da crise imobiliário-
+ []
+
+<images/nhpi1-1.png, id=2252, 469.755pt x 325.215pt>
+File: images/nhpi1-1.png Graphic file (type png)
+<use images/nhpi1-1.png>
+Package pdftex.def Info: images/nhpi1-1.png  used on input line 4110.
+(pdftex.def)             Requested size: 318.49861pt x 220.49815pt.
+[104 <./images/rhpi-1.png>]
+<images/rhpi1-1.png, id=2262, 469.755pt x 325.215pt>
+File: images/rhpi1-1.png Graphic file (type png)
+<use images/rhpi1-1.png>
+Package pdftex.def Info: images/rhpi1-1.png  used on input line 4136.
+(pdftex.def)             Requested size: 318.49861pt x 220.49815pt.
+[105 <./images/nhpi1-1.png>]
+<images/rhpi2-1.png, id=2283, 469.755pt x 325.215pt>
+File: images/rhpi2-1.png Graphic file (type png)
+<use images/rhpi2-1.png>
+Package pdftex.def Info: images/rhpi2-1.png  used on input line 4181.
+(pdftex.def)             Requested size: 318.49861pt x 220.49815pt.
+[106 <./images/rhpi1-1.png>]
+<images/global-rhpi-1.png, id=2300, 469.755pt x 325.215pt>
+File: images/global-rhpi-1.png Graphic file (type png)
+<use images/global-rhpi-1.png>
+Package pdftex.def Info: images/global-rhpi-1.png  used on input line 4221.
+(pdftex.def)             Requested size: 318.49861pt x 220.49815pt.
+[107 <./images/rhpi2-1.png>] [108 <./images/global-rhpi-1.png>]
+
+LaTeX Font Warning: Font shape `T1/phv/m/scit' undefined
+(Font)              using `T1/phv/m/sc' instead on input line 4259.
+
+[109
+
+] [110
+
+] [111]
+<images/choque-1.png, id=2398, 469.755pt x 325.215pt>
+File: images/choque-1.png Graphic file (type png)
+<use images/choque-1.png>
+Package pdftex.def Info: images/choque-1.png  used on input line 4408.
+(pdftex.def)             Requested size: 455.0pt x 315.00163pt.
+[112]
+<images/choque2-1.png, id=2410, 469.755pt x 325.215pt>
+File: images/choque2-1.png Graphic file (type png)
+<use images/choque2-1.png>
+Package pdftex.def Info: images/choque2-1.png  used on input line 4432.
+(pdftex.def)             Requested size: 318.49861pt x 220.49815pt.
+[113 <./images/choque-1.png>] [114 <./images/choque2-1.png>]
+<images/TheRole_1.png, id=2449, 328.97906pt x 234.1247pt>
+File: images/TheRole_1.png Graphic file (type png)
+<use images/TheRole_1.png>
+Package pdftex.def Info: images/TheRole_1.png  used on input line 4486.
+(pdftex.def)             Requested size: 318.49861pt x 226.67198pt.
+<images/TheRole_2.png, id=2454, 319.94531pt x 215.30438pt>
+File: images/TheRole_2.png Graphic file (type png)
+<use images/TheRole_2.png>
+Package pdftex.def Info: images/TheRole_2.png  used on input line 4498.
+(pdftex.def)             Requested size: 318.49861pt x 214.33469pt.
+[115 <./images/TheRole_1.png>]
+<images/elastico-1.png, id=2471, 469.755pt x 325.215pt>
+File: images/elastico-1.png Graphic file (type png)
+<use images/elastico-1.png>
+Package pdftex.def Info: images/elastico-1.png  used on input line 4521.
+(pdftex.def)             Requested size: 318.49861pt x 220.49815pt.
+<images/inelastico-1.png, id=2474, 469.755pt x 325.215pt>
+File: images/inelastico-1.png Graphic file (type png)
+<use images/inelastico-1.png>
+Package pdftex.def Info: images/inelastico-1.png  used on input line 4533.
+(pdftex.def)             Requested size: 318.49861pt x 220.49815pt.
+[116 <./images/TheRole_2.png> <./images/elastico-1.png>] [117 <./images/inelast
+ico-1.png>] [118]
+<images/wrp-2.png, id=2530, 564.60938pt x 368.87813pt>
+File: images/wrp-2.png Graphic file (type png)
+<use images/wrp-2.png>
+Package pdftex.def Info: images/wrp-2.png  used on input line 4643.
+(pdftex.def)             Requested size: 455.0pt x 297.26991pt.
+<images/eff-1.png, id=2535, 469.755pt x 325.215pt>
+File: images/eff-1.png Graphic file (type png)
+<use images/eff-1.png>
+Package pdftex.def Info: images/eff-1.png  used on input line 4660.
+(pdftex.def)             Requested size: 318.49861pt x 220.49815pt.
+[119 <./images/wrp-2.png>]
+<images/yields-1.png, id=2549, 469.755pt x 325.215pt>
+File: images/yields-1.png Graphic file (type png)
+<use images/yields-1.png>
+Package pdftex.def Info: images/yields-1.png  used on input line 4668.
+(pdftex.def)             Requested size: 318.49861pt x 220.49815pt.
+<images/yields2-1.png, id=2552, 469.755pt x 325.215pt>
+File: images/yields2-1.png Graphic file (type png)
+<use images/yields2-1.png>
+Package pdftex.def Info: images/yields2-1.png  used on input line 4684.
+(pdftex.def)             Requested size: 318.49861pt x 220.49815pt.
+[120 <./images/eff-1.png> <./images/yields-1.png>]
+<images/fred-1.png, id=2564, 469.755pt x 325.215pt>
+File: images/fred-1.png Graphic file (type png)
+<use images/fred-1.png>
+Package pdftex.def Info: images/fred-1.png  used on input line 4720.
+(pdftex.def)             Requested size: 455.0pt x 315.00163pt.
+[121 <./images/yields2-1.png>] [122 <./images/fred-1.png>] [123] [124] [125]
+<images/shiller.png, id=2657, 685.8122pt x 485.56406pt>
+File: images/shiller.png Graphic file (type png)
+<use images/shiller.png>
+Package pdftex.def Info: images/shiller.png  used on input line 4937.
+(pdftex.def)             Requested size: 318.49861pt x 225.5108pt.
+[126] [127 <./images/shiller.png>] [128] [129] [130]
+<images/excessHousingFinanceSupply-1.png, id=2735, 469.755pt x 325.215pt>
+File: images/excessHousingFinanceSupply-1.png Graphic file (type png)
+<use images/excessHousingFinanceSupply-1.png>
+Package pdftex.def Info: images/excessHousingFinanceSupply-1.png  used on input
+ line 5151.
+(pdftex.def)             Requested size: 318.49861pt x 220.49815pt.
+[131]
+<images/CDO-1.png, id=2760, 752.8125pt x 436.63126pt>
+File: images/CDO-1.png Graphic file (type png)
+<use images/CDO-1.png>
+Package pdftex.def Info: images/CDO-1.png  used on input line 5189.
+(pdftex.def)             Requested size: 318.49861pt x 184.73634pt.
+[132 <./images/excessHousingFinanceSupply-1.png>]
+Underfull \hbox (badness 10000) in alignment at lines 5228--5233
+[] []
+ []
+
+
+Underfull \hbox (badness 10000) in alignment at lines 5233--5237
+[] []
+ []
+
+
+Underfull \hbox (badness 10000) in alignment at lines 5237--5257
+[] []
+ []
+
+[133 <./images/CDO-1.png>]
+Underfull \hbox (badness 10000) in alignment at lines 5259--5264
+[] []
+ []
+
+
+Underfull \hbox (badness 10000) in alignment at lines 5264--5268
+[] []
+ []
+
+
+Underfull \hbox (badness 10000) in alignment at lines 5268--5276
+[] []
+ []
+
+[134] [135]
+
+LaTeX Warning: Reference `copulas' on page 136 undefined on input line 5345.
+
+[136] [137]
+
+LaTeX Font Warning: Font shape `T1/phv/m/scit' undefined
+(Font)              using `T1/phv/m/sc' instead on input line 5403.
+
+
+LaTeX Font Warning: Font shape `T1/phv/m/scit' undefined
+(Font)              using `T1/phv/m/sc' instead on input line 5403.
+
+
+LaTeX Font Warning: Font shape `T1/phv/m/scit' undefined
+(Font)              using `T1/phv/m/sc' instead on input line 5403.
+
+[138
+
+] [139
+
+] [140] [141]
+<images/externalities-1.png, id=2931, 469.755pt x 325.215pt>
+File: images/externalities-1.png Graphic file (type png)
+<use images/externalities-1.png>
+Package pdftex.def Info: images/externalities-1.png  used on input line 5589.
+(pdftex.def)             Requested size: 318.49861pt x 220.49815pt.
+<images/externalities1-1.png, id=2937, 469.755pt x 325.215pt>
+File: images/externalities1-1.png Graphic file (type png)
+<use images/externalities1-1.png>
+Package pdftex.def Info: images/externalities1-1.png  used on input line 5609.
+(pdftex.def)             Requested size: 318.49861pt x 220.49815pt.
+[142 <./images/externalities-1.png>]
+<images/figure_01_Malpezzi_Affordable.png, id=2954, 1505.625pt x 1092.08pt>
+File: images/figure_01_Malpezzi_Affordable.png Graphic file (type png)
+<use images/figure_01_Malpezzi_Affordable.png>
+Package pdftex.def Info: images/figure_01_Malpezzi_Affordable.png  used on inpu
+t line 5636.
+(pdftex.def)             Requested size: 318.49861pt x 231.00995pt.
+[143 <./images/externalities1-1.png>] [144 <./images/figure_01_Malpezzi_Afforda
+ble.png>]
+<images/eficiencia-1.png, id=2998, 469.755pt x 325.215pt>
+File: images/eficiencia-1.png Graphic file (type png)
+<use images/eficiencia-1.png>
+Package pdftex.def Info: images/eficiencia-1.png  used on input line 5720.
+(pdftex.def)             Requested size: 318.49861pt x 220.49815pt.
+[145]
+
+LaTeX Warning: Reference `(' on page 146 undefined on input line 5750.
+
+<images/cohab-1.png, id=3016, 469.755pt x 325.215pt>
+File: images/cohab-1.png Graphic file (type png)
+<use images/cohab-1.png>
+Package pdftex.def Info: images/cohab-1.png  used on input line 5761.
+(pdftex.def)             Requested size: 318.49861pt x 220.49815pt.
+[146 <./images/eficiencia-1.png>]
+<images/vouchers-1.png, id=3027, 469.755pt x 325.215pt>
+File: images/vouchers-1.png Graphic file (type png)
+<use images/vouchers-1.png>
+Package pdftex.def Info: images/vouchers-1.png  used on input line 5799.
+(pdftex.def)             Requested size: 318.49861pt x 220.49815pt.
+[147 <./images/cohab-1.png>]
+<images/injustica_SP.jpg, id=3044, 983.675pt x 648.4225pt>
+File: images/injustica_SP.jpg Graphic file (type jpg)
+<use images/injustica_SP.jpg>
+Package pdftex.def Info: images/injustica_SP.jpg  used on input line 5851.
+(pdftex.def)             Requested size: 318.49861pt x 209.94328pt.
+[148 <./images/vouchers-1.png>] [149 <./images/injustica_SP.jpg>] [150] [151] [
+152]
+<images/inglaterra-unidades.png, id=3113, 368.87813pt x 183.68625pt>
+File: images/inglaterra-unidades.png Graphic file (type png)
+<use images/inglaterra-unidades.png>
+Package pdftex.def Info: images/inglaterra-unidades.png  used on input line 604
+6.
+(pdftex.def)             Requested size: 318.49861pt x 158.5977pt.
+[153 <./images/inglaterra-unidades.png>] [154] [155]
+<images/ponta-leal-antes.png, id=3164, 746.79pt x 560.0925pt>
+File: images/ponta-leal-antes.png Graphic file (type png)
+<use images/ponta-leal-antes.png>
+Package pdftex.def Info: images/ponta-leal-antes.png  used on input line 6239.
+(pdftex.def)             Requested size: 318.49861pt x 238.86942pt.
+[156]
+<images/ponta-leal-depois.png, id=3181, 746.79pt x 560.0925pt>
+File: images/ponta-leal-depois.png Graphic file (type png)
+<use images/ponta-leal-depois.png>
+Package pdftex.def Info: images/ponta-leal-depois.png  used on input line 6260.
+
+(pdftex.def)             Requested size: 318.49861pt x 238.86942pt.
+[157 <./images/ponta-leal-antes.png> <./images/ponta-leal-depois.png>] [158] [1
+59] [160]
+
+LaTeX Font Warning: Font shape `T1/phv/m/scit' undefined
+(Font)              using `T1/phv/m/sc' instead on input line 6390.
+
+[161
+
+] [162
+
+] [163] [164] [165] [166] [167] [168]
+LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 6
+699.
 (c:/Users/lfpdr/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/base/t1cmtt.fd
 File: t1cmtt.fd 2019/12/16 v2.5j Standard LaTeX font definitions
 )
@@ -2203,83 +3109,161 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
 
-Package biblatex Warning: Month out of range or not an integer
-(biblatex)                at entry 'california' on input line 3171.
+Overfull \hbox (0.33652pt too wide) in paragraph at lines 6699--6699
+[][]\T1/phv/m/sc/12 (-10) bonduki\T1/phv/m/n/12 (-10) , Na-bil Ge-or-ges. Ori-g
+ens da Ha-bi-ta-ção So-cial no Bra-sil. \T1/phv/m/sl/12 (-10) Aná-lise So-cial\
+T1/phv/m/n/12 (-10) , v. XXIX,
+ []
 
 
 Package biblatex Warning: Month out of range
-(biblatex)                at entry 'fredgs10' on input line 3171.
+(biblatex)                at entry 'lei9636' on input line 6699.
 
-[81
+[169
 
 ]
-
-Package biblatex Warning: Month out of range
-(biblatex)                at entry 'fredgs20' on input line 3171.
-
-
-Package biblatex Warning: Month out of range
-(biblatex)                at entry 'fredgs30' on input line 3171.
-
-
-Package biblatex Warning: Month out of range or not an integer
-(biblatex)                at entry 'fipezap' on input line 3171.
+Overfull \hbox (15.60857pt too wide) in paragraph at lines 6699--6699
+[][]\T1/phv/m/sc/12 (-10) brixiova\T1/phv/m/n/12 (-10) , Zu-zana; \T1/phv/m/sc/
+12 (-10) var-tia\T1/phv/m/n/12 (-10) , Laura; \T1/phv/m/sc/12 (-10) wörgöt-ter\
+T1/phv/m/n/12 (-10) , An-dreas. Ca-pi-tal flows and the boom^^Ubust
+ []
 
 
 Package biblatex Warning: Month out of range
-(biblatex)                at entry 'economist' on input line 3171.
+(biblatex)                at entry 'california' on input line 6699.
+
+
+Package biblatex Warning: Month out of range
+(biblatex)                at entry 'finlandia' on input line 6699.
+
+[170]
+
+Package biblatex Warning: Month out of range
+(biblatex)                at entry 'washington' on input line 6699.
+
+
+Package biblatex Warning: Month out of range
+(biblatex)                at entry 'guardian' on input line 6699.
+
+
+Package biblatex Warning: Month out of range
+(biblatex)                at entry 'economist-rent-control' on input line 6699.
+
+
+[171]
+
+Package biblatex Warning: Month out of range
+(biblatex)                at entry 'fredgs10' on input line 6699.
+
+
+Package biblatex Warning: Month out of range
+(biblatex)                at entry 'fredgs20' on input line 6699.
+
+
+Package biblatex Warning: Month out of range
+(biblatex)                at entry 'fredgs30' on input line 6699.
 
 
 Package biblatex Warning: Month out of range or not an integer
-(biblatex)                at entry 'copulas' on input line 3171.
+(biblatex)                at entry 'fipezap' on input line 6699.
 
 
 Package biblatex Warning: Month out of range or not an integer
-(biblatex)                at entry 'londres' on input line 3171.
+(biblatex)                at entry 'furtado2009' on input line 6699.
 
-[82]
+[172]
+
+Package biblatex Warning: Month out of range
+(biblatex)                at entry 'economist' on input line 6699.
+
+
+Package biblatex Warning: No driver for entry type 'masterthesis'.
+(biblatex)                Using fallback driver on input line 6699.
+
+[173] [174]
+Overfull \hbox (8.04977pt too wide) in paragraph at lines 6699--6699
+[][]\T1/phv/m/sc/12 (-10) housing \T1/phv/m/n/12 (-10) re-co-ve-ries without ho
+-me-ow-ners: Na-ti-o-nal trends | FRED Blog. en-US. [\T1/phv/m/sl/12 (-10) S.l.
+\T1/phv/m/n/12 (-10) : \T1/phv/m/sl/12 (-10) s.n.\T1/phv/m/n/12 (-10) ],
+ []
+
 
 Package biblatex Warning: Month out of range or not an integer
-(biblatex)                at entry 'Li' on input line 3171.
+(biblatex)                at entry 'londres' on input line 6699.
+
+[175]
+
+Package biblatex Warning: Month out of range or not an integer
+(biblatex)                at entry 'Li' on input line 6699.
 
 
 Package biblatex Warning: Month out of range or not an integer
-(biblatex)                at entry 'berlim' on input line 3171.
+(biblatex)                at entry 'berlim' on input line 6699.
 
-[83] [84]
+
+Package biblatex Warning: Month out of range
+(biblatex)                at entry 'malpezzi_affordable_2018_5' on input line 6
+699.
+
+[176]
+
+Package biblatex Warning: Month out of range
+(biblatex)                at entry 'malpezzi_2017' on input line 6699.
+
+[177] [178] [179] [180] [181]
+
+Package biblatex Warning: Month out of range
+(biblatex)                at entry 'resendeFSP' on input line 6699.
+
 
 Package biblatex Warning: Month out of range or not an integer
-(biblatex)                at entry 'suecia' on input line 3171.
+(biblatex)                at entry 'suecia' on input line 6699.
 
-[85] [86]
-<images/Page-4-Image-1.png, id=1347, 684.30656pt x 325.96782pt>
+[182]
+
+Package biblatex Warning: Month out of range
+(biblatex)                at entry 'rolnik' on input line 6699.
+
+
+Package biblatex Warning: Month out of range or not an integer
+(biblatex)                at entry 'silva' on input line 6699.
+
+[183]
+Overfull \hbox (7.27489pt too wide) in paragraph at lines 6699--6699
+[][]\T1/phv/m/sc/12 (-10) u.s. cen-sus bu-reau\T1/phv/m/n/12 (-10) . \T1/phv/m/
+sl/12 (-10) Ho-me-ow-ner Va-cancy Rate for the Uni-ted Sta-tes [RH-VRUSQ156N]\T
+1/phv/m/n/12 (-10) .
+ []
+
+[184] [185]
+<images/Page-4-Image-1.png, id=3863, 684.30656pt x 325.96782pt>
 File: images/Page-4-Image-1.png Graphic file (type png)
 <use images/Page-4-Image-1.png>
-Package pdftex.def Info: images/Page-4-Image-1.png  used on input line 3209.
+Package pdftex.def Info: images/Page-4-Image-1.png  used on input line 6734.
 (pdftex.def)             Requested size: 364.00139pt x 173.39378pt.
-[87
+[186
 
  <./images/Page-4-Image-1.png>]
 
-LaTeX Warning: Command \textquoteright invalid in math mode on input line 3249.
+LaTeX Warning: Command \textquoteright invalid in math mode on input line 6772.
 
 
 
-LaTeX Warning: Command \textquoteright invalid in math mode on input line 3254.
+LaTeX Warning: Command \textquoteright invalid in math mode on input line 6777.
 
 
-<images/Page-8-Image-3.png, id=1364, 1023.825pt x 338.76563pt>
+<images/Page-8-Image-3.png, id=3881, 1023.825pt x 338.76563pt>
 File: images/Page-8-Image-3.png Graphic file (type png)
 <use images/Page-8-Image-3.png>
-Package pdftex.def Info: images/Page-8-Image-3.png  used on input line 3257.
+Package pdftex.def Info: images/Page-8-Image-3.png  used on input line 6780.
 (pdftex.def)             Requested size: 364.00139pt x 120.44096pt.
-<images/Page-8-Image-4.png, id=1365, 1023.825pt x 338.76563pt>
+<images/Page-8-Image-4.png, id=3882, 1023.825pt x 338.76563pt>
 File: images/Page-8-Image-4.png Graphic file (type png)
 <use images/Page-8-Image-4.png>
-Package pdftex.def Info: images/Page-8-Image-4.png  used on input line 3258.
+Package pdftex.def Info: images/Page-8-Image-4.png  used on input line 6781.
 (pdftex.def)             Requested size: 364.00139pt x 120.44096pt.
-[88 <./images/Page-8-Image-3.png> <./images/Page-8-Image-4.png>] [89] (./thesis
-.ind) [90
+[187 <./images/Page-8-Image-3.png> <./images/Page-8-Image-4.png>] [188] (./thes
+is.ind) [189
 
 ]
 \tf@lof=\write6
@@ -2294,43 +3278,47 @@ Package pdftex.def Info: images/Page-8-Image-4.png  used on input line 3258.
 \tf@toc=\write9
 \openout9 = `thesis.toc'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 3301.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 3301.
 (./thesis.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 3301.
-Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 3301.
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
+
+
+LaTeX Warning: There were undefined references.
+
+
+Package biblatex Warning: Please rerun LaTeX.
+(biblatex)                Page breaks have changed.
 
 Package logreq Info: Writing requests to 'thesis.run.xml'.
 \openout1 = `thesis.run.xml'.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 3301.
  ) 
 Here is how much of TeX's memory you used:
- 32220 strings out of 482587
- 561970 string characters out of 5949485
- 1392776 words of memory out of 5000000
- 46709 multiletter control sequences out of 15000+600000
- 616523 words of font info for 222 fonts, out of 8000000 for 9000
+ 35923 strings out of 481321
+ 629000 string characters out of 5915469
+ 1589524 words of memory out of 5000000
+ 50842 multiletter control sequences out of 15000+600000
+ 528201 words of font info for 392 fonts, out of 8000000 for 9000
  16 hyphenation exceptions out of 8191
- 77i,18n,117p,1151b,4150s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 108i,17n,117p,1151b,4211s stack positions out of 5000i,500n,10000p,200000b,80000s
  <c:/Users/lfpdr/AppData/Roaming/TinyTeX/texmf-var/fonts/pk/ljfour/jknappen/e
 c/ectt1200.600pk>{c:/Users/lfpdr/AppData/Roaming/TinyTeX/texmf-dist/fonts/enc/d
-vips/base/8r.enc}<c:/Users/lfpdr/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1
-/public/amsfonts/cm/cmex10.pfb><c:/Users/lfpdr/AppData/Roaming/TinyTeX/texmf-di
-st/fonts/type1/public/fourier/fourier-mlit.pfb><c:/Users/lfpdr/AppData/Roaming/
-TinyTeX/texmf-dist/fonts/type1/public/fourier/fourier-ms.pfb><c:/Users/lfpdr/Ap
-pData/Roaming/TinyTeX/texmf-dist/fonts/type1/adobe/utopia/putr8a.pfb><c:/Users/
-lfpdr/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb><c
-:/Users/lfpdr/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/urw/helvetic/uhvbo
-8a.pfb><c:/Users/lfpdr/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/urw/helve
-tic/uhvr8a.pfb><c:/Users/lfpdr/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/u
-rw/helvetic/uhvro8a.pfb>
-Output written on thesis.pdf (91 pages, 1845543 bytes).
+vips/base/8r.enc} <c:/Users/lfpdr/AppData/Roaming/TinyTeX/texmf-var/fonts/pk/lj
+four/jknappen/ec/tcrm1200.600pk><c:/Users/lfpdr/AppData/Roaming/TinyTeX/texmf-d
+ist/fonts/type1/public/amsfonts/cm/cmex10.pfb><c:/Users/lfpdr/AppData/Roaming/T
+inyTeX/texmf-dist/fonts/type1/public/fourier/fourier-bb.pfb><c:/Users/lfpdr/App
+Data/Roaming/TinyTeX/texmf-dist/fonts/type1/public/fourier/fourier-mlit.pfb><c:
+/Users/lfpdr/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/fourier/four
+ier-ms.pfb><c:/Users/lfpdr/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/adobe
+/utopia/putr8a.pfb><c:/Users/lfpdr/AppData/Roaming/TinyTeX/texmf-dist/fonts/typ
+e1/urw/helvetic/uhvb8a.pfb><c:/Users/lfpdr/AppData/Roaming/TinyTeX/texmf-dist/f
+onts/type1/urw/helvetic/uhvbo8a.pfb><c:/Users/lfpdr/AppData/Roaming/TinyTeX/tex
+mf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb><c:/Users/lfpdr/AppData/Roaming/Tin
+yTeX/texmf-dist/fonts/type1/urw/helvetic/uhvro8a.pfb>
+Output written on thesis.pdf (190 pages, 6792684 bytes).
 PDF statistics:
- 1900 PDF objects out of 2073 (max. 8388607)
- 1663 compressed objects within 17 object streams
- 351 named destinations out of 1000 (max. 500000)
- 25608 words of extra memory for PDF output out of 29859 (max. 10000000)
+ 4651 PDF objects out of 5155 (max. 8388607)
+ 4184 compressed objects within 42 object streams
+ 873 named destinations out of 1000 (max. 500000)
+ 85527 words of extra memory for PDF output out of 89155 (max. 10000000)
 
