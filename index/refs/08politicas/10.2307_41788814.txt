@@ -1,0 +1,14 @@
+@article{10.2307/41788814,
+ ISSN = {00280283, 19447477},
+ URL = {http://www.jstor.org/stable/41788814},
+ abstract = {Proposition 13 gutted California's property tax system in 1978. Most people think that the tax-revolt initiative was caused by excessive government spending and rising tax burdens on homeowners. I argue that the California Supreme Court's landmark decision, Serrano v. Priest (1971), crippled the Tiebout system by divorcing local property wealth from school spending. Serrano thus converted most property taxes into a deadweight loss. Voters responded by rejecting the property tax, shifting the school finance burden to the state. My explanation supports the median voter model in contrast to Leviathan theories of state and local government.},
+ author = {WILLIAM A. FISCHEL},
+ journal = {National Tax Journal},
+ number = {4},
+ pages = {465--473},
+ publisher = {National Tax Association},
+ title = {DID "SERRANO" CAUSE PROPOSITION 13?},
+ volume = {42},
+ year = {1989}
+}
+
