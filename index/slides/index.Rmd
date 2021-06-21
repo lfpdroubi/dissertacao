@@ -1,0 +1,94 @@
+---
+title: "O problema da habitação no Brasil"
+subtitle: "Histórico, Situação Atual e Perspectivas"
+author: "Luiz Fernando Palin Droubi"
+institute: "Universidade Federal de Santa Catarina"
+date: "`r format(Sys.Date(), '%d de %B de %Y')`"
+output:
+  xaringan::moon_reader:
+    chakra: libs/remark-latest.min.js
+    css: [default, metropolis, metropolis-fonts]
+    lib_dir: libs
+    nature:
+      ratio: '16:9'
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+---
+
+```{r setup, include=FALSE}
+options(htmltools.dir.version = FALSE)
+```
+
+class: inverse, center, middle
+
+# Introdução
+
+---
+# Introdução
+
+---
+class: inverse, center, middle
+
+# Método
+
+---
+# Método
+
+---
+class: inverse, center, middle
+
+# Aspectos Históricos
+
+---
+# Aspectos Históricos
+
+---
+class: inverse, center, middle
+
+# O Mercado Imobiliário e a Economia
+
+---
+# O Mercado Imobiliário e a Economia
+
+---
+class: inverse, center, middle
+
+# Economia Urbana
+
+---
+# Economia Urbana
+
+---
+class: inverse, center, middle
+
+# Índices de Preços
+
+---
+# Índices de Preços
+
+---
+class: inverse, center, middle
+
+# Ciclos e Bolhas Especulativas
+
+---
+# Ciclos e Bolhas Especulativas
+
+---
+class: inverse, center, middle
+
+# Políticas para o Mercado Habitacional
+
+---
+# Políticas para o Mercado Habitacional
+
+---
+class: inverse, center, middle
+
+# Conclusão
+
+---
+# Conclusão
+
+---

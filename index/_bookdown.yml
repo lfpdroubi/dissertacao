@@ -1,7 +1,8 @@
 book_filename: "thesis"
 chapter_name: "Capítulo "
 rmd_files: ["index.Rmd", "01-intro.Rmd", "02-metodo.Rmd", "03-historico.Rmd", 
-"04-RE-e-economia.Rmd", "05-indices.Rmd", "06-crise.Rmd", "07-politicas.Rmd", 
-"96-conclusion.Rmd", "97-references.Rmd", "98-appendix.Rmd", "99-annex.Rmd"]
+"04-RE-e-economia.Rmd", "05-Economia-Urbana.Rmd", "06-indices.Rmd", "07-crise.Rmd", 
+"08-politicas.Rmd", "96-conclusion.Rmd", "97-references.Rmd", "98-appendix.Rmd", 
+"99-annex.Rmd"]
 download: [["thesis.pdf", "PDF"], ["thesis.epub", "EPUB"], ["thesis.docx", "Word"]]
 delete_merged_file: true

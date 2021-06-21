@@ -59,6 +59,10 @@ aspectos teóricos e conceituais mais modernos relevantes à interligação do
 mercado imobiliário com as variáveis macroecômicas do país, explicando como o
 \gls{MI} influencia na Economia do país e vice-versa.
 
+O **Capítulo \@ref(economia-urbana), [Economia Urbana]**, são abordados conceitos
+de Economia Urbana que devem ser utilizados para a elaboração de políticas
+públicas para o setor habitacional.
+
 O **Capítulo \@ref(indices), [Índices de preços e indicadores de performance do 
 \gls{MI}]**, traz um apanhado teórico sobre a confecção de índices de preços de 
 imóveis, dá diretrizes para a eventual construção de um ou mais índices 
@@ -83,3 +87,8 @@ a respeito da atual crise habitacional e como ela vem sendo enfrentada no mundo.
 Finalmente, o **Capítulo \@ref(conclusao), [Conclusão]**, traz um resumo dos
 resultados obtidos e as propostas de implementação das políticas mais adequadas
 ao caso brasileiro.
+
+```{=latex}
+\printbibliography[heading=subbibintoc]
+\end{refsection}
+```

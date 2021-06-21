@@ -1,0 +1,1278 @@
+# Economia Urbana {#economia-urbana}
+
+```{=latex}
+\begin{refsection}
+```
+
+\begin{epigrafe}
+	\vspace*{\fill}
+	\begin{flushright}
+    \textit{Economia urbana é uma ciência quantitativa, baseada em teorias, modelos e\\
+    evidências empíricas que são desenvolvidas predominantemente em meios\\
+    acadêmicos. Artigos publicados em revistas científicas são o principal produto\\
+    dos economistas urbanos. Eles raramente tem contato direto com pessoas nos\\
+    departamentos de planejamento urbano que tomam decisões sobre zoneamento ou\\
+    sobre a posição de uma nova linha de metrô. O contato dos economistas com as\\
+    cidades são usualmente indiretos, consistindo em sua maior parte na obtenção de\\
+    dados que eles analisam com grande habilidade. Não há obrigação de dar\\
+    \emph{feedback} aos planejadores.\\
+    \cite[p. 2]{bertaud}}
+	\end{flushright}
+\end{epigrafe}
+
+## Introdução
+
+Segundo @bertaud [p. 19], as cidades são, basicamente, mercados de trabalho.
+Especialmente no contexto brasileiro, poder-se-ia dizer. Como foi visto no 
+capítulo \@ref(historico), a migração para as cidades, no caso brasileiro, foi
+praticamente uma imposição, uma necessidade das classes trabalhadoras que, 
+expulsas do campo, haviam de encontrar um outro modo de sobrevivência que não a
+subsistência do campo. Para @bertaud [p. 19] está claro que as cidades são mais 
+do que apenas mercados de trabalho, embora não haja cidade sem mercado de 
+trabalho: é o mercado de trabalho que torna tudo o mais que as cidades oferecem
+possível.
+
+## O modelo monocêntrico
+
+Segundo @bertaud [p. 236], os preços dos terrenos urbanos na maioria das cidades
+devem seguir o previsto pelo modelo de cidade padrão, ou modelo monocêntrico.
+Segundo este modelo, desenvolvido e refinado nas décadas de 60 e 70 do último
+século por Willian Allonso, Edwin Mills, Richard Mutt e William Wheaton
+[@bertaud, p. 94], devido à maior oferta de emprego na região central, os
+valores unitários dos terrenos urbanos são maiores nas proximidades desta
+região, diminuindo gradativamente em direção às regiões periféricas (ver Figura
+\@ref(fig:monocentricModel1)).
+
+Apesar do nome que recebe, o modelo monocêntrico parece se ajustar bem mesmo à
+cidades reconhecidamente acêntricas, como algumas cidades costeiras [@bertaud,
+p. 105].
+
+```{r monocentricModel1, fig.cap="Perfil do preço da\\index{terra!preço da} terra em função da distância ao centro da cidade."}
+base <- ggplot()
+base + geom_function(fun = ~ 250*exp(-.104*.x), xlim = c(0, 20), color = "blue") +
+  scale_x_continuous(name = "Distância ao centro da cidade (km)", 
+                     expand = c(0,0), limits = c(0, 25), breaks = NULL) +
+  scale_y_continuous(name = "Preço unitário da terra ($/m2)", 
+                     expand = c(0,0), limits = c(0, 300), breaks = NULL)
+```
+
+Segundo @bertaud [p. 94-98], este aumento de valor da\index{terra!valor da}
+terra causa um adensamento das regiões centrais da cidade. Este adensamento,
+portanto, tende a se apresentar numa forma similar ao comportamento do valor da
+terra, o que é ilustrado na \@ref(fig:monocentricModel2).
+
+```{r monocentricModel2, fig.cap="Gradiente de adensamento ajustado por regressão linearem função da distância ao centro da cidade."}
+base <- ggplot()
+base + geom_function(fun = ~ 250*exp(-.104*.x), xlim = c(0, 20), color = "blue") +
+  scale_x_continuous(name = "Distância ao centro da cidade (km)", 
+                     expand = c(0,0), limits = c(0, 25)) +
+  scale_y_continuous(name = "Densidade populacional (pessoas por hectare)", 
+                     expand = c(0,0), limits = c(0, 300))
+```
+\bcenter
+\small Fonte -- Adaptado de @bertaud [p. 97].
+\ecenter
+
+Para @bertaud [p. 96], é importante notar que são os altos preços
+das\index{terra!preço da} terras que levam ao maior adensamento, e não o
+contrário. Isto decorre do fato que a maioria dos empregos nas zonas urbanas
+estão concentrados nas suas regiões centrais, o que leva a uma maior procura
+destas localidades pelos trabalhadores.
+
+Como os dados de adensamento são de mais fácil obtenção do que os dados de valor
+da terra, estes são utilizados para verificar a acurácia do modelo padrão, o que
+foi feito para várias cidades ao redor do planeta, como ilustrado pela Figura
+\@ref(fig:densities) \apud{cities}{bertaud}.
+
+```{r densities, fig.cap="Perfil de densidades em várias cidades ao redor do mundo."}
+knitr::include_graphics("images/densities.png")
+```
+\bcenter
+Fonte -- @bertaud[p. 102]
+\ecenter
+
+Com o aumento do valor da\index{terra!valor da}, a tendência é que os habitantes 
+passem a "trocar capital\index{capital} por terra" [@bertaud, p. 234-237], isto 
+é, a tendência é que haja uma maior verticalização nestas terras mais 
+valorizadas, o que leva a um menor consumo de terra por unidade habitacional.
+
+Nos países mais pobres, no entanto, algumas pessoas não possuem um capital
+mínimo para isto. A construção vertical exige materiais de construção de maior
+qualidade e técnicas mais avançadas de construção. Sem acesso a isto, as pessoas
+de menor renda tendem a ocupar informalmente algumas áreas e assim consumir
+menos capital, construindo com materiais improvisados, sem rigor técnico, e
+consumindo também menos terra por habitante do que nos empreendimentos formais
+[@bertaud, p. 236].
+
+A Figura \@ref(fig:injustica) ficou famosa mundialmente e é frequentemente
+utilizada para ilustrar o problema da desigualdade no Brasil. No entanto, uma
+análise fria desta fotografia se faz necessária: nesta imagem, pobres e ricos
+ocupam a, provavelmente muito valorizada, mesma terra urbana. No entanto,
+enquanto os ricos tem capital para diminuir o consumo por habitação deste nobre
+terra, o mesmo não se verifica com os pobres. Sem acesso aos melhores materiais
+e técnicas, eles fazem o que podem, numa estratégia de sobrevivência, para
+construir seus abrigos, de maneira rústica. Bertaud [-@bertaud, p. 236-238] faz
+esta análise, ainda que não para este caso em particular, mas para um outro
+muito similar. Porém, enquanto Bertaud analisa um caso de um condomínio vertical
+de classe média com apenas sete andares, no caso da Figura \@ref(fig:injustica)
+o número de andares é praticamente o dobro. Segundo os cálculos de Bertaud,
+mesmo consumindo uma muito menor área construída por pessoa, os pobres devem
+utilizar em torno de 4 vezes mais terra por metro quadrado de área construída do
+que os ricos. É claro que isto acarreta numa menor disponibilidade de terra para
+os espaços  vazios (áreas de lazer, ruas, etc.).
+
+Segundo @bertaud [p. 237], em cidades onde os pobres podem gastar um mínimo de 
+seis mil dólares por unidade habitacional, a tendência é que estes aglomerados
+informais desapareçam.
+
+```{r injustica, fig.cap = "Condomínio de classe alta ao lado da favela de Paraisópolis em São Paulo/SP."}
+knitr::include_graphics("images/injustica_SP.jpg")
+```
+\bcenter
+Fonte: @paraisopolis.
+\ecenter
+
+Desta maneira, o problema de disponibilizar moradia digna para a população
+está relacionado: (a) ao preço da terra urbana e (b) ao capital disponível 
+necessário para o melhor aproveitamento desta terra. Nas próximas seções serão
+vistos quais os impactos da oferta de capital e terra urbanizável no \gls{MI}.
+
+## Modelos simples para o entendimento do \gls{MI}
+
+Segundo @bertaud [p. 247], muitos indicadores de consumo podem ser utilizados
+para descrever o consumo de habitação em um \gls{MI}: área construída por
+família, área de terra urbana por família, consumo de serviços públicos,
+transportes, e outros. Um índice composto de todos estes indicadores ponderados
+também poderia ser utilizado. No entanto, "quaisquer que sejam as medidas de
+consumo selecionadas, todas as unidades habitacionais são distribuídas entre as
+famílias de acordo com sua classificação de preços". Genericamente, portanto, um
+modelo pode ser resumido nos gráficos da Figura \@ref(fig:basicModel), onde o 
+gráfico superior mostra o lado da oferta, a relação entre renda e consumo, e o 
+gráfico superior mostra o lado da demanda, a relação entre renda e número de 
+famílias.
+
+
+
+```{r basicModel, fig.cap="Consumo de habitação pelas famílias em função da renda disponível."}
+mu <- 0
+sd <- 1.25
+x1 <- seq(-3, 3, by = .05)
+y1 <- pnorm(x1, mean = mu , sd = sd)
+n1 <- -1
+df1 <- data.frame(x1, y1)
+delta <- 3
+p1 <- ggplot(data = df1, aes(x1 + delta, y1)) + 
+  geom_line(color = "blue", size = 1.25) +
+  scale_x_continuous(name = "Renda familiar", expand = c(0, 0), 
+                     breaks = c(0, n1 + delta), labels = c("a", "d")) +
+  scale_y_continuous(name = "Consumo de habitação", expand = c(0, 0), 
+                     breaks = pnorm(n1, mean = mu , sd = sd), labels = "g")+
+  geom_segment(aes(x = -3 + delta, y = pnorm(n1, mean = mu , sd = sd),
+                   xend = n1 + delta, yend = pnorm(n1, mean = mu , sd = sd)), 
+                color = "#FF4036", size = 1) +
+  geom_segment(aes(x = n1 + delta, y = pnorm(n1, mean = mu , sd = sd), 
+                   xend = n1 + delta, yend = 0), 
+                color = "#FF4036", size = 1) +
+  annotate("text", x = 2.95 + delta, y = .925, label = "b")
+x2 <- seq(0, 6, by = .05)
+y2 <- dlnorm(x2, meanlog = log(3), sdlog = .6)
+df2 <- data.frame(x2, y2)
+n2 <- 2
+p2 <- ggplot(data = df2, aes(x2, y2)) +
+  geom_line(color = "blue", size = 1.25) +
+  scale_x_continuous(name = "Renda familiar", expand = c(0, 0), 
+                     breaks = n2, labels = "d") +
+  scale_y_continuous(name = "Número de famílias", expand = c(0, 0), 
+                     breaks = NULL) +
+  geom_segment(aes(x = n2, y = 0, xend = n2, yend = .3), 
+                color = "#FF4036", size = 1) +
+  geom_ribbon(data = subset(df2, x2 <= n2),aes( x = x2, ymax = y2), ymin=0, alpha=0.1) +
+  geom_ribbon(data = subset(df2, x2 >= n2),aes( x = x2, ymax = y2), ymin=0, alpha=0.1) +
+  annotate("text", x = 1.45, y = .25, label = "c")
+cowplot::plot_grid(p1 + theme(axis.text=element_text(size=11)),
+                   p2 + theme(axis.text=element_text(size=11)),
+                   ncol = 1, align = "hv")
+```
+\bcenter
+\small Fonte -- Adaptado de @bertaud [p. 250].
+\ecenter
+
+De acordo com @bertaud [p. 250], o objetivo da política habitacional é modificar
+o perfil de consumo de habitação representado pela curva *a-b* da Figura
+\@ref(fig:basicModel), de maneira a elevar o consumo de habitação para as
+famílias de mais baixa renda, até que este consumo chegue a um nível aceitável.
+
+Como fazer isso, porém, é uma questão nada trivial. É necessário o estudo
+minucioso do impacto dos diversos fatores de produção deste mercado, *i.e*
+terra, materiais, financiamento, etc., no resultado final, ou seja, na produção
+e no consumo de habitação. As bases teóricas para isto serão lançadas na próxima
+seção.
+
+## O mercado de fatores de produção
+
+Para o \gls{MI}, como foi visto, o mercado de fatores de produção inclui fatores
+como a terra, materiais de construção, infraestrutura urbana, financiamento e
+mão-de-obra especializada. Grosso modo, exceto momentos excepcionais como o
+atual, em que o Brasil vem sendo atingido por uma inflação de custos, a
+disponibilidade de materiais de construção é problema superado. Mão-de-obra
+especializada tampouco pode ser considerado um gargalo para o \gls{MI}
+brasileiro, como já foi em tempo recente, quando o governo federal chegou a
+atrair engenheiros do estrangeiro para atuarem em solo nacional, dada a grande
+quantidade de obras então concomitantes na área de infraestrutura e dos grandes
+eventos esportivos da última década realizados no Brasil, *i.e* a Copa do Mundo
+de 2014 e as Olimpídas do Rio em 2016. Também o ensino técnico e superior muito
+se desenvolvou naqueles anos, com os CEFET's, os Institutos Federais e outros
+ajudando a formar muita mão-de-obra para a construção civil. De maneira que é
+possível dizer, então, que os gargalos do \gls{MI} brasileiro estão concetrados
+em três fatores: terra, financiamento e infraestrutura. Se pensar-se que a 
+necessidade de infraestrutura é a necessidade inverter na construção de estradas, 
+redes de água, esgoto e energia com o intuito final de tornar terras inabitadas 
+propícias à construção de habitações, o problema se resume, na sua raiz, a dois 
+fatores: terra e financiamento. Concentraremo-nos, então, na análise do impacto
+destes dois fatores no \gls{MI} residencial.
+
+### O impacto do aumento ou redução da oferta de terra urbana
+
+O aumento da oferta de terra urbana pode ser feito de diversas maneiras. Seja
+através da construção de nova infraestrutura capaz de tornar urbanizável novas
+terras na periferia das cidades, seja pela aprovação de novos loteamentos em
+áreas já urbanizáveis ou ainda, pela remoção de restrições administrativas e/ou
+regulatórias, como o longo tempo necessário para obtenção de licenças de
+construção, barreiras para a expansão urbana, a adoção de limites de altura para
+os edifícios e outros.
+
+Desta maneira, deve-se notar que o aumento da oferta de terra urbana pode
+ocorrer sem custo aos cofres públicos: aparte a construção de nova
+infraestrutura necessária para a urbanizaçã de novas terras, as outras medidas
+não acarretam em custo algum para a administração pública.
+
+O efeito do aumento da oferta de terra urbana pode ser visualizado na Figura
+\@ref(fig:ofertaTerra): com o aumento da oferta, as famílias podem consumir mais
+moradia, mantido o nível de renda. Porque a terra tende a se tornar mais barata,
+uma parte das famílias de menor renda, representadas pela região **B** do
+gráfico, passam a ter acesso à moradia, o que não seria possível para elas antes
+do aumento desta oferta.
+
+```{r ofertaTerra, fig.cap="Consumo de habitação pelas famílias em função da oferta de hipotecas."}
+mu <- 0
+sd <- 1.25
+x1 <- seq(-3, 3, by = .05)
+y1 <- pnorm(x1, mean = mu , sd = sd)
+y2 <- pnorm(x1, mean = mu, sd = .75*sd)
+n0 <- -2
+n1 <- -1
+df1 <- data.frame(x1, y1, y2)
+delta <- 3
+plot_labels <- tibble(label = expression("f", "f[1]"),
+                          x = c(n1 + delta + .15, n1 + delta + .15),
+                          y = c(.15, .4))
+p1 <- ggplot(data = df1, aes(x1 + delta, y1)) + 
+  geom_line(data = subset(df1, x1 <= n1), color = "blue", size = 1.25) +
+  geom_line(data = subset(df1, x1 >= n1), color = "blue", size = 1.25) +
+  geom_line(data = df1, aes(x1 + delta, 1.25*y1), color = "blue", size = 1.25, lty = 2) +
+  scale_x_continuous(name = "Renda familiar", expand = c(0, 0), 
+                     breaks = c(n0, n1) + delta, labels = c("n0", "n1")) +
+  scale_y_continuous(name = "Consumo de habitação", expand = c(0, 0), 
+                     breaks = c(pnorm(n0, mean = mu, sd = sd),
+                                pnorm(n1, mean = mu , sd = sd), 
+                               1.25*pnorm(n1, mean = mu , sd = sd)), 
+                     labels = c("m0", "m", "m1"))+
+  geom_segment(aes(x = -3 + delta, y = pnorm(n1, mean = mu , sd = sd),
+                   xend = n1 + delta, yend = pnorm(n1, mean = mu , sd = sd)), 
+                color = "#FF4036", size = 1) +
+  geom_segment(aes(x = -3 + delta, y = 1.25*pnorm(n1, mean = mu , sd = sd),
+                   xend = n1 + delta, yend = 1.25*pnorm(n1, mean = mu , sd = sd)), 
+                color = "#FF4036", size = 1) +
+  geom_segment(aes(x = n1 + delta, y = 1.25*pnorm(n1, mean = mu , sd = sd), 
+                   xend = n1 + delta, yend = 0), 
+                color = "#FF4036", size = 1) +
+  geom_segment(aes(x = n0 + delta, y = 1.25*pnorm(n0, mean = mu , sd = sd), 
+                   xend = n0 + delta, yend = 0), 
+                color = "#FF4036", size = 1) +
+  geom_segment(aes(x = -3 + delta, y = pnorm(n0, mean = mu , sd = sd),
+                   xend = n0 + delta, yend = pnorm(n0, mean = mu , sd = sd)), 
+                color = "#FF4036", size = 1) +
+  geom_text(data = plot_labels,
+            aes(x = x, y = y, label = label), parse = TRUE)
+x2 <- seq(0, 6, by = .05)
+y2 <- dlnorm(x2, meanlog = log(3), sdlog = .6)
+df2 <- data.frame(x2, y2)
+n2 <- 2
+plot_labels <- tibble(label = expression("A", "B", "C"),
+                          x = c(.85, 1.5, 2.5),
+                          y = c(.05, .05, .05))
+p2 <- ggplot(data = df2, aes(x2, y2)) +
+  geom_line(color = "blue", size = 1.25) +
+  scale_x_continuous(name = "Renda familiar", expand = c(0, 0), 
+                     breaks = c(1, n2), labels = c("n0", "n1")) +
+  scale_y_continuous(name = "Número de famílias", expand = c(0, 0), 
+                     breaks = NULL) +
+  geom_segment(aes(x = n2, y = 0, xend = n2, yend = .3), 
+                color = "#FF4036", size = 1) +
+  geom_segment(aes(x = 1, y = 0, xend = 1, yend = .3), 
+                color = "#FF4036", size = 1) +
+  geom_ribbon(data = subset(df2, x2 <= 1),aes( x = x2, ymax = y2), ymin=0, alpha=0.3) +
+  geom_ribbon(data = subset(df2, x2 >= 1 & x2 <= n2),aes( x = x2, ymax = y2), ymin=0, alpha=0.1) +
+  geom_ribbon(data = subset(df2, x2 >= n2),aes( x = x2, ymax = y2), ymin=0, alpha=0.1) +
+  geom_text(data = plot_labels,
+            aes(x = x, y = y, label = label), parse = TRUE)
+cowplot::plot_grid(p1, p2, ncol = 1, align = "hv")
+```
+\bcenter
+Fonte -- Adaptado de @bertaud [p. 253].
+\ecenter
+
+A oferta de terra disponível para construção tem grande influência na questão da
+*affordability*. Segundo @quigley [p. 205], estudos mostram que o crescimento na
+quantidade de unidades habitacionais de baixa qualidade é bastante sensível à
+quantidade de moradias novas e de melhor qualidade fornecidas. Para
+@MalpezziandGreen1996, "na medida em que uma cidade torna mais fácil para
+*qualquer*  tipo de habitação a ser construída, também aumentará o estoque
+disponível de habitação de baixo custo." Segundo @bertaud [p. 239-240], este
+efeito é chamada de efeito gotejamento (*trickle-down*), *i.e.*, o aumento da
+oferta de imóveis para uma faixa de renda tende a aumentar também a oferta de
+imóveis para as faixas de renda inferiores, na medida que os imóveis
+anteriormente ocupados pelas camadas de renda mais alta tendem a ser ocupados
+pelas camadas de renda mais baixa.
+
+O oposto também é verdadeiro, segundo @quigley [p. 205-206]:
+
+\begin{citacao} 
+na medida em que as cidades dificultam a construção de novas habitações,
+\emph{qualquer tipo de novas habitações}, a disponibilidade de habitação de
+baixo custo será reduzida e a \emph{affordability de todas} as moradias
+diminuirá. De fato, muitas cidades complicam e adicionam custos ao processo
+de construção de novas moradias. Talvez as barreiras mais extremas para novas
+moradias aperaçam na forma de controles explícitos de crescimento. As medidas de
+controle do crescimento municipal podem assumir a forma de moratória sobre novos
+empreendimentos, limites urbanos além dos quais o desenvolvimento é severamente
+restringido ou requisitos de áreas livres destinadas a preservar terrenos não
+urbanizados.
+\end{citacao}
+
+Segundo @bertau[p. 241], o efeito de gotejamento para cima (*trickle-up*) pode
+ocorrer se os governos restringem a oferta de imóveis para os grupos de mais
+alta renda e beneficiam apenas a produção de unidades de baixo custo: "na
+ausência de oferta de imóveis novos, grupos de renda mais alta irão deslocar os
+grupos de baixa renda para ocupar os únicos novos imóveis no mercado."
+
+\begin{citacao}
+Isto ocorre com bastante frequência em unidades subsidiadas pelo governo quando
+o mercado geral de moradias é fortemente restringido por regulamentações de uso
+da terra ou pela falta de expansão da infraestrutura, o que restringe a oferta
+de terras. Os grupos de renda mais alta então "invadem" o estoque habitacional
+dos grupos de renda mais baixa. O efeito é particularmente severo quando grupos
+de renda mais alta adquirem moradias existentes apenas para remontá-las em
+outras maiores, diminuindo assim o número de unidades habitacionais em todo o
+estoque.
+\cite[p.241]{bertaud}
+\end{citacao}
+
+Regulamentos de uso da terra que reduzem a oferta e aumentam os preços das
+moradias incluem uma grande variedade de ordenamentos locais. Apesar das
+ordenações de zoneamento serem responsáveis, em parte, por aumentar a qualidade
+mínima do estoque de habitações existentes para aluguel, muitas ordenações de
+zoneamento também reduzem a oferta de habitação, aumentando artificialmente as
+necessidades de terra e desalocando terras de usos residenciais [@quigley, p.
+206].
+
+\begin{citacao}
+Por exemplo, os municípios costumam definir tamanhos mínimos de lote para novas
+moradias unifamiliares com o objetivo de reduzir a densidade e controlar a
+demanda por serviços públicos. Além disso, muitos municípios têm Planos
+Diretores que reservam grandes porções de terras não desenvolvidas para uso
+comercial, que geram receita tributária local exigindo poucos gastos em serviços
+públicos como educação. Esses exemplos de "zoneamento fiscal" -- zoneamento
+projetado para minimizar o impacto fiscal do uso da terra -- reduzem a
+quantidade de terra disponível para habitação, restringem a oferta de moradias
+e, com isso, aumentam os preços da habitação no município, bem como nas cidades
+vizinhas. Não é de surpreender que a pesquisa empírica sobre os impactos
+econômicos das ordenações de zoneamento indica que essas regras tendem a
+aumentar os preços e reduzir a construção de novas moradias.
+\cite[p. 206]{quigley}
+\end{citacao}
+
+No Brasil, convém destacar que, além das restrições provenientes das ordenações
+municipais, a abundância de terras públicas de domínio da União dificulta ainda
+mais o desenvolvimento urbano, como exemplificam @aragon.
+
+### O impacto da oferta de hipotecas sobre o consumo habitacional
+
+Outro fator importante no \gls{MI}, especialmente para o \gls{MI} residencial,
+conforme já anteriormente mencionado, é a disponibilidade de financiamento
+imobiliário de longo prazo. Na ausência de oferta de financiamento, como foi
+visto, parte da população fica sem condições de acessar o \gls{MI} formal e 
+acaba ocupando terras públicas, muitas vezes em áreas de risco, e construindo
+habitações precárias, dada a indisponibilidade de renda para a compra de
+materiais apropriados e para acessar os serviços técnicos especializados.
+
+Segundo @bertaud [p. 254], a oferta de financiamento imobiliário de 
+longo prazo  tende a elevar o consumo de habitação para as famílias 
+elegíveis. Isto é ilustrado na Figura \@ref(fig:ofertaHipotecas): para as
+famílias elegíveis, *i.e* com renda superior a *n* (área **B** do gráfico), 
+o acesso à hipotecas tende a deslocar a curva de consumo de habitação da linha 
+tracejada (*f*) para a linha cheia do gráfico (*f1*).
+
+```{r ofertaHipotecas, fig.cap="Consumo de habitação pelas famílias em função da oferta de hipotecas."}
+mu <- 0
+sd <- 1.25
+x1 <- seq(-3, 3, by = .05)
+y1 <- pnorm(x1, mean = mu , sd = sd)
+n1 <- -1
+df1 <- data.frame(x1, y1)
+delta <- 3
+plot_labels <- tibble(label = expression("f", "f[1]"),
+                          x = c(n1 + delta + .15, n1 + delta),
+                          y = c(.2, .4))
+p1 <- ggplot(data = df1, aes(x1 + delta, y1)) + 
+  geom_line(data = subset(df1, x1 <= n1), color = "blue", size = 1.25) +
+  geom_line(data = subset(df1, x1 >= n1), color = "blue", size = 1.25, lty = 2) +
+  geom_line(data = subset(df1, x1 >= n1), aes(x1 + delta, y1+.1), color = "blue", size = 1.25) +
+  scale_x_continuous(name = "Renda familiar", expand = c(0, 0), 
+                     breaks = n1 + delta, labels = "n") +
+  scale_y_continuous(name = "Consumo de habitação", expand = c(0, 0), 
+                     breaks = c(pnorm(n1, mean = mu , sd = sd), 
+                                pnorm(n1, mean = mu , sd = sd)+ .1), 
+                     labels = c("m", "m1"))+
+  geom_segment(aes(x = -3 + delta, y = pnorm(n1, mean = mu , sd = sd),
+                   xend = n1 + delta, yend = pnorm(n1, mean = mu , sd = sd)), 
+                color = "#FF4036", size = 1) +
+    geom_segment(aes(x = -3 + delta, y = pnorm(n1, mean = mu , sd = sd) + .1,
+                   xend = n1 + delta, yend = pnorm(n1, mean = mu , sd = sd) + .1), 
+                color = "#FF4036", size = 1) +
+  geom_segment(aes(x = n1 + delta, y = pnorm(n1, mean = mu , sd = sd) + .1, 
+                   xend = n1 + delta, yend = 0), 
+                color = "#FF4036", size = 1) +
+  geom_text(data = plot_labels,
+            aes(x = x, y = y, label = label), parse = TRUE)
+x2 <- seq(0, 6, by = .05)
+y2 <- dlnorm(x2, meanlog = log(3), sdlog = .6)
+df2 <- data.frame(x2, y2)
+n2 <- 2
+plot_labels <- tibble(label = expression("A", "B"),
+                          x = c(1.5, 2.5),
+                          y = c(.10, .10))
+p2 <- ggplot(data = df2, aes(x2, y2)) +
+  geom_line(color = "blue", size = 1.25) +
+  scale_x_continuous(name = "Renda familiar", expand = c(0, 0), 
+                     breaks = n2, labels = "n") +
+  scale_y_continuous(name = "Número de famílias", expand = c(0, 0), 
+                     breaks = NULL) +
+  geom_segment(aes(x = n2, y = 0, xend = n2, yend = .3), 
+                color = "#FF4036", size = 1) +
+  geom_ribbon(data = subset(df2, x2 <= n2),aes( x = x2, ymax = y2), ymin=0, alpha=0.3) +
+  geom_ribbon(data = subset(df2, x2 >= n2),aes( x = x2, ymax = y2), ymin=0, alpha=0.1) +
+  geom_text(data = plot_labels,
+            aes(x = x, y = y, label = label), parse = TRUE)
+cowplot::plot_grid(p1, p2, ncol = 1, align = "hv")
+```
+\bcenter
+Fonte -- Adaptado de @bertaud [p. 255].
+\ecenter
+
+É claro que isto supõe que oferta e demanda encontrem-se em equilíbrio., *i.e.*
+o aumento no consumo de moradia só se dará se esse aumento da procura
+corresponder a um aumento elástico da oferta [@bertaud, 220].
+
+Esta é uma hipótese muito importante que muitas vezes é ignorada na prática.
+
+\begin{citacao}
+imagine que por causa das regulações, ou por causa da falta de terra
+urbanizável, os incorporadores não conseguem responder ao aumento de demanda
+gerado pela disponibilidade de crédito imobiliário. O aumento de recursos das
+famílias que tem acesso à hipotecas são concentrados nas poucas casas que são
+produzidas, e como resultado é provável que haja um aumento generalizado de
+preço dos imóveis ao invés de um aumento no consumo. Qualquer estímulo de
+demanda, quer venha do aumento da renda, quer venha do aumento do poder de
+compra (proporcionado pelas hipotecas), embora desejável numa economia urbana,
+resultaria em preços residenciais mais altos se a oferta de residências é
+restringido por excesso de regulação ou pela falta de terra urbanizável.
+\cite[p. 255-256]{bertaud}
+\end{citacao}
+
+## Regulação
+
+Como mencionado nas seções anteriores, a regulação é um fator de diminuição da 
+eficiência no \gls{MI}. Algum tipo de regulação, no entanto, sempre se faz 
+necessára no \gls{MI}, devido a fatores que elencamos a seguir. Os problemas 
+aparecem, no entanto, quando esta regulação parece extrapolar as necessidades
+de regulação, causando um excesso regulatório, criando custos elevados que 
+acabam por gerar o mal funcionamento do mercado.
+
+### Por que os governos devem intervir?
+
+Existem diversos motivos segundo os quais os governos devem intervir em um
+mercado. É sabido que os mercados, quando em bom funcioamento, tendem a alocar
+eficientemente os recursos. Porém, existem uma série de fatores que podem levar
+a falhas no funcionamento dos mercados, gerando um funcionamento ineficiente,
+tais como a existência de monopólios naturais, a existência de altos custos
+transacionais, e a presença de externalidades.
+
+Existem diversas formas de interferência governamental na Economia. Segundo 
+@urbandevelopment [p. 6], governos do mundo todo intervem nos mercados através 
+da:
+
+1. definição e aplicação dos direitos de propriedade;
+2. taxação;
+3. concessão de subsídios;
+4. regulação e planejamento e;
+5. provisão pública direta.
+
+Não são apenas as falhas de mercado, no entanto, que devem motivar a intervenção
+do poder público. Segundo @bertaud [p. 249], muitas vezes a baixíssima qualidade
+do estoque residencial é devido tão somente à pobreza. São necessários programas
+habitacionais para prover moradia aos cidadãos que não tem renda suficiente
+para acessar o \gls{MI}.
+
+\begin{citacao}
+As we know, the market is a blind and cold mechanism that is not subject to
+compassion. The market will predictably provide very-low-quality housing to
+households with very low incomes, and no housing at all to households who must
+spend their low incomes almost interely on food. In a city that includes a 
+significant number of very-low-income households, the market is unlikely to
+provide them with anything looking like a dwelling. Should the government
+then provide housing to households with the lowest incomes?  
+There is nothing wrong with governments substituting themselves for markets to
+provide socially acceptable housing units to the very poor. In fact, it is
+precisely one of the roles of government. If these housing units are also 
+associated with decent schools and health facilitiesm their provision is not 
+only a compassionate effort but also an investment in the future welfare of
+all urban citizens. For instance, the government should obviously provide a
+shelter to homeless people. There are no market solutions for people with no
+income.
+\cite[p.~249]{@bertaud}
+\end{citacao}
+
+PAra @bertaud [p. 249] a questão principal não é, portanto, *se* os governos
+devem ou não intervir no funcionamento do \gls{MI}, mas *como* deve ser esta
+intervenção. 
+
+### Externalidades e Regulação do \gls{MI}
+
+Segundo @epstein, os sistemas jurídicos modernos contêm técnicas para regular o
+uso da terra, que variam desde acordos privados restritivos e servidões, até
+elaborados códigos de zoneamento local e regimes de controle de crescimento
+regional. Estes mesmos sistemas muitas vezes desenvolvem dispositivos de
+controle de aluguel e de promoção de habitação social para regular o preço pelo
+qual os imóveis podem ser vendidos ou alugados. Para @epstein, o surgimento 
+desta vasta gama de dispositivos legais de controle do uso da terra é devido ao
+fato que grande parte do valor de uso e de mercado da terra deriva da existência 
+de vizinhos, *i.e.*, deriva da existência da aglomeração de pessoas. Mas se por
+um lado esta aglomeração de pessoas torna a terra valiosa, ela também impõe que 
+regras sejam adotadas para que identificar e controlar as externalidades 
+negativas e positivas nos mercados imobiliários.
+
+Externalidades são custos ou benefícios impostos às partes fora de uma transação
+econômica . As externalidades que impõem custos adicionais às partes fora de uma
+transação (custos sociais) são chamadas de externalidades negativas, enquanto as
+externalidades que beneficiam as partes fora da transação (benefícios sociais) 
+são chamadas de externalidades positivas [@externalities, p. 210-211].
+
+Entre as possíveis externalidades do \gls{MI} que acarretam em custos sociais
+encontram-se [@externalities, p. 210-211]:
+
+1. Congestionamento: a construção de unidades adicionais em um determinado 
+\gls{MI} geralmente aumenta o tráfego local, possivelmente gerando congestionamentos;
+2. Impactos ambientais: a construção de unidades adicionais também pode reduzir
+a área verde ou piorar a qualidade do ar, além dos problemas relacionados ao 
+sanemaento básico do local (coleta de lixo, esgoto, fornecimento de água tratada);
+3. Custos de infraestrutura: custos com infraestrutura tendem a aumentar para 
+lidar com o congestionamento, por exemplo;
+4. Efeitos fiscais: a adição de novas unidades a um \gls{MI} pode levar a um 
+aumento nos gastos necessários em educação, proteção contra incêndio e o aumento
+na coleta de impostos dos novos residentes podem não cobrir estes custos 
+marginais;
+5. Efeitos de composição da vizinhança: os moradores originais de uma localidade
+podem ficar insatisfeitos com a nova composição da vizinhança advinda das novas
+unidades, seja por questões raciais, religiosas, de diferença de renda e outras.
+
+Já entre as possíveis externalidades positivas do \gls{MI} estão
+[@externalities, p. 212]:
+
+1. Produtividade e emprego: um mercado residencial bem regulado é geralmente
+necessário para um mercado de trabalho eficiente (se a oferta responde 
+elasticamente, isto protege os proprietários locais e os valores de suas
+residências no longo prazo, já que estimula e economia local [@HDT, p. 9]);
+2. Benefícios de saúde: a partir de um certo nível de aglomeração, as taxas de 
+mortalidade e morbidade aumentam;
+3. Integração racial e econômica: se para alguns a integração racial e econômica
+pode representar um custo (item 5 das externalidades negativas), outros podem
+considerar estes efeitos um benefício;
+4. Benefícios relacionados a propriedade de um imóvel: mais unidades 
+residenciais estão associadas a preços mais acessíveis e maior oportunidade das
+pessoas adquirirem e morarem em imóveis próprios, o que por sua vez é desejado 
+por uma série de fatores, que vão desde estabilidade política até uma melhor 
+manutenção do estoque residencial.
+
+Segundo @externalities [p. 209], a regulação do \gls{MI} deve ser pensada em
+termos dos custos e benefícios da regulação. O custo da regulação de um mercado,
+segundo @malpezzi_affordable_2018_4, pode ser entendido pela análise da Figura
+\@ref(fig:externalities), onde a oferta privada, *i.e* a oferta que seria
+disponibilizada ao mercado sem regulação alguma, é representada pela reta $O_1$
+e a oferta do mercado regulado é representada pela reta $O_2$: sem
+regulação, mais imóveis seriam ofertados ($Q_1$), e os preços seriam
+relativamente menores ($P_1$) do que os obtidos com regulação ($P_2$). O custo
+regulatório do mercado pode ser geometricamente representado pelo segmento de
+reta roxo na Figura \@ref(fig:externalities), que mede a diferença entre o preço
+de equilíbrio do mercado regulado ($P_2$) e o preço que se obteria para produzir
+a mesma quantidade ($Q_2$) com a oferta privada ($P_3$).
+
+Isto significa que um mercado regulado é menos eficiente do que um mercado sem 
+regulação. Contudo, isto não deve ser interpretado como uma maneira de afastar 
+qualquer tipo de regulação do \gls{MI}, pois os custos regulatórios, apesar de
+não se expressarem em nível privado, dentro da relação comercial entre os 
+consumidores e os incorporadores, realmente existem: para que o mercado opere
+no nível $Q_1$, com preços $P_1$, a sociedade como um todo teria que bancar os 
+custos regulatórios na forma de mais infraestrutura, ou tolerar mais 
+congestionamento, mais impactos ambientais entre outras *externalidades*.
+
+Enfim, uma boa regulação deve sempre buscar encontrar um ponto de equilíbrio
+entre a perda de eficiêcia do \gls{MI} e os benefícios regulatórios impostos.
+
+
+```{r externalities, fig.cap="Custo regulatório no \\gls{MI}."}
+plot_labels <- tibble(label = expression("D[1]", "O[1]", "O[2]"),
+                          x = c(9, 7, 7),
+                          y = c(2, 6.5, 9.5))
+points <- data.frame(x = c(2.5, 2.5, 4.5), y = c(2.5, 5.5, 4.5))
+
+p1 <- ggplot(mapping = aes(x = x, y = y)) + 
+  geom_segment(aes(x = 1, y = 1, xend = 7, yend = 7), color = "#0073D9", size = 1) + 
+  geom_segment(aes(x = 1, y = 6.25, xend = 9.75, yend = 2), color = "#FF4036", size = 1) +
+  geom_segment(aes(x = 1, y = 4, xend = 7, yend = 10), color = "#0073D9", size = 1) + 
+  geom_segment(aes(x = 2.5, y = 2.5, xend = 2.5, yend = 5.5), color = "purple", size = 2) +
+  geom_segment(aes(x = 4.5, y = 0, xend = 4.5, yend = 4.5), lty = "dotted") + # Q2
+  geom_segment(aes(x = 0, y = 4.5, xend = 4.5, yend = 4.5), lty = "dotted") + # P1
+  geom_segment(aes(x = 2.5, y = 0, xend = 2.5, yend = 2.5), lty = "dotted") + # Q1
+  geom_segment(aes(x = 0, y = 2.5, xend = 2.5, yend = 2.5), lty = "dotted") + # P3
+  geom_segment(aes(x = 0, y = 5.5, xend = 2.5, yend = 5.5), lty = "dotted") + # P2
+  geom_text(data = plot_labels,
+            aes(x = x, y = y, label = label), parse = TRUE) +
+  geom_point(data = points, aes(x = x, y = y), size = 2) +
+  labs(x = "Quantidade", y = "Preço") +
+  theme_classic() + 
+  coord_equal() +
+  scale_x_continuous(expand = c(0, 0), breaks = c(2.5, 4.5), limits = c(0,10),
+                     labels = expression(Q[2], Q[1])) +
+  scale_y_continuous(expand = c(0, 0), breaks = c(2.5, 4.5, 5.5), limits = c(0,10),
+                     labels = expression(P[3], P[1], P[2]))
+p1
+```
+\bcenter
+\small Fonte -- Adaptado de @externalities [p. 211].
+\ecenter
+
+Por outro lado, uma externalidade positiva pode ser representada graficamente
+por um deslocamento na curva de demanda para cima, ou seja, uma externalidade
+positiva aumenta a demanda em relação à demanda do mercado livre. Somando-se as
+duas fontes de externalidades, positiva e negativa, tem-se o que se vê no 
+gráfico da Figura \@ref(fig:externalities1): as externalidades positivas tem o
+efeito de aumentar o preço de equilíbrio do mercado para $P_4$, o que por sua
+vez aumenta a quantidade ofertada neste mercado para $Q_3$.
+
+```{r externalities1, fig.cap="Efeito de uma externalidade positiva no \\gls{MI}."}
+p1 + 
+  geom_segment(aes(x = 1.25, y = 7.5, xend = 9.75, yend = 3.5), 
+               color = "#FF4036", size = 1) +
+  geom_point(aes(x = 3.5, y = 6.5), size = 2) +
+  geom_segment(aes(x = 0, y = 6.5, xend = 3.5, yend = 6.5), lty = "dotted") +
+  geom_segment(aes(x = 3.5, y = 0, xend = 3.5, yend = 6.5), lty = "dotted") +
+  scale_x_continuous(expand = c(0, 0), breaks = c(2.5, 3.5, 4.5), limits = c(0,10),
+                     labels = expression(Q[2], Q[3], Q[1])) +
+  scale_y_continuous(expand = c(0, 0), breaks = c(2.5, 4.5, 5.5, 6.5), limits = c(0,10),
+                     labels = expression(P[3], P[1], P[2], P[4])) +
+  annotate("text", label = paste("D[2]"), x = 9, y = 3.5, parse = T)
+```
+\bcenter
+\small Fonte -- Adaptado de @externalities [p. 213].
+\ecenter
+
+Na Engenharia de Avaliações, geralmente os preços dos imóveis, especialmente das
+residências é explicado por variáveis do lado da demanda (renda, p. ex.). No
+entanto, conforme demonstrado por @externalities, a regulação comprovadamente
+aumenta o valor dos imóveis residenciais e dos seus aluguéis, se comparados
+diversos mercados com diferentes regulações. É o que pode ser visto na Figura
+\@ref(fig:regulation-price), em que o preço dos imóveis residenciais em relação
+a renda mediana em cada estado é plotado contra o \gls{WRLURI} para os estados
+da federação norte-americana. Nesta Figura, os círculos são proporcionais a
+população de cada estado. Apesar de alguns *outliers*, nota-se uma correlação
+relativamente forte entre regulação e os preços dos imóveis residenciais.
+
+De acordo com @externalities [p. 236-237], este efeito da regulação sobre os 
+preços e aluguéis de imóveis residencias é consistente com um grande número de
+estudos específicos para algumas cidades.
+
+```{r regulation-price, fig.cap="Preços em função do índice regulatório do \\gls{MI}."}
+knitr::include_graphics("images/figure_01_Malpezzi_Affordable.png")
+```
+\bcenter
+\small Fonte -- @malpezzi_affordable_2018_4.
+\ecenter
+
+## *Affordability*
+
+A *affordability*[^6] de um \gls{MI} é a medida de qual a renda mínima necessária
+para uma família adquirir um imóvel neste mercado com características mínimas
+aceitáveis, como a mínima relação de área construída/habitante, ou padrões
+mínimos de qualidade de habitação [@bertaud, p. 222]. Assim, um \gls{MI} é 
+considerado mais "acessível" do que um segundo \gls{MI} quando as famílias 
+precisam comprometer uma parte menor de sua renda para adquirir um imóvel 
+naquele mercado em comparação com a renda necessária para acessar o segundo 
+mercado.
+
+[^6]: Acessibilidade, em tradução literal.
+
+Um índice simples para a aferição da *affordability* de um \gls{MI}, então, é o
+\gls{PIR}, ou Preço sobre a Renda, que é a razão entre o preço mediano de
+uma residência e a renda mediana anual familiar numa determinada cidade.
+
+De acordo com @bertaud [p. 225], embora um menor \gls{PIR} seja desejável em
+termos de bem-estar econômico, valores muito baixos podem indicar a presença de
+outros problemas que estejam causando a decadência econômica da cidade.
+
+Altos valores de \gls{PIR} podem estimular os cidadãos a optarem pelo aluguel ao
+invés da compra do imóvel próprio, embora, usualmente, quando os preços dos
+imóveis são altos em relação à renda das famílias, é comum que os aluguéis
+também o sejam [@bertaud, p. 227].
+
+Em geral, valores de \gls{PIR} menores que 3 são considerados mercados
+acessíveis enquanto mercados com \gls{PIR} maiores do que 5 são
+considerados mercados severamente não acessíveis [@bertaud, p. 225].
+
+Em alguns mercados as famílias podem não ser tão afetadas por altos valores de
+\gls{PIR}, apesar de pertencerem aos estratos inferiores de renda, dado que já
+possuiam imóveis previamente à elevação dos preços, o que permite a estas
+famílias a troca de seus imóveis por imóveis novos sem comprometer uma grande
+parte da sua renda. Segundo @bertaud [p. 227], isto pode explicar a política
+regulatória de alguns mercados que parecem constantemente  e intencionalmente 
+contribuir para o aumento dos valores dos imóveis pelo aumento das restrições
+à construção de novas unidades.
+
+De acordo com @fischel2015 [p. 317], regulações muito restritivas podem ocorrer
+devido a duas condições: (a) regiões de alta produtividade atraem pessoas
+influentes que demandam por mais restrições de uso para proteger os valores dos
+seus ativos imobiliários e (b) o processo político local é controlado pelos
+proprietários de residências em detrimento dos desenvolvedores (*the homevoter
+hypothesis*).
+
+Segundo @hsieh, o problema local gerado pela restrição de oferta de moradias
+causadas por regulações muito restritivas acaba por gerar um problema
+macroeconômico: Hsieh e Moretti estimam que a melhora na oferta de imóveis nas
+cidades de produtividade mais alta teriam o potencial de aumentar o \gls{PIB}
+dos \gls{EUA} em até 9,5%.
+
+
+## Programas habitacionais
+
+Segundo @malpezzi_affordable_2018_1, uma política habitacional efetiva e robusta
+deve ter uma abordagem dupla: reformar o ambiente regulatório de maneira a
+permitir uma melhor resposta do lado da oferta, com menos restrições
+construtivas, mais terra disponível para construções, etc; e, pelo lado da 
+demanda, estimular o consumo das famílias de baixa renda através de programas de
+concessão de *vouchers*, o que no Brasil é conhecido como aluguel social. Isto 
+implica uma mudança de paradigma, das atuais políticas da concessão de subsídios 
+proporcionados para edificações específicas -- *i.e.* de subsídios concedidos do 
+lado da oferta para a construção de habitações populares, para os subsídios 
+focados nas pessoas, como o aluguel social ou locação social.
+
+Deve-se ponderar, no entanto, se esta recomendação é válidá tanto para os 
+mercados dos países desenvolvidos, como o mercado norte-americano, ou se isto 
+também pode ser aplicado as \gls{MI} dos países em desenvolvimento, como o 
+brasileiro, devido às particularidades de cada um. 
+
+Como salienta @malpezzi_affordable_2018_6, apesar das particularidades e da 
+extemporaneidade de algumas análises, como o clássico estudo sobre a análise dos 
+incentivos ao setor habitacional na Malásia [@malaysia], depois revisitado 
+por [@malpezzi_real_2017], a metodologia aplicada nestas análises pode ser 
+revisada, extendida e aplicada posteriormente em diversos lugares.
+
+Para uma revisão desta recomendação de @malpezzi_affordable_2018_1, pode-se 
+utilizar a metodologia de @bertaud. Segundo @bertaud [p. 257], o consumo de 
+habitação pelas famílias pode ser entendido pela análise da Figura 
+\@ref(fig:consumo): segundo este modelo, dado um nível de renda familiar *n*, 
+uma família consumiria *m* unidades de habitação. Segundo @bertaud [p. 257], se
+houver uma regulação que não permita a construção de unidades de tamanho 
+inferior a *m*, o que é frequente nos regulamentos urbanos, as famílias cuja 
+renda não atinge o nível de renda *n*, representado pelas famílias situadas na
+área **A** da Figura \@ref(fig:consumo), estas famílias ficam excluídas do 
+mercado habitacional regular local. Apenas as famílias com renda superior a *n*, 
+representadas pela área **B** da figura, terão acesso à habitação neste mercado.
+
+Esta situação leva à necessidade da criação de uma política habitacional que 
+seja capaz de proporcionar às famílias cuja renda não alcança a renda mínima
+necessária para o acesso ao \gls{MI} regular, uma moradia digna neste mercado,
+para que estas famílias não tenham que recorrer aos \gls{MI} informais, ou seja,
+ocupações ilegais de terras públicas ou privadas com a construção de moradias
+improvisadas, com materiais de baixo custo, haja vista que estas famílias não
+terão acesso à linhas de crédito habitacional para a construção de moradias, 
+seja pelo fato destas famílias não possuírem renda mínima disponível para 
+acessar estes créditos, seja pela ilegalidade da ocupação, o que também 
+inviabiliza qualquer tipo de financiamento.
+
+```{r consumo, fig.cap="Consumo de habitação pelas famílias em função da renda disponível."}
+mu <- 0
+sd <- 1.25
+x1 <- seq(-3, 3, by = .05)
+y1 <- pnorm(x1, mean = mu , sd = sd)
+n1 <- -1
+df1 <- data.frame(x1, y1)
+delta <- 3
+p1 <- ggplot(data = df1, aes(x1 + delta, y1)) + 
+  geom_line(color = "blue", size = 1.25) +
+  scale_x_continuous(name = "Renda familiar", expand = c(0, 0), 
+                     breaks = n1 + delta, labels = "n") +
+  scale_y_continuous(name = "Consumo de habitação", expand = c(0, 0), 
+                     breaks = pnorm(n1, mean = mu , sd = sd), labels = "m")+
+  geom_segment(aes(x = -3 + delta, y = pnorm(n1, mean = mu , sd = sd),
+                   xend = n1 + delta, yend = pnorm(n1, mean = mu , sd = sd)), 
+                color = "#FF4036", size = 1) +
+  geom_segment(aes(x = n1 + delta, y = pnorm(n1, mean = mu , sd = sd), 
+                   xend = n1 + delta, yend = 0), 
+                color = "#FF4036", size = 1)
+x2 <- seq(0, 6, by = .05)
+y2 <- dlnorm(x2, meanlog = log(3), sdlog = .6)
+df2 <- data.frame(x2, y2)
+n2 <- 2
+plot_labels <- tibble(label = expression("A", "B"),
+                          x = c(1.5, 2.5),
+                          y = c(.10, .10))
+p2 <- ggplot(data = df2, aes(x2, y2)) +
+  geom_line(color = "blue", size = 1.25) +
+  scale_x_continuous(name = "Renda familiar", expand = c(0, 0), 
+                     breaks = n2, labels = "n") +
+  scale_y_continuous(name = "Número de famílias", expand = c(0, 0), 
+                     breaks = NULL) +
+  geom_segment(aes(x = n2, y = 0, xend = n2, yend = .3), 
+                color = "#FF4036", size = 1) +
+  geom_ribbon(data = subset(df2, x2 <= n2),aes( x = x2, ymax = y2), ymin=0, alpha=0.3) +
+  geom_ribbon(data = subset(df2, x2 >= n2),aes( x = x2, ymax = y2), ymin=0, alpha=0.1) +
+  geom_text(data = plot_labels,
+            aes(x = x, y = y, label = label), parse = TRUE)
+cowplot::plot_grid(p1, p2, ncol = 1, align = "hv")
+```
+\bcenter
+\small Fonte -- Adaptado de @bertaud [p. 257].
+\ecenter
+
+
+### Programas habitacionais que atuam pelo lado da oferta
+
+Tradicionalmente muitos governos optam, na política habitacional, por programas
+de promoção da moradia popular que atuam pelo lado da oferta: desde a construção
+pelo próprio estado, através de suas Companhias Habitacionais, como a \gls{CDHU} 
+dos estados brasileiros, da habitação social (moradias populares), até programas 
+mais modernos em que, buscando uma maior eficiência na produção das habitações, 
+os governos fazem uso da iniciativa privada para a construção de unidades através
+de projetos específicos, com a concessão de subsídios para a viabilização do 
+empreendimento, como foi o \gls{PMCMV}.
+
+
+No entanto, haja vista que a propriedade da moradia, seja no Brasil, assim como
+nos \gls{EUA} e talvez no mundo todo, não é um direito (*entitlement*) do
+cidadão que pode ser requerido a qualquer momento, mas uma concessão, sujeita a
+uma restrição orçamentária, nem todas as famílias podem ser beneficiadas por estas
+unidades. Isto acaba por causar a violação do princípio da equidade horizontal, ou 
+seja, o princípio segundo o qual o Estado deveria tratar igualmente os iguais 
+[@malpezzi_affordable_2018_2]: nestes programas, enquanto uma parte da população de 
+baixa renda é agraciada com uma unidade habitacional, outra parte da população não 
+recebe nada.
+
+Segundo @bertaud [p. 263], ainda mais grave é a violação do princípio de
+equidade vertical, ou seja, o princípio que estabelece que qualquer política
+pública deveria beneficiar igualmente as diferentes camadas de renda: como
+ilustrado pela Figura \@ref(fig:supplySideSubsidies), algumas famílias de renda
+superior às da população alvo destas políticas acabam sendo beneficiadas por
+estes programas.
+
+```{r supplySideSubsidies, fig.cap="Impacto das políticas habitacionais que atuam pelo lado da oferta."}
+mu <- 0
+sd <- 1.25
+x1 <- seq(-3, 3, by = .05)
+y1 <- pnorm(x1, mean = mu , sd = sd)
+n01 <- -2
+n11 <- -1
+df1 <- data.frame(x1, y1)
+deltax <- 3
+deltay <- .3
+p1 <- ggplot(data = df1, aes(x1 + delta, y1)) + 
+  geom_line(data = subset(df1, x1 <= n01),  aes(x1 + delta, y1),
+            color = "blue", size = 1.25) +
+  geom_line(data = subset(df1, x1 >= n01 & x1 <= n11),  aes(x1 + delta, y1),
+            color = "blue", size = 1.25, alpha = .2) +
+  geom_line(data = subset(df1, x1 >= n11),  aes(x1 + delta, y1),
+            color = "blue", size = 1.25) +
+  scale_x_continuous(name = "Renda familiar", expand = c(0, 0), 
+                     breaks = c(n01, n11, 0) + deltax, labels = c("q", "n", "n1")) +
+  scale_y_continuous(name = "Consumo de habitação", expand = c(0, 0), 
+                     breaks = pnorm(n01, mean = mu , sd = sd), labels = "m")+
+  geom_segment(aes(x = n01 + deltax, y = 0,
+                   xend = n01 + deltax, yend =  pnorm(n01, mean = mu , sd = sd) + deltay), 
+                color = "#FF4036", size = 1) +
+  geom_segment(aes(x = n11 + deltax, y = pnorm(n11, mean = mu , sd = sd) + deltay, 
+                   xend = n11 + deltax, yend = 0), 
+                color = "#FF4036", size = 1) +
+  geom_segment(aes(x = n01 + deltax, xend = n11 + deltax,
+                   y = pnorm(n01, mean = mu , sd = sd) + deltay,
+                   yend = pnorm(n11, mean = mu , sd = sd) + deltay), 
+               color = "blue", size = 1.25) +
+  geom_segment(aes(x = n11 + deltax, xend = 3, 
+                    y = pnorm(n11, mean = mu , sd = sd) + deltay,
+                    yend = pnorm(n11, mean = mu , sd = sd) + deltay),
+               color = "#FF4036", size = 1) +
+  geom_segment(aes(x = 3, xend = 3, y = pnorm(n11, mean = mu , sd = sd) + deltay, yend = 0),
+               color = "#FF4036", size = 1)
+# Figura B
+x2 <- seq(0, 6, by = .05)
+y2 <- dlnorm(x2, meanlog = log(3), sdlog = .6)
+df2 <- data.frame(x2, y2)
+n02 <- 1
+n12 <- 2
+n22 <- 3
+plot_labels <- tibble(label = expression("A", "B", "C", "D", "E"),
+                          x = c(.85, 1.5, 1.5, 2.5, 3.5),
+                          y = c(.025, .025, .15, .025, .025))
+p2 <- ggplot(data = df2, aes(x2, y2)) +
+  geom_line(color = "blue", size = 1.25) +
+  scale_x_continuous(name = "Renda familiar", expand = c(0, 0), 
+                     breaks = c(n02, n12, 3), labels = c("q", "n", "n1")) +
+  scale_y_continuous(name = "Número de famílias", expand = c(0, 0), 
+                     breaks = NULL) +
+  geom_segment(aes(x = n02, y = 0, xend = n02, yend = .3), 
+                color = "#FF4036", size = 1) +
+  geom_segment(aes(x = n12, y = 0, xend = n12, yend = .3), 
+                color = "#FF4036", size = 1) +
+  geom_segment(aes(x = n22, xend = n22, y = 0, yend = .3), 
+                color = "#FF4036", size = 1) +
+  geom_ribbon(data = subset(df2, x2 <= n02),aes( x = x2, ymax = y2), ymin=0, alpha=0.3) +
+  geom_ribbon(data = subset(df2, x2 >= n12 & x2 <= n22),aes( x = x2, ymax = y2), ymin=0, 
+              fill = "blue", alpha=0.3) +
+  geom_ribbon(data = subset(df2, x2 >= n02 & x2 <= n12), aes(x = x2, ymax = y2), ymin=0, 
+              fill = "blue", alpha=0.5) +
+  geom_ribbon(data = subset(df2, x2 >= n22), aes(x = x2, ymax = y2), 
+              ymin=0, alpha=0.5) +
+  annotate("rect", xmin = n02, xmax = n12, ymin = 0, ymax = .05, fill = "red", alpha = 0.5) +
+  geom_text(data = plot_labels,
+            aes(x = x, y = y, label = label), parse = TRUE)
+cowplot::plot_grid(p1, p2, ncol = 1, align = "hv")
+```
+\bcenter
+\small Fonte -- Adaptado de @bertaud [p. 263].
+\ecenter
+
+
+O que ocorre é que, ao criar um programa habitacional atuando pelo lado da
+oferta, o governo tem que estabelecer uma população alvo. No caso da Figura
+\@ref(fig:supplySideSubsidies), esta população alvo é aquele cuja renda
+encontra-se entre as rendas *q* e *n*, representada pelas áreas **B** e **C** do
+gráfico. Porém, como já mencionado, devido às restrições orçamentárias, acaba
+ocorrendo que apenas uma parte desta população alvo é beneficiada por este
+programa. Esta população beneficiada está representada na Figura
+\@ref(fig:supplySideSubsidies) pela área **B** do gráfico.
+
+Deve-se notar ainda que, uma parte da população, com renda inferior à mínima,
+acaba sendo excluída do programa. Outra parte da população, com renda dentro do
+intervalo elegível, pelas restrições orçamentárias acaba também não sendo
+contemplada, ferindo o princípio da equidade vertical.
+
+A população contemplada pelo programa ganha o direito de consumir, através dos
+subsídios, uma quantidade de habitação que seria superior à sua faixa de renda,
+o que é representado pela quebra da curva no gráfico da Figura
+\@ref(fig:supplySideSubsidies). Esta quantidade de habitação, na verdade,
+poderia ser consumida pelas famílias com faixa de renda entre *n* e *n1*, da
+região **D** do gráfico. Este fato incentiva que as famílias formalmente
+beneficiadas pelo programa subloquem ou vendam informalmente os imóveis do
+programa para as famílias com renda superior, o que, apesar de proibido pelas
+regras destes programas, acaba tornando-se inevitável, haja vista a incapacidade
+dos governos fiscalizarem estes fatos após a concessão dos subsídios.
+
+Nos \gls{EUA}, apenas um terço dos cidadãos elegíveis são contemplados com algum 
+dos benefícios de promoção de moradia digna, o que caracteriza uma séria 
+violação do princípio da equidade horizontal [@malpezzi_affordable_2018_2; 
+@malpezzi_affordable_2018_3].
+
+Outros problemas com os programas de incentivo à moradia digna se situam na 
+questão da eficiência. @malpezzi_affordable_2018_1 estabelece três princípios de
+eficiência aplicáveis aos programas habitacionais do \gls{MI}: a eficiência da
+produção, a eficiência da transferência e a eficiência administrativa.
+
+A eficência da produção diz respeito ao custo pago pelo governo para a construção
+de uma unidade, comparado com o custo do produtor mais eficiente do mercado. 
+
+A eficiência administrativa diz respeito à burocracia necessária para a 
+operacionalização dos programas, o que, em geral, não é desprezível.
+
+Já a eficiência da transferência é mais complexa. 
+
+Uma ilustração de como medir a eficiência da transferência pode ser  vista na
+Figura \@ref(fig:eficiencia), onde a curva $D$ representa a curva de preferência
+do consumidor (e não a demanda do mercado!), de maneira que ao preço de mercado
+$P_m$, a escolha do consumidor seria comprar uma unidade com $Q_m$ $m^2$.
+
+Suponha que o governo ofereça uma unidade habitacional com um desconto razoável 
+($P_c$) em relação aos preço de mercado ($P_m$). Ao preço $Q_c$, no entanto, a
+escolha do consumidor seria comprar $\tilde{Q}$ unidades de área, mas apenas lhe
+é oferecida a possibilidade de comprar $Q_c$ unidades ao preço $P_c$. Desta
+maneira, segundo @malpezzi_affordable_2018_1, a preferência do consumidor é 
+violada e, ao mesmo tempo em que ele ganha o bem-estar por poder comprar $Q_c$ 
+unidades a um preço $(P_m-P_c)$, igual a área do retângulo $a-b-c-d$ da Figura
+\@ref(fig:eficiencia), ele perde bem-estar de magnitude igual à área do 
+triângulo $e-c-f$. Assim, geometricamente, se a área $a-b-c-d$ é maior do que a 
+área do triângulo $e-c-f$, o consumidor estará obtendo um benefício líquido e 
+optará pela compra da unidade subsidiada. Caso contrário, o benefício líquido
+seria negativo e o consumidor optaria por não comprar a unidade.
+
+```{r eficiencia, fig.cap="Eficiência da transferência."}
+plot_labels <- tibble(label = expression("D", "P[m]", "P[c]", "d", "c", "e", "f"),
+                          x = c(1,     9, 9, 3.25, 3.25, 3.5, 5.5),
+                          y = c(8.5, 5.5, 4, 3.25, 5.25, 7, 5.5))
+points <- data.frame(x = c(5, 3.5, 3.5, 3.5, 0, 0), y = c(5, 6.5, 3.5, 5, 3.5, 5))
+
+triangle <- data.frame(id = c("c", "e", "f"), 
+                       x = c(3.5, 5, 3.5), 
+                       y = c(5, 5, 6.5))
+
+p1 <- ggplot(mapping = aes(x = x, y = y)) + 
+  geom_segment(aes(x = 1, y = 9, xend = 9, yend = 1), color = "#FF4036", size = 1) +
+  geom_hline(aes(yintercept = 5)) +
+  geom_hline(aes(yintercept = 3.5)) +
+  geom_segment(aes(x = 5, y = 0, xend = 5, yend = 5), lty = "dotted") +
+  geom_segment(aes(x = 0, y = 5, xend = 5, yend = 5), lty = "dotted") + 
+  geom_segment(aes(x = 3.5, y = 0, xend = 3.5, yend = 6.5), lty = "dotted") +
+  geom_segment(aes(x = 0, y = 3.5, xend = 3.5, yend = 3.5), lty = "dotted") + 
+  geom_segment(aes(x = 6.5, y = 0, xend = 6.5, yend = 3.5), lty = "dotted") +
+  geom_text(data = plot_labels,
+            aes(x = x, y = y, label = label), parse = TRUE) +
+  geom_point(data = points, aes(x = x, y = y), size = 2) +
+  labs(x = expression("Quantidade"~(m^2)), y = expression("Preço por "~m^2)) +
+  theme_classic() + 
+  coord_equal() +
+  scale_x_continuous(expand = c(0, 0), breaks = c(3.5, 5, 6.5), limits = c(0,13),
+                     labels = expression(Q[c], Q[m], tilde(Q))) +
+  scale_y_continuous(expand = c(0, 0), breaks = c(3.5, 5), limits = c(0,13),
+                     labels = expression(b, a)) +
+  annotate("rect", xmin = 0, xmax = 3.5, ymin = 3.5, ymax = 5, alpha = 0.2) +
+  geom_polygon(data = triangle, aes(x = x, y = y), alpha = 0.2)
+p1
+```
+\bcenter
+\small Fonte -- Adaptado de @malpezzi_affordable_2018_1.
+\ecenter
+
+A eficiência é simplesmente a razão entre o benefício líquido obtido pelo
+consumidor ($\overline{a-b-c-d} - \overline{e-c-f}$) e o custo de transferência
+arcada pelo governo ($a-b-c-d$).
+
+Os programas habitacionais que atuam pelo lado da oferta, nos \gls{EUA}, tem
+eficiência média de transferência de 72%. A eficiência de produção de moradias 
+públicas, nos \gls{EUA}, segundo diversos estudos, é, em média, de 63%.
+
+A eficiência microeconômica total é o produto das três eficiência citadas. A
+eficiência adminstrativa não foi medida e não deve ser muito importante em
+termos comparativos (cada programa exigirá um tipo de burocracia diferente, mas
+sempre será necessária alguma burocracia para a operacionalização de cada
+programa). Deste modo, a eficiência microeconômica, desconsiderando-se a
+eficiência admnistrativa, é, em média, nos \gls{EUA}, para o programa de
+construção de moradias sociais, de 47% ($0,63 \cdot 0,73$)
+[@malpezzi_affordable_2018_1].
+
+Além disto, programas de construção de habitações promovidos pelos governos
+tem efeitos que podem ser ruins sobre a oferta privada. Isto pode ser 
+compreendido através da Figura \@ref(fig:cohab): considere-se um mercado em 
+equilíbrio com preços em nível $P_1$ e quantidades $Q_1$, até que entre em vigor 
+um programa habitacional do governo, que tenderá a diminuir a demanda privada, 
+levando, no curto prazo, para o preço de equilíbrio $P_2$. Com os preços 
+reduzidos no mercado privado, no médio prazo a tendência é que algumas unidades 
+do mercado privado sejam remodeladas para outros usos e outras abandonadas, de 
+maneira que o estoque tende a cair para $Q_2$ e os preços do mercado privado
+sobem para $P_3$. No longo prazo, a tendência é que mais e mais unidades saim
+do estoque privado e os preços voltam ao preço original de equilíbrio $P_1$.
+
+```{r cohab, fig.cap="Impacto de um programa de construção de habitação social sobre o mercado privado."}
+plot_labels <- data_frame(label = expression("O[1]", "O[2]", "D[2]", "D[1]"),
+                          x = c(5.5, 9, 1, 2),
+                          y = c(12, 8.5, 10.5, 12.5))
+points <- data.frame(x = c(5, 5, 4, 2), y = c(6, 9, 7, 9))
+
+p1 <- ggplot(mapping = aes(x = x, y = y)) + 
+  geom_segment(aes(x = 1, y = 5, xend = 9, yend = 10), color = "#0073D9", size = 1) + 
+  geom_segment(aes(x = 1, y = 10, xend = 10, yend = 1), color = "#FF4036", size = 1) +
+  geom_segment(aes(x = 2, y = 12, xend = 11, yend = 3), color = "#FF4036", size = 1) +
+  #geom_segment(aes(x = 1, y = 4, xend = 9, yend = 12), color = "#0073D9", size = 1) + 
+  geom_vline(aes(xintercept = 5), color = "#0073D9", size = 1) +
+ # geom_segment(aes(x = 5, y = 6, xend = 5, yend = 9), color = "purple", size = 2) +
+  annotate("segment", x = 5, xend = 5, y = 9, yend = 6, 
+           arrow = arrow(length = unit(.75, "lines")), 
+           size = 1, colour = "grey50") + 
+  annotate("segment", x = 5, xend = 4, y = 6, yend = 7, 
+           arrow = arrow(length = unit(.75, "lines")), 
+           size = 1, colour = "grey50") + 
+  annotate("segment", x = 4, xend = 2, y = 7, yend = 9, 
+           arrow = arrow(length = unit(.75, "lines")), 
+           size = 1, colour = "grey50") + 
+  geom_segment(aes(x = 2, y = 0, xend = 2, yend = 12), lty = "dotted") +
+  geom_segment(aes(x = 0, y = 6, xend = 5, yend = 6), lty = "dotted") + 
+  geom_segment(aes(x = 4, y = 0, xend = 4, yend = 7), lty = "dotted") +
+  geom_segment(aes(x = 0, y = 7, xend = 4, yend = 7), lty = "dotted") + 
+  geom_segment(aes(x = 0, y = 9, xend = 5, yend = 9), lty = "dotted") + 
+  geom_text(data = plot_labels,
+            aes(x = x, y = y, label = label), parse = TRUE) +
+  geom_point(data = points, aes(x = x, y = y), size = 2) +
+  labs(x = "Quantidade", y = "Preço") +
+  theme_classic() + 
+  coord_equal() +
+  scale_x_continuous(expand = c(0, 0), breaks = c(2, 4, 5), limits = c(0,13),
+                     labels = expression(Q[3], Q[2], Q[1])) +
+  scale_y_continuous(expand = c(0, 0), breaks = c(6, 7, 9), limits = c(0,13),
+                     labels = expression(P[2], P[3], P[1]))
+p1
+```
+\bcenter
+\small Fonte -- Adaptado de @malpezzi_affordable_2018_2.
+\ecenter
+
+
+Deve-se ter em mente que tal programa será bem avaliado pelo contemplado, o 
+consumidor privado também acabará sendo beneficiado por uma redução de preços de
+curto/médio prazos, porém o programa desincentiva o mercado privado e afeta os
+proprietários de imóveis neste mercado quando do lançamento do programa e, no
+longo prazo, diminui o estoque neste mercado e os preços voltam ao patamar 
+inicial.
+
+### Programas habitacionais que atuam pelo lado da demanda
+
+De acordo com @bertaud [p. 260], se as famílias com renda inferior a *n* forem
+beneficiadas com a concessão de *vouchers* que permitam a estas famílias a 
+locação de moradias do tamanho mínimo estabelecido pela regulamentação do 
+mercado (*m*), estas famílias, então, também poderão ter acesso a este \gls{MI}
+de maneira regular, o que é mostrado pela Figura \@ref(fig:vouchers)
+
+```{r vouchers, fig.cap="Impacto das políticas habitacionais que atuam pelo lado da demanda."}
+mu <- 0
+sd <- 1.25
+x1 <- seq(-3, 3, by = .05)
+y1 <- pnorm(x1, mean = mu , sd = sd)
+n1 <- -1
+df1 <- data.frame(x1, y1)
+delta <- 3
+p1 <- ggplot(data = df1, aes(x1 + delta, y1)) + 
+  geom_line(data = subset(df1, x1 <= n1),  aes(x1 + delta, y1),
+            color = "blue", size = 1.25, alpha = .2) +
+  geom_line(data = subset(df1, x1 >= n1),  aes(x1 + delta, y1),
+            color = "blue", size = 1.25) +
+  scale_x_continuous(name = "Renda familiar", expand = c(0, 0), 
+                     breaks = n1 + delta, labels = "n") +
+  scale_y_continuous(name = "Consumo de habitação", expand = c(0, 0), 
+                     breaks = pnorm(n1, mean = mu , sd = sd), labels = "m")+
+  geom_segment(aes(x = -3 + delta, y = pnorm(n1, mean = mu , sd = sd),
+                   xend = n1 + delta, yend = pnorm(n1, mean = mu , sd = sd)), 
+                color = "blue", size = 1.25) +
+  geom_segment(aes(x = n1 + delta, y = pnorm(n1, mean = mu , sd = sd), 
+                   xend = n1 + delta, yend = 0), 
+                color = "#FF4036", size = 1)
+x2 <- seq(0, 6, by = .05)
+y2 <- dlnorm(x2, meanlog = log(3), sdlog = .6)
+df2 <- data.frame(x2, y2)
+n2 <- 2
+plot_labels <- tibble(label = expression("A", "B"),
+                          x = c(1.5, 2.5),
+                          y = c(.10, .10))
+p2 <- ggplot(data = df2, aes(x2, y2)) +
+  geom_line(color = "blue", size = 1.25) +
+  scale_x_continuous(name = "Renda familiar", expand = c(0, 0), 
+                     breaks = n2, labels = "n") +
+  scale_y_continuous(name = "Número de famílias", expand = c(0, 0), 
+                     breaks = NULL) +
+  geom_segment(aes(x = n2, y = 0, xend = n2, yend = .3), 
+                color = "#FF4036", size = 1) +
+  geom_ribbon(data = subset(df2, x2 <= n2),aes( x = x2, ymax = y2), ymin=0, alpha=0.3) +
+  geom_ribbon(data = subset(df2, x2 >= n2),aes( x = x2, ymax = y2), ymin=0, alpha=0.1) +
+  geom_text(data = plot_labels,
+            aes(x = x, y = y, label = label), parse = TRUE)
+cowplot::plot_grid(p1, p2, ncol = 1, align = "hv")
+```
+\bcenter
+\small Fonte -- Adaptado de @bertaud [p. 260].
+\ecenter
+
+Do ponto de vista microeconômico, os incentivos habitacionais que atuam pelo 
+lado da demanda são mais eficientes (82%), segundo @malpezzi_affordable_2018_1.
+Porém, este cálculo supõe que os preços não se alteram com a emissão de 
+*vouchers* para aluguéis, por exemplo, o que nem sempre pode ser verdade.
+
+Na Figura \@ref(fig:vouchers2) é apresentado como o programa de distribuição de
+*vouchers* (aluguel social) deve impactar o mercado: no curto prazo, a oferta
+está dada ($O_1$) quando da emissão dos *vouchers*, portanto o preço de
+equilíbrio original se altera (no caso, dos aluguéis) de $P_1$ para $P_2$, por
+conta do repentino aumento da demanda (deslocamento de $D_1$ para $D_2$). No
+entanto, a médio prazo, a oferta aumenta com o aumento dos preços ($O_2$): a
+quantidade oferta passa a ser $Q_2$ e o preço passa para $P_3$. Se a oferta for
+elástica no longo prazo, a quantidade de unidades ofertadas para aluguel vai
+aumentar paulatinamente até que os preços voltam a $P_1$, correspondentes agora
+a uma quantidade maior $Q_3$.
+
+```{r vouchers2, fig.cap="Impacto de um programa de \\emph{vouchers} sobre o mercado privado."}
+plot_labels <- data_frame(label = expression("O[1]", "O[2]", "D[1]", "D[2]"),
+                          x = c(5.5, 9, 1, 3),
+                          y = c(12, 8.5, 8.5, 10.5))
+points <- data.frame(x = c(5, 5, 7, 9), y = c(5, 9, 7, 5))
+
+p1 <- ggplot(mapping = aes(x = x, y = y)) + 
+  geom_segment(aes(x = 1, y = 1, xend = 9, yend = 9), color = "#0073D9", size = 1) + 
+  geom_segment(aes(x = 1, y = 9, xend = 9, yend = 1), color = "#FF4036", size = 1) +
+  geom_segment(aes(x = 3, y = 11, xend = 11, yend = 3), color = "#FF4036", size = 1) +
+  #geom_segment(aes(x = 1, y = 4, xend = 9, yend = 12), color = "#0073D9", size = 1) + 
+  geom_vline(aes(xintercept = 5), color = "#0073D9", size = 1) +
+  # geom_segment(aes(x = 5, y = 5, xend = 5, yend = 9), color = "purple", size = 2) +
+  annotate("segment", x = 5, xend = 5, y = 5, yend = 9, 
+           arrow = arrow(length = unit(.75, "lines")), 
+           size = 1, colour = "grey50") + 
+  annotate("segment", x = 5, xend = 7, y = 9, yend = 7, 
+           arrow = arrow(length = unit(.75, "lines")), 
+           size = 1, colour = "grey50") + 
+  annotate("segment", x = 7, xend = 9, y = 7, yend = 5, 
+           arrow = arrow(length = unit(.75, "lines")), 
+           size = 1, colour = "grey50") + 
+  geom_segment(aes(x = 9, y = 0, xend = 9, yend = 5), lty = "dotted") +
+  geom_segment(aes(x = 0, y = 5, xend = 9, yend = 5), lty = "dotted") + 
+  geom_segment(aes(x = 7, y = 0, xend = 7, yend = 7), lty = "dotted") +
+  geom_segment(aes(x = 0, y = 7, xend = 7, yend = 7), lty = "dotted") + 
+  geom_segment(aes(x = 0, y = 9, xend = 5, yend = 9), lty = "dotted") + 
+  geom_text(data = plot_labels,
+            aes(x = x, y = y, label = label), parse = TRUE) +
+  geom_point(data = points, aes(x = x, y = y), size = 2) +
+  labs(x = "Quantidade", y = "Preço") +
+  theme_classic() + 
+  coord_equal() +
+  scale_x_continuous(expand = c(0, 0), breaks = c(5, 7, 9), limits = c(0,13),
+                     labels = expression(Q[1], Q[2], Q[3])) +
+  scale_y_continuous(expand = c(0, 0), breaks = c(7, 5, 9), limits = c(0,13),
+                     labels = expression(P[3], P[1], P[2]))
+p1
+```
+\bcenter
+\small Fonte -- Adaptado de @malpezzi_affordable_2018_2.
+\ecenter
+
+Desta maneira, segundo @malpezzi_affordable_2018_2, o parâmetro chave do mercado
+é a elasticidade da oferta: se a oferta for bem elástica, no longo prazo,
+programas governamentais que atuam pelo lado da oferta não tem efeito nos
+preços, mas aumentam o estoque, já que a oferta aumenta para atender a nova
+demanda. Por outro lado, se a oferta for inelástica, os preços sobem e não há
+um aumento no estoque, já que a oferta não acompanha a maior demanda.
+
+## Considerações finais
+
+Como visto neste capítulo, os programas habitacionais que atuam pelo lado
+da oferta, além de ter uma maior eficiência, estimulam o mercado privado e podem
+não ter efeito sobre os preços, caso a oferta do mercado seja elástica. Desta
+maneira, justifica-se a dupla abordagem proposta por
+@malpezzi_affordable_2018_2: atuar do lado da da demanda na disponibilização de
+*vouchers* para as famílias de baixa renda, buscando universalizar o máximo
+possível o acesso a estes *vouchers*, evitando assim os problemas de inequidade
+horizontal e vertical citados, e reformar os mercados de maneira a tornar a
+oferta do mercado habitacional elástica, que é o assunto do próximo capítulo.
+
+```{=latex}
+\printbibliography[heading=subbibintoc]
+\end{refsection}
+```

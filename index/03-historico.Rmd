@@ -1,5 +1,8 @@
 # Aspectos históricos {#historico}
 
+```{=latex}
+\begin{refsection}
+```
 
 \begin{epigrafe}
 	\vspace*{\fill}
@@ -21,6 +24,8 @@
 		(RANGEL, 1954)}
 	\end{flushright}
 \end{epigrafe}
+
+## Introdução
 
 O Capitalismo é um sistema político-econômico que, historicamente, substitui o
 Feudalismo, sistema em que a população encontrava-se toda concentrada no campo.
@@ -571,9 +576,15 @@ Terras preparava o território para o novo regime que teria lugar, o feudalismo,
 através da promoção da efetiva ocupação do território, ou seja, de todas as
 terras acessíves, habitáveis e agricultáveis [@rangel1989, 732-733].
 
-Vale dizer que, onde a condição *nulle terre sans seigneur* não logrou após a
-abolição da escravidão, como no estado do Maranhão, houve retrocesso a relações
-de produção pré-escravistas [@rangel1989, 733-734].
+Aqui é preciso fazer um parêntese, já que a historiografia hoje dominante
+condena veementemente essa Lei de Terras como a principal culpada da má
+distribuição das terras no Brasil até os dias atuais [ver @accioly2018, p.
+47-48]. Sabe-se que isto, pelo menos em parte, é obviamente verdadeiro. No
+entanto, o que estes autores ignoram é que, economicamente falando, esta era a
+única coisa viável naquele momento. Vale dizer que, onde a condição *nulle terre
+sans seigneur* não logrou após a abolição da escravidão, como no estado do
+Maranhão, houve retrocesso a relações de produção pré-escravistas [@rangel1989,
+733-734].
 
 ### A crise do feudalismo
 
@@ -691,6 +702,26 @@ complexo.
 As medidas do tipo a) tem seu exemplo mais típico nos \gls{EUA} e também na
 França, enquanto as medidas do tipo b) predominaram na Inglaterra, Alemanha e
 Japão [@rangel1954, 114-115].
+
+Para Rangel [-@rangel1954, 114] não se deve fazer nenhum juízo ético a respeito
+desses dois tipos de medidas:
+
+\begin{citacao}
+Não é possível considerar apenas um deles, \emph{a priori}, "humanitário" ou
+"progressista", pois isso depende do contexto social e econômico geral. O nível 
+de vida da população camponesa e das massar urbanas formadas com a população
+"liberada" pode melhorar ou piorar conforme as circunstâncias. Todavia, é certo
+que sempre que as massas camponesas possam influir na seleção de métodos, o 
+primeiro tipo de medidas tende a se impor, mesmo quando isso resulte em frear
+o desenvolvimento geral e, portanto, a longo prazo, seja desvantajoso para os
+próprios camponeses.
+\end{citacao}
+
+De fato, segundo @rangel1954 [p. 115], na França, onde o camponês teve amplas
+condições de defender a sua renda, o processo de dissolução do Complexo Rural
+estagnou-se, "até mesmo porque o camponês passou a investir parte da sua renda
+na melhora da técnica, nas 'atividades manufatureiras', aumentando com isso, 
+consideravelmente, a resistência do complexo à dissolução".
 
 ### Êxodo rural e industrialização
 
@@ -883,10 +914,6 @@ devido ao esperado declínio do preço da terra que viria com a expansão das
 fronteiras agrícolas, mas que não ocorreu, devido à *demanda especulativa*, o
 que é um *problema financeiro*.
 
-
-
-@faoro...
-
 ### A tendência à elevação de preços nos períodos de recessão econômica
 
 Considerando-se que a *demanda especulativa* aumenta nos períodos de recessão,
@@ -914,7 +941,7 @@ investimentos que diminuíssem a demanda especulativa sobre a terra. Como a
 demanda de terra para cultivo e construção seria pequena em relação à demanda 
 especulativa, o preço da terra tenderia a cair naturalmente [@rangel1986b, 139].
 
-## Pressupostos da análise de Rangel
+## Considerações finais
 
 Ora, lá se vão quase 35 anos da análise de Rangel. Seria no mínimo questionável
 ainda, senão a validade da análise, mas pelo menos a sua atualidade.
@@ -923,39 +950,41 @@ Em primeiro lugar, deve-se ter em conta a questão da inflação brasileira. É 
 Rangel também a tese de que a inflação brasileira se exacerba(va) em períodos de
 conjuntura fraca, ao contrário do senso comum, de que a inflação é um fenômeno
 advindo do superaquecimento da economia [@inflacao-brasileira]. Segundo @rangel,
-a inflação brasileira desempenhava "_um papel bloqueador das quedas de
+a inflação brasileira desempenhava "um papel bloqueador das quedas de
 conjuntura, via penalização da liquidez, que induzia investimentos que, de outro
 modo, isto é, nas condições de moeda estável, não se fariam_". Quer dizer com
-isso que, dada a baixa eficácia marginal do capital em períodos de baixa 
-conjuntura (ver Apêndice \@ref(capital)), o incentivo aos investimentos
-vinham através das taxas reais de juros negativas (pelo efeito da alta inflação)
-que induziam os investidores a fugir da liquidez, já que a inflação
-desvalorizava a  moeda, tornando rentável aplicar recursos em investimentos nem
-tão rentáveis, talvez até com retornos negativos, porém que acarretariam perda
-menor do que o investidor teria se mantivesse a sua posição em moeda.
+isso que, dada a baixa eficácia marginal do capital em períodos de baixa
+conjuntura (ver Apêndice \@ref(capital)), o incentivo aos investimentos vinham
+através das taxas reais de juros negativas (pelo efeito da alta inflação) que
+induziam os investidores a fugir da liquidez, já que a inflação desvalorizava a
+moeda, tornando rentável aplicar recursos em investimentos nem tão rentáveis,
+talvez até com retornos negativos, porém que acarretariam perda menor do que o
+investidor teria se mantivesse a sua posição em moeda.
 
-Desta forma, a inflação era um grande indutor da imobilização de capital em
-terras, seja para pura reserva de valor, seja por motivos especulativos,
-aguardando a sua valorização. Segundo @rangel1986b, estudos levados a cabo pelo
-IPEA *a posteriori* confirmaram a sua hipótese da variação do preço da terra em
-sentido inverso da eficácia marginal do capital que, *coeteris paribus*,
-determina o preço dos valores mobiliários.
+Desta forma, a inflação era um grande indutor da imobilização
+de\index{capital!imobilização de} capital em terras, seja para pura reserva de
+valor, seja por motivos especulativos, aguardando a sua valorização. Segundo
+@rangel1986b [p. 139], estudos levados a cabo pelo IPEA *a posteriori*
+  confirmaram a sua hipótese da variação do preço da terra em sentido inverso da
+  eficácia marginal do\index{capital!eficácia marginal} capital que, *coeteris
+  paribus*, determina o preço dos valores mobiliários.
 
 Com o advento da estabilidade da moeda, no entanto, a análise de Rangel caducou.
 Essa demanda por terra para proteção do processo inflacionário não mais se 
 justifica.
 
-Por outro lado, não consta que a demanda especulativa sobre a terra tenha caído, 
-pelo menos não a ponto do preço da terra cair a um nível que possibilitasse uma 
+Por outro lado, não consta que a demanda especulativa sobre a terra tenha caído,
+pelo menos não a ponto do preço da terra cair a um nível que possibilitasse uma
 verdadeira reforma agrária, conforme previa Rangel. Deve-se buscar, portanto os
-motivos por trás desta nova onda de especulação em torno do valor da terra, o 
-que será feito no capítulo \@ref(economia).
+motivos por trás desta nova onda de especulação em torno do valor
+da\index{terra!valor da} terra, o que será feito no capítulo \@ref(economia).
 
 Deve-se levar em conta, no entanto, que a análise de Rangel é prévia à abertura
-das contas de capital do balanço de pagamento, ou seja, do estabelecimento do
-livre (in)fluxo de capital estrangeiro no país, o que deve ter sido o
+das contas de\index{capital! contas de} capital do balanço de pagamento, ou
+seja, do estabelecimento do livre (in)fluxo de capital
+estrangeiro\index{capital!estrangeiro} no país, o que deve ter sido o
 responsável pela manutenção da demanda especulativa sobre o preço da terra até
-os tempos recentes. 
+os tempos recentes.
 
 Ainda há de se considerar que a crise agrária crônica não cessou. Pelo contrário,
 se agravou e vem se agravando cada vez mais, tendo o Brasil atingido uma 
@@ -989,19 +1018,17 @@ refere ao controle dos preços dos aluguéis, devido à crise habitacional que s
 instalou nestes países desde a crise de 2008 [@berlim; @londres; @california;
 @suecia; @newzeland; @finlandia].
 
-## Efeitos da falta de reforma agrária no cadastro urbano
-
 As altas proporções da população urbana nos países ditos *em desenvolvimento* em
-comparação aos *países desenvolvidos* não nos permite imaginar que as
+comparação aos *países desenvolvidos* não nos permitem imaginar que as
 ferramentas de planejamento urbano desenvolvidas no primeiro mundo surtam o
 efeito esperado em outras regiões menos desenvolvidas do globo, pelo menos não
 na atual realidade econômico-social. E isto também se aplica, é claro, ao
-cadastro territorial multifinalitário.
+\gls{CTM}.
 
 Enquanto a reforma agrária ideal almejada por muitos infelizmente não tem lugar,
-são o cadastro e as outras ferramentas de planejamento urbano que devem se
+são o \gls{CTM} e as outras ferramentas de planejamento urbano que devem se
 adaptar a essa outra realidade particular da paisagem dos países
-subdesenvolvidos. Tentar, pelo contrário, promover a fórceps a modificação da
+subdesenvolvidos. Tentar, pelo contrário, promover *a fórceps* a modificação da
 terrível paisagem urbana destes locais para que se enquadrem nos modelos
 teóricos do mundo desenvolvido passaria, necessariamente, pela expulsão das
 classes menos favorecidas das grandes cidades, sem que exista do outro lado uma
@@ -1009,12 +1036,20 @@ porta de saída.
 
 Obviamente, compreendido este contexto histórico do desenvolvimento do
 capitalismo no Brasil, que não difere muito do desenvolvimento capitalista dos
-outros países da América Latina, não seria de se esperar que o cadastro
-territorial multifinalitário, assim como outras ferramentas do planejamento
-urbano, como concebidos nos países desenvolvidos, possam ser replicadas, sem as
-devidas adaptações, nessa outra realidade, quase que completamente oposta.
+outros países da \gls{AL}, não seria de se esperar que o \gls{CTM}, assim como
+outras ferramentas do planejamento urbano, como concebidos nos países
+desenvolvidos, possam ser replicadas, sem as devidas adaptações, nessa outra
+realidade, quase que completamente oposta.
 
 Desta maneira, vem em boa hora a implantação de núcleos de estudos específicos
-para o estudo e disseminação do cadastro na América Latina [@lalan], em que
-entende-se que deve-se, contudo, concentrar os esforços destes núcleos na
-adaptação das ferramentas clássicas do CTM à realidade regional.
+para o estudo e disseminação do cadastro na América Latina [@lalan]. Entende-se
+que este tipo de iniciativa é muito importante para os países da \gls{AL},
+sobretudo se estes concentrarem os seus esforços na adaptação das ferramentas
+clássicas do \gls{CTM} à realidade regional.
+
+
+
+```{=latex}
+\printbibliography[heading=subbibintoc]
+\end{refsection}
+```

@@ -1,5 +1,10 @@
 # Conclusão {#conclusao}
 
+```{=latex}
+\begin{refsection}
+```
+
+
 \begin{epigrafe}
 	\vspace*{\fill}
 	\begin{flushright}
@@ -312,4 +317,7 @@ diminuir os gastos sociais, pois melhora as condições de vida da população, 
 e reduzir também os gastos com a saúde pública, dada a melhora no saneamento 
 básico para a população.
 
-
+```{=latex}
+\printbibliography[heading=subbibintoc]
+\end{refsection}
+```

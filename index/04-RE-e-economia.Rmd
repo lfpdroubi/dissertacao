@@ -1,5 +1,9 @@
 # O Mercado Imobiliário e a Economia {#economia}
 
+```{=latex}
+\begin{refsection}
+```
+
 \begin{epigrafe}
 	\vspace*{\fill}
 	\begin{flushright}
@@ -14,6 +18,15 @@
 	\end{flushright}
 \end{epigrafe}
 
+## Introdução
+
+Este capítulo tem como objetivo apresentar os conceitos econômicos necessários
+para o entendimento do funcionamento básico do \gls{MI} em nível
+microcroeconômico, assim como o seu impacto na Economia do país, a
+partir do estudo do seu comportamento com relação às principais variáveis
+macroeconômicas, *i.e.* como essas variáveis, como as taxa de juros de curto e
+de longo prazo, as taxas de inflação e nível de atividade impactam o \gls{MI} e
+*vice-versa*.
 
 ## A Economia
 
@@ -193,50 +206,58 @@ análise de Rangel, pode ter espaço. Estudos futuros tratarão da validade dest
 análise conceitual, através da análise dos dados, que porventura estarão 
 disponíveis.
 
-## O Mercado Imobiliário
+## O \glsentrylong{MI}
 
-O mercado imobiliário urbano pode ser dividido basicamente em [@wheaton1999]:
+O \gls{MI} urbano não pode ser analisado como um todo homogêneo, haja vista que
+este é um mercado segmentado. Segundo @wheaton1999, o \gls{MI} urbano pode ser dividido, basicamente, em:
 
 1. Mercado de imóveis residenciais;
 2. Mercado de imóveis comerciais para escritórios;
 3. Mercado de imóveis comerciais para o varejo (incluso shopping centers) e;
 4. Mercado de imóveis industriais
 
-@Case2000 identificaram quatro canais em que o Mercado Imobiliário se
-conecta à macroeconomia:
+Este trabalho tem o objetivo principal de analisar as políticas habitacionais e,
+eventualmente, propor direções para o desenho de novas políticas para este setor.
+Está fora do escopo deste trabalho descrever o funcionamento comerciais ou 
+industriais. Uma boa fonte de referência para o interessado em maiores detalhes
+sobre o funcionamento destes mercados e o trabalho de @wheaton1999.
 
-1. Através do setor de construção civil, pelo seu papel na atividade econômica 
-como um todo, apesar de, segundo os autores, este setor não ser grande o 
-suficiente para orientar toda a economia de um país;
-2. Através da formação da demanda agregada, já que existe uma conexão entre a 
-propensão marginal a consumir com o efeito riqueza do Mercado Imobiliário;
-3. Através do setor bancário, haja vista que os bancos possuem grande parte de
-seu portfolio ligado a produtos conectados de alguma forma com o mercado
-imobiliário
-4. E, por fim, porém não menos importante, o \gls{MI} desempenha um relevante
-papel na Macroeconomia através da sua capacidade de alocar os trabalhadores de
-maneira eficiente, ou seja, em regiões de maior produtividade do trabalho, o que
-tem um potencial de aumentar a produtividade da Economia como um todo.
+O funcionamento do \gls{MI} residencial, segundo @shelter [p. 188-189],  pode
+ser compreendido de acordo com o diagrama da Figura \@ref(fig:MIResidencial): os
+insumos de produção para o \gls{MI} residencial conta com diversos fatores de
+produção comuns a outros mercados, como os trabalhadores e os materiais básicos
+para a fabricação das unidades. No entanto, diferentemente de outros bens de
+consumo, nos insumos do \gls{MI} entram também os fatores financiamento,
+infraestrutura  e, em especial, o fator terra. No processo de produção de
+unidades para o \gls{MI} residencial atuam, basicamente, três atores: os
+construtores, responsáveis pela fabricação dos bens, os proprietários de terras,
+sem as quais não é possível produzir unidades, e os incorporadores, *i.e* as
+pessoas jurídicas que trabalham em conjunto com os outros dois atores,
+conectando-os e vendendo as unidades. Já no mercado de residências acabadas
+atuam os compradores destas unidades, sejam eles futuros moradores
+(*homeowners*) ou "investidores" neste mercado, *i.e.* pessoas que compram
+imóveis com o intuito de alugá-los (locadores ou *renters*) ou simplesmente para
+especular com a compra e venda de imóveis; e finalmente os consumidores de
+"serviços residenciais", *i.e*, grosso modo, os locatários.
 
-Especialmente devido a sua relação com o setor bancário, o \gls{MI} tem um papel
-importante na estabilidade financeira e na calibragem da política monetária
-[@Zhu]. Esta razão, por si só, seria suficiente para justificar intervenções
-por parte dos governos no \gls{MI}. Mas ainda, pelo importante papel do \gls{MI} 
-na eficiente alocação dos trabalhadores em áreas de maior produtividade de 
-Economia, esta intervenção estatal no \gls{MI} deve ser justificada, já que isto
-afeta a renda e o bem-estar de toda a população, propiciando um funcionamento 
-mais eficiente das engrenagens econômicas.
+Segundo @shelter [p. 189], o mercado de residências acabadas pode, grosso modo,
+ser considerado um mercado competitivo. Considera-se que na maioria das cidades
+isto deve ser verdadeiro, apesar de que relatos de problemas neste mercado tem
+sido frequentes nos últimos anos, especialmente em cidades com maiores
+restrições para a construção de novas residências, onde existe a concentração da
+propriedade de unidades em poucos proprietários, usualmente por motivos
+históricos, como na cidade de Berlim [@berlim].
 
-Segundo @shelter [p. 188-189], o funcionamento do \gls{MI} residencial pode
-ser compreendido de acordo com o diagrama da Figura \@ref(fig:MIResidencial):
-existe um mercado de residências que pode ser considerado competitivo. No
-processo de produção, contudo, a presença de poucos incorporadores e 
-proprietários pode lhes dar um grande poder de mercado, sobretudo se eles também
-controlarem o mercado de outros insumos, porém isto não é comum. No Mercado de 
-Insumos, a propriedade pode ser tão concentrada que os proprietários podem ter 
-poder de fixar os preços, grandes economias de escala podem tornar a produção de 
-alguns insumos um monopólio natural e a regulação governamental pode restringir 
-a alocação competitiva de recursos, especialmente os financeiros.
+O processo de produção, por outro lado, pode sofrer problemas de eficiência se
+houver a presença de poucos incorporadores e proprietários, o que pode lhes dar
+um grande poder de mercado, sobretudo se eles também controlarem o mercado de
+outros insumos, o que não é comum, segundo @shelter [p. 189]. 
+
+No Mercado de Insumos, a propriedade pode ser tão concentrada que os
+proprietários podem ter o poder de fixar os preços; grandes economias de escala
+podem tornar a produção de alguns insumos um monopólio natural e a regulação
+governamental pode restringir a alocação competitiva de recursos, especialmente
+os financeiros [@shelter, p. 189].
 
 ```{r MIResidencial, fig.cap = "Diagrama esquemático do funcionamento do \\gls{MI} residencial."}
 grViz("
@@ -300,33 +321,31 @@ digraph nicegraph {
 \small Fonte -- Adaptado de @shelter [p. 189]
 \ecenter
 
-Para @shelter [p. 189], então, o problema dos \gls{MI} residenciais usualmente 
-se concentram no mercado de insumos, onde as intervenções governamentais 
+Para @shelter [p. 189], então, o problema dos \gls{MI} residenciais usualmente
+se concentram no mercado de insumos, onde as intervenções governamentais
 deveriam se concentrar. Contudo, nem sempre é isto que ocorre: muitos governos
 decidem intervir diretamente no processo de produção ou no controle de preços ao
-consumidor final, como o controle de aluguéis, no entanto isto apenas distorce 
-os sinais enviados ao mercado e podem exacerbar o problema original.
+consumidor final, como o controle de aluguéis. Este tipo de controle, no
+entanto, distorce os sinais enviados ao mercado e podem acabar por exacerbar o
+problema original, devendo, portanto, serem utilizados em casos excepcionais
+apenas.
 
-Ao longo das próximas seções serão apresentados conceitos econômicos 
-relacionados à modelagem do \gls{MI}, tanto em nívem micro, quanto 
-macroeconômico.
+### Particularidades do \glsentrylong{MI}
 
-### Particularidades do mercado imobiliário
-
-Também em nível microeconômico o mercado imobiliário é um mercado diferenciado 
-dos outros mercados de bens de consumo. Apesar de toda a indústria da construção
-ter evoluído muito ao longo das últimas décadas, ainda persiste no Brasil um
-forte componente artesanal na construção civil, o que implica em bens imóveis
-de características muito heterogêneas, a depender da mão-de-obra aplicada na sua
-execução. Também a questão do projeto arquitetônico implica numa singularidade
-para cada bem imobiliário. Mas mais importante ainda é a questão da localização,
-que torna cada imóvel único. Isto não ocorre em qualquer outro mercado de bens 
-de consumo. A não ser por questões de natureza sentimental, um carro, uma 
-geladeira, ou praticamente qualquer outro bem de consumo é produzido em série: 
-existem milhares de itens iguais no mercado. Isto nunca ocorre com os imóveis.
-Mesmo apartamento vizinhos, em um mesmo prédio, tem características diferentes,
-dada a sua posição solar, localização do andar em relação ao prédio, a vista
-que cada um possui, entre outras questões. 
+O \gls{MI} é um mercado diferenciado dos outros mercados de bens de consumo.
+Apesar de toda a indústria da construção ter evoluído muito ao longo das últimas
+décadas, ainda persiste no Brasil um forte componente artesanal na construção
+civil, o que implica em bens imóveis de características muito heterogêneas, a
+depender da mão-de-obra aplicada na sua execução. Também a questão do projeto
+arquitetônico implica numa singularidade para cada bem imobiliário. Mas mais
+importante ainda é a questão da localização, que torna cada imóvel único. Isto
+não ocorre em qualquer outro mercado de bens de consumo. A não ser por questões
+de natureza sentimental, um carro, uma geladeira, ou praticamente qualquer outro
+bem de consumo é produzido em série: existem milhares de itens iguais no
+mercado. Isto nunca ocorre com os imóveis. Mesmo apartamento vizinhos, em um
+mesmo prédio, tem características diferentes, dada a sua posição solar,
+localização do andar em relação ao prédio, a vista que cada um possui, entre
+outras questões.
 
 Segundo a NBR 14.653-01 [-@NBR1465301, x], "o mercado imobiliário caracteriza-se
 como um 'mercado imperfeito', com bens não homogêneos, estoque limitado,
@@ -336,21 +355,123 @@ De acordo com @ADAMS2010 [p. 3], a forte inércia dos preços do mercado
 imobiliário influencia o comportamento do mercado durante os *booms* econômicos,
 já que a exuberância das expectativas (exuberância irracional) dos investidores
 e proprietários de imóveis facilita a formação de bolhas nestes mercados. Além
-disto, a falta de informação a respeito de preços no mercado imobiliário, pelo
-motivo deste ser um mercado segmentado, ou seja, os preços obedecem uma lógica
-local, também é uma facilitadora da formação de bolhas.
+disto, a falta de informação a respeito de preços no \gls{MI}, decorrente do
+fato deste ser um mercado geograficamente segmentado, também é uma facilitadora
+da formação de bolhas.
 
-## A Economia e o mercado imobiliário
+## O \glsentrylong{MI} e o setor bancário {#MI-e-o-setor-bancario}
+
+A participação dos produtos financeiros relacionados ao setor imobiliário
+constituem uma grande parte dos portfolios bancários. Justamente por isto,
+crises bancárias estão frequentemente associadas a superexposição do setor
+bancário no \gls{MI} [@Case2000, 148]. Segundo Claessens *et al.*
+(2010) [*apud* @silver, 3], de 46 crises bancárias sistêmicas para quais há dados
+disponíveis, mais de dois terços foram precedidas por padrões de aumento-estouro
+de preços de imóveis.
+
+Não apenas pelo estouro de uma bolha especulativa pode haver quedas nos preços
+dos bens imóveis, mas também por conta de uma inversão dos fundamentos
+econômicos que sustentavam os preços [@Case2000, 129].
+
+Segundo o conceituado semanário econômico *The Economist*, entre 1960 e 2000 um
+quarto das recessões no mundo rico estavam associadas com fortes declínios de
+preços de moradia. Ainda segundo a *The Economist*, recessões associadas com
+restrições de créditos e estouros de preços de moradia foram mais profundas e
+mais duradouras do que as outras recessões.[@economist-housing-2020].
+
+Segundo @fmiera, episódios com padrões de *boom* seguidos de estouros (de
+bolhas), ou *boom-bust patterns*, precederam mais de dois terços das 50 mais
+recentes crises bancárias sistêmicas. Uma reversão de expectativas pode ocorrer 
+devido à alteração nos patamares das taxas de juros, ou nas expectativas dos 
+níveis futuroes destas taxas, ou a um fator exógeno. 
+
+### Outros problemas gerados pelo alto valor dos imóveis
+
+Além dos problemas relacionados ao setor bancário discutidos na seção anterior,
+o altos preços de imóveis e/ou aluguéis previnem que os trabalhadores se mudem
+para cidades com maior produtividade marginal do trabalho. Ou seja, algumas
+pessoas tendem a se manter em ocupações de baixa produtividade em cidades
+pequenas, no interior, ao invés de se mudarem para grandes cidades onde
+certamente teriam ocupações de maior produtividade, como numa fábrica, por
+exemplo, pois o custo adicional de moradia que elas teriam não seria compensado
+pelo maior salário que receberiam, devido à maior produtividade da sua ocupação.
+Se fosse possível a redução dos custos de moradia em regiões de maior
+produtividade da mão de obra, isto resultaria num maior Produto Interno Bruto
+[@Case2000, 149; @economist-housing-2020].
+
+\begin{citacao}
+A habitação também é um grande motivo pelo qual muitas pessoas no mundo rico
+sentem que o economia não funciona para eles. Enquanto os \emph{baby boomers}
+tendem a possuir casas grandes e caras, os jovens precisam cada vez mais alugar
+um lugar apertado com seus amigos, fomentando o ressentimento dos jovens
+\emph{millenials} em relação aos idosos. O economista Thomas Piketty afirmou que
+nas últimas décadas o retorno ao capital excedeu o que é pago ao trabalho na
+forma de salários, aumentando a desigualdade. Mas outros criticaram os achados
+de Piketty, apontando que o que realmente explica o aumento da participação no
+capital está nos retornos crescentes sobre a habitação.
+\cite{economist-housing-2020}
+\end{citacao}
+
+### \glsentrylong{MI} e populismo
+
+Segundo a *The Economist*, o \gls{MI} e o populismo estão intimamente
+ligados: novas pesquisas mostraram que pessoas que habitam locais onde o mercado
+imobiliário está estagnado tem se aproximado mais de partidos e ideais da 
+extrema-direita populista na Inglaterra e na França [@economist-housing-2020].
+
+Ainda de acordo com a *The Economist*, felizmente os governos estão começando a 
+perceber o estrago causado pelos erros da política habitacional desde o fim da
+segunda guerra mundial. Para @economist-housing-2020:
+
+\begin{citacao}
+sistemas de planejamento flexíveis, tributação e regulamentação financeira
+apropriadas podem transformar a habitação em força para estabilidade social e
+econômica. O sistema de habitação pública de Cingapura ajuda a melhorar inclusão
+social; financiamento imobiliário na Alemanha ajudou o país a evitar a pior da
+crise de 2008-10; O sistema de planejamento da Suíça ajuda bastante a explicar
+porque o populismo até agora não chegou até lá. Governos em todo o mundo
+precisam agir de forma decisiva e sem demora. Nada menos que a estabilidade 
+econômica e política do mundo está em jogo.
+\cite{economist-housing-2020}
+\end{citacao}
+
+## A Economia e o \glsentrylong{MI}
+
+@Case2000 identificaram quatro canais em que o \gls{MI} se conecta à 
+macroeconomia:
+
+1. Através do setor de construção civil, pelo seu papel na atividade econômica 
+como um todo, apesar de, segundo os autores, este setor não ser grande o 
+suficiente para orientar toda a economia de um país;
+2. Através da formação da demanda agregada, já que existe uma conexão entre a 
+propensão marginal a consumir com o efeito riqueza do \gls{MI};
+3. Através do setor bancário, haja vista que os bancos possuem grande parte de
+seu portfolio ligado a produtos conectados de alguma forma com o mercado
+imobiliário
+4. E, por fim, porém não menos importante, o \gls{MI} desempenha um relevante
+papel na Macroeconomia através da sua capacidade de alocar os trabalhadores de
+maneira eficiente, ou seja, em regiões de maior produtividade do trabalho, o que
+tem um potencial de aumentar a produtividade da Economia como um todo.
+
+Especialmente devido a sua relação com o setor bancário, o \gls{MI} tem um papel
+importante na estabilidade financeira e na calibragem da política monetária
+[@Zhu]. Esta razão, por si só, seria suficiente para justificar intervenções
+por parte dos governos no \gls{MI}. Mas ainda, pelo importante papel do \gls{MI} 
+na eficiente alocação dos trabalhadores em áreas de maior produtividade de 
+Economia, esta intervenção estatal no \gls{MI} deve ser justificada, já que isto
+afeta a renda e o bem-estar de toda a população, propiciando um funcionamento 
+mais eficiente das engrenagens econômicas.
 
 Uma questão sempre presente nas discussões econômicas diz respeito ao papel do
 Estado na Economia, seja como ofertante, através de empresas públicas,
 geralmente criadas em setores onde não há atratividade para empresas privadas,
-como demandante -- em muitos casos o Estado é o maior demandante do setor -- ou
-ainda como interventor/regulador. Em relação ao \gls{MI}, então, qual deveria
-ser o papel do Estado junto a este mercado? Deveria o Estado intervir de alguma
-forma, seja como ofertante, demandante ou interventor, ou deveria o Estado
-tentar permanecer neutro em relação ao \gls{MI}, deixando que o mercado se
-auto-regule, através do equilíbrio da demanda e da oferta por bens imóveis?
+como demandante -- em muitos casos o Estado é o maior demandante de um setor da
+economia -- ou ainda como interventor/regulador. Em relação ao \gls{MI}, então,
+qual deveria ser o papel do Estado junto a este mercado? Deveria o Estado
+intervir de alguma forma, seja como ofertante, demandante ou interventor, ou
+deveria o Estado tentar permanecer neutro em relação ao \gls{MI}, deixando que o
+mercado se auto-regule, através do equilíbrio da demanda e da oferta por bens
+imóveis?
 
 Diversos autores tem manifestado que o \gls{MI}, por sua pujança e
 particularidades, não deveria ser estudado apenas como mais um mercado de bens
@@ -373,12 +494,12 @@ fatores preponderantes que devem levar a uma necessária intervenção do Estado
 o lado da oferta e o lado da demanda no \gls{MI}, podendo levar a formação de 
 bolhas especulativas.
 
-Historicamente, nos países de mercado de capitais menos desenvolvidos, como o 
-Brasil, o \gls{MI} é utilizado como reserva de valor, o que tende a se agravar
-em tempos de crise econômica, em que os investidores tendem a procurar 
-investimentos de menor risco.
+Historicamente, nos países de mercado de capitais menos desenvolvidos, como o
+Brasil, o \gls{MI} era utilizado como uma possível reserva de valor, o que tendia
+a se agravar em tempos de crise econômica, em que os investidores tendem a
+procurar investimentos de menor risco, como assinalado no capítulo \@ref(historico).
 
-Nos países desenvolvidos do sistema, os mercados de capitais mais desenvolvidos
+Nos países desenvolvidos do sistema, os mercados mobiliários mais desenvolvidos
 propiciam alternativas de investimento que possibilitam aos grandes investidores
 institucionais diversos produtos de investimento que tornam praticamente
 desnecessário e contraproducente o investimento direto no \gls{MI}, haja vista
@@ -390,10 +511,10 @@ impactos causados por fortes variações de preços no \gls{MI} e choques de pre
 como o de 2007/2008 nos \gls{EUA} mostraram que, numa economia capitalista
 desenvolvida, crises setoriais que antes se restringiriam ao setor atingido,
 atualmente tendem a se propagar rapidamente pelos diversos setores da Economia,
-especialmente as crises advindas do mercado imobiliário.
+especialmente as crises advindas do \gls{MI}.
 
 
-### O Mercado Imobiliário e a Microeconomia {#micro}
+### O \glsentrylong{MI} e a Microeconomia {#micro}
 
 O \gls{MI}, por sua pujança e importância, não pode ser considerado um simples
 mercado de bens, como outros bens de consumo em geral, como automóveis, móveis
@@ -578,7 +699,7 @@ p1 <- ggplot(mapping = aes(x = x, y = y)) +
   geom_abline() +
   geom_text(data = plot_labels,
             aes(x = x, y = y, label = label), parse = TRUE) +
-  labs(x = "Renda", y = "Aluguel") +
+  labs(x = "Renda", y = "Consumo de serviços residenciais") +
   theme_classic() + 
   coord_equal() +
   scale_x_continuous(expand = c(0, 0), limits = c(0, 10), breaks = NULL) +
@@ -586,7 +707,7 @@ p1 <- ggplot(mapping = aes(x = x, y = y)) +
 p1
 ```
 \bcenter
-\small Fonte -- O autor.
+\small Fonte -- Adaptado de @regulation [p. 12]
 \ecenter
 
 
@@ -620,7 +741,7 @@ p1 <- ggplot(mapping = aes(x = x, y = y)) +
   geom_hline(yintercept = 1.05) +
   geom_text(data = plot_labels,
             aes(x = x, y = y, label = label), parse = TRUE) +
-  labs(x = "Renda", y = "Aluguel/Renda") +
+  labs(x = "Renda", y = "Consumo de Serviços Residenciais / Renda") +
   theme_classic() + 
   coord_equal() +
   scale_x_continuous(expand = c(0, 0), limits = c(0, 5), breaks = NULL) +
@@ -837,14 +958,6 @@ atores como ofertantes, a tendência é que os choques de demanda tenham maior
 impacto. Os detalhes por trás deste raciocínio serão melhor esclarecidos no
 capítulo \@ref(crise2008).
 
-#### Diagnóstico de mercado
-
-A NBR 14.653-01 [-@NBR1465301, 12], estabelece que, "o profissional, conforme o
-tipo de bem, as condições de contratação, o método empregado e a finalidade da
-avaliação, pode **tecer considerações sobre o mercado do bem avaliando**, de
-forma a indicar, tanto quanto possível, **a estrutura, a conduta e o desempenho
-do mercado**."
-
 #### O imóvel visto como um investimento
 
 Segundo @Malpezzi2002TheRO, um imóvel é um ativo que rende um fluxo de serviços
@@ -899,10 +1012,10 @@ títulos é inversamente proporcional às taxas de juros, ou seja, quanto menor 
 taxas, maior o valor presente descontado dos títulos, ou valor de mercado, e
 vice-versa [@resende, 79].
 
-#### O papel da especulação no \gls{MI}
+#### O papel da especulação no \glsentrylong{MI}
 
 Um dos assuntos mais polêmicos do \gls{MI} diz respeito à especulação com 
-imóveis. Especulação, aliás, é um assunto em polêmico em diversos tipos de 
+imóveis. Especulação, aliás, é um assunto polêmico em diversos tipos de 
 mercados, não apenas no \gls{MI}. 
 
 @Malpezzi2002TheRO [p. 5] fazem um bom apanhado de diversos conceitos 
@@ -915,17 +1028,17 @@ empreendimento lucrativo? Não existe uma definição formal para tal.
 
 No Brasil, como já anteriormente mencionado, pelos problemas inflacionários
 enfrentados durante boa parte do século XX, havia uma tendência à imobilização
-do capital, ao contrário do que acontece nos países desenvolvidos, onde é
-conhecida a chamada preferência pela liquidez dos investidores [@blanchard,
-546]. Esta tendência no Brasil à imobilização do capital levava, como foi visto
-no capítulo \@ref(historico), a um aumento do preço da terra nos períodos de
-crise econômica, agravando a crise agrária. Prevaleceu durante anos, no Brasil,
-a segunda definição de "especulação" no setor imobiliário, *i.e.* a compra de 
-terra nua para assim mantê-la por longo período de tempo. No entanto, em grande 
-parte, o que havia era uma simples reserva de valor, devido a ocorrência 
-simultânea da corrosão monetária devido à alta inflação e das poucas 
-oportunidades de investimentos rentáveis na Economia, já que a inflação se 
-elevava em períodos de baixa conjuntura.
+do\index{capital!imobilização do} capital, ao contrário do que acontece nos
+países desenvolvidos, onde é conhecida a chamada preferência pela liquidez dos
+investidores [@blanchard, 546]. Esta tendência no Brasil à imobilização do
+capital levava, como foi visto no capítulo \@ref(historico), a um aumento do
+preço da terra nos períodos de crise econômica, agravando a crise agrária.
+Prevaleceu durante anos, no Brasil, a segunda definição de "especulação" no
+setor imobiliário, *i.e.* a compra de terra nua para assim mantê-la por longo
+período de tempo. No entanto, em grande parte, o que havia era uma simples
+reserva de valor, devido a ocorrência simultânea da corrosão monetária devido à
+alta inflação e das poucas oportunidades de investimentos rentáveis na Economia,
+já que a inflação se elevava em períodos de baixa conjuntura.
 
 Como se sabe, este problema não é, contudo, atual: com a estabilização da moeda,
 a manutenção de imóveis na carteria do investidor por um longo período de tempo
@@ -977,7 +1090,7 @@ serial em preços, porém a evidência de que isso leva, por si só, a formaçã
 bolhas é controversa. No capítulo \@ref(crise2008) serão vistos com mais detalhes os
 fatores que levam à formação de bolhas.
 
-#### O papel da regulação do \gls{MI} na prevenção da formação de bolhas especulativas
+#### O papel da regulação do \glsentrylong{MI} na prevenção da formação de bolhas especulativas
 
 Conforme será visto no capítulo \@ref(crise2008), para @Malpezzi2002TheRO [p.
 26], o efeito da especulação na volatilidade do \gls{MI} depende das condições
@@ -1160,7 +1273,7 @@ ordem de milhões de reais. Isto impacta o \gls{MI} de uma maneira muito forte e
 como será mostrado no capítulo \@ref(crise2008), sem precedentes históricos. 
 
 
-## O Mercado Imobiliário e a Macroeconomia {#macro}
+## O \glsentrylong{MI} e a Macroeconomia {#macro}
 
 Segundo @LEUNG, há um reconhecimento relativamente recente e crescente
 sobre a importância da interação entre os diversos mercados imobiliários entre
@@ -1172,13 +1285,13 @@ algumas análises teóricas e empíricas da economia urbana e habitacional inclu
 variáveis macroeconômicas (como inflação, crescimento econômico, PIB, taxa de
 desemprego etc.) como 'variáveis de controle' exógenas [@LEUNG, 3].
 
-Por sua vez,  os livros de Economia tradicionais ou tratam o mercado imobiliário
-como apenas um dos muitos mercados de bens de consumo ou o negligenciam como um
-todo. A Macroeconomia convencional ignora completamente o mercado imobiliário
-[@LEUNG, 3], embora o mercado habitacional constitua uma grande parte da
-Macroeconomia [@LEUNG, 5]. @krugman afirmou que um dos segredos da
-política monetária reside no fato que a política monetária funciona através do
-mercado imobiliário, tendo pouco impacto direto no investimento em negócios.
+Por sua vez,  os livros de Economia tradicionais ou tratam o \gls{MI} como
+apenas um dos muitos mercados de bens de consumo ou o negligenciam como um todo.
+A Macroeconomia convencional ignora completamente o  \gls{MI} [@LEUNG, 3],
+embora o mercado habitacional constitua uma grande parte da Macroeconomia
+[@LEUNG, 5]. @krugman afirmou que um dos segredos da política monetária reside
+no fato que a política monetária funciona através do \gls{MI}, tendo
+pouco impacto direto no investimento em negócios.
 
 Segundo Greenwood e Hercowitz [*apud* @LEUNG, 5], o estoque de capital
 imobiliário é maior do que o capital de negócios e, em geral, o valor de mercado
@@ -1205,12 +1318,11 @@ crescente esforço de pesquisa para preencher a lacuna entre as duas literaturas
 e lançar luz sobre questões que são conjuntamente conseqüentes para a 
 macroeconomia e a habitação.
 
-O mercado imobiliário, diferentemente de outros mercados de capitais, exibe uma
-flutuação de valores baixa e não muda imediatamente após a mudança do noticiário
-econômico [@ADAMS2010, 3]. O mercado imobiliário residencial, em particular,
-mostra forte rigidez pra baixo, porque os donos de imóveis residenciais tendem a
-resistir a venda da propriedade sob períodos de recessão econômica [@Case2000,
-129].
+O  \gls{MI}, diferentemente de outros mercados de capitais, exibe uma flutuação
+de valores baixa e não muda imediatamente após a mudança do noticiário econômico
+[@ADAMS2010, 3]. O  \gls{MI} residencial, em particular, mostra forte rigidez
+pra baixo, porque os donos de imóveis residenciais tendem a resistir a venda da
+propriedade sob períodos de recessão econômica [@Case2000, 129].
 
 ### Correlação entre os mercados imobiliários
 
@@ -1264,7 +1376,7 @@ knitr::include_graphics("images/several_indices_regulations.png")
 \small Fonte -- @regulation [p. 3]
 \ecenter
 
-### \gls{MI} e fluxo de capitais
+### \glsentrylong{MI} e fluxo de capitais
 
 O comportamento dos preços dos \gls{MI} devem seguir os fundamentos da Economia
 no longo prazo. No curto prazo, porém, como já foi observados, os preços flutuam
@@ -1335,7 +1447,7 @@ Davis e Palumbo [*apud* @regulation, p. 4], é o preço da terra que governa o
 aumento dos preços dos imóveis nos \gls{EUA}, o que se confirma também na China,
 como pode ser visto na Figura \@ref(fig:land).
 
-```{r land, fig.cap="Aumento nominal e real do valor da terra na China."}
+```{r land, fig.cap="Aumento nominal e real do valor da\\index{terra!valor da} terra na China."}
 knitr::include_graphics("images/land.png")
 ```
 
@@ -1479,14 +1591,15 @@ crises, com consequências potencialmente funestas para a economia real. A
 liquidez alimenta a inflação dos preços dos ativos, que por sua vez realimenta a
 liquidez através da maior alavancagem [@resende, 79-80]."
 
-A próxima seção apresenta alguns modelos teóricos sobre a relação entre
-as variáveis macroeconômicas e o preço dos imóveis, o que será posteriormente
-analisado com mais profundidade no capítulo \@ref(crise2008), em que serão 
-analisados os motivos que levaram o \gls{MI} residencial norte-americano e 
-mundial a este forte aumento de volatilidade e os efeitos desta grande 
-volatilidade, não apenas no \gls{MI}, mas na Economia como um todo. 
+A próxima seção apresenta alguns modelos teóricos sobre a relação entre as
+variáveis macroeconômicas e o preço dos imóveis, o que será posteriormente
+analisado com mais profundidade no capítulo \@ref(crise2008), em que serão
+analisados os motivos que levaram o \gls{MI} residencial mundial e,
+especialmente, o norte-americano a este forte aumento de volatilidade, e os
+efeitos desta grande volatilidade, não apenas no \gls{MI}, mas na Economia como
+um todo.
 
-### Modelos econométricos para o \gls{MI}
+### Modelos econométricos para o \glsentrytext{MI}
 
 A elaboração de modelos econométricos ajuda a explicar o comportamento dos
 preços no \gls{MI}. Geralmente são elaborados modelos estáticos, que visam
@@ -1546,7 +1659,7 @@ efeitos significantes sobre preços das residências, dinheiro e crédito.
 \end{citacao}
 
 @macroHousing mostraram, no entanto, que a relação entre algumas variáveis
-macroeconômicas e o mercado imobiliário podem ter modificado depois da crise
+macroeconômicas e o \gls{MI} podem ter modificado depois da crise
 de 2008, o que ainda deve ser confirmado com novas pesquisas, no entanto.
 
 #### Modelo de equilíbrio do \gls{MI} no longo prazo
@@ -1730,9 +1843,9 @@ p1
 
 A Figura \@ref(fig:adams) mostra, além desta propagação descrita acima, em seu
 painel superior, o efeito de uma mudança nas variáveis macroeconômicas na
-formação de preços do mercado imobiliário. No painel central, por exemplo, é
-ilustrado como se propaga para o \gls{MI} um aumento na taxa de juros de longo
-prazo: inicialmente o aumento das taxas de juros de longo prazo diminui o Valor
+formação de preços do \gls{MI}. No painel central, por exemplo, é ilustrado como
+se propaga para o \gls{MI} um aumento na taxa de juros de longo prazo:
+inicialmente o aumento das taxas de juros de longo prazo diminui o Valor
 Presente dos imóveis, diminuindo o apetite dos investidores (**II**), o que faz
 diminuir o ritmo das construções (**III**), o que por sua vez tende a diminuir o
 estoque de imóveis (**IV**), o que, por fim, acaba por aumentar o valor dos
@@ -1777,18 +1890,11 @@ a um papel secundário, ou seja, atualmente é esperado que o aquecimento da
 atividade da Economia brasileira venha acompanhado de aumento dos preços dos 
 imóveis e _vice-versa_.
 
-O que provavelmente deve impactar a forma dos modelos no Brasil é a estrutura a
-termo da taxa de juros. Ao contrário do mundo desenvolvido, no Brasil a
-estrutura a termo da taxa de juros é invertida, pois há concentração da dívida
-pública no curto prazo. Outra hipótese a ser verificada é quanto ao impacto das
-taxas de juros de curto prazo nos juros hipotecários, o que parece não ocorrer
-no Brasil.
-
 #### Modelos dinâmicos
 
-O mercado imobiliário, assim como acontece com  o mercado mobiliário, deve
+O \gls{MI}, assim como acontece com  o mercado mobiliário, deve
 seguir os fundamentos da Economia no longo prazo. No entanto, eventuais
-descolamentos dos preços no mercado imobiliário dos fundamentos econômicos podem
+descolamentos dos preços no \gls{MI} dos fundamentos econômicos podem
 ocorrer, especialmente pela inelasticidade de oferta em alguns \gls{MI} e pela 
 inércia nos preços.
 
@@ -1796,28 +1902,10 @@ Desta maneira, pode ser conveniente a elaboração de modelos dinâmicos para o
 \gls{MI}, que modelem o comportamento dos preços devido à mudanças de conjuntura
 antes que o mercado volte a se equilibrar, o que pode demorar muitos anos, o que
 varia, é claro, de mercado para mercado. Segundo @regulation [p. 4], um ciclo de
-preços no mercado imobiliário pode durar décadas. Existe, dessa forma uma
+preços no \gls{MI} pode durar décadas. Existe, dessa forma uma
 propensão à formação de bolhas especulativas, atribuídas a diversos motivos,
 como "expectativas exuberantes" e problemas de informações de preços, que são
 difíceis devido às particularidades do \gls{MI} [@ADAMS2010, 3].
-
-
-## O Mercado Imobiliário e o setor bancário {#MI-e-o-setor-bancario}
-
-A participação dos produtos financeiros relacionados ao setor imobiliário
-constituem uma grande parte dos portfolios bancários. Justamente por isto,
-crises bancárias estão frequentemente associadas a superexposição do setor
-bancário no mercado imobiliário [@Case2000, 148]. Segundo Claessens *et al.*
-(2010) [*apud* @silver, 3], de 46 crises bancárias sistêmicas para quais há dados
-disponíveis, mais de dois terços foram precedidas por padrões de aumento-estouro
-de preços de imóveis.
-
-Não apenas pelo estouro de uma bolha especulativa pode haver quedas nos preços
-dos bens imóveis, mas também por conta de uma inversão dos fundamentos
-econômicos que sustentavam os preços [@Case2000, 129], como aliás parece ser o
-caso no momento, devido a um fator exógeno, a saber, a pandemia do corona vírus.
-
-(**AUMENTAR**)
 
 ### O efeito da política de limitação do valor de aluguéis
 
@@ -1869,74 +1957,17 @@ Pode-se prever que, apenas com esta política de limitação de aluguéis, o mun
 estará fadado a dividir os cidadãos em proprietários e locatários, uma vez que o 
 preço do aluguel estará controlado, mas o valor dos imóveis tende a disparar.
 
-## Problemas gerados pelo alto valor dos imóveis
-
-Além dos problemas relacionados ao setor bancário discutidos na seção
-\@ref(MI-e-o-setor-bancario), existe um problema, normalmente desconsiderado
-pela maioria, que o altos preços de imóveis e/ou aluguéis previnem que os
-trabalhadores se mudem para cidades com maior produtividade marginal do
-trabalho. Ou seja, algumas pessoas tendem a se manter em ocupações de baixa
-produtividade em cidades pequenas, no interior, ao invés de se mudarem para
-grandes cidades onde certamente teriam ocupações de maior produtividade, como
-numa fábrica, por exemplo, pois o custo adicional de moradia que elas teriam não
-seria compensado pelo maior salário que receberiam, devido à maior produtividade
-da sua ocupação. Se fosse possível a redução dos custos de moradia em regiões de
-maior produtividade da mão de obra, isto resultaria num maior Produto Interno
-Bruto [@Case2000, 149; @economist-housing-2020].
-
-\begin{citacao}
-A habitação também é um grande motivo pelo qual muitas pessoas no mundo rico
-sentem que o economia não funciona para eles. Enquanto os \emph{baby boomers}
-tendem a possuir casas grandes e caras, os jovens precisam cada vez mais alugar
-um lugar apertado com seus amigos, fomentando o ressentimento dos jovens
-\emph{millenials} em relação aos idosos. O economista Thomas Piketty afirmou que
-nas últimas décadas o retorno ao capital excedeu o que é pago ao trabalho na
-forma de salários, aumentando a desigualdade. Mas outros criticaram os achados
-de Piketty, apontando que o que realmente explica o aumento da participação no
-capital está nos retornos crescentes sobre a habitação.
-\cite{economist-housing-2020}
-\end{citacao}
-
-Mas o principal problema advindo de uma grande alta no valor dos imóveis é o
-problema da reversão das expectativas: uma vez que as expectativas se revertem,
-seja por um aumento da taxa de juros, seja pelo estouro de uma bolha de crédito,
-como ocorreu em 2008, tendem a causar transtornos tanto para as pessoas físicas,
-que podem perder seus imóveis, quanto para as instituições financeiras expostas
-ao risco do mercado imobiliário, seja para os governos que são instados a 
-socorrer as empresas e as pessoas em dificuldades.
-
-Segundo o conceituado semanário econômico *The Economist*, entre 1960 e 2000 um
-quarto das recessões no mundo rico estavam associadas com fortes declínios de
-preços de moradia. Ainda segundo a *The Economist*, recessões associadas com
-restrições de créditos e estouros de preços de moradia foram mais profundas e
-mais duradouras do que as outras recessões.[@economist-housing-2020].
-
-Segundo @fmiera, episódios com padrões de *boom* seguidos de estouros (de
-bolhas), ou *boom-bust patterns*, precederam mais de dois terços das 50 mais
-recentes crises bancárias sistêmicas.
-
-Uma reversão de expectativas pode ocorrer devido a um fator exógeno. Por exemplo,
-no momento em que se escreve esta dissertação, o mundo se encontra em meio a
-uma pandemia de proporções globais e ainda sem qualquer perspectiva que seja
-encontrada uma cura ou uma vacina contra o Corona vírus.
-
-Estimativas recentes dão conta de que os níveis de desemprego podem aumentar 
-substancialmente em todo o mundo, o que pode gerar uma perspectiva de que a 
-demanda por aluguéis diminua muito, puxada pela diminuição da renda da 
-população devido ao desemprego, *i.e.*, uma diminução no numerador da equação
-\@ref(eq:perpetua).
-
 Por outro lado, a brusca queda das taxas de juros longas, *i.e*, uma diminuição
 no denominador da equação \@ref(eq:perpetua) deve mais que compensar a queda no 
 numerador.
 
 Seja, por exemplo um imóvel em que, antes da crise, se imaginava que produziria
 uma série de pagamentos de aluguéis de R$2.000,00 mensais. A uma taxa de juros
-de longo prazo de 2% a.a., o seu valor justo, segundo a equação 
-\@ref(eq:perpetua) seria de R$1.200.000,00. Imaginando que, com a crise do COVID
-haja uma redução nas expectativas de receitas com o imóvel, passando para uma 
-prestação mensal de R$1.000,00. Com a queda da taxa dos títulos para 1% a.a.,
-o preço do imóvel permaneceria constante.
+de longo prazo de 2% a.a., o seu valor justo, segundo a equação
+\@ref(eq:perpetua) seria de R$1.200.000,00. Imaginando que, com a crise do
+COVID-19 haja uma redução nas expectativas de receitas com o imóvel, passando
+para uma prestação mensal de R$1.000,00. Com a queda da taxa dos títulos para 1%
+a.a., o preço do imóvel permaneceria constante.
 
 Uma vez alternadas as expectativas, no entanto, ou seja, uma vez que se resolva
 a crise sanitária da COVID-19, as taxas de juros podem subir repentinamente, 
@@ -1946,25 +1977,7 @@ poderia vir a desencadear uma crise imobiliária similar ou ainda pior do que a
 da década passada, haja vista que na atualidade, as ferramentas tradicionais de
 política monetária já foram exauridas, além das ferramentas não-tradicionais.
 
-## Mercado imobiliário e populismo
-
-Segundo a *The Economist*, o mercado imobiliário e o populismo estão intimamente
-ligados: novas pesquisas mostraram que pessoas que habitam locais onde o mercado
-imobiliário está estagnado tem se aproximado mais de partidos e ideiais da 
-extrema-direita populista na Inglaterra e na França [@economist-housing-2020].
-
-Ainda de acordo com a *The Economist*, felizmente os governos estão começando a 
-perceber o estrago causado pelos erros da política habitacional desde o fim da
-segunda guerra mundial. Para @economist-housing-2020:
-
-\begin{citacao}
-sistemas de planejamento flexíveis, tributação e regulamentação financeira
-apropriadas podem transformar a habitação em força para estabilidade social e
-econômica. O sistema de habitação pública de Cingapura ajuda a melhorar inclusão
-social; financiamento imobiliário na Alemanha ajudou o país a evitar a pior da
-crise de 2008-10; O sistema de planejamento da Suíça ajuda bastante a explicar
-porque o populismo até agora não chegou até lá. Governos em todo o mundo
-precisam agir de forma decisiva e sem demora. Nada menos que a estabilidade 
-econômica e política do mundo está em jogo.
-\cite{economist-housing-2020}
-\end{citacao}
+```{=latex}
+\printbibliography[heading=subbibintoc]
+\end{refsection}
+```

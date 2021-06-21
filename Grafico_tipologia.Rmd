@@ -1,0 +1,22 @@
+---
+title: "Tipologia"
+author: "Droubi"
+date: "16/04/2021"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(ggplot2)
+```
+
+## Gráfico de tipologia
+
+Exemplo
+
+```{r cars}
+ggplot(diamonds, mapping = aes(x = clarity)) + 
+  geom_bar(aes(fill = cut)) + 
+  labs(x = NULL, y = NULL) + 
+  guides(x = "none", y = "none")
+```

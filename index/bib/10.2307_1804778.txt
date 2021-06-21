@@ -1,0 +1,14 @@
+@article{10.2307/1804778,
+ ISSN = {00028282},
+ URL = {http://www.jstor.org/stable/1804778},
+ abstract = {The market for single-family homes does not appear to be efficient. Year-to-year changes in prices tend to be followed by changes in the same direction in the subsequent year. Moreover, information about real interest rates does not appear to be incorporated in prices. There is thus a profitable trading rule for persons who are free to time the purchase of their homes. Still, overall, individual housing price changes are not very forecastable.},
+ author = {Karl E. Case and Robert J. Shiller},
+ journal = {The American Economic Review},
+ number = {1},
+ pages = {125--137},
+ publisher = {American Economic Association},
+ title = {The Efficiency of the Market for Single-Family Homes},
+ volume = {79},
+ year = {1989}
+}
+

@@ -15,22 +15,22 @@ knitr::write_bib(c("ggplot2", "stargazer"), "bib/pkgs.bib", width = 78)
 
 \postextual
 
-\begingroup
+<!-- \begingroup -->
 
-  \printbibliography[title=REFERÊNCIAS]
-    
-\endgroup
+<!--   \printbibliography[title=REFERÊNCIAS] -->
 
-```{r}
-if (knitr::is_html_output()){
-  '# Referências {-}'
-}
-```
+<!-- \endgroup -->
+
+<!-- ```{r} -->
+<!-- if (knitr::is_html_output()){ -->
+<!--   '# Referências {-}' -->
+<!-- } -->
+<!-- ``` -->
 
 <!--
 This manually sets the header for this unnumbered chapter.
 -->
-\markboth{Referências}{REFERÊNCIAS}
+<!-- \markboth{Referências}{REFERÊNCIAS} -->
 
 
 <div id="refs"></div>

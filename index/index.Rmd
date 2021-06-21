@@ -57,7 +57,7 @@ epigrafe: |
   | "Eppur si muove!"  
   | (Galileu Galilei, 1633)
 # Specify the location of the bibliography below
-bibliography: [bib/cap1.bib, bib/cap3.bib, bib/cap4.bib, bib/cap5.bib, bib/cap6.bib, bib/cap7.bib, bib/pkgs.bib]
+bibliography: [bib/cap1.bib, bib/cap3.bib, bib/cap4.bib, bib/cap5.bib, bib/cap6.bib, bib/cap7.bib, bib/cap8.bib, bib/pkgs.bib]
 # Download your specific csl file and refer to it in the line below.
 link-citations: true
 #biblio-style: abnt
@@ -112,6 +112,7 @@ library(ufscdown)
 library(leaflet)
 library(sf)
 library(kableExtra)
+library(pander)
 library(tidyr)
 library(dplyr)
 library(ggplot2)
@@ -161,19 +162,24 @@ on chapters.
 
 # Introdução {#intro}
 
-O território é a base das atividades econômicas e sociais do país. Um eficiente
-planejamento territorial passa por desenvolver políticas públicas que garantam
-um desenvolvimento equânime de todo o território.De acordo com @realestate, a
-terra é a base das atividades econômicas e sociais de um povo, essencial para a
-vida e a sociedade, sendo assunto de diversas disciplinas, como o Direito,
-Economia, Finanças, Sociologia e a Geografia.
+```{=latex}
+\begin{refsection}
+```
+
+O território\index{território} é a base das atividades econômicas e sociais do
+país. Um eficiente planejamento territorial passa por desenvolver políticas
+públicas que garantam um desenvolvimento equânime de todo o território. De
+acordo com @realestate, a terra\index{terra} é a base das atividades econômicas
+e sociais de um povo, essencial para a vida e a sociedade, sendo assunto de
+diversas disciplinas, como o Direito, Economia, Finanças, Sociologia e a
+Geografia.
 
 No Direito, a terra é abordada no direito de propriedade e uso social da terra.
 Na Economia, a terra é considerada um dos fatores de produção, ao lado do
-trabalho e do capital. Nas Finanças, a terra é considerada como um bem
-suscetível de ser dado em garantia, em troca de capital financeiro, visando
-propiciar o desenvolvimento. Na perspectiva da Sociologia, a terra é um bem
-comum de todos, que deve ser utilizado com fins de obtenção de uma sociedade
+trabalho e do capital\index{capital}. Nas Finanças, a terra é considerada como
+um bem suscetível de ser dado em garantia, em troca de capital financeiro,
+visando propiciar o desenvolvimento. Na perspectiva da Sociologia, a terra é um
+bem comum de todos, que deve ser utilizado com fins de obtenção de uma sociedade
 melhor. Já a Geografia foca em descrever os elementos físicos da terra e as
 atividades humanas das pessoas que as habitam.A Engenharia de Avaliações se
 preocupa em reconhecer os atributos que atuam na formação de valor dos bens
@@ -182,15 +188,16 @@ o mercado no qual estes bens estão inseridos. É o mercado que reflete a atitud
 dos atores econômicos em resposta às forças sociais e econômicas e às restrições
 da lei e dos ônus legais [@realestate, 10].
 
-O mundo vive na atualidade uma situação de crise habitacional sem precedentes,
-que se agrava desde a Grande Recessão de 2007-2009. Os reflexos da crise
-habitacional e financeira global que foi deflagrada em 2007 pela crise das
-hipotecas *subprime*[^1] nos EUA e se espalhou pelo mundo ainda podem ser
-sentidos, especialmente em seu contexto habitacional. Se o mundo foi capaz de
-equacionar o lado financeiro do problema, salvando as instituições financeiras
-da bancarrota, o mesmo não aconteceu no setor habitacional. Pelo contrário, 
-neste setor a crise foi duramente agravada, seja nos países desenvolvidos, onde 
-a crise teve origem, seja nos países em desenvolvimento.
+O mundo vive na atualidade uma situação de crise\index{habitacional!crise}
+habitacional sem precedentes, que se agrava desde a Grande
+Recessão de 2007-2009. Os reflexos da crise habitacional e financeira global que
+foi deflagrada em 2007 pela crise das hipotecas *subprime*[^1] nos EUA e se
+espalhou pelo mundo ainda podem ser sentidos, especialmente em seu contexto
+habitacional. Se o mundo foi capaz de equacionar o lado financeiro do problema,
+salvando as instituições financeiras da bancarrota, o mesmo não aconteceu no
+setor habitacional. Pelo contrário, neste setor a crise foi duramente agravada,
+seja nos países desenvolvidos, onde a crise teve origem, seja nos países em
+desenvolvimento.
 
 [^1]: O termo *subprime* refere-se a um grupo de mutuários com capacidade de 
 pagamento duvidosa. Na prática, no entanto, é comum a utilização do termo de 
@@ -219,14 +226,14 @@ torno de três milhões de unidades, ou seja, existem praticamente seis vezes ma
 moradias disponíveis para locação do que pessoas desabrigadas. Saliente-se que o
 número de residências desocupadas nos EUA, segundo o último censo de 2019, é
 ainda maior: em torno de 16,5 milhões de unidades habitacionais encontram-se
-desocupadas. Desta maneira, pode-se argumentar que a crise habitacional na 
-maioria dos países desenvolvidos, senão em todos, está mais relacionada à 
-falta de renda das pessoas para o acesso à moradia do que à falta de moradias.
-O número de unidades habitacionais disponíveis para locação é tão superior ao
-número de pessoas desabrigadas que os especialistas defendem que o déficit 
-habitacional nestes países seja resolvido com a simples emissão de *vouchers*
-para as pessoas que não podem arcar com os atuais custos de moradia 
-[@olsen_opinion_2016] .
+desocupadas. Desta maneira, pode-se argumentar que a crise habitacional na
+maioria dos países desenvolvidos, senão em todos, está mais relacionada à falta
+de renda das pessoas para o acesso à moradia do que à falta de moradias. O
+número de unidades habitacionais disponíveis para locação é tão superior ao
+número de pessoas desabrigadas que os especialistas defendem que o
+déficit\index{habitacional!déficit} habitacional nestes países seja resolvido
+com a simples emissão de *vouchers* para as pessoas que não podem arcar com os
+atuais custos de moradia [@olsen_opinion_2016] .
 
 No Brasil, assim como em outros países em desenvolvimento, este não é o caso.
 Apesar de alguns relatos de que existem no Brasil em torno de cinco ou seis
@@ -240,6 +247,11 @@ possível dizer que a solução para o déficit habitacional dificilmente deixar
 de passar pelo estímulo à construção de novas unidades, seja para a absorver as
 pessoas desabrigadas, seja para melhorar as condições de moradia de boa parte da
 população abrigada.
+
+Segundo @demanda [p. 7], de 2011 até 2040 o Brasil deverá construir
+aproximadamente trinta milhões de unidades para atender à demanda de domicílios,
+uma média de praticamente um milhão de unidades por ano, apesar na queda
+esperada na demanda por conta das projeções demográficas.
 
 Segundo @ritchie_urbanization_2018, em 1990 em torno de 36,7% da população
 urbana brasileira vivia em favelas. É verdade que a proporção da população
