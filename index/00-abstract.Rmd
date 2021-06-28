@@ -1,21 +1,21 @@
-Este trabalho tem como objetivo efetuar um estudo do histórico e de tendências
-dos mercados imobiliários brasileiro e mundial e seus efeitos não apenas no
-setor habitacional, mas também na Economia como um todo. Esta pesquisa tenta
-compreender especialmente os eventos recentes do mercado imobiliário, como a
-formação e o estouro de bolhas imobiliárias e os efeitos destes eventos sobre a
+Este trabalho tem como objetivo efetuar um estudo do histÃ³rico e de tendÃªncias
+dos mercados imobiliÃ¡rios brasileiro e mundial e seus efeitos nÃ£o apenas no
+setor habitacional, mas tambÃ©m na Economia como um todo. Esta pesquisa tenta
+compreender especialmente os eventos recentes do mercado imobiliÃ¡rio, como a
+formaÃ§Ã£o e o estouro de bolhas imobiliÃ¡rias e os efeitos destes eventos sobre a
 Economia com foco, claro, no setor habitacional. Preliminarmente o texto mostra
-uma análise histórica do fenômeno da urbanização, considerando a experiência de
-vários países. Então, é realizada uma análise dos mercados imobiliários e a
-interação destes com as variáveis macroeconômicas através da análise de séries
-históricas, buscando contextualizar os eventos de formação e estouro de bolhas
-imobiliárias e seus efeitos. Finalmente, o trabalho faz uma análise dos
-principais problemas decorrentes da financeirização do setor habitacional
-ocorrida nas últimas décadas, inicialmente através da análise das evidências
-anedóticas, advindas dos países desenvolvidos, da grave crise habitacional por
-que passam, depois através da análise de séries estatísticas históricas
-relacionadas ao setor habitacional nestes países. Por fim, este trabalho propõe
-a implementação de uma política habitacional coordenada, através da utilização
-dos diversos instrumentos de política urbana previstos no Estatuto da cidade, de
-maneira a enfrentar o problema da moradia precária no Brasil, de maneira a
-melhorar as condições de saneamento, saúde pública e bem-estar do povo
+uma anÃ¡lise histÃ³rica do fenÃ´meno da urbanizaÃ§Ã£o, considerando a experiÃªncia de
+vÃ¡rios paÃ­ses. EntÃ£o, Ã© realizada uma anÃ¡lise dos mercados imobiliÃ¡rios e a
+interaÃ§Ã£o destes com as variÃ¡veis macroeconÃ´micas atravÃ©s da anÃ¡lise de sÃ©ries
+histÃ³ricas, buscando contextualizar os eventos de formaÃ§Ã£o e estouro de bolhas
+imobiliÃ¡rias e seus efeitos. Finalmente, o trabalho faz uma anÃ¡lise dos
+principais problemas decorrentes da financeirizaÃ§Ã£o do setor habitacional
+ocorrida nas Ãºltimas dÃ©cadas, inicialmente atravÃ©s da anÃ¡lise das evidÃªncias
+anedÃ³ticas, advindas dos paÃ­ses desenvolvidos, da grave crise habitacional por
+que passam, depois atravÃ©s da anÃ¡lise de sÃ©ries estatÃ­sticas histÃ³ricas
+relacionadas ao setor habitacional nestes paÃ­ses. Por fim, este trabalho propÃµe
+a implementaÃ§Ã£o de uma polÃ­tica habitacional coordenada, atravÃ©s da utilizaÃ§Ã£o
+dos diversos instrumentos de polÃ­tica urbana previstos no Estatuto da cidade, de
+maneira a enfrentar o problema da moradia precÃ¡ria no Brasil, de maneira a
+melhorar as condiÃ§Ãµes de saneamento, saÃºde pÃºblica e bem-estar do povo
 brasileiro.

@@ -39,18 +39,26 @@ digraph boxes_and_circles{
   node [shape = box
         fontname = Helvetica
         penwidth = 2.0]
-  Introdução; 'Aspectos Históricos'; 'O Mercado Imobiliário\ne a Economia'; 'Índices de preços e\nindicadores de performance do MI'; 'Ciclos, bolhas e\ncrise de 2008'; 'Políticas Hab.'; Conclusão
+  Introdução; 'Aspectos Históricos'; 'O Mercado Imobiliário\ne a Economia'; 
+  'Índices de preços e\nindicadores de performance do MI'; 'Economia Urbana';
+  'Ciclos, bolhas e\ncrise de 2008'; 'Políticas Hab.'; Conclusão
   
   # add edge statements
   
-  Introdução -> 'Aspectos Históricos' [headlabel = 'Origens dos\nproblemas hab.:\nQuestão Agrária'
+  Introdução -> 'Aspectos Históricos' [headlabel = 'Origens dos problemas\n hab. crônicos:\nQuestão Agrária'
                                        labeldistance=7 
                                        labelangle=45]
-  Introdução -> 'O Mercado Imobiliário\ne a Economia' [label = 'Funcionamento Atual']
-  'O Mercado Imobiliário\ne a Economia' -> 'Ciclos, bolhas e\ncrise de 2008' [label = 'Fatores da\nCrise Financeira?']
+  Introdução -> 'O Mercado Imobiliário\ne a Economia' [label = 'Origens dos problemas\n hab. atuais']
+  'O Mercado Imobiliário\ne a Economia' -> 'Ciclos, bolhas e\ncrise de 2008' [label = 'Como evitar\nnovas crises?\n(Demanda)']
   'O Mercado Imobiliário\ne a Economia' -> 'Índices de preços e\nindicadores de performance do MI' [headlabel = 'Como prever\nnovas crises?'
                                                                 labeldistance=5
                                                                 labelangle=45]
+  'O Mercado Imobiliário\ne a Economia' -> 'Economia Urbana' [headlabel = 'Como evitar\nnovas crises?\n(Oferta)'
+                                                                labeldistance=5
+                                                                labelangle=0]
+                                                                
+  'Economia Urbana' -> 'Políticas Hab.'
+  
   'O Mercado Imobiliário\ne a Economia' -> 'Políticas Hab.' [headlabel = 'Novas crises\nhab.'
                                                                 labeldistance=6
                                                                 labelangle=-25]
@@ -59,9 +67,9 @@ digraph boxes_and_circles{
                                                 labelangle=25]
   'Índices de preços e\nindicadores de performance do MI' -> 'Políticas Hab.'
   'Ciclos, bolhas e\ncrise de 2008' -> 'Políticas Hab.'
-  'Políticas Hab.' -> Conclusão [headlabel = 'O que fazer?'
-                                      labeldistance=4
-                                      labelangle=65]
+  'Políticas Hab.' -> Conclusão [headlabel = 'Como superar?'
+                                      labeldistance=5.5
+                                      labelangle=-65]
 }
 ")
 ```

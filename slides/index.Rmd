@@ -1,0 +1,518 @@
+---
+title: "O problema da habitação no Brasil"
+subtitle: "Histórico, Situação Atual e Perspectivas"
+author: "Luiz Fernando Palin Droubi"
+institute: "Universidade Federal de Santa Catarina"
+date: "`r format(Sys.Date(), '%d de %B de %Y')`"
+output:
+  xaringan::moon_reader:
+    chakra: libs/remark-latest.min.js
+    css: [default, metropolis, metropolis-fonts]
+    lib_dir: libs
+    nature:
+      beforeInit: "macros.js"
+      ratio: '16:9'
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(cache=FALSE, echo = FALSE, warning = FALSE, 
+                      message = FALSE, prompt = T,
+                      fig.align = "center", fig.height = 4.5,
+                      fig.path = "images/", dev = "svg")
+options(htmltools.dir.version = FALSE)
+```
+
+```{r, load_refs, include=FALSE, cache=FALSE}
+library(RefManageR)
+BibOptions(check.entries = FALSE,
+           bib.style = "authoryear",
+           cite.style = "authoryear",
+           style = "markdown",
+           hyperlink = TRUE,
+           dashed = FALSE)
+bib1 <- ReadBib("../index/bib/cap1.bib", check = FALSE)
+#bib2 <- ReadBib("../index/bib/cap2.bib", check = FALSE)
+bib3 <- ReadBib("../index/bib/cap3.bib", check = FALSE)
+bib4 <- ReadBib("../index/bib/cap4.bib", check = FALSE)
+bib5 <- ReadBib("../index/bib/cap5.bib", check = FALSE)
+bib6 <- ReadBib("../index/bib/cap6.bib", check = FALSE)
+bib7 <- ReadBib("../index/bib/cap7.bib", check = FALSE)
+bib8 <- ReadBib("../index/bib/cap8.bib", check = FALSE)
+```
+
+class: inverse, center, middle
+
+# Introdução
+
+---
+# Introdução
+
+#### O Mercado Imobiliário
+
+* O Mercado Imobiliário (MI) é um mercado imperfeito. 
+  - Bens não-homogêneos
+  - Compradores e vendedores nem sempre em número suficiente para dar liquidez
+  ao mercado
+  - Ausência de mobilidade dos fatores e produtos
+  - Assimetria de informação
+
+--
+  
+* Devido a essas imperfeições, a intervenção governamental sobre o MI é
+geralmente necessária
+
+
+--
+
+* Essas intervenções podem, se bem planejadas, eventualmente, ser benéficas. Por 
+outro lado, se mal planejadas, podem não atingir os objetivos desejados, tendo potencial, inclusive, para agravar os problemas preexistentes.
+
+---
+# Introdução
+
+#### Mundo vive atualmente uma crise habitacional
+
+* Nos EUA, desde a crise de 2008 ao menos.
+* Nos países desenvolvidos, também desde a crise de 2008, ao menos.
+
+--
+
+* Nestes países, a crise habitacional ocorre mesmo na presença de unidades 
+habitacionais (u.h.) em excesso.
+
+--
+
+  - E.g., nos EUA existe 600 mil pessoas sem moradia
+  - Porém existem em torno de 3 milhões de (u.h.) desocupadas e disponíveis para
+  locação!
+  - Se acrescenta-se os imóveis indisponíveis para locação, existem 16,5 milhões 
+  de unidades vazias.
+  - Os EUA não necessitam de um programa de construção de moradias `r AutoCite(bib1, "olsen_opinion_2016")`.
+
+--
+
+* A crise habitacional dos paises desenvolvidos, portanto, é mais um problema 
+de distribuição de renda do que um problema habitacional de fato. 
+
+--
+
+* A crise habitacional provoca perda de produtividade no mercado de trabalho
+
+--
+
+  - `r Citet(bib5, "hsieh")` estimam que a melhora na oferta de imóveis nas 
+  cidades de produtividade mais alta teriam o potencial de aumentar o PIB dos 
+  EUA em até 9,5%!
+
+---
+# Introdução
+
+#### Nos países em desenvolvimento, tem-se uma crise habitacional crônica
+
+* A origem, portanto, é diferente.
+* Não se pode esperar que as soluções eventualmente adotas nos países 
+desenvolvidos se apliquem ao Brasil
+* Apesar da má distribuição de renda também presente, ainda há o agravante da
+falta de u.h., apesar de haver unidades vazias.
+  - Estima-se em 6,9 milhões de famílias o déficit habitacional no Brasil
+  - Segundo o PlanHab, serão necessárias 30 milhões de novas u.h. até 2040 para
+  atender à demanda por domicílios `r AutoCite(bib1, "demanda", before = "ver ")`.
+  
+---
+background-image: url(https://raw.githubusercontent.com/lfpdroubi/dissertacao/master/index/images/urban-pop-in-out-of-slums.png)
+background-size: contain
+
+# Introdução
+
+---
+# Introdução
+
+#### Que tipo de política habitacional e/ou fundiária é necessária para o Brasil nos próximos 20 anos?
+
+---
+class: inverse, center, middle
+
+# Método
+
+---
+# Método
+
+.pull-left[
+
+```{r fluxo, fig.cap="Fluxograma de pesquisa", fig.height=6, fig.width=9}
+library(DiagrammeR)
+grViz("
+digraph boxes_and_circles{
+  
+  rankdir = TD
+  
+  # add node statements
+  node [shape = box
+        fontname = Helvetica
+        penwidth = 2.0]
+  Introdução; 'Aspectos Históricos'; 'O Mercado Imobiliário\ne a Economia'; 
+  'Índices de preços e\nindicadores de performance do MI'; 'Economia Urbana';
+  'Ciclos, bolhas e\ncrise de 2008'; 'Políticas Hab.'; Conclusão
+  
+  # add edge statements
+  
+  Introdução -> 'Aspectos Históricos' [headlabel = 'Origens dos problemas\n hab. crônicos:\nQuestão Agrária'
+                                       labeldistance=7 
+                                       labelangle=45]
+  Introdução -> 'O Mercado Imobiliário\ne a Economia' [label = 'Origens dos problemas\n hab. atuais']
+  'O Mercado Imobiliário\ne a Economia' -> 'Ciclos, bolhas e\ncrise de 2008' [label = 'Como evitar\nnovas crises?\n(Demanda)']
+  'O Mercado Imobiliário\ne a Economia' -> 'Índices de preços e\nindicadores de performance do MI' [headlabel = 'Como prever\nnovas crises?'
+                                                                labeldistance=5
+                                                                labelangle=45]
+  'O Mercado Imobiliário\ne a Economia' -> 'Economia Urbana' [headlabel = 'Como evitar\nnovas crises?\n(Oferta)'
+                                                                labeldistance=5
+                                                                labelangle=0]
+                                                                
+  'Economia Urbana' -> 'Políticas Hab.'
+  
+  'O Mercado Imobiliário\ne a Economia' -> 'Políticas Hab.' [headlabel = 'Novas crises\nhab.'
+                                                                labeldistance=6
+                                                                labelangle=-25]
+  'Aspectos Históricos' -> 'Políticas Hab.' [headlabel = 'Crise hab. \ncrônica'
+                                                labeldistance=4
+                                                labelangle=25]
+  'Índices de preços e\nindicadores de performance do MI' -> 'Políticas Hab.'
+  'Ciclos, bolhas e\ncrise de 2008' -> 'Políticas Hab.'
+  'Políticas Hab.' -> Conclusão [headlabel = 'Como superar?'
+                                      labeldistance=5.5
+                                      labelangle=-65]
+}
+")
+```
+
+]
+
+.pull-right[
+
+1. Classificar os países de acordo com o seu modelo de desenvolvimento histórico
+2. Investigar como os países que tiverem desenvolvimento similar ao do Brasil
+trabalharam o seu problema habitacional.
+3. Investigar se, na atualidade, o Brasil pode aplicar as mesmas políticas
+aplicadas nos países de desenvolvimento similar ao brasileiro (via prussiana)
+]
+
+---
+class: inverse, center, middle
+
+# Aspectos Históricos
+
+---
+# Aspectos Históricos
+
+1. Desenvolvimento do Capitalismo no Brasil através da *via prussiana*, *i.e.*,
+na ausência de prévia reforma agrária `r AutoCite(bib3, "rangel1988")`.
+
+--
+
+2. *Enclosure*, ou cercamento, cria um grande fluxo migratório do campo para as 
+cidades (êxodo rural).
+
+--
+
+3. O exército industrial de reserva exacerbado nas grandes cidades leva a uma
+baixa renda do trabalho
+
+--
+
+4. As prefeituras municipais não são capazes de aumentar a oferta de lotes
+urbanos na velocidade necessária para atender a demanda. O preço da terra se
+eleva.
+
+--
+
+5. Com baixa renda, sem acesso a financiamentos, essas pessoas tendem a se 
+aglomerar em áreas públicas, terrenos abandonados, muitas vezes em áreas de 
+risco, tais como encostas, terras sujeitas a alagamento, etc.
+
+--
+
+6. Em momentos de agravamento da crise agrária, a crise urbana também se agrava,
+por conta do aumento do fluxo migratório.
+
+--
+
+7. As crises econômicas aumentam a demanda por investimentos do tipo 
+especulativo, elevando o preço da terra.
+
+---
+# Aspectos Históricos
+
+8. Rangel previa que, saindo o Brasil da era de juros reais negativos, o que se
+daria abrindo caminho para os investimentos da iniciativa privada nos serviços
+de utilidade pública, o capital se deslocaria para estes investimentos 
+produtivos e a demanda especulativa cederia, dando lugar a uma reforma agrária
+via mercado;
+
+--
+
+9. Uma série de coisas impediu que os preços das terras cedessem:
+
+  - Aumento da demanda pelo uso da terra (*commodities agrícolas*, aumento da
+  urbanização)
+  - Entrada de capital estrangeiro
+  
+--
+
+10. Recentemente o mundo entrou em nova era de juros reais negativos
+
+--
+
+11. Isto significa que não há áreas de investimento abertas para o capital financeiro, que acaba indo desaguar no mercado imobiliário
+
+--
+
+12. A tendência é de aumento da demanda especulativa
+
+---
+class: inverse, center, middle
+
+# O Mercado Imobiliário e a Economia
+
+---
+# O Mercado Imobiliário e a Economia
+
+* Mercado Imobiliário (MI) tem forte interação com a Economia  `r AutoCite(bib4, "LEUNG")`.
+
+--
+
+  + Link entre atividade econômica e o setor de construção `r AutoCite(bib4,
+  "Case2000", after = "p. 146")`.
+  + Propensão ao consumo à partir da propriedade (garantia) `r AutoCite(bib4,
+  "Case2000", after = "p. 146-147")`
+  + Forte interação com o setor bancário `r AutoCite(bib4,
+  "Case2000", after = "p. 148-149")`
+  + Bancos tem portfolio massivo em ativos imobiliários `r AutoCite(bib4,
+  "Case2000", after = "p. 148")`
+  + Crise bancárias estão sempre ligadas a superexposição ao setor imobiliário 
+(stylized fact) `r AutoCite(bib4, "Case2000", after = "p. 148")`
+  + Papel do **MI** na alocação dos trabalhadores em regiões de maior produtividade `r AutoCite(bib4, "Case2000", after = "p. 149")`
+  
+* Propriedade residencial apenas corresponde a US$200 tri `r AutoCite(bib4,
+  "economist")`
+  + 3x o tamanho do mercado de ações `r AutoCite(bib4,
+  "economist")`
+
+---
+# O Mercado Imobiliário e a Economia
+
+### O Mercado Imobiliário
+
+.pull-left[
+
+```{r MIResidencial, fig.cap = "Diagrama esquemático do funcionamento do Mercado Imobiliário Residencial.", fig.width=9, fig.height=4.5}
+grViz("
+digraph nicegraph {
+  
+  // title
+  label     = 'O Mercado Imobiliário Residencial'
+  labelloc  =  top // t: Place the graph's title on top.
+  fontsize  = 30 // Make title stand out by giving a large font size
+  fontcolor = blue
+  # graph, node, and edge definitions
+  graph [compound = true, nodesep = .5, ranksep = .25,
+         color = crimson, rankdir = 'TD']
+
+  node [fontname = Helvetica, fontcolor = darkslategray,
+        shape = rectangle, fixedsize = true, width = 2.5,
+        color = darkslategray]
+
+  edge [color = none, arrowhead = none, arrowtail = none]
+
+  # subgraph for R information
+  subgraph cluster0 {
+    label = 'Mercado de Insumos';
+    labelloc  =  top // t: Place the graph's title on top.
+    fontsize  = 15 // Make title stand out by giving a large font size
+    fontcolor = red
+    rank = 'same'
+    node [color=none weight=1000]
+    'Terra' -> 'Materiais' -> 'Infraestrutura' -> 'Financiamento' -> 'Trabalhadores'
+  }
+
+  # subgraph for RStudio information
+  subgraph cluster1 {
+    label = 'Processo de Produção';
+    labelloc  =  top // t: Place the graph's title on top.
+    fontsize  = 15 // Make title stand out by giving a large font size
+    fontcolor = red
+    node [color=none weight=1000]
+    'Construtores' -> 'Incorporadores' -> 'Proprietários'
+  }
+  
+  # subgraph for RStudio information
+  subgraph cluster2 {
+    label = 'Mercado de Residências';
+    labelloc  =  top // t: Place the graph's title on top.
+    fontsize  = 15 // Make title stand out by giving a large font size
+    fontcolor = red
+    node [color=none weight=1000]
+    'Compradores' -> 'Investidores' -> 'Locadores' -> 'Serviços Residenciais'
+  }
+  // Edges that directly connect one cluster to another
+  //'Terra' -> 'Construtores' [ltail=cluster0 lhead=cluster1, label = 'Preços'];
+  //'Materiais' -> 'Incorporadores' [ltail=cluster0 lhead=cluster1, label = 'Preços'];
+  //'Trabalhadores' -> 'Proprietários' [ltail=cluster0 lhead=cluster1, label = 'Preços'];
+  //'Construtores' -> 'Compradores' [ltail=cluster1 lhead=cluster2, label = 'Preços'];
+  //'Proprietários' -> 'Serviços Residenciais' [ltail=cluster1 lhead=cluster2, label = 'Preços'];
+}
+")
+```
+
+]
+
+.pull-right[
+
+
+1. É comum em muitos países enfrentando uma crise habitacional que o governo
+lance programas para a construção de u.h.
+
+2. Estes programas, em geral, distorcem o mercado e acabam por agravar o
+problema.
+
+3. É mais eficiente atacar o mercado insumos (terra, capital, trabalho, 
+materiais de construção)
+
+
+]
+
+---
+background-image: url(https://raw.githubusercontent.com/lfpdroubi/dissertacao/master/index/images/macroInfluence-1.png)
+background-size: contain
+
+# O Mercado Imobiliário e a Economia
+
+---
+class: inverse, center, middle
+
+# Economia Urbana
+
+---
+background-image: url(https://raw.githubusercontent.com/lfpdroubi/dissertacao/master/index/images/densities.png)
+background-size: contain
+
+# Economia Urbana
+
+---
+# Economia Urbana
+
+1. Cidades são mercados de trabalho `r AutoCite(bib5, "bertaud")`!
+
+<!-- ![:scale 50%](https://raw.githubusercontent.com/lfpdroubi/dissertacao/master/index/images/basicModel-1.png) -->
+
+```{r  out.width = "50%"}
+knitr::include_graphics("https://raw.githubusercontent.com/lfpdroubi/dissertacao/master/index/images/basicModel-1.png")
+```
+
+
+---
+class: inverse, center, middle
+
+# Índices de Preços
+
+---
+# Índices de Preços
+
+* `r AutoCite(bib6, "rppi")`
+
+---
+class: inverse, center, middle
+
+# Ciclos e Bolhas Especulativas
+
+---
+# Ciclos e Bolhas Especulativas
+
+* `r AutoCite(bib7, "green")`
+---
+class: inverse, center, middle
+
+# Políticas para o Mercado Habitacional
+
+---
+# Políticas para o Mercado Habitacional
+
+* `r AutoCite(bib8, "fischel1989")`
+
+---
+class: inverse, center, middle
+
+# Conclusão
+
+---
+# Conclusão
+
+---
+# Referências
+
+### Seção 1
+
+```{r results = "asis", echo = FALSE}
+PrintBibliography(bib1, .opts = list(check.entries = FALSE, sorting = "ynt"))
+```
+
+---
+# Referências
+
+### Seção 3
+
+```{r results = "asis", echo = FALSE}
+PrintBibliography(bib3, .opts = list(check.entries = FALSE, sorting = "ynt"))
+```
+
+---
+# Referências
+
+### Seção 4
+
+```{r results = "asis", echo = FALSE}
+PrintBibliography(bib4, .opts = list(check.entries = FALSE, sorting = "ynt"))
+```
+
+---
+# Referências
+
+### Seção 5
+
+```{r results = "asis", echo = FALSE}
+PrintBibliography(bib5, .opts = list(check.entries = FALSE, sorting = "ynt"))
+```
+
+---
+# Referências
+
+### Seção 6
+
+```{r results = "asis", echo = FALSE}
+PrintBibliography(bib6, .opts = list(check.entries = FALSE, sorting = "ynt"))
+```
+
+---
+# Referências
+
+### Seção 7
+
+```{r results = "asis", echo = FALSE}
+PrintBibliography(bib7, .opts = list(check.entries = FALSE, sorting = "ynt"))
+```
+
+---
+# Referências
+
+### Seção 8
+
+```{r results = "asis", echo = FALSE}
+PrintBibliography(bib8, .opts = list(check.entries = FALSE, sorting = "ynt"))
+```
+
+---
+class: inverse, center, middle
+
+# OBRIGADO!

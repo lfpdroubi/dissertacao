@@ -1,9 +1,9 @@
 ---
 author: 'LUIZ FERNANDO PALIN DROUBI'
 local: Florianópolis
-date_year: '2020'
-date_month: 'Março'
-date_day: '31'
+date_year: '2021'
+date_month: 'Setembro'
+date_day: '9'
 institution: 'Universidade Federal de Santa Catarina'
 inst_short: 'UFSC'
 division: 'CTC - CENTRO TECNOLÓGICO'
@@ -22,6 +22,11 @@ examiner:
   degree: Dr.
   institution: Fédération Internationale des Géomètres
   inst_short: FIG
+- title: Prof.
+  name: Armen Mamigonian
+  degree: Dr.
+  institution: Universidade Federal de Santa Catarina
+  inst_short: UFSC
 department: |
   Programa de Pós-Graduação em Engenharia de Transportes e Gestão Territorial
 degree: 'Mestre em Engenharia de Transportes e Gestão Territorial'
