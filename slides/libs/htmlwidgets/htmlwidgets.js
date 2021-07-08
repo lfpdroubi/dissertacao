@@ -249,13 +249,13 @@
   function tryEval(code) {
     var result = null;
     try {
-      result = eval(code);
+      result = eval("(" + code + ")");
     } catch(error) {
       if (!error instanceof SyntaxError) {
         throw error;
       }
       try {
-        result = eval("(" + code + ")");
+        result = eval(code);
       } catch(e) {
         if (e instanceof SyntaxError) {
           throw error;
@@ -567,10 +567,6 @@
     }
   }
 
-  function shouldSaveStateExternally() {
-    return !!window.htmlWidgetsUseExternalStateSaving  || !!window.HTMLWidgets.stateChangedHook;
-  }
-
   // Render static widgets after the document finishes loading
   // Statically render all elements that are of this widget's class
   window.HTMLWidgets.staticRender = function() {
@@ -584,41 +580,11 @@
           return;
         el.className = el.className + " html-widget-static-bound";
 
-        var localStorageKey = 'htmlwidget.'+el.id+'.state'
-        var widgetStateChanged = function(state) {
-          if (shouldSaveStateExternally()) {
-            if (window.HTMLWidgets.stateChangedHook)
-              window.HTMLWidgets.stateChangedHook(state)
-          } else {
-            try {
-              if (window.localStorage) {
-                if (state)
-                  window.localStorage.setItem(localStorageKey, JSON.stringify(state))
-                else
-                  window.localStorage.removeItem(localStorageKey)
-              }
-            } catch (e) {
-            }
-          }
-        }
-        var initialState;
-        try {
-          initialState = !shouldSaveStateExternally() && window.localStorage ? JSON.parse(window.localStorage.getItem(localStorageKey)) : null;
-        } catch (e) {
-        }
-        if (!initialState) {
-          // No locally-stored state.  Use anything provided in a script tag as a default.
-          var initialStateData = document.querySelector("script[data-for='" + el.id + "'][type='application/htmlwidget-state']");
-          if (initialStateData)
-            initialState = JSON.parse(initialStateData.textContent || initialStateData.text);
-        }
-
         var initResult;
         if (binding.initialize) {
           initResult = binding.initialize(el,
             sizeObj ? sizeObj.getWidth() : el.offsetWidth,
-            sizeObj ? sizeObj.getHeight() : el.offsetHeight,
-            widgetStateChanged
+            sizeObj ? sizeObj.getHeight() : el.offsetHeight
           );
           elementData(el, "init_result", initResult);
         }
@@ -684,7 +650,7 @@
           for (var k = 0; data.evals && k < data.evals.length; k++) {
             window.HTMLWidgets.evaluateStringMember(data.x, data.evals[k]);
           }
-          binding.renderValue(el, data.x, initResult, initialState);
+          binding.renderValue(el, data.x, initResult);
           evalAndRun(data.jsHooks.render, initResult, [el, data.x]);
         }
       });
@@ -913,11 +879,11 @@
     var result = {
       name: defn.name,
       type: defn.type,
-      initialize: function(el, width, height, stateChanged) {
-        return defn.factory(el, width, height, stateChanged);
+      initialize: function(el, width, height) {
+        return defn.factory(el, width, height);
       },
-      renderValue: function(el, x, instance, state) {
-        return instance.renderValue(x, state);
+      renderValue: function(el, x, instance) {
+        return instance.renderValue(x);
       },
       resize: function(el, width, height, instance) {
         return instance.resize(width, height);

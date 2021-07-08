@@ -7,7 +7,7 @@ date: "`r format(Sys.Date(), '%d de %B de %Y')`"
 output:
   xaringan::moon_reader:
     chakra: libs/remark-latest.min.js
-    css: [default, metropolis, metropolis-fonts]
+    css: [default, metropolis, metropolis-fonts, scrollable.css]
     lib_dir: libs
     nature:
       beforeInit: "macros.js"
@@ -26,10 +26,11 @@ options(htmltools.dir.version = FALSE)
 ```
 
 ```{r, load_refs, include=FALSE, cache=FALSE}
+library(cowplot)
 library(RefManageR)
 BibOptions(check.entries = FALSE,
-           bib.style = "authoryear",
-           cite.style = "authoryear",
+           bib.style = "numeric",
+           cite.style = "numeric",
            style = "markdown",
            hyperlink = TRUE,
            dashed = FALSE)
@@ -41,6 +42,7 @@ bib5 <- ReadBib("../index/bib/cap5.bib", check = FALSE)
 bib6 <- ReadBib("../index/bib/cap6.bib", check = FALSE)
 bib7 <- ReadBib("../index/bib/cap7.bib", check = FALSE)
 bib8 <- ReadBib("../index/bib/cap8.bib", check = FALSE)
+bib <- c(bib1, bib3, bib4, bib5, bib6, bib7, bib8)
 ```
 
 class: inverse, center, middle
@@ -52,7 +54,7 @@ class: inverse, center, middle
 
 #### O Mercado Imobiliário
 
-* O Mercado Imobiliário (MI) é um mercado imperfeito. 
+* O Mercado Imobiliário (MI) é um mercado imperfeito `r Citet(bib, 'mooya2009')`. 
   - Bens não-homogêneos
   - Compradores e vendedores nem sempre em número suficiente para dar liquidez
   ao mercado
@@ -90,7 +92,7 @@ habitacionais (u.h.) em excesso.
   locação!
   - Se acrescenta-se os imóveis indisponíveis para locação, existem 16,5 milhões 
   de unidades vazias.
-  - Os EUA não necessitam de um programa de construção de moradias `r AutoCite(bib1, "olsen_opinion_2016")`.
+  - Os EUA não necessitam de um programa de construção de moradias `r AutoCite(bib, "olsen_opinion_2016")`.
 
 --
 
@@ -118,8 +120,8 @@ desenvolvidos se apliquem ao Brasil
 * Apesar da má distribuição de renda também presente, ainda há o agravante da
 falta de u.h., apesar de haver unidades vazias.
   - Estima-se em 6,9 milhões de famílias o déficit habitacional no Brasil
-  - Segundo o PlanHab, serão necessárias 30 milhões de novas u.h. até 2040 para
-  atender à demanda por domicílios `r AutoCite(bib1, "demanda", before = "ver ")`.
+  - Segundo o PlanHab `r AutoCite(bib, "demanda")`, serão necessárias 30 milhões 
+  de novas u.h. até 2040 para atender à demanda por domicílios.
   
 ---
 background-image: url(https://raw.githubusercontent.com/lfpdroubi/dissertacao/master/index/images/urban-pop-in-out-of-slums.png)
@@ -208,7 +210,7 @@ class: inverse, center, middle
 # Aspectos Históricos
 
 1. Desenvolvimento do Capitalismo no Brasil através da *via prussiana*, *i.e.*,
-na ausência de prévia reforma agrária `r AutoCite(bib3, "rangel1988")`.
+na ausência de prévia reforma agrária `r AutoCite(bib, "rangel1988")`.
 
 --
 
@@ -241,6 +243,14 @@ por conta do aumento do fluxo migratório.
 
 7. As crises econômicas aumentam a demanda por investimentos do tipo 
 especulativo, elevando o preço da terra.
+  
+  - Inflação brasileira se exacerbava em tempos de crise econômica `r Citep(bib, 'inflacao-brasileira')`
+  - Em períodos de crise econômica, as oportunidades de investimento são poucas
+  - Com poucas oportunidades de investimento, a demanda por capital diminui: os
+  juros caem
+  - Sem oportunidades de investimento, com juros baixos e com a inflação em alta, 
+  surge o problema da corrosão monetária (juros reais negativos)
+  - Terra como último recurso para proteção contra a corrosão monetária
 
 ---
 # Aspectos Históricos
@@ -253,11 +263,12 @@ via mercado;
 
 --
 
-9. Uma série de coisas impediu que os preços das terras cedessem:
+9. Uma série de coisas impediu que o preço da terra cedesse:
 
   - Aumento da demanda pelo uso da terra (*commodities agrícolas*, aumento da
   urbanização)
   - Entrada de capital estrangeiro
+  - Demografia
   
 --
 
@@ -265,11 +276,12 @@ via mercado;
 
 --
 
-11. Isto significa que não há áreas de investimento abertas para o capital financeiro, que acaba indo desaguar no mercado imobiliário
+11. Isto significa que não há áreas de investimento abertas para o capital 
+financeiro, que acaba indo desaguar no mercado imobiliário
 
 --
 
-12. A tendência é de aumento da demanda especulativa
+12. A tendência é, novamente, de aumento da demanda especulativa
 
 ---
 class: inverse, center, middle
@@ -279,25 +291,25 @@ class: inverse, center, middle
 ---
 # O Mercado Imobiliário e a Economia
 
-* Mercado Imobiliário (MI) tem forte interação com a Economia  `r AutoCite(bib4, "LEUNG")`.
+* Mercado Imobiliário (MI) tem forte interação com a Economia  `r AutoCite(bib, "LEUNG")`.
 
 --
 
-  + Link entre atividade econômica e o setor de construção `r AutoCite(bib4,
+  + Link entre atividade econômica e o setor de construção `r AutoCite(bib,
   "Case2000", after = "p. 146")`.
-  + Propensão ao consumo à partir da propriedade (garantia) `r AutoCite(bib4,
+  + Propensão ao consumo à partir da propriedade (garantia) `r AutoCite(bib,
   "Case2000", after = "p. 146-147")`
-  + Forte interação com o setor bancário `r AutoCite(bib4,
+  + Forte interação com o setor bancário `r AutoCite(bib,
   "Case2000", after = "p. 148-149")`
-  + Bancos tem portfolio massivo em ativos imobiliários `r AutoCite(bib4,
+  + Bancos tem portfolio massivo em ativos imobiliários `r AutoCite(bib,
   "Case2000", after = "p. 148")`
   + Crise bancárias estão sempre ligadas a superexposição ao setor imobiliário 
-(stylized fact) `r AutoCite(bib4, "Case2000", after = "p. 148")`
-  + Papel do **MI** na alocação dos trabalhadores em regiões de maior produtividade `r AutoCite(bib4, "Case2000", after = "p. 149")`
+(stylized fact) `r AutoCite(bib, "Case2000", after = "p. 148")`
+  + Papel do **MI** na alocação dos trabalhadores em regiões de maior produtividade `r AutoCite(bib, "Case2000", after = "p. 149")`
   
-* Propriedade residencial apenas corresponde a US$200 tri `r AutoCite(bib4,
+* Propriedade residencial apenas corresponde a US$200 tri `r AutoCite(bib,
   "economist")`
-  + 3x o tamanho do mercado de ações `r AutoCite(bib4,
+  + 3x o tamanho do mercado de ações `r AutoCite(bib,
   "economist")`
 
 ---
@@ -403,7 +415,7 @@ background-size: contain
 ---
 # Economia Urbana
 
-1. Cidades são mercados de trabalho `r AutoCite(bib5, "bertaud")`!
+1. Cidades são mercados de trabalho `r AutoCite(bib, "bertaud")`!
 
 <!-- ![:scale 50%](https://raw.githubusercontent.com/lfpdroubi/dissertacao/master/index/images/basicModel-1.png) -->
 
@@ -420,7 +432,7 @@ class: inverse, center, middle
 ---
 # Índices de Preços
 
-* `r AutoCite(bib6, "rppi")`
+* `r AutoCite(bib, "rppi")`
 
 ---
 class: inverse, center, middle
@@ -430,7 +442,241 @@ class: inverse, center, middle
 ---
 # Ciclos e Bolhas Especulativas
 
-* `r AutoCite(bib7, "green")`
+* Ciclos intrínsecos do MI vs. ciclos econômicos
+  - Dependem da tipologia do imóvel
+
+* Comportamento dos preços depende da elasticidade da oferta
+
+```{r  out.width = "50%"}
+knitr::include_graphics("https://raw.githubusercontent.com/lfpdroubi/dissertacao/master/index/images/choque-1.png")
+```
+
+---
+# Ciclos e Bolhas Especulativas
+
+```{r out.width='40%', fig.show="hold", fig.cap="Dinâmica dos preços no MI."}
+fig1 <- "https://raw.githubusercontent.com/lfpdroubi/dissertacao/master/index/images/TheRole_1.png"
+fig2 <- "https://raw.githubusercontent.com/lfpdroubi/dissertacao/master/index/images/TheRole_2.png"
+knitr::include_graphics(c(fig1, fig2))
+# ggdraw() + 
+#   draw_image(fig1, width = 0.5) + 
+#   draw_image(fig2, width = 0.5, x = 0.5)
+```
+
+--
+
+* Em mercados com oferta elástica, os preços tendem a se manter mais estáveis
+
+* Em mercados com oferta mais inelástica, os preços tendem a flutuar bastante
+
+---
+# Ciclos e Bolhas Especulativas
+
+* Para `r Citet(bib, "green")`, a disponibilidade e o custo do financiamento 
+são determinantes no bom funcionamento do mercado imobilário residencial em todo 
+o mundo.
+
+--
+  - Não necessariamente, no entanto, o financiamento imobiliário deve estar 
+  ligado ao mercado de capitais.
+  
+--
+
+  - EUA e o Reino Unido tiveram fontes de financiamento locais, fortemente 
+  reguladas por entidades administradas pelos governos durante décadas
+
+--
+
+  - Emprestadores se protegiam do **risco de crédito** com altos valores da 
+  razão LTV (50% ou menos) e do **risco de variação nas taxas de juros** 
+  emitindo empréstimos de curto prazo (5 anos) e a taxas de juros ajustáveis 
+  (ARMs), sem amortização (com pagamento do principal na forma de balão ao final 
+  do prazo).
+
+--
+
+  - Não havia proteção contra **risco sistêmico**, contudo.
+
+--
+
+  - Quando os preços das casas começaram a cair durante a Grande Depressão, as
+  razões LTV começaram a subir, as instituições de crédito passaram a restringir
+  o crédito, os tomadores tinham que vender suas casas para honrar os 
+  empréstimos, o que fez os preços das casas cairem ainda mais.
+
+--
+
+  - Os emprestadores, buscando a liquidação forçada dos imóveis, fizeram os
+  preços caírem ainda mais.
+  
+---
+# Ciclos e Bolhas Especulativas
+  
+* Na década de 30, buscando restaurar a liquidez do MI residencial, que havia 
+sido fortemente impactado pela Grande Depressão, foram criadas as tradicionais 
+instituições de incentivo ao financiamento imobiliário nos EUA (FHA e HOLC, 
+atual Fannie Mae), buscando prover financiamentos de longo prazo para as 
+famílias e ligando o mercado imobiliário aos mercados de capitais
+
+--
+  - Regulação por intervenção estatal direta, não por órgãos de controle 
+  `r Citep(bib, 'levitin2013a')`.
+  - A intervenção estatal no MI possibilitou o oferecimento de hipotecas de 
+  taxas de juros fixas (FRMs), ou *American Mortgages*.
+  - Neste sistema, a principal fonte de financiamento provinha das *Savings and
+  Loans (S&L's)*, associações de poupança locais
+  - As hipotecas eram vendidas num raio de até 50 milhas das sedes das S&L's
+  - Os depósitos dos mutuários eram garantidos pelo Governo norte-americano
+  - Este sistema perdurou até a década de 70
+  - Até 1966 as taxas de juros nos EUA permaneceram baixas e as *yield curves*
+  mantiveram inclinação positiva durante quase todo o período (*spreads* positivos)
+  - Em outras palavras, os juros de curto prazo eram menores do que os de longo
+  prazo, o que favorecia o sistema
+  - Em 1966 a tendência dos juros se inverteu: com *spreads* negativos durante
+  um período de mais de um ano, algumas instituições de *S&L* sofreram com a
+  insolvência
+  
+---
+# Ciclos e Bolhas Especulativas
+
+* Para garantir que problemas de insolvência como os da década de 60 se 
+repetissem, o congresso norte-americano dividiu a FNMA em duas partes: a
+*Ginnie Mae* e a nova FNMA, que tornou-se conhecida como *Fannie Mae*, sendo 
+esta privatizada. Além disto, o congresso criou o *Freddie Mac*.
+
+  - *Freddie Mac* foi criado para ser a *Fannie Mae* das *S&L*, não para 
+  competir com a privatizada *Fannie Mae*
+  - O *Freddie Mac* inventou os *Mortgage Backed Securities* (MBS)
+
+* Durante o final dos anos 70/início dos anos 80, contudo, os problemas 
+econômicos aumentaram:
+  
+    - Inflação de dois dígitos produziram taxas de longo prazo de dois dígitos
+    - Com as altas taxas de juros o valor presente das hipotecas despencou
+    - Com a emergência dos *Money Markets*, o custo dos depósitos para as *S&L*
+    aumentou.
+    - As taxas das hipotecas eram reguladas, o que descapitalizou as *S&L*
+    - Além do problema do risco das taxas de juros, houve o problema do risco de
+    crédito: os preços das casas começaram a declinar em termos nominais no 
+    início dos anos 80 em algumas localidades (Cinturão da Ferrugem)
+    - Os *defaults* aumentaram substancialmente
+    - As instituições de S&L's eram impedidas de diversificar geograficamente
+    - Isto gerou um sistema de financiamento habitacional quebrado.
+    
+---
+# Ciclos e Bolhas Especulativas    
+    
+* *Depository Institutions Deregulation and Monetary Control Act of 1980*: 
+desregulamentou os depósitos nas *S&L's*, retirando as regras de tetos de 
+retorno.
+
+* *Federal Home Loan Bank Board (1982)*: deu permissão explícita para as *S&L*
+originarem e manterem hipotecas de juros ajustáveis (ARM's)
+
+  - As hipotecas ARM passaram a ser as mais originadas
+
+* Enquanto outros países dismantelaram os seus sistemas de financiamento 
+habitacional segmentado e ligaram o financiamento habitacional aos mercados de 
+capitais através da desregulamentação dos depósitos, os EUA foram além: ligaram
+o financiamento habitacional ao mercados de capitais através da 
+desregulamentação dos depósitos **e da securitização**.
+  
+  - As *S&L* passaram a manter nos seus portfolios hipotecas ARM's, resolvendo
+  assim os seus problemas de descasamento entre suas obrigações e seus ativos.
+
+* *S&L* mudaram seu modelo de negócios de *originar e manter* hipotecas para 
+*originar e vender hipotecas para as GSE's*.
+
+  - As *S&L* trocaram as suas hipotecas de taxas fixas (FRM) por MBS
+  - Com esse novo modelo de negócio, que transferia o risco das taxas de juros
+  para as GSE's, a *American Mortgage* (FRM) ressurgiu.
+  
+* Assim cresceram as GSE que, através do poder de mercado que passaram a deter 
+no mercado secundário (securitização), passaram também a exercer considerável
+influência sobre os termos do mercado primário (originadores)
+  - As GSE dominaram o mercado secundário até 2003-2006
+
+---
+# Ciclos e Bolhas Especulativas
+
+* Um mercado de securitização privado, porém, vinha crescendo em paralelo com o
+mercado de securitização tradicional
+  - *Private Label Securitization* (PLS) é um mercado em que os investidores 
+  correm com o risco de crédito, além do risco de variação das taxas de juros do
+  mercado tradicional
+  - Inicialmente o mercado de PLS era composto essencialmente de empréstimos
+  *jumbo prime*, ou seja, empréstimos de alta qualidade, porém de tamanho 
+  superior aos que as GSE eram permitidas de manter
+  - Com o passar dos anos, no entanto, ...
+
+---
+# Ciclos e Bolhas Especulativas
+  
+* A Crise financeiro-habitacional de 2007-2008 ocorreu devido a um problema no
+mercado de securitização de hipotecas.
+  
+* Diversas causas foram apontadas para a origem da bolha
+  - taxas de juros básicas mantidas em níveis muito baixos
+  - excesso de poupança
+  - excessivo incentivo governamental às políticas de promoção da aquisição da 
+  habitação, encorajando empréstimos para tomadores duvidosos
+  - a irracionalidade exuberante dos consumidores/investidores do mercado 
+  imobiliário
+  - etc.
+  
+* Estas causas ajudam a explicar o surgimento da bolha.
+
+* O motivo principal, no entanto, o *primer driver*, segundo `r Citet(bib, 
+'levitin2012')`, a condição *sine qua non* para a ocorrência da crise foi a 
+excessiva oferta de financiamento no mercado imobiliário, provocada por uma 
+**mudança na estrutura do mercado de securitização das hipotecas**, que foi 
+desregulamentado e privatizado.
+
+---
+# Ciclos e Bolhas Especulativas
+
+P. ex.: Fosse a causa principal da bolha o excessivo incentivo governamental às
+políticas de promoção de aquisição da casa própria, não se teria observado o 
+crescimento de uma bolha no segmento residencial
+
+--
+
+```{r}
+knitr::include_graphics("https://raw.githubusercontent.com/lfpdroubi/dissertacao/master/index/images/HPI_RCA_CPPI.png")
+```
+
+---
+# Ciclos e Bolhas Especulativas
+
+* Fossem as taxas de juros em queda, teria havido formação de bolhas nos anos 90
+
+* Taxas de juros continuaram em queda mesmo após o estouro da bolha
+
+--
+
+```{r}
+knitr::include_graphics("https://raw.githubusercontent.com/lfpdroubi/dissertacao/master/index/images/mortgageRatesandHousePrices.png")
+```
+
+
+
+---
+# Ciclos e Bolhas Especulativas
+
+* Para `r Citet(bib, 'simkovic')` a competição no mercado de securitização de 
+hipotecas é perniciosa. 
+  - Outras tentativas falharam ao longo da história (1880, 1920)
+  - Mais recente tentativa em 2000 também falhou
+  - quando a competição era menos intensa e os securitizadores tinham mais poder
+  de compra, eles agiam para monitorar os originadores de hipotecas e manter a
+  prudência em relação ao *underwriting* (ou seja, ao risco relacionado com os 
+  avaliações dos imóveis dados em garantia pelos empréstimos).
+  - quando a competição tirou poder de compra dos securitizadores, dando poder 
+  de barganha aos originadores de hipotecas, reduzindo a capacidade dos 
+  securitizadores de monitorar os originadores e manter a prudência em relação 
+  ao *underwriting*.
+  
+
 ---
 class: inverse, center, middle
 
@@ -439,7 +685,7 @@ class: inverse, center, middle
 ---
 # Políticas para o Mercado Habitacional
 
-* `r AutoCite(bib8, "fischel1989")`
+* `r AutoCite(bib, "fischel1989")`
 
 ---
 class: inverse, center, middle
@@ -450,66 +696,12 @@ class: inverse, center, middle
 # Conclusão
 
 ---
+class: scrollable-slide
+
 # Referências
 
-### Seção 1
-
 ```{r results = "asis", echo = FALSE}
-PrintBibliography(bib1, .opts = list(check.entries = FALSE, sorting = "ynt"))
-```
-
----
-# Referências
-
-### Seção 3
-
-```{r results = "asis", echo = FALSE}
-PrintBibliography(bib3, .opts = list(check.entries = FALSE, sorting = "ynt"))
-```
-
----
-# Referências
-
-### Seção 4
-
-```{r results = "asis", echo = FALSE}
-PrintBibliography(bib4, .opts = list(check.entries = FALSE, sorting = "ynt"))
-```
-
----
-# Referências
-
-### Seção 5
-
-```{r results = "asis", echo = FALSE}
-PrintBibliography(bib5, .opts = list(check.entries = FALSE, sorting = "ynt"))
-```
-
----
-# Referências
-
-### Seção 6
-
-```{r results = "asis", echo = FALSE}
-PrintBibliography(bib6, .opts = list(check.entries = FALSE, sorting = "ynt"))
-```
-
----
-# Referências
-
-### Seção 7
-
-```{r results = "asis", echo = FALSE}
-PrintBibliography(bib7, .opts = list(check.entries = FALSE, sorting = "ynt"))
-```
-
----
-# Referências
-
-### Seção 8
-
-```{r results = "asis", echo = FALSE}
-PrintBibliography(bib8, .opts = list(check.entries = FALSE, sorting = "ynt"))
+PrintBibliography(bib, .opts = list(check.entries = FALSE, sorting = "nyt"))
 ```
 
 ---

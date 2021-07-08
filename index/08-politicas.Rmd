@@ -445,7 +445,7 @@ Dentre os instrumentos citados, destacamos os seguintes.
 
 \begin{citacao}
 The property tax is, economically speaking, a combination of one of the worst
-taxes -— the part that is assessed on real estate improvements [ \ldots] and one
+taxes -- the part that is assessed on real estate improvements [ \ldots] and one
 of the best taxes -- the tax on land or site value \apud{vickrey}{landtax}.
 \end{citacao}
 
@@ -454,17 +454,39 @@ propriedade, espécie de imposto presente na maioria dos países do mundo. Segun
 @spinney [p. 101], alguns autores classificam o imposto sobre a propriedade como
 "incrivelmente ruim" outros como "um dos piores impostos conhecidos no mundo
 civilizado". 
+
+Afirmações como estas acerca do imposto sobre a propriedade são comuns e se
+baseiam na "visão antiga" (*old view*) ou tradicional do imposto que, de acordo
+com @oates2016, é baseada num modelo de equilíbrio parcial proposto por @simon e
+@netzer, em que a hipótese principal é a de que o retorno sobre o capital é
+constante em todo o território. Assim, o capital migraria no longo prazo para as
+jurisdições em que o retorno líquido do capital sobre os imóveis se igualaria ao
+retorno líquido do capital em termos nacionais. Desta forma, o imposto sobre a 
+propriedade pode ser dividido em duas partes, uma aplicável sobre a terra e a 
+outra aplicável sobre as estruturas. Segundo esta teoria, parte do valor das 
+obrigações tributárias presentes e futuras relacionadas ao valor da terra é 
+capitalizada no próprio preço da terra (isto é, o ônus do imposto sobre o valor
+da terra é absorvido pelos proprietários da terra), já que sua oferta é 
+inelástica, enquanto que as obrigações incidentes sobre o valor das estruturas 
+devem ser absorvidas pelos consumidores finais dos imóveis, dado que a oferta de
+capital é elástica.
+
+Existem outras visões sobre o imposto sobre a propriedade imobiliária, contudo.
+Em uma delas, a *benefit view*, desenvolvida por @hamilton1975 [@hamilton1976a; 
+@hamilton1976b] sobre o modelo de @tiebout o imposto sobre a propriedade é visto 
+como uma espécie de taxa (*fee*) paga em troca de serviços prestados pela 
+municipalidade, o que altera completamente a percepção dos contribuintes quanto 
+ao ônus do imposto.
   
-Em alguns países, no entanto, como nos \gls{EUA}, o imposto sobre a propriedade
-pode ser visto virtualmente como uma taxa (*fee*) paga em contrapartida pela
-prestação de serviços locais por parte da municipalidade, o que altera
-completamente a percepção dos contribuintes quanto ao ônus do imposto: como os
-recursos da *property tax* nos \gls{EUA} são utilizados para o financiamento das
-escolas públicas, os contribuintes, ao invés de perceberem o imposto como um
-ônus sobre o consumo de habitação, o percebem como uma taxa pela prestação
-destes serviços educacionais, ou seja, o ônus do imposto sobre a propriedade é
-nulo na percepção dos contribuintes americanos [@fischel1989, p. 468;
-@fischel2013, p. 20].
+Nos \gls{EUA}, por exemplo, ou em grande parte dos \gls{EUA} o imposto sobre a
+propriedade pode virtualmente ser visto como uma taxa (*fee*) paga em
+contrapartida pela prestação de serviços educacionais por parte da
+municipalidade: como os recursos da *property tax* nos \gls{EUA} são utilizados
+para o financiamento das escolas públicas, os contribuintes, ao invés de
+perceberem o imposto como um ônus sobre o consumo de habitação, o percebem como
+uma taxa pela prestação destes serviços educacionais, ou seja, o ônus do imposto
+sobre a propriedade é nulo na percepção dos contribuintes americanos
+[@fischel1989, p. 468; @fischel2013, p. 20].
 
 De acordo com @fischel2013 [p. 21], prova disto está no fato que após a decisão
 da Suprema Corte da California em 1971 no caso Serrano v. Priest, que considerou
@@ -479,8 +501,40 @@ igualitário, independente da renda da comunidade, haja vista que o que houve de
 fato foi a perda de arrecadação na *property tax* e o crescimento do sistema
 privado de educação, mantendo o desequilíbrio do sistema de ensino como um todo.
 
-No Brasil, de outra maneira, o \gls{IPTU} também parece ter tomado a forma de
-uma contribuição, apesar disto não estar relacionado com os distritos escolares.
+Uma terceira abordagem, a respeito do imposto sobre a propriedade, a 
+*capital view*, advém do trabalho seminal de @mieszkowski, segundo o qual como o 
+imposto sobre a propriedade é cobrado com maior ou menor intensidade em todas as 
+municipalidades, fazendo com que o capital, suposto perfeitamente móvel entre as 
+jurisdições, migre dos municípios de mais altas alíquotas para os de mais baixas 
+alíquotas, causando assim uma má-alocação do capital. Segundo esta teoria, a 
+alíquota média do imposto sobre a propriedade imóvel recairia integralmente 
+sobre o capital, enquanto as variações entre as alíquotas recaem positivamente 
+ou negativamente sobre o consumo de bens imóveis. Segundo @zodrow2001, de acordo 
+com esta teoria os municípios com alíquotas mais altas contariam com preços de 
+imóveis e mercadorias mais altos e salários e preços de terras menores, enquanto 
+que os municípios com baixas alíquotas contariam com preços de imóveis e 
+mercadorias mais baixos e salários e preços de terra mais altos. No agregado, os
+efeitos fiscais da variação das alíquotas se cancelam [@oates2016].
+
+De acordo com @oeates2016, uma síntese das duas últimas abordagens pode ser
+encontrada em @lutz. Segundo @oeates2016, ao observar os efeitos de uma redução
+de alíquotas de imposto sobre a propriedade imóvel possibilitada por uma reforma
+escolar nos \gls{EUA}, @lutz percebeu que estes efeitos tomaram formas 
+diferentes em diversas regiões: nas regiões mais densamente povoadas, a 
+diminuição das alíquotas foi capitalizada no valor dos imóveis existentes, 
+tornando-os mais caros, enquanto que nas regiões de menor densidade o efeito da
+redução das alíquotas foi sentido através do aumento do investimento em 
+habitação. Segundo @oeates2016, isto sugere que a "benefit view" do imposto 
+sobre a propriedade pode ser mais aplicável nas regiões densamente povoadas, 
+enquanto a *capital view* pode ser mais aplicável às regiões mais periféricas, 
+de baixa densidade populacional.
+
+No Brasil, no entanto, o imposto predial e territorial urbano muito dificilmente
+poderá visto como uma espécie de tarifa paga em troca de serviços: as escolas 
+públicas no Brasil são financiadas por outras fontes e aquelas famílias que
+procuram um nível educacional mais alto e podem fazê-lo usualmente matriculam
+seus filhos em escolas particulares desde os primeiros anos.
+
 Segundo @decesare2020 [p. 86, grifo nosso], o \gls{IPTU} "é um imposto essencial
 para a **manutenção de serviços básicos nas cidades** [\ldots] o \gls{IPTU} está
 inconfundivelmente estruturado para proporcionar que as famílias e os indivíduos
@@ -490,20 +544,24 @@ infraestrutura urbana é muito desigualmente distribuída nas cidades brasileira
 o que provavelmente está relacionado ao fato de que as classes de maior renda,
 que contribuem mais com o \gls{IPTU} se fazem retribuir com maiores benefícios
 em infraestrutura urbana, enquanto a periferia das cidades permanece carente dos
-serviços básicos. Ademais, também segundo @decesare2020 [p. 83-84], devido à
-interferência dos legislativos municipais, já que o \gls{IPTU} é "o único
-tributo cuja mera apuração da base de cálculo necessita de sanção do Poder
-Legislativo [\ldots] a desatualização da base de cálculo do \gls{IPTU} produz
-injustiça fiscal e contraria o interesse coletivo, ferindo inclusive os
-princípios de isonomia e da capacidade contributiva contidos na Carta Magna".
+serviços básicos. 
 
-Além disto, como é relatado em diversos trabalhos, o \gls{IPTU} e seus similares
-no mundo (e.g. *property tax*) são impostos que normalmente apresentam uma
-regressividade, seja em relação ao valor de mercado das propriedades, devido a
-procedimentos avaliatórios, seja em relação à renda das pessoas, *i.e.* as
-pessoas com maior capacidade de pagamento pagam menos imposto sobre a
-propriedade, proporcionalmente, do que as pessoas com menor capacidade
-[@McMillen2020; @landtax, p. 3; @fonseca2020].
+Ademais, também segundo @decesare2020 [p. 83-84], devido à interferência dos 
+legislativos municipais, já que o \gls{IPTU} é "o único tributo cuja mera 
+apuração da base de cálculo necessita de sanção do Poder Legislativo [\ldots] a 
+desatualização da base de cálculo do \gls{IPTU} produz injustiça fiscal e 
+contraria o interesse coletivo, ferindo inclusive os princípios de isonomia e da 
+capacidade contributiva contidos na Carta Magna". Tudo indica, portanto, que no
+Brasil, assim como em grande parte da \gls{AL}, o imposto sobre a propriedade
+pode ser melhor visto através da *capital view* do que através da *benefit view*.
+
+Como é relatado em diversos trabalhos, o \gls{IPTU} e seus similares no mundo 
+(e.g. *property tax*) são impostos que normalmente apresentam uma regressividade, 
+seja em relação ao valor de mercado das propriedades, devido a procedimentos 
+avaliatórios, seja em relação à renda das pessoas, *i.e.* as pessoas com maior 
+capacidade de pagamento pagam menos imposto sobre a propriedade, 
+proporcionalmente, do que as pessoas com menor capacidade [@McMillen2020; 
+@landtax, p. 3; @fonseca2020].
 
 Visando proporcionar equidade, algumas localidades podem proporcionar isenções
 do \gls{IPTU} à baixa renda (ou a propriedades de baixo valor). A maneira mais
