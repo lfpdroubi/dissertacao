@@ -30,7 +30,7 @@ library(cowplot)
 library(RefManageR)
 BibOptions(check.entries = FALSE,
            bib.style = "numeric",
-           cite.style = "numeric",
+           cite.style = "authoryear",
            style = "markdown",
            hyperlink = TRUE,
            dashed = FALSE)
@@ -54,7 +54,7 @@ class: inverse, center, middle
 
 #### O Mercado Imobiliário
 
-* O Mercado Imobiliário (MI) é um mercado imperfeito `r Citet(bib, 'mooya2009')`. 
+* O Mercado Imobiliário (MI) é um mercado imperfeito `r Citep(bib, 'mooya2009')`. 
   - Bens não-homogêneos
   - Compradores e vendedores nem sempre em número suficiente para dar liquidez
   ao mercado
@@ -92,7 +92,7 @@ habitacionais (u.h.) em excesso.
   locação!
   - Se acrescenta-se os imóveis indisponíveis para locação, existem 16,5 milhões 
   de unidades vazias.
-  - Os EUA não necessitam de um programa de construção de moradias `r AutoCite(bib, "olsen_opinion_2016")`.
+  - Os EUA não necessitam de um programa de construção de moradias `r Citep(bib, "olsen_opinion_2016")`.
 
 --
 
@@ -120,7 +120,7 @@ desenvolvidos se apliquem ao Brasil
 * Apesar da má distribuição de renda também presente, ainda há o agravante da
 falta de u.h., apesar de haver unidades vazias.
   - Estima-se em 6,9 milhões de famílias o déficit habitacional no Brasil
-  - Segundo o PlanHab `r AutoCite(bib, "demanda")`, serão necessárias 30 milhões 
+  - Segundo o PlanHab `r Citet(bib, "demanda")`, serão necessárias 30 milhões 
   de novas u.h. até 2040 para atender à demanda por domicílios.
   
 ---
@@ -210,7 +210,7 @@ class: inverse, center, middle
 # Aspectos Históricos
 
 1. Desenvolvimento do Capitalismo no Brasil através da *via prussiana*, *i.e.*,
-na ausência de prévia reforma agrária `r AutoCite(bib, "rangel1988")`.
+na ausência de prévia reforma agrária `r Citep(bib, "rangel1988")`.
 
 --
 
@@ -291,26 +291,26 @@ class: inverse, center, middle
 ---
 # O Mercado Imobiliário e a Economia
 
-* Mercado Imobiliário (MI) tem forte interação com a Economia  `r AutoCite(bib, "LEUNG")`.
+* Mercado Imobiliário (MI) tem forte interação com a Economia  `r Citep(bib, "LEUNG")`.
 
 --
 
-  + Link entre atividade econômica e o setor de construção `r AutoCite(bib,
-  "Case2000", after = "p. 146")`.
-  + Propensão ao consumo à partir da propriedade (garantia) `r AutoCite(bib,
-  "Case2000", after = "p. 146-147")`
-  + Forte interação com o setor bancário `r AutoCite(bib,
-  "Case2000", after = "p. 148-149")`
-  + Bancos tem portfolio massivo em ativos imobiliários `r AutoCite(bib,
-  "Case2000", after = "p. 148")`
+  + Link entre atividade econômica e o setor de construção `r Citep(bib,
+  "Case2000", after = ", p. 146")`.
+  + Propensão ao consumo à partir da propriedade (garantia) `r Citep(bib,
+  "Case2000", after = ", p. 146-147")`
+  + Forte interação com o setor bancário `r Citep(bib,
+  "Case2000", after = ", p. 148-149")`
+  + Bancos tem portfolio massivo em ativos imobiliários `r Citep(bib,
+  "Case2000", after = ", p. 148")`
   + Crise bancárias estão sempre ligadas a superexposição ao setor imobiliário 
-(stylized fact) `r AutoCite(bib, "Case2000", after = "p. 148")`
-  + Papel do **MI** na alocação dos trabalhadores em regiões de maior produtividade `r AutoCite(bib, "Case2000", after = "p. 149")`
+(stylized fact) `r Citep(bib, "Case2000", after = ", p. 148")`
+  + Papel do **MI** na alocação dos trabalhadores em regiões de maior produtividade `r Citep(bib, "Case2000", after = ", p. 149")`
   
-* Propriedade residencial apenas corresponde a US$200 tri `r AutoCite(bib,
-  "economist")`
-  + 3x o tamanho do mercado de ações `r AutoCite(bib,
-  "economist")`
+* Propriedade residencial apenas corresponde a US$200 tri `r Citet(bib,
+  "economist", before = "The Economist, ")`
+  + 3x o tamanho do mercado de ações `r Citet(bib,
+  "economist", before = "The Economist, ")`
 
 ---
 # O Mercado Imobiliário e a Economia
@@ -415,14 +415,42 @@ background-size: contain
 ---
 # Economia Urbana
 
-1. Cidades são mercados de trabalho `r AutoCite(bib, "bertaud")`!
+.pull-left[
+
+```{r  out.width = "100%"}
+knitr::include_graphics("https://raw.githubusercontent.com/lfpdroubi/dissertacao/master/index/images/densities.png")
+```
+
+]
+
+.pull-right[
+
+1. Cidades são mercados de trabalho `r Citep(bib, "bertaud")`!
+
+2. 
+
+]
+
+---
+# Economia Urbana
+
+.pull-left[
 
 <!-- ![:scale 50%](https://raw.githubusercontent.com/lfpdroubi/dissertacao/master/index/images/basicModel-1.png) -->
 
-```{r  out.width = "50%"}
+```{r  out.width = "100%"}
 knitr::include_graphics("https://raw.githubusercontent.com/lfpdroubi/dissertacao/master/index/images/basicModel-1.png")
 ```
 
+]
+
+.pull-right[
+
+1. O Consumo habitacional está ligado à renda familiar `r Citep(bib, "bertaud")`!
+
+2. 
+
+]
 
 ---
 class: inverse, center, middle
@@ -432,7 +460,7 @@ class: inverse, center, middle
 ---
 # Índices de Preços
 
-* `r AutoCite(bib, "rppi")`
+* `r Citep(bib, "rppi")`
 
 ---
 class: inverse, center, middle
@@ -685,7 +713,7 @@ class: inverse, center, middle
 ---
 # Políticas para o Mercado Habitacional
 
-* `r AutoCite(bib, "fischel1989")`
+* `r Citep(bib, "fischel1989")`
 
 ---
 class: inverse, center, middle

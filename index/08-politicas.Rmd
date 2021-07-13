@@ -449,46 +449,118 @@ taxes -- the part that is assessed on real estate improvements [ \ldots] and one
 of the best taxes -- the tax on land or site value \apud{vickrey}{landtax}.
 \end{citacao}
 
-o \gls{IPTU}, é a encarnação brasileira da *property tax*, o impostos sobre a
-propriedade, espécie de imposto presente na maioria dos países do mundo. Segundo
-@spinney [p. 101], alguns autores classificam o imposto sobre a propriedade como
-"incrivelmente ruim" outros como "um dos piores impostos conhecidos no mundo
-civilizado". 
+O \gls{IPTU} é a encarnação brasileira da *property tax*, o imposto sobre a
+propriedade imobiliária, espécie de imposto presente na maioria dos países do
+mundo. Segundo @spinney [p. 101], alguns autores classificam o imposto sobre a
+propriedade como "incrivelmente ruim" outros como "um dos piores impostos
+conhecidos no mundo civilizado".
 
-Afirmações como estas acerca do imposto sobre a propriedade são comuns e se
-baseiam na "visão antiga" (*old view*) ou tradicional do imposto que, de acordo
-com @oates2016, é baseada num modelo de equilíbrio parcial proposto por @simon e
-@netzer, em que a hipótese principal é a de que o retorno sobre o capital é
-constante em todo o território. Assim, o capital migraria no longo prazo para as
-jurisdições em que o retorno líquido do capital sobre os imóveis se igualaria ao
-retorno líquido do capital em termos nacionais. Desta forma, o imposto sobre a 
-propriedade pode ser dividido em duas partes, uma aplicável sobre a terra e a 
-outra aplicável sobre as estruturas. Segundo esta teoria, parte do valor das 
-obrigações tributárias presentes e futuras relacionadas ao valor da terra é 
-capitalizada no próprio preço da terra (isto é, o ônus do imposto sobre o valor
-da terra é absorvido pelos proprietários da terra), já que sua oferta é 
-inelástica, enquanto que as obrigações incidentes sobre o valor das estruturas 
-devem ser absorvidas pelos consumidores finais dos imóveis, dado que a oferta de
-capital é elástica.
+Afirmações como estas acerca do imposto sobre a propriedade são comuns e são
+normalmente feitas por economistas que, seguindo a tradição iniciada por 
+@henrygeorge, defendem um imposto exclusivo sobre a terra, que seria um imposto
+não-distorcionário, *i.e.* um imposto que não distorce as decisões econômicas,
+não afetando, portanto, o *output* do mercado que seria obtido na sua ausência,
+o contrário do que ocorre com o imposto sobre a propriedade imobiliária.
 
-Existem outras visões sobre o imposto sobre a propriedade imobiliária, contudo.
-Em uma delas, a *benefit view*, desenvolvida por @hamilton1975 [@hamilton1976a; 
-@hamilton1976b] sobre o modelo de @tiebout o imposto sobre a propriedade é visto 
-como uma espécie de taxa (*fee*) paga em troca de serviços prestados pela 
-municipalidade, o que altera completamente a percepção dos contribuintes quanto 
-ao ônus do imposto.
-  
-Nos \gls{EUA}, por exemplo, ou em grande parte dos \gls{EUA} o imposto sobre a
-propriedade pode virtualmente ser visto como uma taxa (*fee*) paga em
-contrapartida pela prestação de serviços educacionais por parte da
-municipalidade: como os recursos da *property tax* nos \gls{EUA} são utilizados
+A influência que o imposto predial exerce sobre tomada de decisão acerca de um 
+investimento imobiliário foi bem ilustrada neste exemplo em @fischel2015 [149].
+
+> Higher tax rates on land do not cause owners to remove it from the
+jurisdiction or modify their decisions about how to use it. Of course, a higher
+tax rate on land will make owners of land poorer (assuming they had not
+anticipated the higher rate before they bought the land), and their poverty
+might cause them to undertake less development than they had previously planned.
+Unhappy landowners might decide to sell their land in that case, and the buyers
+would pay a lower price for it as a result of the higher annual tax burden. But
+the buyer’s decision about what to do with the land will not be affected by the
+tax. If constructing and operating a medical office was the ideal use for the
+land (it’s near a hospital), then the same office will be built regardless of
+how much the land was taxed. Now consider a tax that generates the same revenue
+as the land tax but is applied only to structures themselves. The owner of the
+raw land in this case sees that her tax depends on how big a building she puts
+up. Instead of erecting the medical building, she uses the land as a parking
+lot, which has lower value and lower revenues. The medical office (if one is
+built at all) might be built in another jurisdiction that has lower taxes on
+buildings[^10].
+
+[^10]: **Tradução livre**: Uma tributação mais alta sobre a terra não leva os
+proprietários a removê-la da jurisdição ou modificar suas decisões sobre como
+usá-la. Claro, uma alíquota mais alta sobre o valor da terra tornará os
+proprietários mais pobres (assumindo que eles não anteciparam a taxa mais alta
+antes de comprar a terra), e sua pobreza pode fazer com que empreendam menos
+projetos do que haviam planejado anteriormente. Proprietários de terras
+insatisfeitos podem decidir vender suas terras nesse caso, e os compradores
+pagariam um preço menor por elas, em decorrência da maior carga tributária
+anual. Mas a decisão do comprador sobre o que fazer com o terreno não será
+afetada pelo imposto. Se construir e operar um consultório médico fosse o uso
+ideal para o terreno (é perto de um hospital), então o mesmo consultório será
+construído independentemente de quanto a terra foi tributada. Agora considere um
+imposto que gera a mesma receita que o imposto sobre a terra, mas é aplicado
+apenas às próprias benfeitorias. A dona da terra nua, neste caso, vê que seu
+imposto depende do tamanho do edifício que ela constrói em cima dela. Em vez de
+erguer o consultório médico, ela usa o terreno como um estacionamento, que tem
+menor valor e menor receita. O consultório médico pode ser construído (se for 
+construído) em outra jurisdição que tem impostos mais baixos sobre as 
+benfeitorias.
+
+Segundo @stiglitz1979, um modelo ideal para a tributação da propriedade 
+imobiliária envolveria a cobrança de um imposto exclusivamente sobre a 
+terra, cujas receitas seriam aplicadas exclusivamente na construção de 
+infraestrutura serviços locais, resultando em cidades mais eficientes.
+
+Na prática, no entanto, por razões admnistrativas, não é comum a utilização 
+de um imposto aplicado exclusivamente sobre o valor da terra, por conta das
+dificuldades advindas do processo de avaliação. É importante, portanto, 
+compreender os efeitos da taxação sobre o propriedade sobre o \gls{MI}.
+
+Segundo @oates2016, existem, basicamente, três abordagens para descrever o
+imposto sobre o patrimônio imobiliário: (a) a *old view* ou visão tradicional do
+imposto, que é baseada num modelo de equilíbrio parcial (*i.e.* o equilíbrio
+local do \gls{MI} tomado isoladamente) proposto por @simon e descrito por
+@netzer, em que a hipótese principal é a de que o retorno sobre o capital é dado
+nacionalmente, o que implica que o capital não assumia nenhuma parte do ônus do
+imposto predial, haja vista que o capital é móvel e migra de uma jurisdição à
+outra, até que o retorno sobre o capital iguale o retorno dado em nível
+nacional; (b) a *benefit view*, desenvolvida por @hamilton1975 [@hamilton1976a;
+@hamilton1976b] sobre o modelo de @tiebout, em que o imposto sobre a propriedade
+é visto como uma espécie de taxa (*fee*) paga em troca de serviços prestados
+pela municipalidade, o que altera completamente a percepção dos contribuintes
+quanto ao ônus do imposto e; (c) a *capital view* ou *new view*, advinda do
+trabalho seminal de @mieszkowski e posteriormente extendida por @zodrow1986a e
+@zodrow1986b, baseada em um modelo de equilíbrio geral de @harberger.
+
+De acordo com a *old view* ou *traditional view*, o capital migraria no longo prazo
+para as jurisdições em que o retorno líquido do capital sobre os imóveis se
+igualaria ao retorno líquido do capital em termos nacionais. Desta forma, o
+imposto sobre a propriedade pode ser dividido em duas partes, uma aplicável
+sobre o valor da terra e outra aplicável sobre o valor das estruturas. Segundo
+esta teoria, parte do valor das obrigações tributárias presentes e futuras
+relacionadas ao valor da terra é capitalizada no próprio preço da terra (isto é,
+o ônus do imposto sobre o valor da terra é absorvido pelos proprietários da
+terra), já que sua oferta é inelástica, enquanto que as obrigações incidentes
+sobre o valor das estruturas devem ser absorvidas pelos consumidores finais dos
+imóveis, dado que a oferta de capital é elástica.
+
+Já de acordo com a *benefit view*, segundo o modelo de Hamilton-Tiebout, os
+cidadãos podem escolher entre as comunidades aquelas que contemplam o seu mix
+desejado de serviços públicos, o que acaba por transformar o imposto sobre a
+propriedade numa espécie de taxa (*fee*) paga em troca de serviços oferecidos
+por aquela comunidade [@fischel2015, 166]. Nos \gls{EUA}, por exemplo, ou em
+grande parte dos \gls{EUA}, como os recursos da *property tax* são utilizados
 para o financiamento das escolas públicas, os contribuintes, ao invés de
 perceberem o imposto como um ônus sobre o consumo de habitação, o percebem como
-uma taxa pela prestação destes serviços educacionais, ou seja, o ônus do imposto
-sobre a propriedade é nulo na percepção dos contribuintes americanos
-[@fischel1989, p. 468; @fischel2013, p. 20].
+uma taxa contra a prestação destes serviços educacionais, ou seja, o ônus do
+imposto sobre a propriedade é nulo na percepção dos contribuintes americanos
+[@fischel1989, p. 468; @fischel2013, p. 20]. Claro que isto está condicionado à
+existência de um zoneamento capaz de previnir que os cidadãos construam imóveis
+de pequeno valor apenas para aproveitar os benefícios de uma comunidade, pagando
+menores taxas do que os seus vizinhos. Segundo @fischel2015 [p. 165], nos
+\gls{EUA} as comunidades são capazes de definir regras bem próximas do
+"zoneamento perfeito", o que, na prática, transforma o imposto sobre a
+propriedade numa espécie de imposto com as mesmas características do imposto
+sobre a terra
 
-De acordo com @fischel2013 [p. 21], prova disto está no fato que após a decisão
+De acordo com @fischel2015 [p. 180], prova disto está no fato que após a decisão
 da Suprema Corte da California em 1971 no caso Serrano v. Priest, que considerou
 inconstitucional a vinculação das receitas locais da *property tax* e o
 financiamento público das escolas, e a consequente aprovação da proposição 13 na
@@ -501,30 +573,37 @@ igualitário, independente da renda da comunidade, haja vista que o que houve de
 fato foi a perda de arrecadação na *property tax* e o crescimento do sistema
 privado de educação, mantendo o desequilíbrio do sistema de ensino como um todo.
 
-Uma terceira abordagem, a respeito do imposto sobre a propriedade, a 
-*capital view*, advém do trabalho seminal de @mieszkowski, segundo o qual como o 
-imposto sobre a propriedade é cobrado com maior ou menor intensidade em todas as 
-municipalidades, fazendo com que o capital, suposto perfeitamente móvel entre as 
-jurisdições, migre dos municípios de mais altas alíquotas para os de mais baixas 
-alíquotas, causando assim uma má-alocação do capital. Segundo esta teoria, a 
-alíquota média do imposto sobre a propriedade imóvel recairia integralmente 
-sobre o capital, enquanto as variações entre as alíquotas recaem positivamente 
-ou negativamente sobre o consumo de bens imóveis. Segundo @zodrow2001, de acordo 
-com esta teoria os municípios com alíquotas mais altas contariam com preços de 
-imóveis e mercadorias mais altos e salários e preços de terras menores, enquanto 
-que os municípios com baixas alíquotas contariam com preços de imóveis e 
+A *new view* sobre o imposto predial é praticamente uma análise econômica mais
+abrangente do ônus do imposto sobre a propriedade baseada na *capital view*.
+Segundo @zodrow2001 [p. 8], a *old view* pode ser vista como apenas um caso
+particular da *new view* focada apenas na parte do imposto incidente sobre o
+consumo, negligenciando os efeitos de equilíbrio geral do imposto (que implica
+que uma parte da taxa incide sobre o capital), dada a sua análise simplificada.
+Para @zodrow2001 [p. 6], o problema com a análise da *old view* é que ela
+ignorava que o imposto sobre a propriedade é cobrado com maior ou menor
+intensidade em todas as municipalidades, o que implica que o capital não pode,
+apesar da sua mobilidade, evitar completamente a taxação, ainda que as
+diferenças entre as alíquotas das diversas jurisdições faz com o que ele migre
+dos municípios de mais altas alíquotas para os de mais baixas alíquotas,
+causando assim uma má-alocação do capital. Segundo esta teoria, portanto, a
+alíquota média do imposto sobre a propriedade imóvel recairia integralmente
+sobre o capital, enquanto as variações entre as alíquotas recaem positivamente
+ou negativamente sobre o consumo de bens imóveis. Segundo @zodrow2001 [7], de acordo
+com esta teoria os municípios com alíquotas mais altas contariam com preços de
+imóveis e mercadorias mais altos e salários e preços de terras menores, enquanto
+que os municípios com alíquotas mais baixas contariam com preços de imóveis e
 mercadorias mais baixos e salários e preços de terra mais altos. No agregado, os
 efeitos fiscais da variação das alíquotas se cancelam [@oates2016].
 
-De acordo com @oeates2016, uma síntese das duas últimas abordagens pode ser
-encontrada em @lutz. Segundo @oeates2016, ao observar os efeitos de uma redução
+De acordo com @oates2016, uma síntese das duas últimas abordagens pode ser
+encontrada em @lutz. Segundo @oates2016, ao observar os efeitos de uma redução
 de alíquotas de imposto sobre a propriedade imóvel possibilitada por uma reforma
 escolar nos \gls{EUA}, @lutz percebeu que estes efeitos tomaram formas 
 diferentes em diversas regiões: nas regiões mais densamente povoadas, a 
 diminuição das alíquotas foi capitalizada no valor dos imóveis existentes, 
 tornando-os mais caros, enquanto que nas regiões de menor densidade o efeito da
 redução das alíquotas foi sentido através do aumento do investimento em 
-habitação. Segundo @oeates2016, isto sugere que a "benefit view" do imposto 
+habitação. Segundo @oates2016, isto sugere que a "benefit view" do imposto 
 sobre a propriedade pode ser mais aplicável nas regiões densamente povoadas, 
 enquanto a *capital view* pode ser mais aplicável às regiões mais periféricas, 
 de baixa densidade populacional.
@@ -571,10 +650,10 @@ Estado da Filadélfia, nos \gls{EUA} [@McMillen2020, p. 155].
 
 O \gls{IPTU} progressivo no tempo tem como finalidade promover uma maior
 efetividade da função social da propriedade. Alegadamente, a lógica para a
-implantação de um imposto progressivo [^10] no tempo seria o combate à
+implantação de um imposto progressivo [^11] no tempo seria o combate à
 especulação imobiliária.
 
-[^10]: Não se deve confundir o termo *progressivo*, em *IPTU progressivo*, com o
+[^11]: Não se deve confundir o termo *progressivo*, em *IPTU progressivo*, com o
 princípío da progressividade no ordenamento jurídico brasileiro. Em *IPTU
 progressivo*, o termo progressivo refere-se à progressividade (do aumento das
 alíquotas) no tempo, não relacionada com a capacidade contributiva do

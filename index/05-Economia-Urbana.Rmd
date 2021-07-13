@@ -153,7 +153,7 @@ famílias.
 
 
 
-```{r basicModel, fig.cap="Consumo de habitação pelas famílias em função da renda disponível."}
+```{r basicModel, fig.cap="Consumo de habitação pelas famílias em função da renda disponível.", fig.height=9, fig.width=4.5}
 mu <- 0
 sd <- 1.25
 x1 <- seq(-3, 3, by = .05)

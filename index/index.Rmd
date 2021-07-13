@@ -2,8 +2,8 @@
 author: 'LUIZ FERNANDO PALIN DROUBI'
 local: Florianópolis
 date_year: '2021'
-date_month: 'Setembro'
-date_day: '9'
+date_month: 'Julho'
+date_day: '5'
 institution: 'Universidade Federal de Santa Catarina'
 inst_short: 'UFSC'
 division: 'CTC - CENTRO TECNOLÓGICO'
@@ -23,7 +23,7 @@ examiner:
   institution: Fédération Internationale des Géomètres
   inst_short: FIG
 - title: Prof.
-  name: Armen Mamigonian
+  name: Examinador 3
   degree: Dr.
   institution: Universidade Federal de Santa Catarina
   inst_short: UFSC
@@ -33,7 +33,7 @@ degree: 'Mestre em Engenharia de Transportes e Gestão Territorial'
 level: 'mestrado'
 doc_type: 'Dissertação'
 title: 'O Mercado Imobiliário e a Economia'
-subtitle: 'Qualificação'
+subtitle: '2º Pedido de Prorrogação de Prazo'
 knit: "bookdown::render_book"
 site: bookdown::bookdown_site
 output: 
