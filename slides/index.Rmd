@@ -23,6 +23,12 @@ knitr::opts_chunk$set(cache=FALSE, echo = FALSE, warning = FALSE,
                       fig.align = "center", fig.height = 4.5,
                       fig.path = "images/", dev = "svg")
 options(htmltools.dir.version = FALSE)
+library(simstudy)
+library(reshape2)
+library(dplyr)
+library(ggplot2)
+library(cowplot)
+theme_set(theme_cowplot())
 ```
 
 ```{r, load_refs, include=FALSE, cache=FALSE}
@@ -69,8 +75,10 @@ geralmente necessária
 
 --
 
-* Essas intervenções podem, se bem planejadas, eventualmente, ser benéficas. Por 
-outro lado, se mal planejadas, podem não atingir os objetivos desejados, tendo potencial, inclusive, para agravar os problemas preexistentes.
+* Essas intervenções podem, se bem planejadas, eventualmente, ser benéficas. 
+
+* Por outro lado, se mal planejadas, podem não atingir os objetivos desejados, 
+tendo potencial, inclusive, para agravar os problemas preexistentes.
 
 ---
 # Introdução
@@ -78,7 +86,7 @@ outro lado, se mal planejadas, podem não atingir os objetivos desejados, tendo 
 #### Mundo vive atualmente uma crise habitacional
 
 * Nos EUA, desde a crise de 2008 ao menos.
-* Nos países desenvolvidos, também desde a crise de 2008, ao menos.
+* Nos países desenvolvidos, também, desde a crise de 2008, ao menos.
 
 --
 
@@ -115,8 +123,8 @@ de distribuição de renda do que um problema habitacional de fato.
 #### Nos países em desenvolvimento, tem-se uma crise habitacional crônica
 
 * A origem, portanto, é diferente.
-* Não se pode esperar que as soluções eventualmente adotas nos países 
-desenvolvidos se apliquem ao Brasil
+* Pode-se esperar que as soluções eventualmente adotas nos países 
+desenvolvidos se apliquem também aos países em desenvolvimento?
 * Apesar da má distribuição de renda também presente, ainda há o agravante da
 falta de u.h., apesar de haver unidades vazias.
   - Estima-se em 6,9 milhões de famílias o déficit habitacional no Brasil
@@ -133,6 +141,268 @@ background-size: contain
 # Introdução
 
 #### Que tipo de política habitacional e/ou fundiária é necessária para o Brasil nos próximos 20 anos?
+
+.pull-left[
+
+```{r} 
+set.seed(1)
+baseprobs <- matrix(c(
+  0.10, 0.20, 0.40, 0.20, 0.10, # Apartamento
+  0.15, 0.40, 0.20, 0.20, 0.05, # Casa pré-fabricada
+  0.10, 0.05, 0.35, 0.35, 0.15, # Casa Alvenaria
+  0.65, 0.35, 0.00, 0.00, 0.00, # Moradia Precária
+  0.00, 0.00, 0.05, 0.25, 0.70, # Cobertura
+  0.00, 0.00, 0.00, 0.00, 1.00),# Cobertura Duplex
+  nrow = 6, byrow = TRUE)
+dT <- genData(10000)
+dX <- genOrdCat(dT, adjVar = NULL, baseprobs = baseprobs,
+                catVar = c("6. Apartamento", "5. Casa pré-fabricada", 
+                           "4. Casa Alvenaria", "3. Moradia precária", 
+                           "2. Cobertura", "1. Cobertura Duplex"),
+                   prefix = "Tipo", rho = .8, corstr = "cs", asFactor = FALSE)
+# renda <- c("até 30.000", "de 30.000 a 100.000", "de 100.000 a 200.000", 
+#              "de 200.000 a 500.000", "acima de 500.000")
+df <- melt(dX, id = "id", variable.name = "Tipologia", value.name = "Faixa de Renda")
+levels(df$Tipologia) <- c("Cobertura Duplex", "Cobertura", "Moradia precária",
+                         "Casa Alvenaria", "Casa pré-fabricada", "Apartamento")
+df$`Faixa de Renda` <- factor(df$`Faixa de Renda`, ordered = TRUE)
+Faixa_1 <- df %>% 
+  filter(`Faixa de Renda` == "1") %>% 
+  sample_frac(0.15)
+Faixa_2 <- df %>% 
+  filter(`Faixa de Renda` == "2")  %>% 
+  sample_frac(0.30)
+Faixa_3 <- df %>% 
+  filter(`Faixa de Renda` == "3") %>% 
+  sample_frac(0.35)
+Faixa_4 <- df %>% 
+  filter(`Faixa de Renda` == "4")  %>% 
+  sample_frac(0.15)
+Faixa_5 <- df %>% 
+  filter(`Faixa de Renda` == "5")  %>% 
+  sample_frac(0.05)
+dados <- rbind(Faixa_1, Faixa_2, Faixa_3, Faixa_4, Faixa_5)
+ggplot(dados, mapping = aes(x = `Faixa de Renda`)) + 
+  geom_bar(aes(fill = Tipologia, y = (..count..)/sum(..count..))) +   
+  # geom_text(aes( label = scales::percent(..prop..),
+  #                  y= ..prop.. ), stat= "count", vjust = -.5) +
+  scale_y_continuous(labels=scales::percent, expand = c(0,0)) +
+  ylab(NULL) +
+  scale_fill_brewer(palette="Spectral")+
+  theme_minimal_hgrid() +
+  theme(legend.position = "bottom")
+```
+
+]
+
+.pull-right[
+
+* Após uma análise da distribuição das tipologias habitacionais por faixa de 
+renda, alguns governos projetam políticas públicas focadas na construção de 
+unidades para as faixas de renda mais necessitadas.
+
+* E.g.:
+  - Objetivo da Política habitacional: eliminar o déficit habitacional 
+  concentrado nas famílias de baixa renda (faixas 1 e 2), aqui ilustrados 
+  através da tipologia "Moradia Precária"
+  - Método: Construção ou incentivo à construção de unidades para estas faixas
+  de renda
+  - Motivo: deixado ao sabor do mercado, apenas unidades para as faixas de renda
+  mais elevadas serão construídas e o déficit habitacional irá perdurar.
+
+]
+
+---
+# Introdução
+
+#### Construção de unidades direcionadas para a baixa renda
+
+.pull-left[
+
+```{r} 
+set.seed(1)
+baseprobs <- matrix(c(
+  0.10, 0.30, 0.40, 0.15, 0.05, # Apartamento
+  0.15, 0.40, 0.20, 0.20, 0.05, # Casa pré-fabricada
+  0.05, 0.10, 0.35, 0.35, 0.15, # Casa Alvenaria
+  0.80, 0.20, 0.00, 0.00, 0.00, # Moradia Precária
+  0.00, 0.00, 0.05, 0.25, 0.70, # Cobertura
+  0.00, 0.00, 0.00, 0.00, 1.00),# Cobertura Duplex
+  nrow = 6, byrow = TRUE)
+dT <- genData(10000)
+dX <- genOrdCat(dT, adjVar = NULL, baseprobs = baseprobs,
+                catVar = c("6. Apartamento", "5. Casa pré-fabricada", 
+                           "4. Casa Alvenaria", "3. Moradia precária", 
+                           "2. Cobertura", "1. Cobertura Duplex"),
+                   prefix = "Tipo", rho = .8, corstr = "cs", asFactor = FALSE)
+# renda <- c("até 30.000", "de 30.000 a 100.000", "de 100.000 a 200.000", 
+#              "de 200.000 a 500.000", "acima de 500.000")
+df <- melt(dX, id = "id", variable.name = "Tipologia", value.name = "Faixa de Renda")
+levels(df$Tipologia) <- c("Cobertura Duplex", "Cobertura", "Moradia precária",
+                         "Casa Alvenaria", "Casa pré-fabricada", "Apartamento")
+df$`Faixa de Renda` <- factor(df$`Faixa de Renda`, ordered = TRUE)
+Faixa_1 <- df %>% 
+  filter(`Faixa de Renda` == "1") %>% 
+  sample_frac(0.15)
+Faixa_2 <- df %>% 
+  filter(`Faixa de Renda` == "2")  %>% 
+  sample_frac(0.30)
+Faixa_3 <- df %>% 
+  filter(`Faixa de Renda` == "3") %>% 
+  sample_frac(0.35)
+Faixa_4 <- df %>% 
+  filter(`Faixa de Renda` == "4")  %>% 
+  sample_frac(0.15)
+Faixa_5 <- df %>% 
+  filter(`Faixa de Renda` == "5")  %>% 
+  sample_frac(0.05)
+dados <- rbind(Faixa_1, Faixa_2, Faixa_3, Faixa_4, Faixa_5)
+ggplot(dados, mapping = aes(x = `Faixa de Renda`)) + 
+  geom_bar(aes(fill = Tipologia, y = (..count..)/sum(..count..))) +   
+  # geom_text(aes( label = scales::percent(..prop..),
+  #                  y= ..prop.. ), stat= "count", vjust = -.5) +
+  scale_y_continuous(labels=scales::percent, expand = c(0,0)) +
+  ylab(NULL) +
+  scale_fill_brewer(palette="Spectral")+
+  theme_minimal_hgrid() +
+  theme(legend.position = "bottom")
+```
+
+]
+
+.pull-right[
+
+* *Trickle-up*: Após a execução da política habitacional desenhada na produção de 
+unidades para as famílias das menores faixas de renda, verifica-se que apenas a
+segunda faixa de renda foi realmente beneficiada.
+
+* Após o programa, os beneficiários da Faixa 1 alienaram seus imóveis para os
+  verdadeiros beneficiados com o programa, as famílias da Faixa 2.
+
+* Após alienar as unidades para a Faixa 2, os beneficiários da Faixa 1 voltam a
+ocupar terras públicas e privadas e constroem mais unidades de moradia precária.
+
+]
+
+> housing units previously affordable to lower-income households are bought by 
+upper-income groups (gentrification). This happens quite often in 
+government-subsidized housing when the overall housing market is heavily 
+constrained by land use regulations or the lack of infrastructure expansion, 
+which constrains land supply. Higher-income groups then “invade” the housing 
+stock of the lower-income groups `r Citep(bib, 'bertaud', after = ', p. 241')`.
+
+---
+# Introdução
+
+#### Ações governamentais no sentido de aumentar a oferta de fatores visando dar maior eficiência ao MI
+
+.pull-left[
+
+```{r}
+set.seed(1)
+baseprobs <- matrix(c(
+  0.15, 0.25, 0.25, 0.25, 0.10, # Apartamento
+  0.40, 0.30, 0.20, 0.10, 0.00, # Casa pré-fabricada
+  0.05, 0.15, 0.35, 0.35, 0.10, # Casa Alvenaria
+  0.85, 0.15, 0.00, 0.00, 0.00, # Moradia Precária
+  0.00, 0.05, 0.15, 0.30, 0.50, # Cobertura
+  0.00, 0.00, 0.00, 0.20, 0.80),# Cobertura Duplex
+  nrow = 6, byrow = TRUE)
+dT <- genData(10000)
+dX <- genOrdCat(dT, adjVar = NULL, baseprobs = baseprobs,
+                catVar = c("6. Apartamento", "5. Casa pré-fabricada", 
+                           "4. Casa Alvenaria", "3. Moradia precária", 
+                           "2. Cobertura", "1. Cobertura Duplex"),
+                   prefix = "Tipo", rho = .8, corstr = "cs", asFactor = FALSE)
+# renda <- c("até 30.000", "de 30.000 a 100.000", "de 100.000 a 200.000", 
+#              "de 200.000 a 500.000", "acima de 500.000")
+df <- melt(dX, id = "id", variable.name = "Tipologia", value.name = "Faixa de Renda")
+levels(df$Tipologia) <- c("Cobertura Duplex", "Cobertura", "Moradia precária",
+                         "Casa Alvenaria", "Casa pré-fabricada", "Apartamento")
+df$`Faixa de Renda` <- factor(df$`Faixa de Renda`, ordered = TRUE)
+Faixa_1 <- df %>% 
+  filter(`Faixa de Renda` == "1") %>% 
+  sample_frac(0.10)
+Faixa_2 <- df %>% 
+  filter(`Faixa de Renda` == "2")  %>% 
+  sample_frac(0.35)
+Faixa_3 <- df %>% 
+  filter(`Faixa de Renda` == "3") %>% 
+  sample_frac(0.35)
+Faixa_4 <- df %>% 
+  filter(`Faixa de Renda` == "4")  %>% 
+  sample_frac(0.15)
+Faixa_5 <- df %>% 
+  filter(`Faixa de Renda` == "5")  %>% 
+  sample_frac(0.05)
+dados <- rbind(Faixa_1, Faixa_2, Faixa_3, Faixa_4, Faixa_5)
+ggplot(dados, mapping = aes(x = `Faixa de Renda`)) + 
+  geom_bar(aes(fill = Tipologia, y = (..count..)/sum(..count..))) +
+  scale_y_continuous(labels=scales::percent, expand = c(0,0)) +
+  ylab(NULL) +
+  scale_fill_brewer(palette="Spectral")+
+  theme_minimal_hgrid() +
+  theme(legend.position = "bottom")
+```
+]
+
+.pull-right[
+
+* E.g.: há uma melhora na distribuição de renda:
+
+  - Por um lado, muda-se a composição das faixas de renda, diminuindo as pessoas
+  com renda abaixo da mínima necessária para acessar o mercado formal de moradia
+  - No longo prazo, as famílias beneficiadas com uma maior renda tendem a migrar 
+  de uma determinada tipologia para outra. 
+  - Os imóveis desocupados pelas famílias com aumento de renda são ocuapados
+  pelas famílias de menor renda.
+
+]
+
+> The tricke-down affordability theory assumes that any increase in the housing 
+stock, no matter at what unit price, will eventually improve the housing supply 
+of every household, even the poorest. Housholds benefiting from the supply 
+increase would move up to the new housing, thus freeing an equivalent number of 
+units that will become affordable to households with income lower than that of 
+the beneficiaries of new housing `r Citep(bib, 'bertaud', after = ', p. 239')`.
+
+---
+# Introdução
+
+* Existe um certo preconceito, nos países em desenvolvimento, com a chamada
+"financeirização" do mercado imobiliário.
+
+--
+
+* Especialistas geralmente defendem a segurança de posse, em lugar da 
+formalização propriedade.
+
+--
+
+* Embora as políticas de simples concessão de titularidade de imóveis não sejam
+realmente benéficas `r Citep(bib, "mooya2007")`
+  - E.g.: regularização fundiária sem segurança de posse.
+  - Após a concessão dos títulos, os beneficiários da regularização fundiária
+  podem mais facilmente alienar os seus imóveis e ocupar novas terras públicas 
+  ou privadas.
+  - Mercados informais podem ser mais eficientes do que os mercados de 
+  propriedades formais, devido aos altos custos de transação.
+
+--
+
+* A oferta de crédito imobiliário é essencial ao pleno desenvolvimento do 
+mercado imobiliário `r Citep(bib, "green")`.
+
+* Problemas surgiram, nos últimos anos, devido a diversos fatores:
+  - Baixas taxas de juros, incentivando a especulação imobiliária
+  - Desregulamentação do mercado de securitização de hipotecas, que elevou o 
+  risco das hipotecas
+  - As restrições ao aumento da oferta no mercado imobiliário, através de
+  regras de zoneamento muito rígidas.
+  
+--
+
+* O crédito imobiliário, portanto, não é o vilão da história.
 
 ---
 class: inverse, center, middle
@@ -402,6 +672,142 @@ background-size: contain
 # O Mercado Imobiliário e a Economia
 
 ---
+# O Mercado Imobiliário e a Economia
+
+### O impacto das variáveis macroeconômicas no MI
+
+.pull-left[
+
+```{r}
+knitr::include_graphics('https://raw.githubusercontent.com/lfpdroubi/dissertacao/master/index/images/macroInfluence-1.png')
+```
+
+
+]
+
+.pull-right[
+
+1. Um choque de demanda (representado pelo deslocamento da curva de demanda) por habitação leva inicialmente a um aumento do valor dos aluguéis.
+
+2. O aumento do valor dos aluguéis leva a um aumento do valor das residências.
+
+3. O aumento do valor dos imóveis leva a um maior nível de construção de residências
+
+4. O aumento no nível de construção leva a um aumento do estoque
+de residências, levando a um novo equilíbrio.
+
+]
+
+---
+# O Mercado Imobiliário e a Economia
+
+### O impacto das variáveis macroeconômicas no MI
+
+.pull-left[
+
+```{r}
+knitr::include_graphics('images/aumentoJuros.png')
+```
+
+]
+
+.pull-right[
+
+1. Um aumento nas taxas de juros da economia leva a uma menor
+demanda pelo investimento em imóveis, reduzindo os seus preços
+
+2. A redução do apetite dos investidores por imóveis tende a reduzir o nível de construção
+
+3. A redução da construção reduz os estoques de imóveis
+
+4. A redução do estoque de moradias acaba, por sua vez, levando
+a maiores aluguéis, levando a um novo equilíbrio.
+
+]
+
+---
+# O Mercado Imobiliário e a Economia
+
+### O impacto das variáveis macroeconômicas no MI         
+
+.pull-left[
+
+```{r}
+knitr::include_graphics('images/aumentoCustosConstrucao.png')
+```
+
+]
+
+.pull-right[
+
+1. Um aumento nos custos de construção leva a uma diminuição no
+nível de construção
+
+2. A diminuição do nível de construção diminui o estoque de imóveis
+
+3. A diminuição do estoque de imóveis leva a um aumento dos aluguéis
+
+4. O aumento dos aluguéis leva a um aumento no valor dos imóveis, levando a nova equilíbrio
+
+]
+
+---
+# O Mercado Imobiliário e a Economia
+
+#### A elasticidade-preço da oferta
+
+.pull-left[
+
+```{r, out.width='80%'}
+knitr::include_graphics('https://github.com/lfpdroubi/dissertacao/raw/master/index/images/supplyCurves.png')
+```
+
+]
+
+.pull-right[
+
+1. Alguns mercados possuem maiores restrições ao aumento da oferta de imóveis
+  - Questões geográficas
+  - Questões regulatórias
+  
+2. Em mercados com oferta mais elástica (*e.g* Alemanha), a rápida resposta da
+oferta a um choque de demanda provoca menos oscilação nos preços
+
+3. O contrário ocorre nos mercados de oferta menos elásticas: um choque de
+demanda tende a acarretar um forte aumento dos preços dos imóveis, com potencial
+para a formação de bolhas especulativas
+
+]
+
+---
+# O Mercado Imobiliário e a Economia
+
+#### A elasticidade-renda da demanda
+
+.pull-left[
+
+```{r, out.width='80%'}
+knitr::include_graphics('https://github.com/lfpdroubi/dissertacao/raw/master/index/images/income_elasticity.png')
+```
+
+]
+
+.pull-right[
+
+1. A Elasticidade-renda da demanda por habitação é menor do que 1,0.
+
+2. Famílias de baixa renda tendem a comprometer uma maior porcentagem da sua
+renda com habitação, o que pode chegar a 70% da renda familiar.
+
+3. Famílias de alta renda, no entanto, não tendem a consumir habitação em nível
+superior a um determinado limite satisfatório
+
+4. Ou seja, a partir de um determinado nível, a renda cresce, porém o consumo
+de habitação não cresce proporcionalmente.
+
+]
+
+---
 class: inverse, center, middle
 
 # Economia Urbana
@@ -425,11 +831,22 @@ knitr::include_graphics("https://raw.githubusercontent.com/lfpdroubi/dissertacao
 
 .pull-right[
 
-1. Cidades são mercados de trabalho `r Citep(bib, "bertaud")`!
+1. `r Citet(bib, "bertaud", after = ', p. 1')`: Cidades são mercados de trabalho!
 
-2. 
+2. Mercados transmitem, através dos preços, a informação que acaba gerando o
+ordenamento espacial das cidades;
+
+3. Planejadores urbanos, em geral, não entendem sobre mercados ou como a sua
+regulação deve ser feita;
+
+4. Economistas urbanos entendem os mercados e sabem como estes podem ser 
+regulados, porém raramente têm alguma participação no planejamento urbano;
+
+5. Falta de interação entre economistas urbanos e planejadores urbanos causa
+sérias disfunções no desenvolvimento das cidades!
 
 ]
+
 
 ---
 # Economia Urbana
@@ -447,10 +864,160 @@ knitr::include_graphics("https://raw.githubusercontent.com/lfpdroubi/dissertacao
 .pull-right[
 
 1. O Consumo habitacional está ligado à renda familiar `r Citep(bib, "bertaud")`!
+  - Padrões mínimos de habitação definidos por leis municipais (zoneamento, 
+  planos diretores) fazem com que algumas famílias não possuam renda suficiente
+  para consumir habitação no mercado formal
 
-2. 
 
 ]
+
+---
+# Economia Urbana
+
+.pull-left[
+
+```{r  out.width = "100%"}
+knitr::include_graphics("https://raw.githubusercontent.com/lfpdroubi/dissertacao/master/index/images/ofertaTerra-1.png")
+```
+
+]
+
+.pull-right[
+
+1. O Consumo habitacional está ligado à renda familiar `r Citep(bib, "bertaud")`!
+  - Padrões mínimos de habitação definidos por leis municipais (zoneamento, 
+  planos diretores) fazem com que algumas famílias não possuam renda suficiente
+  para consumir habitação no mercado formal
+  
+2. Uma mudança na oferta de terra urbana altera o consumo de habitação
+
+]
+
+---
+# Economia Urbana
+
+.pull-left[
+
+```{r  out.width = "100%"}
+knitr::include_graphics("https://raw.githubusercontent.com/lfpdroubi/dissertacao/master/index/images/ofertaHipotecas-1.png")
+```
+
+]
+
+.pull-right[
+
+1. O Consumo habitacional está ligado à renda familiar `r Citep(bib, "bertaud")`!
+  - Padrões mínimos de habitação definidos por leis municipais (zoneamento, 
+  planos diretores) fazem com que algumas famílias não possuam renda suficiente
+  para consumir habitação no mercado formal
+  
+2. Uma mudança na oferta de terra urbana altera o consumo de habitação
+
+3. Uma mudança na oferta de financiamento altera o consumo de habitação
+
+]
+
+---
+# Economia Urbana
+
+.pull-left[
+
+```{r  out.width = "100%"}
+knitr::include_graphics("https://raw.githubusercontent.com/lfpdroubi/dissertacao/master/index/images/vouchers-1.png")
+```
+
+]
+
+.pull-right[
+
+1. O Consumo habitacional está ligado à renda familiar `r Citep(bib, "bertaud")`!
+  - Padrões mínimos de habitação definidos por leis municipais (zoneamento, 
+  planos diretores) fazem com que algumas famílias não possuam renda suficiente
+  para consumir habitação no mercado formal
+  
+2. Uma mudança na oferta de terra urbana altera o consumo de habitação
+
+3. Uma mudança na oferta de financiamento altera o consumo de habitação
+
+4. Mesmo após mudanças na estrutura de oferta de terra e capital para a 
+população, podem restar famílias que não podem arcar com o consumo mínimo de
+habitação no mercado formal.
+
+]
+
+---
+class: center, middle
+# Economia Urbana
+
+```{r  out.width = "70%"}
+knitr::include_graphics("https://raw.githubusercontent.com/lfpdroubi/dissertacao/master/index/images/injustica_SP.jpg")
+```
+`r Citet(bib, "paraisopolis", before = "Fotografia de Tuca Vieira, ")`
+
+---
+# Economia Urbana
+
+* Comunidade **A** é muito pobre para substituir terra por capital.
+
+* Comunidade **B** pode fazê-lo.
+
+.pull-left[
+
+```{r  out.width = "100%"}
+knitr::include_graphics("https://raw.githubusercontent.com/lfpdroubi/dissertacao/master/index/images/consumoTerra.png")
+```
+
+]
+
+.pull-right[
+
+|                                |A (informal) | B (formal) |
+|:-------------------------------|------------:|-----------:|           
+| Número médio de andares        | 1           |   7        |
+| Área média por unidade (m2)    | 17,5        | 81,3       |
+| Área construída/hab. (m2)      | 3,5         | 23,21      |   
+| Área de terra/hab. (m2)        | 4,04        | 6,16       |
+| Área de terra/Área construída  | **1,16**    | **0,27**   |
+| Área de terra por unidade (m2) | 20,22       | 21,55      |
+| % ruas e áreas livres          | 13,5        | 46         |
+|  Pessoas por hectare           | 2,473       | 1,624      |
+Fonte: `r Citet(bib, "bertaud", after = ", p. 237")`.
+
+]
+
+---
+# Economia Urbana
+
+#### Ineficiência dos programas habitacionais que atuam pelo lado da oferta
+
+
+
+
+
+---
+# Economia Urbana
+
+* `r Citet(bib, "mooya2007")`: 
+
+> The point to underline here is that one must not make a priori assumptions 
+based on notions of formality or informality. 
+
+--
+
+* Concessão de títulos pode ajudar a aliviar a pobreza
+
+-- 
+
+* Porém isto depende dos custos de transação envolvidos
+
+--
+
+> The conceptual framework presented in this article brings together institutional arrangements, property rights and transaction costs as determinants of property 
+market liquidity. Market liquidity is argued as being important in the realisation 
+of the latent value of property, which in turn helps in the accumulation
+of capital for the poor. The basic empirical question then becomes determining 
+the link between property rights, transaction costs, market turnover and capital accumulation. Establishing this link will help to resolve th important question 
+of whether more formalised markets are harmful or beneficial to the urban poor.
 
 ---
 class: inverse, center, middle
@@ -712,6 +1279,13 @@ class: inverse, center, middle
 
 ---
 # Políticas para o Mercado Habitacional
+
+* Políticas habitacionais que atuam pelo lado da oferta:
+
+```{r}
+
+```
+
 
 * `r Citep(bib, "fischel1989")`
 

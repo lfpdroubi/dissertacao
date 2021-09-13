@@ -1,11 +1,11 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021/W32TeX) (preloaded format=pdflatex 2021.7.12)  13 JUL 2021 13:54
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021/W32TeX) (preloaded format=pdflatex 2021.8.28)  13 SEP 2021 10:09
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
 **thesis.tex
 (./thesis.tex
 LaTeX2e <2021-06-01> patch level 1
-L3 programming layer <2021-06-18>
+L3 programming layer <2021-08-27>
 (c:/Users/lfpdr/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/abntex2/abntex2.cl
 s
 Document Class: abntex2 2018/11/24 v-1.9.7 abnTeX2
@@ -513,12 +513,12 @@ File: bkm-pdftex.def 2020-11-06 v1.29 bookmark driver for pdfTeX (HO)
 \BKM@id=\count318
 )) (c:/Users/lfpdr/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/babel/babel.s
 ty
-Package: babel 2021/06/28 3.61 The Babel package
+Package: babel 2021/07/22 3.63 The Babel package
 (c:/Users/lfpdr/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/babel/babel.def
-File: babel.def 2021/06/28 3.61 Babel common definitions
+File: babel.def 2021/07/22 3.63 Babel common definitions
 \babel@savecnt=\count319
 \U@D=\dimen187
-\l@unhyphenated=\language6
+\l@unhyphenated=\language3
 
 (c:/Users/lfpdr/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/babel/txtbabel.d
 ef)
@@ -543,8 +543,17 @@ Package babel Info: Hyphen rules for 'newzealand' set to \l@english
 (c:/Users/lfpdr/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/babel-portuges/b
 razil.ldf
 Language: portuges 2021/07/09 v1.2t Portuguese support from the babel system
-Package babel Info: Hyphen rules for 'brazil' set to \l@portuguese
-(babel)             (\language5). Reported on input line 111.
+
+Package babel Warning: No hyphenation patterns were preloaded for
+(babel)                the language 'Portuguese' into the format.
+(babel)                Please, configure your TeX system to add them and
+(babel)                rebuild the format. Now I will use the patterns
+(babel)                preloaded for \language=0 instead on input line 53.
+
+Package babel Info: Hyphen rules for 'portuges' set to \l@english
+(babel)             (\language0). Reported on input line 54.
+Package babel Info: Hyphen rules for 'brazil' set to \l@english
+(babel)             (\language0). Reported on input line 111.
 Package babel Info: Making " an active character on input line 143.
 ))
 (c:/Users/lfpdr/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/enumitem/enumitem.
@@ -883,16 +892,18 @@ Package: tracklang 2020/06/30 v1.5 (NLCT) Track Languages
 
 (c:/Users/lfpdr/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/tracklang/trackl
 ang.tex))
-(c:/Users/lfpdr/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/glossaries-english
-/glossaries-english.ldf
-File: glossaries-english.ldf 2014/11/23 v1.0
-)
-(c:/Users/lfpdr/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/glossaries-portuge
-s/glossaries-pt-BR.ldf
-File: glossaries-pt-BR.ldf 2014/11/23 v1.0
 
-(c:/Users/lfpdr/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/glossaries-portuge
-s/glossaries-portuges-utf8.ldf))
+Package glossaries Warning: No language module detected for `english'.
+(glossaries)                Language modules need to be installed separately.
+(glossaries)                Please check on CTAN for a bundle called
+(glossaries)                `glossaries-english' or similar.
+
+
+Package glossaries Warning: No language module detected for `brazil'.
+(glossaries)                Language modules need to be installed separately.
+(glossaries)                Please check on CTAN for a bundle called
+(glossaries)                `glossaries-portuges' or similar.
+
 \gls@level=\count378
 \@gls@tmpb=\toks42
 \gls@tmplen=\skip263
@@ -1196,7 +1207,7 @@ File: logreq.def 2010/08/04 v1.0 logreq spec v1.0
 \bibhang=\skip278
 \blx@bcfin=\read4
 \blx@bcfout=\write4
-\blx@langwohyphens=\language7
+\blx@langwohyphens=\language4
 \c@mincomprange=\count428
 \c@maxcomprange=\count429
 \c@mincompwidth=\count430
@@ -1330,15 +1341,15 @@ File: abnt.bbx 2018-11-17 v3.4 ABNT BibLaTeX citation style
 (c:/Users/lfpdr/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/l3packages/xparse/
 xparse.sty
 (c:/Users/lfpdr/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/l3kernel/expl3.sty
-Package: expl3 2021-06-18 L3 programming layer (loader) 
+Package: expl3 2021-08-27 L3 programming layer (loader) 
 
 (c:/Users/lfpdr/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/l3backend/l3backen
 d-pdftex.def
-File: l3backend-pdftex.def 2021-05-07 L3 backend support: PDF output (pdfTeX)
+File: l3backend-pdftex.def 2021-08-04 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count508
 \l__pdf_internal_box=\box65
 ))
-Package: xparse 2021-06-18 L3 Experimental document command parser
+Package: xparse 2021-08-27 L3 Experimental document command parser
 ) (c:/Users/lfpdr/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/xpatch/xpatch.st
 y
 Package: xpatch 2020/03/25 v0.3a Extending etoolbox patching commands
@@ -1755,7 +1766,7 @@ Package biblatex Info: Automatic encoding selection.
 (biblatex)             Assuming data encoding 'utf8'.
 Package biblatex Info: Document encoding is UTF8 ....
 Package biblatex Info: ... and expl3
-(biblatex)             2021-06-18 L3 programming layer (loader) 
+(biblatex)             2021-08-27 L3 programming layer (loader) 
 (biblatex)             is new enough (at least 2020/04/06),
 (biblatex)             setting 'casechanger=expl3'.
 
@@ -1766,169 +1777,8 @@ Package: blx-case-expl3 2020/12/31 v3.16 expl3 case changing code for biblatex
 \openout4 = `thesis.bcf'.
 
 Package biblatex Info: Trying to load bibliographic data...
-Package biblatex Info: ... file 'thesis.bbl' found.
-(./thesis.bbl
-
-Package biblatex Warning: Biber reported the following issues
-(biblatex)                with 'pereira':
-(biblatex)                - Entry 'pereira' (bib/cap4.bib): Invalid format '27 
-mai. 2017' of date field 'urldate' - ignoring.
-
-
-Package biblatex Warning: Biber reported the following issues
-(biblatex)                with 'serapicos':
-(biblatex)                - Entry 'serapicos' (bib/cap3.bib): Invalid format '0
-7 mar. 2020' of date field 'urldate' - ignoring.
-
-
-Package biblatex Warning: Biber reported the following issues
-(biblatex)                with 'economist':
-(biblatex)                - Entry 'economist' (bib/cap4.bib): Invalid format '0
-4 mai. 2020' of date field 'urldate' - ignoring.
-
-
-Package biblatex Warning: Biber reported the following issues
-(biblatex)                with 'gpg':
-(biblatex)                - Entry 'gpg' (bib/cap4.bib): Invalid format '9 mai. 
-2020' of date field 'urldate' - ignoring.
-
-
-Package biblatex Warning: Biber reported the following issues
-(biblatex)                with 'singer':
-(biblatex)                - Entry 'singer' (bib/cap4.bib): Invalid format '12 a
-br 2017' of date field 'urldate' - ignoring.
-
-
-Package biblatex Warning: Biber reported the following issues
-(biblatex)                with 'fmiera':
-(biblatex)                - Entry 'fmiera' (bib/cap4.bib): Invalid format '28 m
-ar. 2020' of date field 'urldate' - ignoring.
-
-
-Package biblatex Warning: Biber reported the following issues
-(biblatex)                with 'paraisopolis':
-(biblatex)                - Entry 'paraisopolis' (bib/cap5.bib): Invalid format
- '24 mai. 2020' of date field 'urldate' - ignoring.
-
-
-Package biblatex Warning: The following entry could not be found
-(biblatex)                in the database (refsection 4):
-(biblatex)                @bertaud
-(biblatex)                Please verify the spelling and rerun
-(biblatex)                LaTeX afterwards.
-
-
-Package biblatex Warning: The following entry could not be found
-(biblatex)                in the database (refsection 4):
-(biblatex)                bertau
-(biblatex)                Please verify the spelling and rerun
-(biblatex)                LaTeX afterwards.
-
-
-Package biblatex Warning: Biber reported the following issues
-(biblatex)                with 'fmitwa':
-(biblatex)                - Entry 'fmitwa' (bib/cap6.bib): Invalid format '28 m
-ar. 2020' of date field 'urldate' - ignoring.
-
-
-Package biblatex Warning: Biber reported the following issues
-(biblatex)                with 'CSUSHPINSA':
-(biblatex)                - Entry 'CSUSHPINSA' (bib/cap6.bib): Invalid format '
-2020-9-9' of date field 'urldate' - ignoring.
-
-
-Package biblatex Warning: Biber reported the following issues
-(biblatex)                with 'RHVRUSQ156N':
-(biblatex)                - Entry 'RHVRUSQ156N' (bib/cap6.bib): Invalid format 
-'2020-9-9' of date field 'urldate' - ignoring.
-
-
-Package biblatex Warning: Biber reported the following issues
-(biblatex)                with 'RSAHORUSQ156S':
-(biblatex)                - Entry 'RSAHORUSQ156S' (bib/cap6.bib): Invalid forma
-t '2020-9-9' of date field 'urldate' - ignoring.
-
-
-Package biblatex Warning: Biber reported the following issues
-(biblatex)                with 'ERENTUSQ176N':
-(biblatex)                - Entry 'ERENTUSQ176N' (bib/cap6.bib): Invalid format
- '2021-3-23' of date field 'urldate' - ignoring.
-
-
-Package biblatex Warning: Biber reported the following issues
-(biblatex)                with 'EVACANTUSQ176N':
-(biblatex)                - Entry 'EVACANTUSQ176N' (bib/cap6.bib): Invalid form
-at '2021-3-23' of date field 'urldate' - ignoring.
-
-
-Package biblatex Warning: Biber reported the following issues
-(biblatex)                with 'RRVRUSQ156N':
-(biblatex)                - Entry 'RRVRUSQ156N' (bib/cap6.bib): Invalid format 
-'2020-9-9' of date field 'urldate' - ignoring.
-
-
-Package biblatex Warning: The following entry could not be found
-(biblatex)                in the database (refsection 5):
-(biblatex)                NBERw2506
-(biblatex)                Please verify the spelling and rerun
-(biblatex)                LaTeX afterwards.
-
-
-Package biblatex Warning: Biber reported the following issues
-(biblatex)                with 'fmitwa':
-(biblatex)                - Entry 'fmitwa' (bib/cap6.bib): Invalid format '28 m
-ar. 2020' of date field 'urldate' - ignoring.
-
-
-Package biblatex Warning: Biber reported the following issues
-(biblatex)                with 'krugman2020':
-(biblatex)                - Entry 'krugman2020' (bib/cap7.bib): Invalid format 
-'27 mar. 2020' of date field 'urldate' - ignoring.
-
-
-Package biblatex Warning: Biber reported the following issues
-(biblatex)                with 'fmiem':
-(biblatex)                - Entry 'fmiem' (bib/cap7.bib): Invalid format '28 ma
-r. 2020' of date field 'urldate' - ignoring.
-
-
-Package biblatex Warning: Biber reported the following issues
-(biblatex)                with 'lei14011':
-(biblatex)                - Entry 'lei14011' (bib/cap8.bib): Invalid format '22
- set. 2020' of date field 'urldate' - ignoring.
-
-
-Package biblatex Warning: Biber reported the following issues
-(biblatex)                with 'lei9636':
-(biblatex)                - Entry 'lei9636' (bib/cap8.bib): Invalid format '22 
-set. 2020' of date field 'urldate' - ignoring.
-
-
-Package biblatex Warning: Biber reported the following issues
-(biblatex)                with 'economist-rent-control':
-(biblatex)                - Entry 'economist-rent-control' (bib/cap8.bib): Inva
-lid format '07 jun. 2020' of date field 'urldate' - ignoring.
-
-
-Package biblatex Warning: Biber reported the following issues
-(biblatex)                with 'terraredonda':
-(biblatex)                - Entry 'terraredonda' (bib/cap8.bib): Invalid format
- '24 mai. 2020' of date field 'urldate' - ignoring.
-
-
-Package biblatex Warning: Biber reported the following issues
-(biblatex)                with 'sigsc':
-(biblatex)                - Entry 'sigsc' (bib/cap8.bib): Invalid format '07 ju
-n. 2020' of date field 'urldate' - ignoring.
-
-
-Package biblatex Warning: Biber reported the following issues
-(biblatex)                with 'rolnik':
-(biblatex)                - Entry 'rolnik' (bib/cap8.bib): Invalid format '25 m
-ai. 2020' of date field 'urldate' - ignoring.
-
-)
-LaTeX Info: Redefining \firstsecond on input line 197.
+Package biblatex Info: ... file 'thesis.bbl' not found.
+No file thesis.bbl.
 Package biblatex Info: Reference section=0 on input line 197.
 Package biblatex Info: Reference segment=0 on input line 197.
 Package caption Info: Begin \AtBeginDocument code.
@@ -1971,13 +1821,19 @@ Package microtype Info: Loading generic protrusion settings for font family
 {c:/Users/lfpdr/AppData/Roaming/TinyTeX/texmf-var/fonts/map/pdftex/updmap/pdfte
 x.map} <./setup/vertical_sigla_fundo_claro.pdf>]
 Overfull \hbox (16.0585pt too wide) in paragraph at lines 232--232
-[]\T1/phv/m/n/10 (-10) Dissertação sub-me-tida ao Pro-grama de Pós-Graduação
+[]\T1/phv/m/n/10 (-10) Dissertação sub-metida ao Pro-grama de Pós-Graduação
  []
 
 
 Overfull \hbox (22.67914pt too wide) in paragraph at lines 232--232
-\T1/phv/m/n/10 (-10) em En-ge-nha-ria de Trans-por-tes e Ges-tão Ter-ri-to-rial
- da Uni-
+\T1/phv/m/n/10 (-10) em En-gen-haria de Trans-portes e Gestão Ter-ri-to-rial da
+ Uni-
+ []
+
+
+Overfull \hbox (25.60876pt too wide) in paragraph at lines 232--232
+\T1/phv/m/n/10 (-10) ver-si-dade Fed-eral de Santa Cata-rina para a obtenção do
+ tí-
  []
 
 
@@ -2094,304 +1950,34 @@ Package textcomp Info: Symbol \textasciiacute not provided by
 
 ] [8
 
-] (./thesis.lof
-Overfull \hbox (1.41573pt too wide) detected at line 53
- \T1/phv/m/n/12 102
- []
-
-
-Overfull \hbox (1.41573pt too wide) detected at line 55
- \T1/phv/m/n/12 103
- []
-
-
-Overfull \hbox (1.41573pt too wide) detected at line 57
- \T1/phv/m/n/12 104
- []
-
-
-Overfull \hbox (1.41573pt too wide) detected at line 59
- \T1/phv/m/n/12 105
- []
-
-
-Overfull \hbox (1.41573pt too wide) detected at line 61
- \T1/phv/m/n/12 107
- []
-
-
-Overfull \hbox (1.41573pt too wide) detected at line 63
- \T1/phv/m/n/12 109
- []
-
+]
+No file thesis.lof.
 [9
 
-]
-Overfull \hbox (1.41573pt too wide) detected at line 65
- \T1/phv/m/n/12 111
- []
-
-
-Overfull \hbox (1.41573pt too wide) detected at line 67
- \T1/phv/m/n/12 115
- []
-
-
-Overfull \hbox (1.41573pt too wide) detected at line 69
- \T1/phv/m/n/12 115
- []
-
-
-Overfull \hbox (1.41573pt too wide) detected at line 71
- \T1/phv/m/n/12 116
- []
-
-
-Overfull \hbox (1.41573pt too wide) detected at line 73
- \T1/phv/m/n/12 119
- []
-
-
-Overfull \hbox (1.41573pt too wide) detected at line 75
- \T1/phv/m/n/12 120
- []
-
-
-Overfull \hbox (1.41573pt too wide) detected at line 77
- \T1/phv/m/n/12 122
- []
-
-
-Overfull \hbox (1.41573pt too wide) detected at line 79
- \T1/phv/m/n/12 123
- []
-
-
-Overfull \hbox (1.41573pt too wide) detected at line 81
- \T1/phv/m/n/12 124
- []
-
-
-Overfull \hbox (1.41573pt too wide) detected at line 83
- \T1/phv/m/n/12 125
- []
-
-
-Overfull \hbox (1.41573pt too wide) detected at line 85
- \T1/phv/m/n/12 142
- []
-
-
-Overfull \hbox (1.41573pt too wide) detected at line 87
- \T1/phv/m/n/12 143
- []
-
-
-Overfull \hbox (1.41573pt too wide) detected at line 89
- \T1/phv/m/n/12 143
- []
-
-
-Overfull \hbox (1.41573pt too wide) detected at line 91
- \T1/phv/m/n/12 145
- []
-
-
-Overfull \hbox (1.41573pt too wide) detected at line 93
- \T1/phv/m/n/12 146
- []
-
-
-Overfull \hbox (1.41573pt too wide) detected at line 95
- \T1/phv/m/n/12 146
- []
-
-
-Overfull \hbox (1.41573pt too wide) detected at line 97
- \T1/phv/m/n/12 147
- []
-
-
-Overfull \hbox (1.41573pt too wide) detected at line 99
- \T1/phv/m/n/12 148
- []
-
-
-Overfull \hbox (1.41573pt too wide) detected at line 101
- \T1/phv/m/n/12 149
- []
-
-
-Overfull \hbox (1.41573pt too wide) detected at line 103
- \T1/phv/m/n/12 150
- []
-
-
-Overfull \hbox (1.41573pt too wide) detected at line 105
- \T1/phv/m/n/12 151
- []
-
-
-Overfull \hbox (1.41573pt too wide) detected at line 107
- \T1/phv/m/n/12 152
- []
-
-
-Overfull \hbox (1.41573pt too wide) detected at line 109
- \T1/phv/m/n/12 153
- []
-
-
-Overfull \hbox (1.41573pt too wide) detected at line 111
- \T1/phv/m/n/12 163
- []
-
-
-Overfull \hbox (1.41573pt too wide) detected at line 113
- \T1/phv/m/n/12 164
- []
-
-
-Overfull \hbox (1.41573pt too wide) detected at line 115
- \T1/phv/m/n/12 165
- []
-
-
-Overfull \hbox (1.41573pt too wide) detected at line 117
- \T1/phv/m/n/12 166
- []
-
-
-Overfull \hbox (1.41573pt too wide) detected at line 119
- \T1/phv/m/n/12 166
- []
-
-
-Overfull \hbox (1.41573pt too wide) detected at line 121
- \T1/phv/m/n/12 167
- []
-
-
-Overfull \hbox (1.41573pt too wide) detected at line 123
- \T1/phv/m/n/12 169
- []
-
-
-Overfull \hbox (1.41573pt too wide) detected at line 125
- \T1/phv/m/n/12 170
- []
-
-
-Overfull \hbox (1.41573pt too wide) detected at line 127
- \T1/phv/m/n/12 170
- []
-
-
-Overfull \hbox (1.41573pt too wide) detected at line 129
- \T1/phv/m/n/12 171
- []
-
-
-Overfull \hbox (1.41573pt too wide) detected at line 131
- \T1/phv/m/n/12 172
- []
-
-
-Overfull \hbox (1.41573pt too wide) detected at line 133
- \T1/phv/m/n/12 175
- []
-
-[10]
-Overfull \hbox (1.41573pt too wide) detected at line 135
- \T1/phv/m/n/12 178
- []
-
-
-Overfull \hbox (1.41573pt too wide) detected at line 137
- \T1/phv/m/n/12 179
- []
-
-
-Overfull \hbox (1.41573pt too wide) detected at line 139
- \T1/phv/m/n/12 183
- []
-
-
-Overfull \hbox (1.41573pt too wide) detected at line 141
- \T1/phv/m/n/12 184
- []
-
-
-Overfull \hbox (1.41573pt too wide) detected at line 143
- \T1/phv/m/n/12 199
- []
-
-
-Overfull \hbox (1.41573pt too wide) detected at line 145
- \T1/phv/m/n/12 199
- []
-
-
-Overfull \hbox (1.41573pt too wide) detected at line 147
- \T1/phv/m/n/12 208
- []
-
-
-Overfull \hbox (1.41573pt too wide) detected at line 149
- \T1/phv/m/n/12 209
- []
-
-
-Overfull \hbox (1.41573pt too wide) detected at line 151
- \T1/phv/m/n/12 211
- []
-
-
-Overfull \hbox (1.41573pt too wide) detected at line 153
- \T1/phv/m/n/12 211
- []
-
-
-Overfull \hbox (1.41573pt too wide) detected at line 155
- \T1/phv/m/n/12 230
- []
-
-
-Overfull \hbox (1.41573pt too wide) detected at line 157
- \T1/phv/m/n/12 231
- []
-
-) [11] (./thesis.loq
+] (./thesis.loq
 Overfull \hbox (1.41573pt too wide) detected at line 4
- \T1/phv/m/n/12 144
+ \T1/phv/m/n/12 143
  []
 
-) [12
+) [10
 
-] (./thesis.lot
-Overfull \hbox (1.41573pt too wide) detected at line 11
- \T1/phv/m/n/12 185
- []
-
-
-Overfull \hbox (1.41573pt too wide) detected at line 13
- \T1/phv/m/n/12 185
- []
-
-
-Overfull \hbox (1.41573pt too wide) detected at line 15
- \T1/phv/m/n/12 207
- []
-
-) [13
+]
+No file thesis.lot.
+[11
 
 ]
 Using TeX to sort glossary entries---this may take a while
-[14
+
+Underfull \hbox (badness 1117) in paragraph at lines 420--420
+[]|\T1/phv/m/n/12 (+10) Associação Brasileira das En-ti-dades de Crédito Imo-bi
+l-iário e
+ []
+
+[12
 
 
 
-] [15]pdfTeX warning (ext4): destination with the same identifier (name{table.0
+] [13]pdfTeX warning (ext4): destination with the same identifier (name{table.0
 .0}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
@@ -2401,502 +1987,25 @@ Overfull \hbox (5.20578pt too wide) in alignment at lines 426--426
 [] [] 
  []
 
-[16
+[14
 
 
-
-] (./thesis.toc
-LaTeX Font Info:    Font shape `T1/phv/bx/it' in size <12> not available
-(Font)              Font shape `T1/phv/b/it' tried instead on input line 86.
-LaTeX Font Info:    Font shape `T1/phv/b/it' in size <12> not available
-(Font)              Font shape `T1/phv/b/sl' tried instead on input line 86.
-[17
 
 ]
-Overfull \hbox (1.41573pt too wide) detected at line 158
- \T1/phv/b/n/12 101
- []
+No file thesis.toc.
+[15
 
-
-Overfull \hbox (1.41573pt too wide) detected at line 160
- \T1/phv/m/n/12 102
- []
-
-
-Overfull \hbox (1.41573pt too wide) detected at line 162
- \T1/phv/m/n/12 102
- []
-
-
-Overfull \hbox (1.41573pt too wide) detected at line 164
- \T1/phv/m/n/12 105
- []
-
-
-Overfull \hbox (1.41573pt too wide) detected at line 166
- \T1/phv/m/n/12 108
- []
-
-
-Overfull \hbox (1.41573pt too wide) detected at line 168
- \T1/phv/b/n/12 108
- []
-
-
-Overfull \hbox (1.41573pt too wide) detected at line 170
- \T1/phv/b/n/12 110
- []
-
-
-Overfull \hbox (1.41573pt too wide) detected at line 172
- \T1/phv/m/n/12 112
- []
-
-
-Overfull \hbox (1.41573pt too wide) detected at line 174
- \T1/phv/b/n/12 112
- []
-
-
-Overfull \hbox (1.41573pt too wide) detected at line 176
- \T1/phv/b/n/12 113
- []
-
-[18]
-Overfull \hbox (1.41573pt too wide) detected at line 178
- \T1/phv/m/n/12 116
- []
-
-
-Overfull \hbox (1.41573pt too wide) detected at line 180
- \T1/phv/m/n/12 117
- []
-
-
-Overfull \hbox (1.41573pt too wide) detected at line 182
- \T1/phv/b/n/12 119
- []
-
-
-Overfull \hbox (1.41573pt too wide) detected at line 184
- \T1/phv/b/n/12 123
- []
-
-
-Overfull \hbox (1.41573pt too wide) detected at line 186
- \T1/phv/m/n/12 125
- []
-
-
-Overfull \hbox (1.41573pt too wide) detected at line 188
- \T1/phv/m/n/12 125
- []
-
-
-Overfull \hbox (1.41573pt too wide) detected at line 192
- \T1/phv/b/n/12 129
- []
-
-
-Overfull \hbox (1.41573pt too wide) detected at line 194
- \T1/phv/m/n/12 130
- []
-
-
-Overfull \hbox (1.41573pt too wide) detected at line 196
- \T1/phv/m/n/12 130
- []
-
-
-Overfull \hbox (1.41573pt too wide) detected at line 198
- \T1/phv/b/n/12 131
- []
-
-
-Overfull \hbox (1.41573pt too wide) detected at line 200
- \T1/phv/m/n/12 132
- []
-
-
-Overfull \hbox (1.41573pt too wide) detected at line 202
- \T1/phv/m/n/12 132
- []
-
-
-Overfull \hbox (1.41573pt too wide) detected at line 204
- \T1/phv/m/sl/12 133
- []
-
-
-Overfull \hbox (1.41573pt too wide) detected at line 206
- \T1/phv/m/sl/12 133
- []
-
-
-Overfull \hbox (1.41573pt too wide) detected at line 208
- \T1/phv/m/n/12 133
- []
-
-
-Overfull \hbox (1.41573pt too wide) detected at line 210
- \T1/phv/m/n/12 135
- []
-
-
-Overfull \hbox (1.41573pt too wide) detected at line 212
- \T1/phv/m/n/12 135
- []
-
-
-Overfull \hbox (1.41573pt too wide) detected at line 214
- \T1/phv/m/sl/12 136
- []
-
-
-Overfull \hbox (1.41573pt too wide) detected at line 216
- \T1/phv/m/sl/12 136
- []
-
-
-Overfull \hbox (1.41573pt too wide) detected at line 218
- \T1/phv/b/n/12 137
- []
-
-
-Overfull \hbox (1.41573pt too wide) detected at line 220
- \T1/phv/m/n/12 137
- []
-
-
-Overfull \hbox (1.41573pt too wide) detected at line 222
- \T1/phv/m/sl/12 137
- []
-
-
-Overfull \hbox (1.41573pt too wide) detected at line 224
- \T1/phv/m/n/12 137
- []
-
-
-Overfull \hbox (1.41573pt too wide) detected at line 226
- \T1/phv/m/sl/12 137
- []
-
-
-Overfull \hbox (1.41573pt too wide) detected at line 228
- \T1/phv/m/sl/12 138
- []
-
-
-Overfull \hbox (1.41573pt too wide) detected at line 230
- \T1/phv/m/sl/12 139
- []
-
-
-Overfull \hbox (1.41573pt too wide) detected at line 232
- \T1/phv/m/n/12 139
- []
-
-
-Overfull \hbox (1.41573pt too wide) detected at line 234
- \T1/phv/m/n/12 139
- []
-
-
-Overfull \hbox (1.41573pt too wide) detected at line 236
- \T1/phv/m/sl/12 139
- []
-
-
-Overfull \hbox (1.41573pt too wide) detected at line 238
- \T1/phv/m/sl/12 139
- []
-
-
-Overfull \hbox (1.41573pt too wide) detected at line 244
- \T1/phv/b/n/12 141
- []
-
-
-Overfull \hbox (1.41573pt too wide) detected at line 246
- \T1/phv/m/n/12 143
- []
-
-
-Overfull \hbox (1.41573pt too wide) detected at line 248
- \T1/phv/m/n/12 144
- []
-
-
-Overfull \hbox (1.41573pt too wide) detected at line 250
- \T1/phv/m/n/12 147
- []
-
-
-Overfull \hbox (1.41573pt too wide) detected at line 252
- \T1/phv/b/n/12 148
- []
-
-
-Overfull \hbox (1.41573pt too wide) detected at line 254
- \T1/phv/b/n/12 152
- []
-
-[19]
-Overfull \hbox (1.41573pt too wide) detected at line 256
- \T1/phv/m/n/12 153
- []
-
-
-Overfull \hbox (1.41573pt too wide) detected at line 258
- \T1/phv/m/n/12 154
- []
-
-
-Overfull \hbox (1.41573pt too wide) detected at line 262
- \T1/phv/b/n/12 159
- []
-
-
-Overfull \hbox (1.41573pt too wide) detected at line 264
- \T1/phv/m/n/12 160
- []
-
-
-Overfull \hbox (1.41573pt too wide) detected at line 266
- \T1/phv/m/n/12 160
- []
-
-
-Overfull \hbox (1.41573pt too wide) detected at line 268
- \T1/phv/m/n/12 161
- []
-
-
-Overfull \hbox (1.41573pt too wide) detected at line 270
- \T1/phv/b/n/12 162
- []
-
-
-Overfull \hbox (1.41573pt too wide) detected at line 272
- \T1/phv/b/n/12 164
- []
-
-
-Overfull \hbox (1.41573pt too wide) detected at line 274
- \T1/phv/b/n/12 167
- []
-
-
-Overfull \hbox (1.41573pt too wide) detected at line 276
- \T1/phv/b/n/12 168
- []
-
-
-Overfull \hbox (1.41573pt too wide) detected at line 278
- \T1/phv/m/n/12 168
- []
-
-
-Overfull \hbox (1.41573pt too wide) detected at line 280
- \T1/phv/m/n/12 173
- []
-
-
-Overfull \hbox (1.41573pt too wide) detected at line 282
- \T1/phv/b/n/12 173
- []
-
-
-Overfull \hbox (1.41573pt too wide) detected at line 284
- \T1/phv/b/n/12 175
- []
-
-
-Overfull \hbox (1.41573pt too wide) detected at line 286
- \T1/phv/b/n/12 176
- []
-
-
-Overfull \hbox (1.41573pt too wide) detected at line 288
- \T1/phv/b/n/12 176
- []
-
-
-Overfull \hbox (1.41573pt too wide) detected at line 290
- \T1/phv/b/n/12 178
- []
-
-
-Overfull \hbox (1.41573pt too wide) detected at line 292
- \T1/phv/m/n/12 179
- []
-
-
-Overfull \hbox (1.41573pt too wide) detected at line 294
- \T1/phv/m/n/12 182
- []
-
-
-Overfull \hbox (1.41573pt too wide) detected at line 296
- \T1/phv/m/sl/12 183
- []
-
-
-Overfull \hbox (1.41573pt too wide) detected at line 300
- \T1/phv/m/n/12 187
- []
-
-
-Overfull \hbox (1.41573pt too wide) detected at line 302
- \T1/phv/m/n/12 188
- []
-
-
-Overfull \hbox (1.41573pt too wide) detected at line 304
- \T1/phv/m/n/12 188
- []
-
-
-Overfull \hbox (1.41573pt too wide) detected at line 308
- \T1/phv/b/n/12 193
- []
-
-
-Overfull \hbox (1.41573pt too wide) detected at line 310
- \T1/phv/m/n/12 194
- []
-
-
-Overfull \hbox (1.41573pt too wide) detected at line 312
- \T1/phv/m/n/12 195
- []
-
-
-Overfull \hbox (1.41573pt too wide) detected at line 314
- \T1/phv/m/n/12 198
- []
-
-
-Overfull \hbox (1.41573pt too wide) detected at line 316
- \T1/phv/b/n/12 200
- []
-
-
-Overfull \hbox (1.41573pt too wide) detected at line 318
- \T1/phv/b/n/12 201
- []
-
-
-Overfull \hbox (1.41573pt too wide) detected at line 320
- \T1/phv/b/n/12 201
- []
-
-
-Overfull \hbox (1.41573pt too wide) detected at line 322
- \T1/phv/m/n/12 202
- []
-
-
-Overfull \hbox (1.41573pt too wide) detected at line 324
- \T1/phv/m/n/12 210
- []
-
-
-Overfull \hbox (1.41573pt too wide) detected at line 326
- \T1/phv/m/n/12 210
- []
-
-
-Overfull \hbox (1.41573pt too wide) detected at line 328
- \T1/phv/m/sl/12 210
- []
-
-
-Overfull \hbox (1.41573pt too wide) detected at line 330
- \T1/phv/b/n/12 212
- []
-
-
-Overfull \hbox (1.41573pt too wide) detected at line 332
- \T1/phv/m/n/12 212
- []
-
-
-Overfull \hbox (1.41573pt too wide) detected at line 334
- \T1/phv/m/n/12 214
- []
-
-[20]
-Overfull \hbox (1.41573pt too wide) detected at line 336
- \T1/phv/m/n/12 214
- []
-
-
-Overfull \hbox (1.41573pt too wide) detected at line 338
- \T1/phv/m/n/12 215
- []
-
-
-Overfull \hbox (1.41573pt too wide) detected at line 340
- \T1/phv/m/n/12 215
- []
-
-
-Overfull \hbox (1.41573pt too wide) detected at line 344
- \T1/phv/b/n/12 222
- []
-
-
-Overfull \hbox (1.41573pt too wide) detected at line 346
- \T1/phv/m/n/12 227
- []
-
-
-Overfull \hbox (1.41573pt too wide) detected at line 348
- \T1/phv/m/n/12 228
- []
-
-
-Overfull \hbox (1.41573pt too wide) detected at line 350
- \T1/phv/m/n/12 228
- []
-
-
-Overfull \hbox (1.41573pt too wide) detected at line 352
- \T1/phv/m/n/12 228
- []
-
-
-Overfull \hbox (1.41573pt too wide) detected at line 354
- \T1/phv/m/n/12 229
- []
-
-
-Overfull \hbox (1.41573pt too wide) detected at line 365
- \T1/phv/b/n/12 230
- []
-
-
-Overfull \hbox (1.41573pt too wide) detected at line 367
- \T1/phv/m/n/12 230
- []
-
-
-Overfull \hbox (1.41573pt too wide) detected at line 378
- \T1/phv/b/n/12 233
- []
-
-
-Overfull \hbox (1.41573pt too wide) detected at line 384
- \T1/phv/b/n/12 234
- []
-
-) [21]
+]
 \blx@maxsegment@1=\count523
 \blx@sectionciteorder@1=\count524
 Package biblatex Info: Reference section=1 on input line 448.
 Package biblatex Info: Setting label 'refsection:1' on input line 448.
+
+LaTeX Warning: Citation 'realestate' on page 16 undefined on input line 453.
+
+
+LaTeX Warning: Citation 'realestate' on page 16 undefined on input line 470.
+
 LaTeX Font Info:    Font shape `U/futm/m/n' will be
 (Font)              scaled to size 6.99199pt on input line 478.
 LaTeX Font Info:    Font shape `U/futm/m/n' will be
@@ -2905,974 +2014,2885 @@ LaTeX Font Info:    Font shape `T1/phv/m/it' in size <7.6> not available
 (Font)              Font shape `T1/phv/m/sl' tried instead on input line 478.
 LaTeX Font Info:    Font shape `T1/phv/m/it' in size <6> not available
 (Font)              Font shape `T1/phv/m/sl' tried instead on input line 478.
-[22
+[16
 
 
-] [23]
-Overfull \hbox (2.50531pt too wide) in paragraph at lines 548--549
- []\T1/phv/m/n/12 (-10) Ano|
+]
+
+LaTeX Warning: Citation 'olsen_opinion_2016' on page 17 undefined on input line
+ 515.
+
+
+LaTeX Warning: Citation 'uol' on page 17 undefined on input line 520.
+
+
+LaTeX Warning: Citation 'demanda' on page 17 undefined on input line 530.
+
+
+LaTeX Warning: Citation 'ritchie_urbanization_2018' on page 17 undefined on inp
+ut line 535.
+
+[17]
+Overfull \hbox (5.33691pt too wide) in paragraph at lines 553--553
+ []|\T1/phv/m/n/12 (-10) Ano|
  []
 
 
-Underfull \hbox (badness 10000) in alignment at lines 544--561
+Underfull \hbox (badness 10000) in alignment at lines 550--555
 [] [] [] [] [] []
  []
 
 
-Overfull \hbox (2.50531pt too wide) in paragraph at lines 564--565
- []\T1/phv/m/n/12 (-10) Ano|
+Overfull \hbox (5.33691pt too wide) in paragraph at lines 557--557
+ []|\T1/phv/m/n/12 (-10) Ano|
  []
 
 
-Underfull \hbox (badness 10000) in alignment at lines 561--577
+Underfull \hbox (badness 10000) in alignment at lines 555--559
 [] [] [] [] [] []
  []
 
 
-Overfull \hbox (7.85184pt too wide) in paragraph at lines 579--580
- []\T1/phv/m/n/12 (-10) 1990|
+Overfull \hbox (10.62343pt too wide) in paragraph at lines 560--560
+ []|\T1/phv/m/n/12 (-10) 1990|
  []
 
 
-Overfull \hbox (7.85184pt too wide) in paragraph at lines 592--593
- []\T1/phv/m/n/12 (-10) 1995|
+Overfull \hbox (10.62343pt too wide) in paragraph at lines 561--561
+ []|\T1/phv/m/n/12 (-10) 1995|
  []
 
 
-Overfull \hbox (8.22383pt too wide) in paragraph at lines 605--606
- []\T1/phv/m/n/12 (-10) 2000|
+Overfull \hbox (10.62343pt too wide) in paragraph at lines 562--562
+ []|\T1/phv/m/n/12 (-10) 2000|
  []
 
 
-Overfull \hbox (8.22383pt too wide) in paragraph at lines 618--619
- []\T1/phv/m/n/12 (-10) 2005|
+Overfull \hbox (10.62343pt too wide) in paragraph at lines 563--563
+ []|\T1/phv/m/n/12 (-10) 2005|
  []
 
 
-Overfull \hbox (8.22383pt too wide) in paragraph at lines 631--632
- []\T1/phv/m/n/12 (-10) 2009|
+Overfull \hbox (10.62343pt too wide) in paragraph at lines 564--564
+ []|\T1/phv/m/n/12 (-10) 2009|
  []
 
 
-Overfull \hbox (8.22383pt too wide) in paragraph at lines 644--645
- []\T1/phv/m/n/12 (-10) 2014|
+Overfull \hbox (10.62343pt too wide) in paragraph at lines 565--565
+ []|\T1/phv/m/n/12 (-10) 2014|
  []
 
 
-Underfull \hbox (badness 10000) in alignment at lines 577--657
+Underfull \hbox (badness 10000) in alignment at lines 559--567
 [] [] [] [] [] []
  []
 
-[24]
-<images/urban-pop-in-out-of-slums.png, id=822, 3412.75pt x 2409.0pt>
+
+LaTeX Warning: Citation 'ibge' on page 18 undefined on input line 591.
+
+
+LaTeX Warning: Citation 'ibge2' on page 18 undefined on input line 599.
+
+
+LaTeX Warning: Citation 'silva' on page 18 undefined on input line 602.
+
+[18]
+<images/urban-pop-in-out-of-slums.png, id=223, 3412.75pt x 2409.0pt>
 File: images/urban-pop-in-out-of-slums.png Graphic file (type png)
 <use images/urban-pop-in-out-of-slums.png>
 Package pdftex.def Info: images/urban-pop-in-out-of-slums.png  used on input li
-ne 704.
+ne 614.
 (pdftex.def)             Requested size: 318.49861pt x 224.81396pt.
-[25 <./images/urban-pop-in-out-of-slums.png (PNG copy)>] [26]
-LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 8
-37.
-(c:/Users/lfpdr/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/base/t1cmtt.fd
-File: t1cmtt.fd 2019/12/16 v2.5j Standard LaTeX font definitions
-)
-Package microtype Info: Loading generic protrusion settings for font family
-(microtype)             `cmtt' (encoding: T1).
-(microtype)             For optimal results, create family-specific settings.
-(microtype)             See the microtype manual for details.
-[27] [28]
 
-Package biblatex Warning: Month out of range or not an integer
-(biblatex)                at entry 'silva' on input line 837.
+LaTeX Warning: Citation 'ritchie_urbanization_2018' on page 19 undefined on inp
+ut line 622.
 
-Package biblatex Info: Reference section=0 on input line 838.
-[29]
-<images/fluxo-1.png, id=930, 752.8125pt x 436.63126pt>
+
+LaTeX Warning: Citation 'krugman-emergentes' on page 19 undefined on input line
+ 629.
+
+
+LaTeX Warning: Citation 'economist-housing-2020' on page 19 undefined on input 
+line 658.
+
+[19 <./images/urban-pop-in-out-of-slums.png (PNG copy)>] [20]
+
+LaTeX Warning: Empty bibliography on input line 747.
+
+Package biblatex Info: Reference section=0 on input line 748.
+[21]
+<images/fluxo-1.png, id=291, 602.25pt x 349.305pt>
 File: images/fluxo-1.png Graphic file (type png)
 <use images/fluxo-1.png>
-Package pdftex.def Info: images/fluxo-1.png  used on input line 871.
-(pdftex.def)             Requested size: 364.00139pt x 211.12631pt.
-[30
+Package pdftex.def Info: images/fluxo-1.png  used on input line 781.
+(pdftex.def)             Requested size: 364.00139pt x 211.1303pt.
+[22
 
  <./images/fluxo-1.png>]
 \blx@maxsegment@2=\count525
 \blx@sectionciteorder@2=\count526
-Package biblatex Info: Reference section=2 on input line 879.
-Package biblatex Info: Setting label 'refsection:2' on input line 879.
-[31
-
-] [32
+Package biblatex Info: Reference section=2 on input line 789.
+Package biblatex Info: Setting label 'refsection:2' on input line 789.
+[23
 
 ]
-<images/pop-urb-mundo-1.png, id=968, 469.755pt x 325.215pt>
+
+LaTeX Warning: Citation 'kuznets' on page 24 undefined on input line 831.
+
+
+LaTeX Warning: Citation 'rangel1956' on page 24 undefined on input line 831.
+
+
+LaTeX Warning: Citation 'rangel1988' on page 24 undefined on input line 834.
+
+
+LaTeX Warning: Citation 'rangel1988' on page 24 undefined on input line 841.
+
+[24
+
+]
+
+LaTeX Warning: Citation 'doi:10.1177/0959683609356587' on page 25 undefined on 
+input line 892.
+
+<images/pop-urb-mundo-1.png, id=319, 469.755pt x 325.215pt>
 File: images/pop-urb-mundo-1.png Graphic file (type png)
 <use images/pop-urb-mundo-1.png>
-Package pdftex.def Info: images/pop-urb-mundo-1.png  used on input line 1000.
+Package pdftex.def Info: images/pop-urb-mundo-1.png  used on input line 910.
 (pdftex.def)             Requested size: 364.00139pt x 251.99931pt.
-[33]
-<images/pop-urb-continents-1.png, id=979, 469.755pt x 325.215pt>
+[25]
+
+LaTeX Warning: Citation 'doi:10.1177/0959683609356587' on page 26 undefined on 
+input line 918.
+
+<images/pop-urb-continents-1.png, id=332, 469.755pt x 325.215pt>
 File: images/pop-urb-continents-1.png Graphic file (type png)
 <use images/pop-urb-continents-1.png>
-Package pdftex.def Info: images/pop-urb-continents-1.png  used on input line 10
-16.
+Package pdftex.def Info: images/pop-urb-continents-1.png  used on input line 92
+6.
 (pdftex.def)             Requested size: 364.00139pt x 251.99931pt.
-<images/pop-urb-brazil-latinAmerica-1.png, id=982, 469.755pt x 325.215pt>
+
+LaTeX Warning: Citation 'doi:10.1177/0959683609356587' on page 26 undefined on 
+input line 934.
+
+<images/pop-urb-brazil-latinAmerica-1.png, id=333, 469.755pt x 325.215pt>
 File: images/pop-urb-brazil-latinAmerica-1.png Graphic file (type png)
 <use images/pop-urb-brazil-latinAmerica-1.png>
 Package pdftex.def Info: images/pop-urb-brazil-latinAmerica-1.png  used on inpu
-t line 1028.
+t line 938.
 (pdftex.def)             Requested size: 364.00139pt x 251.99931pt.
-[34 <./images/pop-urb-mundo-1.png> <./images/pop-urb-continents-1.png>]
-<images/pop-urb-brazil-developed-1.png, id=994, 469.755pt x 325.215pt>
+[26 <./images/pop-urb-mundo-1.png> <./images/pop-urb-continents-1.png>]
+
+LaTeX Warning: Citation 'doi:10.1177/0959683609356587' on page 27 undefined on 
+input line 946.
+
+<images/pop-urb-brazil-developed-1.png, id=344, 469.755pt x 325.215pt>
 File: images/pop-urb-brazil-developed-1.png Graphic file (type png)
 <use images/pop-urb-brazil-developed-1.png>
 Package pdftex.def Info: images/pop-urb-brazil-developed-1.png  used on input l
-ine 1053.
+ine 963.
 (pdftex.def)             Requested size: 364.00139pt x 251.99931pt.
-[35 <./images/pop-urb-brazil-latinAmerica-1.png>]
-<images/pop-urb-brazil-brics-1.png, id=1004, 469.755pt x 325.215pt>
+[27 <./images/pop-urb-brazil-latinAmerica-1.png>]
+
+LaTeX Warning: Citation 'doi:10.1177/0959683609356587' on page 28 undefined on 
+input line 971.
+
+<images/pop-urb-brazil-brics-1.png, id=353, 469.755pt x 325.215pt>
 File: images/pop-urb-brazil-brics-1.png Graphic file (type png)
 <use images/pop-urb-brazil-brics-1.png>
 Package pdftex.def Info: images/pop-urb-brazil-brics-1.png  used on input line 
-1068.
+978.
 (pdftex.def)             Requested size: 364.00139pt x 251.99931pt.
-[36 <./images/pop-urb-brazil-developed-1.png> <./images/pop-urb-brazil-brics-1.
-png>] [37] [38] [39] [40] [41] [42] [43] [44] [45] [46] [47] [48] [49] [50]
 
-Package biblatex Warning: Month out of range
-(biblatex)                at entry 'california' on input line 1815.
+LaTeX Warning: Citation 'doi:10.1177/0959683609356587' on page 28 undefined on 
+input line 986.
+
+[28 <./images/pop-urb-brazil-developed-1.png> <./images/pop-urb-brazil-brics-1.
+png>]
+
+LaTeX Warning: Citation 'rangel1986a' on page 29 undefined on input line 1019.
 
 
-Package biblatex Warning: Month out of range
-(biblatex)                at entry 'finlandia' on input line 1815.
+LaTeX Warning: Citation 'rangel1988' on page 29 undefined on input line 1035.
+
+[29]
+
+LaTeX Warning: Citation 'rangel1985' on page 30 undefined on input line 1065.
+
+
+LaTeX Warning: Citation 'rangel1961' on page 30 undefined on input line 1077.
+
+
+LaTeX Warning: Citation 'rangel1960' on page 30 undefined on input line 1083.
+
+
+LaTeX Warning: Citation 'faoro' on page 30 undefined on input line 1088.
+
+[30]
+
+LaTeX Warning: Citation 'dualidade-basica' on page 31 undefined on input line 1
+099.
+
+
+LaTeX Warning: Citation 'dualidade-basica' on page 31 undefined on input line 1
+106.
+
+
+LaTeX Warning: Citation 'dualidade-basica' on page 31 undefined on input line 1
+107.
+
+
+LaTeX Warning: Citation 'dualidade-basica' on page 31 undefined on input line 1
+110.
+
+
+LaTeX Warning: Citation 'dualidade-basica' on page 31 undefined on input line 1
+118.
+
+
+LaTeX Warning: Citation 'dualidade-basica' on page 31 undefined on input line 1
+120.
+
+
+LaTeX Warning: Citation 'rangel1956' on page 31 undefined on input line 1134.
+
+
+LaTeX Warning: Citation 'rangel1956' on page 31 undefined on input line 1144.
+
+
+LaTeX Warning: Citation 'rangel1956' on page 31 undefined on input line 1146.
+
+[31]
+
+LaTeX Warning: Citation 'furtado2009' on page 32 undefined on input line 1156.
+
+
+LaTeX Warning: Citation 'furtado2009' on page 32 undefined on input line 1167.
+
+
+LaTeX Warning: Citation 'furtado2005' on page 32 undefined on input line 1177.
+
+
+LaTeX Warning: Citation 'rangel1989' on page 32 undefined on input line 1179.
+
+
+LaTeX Warning: Citation 'furtado2005' on page 32 undefined on input line 1193.
+
+
+LaTeX Warning: Citation 'furtado2005' on page 32 undefined on input line 1196.
+
+
+LaTeX Warning: Citation 'furtado2005' on page 32 undefined on input line 1198.
+
+
+LaTeX Warning: Citation 'furtado2005' on page 32 undefined on input line 1200.
+
+[32]
+
+LaTeX Warning: Citation 'rangel1989' on page 33 undefined on input line 1209.
+
+
+LaTeX Warning: Citation 'rangel1989' on page 33 undefined on input line 1212.
+
+
+LaTeX Warning: Citation 'rangel1989' on page 33 undefined on input line 1217.
+
+
+LaTeX Warning: Citation 'amoroso' on page 33 undefined on input line 1219.
+
+
+LaTeX Warning: Citation 'rangel1989' on page 33 undefined on input line 1231.
+
+
+LaTeX Warning: Citation 'rangel1989' on page 33 undefined on input line 1242.
+
+[33]
+
+LaTeX Warning: Citation 'rangel1989' on page 34 undefined on input line 1255.
+
+
+LaTeX Warning: Citation 'rangel1989' on page 34 undefined on input line 1260.
+
+
+LaTeX Warning: Citation 'rangel1989' on page 34 undefined on input line 1267.
+
+
+LaTeX Warning: Citation 'accioly2018' on page 34 undefined on input line 1272.
+
+
+LaTeX Warning: Citation 'rangel1989' on page 34 undefined on input line 1277.
+
+
+LaTeX Warning: Citation 'rangel1961' on page 34 undefined on input line 1284.
+
+
+LaTeX Warning: Citation 'furtado2009' on page 34 undefined on input line 1305.
+
+[34]
+
+LaTeX Warning: Citation 'rangel1989' on page 35 undefined on input line 1316.
+
+
+LaTeX Warning: Citation 'rangel1989' on page 35 undefined on input line 1318.
+
+
+LaTeX Warning: Citation 'rangel1956' on page 35 undefined on input line 1327.
+
+[35]
+
+LaTeX Warning: Citation 'rangel1954' on page 36 undefined on input line 1352.
+
+
+LaTeX Warning: Citation 'rangel1954' on page 36 undefined on input line 1375.
+
+
+LaTeX Warning: Citation 'rangel1954' on page 36 undefined on input line 1378.
+
+
+LaTeX Warning: Citation 'rangel1954' on page 36 undefined on input line 1391.
+
+
+LaTeX Warning: Citation 'rangel1954' on page 36 undefined on input line 1393.
+
+
+LaTeX Warning: Citation 'rangel1954' on page 36 undefined on input line 1405.
+
+[36]
+
+LaTeX Warning: Citation 'rangel1986b' on page 37 undefined on input line 1420.
+
+
+LaTeX Warning: Citation 'rangel1986b' on page 37 undefined on input line 1422.
+
+
+LaTeX Warning: Citation 'rangel1986b' on page 37 undefined on input line 1432.
+
+
+Overfull \hbox (11.97122pt too wide) in paragraph at lines 1428--1433
+\T1/phv/m/n/12 (-10) econo-mia nat-u-ral, cau-sando por isso mesmo, o fenô-meno
+ do \T1/phv/b/n/12 (-10) êx-odo ru-ral\T1/phv/m/n/12 (-10) '' ([]). 
+ []
+
+
+LaTeX Warning: Citation 'rangel1962' on page 37 undefined on input line 1443.
+
+
+LaTeX Warning: Citation 'rangel1986b' on page 37 undefined on input line 1445.
+
+
+LaTeX Warning: Citation 'rangel1986b' on page 37 undefined on input line 1455.
+
+[37]
+
+LaTeX Warning: Citation 'rangel1962' on page 38 undefined on input line 1465.
+
+
+LaTeX Warning: Citation 'rangel1988' on page 38 undefined on input line 1468.
+
+
+LaTeX Warning: Citation 'rangel1986c' on page 38 undefined on input line 1473.
+
+
+LaTeX Warning: Citation 'rangel1988' on page 38 undefined on input line 1484.
+
+
+LaTeX Warning: Citation 'rangel1986a' on page 38 undefined on input line 1500.
+
+[38]
+
+LaTeX Warning: Citation 'rangel1986a' on page 39 undefined on input line 1517.
+
+
+LaTeX Warning: Citation 'dualidade-basica' on page 39 undefined on input line 1
+530.
+
+
+LaTeX Warning: Citation 'dualidade-basica' on page 39 undefined on input line 1
+533.
+
+
+LaTeX Warning: Citation 'rangel1960' on page 39 undefined on input line 1540.
+
+
+LaTeX Warning: Citation 'rangel1960' on page 39 undefined on input line 1549.
+
+[39]
+
+LaTeX Warning: Citation 'rangel1960' on page 40 undefined on input line 1575.
+
+
+LaTeX Warning: Citation 'rangel1986b' on page 40 undefined on input line 1590.
+
+[40]
+
+LaTeX Warning: Citation 'rangel1985' on page 41 undefined on input line 1618.
+
+
+LaTeX Warning: Citation 'rangel1986b' on page 41 undefined on input line 1625.
+
+
+LaTeX Warning: Citation 'inflacao-brasileira' on page 41 undefined on input lin
+e 1643.
+
+
+LaTeX Warning: Citation 'rangel' on page 41 undefined on input line 1643.
+
+
+LaTeX Warning: Citation 'rangel1986b' on page 41 undefined on input line 1658.
+
+[41]
+
+LaTeX Warning: Citation 'serapicos' on page 42 undefined on input line 1689.
+
+
+LaTeX Warning: Citation 'berlim' on page 42 undefined on input line 1694.
+
+
+LaTeX Warning: Citation 'londres' on page 42 undefined on input line 1694.
+
+
+LaTeX Warning: Citation 'california' on page 42 undefined on input line 1694.
+
+
+LaTeX Warning: Citation 'suecia' on page 42 undefined on input line 1694.
+
+
+LaTeX Warning: Citation 'newzeland' on page 42 undefined on input line 1694.
+
+
+LaTeX Warning: Citation 'finlandia' on page 42 undefined on input line 1694.
+
+[42]
+
+LaTeX Warning: Citation 'lalan' on page 43 undefined on input line 1720.
+
+
+LaTeX Warning: Empty bibliography on input line 1725.
+
+Package biblatex Info: Reference section=0 on input line 1726.
+[43]
+\blx@maxsegment@3=\count527
+\blx@sectionciteorder@3=\count528
+Package biblatex Info: Reference section=3 on input line 1729.
+Package biblatex Info: Setting label 'refsection:3' on input line 1729.
+
+LaTeX Warning: Citation 'rangel1956' on page 44 undefined on input line 1740.
+
+[44
+
+]
+Overfull \hbox (4.77454pt too wide) in paragraph at lines 1746--1753
+[]\T1/phv/m/n/12 (-10) Este capí-tulo tem como ob-je-tivo ap-re-sen-tar os con-
+ceitos econômi-cos necessários
+ []
+
+
+LaTeX Warning: Citation 'fukuyama' on page 45 undefined on input line 1762.
+
+
+LaTeX Warning: Citation 'zizek2011' on page 45 undefined on input line 1764.
+
+
+LaTeX Warning: Citation 'menand_francis_nodate' on page 45 undefined on input l
+ine 1766.
+
+
+LaTeX Warning: Citation 'zizek' on page 45 undefined on input line 1781.
+
+LaTeX Font Info:    Font shape `T1/phv/b/it' in size <12> not available
+(Font)              Font shape `T1/phv/b/sl' tried instead on input line 1784.
+
+LaTeX Warning: Citation 'singer' on page 45 undefined on input line 1786.
+
+[45
+
+]
+
+LaTeX Warning: Citation 'rangel1956' on page 46 undefined on input line 1825.
+
+
+LaTeX Warning: Citation 'singer' on page 46 undefined on input line 1835.
+
+
+LaTeX Warning: Citation 'singer' on page 46 undefined on input line 1840.
+
+
+LaTeX Warning: Citation 'singer' on page 46 undefined on input line 1850.
+
+
+LaTeX Warning: Citation 'singer' on page 46 undefined on input line 1854.
+
+
+Overfull \hbox (5.40012pt too wide) in paragraph at lines 1848--1855
+[]\T1/phv/m/n/12 (-10) Enquanto para os \T1/phv/m/sl/12 (-10) marx-is-tas \T1/p
+hv/m/n/12 (-10) a econo-mia política é a ciên-cia do so-cial, abrangendo
+ []
+
+[46]
+
+LaTeX Warning: Citation 'passosnogami' on page 47 undefined on input line 1865.
+
+
+
+LaTeX Warning: Citation 'rossetti' on page 47 undefined on input line 1867.
+
+
+LaTeX Warning: Citation 'rossetti' on page 47 undefined on input line 1876.
+
+
+LaTeX Warning: Citation 'krugman-emergentes' on page 47 undefined on input line
+ 1908.
+
+[47]
+
+LaTeX Warning: Citation 'wheaton1999' on page 48 undefined on input line 1935.
+
+
+LaTeX Warning: Citation 'wheaton1999' on page 48 undefined on input line 1952.
+
+
+LaTeX Warning: Citation 'shelter' on page 48 undefined on input line 1954.
+
+[48]
+
+LaTeX Warning: Citation 'shelter' on page 49 undefined on input line 1972.
+
+
+LaTeX Warning: Citation 'berlim' on page 49 undefined on input line 1978.
+
+
+LaTeX Warning: Citation 'shelter' on page 49 undefined on input line 1983.
+
+
+LaTeX Warning: Citation 'shelter' on page 49 undefined on input line 1989.
+
+<images/MIResidencial-1.png, id=539, 602.25pt x 349.305pt>
+File: images/MIResidencial-1.png Graphic file (type png)
+<use images/MIResidencial-1.png>
+Package pdftex.def Info: images/MIResidencial-1.png  used on input line 1992.
+(pdftex.def)             Requested size: 318.49861pt x 184.73634pt.
+
+LaTeX Warning: Citation 'shelter' on page 49 undefined on input line 2000.
+
+
+LaTeX Warning: Citation 'shelter' on page 49 undefined on input line 2003.
+
+[49 <./images/MIResidencial-1.png>]
+
+LaTeX Warning: Citation 'NBR1465301' on page 50 undefined on input line 2030.
+
+
+LaTeX Warning: Citation 'ADAMS2010' on page 50 undefined on input line 2034.
+
+
+LaTeX Warning: Citation 'Case2000' on page 50 undefined on input line 2048.
+
+
+LaTeX Warning: Citation 'silver' on page 50 undefined on input line 2049.
+
+
+Overfull \hbox (3.46774pt too wide) in paragraph at lines 2045--2052
+\T1/phv/m/n/12 (-10) stituem uma grande parte dos port-fo-lios bancários. Jus-t
+a-mente por isto, crises bancárias
+ []
+
+
+Overfull \hbox (7.33623pt too wide) in paragraph at lines 2045--2052
+\T1/phv/m/n/12 (-10) es-tão fre-quente-mente as-so-ci-adas a su-per-ex-posição 
+do se-tor bancário no [][][]MI[][] ([]).
+ []
+
+[50]
+
+LaTeX Warning: Citation 'Case2000' on page 51 undefined on input line 2055.
+
+
+LaTeX Warning: Citation 'economist-housing-2020' on page 51 undefined on input 
+line 2061.
+
+
+LaTeX Warning: Citation 'fmiera' on page 51 undefined on input line 2063.
+
+
+LaTeX Warning: Citation 'Case2000' on page 51 undefined on input line 2082.
+
+
+LaTeX Warning: Citation 'economist-housing-2020' on page 51 undefined on input 
+line 2082.
+
+
+LaTeX Warning: Citation 'economist-housing-2020' on page 51 undefined on input 
+line 2093.
+
+
+LaTeX Warning: Citation 'economist-housing-2020' on page 51 undefined on input 
+line 2101.
+
+
+LaTeX Warning: Citation 'economist-housing-2020' on page 51 undefined on input 
+line 2105.
+
+
+Overfull \hbox (2.19687pt too wide) in paragraph at lines 2103--2107
+[]\T1/phv/m/n/12 (-10) Ainda de acordo com a \T1/phv/m/sl/12 (-10) The Economis
+t\T1/phv/m/n/12 (-10) , fe-liz-mente os gov-er-nos es-tão começando
+ []
 
 [51]
 
-Package biblatex Warning: Month out of range or not an integer
-(biblatex)                at entry 'furtado2009' on input line 1815.
+LaTeX Warning: Citation 'economist-housing-2020' on page 52 undefined on input 
+line 2115.
 
 
-Package biblatex Warning: Month out of range or not an integer
-(biblatex)                at entry 'londres' on input line 1815.
+LaTeX Warning: Citation 'Case2000' on page 52 undefined on input line 2120.
 
 
-Package biblatex Warning: Month out of range or not an integer
-(biblatex)                at entry 'berlim' on input line 1815.
+LaTeX Warning: Citation 'Zhu' on page 52 undefined on input line 2144.
 
-[52] [53]
+[52]
 
-Package biblatex Warning: Month out of range or not an integer
-(biblatex)                at entry 'suecia' on input line 1815.
+LaTeX Warning: Citation 'Case2000' on page 53 undefined on input line 2167.
 
-Package biblatex Info: Reference section=0 on input line 1816.
+
+LaTeX Warning: Citation 'Case2000' on page 53 undefined on input line 2170.
+
+
+LaTeX Warning: Citation 'NBR1465301' on page 53 undefined on input line 2211.
+
+[53]
+
+LaTeX Warning: Citation 'NBR1465301' on page 54 undefined on input line 2222.
+
+
+LaTeX Warning: Citation 'NBR1465301' on page 54 undefined on input line 2242.
+
+
+LaTeX Warning: Citation 'NBR1465301' on page 54 undefined on input line 2246.
+
 [54]
-\blx@maxsegment@3=\count527
-\blx@sectionciteorder@3=\count528
-Package biblatex Info: Reference section=3 on input line 1819.
-Package biblatex Info: Setting label 'refsection:3' on input line 1819.
 
-LaTeX Font Warning: Font shape `T1/phv/m/scit' undefined
-(Font)              using `T1/phv/m/sc' instead on input line 1830.
+LaTeX Warning: Citation 'varian' on page 55 undefined on input line 2265.
 
-[55
-
-]
-LaTeX Font Info:    Font shape `T1/phv/b/it' in size <12> not available
-(Font)              Font shape `T1/phv/b/sl' tried instead on input line 1874.
-[56
-
-] [57] [58] [59]
-<images/MIResidencial-1.png, id=1465, 752.8125pt x 436.63126pt>
-File: images/MIResidencial-1.png Graphic file (type png)
-<use images/MIResidencial-1.png>
-Package pdftex.def Info: images/MIResidencial-1.png  used on input line 2082.
-(pdftex.def)             Requested size: 318.49861pt x 184.73634pt.
-[60 <./images/MIResidencial-1.png>] [61] [62] [63] [64] [65]
-<images/equilibrioMercado-1.png, id=1587, 469.755pt x 325.215pt>
+<images/equilibrioMercado-1.png, id=615, 469.755pt x 325.215pt>
 File: images/equilibrioMercado-1.png Graphic file (type png)
 <use images/equilibrioMercado-1.png>
-Package pdftex.def Info: images/equilibrioMercado-1.png  used on input line 236
+Package pdftex.def Info: images/equilibrioMercado-1.png  used on input line 227
 6.
 (pdftex.def)             Requested size: 318.49861pt x 220.49815pt.
-[66 <./images/equilibrioMercado-1.png>]
-<images/engel1-1.png, id=1618, 469.755pt x 325.215pt>
+
+LaTeX Warning: Citation 'varian' on page 55 undefined on input line 2285.
+
+
+LaTeX Warning: Citation 'varian' on page 55 undefined on input line 2288.
+
+[55 <./images/equilibrioMercado-1.png>]
+
+LaTeX Warning: Citation 'varian' on page 56 undefined on input line 2307.
+
+
+LaTeX Warning: Citation 'varian' on page 56 undefined on input line 2310.
+
+
+LaTeX Warning: Citation 'varian' on page 56 undefined on input line 2317.
+
+
+LaTeX Warning: Citation 'Malpezzi2002TheRO' on page 56 undefined on input line 
+2322.
+
+
+LaTeX Warning: Citation 'varian' on page 56 undefined on input line 2329.
+
+<images/engel1-1.png, id=634, 469.755pt x 325.215pt>
 File: images/engel1-1.png Graphic file (type png)
 <use images/engel1-1.png>
-Package pdftex.def Info: images/engel1-1.png  used on input line 2430.
+Package pdftex.def Info: images/engel1-1.png  used on input line 2340.
 (pdftex.def)             Requested size: 318.49861pt x 220.49815pt.
-[67]
-<images/engel2-1.png, id=1633, 469.755pt x 325.215pt>
+[56]
+
+LaTeX Warning: Citation 'regulation' on page 57 undefined on input line 2348.
+
+
+LaTeX Warning: Citation 'regulation' on page 57 undefined on input line 2351.
+
+<images/engel2-1.png, id=647, 469.755pt x 325.215pt>
 File: images/engel2-1.png Graphic file (type png)
 <use images/engel2-1.png>
-Package pdftex.def Info: images/engel2-1.png  used on input line 2452.
+Package pdftex.def Info: images/engel2-1.png  used on input line 2362.
 (pdftex.def)             Requested size: 318.49861pt x 220.49815pt.
-[68 <./images/engel1-1.png> <./images/engel2-1.png>]
-<images/income_elasticity.png, id=1647, 722.7pt x 542.5068pt>
+
+LaTeX Warning: Citation 'regulation' on page 57 undefined on input line 2370.
+
+[57 <./images/engel1-1.png> <./images/engel2-1.png>]
+
+LaTeX Warning: Citation 'regulation' on page 58 undefined on input line 2373.
+
+<images/income_elasticity.png, id=657, 722.7pt x 542.5068pt>
 File: images/income_elasticity.png Graphic file (type png)
 <use images/income_elasticity.png>
-Package pdftex.def Info: images/income_elasticity.png  used on input line 2474.
+Package pdftex.def Info: images/income_elasticity.png  used on input line 2384.
 
 (pdftex.def)             Requested size: 318.49861pt x 239.08452pt.
+
+LaTeX Warning: Citation 'green_2003' on page 58 undefined on input line 2392.
+
 LaTeX Font Info:    Font shape `T1/phv/m/it' in size <10.95> not available
-(Font)              Font shape `T1/phv/m/sl' tried instead on input line 2482.
-<images/casosEspeciais-1.png, id=1656, 469.755pt x 325.215pt>
+(Font)              Font shape `T1/phv/m/sl' tried instead on input line 2392.
+
+LaTeX Warning: Citation 'malpezzi_2017' on page 58 undefined on input line 2392
+.
+
+
+LaTeX Warning: Citation 'varian' on page 58 undefined on input line 2406.
+
+<images/casosEspeciais-1.png, id=661, 469.755pt x 325.215pt>
 File: images/casosEspeciais-1.png Graphic file (type png)
 <use images/casosEspeciais-1.png>
-Package pdftex.def Info: images/casosEspeciais-1.png  used on input line 2506.
+Package pdftex.def Info: images/casosEspeciais-1.png  used on input line 2416.
 (pdftex.def)             Requested size: 455.0pt x 315.00163pt.
-[69 <./images/income_elasticity.png>]
-<images/supplyCurves.png, id=1677, 470.50781pt x 330.48468pt>
+[58 <./images/income_elasticity.png>]
+
+LaTeX Warning: Citation 'varian' on page 59 undefined on input line 2424.
+
+
+LaTeX Warning: Citation 'Malpezzi2002TheRO' on page 59 undefined on input line 
+2427.
+
+
+LaTeX Warning: Citation 'malaysia' on page 59 undefined on input line 2432.
+
+
+LaTeX Warning: Citation 'supplyelasticity' on page 59 undefined on input line 2
+434.
+
+<images/supplyCurves.png, id=674, 470.50781pt x 330.48468pt>
 File: images/supplyCurves.png Graphic file (type png)
 <use images/supplyCurves.png>
-Package pdftex.def Info: images/supplyCurves.png  used on input line 2531.
+Package pdftex.def Info: images/supplyCurves.png  used on input line 2441.
 (pdftex.def)             Requested size: 318.49861pt x 223.713pt.
-[70 <./images/casosEspeciais-1.png>] [71 <./images/supplyCurves.png>] [72] [73]
-[74] [75] [76] [77]
-<images/valores-juros-1.png, id=1849, 469.755pt x 325.215pt>
+[59 <./images/casosEspeciais-1.png>]
+
+LaTeX Warning: Citation 'regulation' on page 60 undefined on input line 2449.
+
+
+LaTeX Warning: Citation 'longrunsupplyelasticity' on page 60 undefined on input
+ line 2460.
+
+
+LaTeX Warning: Citation 'longrunsupplyelasticity' on page 60 undefined on input
+ line 2466.
+
+
+LaTeX Warning: Citation 'longrunsupplyelasticity' on page 60 undefined on input
+ line 2474.
+
+
+LaTeX Warning: Citation 'longrunsupplyelasticity' on page 60 undefined on input
+ line 2479.
+
+
+LaTeX Warning: Citation 'longrunsupplyelasticity' on page 60 undefined on input
+ line 2483.
+
+[60 <./images/supplyCurves.png>]
+
+LaTeX Warning: Citation 'longrunsupplyelasticity' on page 61 undefined on input
+ line 2505.
+
+
+LaTeX Warning: Citation 'Malpezzi2002TheRO' on page 61 undefined on input line 
+2535.
+
+
+LaTeX Warning: Citation 'Malpezzi2002TheRO' on page 61 undefined on input line 
+2548.
+
+
+LaTeX Warning: Citation 'Malpezzi2002TheRO' on page 61 undefined on input line 
+2548.
+
+[61]
+
+LaTeX Warning: Citation 'Malpezzi2002TheRO' on page 62 undefined on input line 
+2560.
+
+
+LaTeX Warning: Citation 'resende' on page 62 undefined on input line 2581.
+
+[62]
+
+LaTeX Warning: Citation 'Malpezzi2002TheRO' on page 63 undefined on input line 
+2590.
+
+
+LaTeX Warning: Citation 'blanchard' on page 63 undefined on input line 2602.
+
+
+LaTeX Warning: Citation 'Malpezzi2002TheRO' on page 63 undefined on input line 
+2626.
+
+
+Overfull \hbox (39.00757pt too wide) in paragraph at lines 2625--2632
+[]\T1/phv/m/n/12 (-10) Para con-ceituar a es-pec-u-lação e averiguar seus pos-s
+íveis efeitos, []
+ []
+
+
+LaTeX Warning: Citation 'Malpezzi2002TheRO' on page 63 undefined on input line 
+2643.
+
+[63]
+
+LaTeX Warning: Citation 'Malpezzi2002TheRO' on page 64 undefined on input line 
+2650.
+
+
+Overfull \hbox (0.51048pt too wide) in paragraph at lines 2647--2654
+\T1/phv/m/n/12 (-10) é uma condição necessária para a for-mação de bol-has. Se-
+gundo [],
+ []
+
+
+LaTeX Warning: Citation 'Malpezzi2002TheRO' on page 64 undefined on input line 
+2659.
+
+
+LaTeX Warning: Citation 'Malpezzi2002TheRO' on page 64 undefined on input line 
+2666.
+
+[64]
+
+LaTeX Warning: Citation 'gpg' on page 65 undefined on input line 2722.
+
+
+LaTeX Warning: Citation 'marins1' on page 65 undefined on input line 2727.
+
+[65] [66]
+<images/valores-juros-1.png, id=806, 469.755pt x 325.215pt>
 File: images/valores-juros-1.png Graphic file (type png)
 <use images/valores-juros-1.png>
-Package pdftex.def Info: images/valores-juros-1.png  used on input line 2873.
+Package pdftex.def Info: images/valores-juros-1.png  used on input line 2783.
 (pdftex.def)             Requested size: 318.49861pt x 220.49815pt.
-[78 <./images/valores-juros-1.png>] [79] [80]
-<./images/adams2_crop.pdf, id=1921, 520.94624pt x 436.63126pt>
+[67 <./images/valores-juros-1.png>]
+
+LaTeX Warning: Citation 'LEUNG' on page 68 undefined on input line 2844.
+
+
+LaTeX Warning: Citation 'LEUNG' on page 68 undefined on input line 2852.
+
+
+LaTeX Warning: Citation 'LEUNG' on page 68 undefined on input line 2856.
+
+
+LaTeX Warning: Citation 'LEUNG' on page 68 undefined on input line 2858.
+
+
+LaTeX Warning: Citation 'krugman' on page 68 undefined on input line 2858.
+
+[68]
+
+LaTeX Warning: Citation 'LEUNG' on page 69 undefined on input line 2862.
+
+
+LaTeX Warning: Citation 'LEUNG' on page 69 undefined on input line 2868.
+
+
+LaTeX Warning: Citation 'economist' on page 69 undefined on input line 2870.
+
+
+LaTeX Warning: Citation 'fnogueira' on page 69 undefined on input line 2875.
+
+
+LaTeX Warning: Citation 'fnogueira' on page 69 undefined on input line 2875.
+
+
+LaTeX Warning: Citation 'LEUNG' on page 69 undefined on input line 2882.
+
+
+LaTeX Warning: Citation 'ADAMS2010' on page 69 undefined on input line 2889.
+
+
+LaTeX Warning: Citation 'Case2000' on page 69 undefined on input line 2891.
+
+
+LaTeX Warning: Citation 'Case2000' on page 69 undefined on input line 2905.
+
+
+LaTeX Warning: Citation 'ADAMS2010' on page 69 undefined on input line 2905.
+
+
+LaTeX Warning: Citation 'ADAMS2010' on page 69 undefined on input line 2909.
+
+[69]
+
+LaTeX Warning: Citation 'ADAMS2010' on page 70 undefined on input line 2915.
+
+<./images/adams2_crop.pdf, id=843, 520.94624pt x 436.63126pt>
 File: ./images/adams2_crop.pdf Graphic file (type pdf)
 <use ./images/adams2_crop.pdf>
-Package pdftex.def Info: ./images/adams2_crop.pdf  used on input line 3012.
+Package pdftex.def Info: ./images/adams2_crop.pdf  used on input line 2922.
 (pdftex.def)             Requested size: 455.0pt x 381.3585pt.
-[81 <./images/adams2_crop.pdf>]
-<images/several_indices_regulations.png, id=1948, 474.27188pt x 336.50719pt>
+
+LaTeX Warning: Citation 'ADAMS2010' on page 70 undefined on input line 2930.
+
+
+LaTeX Warning: Citation 'regulation' on page 70 undefined on input line 2933.
+
+
+LaTeX Warning: Citation 'regulation' on page 70 undefined on input line 2941.
+
+
+LaTeX Warning: Citation 'silver' on page 70 undefined on input line 2941.
+
+<images/several_indices_regulations.png, id=846, 474.27188pt x 336.50719pt>
 File: images/several_indices_regulations.png Graphic file (type png)
 <use images/several_indices_regulations.png>
 Package pdftex.def Info: images/several_indices_regulations.png  used on input 
-line 3035.
+line 2945.
 (pdftex.def)             Requested size: 318.49861pt x 225.9875pt.
-[82 <./images/several_indices_regulations.png>]
-<images/rhpi-Malpezzi-1.png, id=1965, 469.755pt x 325.215pt>
+[70 <./images/adams2_crop.pdf>]
+
+LaTeX Warning: Citation 'regulation' on page 71 undefined on input line 2953.
+
+
+LaTeX Warning: Citation 'malpezziCapitalFlows' on page 71 undefined on input li
+ne 2985.
+
+<images/rhpi-Malpezzi-1.png, id=872, 469.755pt x 325.215pt>
 File: images/rhpi-Malpezzi-1.png Graphic file (type png)
 <use images/rhpi-Malpezzi-1.png>
-Package pdftex.def Info: images/rhpi-Malpezzi-1.png  used on input line 3081.
+Package pdftex.def Info: images/rhpi-Malpezzi-1.png  used on input line 2991.
 (pdftex.def)             Requested size: 318.49861pt x 220.49815pt.
-<images/land.png, id=1976, 389.95688pt x 292.09125pt>
+[71 <./images/several_indices_regulations.png>]
+
+LaTeX Warning: Citation 'malpezziCapitalFlows' on page 72 undefined on input li
+ne 2999.
+
+
+LaTeX Warning: Citation 'regulation' on page 72 undefined on input line 3002.
+
+
+LaTeX Warning: Citation 'regulation' on page 72 undefined on input line 3005.
+
+<images/land.png, id=883, 389.95688pt x 292.09125pt>
 File: images/land.png Graphic file (type png)
 <use images/land.png>
-Package pdftex.def Info: images/land.png  used on input line 3100.
+Package pdftex.def Info: images/land.png  used on input line 3010.
 (pdftex.def)             Requested size: 318.49861pt x 238.57594pt.
-[83 <./images/rhpi-Malpezzi-1.png>]
-<images/constructionvshp.png, id=1990, 343.2825pt x 271.0125pt>
+[72 <./images/rhpi-Malpezzi-1.png>]
+
+LaTeX Warning: Citation 'regulation' on page 73 undefined on input line 3018.
+
+<images/constructionvshp.png, id=896, 343.2825pt x 271.0125pt>
 File: images/constructionvshp.png Graphic file (type png)
 <use images/constructionvshp.png>
-Package pdftex.def Info: images/constructionvshp.png  used on input line 3117.
+Package pdftex.def Info: images/constructionvshp.png  used on input line 3027.
 (pdftex.def)             Requested size: 318.49861pt x 251.44353pt.
-[84 <./images/land.png> <./images/constructionvshp.png>]
-<images/Malpezzi_rates.png, id=2007, 1505.625pt x 1132.23pt>
+
+LaTeX Warning: Citation 'gyourku' on page 73 undefined on input line 3035.
+
+
+LaTeX Warning: Citation 'malpezziAftermath' on page 73 undefined on input line 
+3038.
+
+[73 <./images/land.png> <./images/constructionvshp.png>]
+
+LaTeX Warning: Citation 'malpezziAftermath' on page 74 undefined on input line 
+3041.
+
+<images/Malpezzi_rates.png, id=906, 1505.625pt x 1132.23pt>
 File: images/Malpezzi_rates.png Graphic file (type png)
 <use images/Malpezzi_rates.png>
-Package pdftex.def Info: images/Malpezzi_rates.png  used on input line 3136.
+Package pdftex.def Info: images/Malpezzi_rates.png  used on input line 3046.
 (pdftex.def)             Requested size: 318.49861pt x 239.50296pt.
-[85 <./images/Malpezzi_rates.png>]
-<images/mortgages-1.png, id=2022, 469.755pt x 325.215pt>
+
+LaTeX Warning: Citation 'malpezziAftermath' on page 74 undefined on input line 
+3054.
+
+
+LaTeX Warning: Citation 'resende' on page 74 undefined on input line 3062.
+
+
+LaTeX Warning: Citation 'resendeFSP' on page 74 undefined on input line 3077.
+
+[74 <./images/Malpezzi_rates.png>]
+<images/mortgages-1.png, id=915, 469.755pt x 325.215pt>
 File: images/mortgages-1.png Graphic file (type png)
 <use images/mortgages-1.png>
-Package pdftex.def Info: images/mortgages-1.png  used on input line 3180.
+Package pdftex.def Info: images/mortgages-1.png  used on input line 3090.
 (pdftex.def)             Requested size: 455.0pt x 315.00163pt.
-<images/Malpezzi_mortgage_flows.png, id=2026, 1505.625pt x 1132.23pt>
+
+LaTeX Warning: Citation 'malpezziAftermath' on page 75 undefined on input line 
+3101.
+
+<images/Malpezzi_mortgage_flows.png, id=917, 1505.625pt x 1132.23pt>
 File: images/Malpezzi_mortgage_flows.png Graphic file (type png)
 <use images/Malpezzi_mortgage_flows.png>
 Package pdftex.def Info: images/Malpezzi_mortgage_flows.png  used on input line
- 3202.
+ 3112.
 (pdftex.def)             Requested size: 318.49861pt x 239.50296pt.
-[86 <./images/mortgages-1.png>] [87 <./images/Malpezzi_mortgage_flows.png>] [88
-] [89]
-<images/macroInfluence-1.png, id=2137, 469.755pt x 325.215pt>
+[75 <./images/mortgages-1.png>]
+
+LaTeX Warning: Citation 'malpezziAftermath' on page 76 undefined on input line 
+3115.
+
+
+LaTeX Warning: Citation 'resende' on page 76 undefined on input line 3118.
+
+
+LaTeX Warning: Citation 'resende' on page 76 undefined on input line 3125.
+
+
+LaTeX Warning: Citation 'resende' on page 76 undefined on input line 3130.
+
+
+LaTeX Warning: Citation 'ADAMS2010' on page 76 undefined on input line 3150.
+
+[76 <./images/Malpezzi_mortgage_flows.png>]
+
+LaTeX Warning: Citation 'ADAMS2010' on page 77 undefined on input line 3153.
+
+
+LaTeX Warning: Citation 'FAN201937' on page 77 undefined on input line 3156.
+
+
+LaTeX Warning: Citation 'ADAMS2010' on page 77 undefined on input line 3160.
+
+
+LaTeX Warning: Citation 'ADAMS2010' on page 77 undefined on input line 3172.
+
+
+LaTeX Warning: Citation 'ADAMS2010' on page 77 undefined on input line 3174.
+
+
+LaTeX Warning: Citation 'goodhart2008' on page 77 undefined on input line 3179.
+
+
+
+LaTeX Warning: Citation 'goodhart2008' on page 77 undefined on input line 3196.
+
+
+
+LaTeX Warning: Citation 'macroHousing' on page 77 undefined on input line 3198.
+
+
+[77]
+
+LaTeX Warning: Citation 'ADAMS2010' on page 78 undefined on input line 3205.
+
+
+LaTeX Warning: Citation 'ADAMS2010' on page 78 undefined on input line 3244.
+
+
+LaTeX Warning: Citation 'ADAMS2010' on page 78 undefined on input line 3248.
+
+
+LaTeX Warning: Citation 'ADAMS2010' on page 78 undefined on input line 3258.
+
+[78]
+
+LaTeX Warning: Citation 'ADAMS2010' on page 79 undefined on input line 3286.
+
+
+LaTeX Warning: Citation 'ADAMS2010' on page 79 undefined on input line 3288.
+
+<images/macroInfluence-1.png, id=988, 469.755pt x 325.215pt>
 File: images/macroInfluence-1.png Graphic file (type png)
 <use images/macroInfluence-1.png>
-Package pdftex.def Info: images/macroInfluence-1.png  used on input line 3393.
+Package pdftex.def Info: images/macroInfluence-1.png  used on input line 3303.
 (pdftex.def)             Requested size: 318.49861pt x 220.49815pt.
-[90]
-<./images/adams_crop.pdf, id=2152, 497.86pt x 695.59875pt>
+[79]
+
+LaTeX Warning: Citation 'ADAMS2010' on page 80 undefined on input line 3311.
+
+<./images/adams_crop.pdf, id=1002, 497.86pt x 695.59875pt>
 File: ./images/adams_crop.pdf Graphic file (type pdf)
 <use ./images/adams_crop.pdf>
-Package pdftex.def Info: ./images/adams_crop.pdf  used on input line 3430.
+Package pdftex.def Info: ./images/adams_crop.pdf  used on input line 3340.
 (pdftex.def)             Requested size: 455.0pt x 635.73427pt.
-[91 <./images/macroInfluence-1.png>] [92 <./images/adams_crop.pdf>] [93] [94]
+[80 <./images/macroInfluence-1.png>]
 
-Package biblatex Warning: Month out of range or not an integer
-(biblatex)                at entry 'NBR1465301' on input line 3548.
+LaTeX Warning: Citation 'ADAMS2010' on page 81 undefined on input line 3348.
+
+
+LaTeX Warning: Citation 'rangel1986b' on page 81 undefined on input line 3356.
+
+[81 <./images/adams_crop.pdf>]
+
+LaTeX Warning: Citation 'rangel1986b' on page 82 undefined on input line 3358.
+
+
+LaTeX Warning: Citation 'regulation' on page 82 undefined on input line 3381.
+
+
+LaTeX Warning: Citation 'ADAMS2010' on page 82 undefined on input line 3385.
+
+
+LaTeX Warning: Citation 'fnogueira' on page 82 undefined on input line 3392.
+
+
+LaTeX Warning: Citation 'shelter' on page 82 undefined on input line 3394.
+
+
+LaTeX Warning: Citation 'marins2' on page 82 undefined on input line 3411.
+
+[82] [83]
+
+LaTeX Warning: Empty bibliography on input line 3458.
+
+Package biblatex Info: Reference section=0 on input line 3459.
+[84]
+\blx@maxsegment@4=\count529
+\blx@sectionciteorder@4=\count530
+Package biblatex Info: Reference section=4 on input line 3462.
+Package biblatex Info: Setting label 'refsection:4' on input line 3462.
+
+LaTeX Warning: Citation 'bertaud' on page 85 undefined on input line 3475.
+
+[85
+
+]
+
+LaTeX Warning: Citation 'bertaud' on page 86 undefined on input line 3481.
+
+
+LaTeX Warning: Citation 'bertaud' on page 86 undefined on input line 3486.
+
+
+LaTeX Warning: Citation 'bertaud' on page 86 undefined on input line 3494.
+
+
+LaTeX Warning: Citation 'bertaud' on page 86 undefined on input line 3498.
+
+
+LaTeX Warning: Citation 'bertaud' on page 86 undefined on input line 3505.
+
+<images/monocentricModel1-1.png, id=1063, 469.755pt x 325.215pt>
+File: images/monocentricModel1-1.png Graphic file (type png)
+<use images/monocentricModel1-1.png>
+Package pdftex.def Info: images/monocentricModel1-1.png  used on input line 350
+8.
+(pdftex.def)             Requested size: 318.49861pt x 220.49815pt.
+
+LaTeX Warning: Citation 'bertaud' on page 86 undefined on input line 3514.
+
+<images/monocentricModel2-1.png, id=1065, 469.755pt x 325.215pt>
+File: images/monocentricModel2-1.png Graphic file (type png)
+<use images/monocentricModel2-1.png>
+Package pdftex.def Info: images/monocentricModel2-1.png  used on input line 352
+0.
+(pdftex.def)             Requested size: 318.49861pt x 220.49815pt.
+[86
+
+ <./images/monocentricModel1-1.png>]
+
+LaTeX Warning: Citation 'bertaud' on page 87 undefined on input line 3528.
+
+
+LaTeX Warning: Citation 'bertaud' on page 87 undefined on input line 3531.
+
+
+LaTeX Warning: Citation 'cities' on page 87 undefined on input line 3540.
+
+
+LaTeX Warning: Citation 'bertaud' on page 87 undefined on input line 3540.
+
+<images/densities.png, id=1077, 355.3275pt x 347.79938pt>
+File: images/densities.png Graphic file (type png)
+<use images/densities.png>
+Package pdftex.def Info: images/densities.png  used on input line 3543.
+(pdftex.def)             Requested size: 318.49861pt x 311.75879pt.
+[87 <./images/monocentricModel2-1.png>]
+
+LaTeX Warning: Citation 'bertaud' on page 88 undefined on input line 3551.
+
+
+LaTeX Warning: Citation 'bertaud' on page 88 undefined on input line 3555.
+
+
+LaTeX Warning: Citation 'bertaud' on page 88 undefined on input line 3565.
+
+
+LaTeX Warning: Citation 'bertaud' on page 88 undefined on input line 3574.
+
+[88 <./images/densities.png>]
+
+LaTeX Warning: Citation 'bertaud' on page 89 undefined on input line 3584.
+
+<images/injustica_SP.jpg, id=1093, 983.675pt x 648.4225pt>
+File: images/injustica_SP.jpg Graphic file (type jpg)
+<use images/injustica_SP.jpg>
+Package pdftex.def Info: images/injustica_SP.jpg  used on input line 3589.
+(pdftex.def)             Requested size: 318.49861pt x 209.94328pt.
+
+LaTeX Warning: Citation 'paraisopolis' on page 89 undefined on input line 3597.
+
+
+
+LaTeX Warning: Citation 'bertaud' on page 89 undefined on input line 3608.
+
+<images/basicModel-1.png, id=1098, 433.62pt x 433.62pt>
+File: images/basicModel-1.png Graphic file (type png)
+<use images/basicModel-1.png>
+Package pdftex.def Info: images/basicModel-1.png  used on input line 3621.
+(pdftex.def)             Requested size: 318.49861pt x 318.51169pt.
+[89 <./images/injustica_SP.jpg>]
+
+LaTeX Warning: Citation 'bertaud' on page 90 undefined on input line 3629.
+
+
+LaTeX Warning: Citation 'bertaud' on page 90 undefined on input line 3632.
+
+[90 <./images/basicModel-1.png>]
+<images/ofertaTerra-1.png, id=1121, 433.62pt x 433.62pt>
+File: images/ofertaTerra-1.png Graphic file (type png)
+<use images/ofertaTerra-1.png>
+Package pdftex.def Info: images/ofertaTerra-1.png  used on input line 3691.
+(pdftex.def)             Requested size: 318.49861pt x 318.51169pt.
+[91]
+
+LaTeX Warning: Citation 'bertaud' on page 92 undefined on input line 3699.
+
+
+LaTeX Warning: Citation 'quigley' on page 92 undefined on input line 3703.
+
+
+LaTeX Warning: Citation 'MalpezziandGreen1996' on page 92 undefined on input li
+ne 3706.
+
+
+LaTeX Warning: Citation 'bertaud' on page 92 undefined on input line 3708.
+
+
+LaTeX Warning: Citation 'quigley' on page 92 undefined on input line 3715.
+
+[92 <./images/ofertaTerra-1.png>]
+
+LaTeX Warning: Citation 'bertau' on page 93 undefined on input line 3728.
+
+
+LaTeX Warning: Citation 'bertaud' on page 93 undefined on input line 3742.
+
+
+LaTeX Warning: Citation 'quigley' on page 93 undefined on input line 3750.
+
+
+LaTeX Warning: Citation 'quigley' on page 93 undefined on input line 3764.
+
+
+LaTeX Warning: Citation 'aragon' on page 93 undefined on input line 3768.
+
+[93]
+
+LaTeX Warning: Citation 'bertaud' on page 94 undefined on input line 3781.
+
+<images/ofertaHipotecas-1.png, id=1144, 433.62pt x 433.62pt>
+File: images/ofertaHipotecas-1.png Graphic file (type png)
+<use images/ofertaHipotecas-1.png>
+Package pdftex.def Info: images/ofertaHipotecas-1.png  used on input line 3789.
+
+(pdftex.def)             Requested size: 318.49861pt x 318.51169pt.
+
+LaTeX Warning: Citation 'bertaud' on page 94 undefined on input line 3797.
+
+
+LaTeX Warning: Citation 'bertaud' on page 94 undefined on input line 3802.
+
+
+LaTeX Warning: Citation 'bertaud' on page 94 undefined on input line 3816.
+
+[94 <./images/ofertaHipotecas-1.png>]
+
+LaTeX Warning: Citation 'urbandevelopment' on page 95 undefined on input line 3
+839.
+
+
+LaTeX Warning: Citation 'bertaud' on page 95 undefined on input line 3856.
+
+
+LaTeX Warning: Citation '@bertaud' on page 95 undefined on input line 3876.
 
 [95]
 
-Package biblatex Warning: Month out of range
-(biblatex)                at entry 'economist' on input line 3548.
+LaTeX Warning: Citation 'bertaud' on page 96 undefined on input line 3878.
+
+
+LaTeX Warning: Citation 'epstein' on page 96 undefined on input line 3885.
+
+
+LaTeX Warning: Citation 'epstein' on page 96 undefined on input line 3890.
+
+
+LaTeX Warning: Citation 'externalities' on page 96 undefined on input line 3902
+.
+
+
+Overfull \hbox (10.1861pt too wide) in paragraph at lines 3898--3903
+[]\T1/phv/m/n/12 (-10) Externalidades são cus-tos ou bene-fí-cios im-pos-tos às
+ partes fora de uma transação
+ []
+
+
+LaTeX Warning: Citation 'externalities' on page 96 undefined on input line 3905
+.
 
 [96]
 
-Package biblatex Warning: Month out of range or not an integer
-(biblatex)                at entry 'berlim' on input line 3548.
+LaTeX Warning: Citation 'externalities' on page 97 undefined on input line 3930
+.
 
 
-Package biblatex Warning: Month out of range
-(biblatex)                at entry 'malpezzi_2017' on input line 3548.
+LaTeX Warning: Citation 'HDT' on page 97 undefined on input line 3938.
 
 
-Package biblatex Warning: Month out of range
-(biblatex)                at entry 'Malpezzi2002TheRO' on input line 3548.
+LaTeX Warning: Citation 'externalities' on page 97 undefined on input line 3953
+.
 
-[97] [98]
 
-Package biblatex Warning: Month out of range
-(biblatex)                at entry 'resendeFSP' on input line 3548.
+LaTeX Warning: Citation 'malpezzi_affordable_2018_4' on page 97 undefined on in
+put line 3955.
 
-[99]
-Package biblatex Info: Reference section=0 on input line 3549.
-[100]
-\blx@maxsegment@4=\count529
-\blx@sectionciteorder@4=\count530
-Package biblatex Info: Reference section=4 on input line 3552.
-Package biblatex Info: Setting label 'refsection:4' on input line 3552.
 
-LaTeX Font Warning: Font shape `T1/phv/m/scit' undefined
-(Font)              using `T1/phv/m/sc' instead on input line 3565.
+Overfull \hbox (84.92775pt too wide) in paragraph at lines 3953--3965
+\T1/phv/m/n/12 (-10) bene-fí-cios da reg-u-lação. O custo da reg-u-lação de um 
+mer-cado, se-gundo [],
+ []
 
-[101
-
-]
-<images/monocentricModel1-1.png, id=2399, 469.755pt x 325.215pt>
-File: images/monocentricModel1-1.png Graphic file (type png)
-<use images/monocentricModel1-1.png>
-Package pdftex.def Info: images/monocentricModel1-1.png  used on input line 359
-8.
-(pdftex.def)             Requested size: 318.49861pt x 220.49815pt.
-<images/monocentricModel2-1.png, id=2403, 469.755pt x 325.215pt>
-File: images/monocentricModel2-1.png Graphic file (type png)
-<use images/monocentricModel2-1.png>
-Package pdftex.def Info: images/monocentricModel2-1.png  used on input line 361
-0.
-(pdftex.def)             Requested size: 318.49861pt x 220.49815pt.
-[102
-
- <./images/monocentricModel1-1.png>]
-<images/densities.png, id=2423, 355.3275pt x 347.79938pt>
-File: images/densities.png Graphic file (type png)
-<use images/densities.png>
-Package pdftex.def Info: images/densities.png  used on input line 3633.
-(pdftex.def)             Requested size: 318.49861pt x 311.75879pt.
-[103 <./images/monocentricModel2-1.png>] [104 <./images/densities.png>]
-<images/injustica_SP.jpg, id=2446, 983.675pt x 648.4225pt>
-File: images/injustica_SP.jpg Graphic file (type jpg)
-<use images/injustica_SP.jpg>
-Package pdftex.def Info: images/injustica_SP.jpg  used on input line 3679.
-(pdftex.def)             Requested size: 318.49861pt x 209.94328pt.
-<images/basicModel-1.png, id=2455, 325.215pt x 650.43pt>
-File: images/basicModel-1.png Graphic file (type png)
-<use images/basicModel-1.png>
-Package pdftex.def Info: images/basicModel-1.png  used on input line 3711.
-(pdftex.def)             Requested size: 318.49861pt x 637.03992pt.
-[105 <./images/injustica_SP.jpg>] [106] [107 <./images/basicModel-1.png>] [108]
-<images/ofertaTerra-1.png, id=2489, 469.755pt x 325.215pt>
-File: images/ofertaTerra-1.png Graphic file (type png)
-<use images/ofertaTerra-1.png>
-Package pdftex.def Info: images/ofertaTerra-1.png  used on input line 3781.
-(pdftex.def)             Requested size: 318.49861pt x 220.49815pt.
-[109 <./images/ofertaTerra-1.png>] [110]
-<images/ofertaHipotecas-1.png, id=2528, 469.755pt x 325.215pt>
-File: images/ofertaHipotecas-1.png Graphic file (type png)
-<use images/ofertaHipotecas-1.png>
-Package pdftex.def Info: images/ofertaHipotecas-1.png  used on input line 3879.
-
-(pdftex.def)             Requested size: 318.49861pt x 220.49815pt.
-[111 <./images/ofertaHipotecas-1.png>] [112] [113]
-<images/externalities-1.png, id=2600, 469.755pt x 325.215pt>
+<images/externalities-1.png, id=1190, 469.755pt x 325.215pt>
 File: images/externalities-1.png Graphic file (type png)
 <use images/externalities-1.png>
-Package pdftex.def Info: images/externalities-1.png  used on input line 4069.
+Package pdftex.def Info: images/externalities-1.png  used on input line 3979.
 (pdftex.def)             Requested size: 318.49861pt x 220.49815pt.
-[114]
-<images/externalities1-1.png, id=2618, 469.755pt x 325.215pt>
+[97]
+
+LaTeX Warning: Citation 'externalities' on page 98 undefined on input line 3987
+.
+
+<images/externalities1-1.png, id=1203, 469.755pt x 325.215pt>
 File: images/externalities1-1.png Graphic file (type png)
 <use images/externalities1-1.png>
-Package pdftex.def Info: images/externalities1-1.png  used on input line 4089.
+Package pdftex.def Info: images/externalities1-1.png  used on input line 3999.
 (pdftex.def)             Requested size: 318.49861pt x 220.49815pt.
-[115 <./images/externalities-1.png> <./images/externalities1-1.png>]
-<images/figure_01_Malpezzi_Affordable.png, id=2635, 1505.625pt x 1092.08pt>
+
+LaTeX Warning: Citation 'externalities' on page 98 undefined on input line 4007
+.
+
+
+LaTeX Warning: Citation 'externalities' on page 98 undefined on input line 4012
+.
+
+[98 <./images/externalities-1.png> <./images/externalities1-1.png>]
+
+LaTeX Warning: Citation 'externalities' on page 99 undefined on input line 4021
+.
+
+<images/figure_01_Malpezzi_Affordable.png, id=1215, 1505.625pt x 1092.08pt>
 File: images/figure_01_Malpezzi_Affordable.png Graphic file (type png)
 <use images/figure_01_Malpezzi_Affordable.png>
 Package pdftex.def Info: images/figure_01_Malpezzi_Affordable.png  used on inpu
-t line 4116.
+t line 4026.
 (pdftex.def)             Requested size: 318.49861pt x 231.00995pt.
-[116 <./images/figure_01_Malpezzi_Affordable.png>] [117]
-<images/consumo-1.png, id=2705, 469.755pt x 325.215pt>
+
+Overfull \hbox (3.47018pt too wide) in paragraph at lines 4021--4031
+[]\T1/phv/m/n/12 (-10) De acordo com [], este efeito da reg-u-lação so-bre os p
+reços e aluguéis
+ []
+
+
+LaTeX Warning: Citation 'malpezzi_affordable_2018_4' on page 99 undefined on in
+put line 4034.
+
+
+LaTeX Warning: Citation 'bertaud' on page 99 undefined on input line 4043.
+
+[99 <./images/figure_01_Malpezzi_Affordable.png>]
+
+LaTeX Warning: Citation 'bertaud' on page 100 undefined on input line 4053.
+
+
+LaTeX Warning: Citation 'bertaud' on page 100 undefined on input line 4060.
+
+
+LaTeX Warning: Citation 'bertaud' on page 100 undefined on input line 4064.
+
+
+LaTeX Warning: Citation 'bertaud' on page 100 undefined on input line 4070.
+
+
+LaTeX Warning: Citation 'fischel2015' on page 100 undefined on input line 4075.
+
+
+
+LaTeX Warning: Citation 'hsieh' on page 100 undefined on input line 4082.
+
+
+LaTeX Warning: Citation 'malpezzi_affordable_2018_1' on page 100 undefined on i
+nput line 4091.
+
+[100]
+
+LaTeX Warning: Citation 'malpezzi_affordable_2018_6' on page 101 undefined on i
+nput line 4107.
+
+
+LaTeX Warning: Citation 'malaysia' on page 101 undefined on input line 4109.
+
+
+LaTeX Warning: Citation 'malpezzi_real_2017' on page 101 undefined on input lin
+e 4110.
+
+
+LaTeX Warning: Citation 'malpezzi_affordable_2018_1' on page 101 undefined on i
+nput line 4113.
+
+
+LaTeX Warning: Citation 'bertaud' on page 101 undefined on input line 4114.
+
+
+LaTeX Warning: Citation 'bertaud' on page 101 undefined on input line 4114.
+
+
+LaTeX Warning: Citation 'bertaud' on page 101 undefined on input line 4117.
+
+<images/consumo-1.png, id=1253, 433.62pt x 433.62pt>
 File: images/consumo-1.png Graphic file (type png)
 <use images/consumo-1.png>
-Package pdftex.def Info: images/consumo-1.png  used on input line 4227.
-(pdftex.def)             Requested size: 318.49861pt x 220.49815pt.
-[118]
-<images/supplySideSubsidies-1.png, id=2723, 469.755pt x 325.215pt>
+Package pdftex.def Info: images/consumo-1.png  used on input line 4137.
+(pdftex.def)             Requested size: 318.49861pt x 318.51169pt.
+
+Overfull \hbox (11.02003pt too wide) in paragraph at lines 4125--4142
+\T1/phv/m/n/12 (-10) seja ca-paz de pro-por-cionar às famílias cuja renda não a
+l-cança a renda mín-ima necessária
+ []
+
+[101]
+
+LaTeX Warning: Citation 'bertaud' on page 102 undefined on input line 4145.
+
+
+LaTeX Warning: Citation 'malpezzi_affordable_2018_2' on page 102 undefined on i
+nput line 4166.
+
+[102 <./images/consumo-1.png>]
+
+LaTeX Warning: Citation 'bertaud' on page 103 undefined on input line 4170.
+
+<images/supplySideSubsidies-1.png, id=1273, 433.62pt x 433.62pt>
 File: images/supplySideSubsidies-1.png Graphic file (type png)
 <use images/supplySideSubsidies-1.png>
 Package pdftex.def Info: images/supplySideSubsidies-1.png  used on input line 4
-268.
-(pdftex.def)             Requested size: 318.49861pt x 220.49815pt.
-[119 <./images/consumo-1.png>] [120 <./images/supplySideSubsidies-1.png>]
-<images/eficiencia-1.png, id=2756, 469.755pt x 325.215pt>
+178.
+(pdftex.def)             Requested size: 318.49861pt x 318.51169pt.
+
+LaTeX Warning: Citation 'bertaud' on page 103 undefined on input line 4186.
+
+[103 <./images/supplySideSubsidies-1.png>]
+
+LaTeX Warning: Citation 'malpezzi_affordable_2018_2' on page 104 undefined on i
+nput line 4216.
+
+
+LaTeX Warning: Citation 'malpezzi_affordable_2018_3' on page 104 undefined on i
+nput line 4216.
+
+
+Overfull \hbox (49.91371pt too wide) in paragraph at lines 4214--4217
+\T1/phv/m/n/12 (-10) princí-pio da equidade hor-i-zon-tal ([]; []). 
+ []
+
+
+LaTeX Warning: Citation 'malpezzi_affordable_2018_1' on page 104 undefined on i
+nput line 4219.
+
+
+LaTeX Warning: Citation 'malpezzi_affordable_2018_1' on page 104 undefined on i
+nput line 4240.
+
+<images/eficiencia-1.png, id=1287, 469.755pt x 325.215pt>
 File: images/eficiencia-1.png Graphic file (type png)
 <use images/eficiencia-1.png>
-Package pdftex.def Info: images/eficiencia-1.png  used on input line 4340.
+Package pdftex.def Info: images/eficiencia-1.png  used on input line 4250.
 (pdftex.def)             Requested size: 318.49861pt x 220.49815pt.
-[121]
-<images/cohab-1.png, id=2771, 469.755pt x 325.215pt>
+[104]
+
+LaTeX Warning: Citation 'malpezzi_affordable_2018_1' on page 105 undefined on i
+nput line 4258.
+
+
+LaTeX Warning: Citation 'malpezzi_affordable_2018_1' on page 105 undefined on i
+nput line 4276.
+
+<images/cohab-1.png, id=1297, 469.755pt x 325.215pt>
 File: images/cohab-1.png Graphic file (type png)
 <use images/cohab-1.png>
-Package pdftex.def Info: images/cohab-1.png  used on input line 4381.
+Package pdftex.def Info: images/cohab-1.png  used on input line 4291.
 (pdftex.def)             Requested size: 318.49861pt x 220.49815pt.
-[122 <./images/eficiencia-1.png>]
-<images/vouchers-1.png, id=2783, 469.755pt x 325.215pt>
+[105 <./images/eficiencia-1.png>]
+
+LaTeX Warning: Citation 'malpezzi_affordable_2018_2' on page 106 undefined on i
+nput line 4299.
+
+
+LaTeX Warning: Citation 'bertaud' on page 106 undefined on input line 4312.
+
+<images/vouchers-1.png, id=1306, 433.62pt x 433.62pt>
 File: images/vouchers-1.png Graphic file (type png)
 <use images/vouchers-1.png>
-Package pdftex.def Info: images/vouchers-1.png  used on input line 4409.
-(pdftex.def)             Requested size: 318.49861pt x 220.49815pt.
-[123 <./images/cohab-1.png>]
-<images/vouchers2-1.png, id=2795, 469.755pt x 325.215pt>
+Package pdftex.def Info: images/vouchers-1.png  used on input line 4319.
+(pdftex.def)             Requested size: 318.49861pt x 318.51169pt.
+[106 <./images/cohab-1.png>]
+
+LaTeX Warning: Citation 'bertaud' on page 107 undefined on input line 4327.
+
+
+LaTeX Warning: Citation 'malpezzi_affordable_2018_1' on page 107 undefined on i
+nput line 4331.
+
+<images/vouchers2-1.png, id=1316, 469.755pt x 325.215pt>
 File: images/vouchers2-1.png Graphic file (type png)
 <use images/vouchers2-1.png>
-Package pdftex.def Info: images/vouchers2-1.png  used on input line 4437.
+Package pdftex.def Info: images/vouchers2-1.png  used on input line 4347.
 (pdftex.def)             Requested size: 318.49861pt x 220.49815pt.
-[124 <./images/vouchers-1.png>] [125 <./images/vouchers2-1.png>]
+[107 <./images/vouchers-1.png>]
 
-Package biblatex Warning: Month out of range or not an integer
-(biblatex)                at entry 'hsieh' on input line 4468.
+LaTeX Warning: Citation 'malpezzi_affordable_2018_2' on page 108 undefined on i
+nput line 4355.
 
-[126] [127]
-Package biblatex Info: Reference section=0 on input line 4469.
-[128]
+
+LaTeX Warning: Citation 'malpezzi_affordable_2018_2' on page 108 undefined on i
+nput line 4358.
+
+
+LaTeX Warning: Citation 'malpezzi_affordable_2018_2' on page 108 undefined on i
+nput line 4372.
+
+
+LaTeX Warning: Empty bibliography on input line 4378.
+
+Package biblatex Info: Reference section=0 on input line 4379.
+[108 <./images/vouchers2-1.png>]
 \blx@maxsegment@5=\count531
 \blx@sectionciteorder@5=\count532
-Package biblatex Info: Reference section=5 on input line 4472.
-Package biblatex Info: Setting label 'refsection:5' on input line 4472.
+Package biblatex Info: Reference section=5 on input line 4382.
+Package biblatex Info: Setting label 'refsection:5' on input line 4382.
 
-LaTeX Font Warning: Font shape `T1/phv/m/scit' undefined
-(Font)              using `T1/phv/m/sc' instead on input line 4480.
+LaTeX Warning: Citation 'rangel1956' on page 109 undefined on input line 4390.
 
-[129
+[109
 
-] [130
+]
 
-] [131] [132] [133] [134] [135] [136] [137] [138] [139] [140]
-<images/PrecoTerraQuantis.png, id=3166, 454.69875pt x 321.45094pt>
+LaTeX Warning: Citation 'regulation' on page 110 undefined on input line 4427.
+
+
+LaTeX Warning: Citation 'rppi' on page 110 undefined on input line 4435.
+
+[110
+
+]
+
+LaTeX Warning: Citation 'rppi' on page 111 undefined on input line 4457.
+
+
+LaTeX Warning: Citation 'rppi' on page 111 undefined on input line 4472.
+
+
+LaTeX Warning: Citation 'rppi' on page 111 undefined on input line 4476.
+
+
+LaTeX Warning: Citation 'rppi' on page 111 undefined on input line 4478.
+
+
+LaTeX Warning: Citation 'repeatedSales' on page 111 undefined on input line 449
+9.
+
+[111]
+
+LaTeX Warning: Citation 'rppi' on page 112 undefined on input line 4531.
+
+
+Overfull \hbox (14.87436pt too wide) in paragraph at lines 4548--4554
+[]\T1/phv/m/n/12 (-10) É o método mais efi-ciente de con-strução de um índice q
+uando há da-dos disponíveis.
+ []
+
+[112]
+
+LaTeX Warning: Citation 'rppi' on page 113 undefined on input line 4566.
+
+
+LaTeX Warning: Citation 'rppi' on page 113 undefined on input line 4579.
+
+
+LaTeX Warning: Citation 'rppi' on page 113 undefined on input line 4602.
+
+
+LaTeX Warning: Citation 'Case1989' on page 113 undefined on input line 4603.
+
+[113]
+
+LaTeX Warning: Citation 'bailey1963' on page 114 undefined on input line 4619.
+
+
+LaTeX Warning: Citation 'bailey1963' on page 114 undefined on input line 4619.
+
+
+LaTeX Warning: Citation 'repeatedSales' on page 114 undefined on input line 464
+2.
+
+
+LaTeX Warning: Citation 'rppi' on page 114 undefined on input line 4655.
+
+[114]
+
+LaTeX Warning: Citation 'rppi' on page 115 undefined on input line 4672.
+
+
+LaTeX Warning: Citation 'nagaraja2011' on page 115 undefined on input line 4695
+.
+
+
+LaTeX Warning: Citation 'Coulson' on page 115 undefined on input line 4698.
+
+
+LaTeX Warning: Citation 'ZHANG201785' on page 115 undefined on input line 4698.
+
+
+
+LaTeX Warning: Citation 'Wen' on page 115 undefined on input line 4698.
+
+[115]
+
+LaTeX Warning: Citation 'nagaraja2014' on page 116 undefined on input line 4703
+.
+
+
+LaTeX Warning: Citation 'nagaraja2011' on page 116 undefined on input line 4706
+.
+
+
+LaTeX Warning: Citation 'nagaraja2011' on page 116 undefined on input line 4714
+.
+
+
+Overfull \hbox (7.68231pt too wide) in paragraph at lines 4714--4719
+[]\T1/phv/m/n/12 (-10) Segundo [], mesmo nos países de-sen-volvi-dos a apli-caç
+ão do método
+ []
+
+
+LaTeX Warning: Citation 'nagaraja2011' on page 116 undefined on input line 4721
+.
+
+
+LaTeX Warning: Citation 'rppi' on page 116 undefined on input line 4741.
+
+[116]
+
+LaTeX Warning: Citation 'oecd' on page 117 undefined on input line 4762.
+
+
+LaTeX Warning: Citation 'repeatedSales' on page 117 undefined on input line 478
+0.
+
+
+LaTeX Warning: Citation 'bailey1963' on page 117 undefined on input line 4781.
+
+
+LaTeX Warning: Citation 'bailey1963' on page 117 undefined on input line 4784.
+
+
+LaTeX Warning: Citation 'repeatedSales' on page 117 undefined on input line 478
+4.
+
+
+LaTeX Warning: Citation 'bailey1963' on page 117 undefined on input line 4785.
+
+
+LaTeX Warning: Citation 'repeatedSales' on page 117 undefined on input line 478
+6.
+
+
+LaTeX Warning: Citation 'repeatedSales' on page 117 undefined on input line 478
+7.
+
+
+LaTeX Warning: Citation 'repeatedSales' on page 117 undefined on input line 478
+8.
+
+[117]
+
+LaTeX Warning: Citation 'bailey1963' on page 118 undefined on input line 4806.
+
+
+LaTeX Warning: Citation 'repeatedSales' on page 118 undefined on input line 480
+9.
+
+
+LaTeX Warning: Citation 'nagaraja2014' on page 118 undefined on input line 4827
+.
+
+
+LaTeX Warning: Citation 'nagaraja2011' on page 118 undefined on input line 4828
+.
+
+
+LaTeX Warning: Citation 'Shiller1991' on page 118 undefined on input line 4834.
+
+
+[118]
+
+LaTeX Warning: Citation 'rppi' on page 119 undefined on input line 4840.
+
+
+LaTeX Warning: Citation 'rppi' on page 119 undefined on input line 4846.
+
+
+LaTeX Warning: Citation 'rppi' on page 119 undefined on input line 4861.
+
+
+LaTeX Warning: Citation 'rppi' on page 119 undefined on input line 4866.
+
+[119]
+
+LaTeX Warning: Citation 'fipezap' on page 120 undefined on input line 4888.
+
+
+LaTeX Warning: Citation 'fipezap' on page 120 undefined on input line 4893.
+
+
+LaTeX Warning: Citation 'fipezap' on page 120 undefined on input line 4895.
+
+
+LaTeX Warning: Citation 'rppi' on page 120 undefined on input line 4909.
+
+
+Overfull \hbox (6.16853pt too wide) in paragraph at lines 4905--4911
+[]\T1/phv/m/n/12 (-10) Outro prob-lema rela-cionado a este índice é que ele não
+ é com-posto de transações
+ []
+
+
+LaTeX Warning: Citation 'rppi' on page 120 undefined on input line 4917.
+
+
+LaTeX Warning: Citation 'abecip' on page 120 undefined on input line 4935.
+
+[120]
+Overfull \hbox (0.21645pt too wide) in paragraph at lines 4969--4975
+[]\T1/phv/m/n/12 (-10) Algumas análises com-param o com-por-ta-mento dos índice
+s de preços de imóveis
+ []
+
+
+LaTeX Warning: Citation 'McMillen2014LocalQH' on page 121 undefined on input li
+ne 4980.
+
+
+LaTeX Warning: Citation 'Wen' on page 121 undefined on input line 4983.
+
+
+LaTeX Warning: Citation 'ZHANG201785' on page 121 undefined on input line 4983.
+
+
+
+LaTeX Warning: Citation 'Coulson' on page 121 undefined on input line 4983.
+
+
+LaTeX Warning: Citation 'washington' on page 121 undefined on input line 4985.
+
+<images/PrecoTerraQuantis.png, id=1512, 454.69875pt x 321.45094pt>
 File: images/PrecoTerraQuantis.png Graphic file (type png)
 <use images/PrecoTerraQuantis.png>
-Package pdftex.def Info: images/PrecoTerraQuantis.png  used on input line 5096.
+Package pdftex.def Info: images/PrecoTerraQuantis.png  used on input line 5006.
 
 (pdftex.def)             Requested size: 318.49861pt x 225.16617pt.
-[141]
-<images/LandPricesInflation.png, id=3179, 542.025pt x 283.81032pt>
+[121]
+
+LaTeX Warning: Citation 'washington' on page 122 undefined on input line 5014.
+
+<images/LandPricesInflation.png, id=1522, 542.025pt x 283.81032pt>
 File: images/LandPricesInflation.png Graphic file (type png)
 <use images/LandPricesInflation.png>
-Package pdftex.def Info: images/LandPricesInflation.png  used on input line 510
+Package pdftex.def Info: images/LandPricesInflation.png  used on input line 501
 8.
 (pdftex.def)             Requested size: 318.49861pt x 166.77539pt.
-[142 <./images/PrecoTerraQuantis.png>]
-<images/LandPricesDisinflation.png, id=3187, 396.7322pt x 221.32687pt>
+[122 <./images/PrecoTerraQuantis.png>]
+
+LaTeX Warning: Citation 'washington' on page 123 undefined on input line 5026.
+
+<images/LandPricesDisinflation.png, id=1531, 396.7322pt x 221.32687pt>
 File: images/LandPricesDisinflation.png Graphic file (type png)
 <use images/LandPricesDisinflation.png>
 Package pdftex.def Info: images/LandPricesDisinflation.png  used on input line 
-5120.
+5030.
 (pdftex.def)             Requested size: 318.49861pt x 177.6865pt.
-[143 <./images/LandPricesInflation.png> <./images/LandPricesDisinflation.png>]
-<images/vacancyRate-1.png, id=3242, 469.755pt x 325.215pt>
+
+LaTeX Warning: Citation 'washington' on page 123 undefined on input line 5038.
+
+
+LaTeX Warning: Citation 'indicators' on page 123 undefined on input line 5046.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 5068--5068
+[]|\T1/phv/m/n/12 (+10) Multiplicador de terra
+ []
+
+
+LaTeX Warning: Citation 'indicators' on page 123 undefined on input line 5074.
+
+
+LaTeX Warning: Citation 'indicators' on page 123 undefined on input line 5074.
+
+
+LaTeX Warning: Citation 'malpezzi_affordable_2018_5' on page 123 undefined on i
+nput line 5077.
+
+
+LaTeX Warning: Citation 'wharton' on page 123 undefined on input line 5083.
+
+
+LaTeX Warning: Citation 'externalities' on page 123 undefined on input line 508
+5.
+
+
+LaTeX Warning: Citation 'macroHousing' on page 123 undefined on input line 5091
+.
+
+[123 <./images/LandPricesInflation.png> <./images/LandPricesDisinflation.png>]
+
+LaTeX Warning: Citation 'macroHousing' on page 124 undefined on input line 5093
+.
+
+
+LaTeX Warning: Citation 'macroHousing' on page 124 undefined on input line 5098
+.
+
+<images/vacancyRate-1.png, id=1563, 469.755pt x 325.215pt>
 File: images/vacancyRate-1.png Graphic file (type png)
 <use images/vacancyRate-1.png>
-Package pdftex.def Info: images/vacancyRate-1.png  used on input line 5200.
+Package pdftex.def Info: images/vacancyRate-1.png  used on input line 5110.
 (pdftex.def)             Requested size: 455.0pt x 315.00163pt.
-[144]
-<images/vacancy-1.png, id=3255, 469.755pt x 325.215pt>
+[124]
+
+LaTeX Warning: Citation 'RHVRUSQ156N' on page 125 undefined on input line 5118.
+
+
+
+LaTeX Warning: Citation 'RRVRUSQ156N' on page 125 undefined on input line 5118.
+
+
+<images/vacancy-1.png, id=1572, 469.755pt x 325.215pt>
 File: images/vacancy-1.png Graphic file (type png)
 <use images/vacancy-1.png>
-Package pdftex.def Info: images/vacancy-1.png  used on input line 5212.
+Package pdftex.def Info: images/vacancy-1.png  used on input line 5122.
 (pdftex.def)             Requested size: 455.0pt x 315.00163pt.
-[145 <./images/vacancyRate-1.png>]
-<images/USHOWN-1.png, id=3272, 469.755pt x 325.215pt>
+[125 <./images/vacancyRate-1.png>]
+
+LaTeX Warning: Citation 'ERENTUSQ176N' on page 126 undefined on input line 5130
+.
+
+
+LaTeX Warning: Citation 'EVACANTUSQ176N' on page 126 undefined on input line 51
+30.
+
+
+LaTeX Warning: Citation 'macroHousing' on page 126 undefined on input line 5133
+.
+
+<images/USHOWN-1.png, id=1581, 469.755pt x 325.215pt>
 File: images/USHOWN-1.png Graphic file (type png)
 <use images/USHOWN-1.png>
-Package pdftex.def Info: images/USHOWN-1.png  used on input line 5228.
+Package pdftex.def Info: images/USHOWN-1.png  used on input line 5138.
 (pdftex.def)             Requested size: 318.49861pt x 220.49815pt.
-[146 <./images/vacancy-1.png> <./images/USHOWN-1.png>]
-<images/twoseries-1.png, id=3294, 469.755pt x 325.215pt>
+
+LaTeX Warning: Citation 'RSAHORUSQ156S' on page 126 undefined on input line 514
+6.
+
+[126 <./images/vacancy-1.png> <./images/USHOWN-1.png>]
+
+LaTeX Warning: Citation 'FRED2014' on page 127 undefined on input line 5150.
+
+
+LaTeX Warning: Citation 'FRED2016' on page 127 undefined on input line 5150.
+
+
+LaTeX Warning: Citation 'FRED2018' on page 127 undefined on input line 5150.
+
+<images/twoseries-1.png, id=1596, 469.755pt x 325.215pt>
 File: images/twoseries-1.png Graphic file (type png)
 <use images/twoseries-1.png>
-Package pdftex.def Info: images/twoseries-1.png  used on input line 5244.
+Package pdftex.def Info: images/twoseries-1.png  used on input line 5154.
 (pdftex.def)             Requested size: 455.0pt x 315.00163pt.
-[147 <./images/twoseries-1.png>]
-<images/nhpi-1.png, id=3328, 469.755pt x 325.215pt>
+
+LaTeX Warning: Citation 'RSAHORUSQ156S' on page 127 undefined on input line 516
+2.
+
+
+LaTeX Warning: Citation 'CSUSHPINSA' on page 127 undefined on input line 5162.
+
+
+LaTeX Warning: Citation 'ADAMS2010' on page 127 undefined on input line 5170.
+
+
+LaTeX Warning: Citation 'NBERw2506' on page 127 undefined on input line 5182.
+
+[127 <./images/twoseries-1.png>]
+
+LaTeX Warning: Citation 'R' on page 128 undefined on input line 5187.
+
+
+LaTeX Warning: Citation 'strucchange' on page 128 undefined on input line 5190.
+
+
+<images/nhpi-1.png, id=1618, 469.755pt x 325.215pt>
 File: images/nhpi-1.png Graphic file (type png)
 <use images/nhpi-1.png>
-Package pdftex.def Info: images/nhpi-1.png  used on input line 5284.
+Package pdftex.def Info: images/nhpi-1.png  used on input line 5194.
 (pdftex.def)             Requested size: 318.49861pt x 220.49815pt.
-<images/rhpi-1.png, id=3333, 469.755pt x 325.215pt>
+
+LaTeX Warning: Citation 'QuandlWIKI' on page 128 undefined on input line 5202.
+
+<images/rhpi-1.png, id=1621, 469.755pt x 325.215pt>
 File: images/rhpi-1.png Graphic file (type png)
 <use images/rhpi-1.png>
-Package pdftex.def Info: images/rhpi-1.png  used on input line 5296.
+Package pdftex.def Info: images/rhpi-1.png  used on input line 5206.
 (pdftex.def)             Requested size: 318.49861pt x 220.49815pt.
-[148 <./images/nhpi-1.png>]
-Overfull \hbox (11.41841pt too wide) in paragraph at lines 5313--5317
+[128 <./images/nhpi-1.png>]
+
+LaTeX Warning: Citation 'QuandlWIKI' on page 129 undefined on input line 5214.
+
+
+Overfull \hbox (11.41841pt too wide) in paragraph at lines 5223--5227
 []\T1/phv/m/n/12 (-10) Nota-se que após o der-re-ti-mento do [][][]MI[][] norte
 -americano de-pois da crise imobiliário-
  []
 
-<images/nhpi1-1.png, id=3349, 469.755pt x 325.215pt>
+<images/nhpi1-1.png, id=1636, 469.755pt x 325.215pt>
 File: images/nhpi1-1.png Graphic file (type png)
 <use images/nhpi1-1.png>
-Package pdftex.def Info: images/nhpi1-1.png  used on input line 5322.
+Package pdftex.def Info: images/nhpi1-1.png  used on input line 5232.
 (pdftex.def)             Requested size: 318.49861pt x 220.49815pt.
-[149 <./images/rhpi-1.png>]
-<images/rhpi1-1.png, id=3359, 469.755pt x 325.215pt>
+[129 <./images/rhpi-1.png>]
+<images/rhpi1-1.png, id=1647, 469.755pt x 325.215pt>
 File: images/rhpi1-1.png Graphic file (type png)
 <use images/rhpi1-1.png>
-Package pdftex.def Info: images/rhpi1-1.png  used on input line 5348.
+Package pdftex.def Info: images/rhpi1-1.png  used on input line 5258.
 (pdftex.def)             Requested size: 318.49861pt x 220.49815pt.
-[150 <./images/nhpi1-1.png>]
-<images/rhpi2-1.png, id=3382, 469.755pt x 325.215pt>
+[130 <./images/nhpi1-1.png>]
+
+LaTeX Warning: Citation 'QuandlWIKI' on page 131 undefined on input line 5266.
+
+
+LaTeX Warning: Citation 'supplyelasticity' on page 131 undefined on input line 
+5290.
+
+<images/rhpi2-1.png, id=1664, 469.755pt x 325.215pt>
 File: images/rhpi2-1.png Graphic file (type png)
 <use images/rhpi2-1.png>
-Package pdftex.def Info: images/rhpi2-1.png  used on input line 5393.
+Package pdftex.def Info: images/rhpi2-1.png  used on input line 5303.
 (pdftex.def)             Requested size: 318.49861pt x 220.49815pt.
-[151 <./images/rhpi1-1.png>]
-<images/global-rhpi-1.png, id=3400, 469.755pt x 325.215pt>
+[131 <./images/rhpi1-1.png>]
+
+LaTeX Warning: Citation 'QuandlWIKI' on page 132 undefined on input line 5311.
+
+
+LaTeX Warning: Citation 'fmitwa' on page 132 undefined on input line 5338.
+
+<images/global-rhpi-1.png, id=1680, 469.755pt x 325.215pt>
 File: images/global-rhpi-1.png Graphic file (type png)
 <use images/global-rhpi-1.png>
-Package pdftex.def Info: images/global-rhpi-1.png  used on input line 5433.
+Package pdftex.def Info: images/global-rhpi-1.png  used on input line 5343.
 (pdftex.def)             Requested size: 318.49861pt x 220.49815pt.
-[152 <./images/rhpi2-1.png>] [153 <./images/global-rhpi-1.png>]
+[132 <./images/rhpi2-1.png>]
 
-Package biblatex Warning: Month out of range
-(biblatex)                at entry 'washington' on input line 5472.
-
-
-Package biblatex Warning: Month out of range or not an integer
-(biblatex)                at entry 'fipezap' on input line 5472.
-
-[154]
-Overfull \hbox (8.04977pt too wide) in paragraph at lines 5472--5472
-[][]\T1/phv/m/sc/12 (-10) housing \T1/phv/m/n/12 (-10) re-co-ve-ries without ho
--me-ow-ners: Na-ti-o-nal trends | FRED Blog. en-US. [\T1/phv/m/sl/12 (-10) S.l.
-\T1/phv/m/n/12 (-10) : \T1/phv/m/sl/12 (-10) s.n.\T1/phv/m/n/12 (-10) ],
- []
+LaTeX Warning: Citation 'QuandlWIKI' on page 133 undefined on input line 5351.
 
 
-Package biblatex Warning: Month out of range
-(biblatex)                at entry 'malpezzi_affordable_2018_5' on input line 5
-472.
+LaTeX Warning: Empty bibliography on input line 5382.
 
-[155] [156]
-Overfull \hbox (7.27489pt too wide) in paragraph at lines 5472--5472
-[][]\T1/phv/m/sc/12 (-10) u.s. cen-sus bu-reau\T1/phv/m/n/12 (-10) . \T1/phv/m/
-sl/12 (-10) Ho-me-ow-ner Va-cancy Rate for the Uni-ted Sta-tes [RH-VRUSQ156N]\T
-1/phv/m/n/12 (-10) .
- []
-
-[157]
-Package biblatex Info: Reference section=0 on input line 5473.
-[158]
+Package biblatex Info: Reference section=0 on input line 5383.
+[133 <./images/global-rhpi-1.png>]
 \blx@maxsegment@6=\count533
 \blx@sectionciteorder@6=\count534
-Package biblatex Info: Reference section=6 on input line 5476.
-Package biblatex Info: Setting label 'refsection:6' on input line 5476.
+Package biblatex Info: Reference section=6 on input line 5386.
+Package biblatex Info: Setting label 'refsection:6' on input line 5386.
 
-LaTeX Font Warning: Font shape `T1/phv/m/scit' undefined
-(Font)              using `T1/phv/m/sc' instead on input line 5488.
+LaTeX Warning: Citation 'shiller' on page 134 undefined on input line 5398.
 
-[159
+[134
 
-] [160
+]
 
-] [161]
-<images/choque-1.png, id=3652, 469.755pt x 325.215pt>
+LaTeX Warning: Citation 'regulation' on page 135 undefined on input line 5414.
+
+
+LaTeX Warning: Citation 'wheaton1999' on page 135 undefined on input line 5420.
+
+
+
+LaTeX Warning: Citation 'wheaton1999' on page 135 undefined on input line 5435.
+
+
+
+LaTeX Warning: Citation 'wheaton1999' on page 135 undefined on input line 5444.
+
+
+[135
+
+]
+
+LaTeX Warning: Citation 'wheaton1999' on page 136 undefined on input line 5454.
+
+
+
+LaTeX Warning: Citation 'wheaton1999' on page 136 undefined on input line 5463.
+
+
+
+LaTeX Warning: Citation 'wheaton1999' on page 136 undefined on input line 5465.
+
+
+
+LaTeX Warning: Citation 'Malpezzi2002TheRO' on page 136 undefined on input line
+ 5509.
+
+[136]
+
+LaTeX Warning: Citation 'regulation' on page 137 undefined on input line 5514.
+
+
+LaTeX Warning: Citation 'regulation' on page 137 undefined on input line 5520.
+
+
+LaTeX Warning: Citation 'wheaton1999' on page 137 undefined on input line 5527.
+
+
+
+LaTeX Warning: Citation 'FAN201937' on page 137 undefined on input line 5527.
+
+
+LaTeX Warning: Citation 'Malpezzi2002TheRO' on page 137 undefined on input line
+ 5527.
+
+<images/choque-1.png, id=1752, 469.755pt x 325.215pt>
 File: images/choque-1.png Graphic file (type png)
 <use images/choque-1.png>
-Package pdftex.def Info: images/choque-1.png  used on input line 5640.
+Package pdftex.def Info: images/choque-1.png  used on input line 5550.
 (pdftex.def)             Requested size: 455.0pt x 315.00163pt.
-[162]
-<images/choque2-1.png, id=3670, 469.755pt x 325.215pt>
+[137]
+
+LaTeX Warning: Citation 'Malpezzi2002TheRO' on page 138 undefined on input line
+ 5558.
+
+
+LaTeX Warning: Citation 'regulation' on page 138 undefined on input line 5561.
+
+<images/choque2-1.png, id=1763, 469.755pt x 325.215pt>
 File: images/choque2-1.png Graphic file (type png)
 <use images/choque2-1.png>
-Package pdftex.def Info: images/choque2-1.png  used on input line 5664.
+Package pdftex.def Info: images/choque2-1.png  used on input line 5574.
 (pdftex.def)             Requested size: 318.49861pt x 220.49815pt.
-[163 <./images/choque-1.png>] [164 <./images/choque2-1.png>]
-<images/TheRole_1.png, id=3707, 328.97906pt x 234.1247pt>
+[138 <./images/choque-1.png>]
+
+LaTeX Warning: Citation 'Malpezzi2002TheRO' on page 139 undefined on input line
+ 5582.
+
+
+LaTeX Warning: Citation 'Malpezzi2002TheRO' on page 139 undefined on input line
+ 5585.
+
+[139 <./images/choque2-1.png>]
+
+LaTeX Warning: Citation 'Malpezzi2002TheRO' on page 140 undefined on input line
+ 5623.
+
+
+LaTeX Warning: Citation 'Malpezzi2002TheRO' on page 140 undefined on input line
+ 5623.
+
+<images/TheRole_1.png, id=1795, 328.97906pt x 234.1247pt>
 File: images/TheRole_1.png Graphic file (type png)
 <use images/TheRole_1.png>
-Package pdftex.def Info: images/TheRole_1.png  used on input line 5718.
+Package pdftex.def Info: images/TheRole_1.png  used on input line 5628.
 (pdftex.def)             Requested size: 318.49861pt x 226.67198pt.
-<images/TheRole_2.png, id=3712, 319.94531pt x 215.30438pt>
+
+LaTeX Warning: Citation 'Malpezzi2002TheRO' on page 140 undefined on input line
+ 5636.
+
+<images/TheRole_2.png, id=1798, 319.94531pt x 215.30438pt>
 File: images/TheRole_2.png Graphic file (type png)
 <use images/TheRole_2.png>
-Package pdftex.def Info: images/TheRole_2.png  used on input line 5730.
+Package pdftex.def Info: images/TheRole_2.png  used on input line 5640.
 (pdftex.def)             Requested size: 318.49861pt x 214.33469pt.
-[165 <./images/TheRole_1.png>]
-<images/elastico-1.png, id=3729, 469.755pt x 325.215pt>
+[140 <./images/TheRole_1.png>]
+
+LaTeX Warning: Citation 'Malpezzi2002TheRO' on page 141 undefined on input line
+ 5648.
+
+
+LaTeX Warning: Citation 'Malpezzi2002TheRO' on page 141 undefined on input line
+ 5658.
+
+<images/elastico-1.png, id=1813, 469.755pt x 325.215pt>
 File: images/elastico-1.png Graphic file (type png)
 <use images/elastico-1.png>
-Package pdftex.def Info: images/elastico-1.png  used on input line 5753.
+Package pdftex.def Info: images/elastico-1.png  used on input line 5663.
 (pdftex.def)             Requested size: 318.49861pt x 220.49815pt.
-<images/inelastico-1.png, id=3732, 469.755pt x 325.215pt>
+
+LaTeX Warning: Citation 'Malpezzi2002TheRO' on page 141 undefined on input line
+ 5671.
+
+<images/inelastico-1.png, id=1814, 469.755pt x 325.215pt>
 File: images/inelastico-1.png Graphic file (type png)
 <use images/inelastico-1.png>
-Package pdftex.def Info: images/inelastico-1.png  used on input line 5765.
+Package pdftex.def Info: images/inelastico-1.png  used on input line 5675.
 (pdftex.def)             Requested size: 318.49861pt x 220.49815pt.
-[166 <./images/TheRole_2.png> <./images/elastico-1.png>] [167 <./images/inelast
-ico-1.png>] [168]
-<images/wrp-2.png, id=3789, 564.60938pt x 368.87813pt>
+[141 <./images/TheRole_2.png> <./images/elastico-1.png>]
+
+LaTeX Warning: Citation 'Malpezzi2002TheRO' on page 142 undefined on input line
+ 5683.
+
+
+LaTeX Warning: Citation 'fmitwa' on page 142 undefined on input line 5699.
+
+
+LaTeX Warning: Citation 'fmiem' on page 142 undefined on input line 5703.
+
+[142 <./images/inelastico-1.png>]
+
+LaTeX Warning: Citation 'joebges' on page 143 undefined on input line 5725.
+
+
+LaTeX Warning: Citation 'macroHousing' on page 143 undefined on input line 5731
+.
+
+
+LaTeX Warning: Citation 'goodhart2008' on page 143 undefined on input line 5731
+.
+
+
+LaTeX Warning: Citation 'ADAMS2010' on page 143 undefined on input line 5731.
+
+
+LaTeX Warning: Citation 'estonia' on page 143 undefined on input line 5739.
+
+[143]
+
+LaTeX Warning: Citation 'bresser2018' on page 144 undefined on input line 5779.
+
+
+
+LaTeX Warning: Citation 'krugman2020' on page 144 undefined on input line 5779.
+
+
+
+LaTeX Warning: Citation 'roberts2020' on page 144 undefined on input line 5781.
+
+
+<images/wrp-2.png, id=1846, 564.60938pt x 368.87813pt>
 File: images/wrp-2.png Graphic file (type png)
 <use images/wrp-2.png>
-Package pdftex.def Info: images/wrp-2.png  used on input line 5875.
+Package pdftex.def Info: images/wrp-2.png  used on input line 5785.
 (pdftex.def)             Requested size: 455.0pt x 297.26991pt.
-<images/effr-1.png, id=3794, 469.755pt x 325.215pt>
+
+LaTeX Warning: Citation 'roberts2020' on page 144 undefined on input line 5793.
+
+
+
+LaTeX Warning: Citation 'crisis' on page 144 undefined on input line 5793.
+
+<images/effr-1.png, id=1847, 469.755pt x 325.215pt>
 File: images/effr-1.png Graphic file (type png)
 <use images/effr-1.png>
-Package pdftex.def Info: images/effr-1.png  used on input line 5892.
+Package pdftex.def Info: images/effr-1.png  used on input line 5802.
 (pdftex.def)             Requested size: 318.49861pt x 220.49815pt.
-[169 <./images/wrp-2.png>]
-<images/yields-1.png, id=3806, 469.755pt x 325.215pt>
+[144 <./images/wrp-2.png>]
+
+LaTeX Warning: Citation 'fredeffr' on page 145 undefined on input line 5810.
+
+<images/yields-1.png, id=1857, 469.755pt x 325.215pt>
 File: images/yields-1.png Graphic file (type png)
 <use images/yields-1.png>
-Package pdftex.def Info: images/yields-1.png  used on input line 5904.
+Package pdftex.def Info: images/yields-1.png  used on input line 5814.
 (pdftex.def)             Requested size: 318.49861pt x 220.49815pt.
-<images/yields2-1.png, id=3812, 469.755pt x 325.215pt>
+
+LaTeX Warning: Citation 'fredgs10' on page 145 undefined on input line 5822.
+
+
+LaTeX Warning: Citation 'fredgs20' on page 145 undefined on input line 5822.
+
+
+LaTeX Warning: Citation 'fredgs30' on page 145 undefined on input line 5822.
+
+<images/yields2-1.png, id=1859, 469.755pt x 325.215pt>
 File: images/yields2-1.png Graphic file (type png)
 <use images/yields2-1.png>
-Package pdftex.def Info: images/yields2-1.png  used on input line 5920.
+Package pdftex.def Info: images/yields2-1.png  used on input line 5830.
 (pdftex.def)             Requested size: 318.49861pt x 220.49815pt.
-[170 <./images/effr-1.png> <./images/yields-1.png>]
-<images/fred-1.png, id=3826, 469.755pt x 325.215pt>
+[145 <./images/effr-1.png> <./images/yields-1.png>]
+
+LaTeX Warning: Citation 'krugman2020' on page 146 undefined on input line 5850.
+
+
+<images/fred-1.png, id=1870, 469.755pt x 325.215pt>
 File: images/fred-1.png Graphic file (type png)
 <use images/fred-1.png>
-Package pdftex.def Info: images/fred-1.png  used on input line 5956.
+Package pdftex.def Info: images/fred-1.png  used on input line 5866.
 (pdftex.def)             Requested size: 455.0pt x 315.00163pt.
-[171 <./images/yields2-1.png>] [172 <./images/fred-1.png>] [173]
-<images/a-Mortgage-securitization-Package_W640.jpg, id=3877, 215.1293pt x 190.9
+[146 <./images/yields2-1.png>]
+
+LaTeX Warning: Citation 'goodhart2008' on page 147 undefined on input line 5885
+.
+
+[147 <./images/fred-1.png>]
+
+LaTeX Warning: Citation 'green' on page 148 undefined on input line 5910.
+
+
+LaTeX Warning: Citation 'green' on page 148 undefined on input line 5917.
+
+
+LaTeX Warning: Citation 'green' on page 148 undefined on input line 5930.
+
+
+LaTeX Warning: Citation 'green' on page 148 undefined on input line 5942.
+
+
+LaTeX Warning: Citation 'green' on page 148 undefined on input line 5944.
+
+
+LaTeX Warning: Citation 'green' on page 148 undefined on input line 5946.
+
+
+LaTeX Warning: Citation 'green' on page 148 undefined on input line 5950.
+
+
+Overfull \hbox (0.8074pt too wide) in paragraph at lines 5946--5956
+\T1/phv/m/n/12 (-10) mente: ``From heav-ily reg-u-lated and ra-tioned sys-tems,
+ mod-ern hous-ing fi-nance emerged
+ []
+
+[148]
+
+LaTeX Warning: Citation 'green' on page 149 undefined on input line 5964.
+
+
+LaTeX Warning: Citation 'simkovic' on page 149 undefined on input line 5966.
+
+<images/a-Mortgage-securitization-Package_W640.jpg, id=1903, 215.1293pt x 190.9
 2726pt>
 File: images/a-Mortgage-securitization-Package_W640.jpg Graphic file (type jpg)
 
 <use images/a-Mortgage-securitization-Package_W640.jpg>
 Package pdftex.def Info: images/a-Mortgage-securitization-Package_W640.jpg  use
-d on input line 6071.
+d on input line 5981.
 (pdftex.def)             Requested size: 318.49861pt x 282.66986pt.
-[174] [175 <./images/a-Mortgage-securitization-Package_W640.jpg>] [176]
-<images/shiller.png, id=3932, 685.8122pt x 485.56406pt>
+[149]
+
+LaTeX Warning: Citation 'fligstein' on page 150 undefined on input line 5989.
+
+
+LaTeX Warning: Citation 'ghent' on page 150 undefined on input line 6021.
+
+[150 <./images/a-Mortgage-securitization-Package_W640.jpg>]
+
+LaTeX Warning: Citation 'green' on page 151 undefined on input line 6025.
+
+
+LaTeX Warning: Citation 'simkovic' on page 151 undefined on input line 6040.
+
+
+LaTeX Warning: Citation 'simkovic' on page 151 undefined on input line 6048.
+
+
+LaTeX Warning: Citation 'fligstein' on page 151 undefined on input line 6063.
+
+
+LaTeX Warning: Citation 'levitin2012' on page 151 undefined on input line 6072.
+
+
+
+LaTeX Warning: Citation 'levitin2012' on page 151 undefined on input line 6072.
+
+
+[151]
+
+LaTeX Warning: Citation 'simkovic' on page 152 undefined on input line 6082.
+
+
+LaTeX Warning: Citation 'levitin2009' on page 152 undefined on input line 6088.
+
+
+
+LaTeX Warning: Citation 'simkovic' on page 152 undefined on input line 6097.
+
+
+LaTeX Warning: Citation 'simkovic' on page 152 undefined on input line 6101.
+
+<images/shiller.png, id=1934, 685.8122pt x 485.56406pt>
 File: images/shiller.png Graphic file (type png)
 <use images/shiller.png>
-Package pdftex.def Info: images/shiller.png  used on input line 6202.
+Package pdftex.def Info: images/shiller.png  used on input line 6112.
 (pdftex.def)             Requested size: 318.49861pt x 225.5108pt.
-[177]
-<images/HPI_RCA_CPPI.png, id=3954, 499.8675pt x 307.1475pt>
+[152]
+
+LaTeX Warning: Citation 'shiller' on page 153 undefined on input line 6120.
+
+
+LaTeX Warning: Citation 'levitin2012' on page 153 undefined on input line 6126.
+
+
+
+LaTeX Warning: Citation 'shiller' on page 153 undefined on input line 6133.
+
+
+LaTeX Warning: Citation 'levitin2012' on page 153 undefined on input line 6136.
+
+
+
+LaTeX Warning: Citation 'simkovic' on page 153 undefined on input line 6143.
+
+
+LaTeX Warning: Citation 'levitin2013' on page 153 undefined on input line 6152.
+
+
+<images/HPI_RCA_CPPI.png, id=1941, 499.8675pt x 307.1475pt>
 File: images/HPI_RCA_CPPI.png Graphic file (type png)
 <use images/HPI_RCA_CPPI.png>
-Package pdftex.def Info: images/HPI_RCA_CPPI.png  used on input line 6251.
+Package pdftex.def Info: images/HPI_RCA_CPPI.png  used on input line 6161.
 (pdftex.def)             Requested size: 318.49861pt x 195.71136pt.
-[178 <./images/shiller.png>] [179 <./images/HPI_RCA_CPPI.png>] [180] [181]
-<images/excessHousingFinanceSupply-1.png, id=4015, 469.755pt x 325.215pt>
+[153 <./images/shiller.png>]
+
+LaTeX Warning: Citation 'levitin2013' on page 154 undefined on input line 6169.
+
+
+[154 <./images/HPI_RCA_CPPI.png>] [155] [156]
+
+LaTeX Warning: Citation 'devil' on page 157 undefined on input line 6289.
+
+
+LaTeX Warning: Citation 'devil' on page 157 undefined on input line 6310.
+
+
+LaTeX Warning: Citation 'devil' on page 157 undefined on input line 6326.
+
+
+LaTeX Warning: Citation 'levitin2012' on page 157 undefined on input line 6328.
+
+
+<images/excessHousingFinanceSupply-1.png, id=1997, 469.755pt x 325.215pt>
 File: images/excessHousingFinanceSupply-1.png Graphic file (type png)
 <use images/excessHousingFinanceSupply-1.png>
 Package pdftex.def Info: images/excessHousingFinanceSupply-1.png  used on input
- line 6434.
+ line 6344.
 (pdftex.def)             Requested size: 318.49861pt x 220.49815pt.
-[182] [183 <./images/excessHousingFinanceSupply-1.png>]
-<images/CDO-1.png, id=4051, 752.8125pt x 436.63126pt>
+[157]
+
+LaTeX Warning: Citation 'levitin2012' on page 158 undefined on input line 6352.
+
+
+
+LaTeX Warning: Citation 'watts' on page 158 undefined on input line 6364.
+
+
+LaTeX Warning: Citation 'watts' on page 158 undefined on input line 6374.
+
+<images/CDO-1.png, id=2019, 602.25pt x 349.305pt>
 File: images/CDO-1.png Graphic file (type png)
 <use images/CDO-1.png>
-Package pdftex.def Info: images/CDO-1.png  used on input line 6472.
+Package pdftex.def Info: images/CDO-1.png  used on input line 6382.
 (pdftex.def)             Requested size: 318.49861pt x 184.73634pt.
-[184 <./images/CDO-1.png>]
-Underfull \hbox (badness 10000) in alignment at lines 6511--6516
+[158 <./images/excessHousingFinanceSupply-1.png>]
+
+LaTeX Warning: Citation 'devil' on page 159 undefined on input line 6390.
+
+
+LaTeX Warning: Citation 'devil' on page 159 undefined on input line 6401.
+
+
+LaTeX Warning: Citation 'devil' on page 159 undefined on input line 6404.
+
+
+LaTeX Warning: Citation 'watts' on page 159 undefined on input line 6418.
+
+
+Underfull \hbox (badness 10000) in alignment at lines 6421--6426
 [] []
  []
 
 
-Underfull \hbox (badness 10000) in alignment at lines 6516--6520
+Underfull \hbox (badness 10000) in alignment at lines 6426--6430
 [] []
  []
 
 
-Underfull \hbox (badness 10000) in alignment at lines 6520--6540
+Underfull \hbox (badness 10000) in alignment at lines 6430--6450
+[] []
+ []
+
+[159 <./images/CDO-1.png>]
+
+LaTeX Warning: Citation 'watts' on page 160 undefined on input line 6451.
+
+
+Underfull \hbox (badness 10000) in alignment at lines 6452--6457
 [] []
  []
 
 
-Underfull \hbox (badness 10000) in alignment at lines 6542--6547
+Underfull \hbox (badness 10000) in alignment at lines 6457--6461
 [] []
  []
 
 
-Underfull \hbox (badness 10000) in alignment at lines 6547--6551
+Underfull \hbox (badness 10000) in alignment at lines 6461--6469
 [] []
  []
 
 
-Underfull \hbox (badness 10000) in alignment at lines 6551--6559
-[] []
- []
-
-[185] [186] [187]
-Overfull \hbox (15.60857pt too wide) in paragraph at lines 6680--6680
-[][]\T1/phv/m/sc/12 (-10) brixiova\T1/phv/m/n/12 (-10) , Zu-zana; \T1/phv/m/sc/
-12 (-10) var-tia\T1/phv/m/n/12 (-10) , Laura; \T1/phv/m/sc/12 (-10) wörgöt-ter\
-T1/phv/m/n/12 (-10) , An-dreas. Ca-pi-tal flows and the boom^^Ubust
- []
-
-[188]
-
-Package biblatex Warning: Month out of range
-(biblatex)                at entry 'fredgs10' on input line 6680.
+LaTeX Warning: Citation 'watts' on page 160 undefined on input line 6470.
 
 
-Package biblatex Warning: Month out of range
-(biblatex)                at entry 'fredgs20' on input line 6680.
+LaTeX Warning: Citation 'devil' on page 160 undefined on input line 6474.
+
+[160]
+
+LaTeX Warning: Citation 'devil' on page 161 undefined on input line 6485.
 
 
-Package biblatex Warning: Month out of range
-(biblatex)                at entry 'fredgs30' on input line 6680.
+LaTeX Warning: Citation 'devil' on page 161 undefined on input line 6488.
 
 
-Package biblatex Warning: Month out of range
-(biblatex)                at entry 'fredeffr' on input line 6680.
+LaTeX Warning: Citation 'simkovic' on page 161 undefined on input line 6494.
 
-[189]
 
-Package biblatex Warning: Month out of range or not an integer
-(biblatex)                at entry 'Li' on input line 6680.
+LaTeX Warning: Citation 'watts' on page 161 undefined on input line 6501.
 
-[190]
 
-Package biblatex Warning: Month out of range
-(biblatex)                at entry 'Malpezzi2002TheRO' on input line 6680.
+LaTeX Warning: Citation 'Li' on page 161 undefined on input line 6508.
 
-[191]
-Package biblatex Info: Reference section=0 on input line 6681.
-[192]
+
+LaTeX Warning: Citation 'devil' on page 161 undefined on input line 6510.
+
+
+LaTeX Warning: Citation 'devil' on page 161 undefined on input line 6513.
+
+
+LaTeX Warning: Citation 'devil' on page 161 undefined on input line 6515.
+
+
+LaTeX Warning: Citation 'devil' on page 161 undefined on input line 6530.
+
+[161] [162]
+
+LaTeX Warning: Empty bibliography on input line 6590.
+
+Package biblatex Info: Reference section=0 on input line 6591.
+[163]
 \blx@maxsegment@7=\count535
 \blx@sectionciteorder@7=\count536
-Package biblatex Info: Reference section=7 on input line 6684.
-Package biblatex Info: Setting label 'refsection:7' on input line 6684.
+Package biblatex Info: Reference section=7 on input line 6594.
+Package biblatex Info: Setting label 'refsection:7' on input line 6594.
 
-LaTeX Font Warning: Font shape `T1/phv/m/scit' undefined
-(Font)              using `T1/phv/m/sc' instead on input line 6690.
+LaTeX Warning: Citation 'mccoy' on page 164 undefined on input line 6600.
+
+[164
+
+] [165
+
+]
+
+LaTeX Warning: Citation 'planhab' on page 166 undefined on input line 6666.
 
 
-LaTeX Font Warning: Font shape `T1/phv/m/scit' undefined
-(Font)              using `T1/phv/m/sc' instead on input line 6690.
+LaTeX Warning: Citation 'planhab' on page 166 undefined on input line 6680.
 
 
-LaTeX Font Warning: Font shape `T1/phv/m/scit' undefined
-(Font)              using `T1/phv/m/sc' instead on input line 6690.
+LaTeX Warning: Citation 'housing-europe' on page 166 undefined on input line 67
+10.
 
-[193
 
-] [194
+LaTeX Warning: Citation 'california' on page 166 undefined on input line 6710.
 
-] [195] [196] [197]
-<images/inglaterra-unidades.png, id=4338, 368.87813pt x 183.68625pt>
+[166]
+
+LaTeX Warning: Citation 'zizek2005' on page 167 undefined on input line 6713.
+
+
+LaTeX Warning: Citation 'terraredonda' on page 167 undefined on input line 6745
+.
+
+[167]
+
+LaTeX Warning: Citation 'terraredonda' on page 168 undefined on input line 6764
+.
+
+
+LaTeX Warning: Citation 'terraredonda' on page 168 undefined on input line 6768
+.
+
+
+LaTeX Warning: Citation 'rolnik' on page 168 undefined on input line 6790.
+
+
+LaTeX Warning: Citation 'harvey' on page 168 undefined on input line 6796.
+
+
+LaTeX Warning: Citation 'harvey' on page 168 undefined on input line 6797.
+
+[168]
+
+LaTeX Warning: Citation 'jung2018' on page 169 undefined on input line 6821.
+
+
+LaTeX Warning: Citation 'jung2018' on page 169 undefined on input line 6822.
+
+
+LaTeX Warning: Citation 'jung2018' on page 169 undefined on input line 6832.
+
+
+LaTeX Warning: Citation 'jung2018' on page 169 undefined on input line 6859.
+
+<images/inglaterra-unidades.png, id=2128, 368.87813pt x 183.68625pt>
 File: images/inglaterra-unidades.png Graphic file (type png)
 <use images/inglaterra-unidades.png>
-Package pdftex.def Info: images/inglaterra-unidades.png  used on input line 695
+Package pdftex.def Info: images/inglaterra-unidades.png  used on input line 686
 6.
 (pdftex.def)             Requested size: 318.49861pt x 158.5977pt.
-[198]
-<images/HUEngland.png, id=4353, 570.13pt x 306.14375pt>
+[169]
+
+LaTeX Warning: Citation 'jung2018' on page 170 undefined on input line 6874.
+
+
+LaTeX Warning: Citation 'newenclosure' on page 170 undefined on input line 6881
+.
+
+
+LaTeX Warning: Citation 'michaelrobertsblog' on page 170 undefined on input lin
+e 6881.
+
+<images/HUEngland.png, id=2137, 570.13pt x 306.14375pt>
 File: images/HUEngland.png Graphic file (type png)
 <use images/HUEngland.png>
-Package pdftex.def Info: images/HUEngland.png  used on input line 6979.
+Package pdftex.def Info: images/HUEngland.png  used on input line 6889.
 (pdftex.def)             Requested size: 318.49861pt x 171.02357pt.
-[199 <./images/inglaterra-unidades.png> <./images/HUEngland.png>] [200] [201] [
-202] [203] [204] [205] [206]
-<images/deadweight-1.png, id=4554, 469.755pt x 325.215pt>
+
+LaTeX Warning: Citation 'HUEngland' on page 170 undefined on input line 6897.
+
+
+LaTeX Warning: Citation 'newenclosure' on page 170 undefined on input line 6900
+.
+
+
+LaTeX Warning: Citation 'michaelrobertsblog' on page 170 undefined on input lin
+e 6900.
+
+[170 <./images/inglaterra-unidades.png> <./images/HUEngland.png>]
+
+LaTeX Warning: Citation 'jung2018' on page 171 undefined on input line 6914.
+
+
+LaTeX Warning: Citation 'poleto' on page 171 undefined on input line 6919.
+
+
+LaTeX Warning: Citation 'poleto' on page 171 undefined on input line 6924.
+
+
+LaTeX Warning: Citation 'poleto' on page 171 undefined on input line 6939.
+
+
+LaTeX Warning: Citation 'finlandia' on page 171 undefined on input line 6952.
+
+
+Overfull \hbox (8.9477pt too wide) in paragraph at lines 6946--6953
+[]\T1/phv/m/n/12 (-10) A ex-per-iên-cia de países como a Fin-lân-dia, mostram q
+ue a con-cessão de habitação
+ []
+
+[171]
+
+LaTeX Warning: Citation 'poleto' on page 172 undefined on input line 6991.
+
+
+LaTeX Warning: Citation 'poleto' on page 172 undefined on input line 7001.
+
+
+LaTeX Warning: Citation 'cidade' on page 172 undefined on input line 7006.
+
+[172]
+Overfull \hbox (0.80121pt too wide) in paragraph at lines 7016--7019
+[]\T1/phv/m/n/12 (-10) planejamento das regiões metropoli-tanas, aglom-er-ações
+ ur-banas e mi-cror-regiões; 
+ []
+
+
+LaTeX Warning: Citation 'vickrey' on page 173 undefined on input line 7038.
+
+
+LaTeX Warning: Citation 'landtax' on page 173 undefined on input line 7038.
+
+
+LaTeX Warning: Citation 'spinney' on page 173 undefined on input line 7042.
+
+
+LaTeX Warning: Citation 'henrygeorge' on page 173 undefined on input line 7048.
+
+
+
+LaTeX Warning: Citation 'fischel2015' on page 173 undefined on input line 7054.
+
+
+[173]
+
+LaTeX Warning: Citation 'stiglitz1979' on page 174 undefined on input line 7092
+.
+
+
+LaTeX Warning: Citation 'oates2016' on page 174 undefined on input line 7102.
+
+
+LaTeX Warning: Citation 'simon' on page 174 undefined on input line 7105.
+
+
+LaTeX Warning: Citation 'netzer' on page 174 undefined on input line 7106.
+
+
+LaTeX Warning: Citation 'hamilton1975' on page 174 undefined on input line 7110
+.
+
+
+LaTeX Warning: Citation 'hamilton1976a' on page 174 undefined on input line 711
+0.
+
+
+LaTeX Warning: Citation 'hamilton1976b' on page 174 undefined on input line 711
+0.
+
+
+LaTeX Warning: Citation 'tiebout' on page 174 undefined on input line 7110.
+
+
+LaTeX Warning: Citation 'mieszkowski' on page 174 undefined on input line 7114.
+
+
+
+LaTeX Warning: Citation 'zodrow1986a' on page 174 undefined on input line 7114.
+
+
+
+LaTeX Warning: Citation 'zodrow1986b' on page 174 undefined on input line 7115.
+
+
+
+LaTeX Warning: Citation 'harberger' on page 174 undefined on input line 7115.
+
+[174]
+
+LaTeX Warning: Citation 'fischel2015' on page 175 undefined on input line 7133.
+
+
+
+LaTeX Warning: Citation 'fischel1989' on page 175 undefined on input line 7139.
+
+
+
+LaTeX Warning: Citation 'fischel2013' on page 175 undefined on input line 7139.
+
+
+
+LaTeX Warning: Citation 'fischel2015' on page 175 undefined on input line 7142.
+
+
+
+LaTeX Warning: Citation 'fischel2015' on page 175 undefined on input line 7148.
+
+
+
+LaTeX Warning: Citation 'zodrow2001' on page 175 undefined on input line 7163.
+
+
+LaTeX Warning: Citation 'zodrow2001' on page 175 undefined on input line 7167.
+
+
+LaTeX Warning: Citation 'zodrow2001' on page 175 undefined on input line 7176.
+
+
+LaTeX Warning: Citation 'oates2016' on page 175 undefined on input line 7181.
+
+[175]
+
+LaTeX Warning: Citation 'oates2016' on page 176 undefined on input line 7183.
+
+
+LaTeX Warning: Citation 'lutz' on page 176 undefined on input line 7184.
+
+
+LaTeX Warning: Citation 'oates2016' on page 176 undefined on input line 7184.
+
+
+LaTeX Warning: Citation 'lutz' on page 176 undefined on input line 7186.
+
+
+LaTeX Warning: Citation 'oates2016' on page 176 undefined on input line 7191.
+
+
+LaTeX Warning: Citation 'decesare2020' on page 176 undefined on input line 7202
+.
+
+[176]
+
+LaTeX Warning: Citation 'decesare2020' on page 177 undefined on input line 7213
+.
+
+
+LaTeX Warning: Citation 'McMillen2020' on page 177 undefined on input line 7227
+.
+
+
+LaTeX Warning: Citation 'landtax' on page 177 undefined on input line 7227.
+
+
+LaTeX Warning: Citation 'fonseca2020' on page 177 undefined on input line 7227.
+
+
+
+LaTeX Warning: Citation 'McMillen2020' on page 177 undefined on input line 7233
+.
+
+
+Overfull \hbox (14.16832pt too wide) in paragraph at lines 7229--7234
+[]\T1/phv/m/n/12 (-10) Visando pro-por-cionar equidade, al-gu-mas lo-cal-i-dade
+s po-dem pro-por-cionar isenções
+ []
+
+
+LaTeX Warning: Citation 'landtheory' on page 177 undefined on input line 7255.
+
+[177]
+
+LaTeX Warning: Citation 'landtheory' on page 178 undefined on input line 7282.
+
+
+LaTeX Warning: Citation 'varian' on page 178 undefined on input line 7298.
+
+<images/deadweight-1.png, id=2215, 469.755pt x 325.215pt>
 File: images/deadweight-1.png Graphic file (type png)
 <use images/deadweight-1.png>
-Package pdftex.def Info: images/deadweight-1.png  used on input line 7391.
+Package pdftex.def Info: images/deadweight-1.png  used on input line 7301.
 (pdftex.def)             Requested size: 318.49861pt x 220.49815pt.
-[207]
-<images/deadweightElasticities-1.png, id=4567, 469.755pt x 325.215pt>
+[178]
+<images/deadweightElasticities-1.png, id=2227, 469.755pt x 325.215pt>
 File: images/deadweightElasticities-1.png Graphic file (type png)
 <use images/deadweightElasticities-1.png>
 Package pdftex.def Info: images/deadweightElasticities-1.png  used on input lin
-e 7412.
+e 7322.
 (pdftex.def)             Requested size: 318.49861pt x 220.49815pt.
-[208 <./images/deadweight-1.png>] [209 <./images/deadweightElasticities-1.png>]
-<images/ponta-leal-antes.png, id=4595, 746.79pt x 560.0925pt>
+[179 <./images/deadweight-1.png>]
+
+LaTeX Warning: Citation 'landtheory' on page 180 undefined on input line 7329.
+
+[180 <./images/deadweightElasticities-1.png>]
+<images/ponta-leal-antes.png, id=2256, 746.79pt x 560.0925pt>
 File: images/ponta-leal-antes.png Graphic file (type png)
 <use images/ponta-leal-antes.png>
-Package pdftex.def Info: images/ponta-leal-antes.png  used on input line 7493.
+Package pdftex.def Info: images/ponta-leal-antes.png  used on input line 7403.
 (pdftex.def)             Requested size: 318.49861pt x 238.86942pt.
-[210]
-<images/ponta-leal-depois.png, id=4612, 746.79pt x 560.0925pt>
+[181]
+
+LaTeX Warning: Citation 'sigsc' on page 182 undefined on input line 7411.
+
+<images/ponta-leal-depois.png, id=2271, 746.79pt x 560.0925pt>
 File: images/ponta-leal-depois.png Graphic file (type png)
 <use images/ponta-leal-depois.png>
-Package pdftex.def Info: images/ponta-leal-depois.png  used on input line 7514.
+Package pdftex.def Info: images/ponta-leal-depois.png  used on input line 7424.
 
 (pdftex.def)             Requested size: 318.49861pt x 238.86942pt.
-[211 <./images/ponta-leal-antes.png> <./images/ponta-leal-depois.png>] [212] [2
-13] [214]
-Overfull \hbox (0.33652pt too wide) in paragraph at lines 7669--7669
-[][]\T1/phv/m/sc/12 (-10) bonduki\T1/phv/m/n/12 (-10) , Na-bil Ge-or-ges. Ori-g
-ens da Ha-bi-ta-ção So-cial no Bra-sil. \T1/phv/m/sl/12 (-10) Aná-lise So-cial\
-T1/phv/m/n/12 (-10) , v. XXIX,
+[182 <./images/ponta-leal-antes.png> <./images/ponta-leal-depois.png>]
+
+LaTeX Warning: Citation 'lei14118' on page 183 undefined on input line 7447.
+
+
+LaTeX Warning: Citation 'lei9636' on page 183 undefined on input line 7475.
+
+
+LaTeX Warning: Citation 'lei14011' on page 183 undefined on input line 7477.
+
+[183]
+
+LaTeX Warning: Citation 'poleto' on page 184 undefined on input line 7493.
+
+
+LaTeX Warning: Citation 'berlim' on page 184 undefined on input line 7504.
+
+
+LaTeX Warning: Citation 'economist-rent-control' on page 184 undefined on input
+ line 7508.
+
+
+LaTeX Warning: Citation 'guardian' on page 184 undefined on input line 7512.
+
+
+LaTeX Warning: Citation 'bonduki_origens_1994' on page 184 undefined on input l
+ine 7522.
+
+[184]
+Overfull \hbox (8.39476pt too wide) in paragraph at lines 7548--7551
+[]\T1/phv/m/n/12 (-10) O ar-tigo 3\TS1/phv/m/n/12 (-10) º \T1/phv/m/n/12 (-10) 
+do Es-tatuto da Cidade prevê que cabe a União, en-tre out-ras atribuições: 
  []
 
 
-Package biblatex Warning: Month out of range
-(biblatex)                at entry 'lei9636' on input line 7669.
+LaTeX Warning: Empty bibliography on input line 7579.
 
-[215]
-LaTeX Font Info:    Font shape `TS1/phv/m/it' in size <12> not available
-(Font)              Font shape `TS1/phv/m/sl' tried instead on input line 7669.
-
-
-Package biblatex Warning: Month out of range
-(biblatex)                at entry 'california' on input line 7669.
-
-
-Package biblatex Warning: Month out of range
-(biblatex)                at entry 'finlandia' on input line 7669.
-
-
-Package biblatex Warning: Month out of range
-(biblatex)                at entry 'guardian' on input line 7669.
-
-
-Package biblatex Warning: Month out of range
-(biblatex)                at entry 'economist-rent-control' on input line 7669.
-
-
-[216]
-
-Package biblatex Warning: Month out of range
-(biblatex)                at entry 'fischel2013' on input line 7669.
-
-
-Package biblatex Warning: No driver for entry type 'masterthesis'.
-(biblatex)                Using fallback driver on input line 7669.
-
-[217]
-
-Package biblatex Warning: Month out of range or not an integer
-(biblatex)                at entry 'berlim' on input line 7669.
-
-[218]
-
-Package biblatex Warning: Month out of range
-(biblatex)                at entry 'rolnik' on input line 7669.
-
-
-Package biblatex Warning: Month out of range or not an integer
-(biblatex)                at entry 'spinney' on input line 7669.
-
-[219] [220]
-Package biblatex Info: Reference section=0 on input line 7670.
-[221]
+Package biblatex Info: Reference section=0 on input line 7580.
+[185]
 \blx@maxsegment@8=\count537
 \blx@sectionciteorder@8=\count538
-Package biblatex Info: Reference section=8 on input line 7673.
-Package biblatex Info: Setting label 'refsection:8' on input line 7673.
+Package biblatex Info: Reference section=8 on input line 7583.
+Package biblatex Info: Setting label 'refsection:8' on input line 7583.
 
-LaTeX Font Warning: Font shape `T1/phv/m/scit' undefined
-(Font)              using `T1/phv/m/sc' instead on input line 7685.
+LaTeX Warning: Citation 'shiller' on page 186 undefined on input line 7595.
 
-[222
+[186
 
-] [223
+]
 
-] [224] [225] [226] [227] [228]
-Package biblatex Info: Reference section=0 on input line 7991.
-[229]
-<images/Page-4-Image-1.png, id=4933, 684.30656pt x 325.96782pt>
-File: images/Page-4-Image-1.png Graphic file (type png)
-<use images/Page-4-Image-1.png>
-Package pdftex.def Info: images/Page-4-Image-1.png  used on input line 8023.
-(pdftex.def)             Requested size: 364.00139pt x 173.39378pt.
-[230
+LaTeX Warning: Citation 'rangel' on page 187 undefined on input line 7653.
 
- <./images/Page-4-Image-1.png>]
+[187
 
-LaTeX Warning: Command \textquoteright invalid in math mode on input line 8061.
+] [188] [189]
+Overfull \hbox (0.89278pt too wide) in paragraph at lines 7751--7765
+[]\T1/phv/m/n/12 (-10) Dado o grande dé-ficit habita-cional no Brasil, os in-ve
+s-ti-men-tos de-vem ser grandes,
+ []
 
+[190] [191]
 
+LaTeX Warning: Citation 'krugman-emergentes' on page 192 undefined on input lin
+e 7849.
 
-LaTeX Warning: Command \textquoteright invalid in math mode on input line 8066.
+[192]
 
+LaTeX Warning: Empty bibliography on input line 7900.
 
-<images/Page-8-Image-3.png, id=4952, 1023.825pt x 338.76563pt>
-File: images/Page-8-Image-3.png Graphic file (type png)
-<use images/Page-8-Image-3.png>
-Package pdftex.def Info: images/Page-8-Image-3.png  used on input line 8069.
-(pdftex.def)             Requested size: 364.00139pt x 120.44096pt.
-<images/Page-8-Image-4.png, id=4953, 1023.825pt x 338.76563pt>
-File: images/Page-8-Image-4.png Graphic file (type png)
-<use images/Page-8-Image-4.png>
-Package pdftex.def Info: images/Page-8-Image-4.png  used on input line 8070.
-(pdftex.def)             Requested size: 364.00139pt x 120.44096pt.
-[231 <./images/Page-8-Image-3.png> <./images/Page-8-Image-4.png>] [232] (./thes
-is.ind [233
+Package biblatex Info: Reference section=0 on input line 7901.
 
-] [234
+! LaTeX Error: Environment CSLReferences undefined.
 
-
-
-])
-\tf@lof=\write6
-\openout6 = `thesis.lof'.
-
-\tf@loq=\write7
-\openout7 = `thesis.loq'.
-
-\tf@lot=\write8
-\openout8 = `thesis.lot'.
-
-\tf@toc=\write9
-\openout9 = `thesis.toc'.
-
-(./thesis.aux)
-
-LaTeX Font Warning: Some font shapes were not available, defaults substituted.
-
-
-Package biblatex Warning: Please rerun LaTeX.
-(biblatex)                Page breaks have changed.
-
-Package logreq Info: Writing requests to 'thesis.run.xml'.
-\openout1 = `thesis.run.xml'.
-
- ) 
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.7905 \begin{CSLReferences}
+                            {0}{0} 
 Here is how much of TeX's memory you used:
- 40736 strings out of 480434
- 712162 string characters out of 5895470
- 1673016 words of memory out of 5000000
- 56277 multiletter control sequences out of 15000+600000
- 530477 words of font info for 413 fonts, out of 8000000 for 9000
- 16 hyphenation exceptions out of 8191
+ 40023 strings out of 480559
+ 695403 string characters out of 5901780
+ 1611736 words of memory out of 5000000
+ 55896 multiletter control sequences out of 15000+600000
+ 506563 words of font info for 318 fonts, out of 8000000 for 9000
+ 14 hyphenation exceptions out of 8191
  106i,17n,117p,1151b,4231s stack positions out of 5000i,500n,10000p,200000b,80000s
-pdfTeX warning (dest): name{cite.0@pereira} has been referenced but does not 
-exist, replaced by a fixed one
 
-pdfTeX warning (dest): name{cite.0@Bresser-Pereira1973} has been referenced but
- does not exist, replaced by a fixed one
-
-{c:/Users/lfpdr/AppData/Roaming/TinyTeX/texmf-dist/fonts/enc/dvips/base/8r.enc}
- <c:/Users/lfpdr/AppData/Roaming/TinyTeX/texmf-var/fonts/pk/ljfour/jknappen/ec/
-ectt1200.600pk> <c:/Users/lfpdr/AppData/Roaming/TinyTeX/texmf-var/fonts/pk/ljfo
-ur/jknappen/ec/tcrm1200.600pk><c:/Users/lfpdr/AppData/Roaming/TinyTeX/texmf-dis
-t/fonts/type1/public/amsfonts/cm/cmex10.pfb><c:/Users/lfpdr/AppData/Roaming/Tin
-yTeX/texmf-dist/fonts/type1/public/fourier/fourier-bb.pfb><c:/Users/lfpdr/AppDa
-ta/Roaming/TinyTeX/texmf-dist/fonts/type1/public/fourier/fourier-ml.pfb><c:/Use
-rs/lfpdr/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/fourier/fourier-
-mlit.pfb><c:/Users/lfpdr/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/
-fourier/fourier-ms.pfb><c:/Users/lfpdr/AppData/Roaming/TinyTeX/texmf-dist/fonts
-/type1/adobe/utopia/putr8a.pfb><c:/Users/lfpdr/AppData/Roaming/TinyTeX/texmf-di
-st/fonts/type1/urw/helvetic/uhvb8a.pfb><c:/Users/lfpdr/AppData/Roaming/TinyTeX/
-texmf-dist/fonts/type1/urw/helvetic/uhvbo8a.pfb><c:/Users/lfpdr/AppData/Roaming
-/TinyTeX/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb><c:/Users/lfpdr/AppData
-/Roaming/TinyTeX/texmf-dist/fonts/type1/urw/helvetic/uhvro8a.pfb>
-Output written on thesis.pdf (235 pages, 7649350 bytes).
-PDF statistics:
- 5900 PDF objects out of 6186 (max. 8388607)
- 5335 compressed objects within 54 object streams
- 1081 named destinations out of 1200 (max. 500000)
- 87877 words of extra memory for PDF output out of 89155 (max. 10000000)
-
+!  ==> Fatal error occurred, no output PDF file produced!

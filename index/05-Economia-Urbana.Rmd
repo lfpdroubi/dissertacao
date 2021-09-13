@@ -153,7 +153,7 @@ famílias.
 
 
 
-```{r basicModel, fig.cap="Consumo de habitação pelas famílias em função da renda disponível.", fig.height=9, fig.width=4.5}
+```{r basicModel, fig.cap="Consumo de habitação pelas famílias em função da renda disponível.", fig.height=6, fig.width=6}
 mu <- 0
 sd <- 1.25
 x1 <- seq(-3, 3, by = .05)
@@ -253,7 +253,7 @@ uma parte das famílias de menor renda, representadas pela região **B** do
 gráfico, passam a ter acesso à moradia, o que não seria possível para elas antes
 do aumento desta oferta.
 
-```{r ofertaTerra, fig.cap="Consumo de habitação pelas famílias em função da oferta de hipotecas."}
+```{r ofertaTerra, fig.cap="Variação no consumo de habitação em função de uma mudança na oferta de terra urbana.", fig.height=6, fig.width=6}
 mu <- 0
 sd <- 1.25
 x1 <- seq(-3, 3, by = .05)
@@ -413,7 +413,7 @@ famílias elegíveis, *i.e* com renda superior a *n* (área **B** do gráfico),
 o acesso à hipotecas tende a deslocar a curva de consumo de habitação da linha 
 tracejada (*f*) para a linha cheia do gráfico (*f1*).
 
-```{r ofertaHipotecas, fig.cap="Consumo de habitação pelas famílias em função da oferta de hipotecas."}
+```{r ofertaHipotecas, fig.cap="Variação no consumo de habitação em função de uma mudança na oferta de financiamento.", fig.height=6, fig.width=6}
 mu <- 0
 sd <- 1.25
 x1 <- seq(-3, 3, by = .05)
@@ -809,7 +809,7 @@ seja pelo fato destas famílias não possuírem renda mínima disponível para
 acessar estes créditos, seja pela ilegalidade da ocupação, o que também 
 inviabiliza qualquer tipo de financiamento.
 
-```{r consumo, fig.cap="Consumo de habitação pelas famílias em função da renda disponível."}
+```{r consumo, fig.cap="Consumo de habitação pelas famílias em função da renda disponível.", fig.height=6, fig.width=6}
 mu <- 0
 sd <- 1.25
 x1 <- seq(-3, 3, by = .05)
@@ -884,7 +884,7 @@ ilustrado pela Figura \@ref(fig:supplySideSubsidies), algumas famílias de renda
 superior às da população alvo destas políticas acabam sendo beneficiadas por
 estes programas.
 
-```{r supplySideSubsidies, fig.cap="Impacto das políticas habitacionais que atuam pelo lado da oferta."}
+```{r supplySideSubsidies, fig.cap="Impacto das políticas habitacionais que atuam pelo lado da oferta.", fig.height=6, fig.width=6}
 mu <- 0
 sd <- 1.25
 x1 <- seq(-3, 3, by = .05)
@@ -1146,7 +1146,7 @@ locação de moradias do tamanho mínimo estabelecido pela regulamentação do
 mercado (*m*), estas famílias, então, também poderão ter acesso a este \gls{MI}
 de maneira regular, o que é mostrado pela Figura \@ref(fig:vouchers)
 
-```{r vouchers, fig.cap="Impacto das políticas habitacionais que atuam pelo lado da demanda."}
+```{r vouchers, fig.cap="Impacto das políticas habitacionais que atuam pelo lado da demanda.", fig.height=6, fig.width=6}
 mu <- 0
 sd <- 1.25
 x1 <- seq(-3, 3, by = .05)
