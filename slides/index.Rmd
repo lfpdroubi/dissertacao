@@ -138,6 +138,13 @@ background-size: contain
 # Introdução
 
 ---
+class: center, middle
+
+# Introdução
+
+<iframe width="978" height="550" src="https://www.youtube.com/embed/2WGPvWPpey8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+---
 # Introdução
 
 #### Que tipo de política habitacional e/ou fundiária é necessária para o Brasil nos próximos 20 anos?
@@ -813,10 +820,35 @@ class: inverse, center, middle
 # Economia Urbana
 
 ---
-background-image: url(https://raw.githubusercontent.com/lfpdroubi/dissertacao/master/index/images/densities.png)
-background-size: contain
-
 # Economia Urbana
+
+.pull-left[
+
+```{r  out.width = "100%"}
+knitr::include_graphics("https://raw.githubusercontent.com/lfpdroubi/dissertacao/master/index/images/densities.png")
+```
+
+]
+
+.pull-right[
+
+
+| Cidade           | Gradiente | $R^2$ |
+|:-----------------|----------:|------:|
+| Pequim           | -0,17     | 0,92  |
+| Varsóvia         | -0,17     | 0,86  |
+| Jakarta          | -0,12     | 0,97  |
+| Barcelona        | -0,10     | 0,89  |
+| Paris            | -0,10     | 0,90  |
+| Bangkok          | -0,08     | 0,92  |
+| Nova Iorque      | -0,07     | 0,90  |
+| Buenos Aires     | -0,05     | 0,95  |
+| Atlanta          | -0,04     | 0,84  |
+| Cidade do México | -0,03     | 0,81  |
+| Los Angeles      | -0,03     | 0,91  |
+| Rio de Janeiro   | -0,02     | 0,37  |
+
+]
 
 ---
 # Economia Urbana
@@ -944,6 +976,143 @@ população, podem restar famílias que não podem arcar com o consumo mínimo d
 habitação no mercado formal.
 
 ]
+
+---
+# Economia Urbana
+
+#### Os programas habitacionais que atuam pelo lado da demanda
+
+.pull-left[
+
+```{r  out.width = "100%"}
+knitr::include_graphics("https://raw.githubusercontent.com/lfpdroubi/dissertacao/master/index/images/vouchers2-1.png")
+```
+
+]
+
+.pull-right[
+
+1. Os programas habitacionais que atuam pelo lado da demanda (*vouchers* ou 
+aluguel social) estimulam o mercado privado de construção de moradias, através
+do simples aumento da demanda.
+
+2. O aumento da demanda inicialmente tende a produzir um aumento dos preços, o
+que puxa a oferta de novas moradias
+
+3. No longo prazo a tendência é que os preços voltem aos níveis anteriores, 
+porém com uma quantidade de equilíbrio muito maior do que a inicial.
+
+]
+
+---
+# Economia Urbana
+
+#### Os programas habitacionais que atuam pelo lado da oferta
+
+.pull-left[
+
+```{r  out.width = "100%"}
+knitr::include_graphics("https://raw.githubusercontent.com/lfpdroubi/dissertacao/master/index/images/cohab-1.png")
+```
+
+]
+
+.pull-right[
+
+1. Os programas habitacionais que atuam pelo lado da oferta (construção de 
+unidades promovidas pelo governo de maneira direta ou indireta), por outro lado,
+tendem a desestimular o mercado privado de produção de moradias.
+
+2. O aumento da oferta através dos programas habitacionais governamentais tende
+a deslocar a oferta privada que teria lugar na ausência dos programas.
+
+3. A curto prazo, como as unidades construídas pelo governo direta ou 
+inderetamente contam com algum subsídio, os preços caem.
+
+4. No longo prazo, no entanto, a tendência é que os preços voltem aos níveis 
+anteriores, porém com uma quantidade de equilíbrio muito menor do que a inicial.
+
+]
+
+---
+# Economia Urbana
+
+#### Os programas habitacionais que atuam pelo lado da oferta
+
+.pull-left[
+
+```{r  out.width = "100%"}
+knitr::include_graphics("https://raw.githubusercontent.com/lfpdroubi/dissertacao/master/index/images/supplySideSubsidies-1.png")
+```
+
+]
+
+.pull-right[
+
+1. Além do problema econômico, os programas habitacionais que atuam pelo lado da
+oferta fatalmente incorrem em algum tipo de violação do princípio da equidade,
+seja horizontal ou vertical.
+
+2. A violação do princípio da equidade horizontal se dá porque a propriedade da
+moradia não é um direito garantido (a constituição não prevê o direito à moradia 
+*própria*). Assim, nem todas as famílias podem ter acesso aos programas, dadas 
+restrições orçamentárias.
+
+3. A violação do princípio da equidade vertical se dá porque algumas famílias
+podem ter renda tão baixa que podem acabar não sendo contempladas pelos 
+programas, por falta de capacidade de pagamento, ou ainda porque as famílias de
+renda superior às máximas estabelecidas pelos programas podem se beneficiar do
+programa, ainda que informalmente.
+
+]
+
+---
+# Economia Urbana
+
+#### Os programas habitacionais que atuam pelo lado da oferta
+
+.pull-left[
+
+```{r  out.width = "100%"}
+knitr::include_graphics("https://raw.githubusercontent.com/lfpdroubi/dissertacao/master/index/images/eficiencia-1.png")
+```
+
+]
+
+.pull-right[
+
+* Eficiência microeconômica total: produto da eficiência admnistrativa, da 
+produção e da transferência.
+
+* Transferência: O beneficiário não é contemplado com o imóvel que deseja:
+  - Digamos que o beneficiário gostaria de consumir $Q_m \, m^2$ ao preço $P_m$.
+  - O programa habitacional do governo oferece unidades com $Q_c \,m^2$ ao preço $P_c$.
+  - Ao preço $P_c$, no entanto, o beneficiário gostaria de consumir $\tilde Q \, m^2$.
+  - Assim, por um lado há um ganho de bem-estar devido ao preço subsidiado $\underline{abcd}$, porém há uma perda de bem-estar devido à perda de excedente do consumidor $\underline{ecf}$.
+  - Nos EUA, eficiência da transferência calculada em 72% `r Citep(bib, 'malpezzi_affordable_2018_1')`!
+
+]
+
+---
+# Economia Urbana
+
+#### Os programas habitacionais que atuam pelo lado da oferta
+
+
+* Outros problemas: via de regra, os beneficiário não são contemplados com 
+imóveis nos locais que escolheram, mas onde o governo escolheu!
+
+---
+# Economia Urbana
+
+#### Os programas habitacionais que atuam pelo lado da oferta
+
+* Eficiência total `r Citep(bib, 'malpezzi_affordable_2018_1')`:
+  - Desconsiderando a perda de eficiência por questões administrativas 
+  (burocracia necessária para a operacionalização do programa)
+  - Considerando a eficiência de transferência de 72% (EUA)
+  - E a eficiência de construção de 63% (EUA)
+  - Chega-se a uma eficiência de, apenas, 42%!
 
 ---
 class: center, middle

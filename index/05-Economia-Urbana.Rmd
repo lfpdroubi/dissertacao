@@ -1016,15 +1016,15 @@ maneira, segundo @malpezzi_affordable_2018_1, a preferência do consumidor é
 violada e, ao mesmo tempo em que ele ganha o bem-estar por poder comprar $Q_c$ 
 unidades a um preço $(P_m-P_c)$, igual a área do retângulo $a-b-c-d$ da Figura
 \@ref(fig:eficiencia), ele perde bem-estar de magnitude igual à área do 
-triângulo $e-c-f$. Assim, geometricamente, se a área $a-b-c-d$ é maior do que a 
-área do triângulo $e-c-f$, o consumidor estará obtendo um benefício líquido e 
+triângulo $d-e-f$. Assim, geometricamente, se a área $a-b-c-d$ é maior do que a 
+área do triângulo $d-e-f$, o consumidor estará obtendo um benefício líquido e 
 optará pela compra da unidade subsidiada. Caso contrário, o benefício líquido
 seria negativo e o consumidor optaria por não comprar a unidade.
 
 ```{r eficiencia, fig.cap="Eficiência da transferência."}
-plot_labels <- tibble(label = expression("D", "P[m]", "P[c]", "d", "c", "e", "f"),
-                          x = c(1,     9, 9, 3.25, 3.25, 3.5, 5.5),
-                          y = c(8.5, 5.5, 4, 3.25, 5.25, 7, 5.5))
+plot_labels <- tibble(label = expression("D", "P[m]", "P[c]", "c", "d", "e", "f"),
+                          x = c(1,    11, 11, 3.25, 3.25, 3.5, 5.5),
+                          y = c(8.5, 5.5,  4, 3.25, 5.25, 7, 5.5))
 points <- data.frame(x = c(5, 3.5, 3.5, 3.5, 0, 0), y = c(5, 6.5, 3.5, 5, 3.5, 5))
 
 triangle <- data.frame(id = c("c", "e", "f"), 
@@ -1051,7 +1051,7 @@ p1 <- ggplot(mapping = aes(x = x, y = y)) +
   scale_y_continuous(expand = c(0, 0), breaks = c(3.5, 5), limits = c(0,13),
                      labels = expression(b, a)) +
   annotate("rect", xmin = 0, xmax = 3.5, ymin = 3.5, ymax = 5, alpha = 0.2) +
-  geom_polygon(data = triangle, aes(x = x, y = y), alpha = 0.2)
+  geom_polygon(data = triangle, aes(x = x, y = y), fill = "red", alpha = 0.2)
 p1
 ```
 \bcenter
@@ -1059,12 +1059,102 @@ p1
 \ecenter
 
 A eficiência é simplesmente a razão entre o benefício líquido obtido pelo
-consumidor ($\overline{a-b-c-d} - \overline{e-c-f}$) e o custo de transferência
-arcada pelo governo ($a-b-c-d$).
+consumidor ($\underline{a-b-c-d} - \underline{d-e-f}$) e o custo de transferência
+arcada pelo governo ($\underline{a-b-c-d}$).
 
-Os programas habitacionais que atuam pelo lado da oferta, nos \gls{EUA}, tem
-eficiência média de transferência de 72%. A eficiência de produção de moradias 
-públicas, nos \gls{EUA}, segundo diversos estudos, é, em média, de 63%.
+De uma forma análoga, também existe perda de eficiência se as unidades 
+oferecidas aos beneficiários tiverem tamanho (ou qualidade) maior do que os 
+procurados pelos beneficiários. Isto é ilustrado na Figura \@ref(fig:eficiencia2).
+Num contexto de livre mercado, o consumidor preferirira adquirir $Q_m$ ao preço
+$P_m$, porém somente lhe é oferecido adquirir a quantidade $Q_c$, neste caso 
+maior do que a quantidade desejada, por um preço menor, $P_c$. Ao preço $P_c$,
+no entanto, a escolha do consumidor seria adquirir apenas $Q^*$ unidades, menor
+do que o oferecido. A perda de eficiência, então, para este caso, está na razão
+entre a diferença dos benefícios ao consumidor 
+$\underline{a-b-e-d}-\underline{e-f-g}$ sobre os custos do governo 
+$\underline{a-c-f-d}$.
+
+```{r eficiencia2, fig.cap="Eficiência da transferência."}
+plot_labels <- tibble(label = expression("D", "P[m]", "P[c]", "b", "e", "f", "g", "c"),
+                          x = c(1,    11, 11,  5.5, 6.5, 8, 8.5, 8.5),
+                          y = c(8.5, 5.5,  4,  5.5,   4, 4, 2, 5.5))
+points <- data.frame(x = c(5, 0, 0, 6.5, 8, 8, 8), y = c(5, 3.5, 5, 3.5, 2, 3.5, 5))
+
+triangle <- data.frame(id = c("g", "h", "i"), 
+                       x = c(6.5, 8, 8), 
+                       y = c(3.5, 3.5, 2))
+
+p1 <- ggplot(mapping = aes(x = x, y = y)) + 
+  geom_segment(aes(x = 1, y = 9, xend = 9, yend = 1), color = "#FF4036", size = 1) +
+  geom_hline(aes(yintercept = 5)) +
+  geom_hline(aes(yintercept = 3.5)) +
+  geom_segment(aes(x = 5, y = 0, xend = 5, yend = 5), lty = "dotted") +
+  geom_segment(aes(x = 0, y = 5, xend = 5, yend = 5), lty = "dotted") + 
+  geom_segment(aes(x = 8, y = 0, xend = 8, yend = 5), lty = "dotted") +
+  geom_segment(aes(x = 0, y = 3.5, xend = 3.5, yend = 3.5), lty = "dotted") + 
+  geom_segment(aes(x = 6.5, y = 0, xend = 6.5, yend = 3.5), lty = "dotted") +
+  geom_text(data = plot_labels,
+            aes(x = x, y = y, label = label), parse = TRUE) +
+  geom_point(data = points, aes(x = x, y = y), size = 2) +
+  labs(x = expression("Quantidade"~(m^2)), y = expression("Preço por "~m^2)) +
+  theme_classic() + 
+  coord_equal() +
+  scale_x_continuous(expand = c(0, 0), breaks = c(8, 5, 6.5), limits = c(0,13),
+                     labels = expression(Q[c], Q[m], tilde(Q))) +
+  scale_y_continuous(expand = c(0, 0), breaks = c(3.5, 5), limits = c(0,13),
+                     labels = expression(d, a)) +
+  annotate("polygon", x = c(0, 6.5, 5, 0), y = c(3.5, 3.5, 5, 5), alpha = 0.2) +
+  geom_polygon(data = triangle, aes(x = x, y = y), fill = "red", alpha = 0.2)
+p1
+```
+\bcenter
+\small Fonte -- Adaptado de @malpezzi_affordable_2018_1.
+\ecenter
+
+A única ocasião em que o custo de transferência seria zero, *i.e.* o custo do
+governo com os subsídios igualam os benefícios obtidos pelos beneficiários, se
+daria quando a quantidade de habitação oferecida ao beneficiário pelo programa
+seja exatamente igual à quantidade que o beneficiário adquiriria nas condições
+de livre-mercado. Isto é ilustrado na Figura \@ref(fig:eficiencia3). Neste caso,
+o triângulo do peso-morto encolhe a zero.
+
+```{r eficiencia3, fig.cap="Eficiência da transferência."}
+plot_labels <- tibble(label = expression("D", "P[m]", "P[c]", "b", "c"),
+                          x = c(1,    11, 11,  5.5, 5.5),
+                          y = c(8.5, 5.5,  4,  5.5,   4))
+points <- data.frame(x = c(5, 0, 0, 5), y = c(5, 3.5, 5, 3.5))
+
+triangle <- data.frame(id = c("g", "h", "i"), 
+                       x = c(6.5, 8, 8), 
+                       y = c(3.5, 3.5, 2))
+
+p1 <- ggplot(mapping = aes(x = x, y = y)) + 
+  geom_segment(aes(x = 1, y = 9, xend = 9, yend = 1), color = "#FF4036", size = 1) +
+  geom_hline(aes(yintercept = 5)) +
+  geom_hline(aes(yintercept = 3.5)) +
+  geom_segment(aes(x = 5, y = 0, xend = 5, yend = 5), lty = "dotted") +
+  geom_segment(aes(x = 0, y = 5, xend = 5, yend = 5), lty = "dotted") + 
+  geom_segment(aes(x = 0, y = 3.5, xend = 3.5, yend = 3.5), lty = "dotted") + 
+  geom_segment(aes(x = 6.5, y = 0, xend = 6.5, yend = 3.5), lty = "dotted") +
+  geom_text(data = plot_labels,
+            aes(x = x, y = y, label = label), parse = TRUE) +
+  geom_point(data = points, aes(x = x, y = y), size = 2) +
+  labs(x = expression("Quantidade"~(m^2)), y = expression("Preço por "~m^2)) +
+  theme_classic() + 
+  coord_equal() +
+  scale_x_continuous(expand = c(0, 0), breaks = c(5, 6.5), limits = c(0,13),
+                     labels = expression(Q[m] == Q[c], tilde(Q))) +
+  scale_y_continuous(expand = c(0, 0), breaks = c(3.5, 5), limits = c(0,13),
+                     labels = expression(d, a)) +
+  annotate("polygon", x = c(0, 5, 5, 0), y = c(3.5, 3.5, 5, 5), alpha = 0.2)
+p1
+```
+
+Naturalmente deve-se esperar que apenas muito raramente ocorrerá uma 
+transferência com 100% de eficiência. Os programas habitacionais que atuam pelo 
+lado da oferta, nos \gls{EUA}, tem eficiência média de transferência de 72%. A 
+eficiência de produção de moradias públicas, nos \gls{EUA}, segundo diversos 
+estudos, é de 63%, em média.
 
 A eficiência microeconômica total é o produto das três eficiência citadas. A
 eficiência adminstrativa não foi medida e não deve ser muito importante em

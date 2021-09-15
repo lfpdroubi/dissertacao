@@ -728,11 +728,11 @@ consideravelmente, a resistência do complexo à dissolução".
 \begin{citacao}
 A revolução democrático-burguesa, nos casos em que a gleba feudal é -- como
 aconteceu na Europa Ocidental (principalmente, na França) e nos Estados Unidos
--- substituída pela pequena propriedade familiar ou *homestead*, ao fortalecer
-as bases da economia natural ou de autoconsumo, resolve satisfatoriamente o
-problema na absorção dos excedentes de mão-de-obra no seio da própria economia
-camponesa, estancando ou reduzindo drasticamente o fluxo populacional
-responsável pelo êxodo campo-cidade \cite[p.~133]{rangel1986b}. 
+-- substituída pela pequena propriedade familiar ou \emph{homestead}, ao
+fortalecer as bases da economia natural ou de autoconsumo, resolve
+satisfatoriamente o problema na absorção dos excedentes de mão-de-obra no seio
+da própria economia camponesa, estancando ou reduzindo drasticamente o fluxo
+populacional responsável pelo êxodo campo-cidade \cite[p.~133]{rangel1986b}.
 \end{citacao}
 
 Segundo Rangel [-@rangel1986b, 133], no entanto, "esse tipo de superação das
