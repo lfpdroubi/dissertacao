@@ -3437,7 +3437,7 @@ p1 <- ggplot(mapping = aes(x = x, y = y)) +
 p1
 ```
 \bcenter
-\small Fonte -- Adaptado de @ADAMS2010.
+\small Fonte -- Adaptado de @diPasquale \emph{apud} @ADAMS2010.
 \ecenter
 
 A Figura \@ref(fig:adams) mostra, além desta propagação descrita acima, em seu
@@ -5956,15 +5956,21 @@ Em ambas as séries foram aplicados testes de mudança estrutural do mercado no
 \proglang{R}, versão `r paste(version$major, version$minor, sep = ".")` [@R]. 
 Para a série de valores nominais, estes pontos de mudança foram extraídos pelo 
 pacote \pkg{changepoint}. Já para a série de valores reais foi utilizado o 
-pacote \pkg{strucchange} [@strucchange]. As linhas tracejadas em vermelho representam estes 
-pontos de corte.
+pacote \pkg{strucchange} [@strucchange]. As linhas tracejadas em vermelho 
+representam estes pontos de corte.
+
+```{r, eval = FALSE}
+nhpi <- Quandl("YALE/NHPI", type="ts", start_date="1975-01-01")
+rhpiAnual <- Quandl("YALE/RHPI", type="ts", collapse = "annual")
+saveRDS(nhpi, file = "data/nhpi")
+saveRDS(rhpiAnual, file = "data/rhpiAnual")
+```
 
 ```{r}
-nhpi <- Quandl("YALE/NHPI", type="ts", start_date="1975-01-01")
-rhpi <- Quandl("YALE/RHPI", type="ts", collapse = "annual")
-saveRDS(nhpi, file = "data/nhpi")
-#saveRDS(rhpi, file = "data/rhpi")
+nhpi <- readRDS("data/nhpi")
+rhpiAnual <- readRDS("data/rhpiAnual")
 ```
+
 
 ```{r nhpi, fig.cap="\\gls{HPI} de Case e Shiller, em termos nominais."}
 autoplot(cpt.meanvar(nhpi)) +
@@ -5976,7 +5982,7 @@ autoplot(cpt.meanvar(nhpi)) +
 \ecenter
 
 ```{r rhpi, fig.cap="\\gls{HPI} de Case e Shiller, em termos reais."}
-autoplot(breakpoints(rhpi ~ 1), cpt.colour = 'red', cpt.linetype = 'dashed') +
+autoplot(breakpoints(rhpiAnual ~ 1), cpt.colour = 'red', cpt.linetype = 'dashed') +
   labs(x = "Ano", y = "Índice (1890 = 100)")
 ```
 \bcenter
@@ -5996,12 +6002,6 @@ atingido em julho de 2006.
 
 Na figura \@ref(fig:nhpi1) pode-se visualizar a evolução do \gls{HPI}, de Case e 
 Shiller, desde 1975. 
-
-```{r}
-nhpi <- readRDS("data/nhpi")
-rhpi <- Quandl("YALE/RHPI", type="ts")
-# saveRDS(nhpi, file = "data/rhpi")
-```
 
 ```{r nhpi1, fig.cap="\\gls{HPI} de Case e Shiller, em termos nominais."}
 recessions.trim = subset(recessions.df, Peak >= "1975-01-01")
@@ -6033,12 +6033,8 @@ estouro da bolha do *subprime*, os preços sofrem uma nítida tendência de
 alta, desde janeiro de 2012, ultrapassando já, em termos nominais, os níveis de
 preços anteriores à crise de 2008.
 
-
 ```{r}
 range_nhpi_2006_2012 <- range(window(nhpi, start = 2006 + 6/12, end = 2012 + 0/12))
-range_rhpi_2005_2012 <- range(window(rhpi, start = 2005 + 11/12, end = 2012 + 0/12))
-range_rhpi_1997_2005 <- range(window(rhpi, start = 1997 + 0/12, end = 2005 + 11/12))
-range_rhpi_1989_1997 <- range(window(rhpi, start = 1989 + 7/12, end = 1997 + 0/12))
 ```
 
 Em julho de 2006 o índice atingiu o valor de `r brf(range_nhpi_2006_2012[2])`
@@ -6051,29 +6047,47 @@ No momento em que se escreve esta dissertação o índice se encontra com
 `r brf(last(nhpi) - range_nhpi_2006_2012[1])`
 pontos.
 
+```{r, eval = FALSE}
+rhpi <- Quandl("YALE/RHPI", type="ts")
+saveRDS(rhpi, file = "data/rhpi")
+```
+
+
+```{r}
+rhpi <- readRDS('data/rhpi')
+range_rhpi_2005_2012 <- range(window(rhpi, start = 2005 + 11/12, end = 2012 + 0/12))
+range_rhpi_1997_2005 <- range(window(rhpi, start = 1997 + 0/12, end = 2005 + 11/12))
+range_rhpi_1989_1997 <- range(window(rhpi, start = 1989 + 7/12, end = 1997 + 0/12))
+```
+
+
 Em termos reais, no entanto, os preços ainda são inferiores ao pico registrado, 
 mas há uma nítida tendência de alta, conforme pode ser visto na figura 
 \@ref(fig:rhpi).
 
 ```{r rhpi1, fig.cap="\\gls{HPI} de Case e Shiller, em termos reais."}
 recessions.trim = subset(recessions.df, Peak >= "1990-01-01" )
-ggplot(window(rhpi, start = 1990 + 0/12), as.numeric = FALSE) +
+rhpiDF <- data.frame(date = as.Date(as.yearmon(time(rhpi))),
+                     Y = as.matrix(rhpi))
+#ggplot(window(rhpi, start = 1990 + 0/12), as.numeric = FALSE) +
+ggplot(rhpiDF[rhpiDF$date >= '1990-01-01', ], aes(x = date, y = Y)) +
   geom_line() +
    labs(
      title = "Índice de Case-Shiller (EUA) HPI Nacional Real", 
      subtitle = "Não ajustado sazonalmente | Frequência: Mensal", 
-     caption = "1990-2019",
+     caption = "1990-2021",
      x = "Ano", 
      y = "Índice Dez 1890 = 100") +
-  ylim(110, 200) +
+  ylim(110, 220) +
   stat_peaks(colour = "red", span = 61) +
   stat_peaks(geom = "text", colour = "red", 
              vjust = -0.5, x.label.fmt = "%b/%Y", span = 61) +
   stat_valleys(colour = "blue", span = 61) +
   stat_valleys(geom = "text", colour = "blue", 
              vjust = 1.5, x.label.fmt = "%b/%Y", span = 61) +
-  geom_rect(data=recessions.trim, aes(xmin=Peak, xmax=Trough, 
-                                    ymin=-Inf, ymax=+Inf),
+  geom_rect(data=recessions.trim, 
+            aes(xmin=as.Date(Peak), xmax=as.Date(Trough), 
+                ymin=-Inf, ymax=+Inf),
           inherit.aes=F,
           fill='grey', alpha=0.5)
 ```
@@ -6112,32 +6126,33 @@ como mostra a Figura \@ref(fig:global-rhpi), do índice de preços global de
 imóveis do \gls{FMI}, que será apresentado na próxima seção.
 
 A possível presença de uma tendência de longo prazo para os preços dos imóveis
-deve ser investigada. No capítulo \@ref(crise2008) isto será abordado.
+deve ser investigada. 
 
 ```{r rhpi2, fig.cap="\\gls{HPI} em termos reais."}
-# recessions.trim = subset(recessions.df, Peak >= "1953-01-01" )
-# rhpi_1953_now <- window(rhpi, start = 1953)
-# #ggplot(window(rhpi, start = 1953), as.numeric = FALSE) +
-# autoplot(window(rhpi, start = 1953)) +
-#   # geom_line() +
-#    labs(
-#      title = "Índice de Case-Shiller (EUA) HPI Nacional Real", 
-#      subtitle = "Não ajustado sazonalmente | Frequência: Mensal", 
-#      caption = "1953-2019",
-#      x = "Ano", 
-#      y = "Índice Jan 1890 = 100") +
-#   ylim(95, 205) +
-#   stat_peaks(colour = "red", span = 61) +
-#   stat_peaks(geom = "text", colour = "red", 
-#              vjust = -0.5, x.label.fmt = "%b/%Y", span = 61) +
-#   stat_valleys(colour = "blue", span = 61) +
-#   stat_valleys(geom = "text", colour = "blue", 
-#              vjust = 1.5, x.label.fmt = "%b/%Y", span = 61) 
-#   # geom_rect(data=recessions.trim, aes(xmin=Peak, xmax=Trough, 
-#   #                                     ymin=-Inf, ymax=+Inf),
-#   #           inherit.aes=F,
-#   #           fill='grey', alpha=0.5)
-knitr::include_graphics("images/rhpi2-1.png")
+recessions.trim = subset(recessions.df, Peak >= "1953-01-01" )
+#ggplot(window(rhpi, start = 1953 + 0/12), as.numeric = TRUE) +
+#autoplot(window(rhpi, start = 1953)) +
+ggplot(rhpiDF[rhpiDF$date >= '1953-01-01', ], aes(x = date, y = Y)) +
+   geom_line() +
+   labs(
+     title = "Índice de Case-Shiller (EUA) HPI Nacional Real",
+     subtitle = "Não ajustado sazonalmente | Frequência: Mensal",
+     caption = "1953-2021",
+     x = "Ano",
+     y = "Índice Jan 1890 = 100") +
+  # ylim(95, 205) +
+  stat_peaks(colour = "red", span = 61) +
+  stat_peaks(geom = "text", colour = "red",
+             vjust = -0.5, x.label.fmt = "%b/%Y", span = 61) +
+  stat_valleys(colour = "blue", span = 61) +
+  stat_valleys(geom = "text", colour = "blue",
+             vjust = 1.5, x.label.fmt = "%b/%Y", span = 61) +
+  geom_rect(data=recessions.trim, 
+            aes(xmin=as.Date(Peak), xmax=as.Date(Trough),
+                ymin=-Inf, ymax=+Inf),
+             inherit.aes=F,
+             fill='grey', alpha=0.5)
+#knitr::include_graphics("images/rhpi2-1.png")
 ```
 \bcenter
 \small Fonte -- O autor, à partir de dados de @QuandlWIKI.

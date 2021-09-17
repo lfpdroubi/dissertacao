@@ -41,6 +41,12 @@
 \addbibresource{bib/cap8.bib}
 \addbibresource{bib/pkgs.bib}
 
+\newlength{\cslhangindent}
+\setlength{\cslhangindent}{1.5em}
+\newenvironment{cslreferences}%
+  {}%
+  {\par}
+
 \usepackage[table]{xcolor}
 \let\newfloat\undefined
 \usepackage{floatrow}
@@ -3308,7 +3314,7 @@ elevará o estoque de imóveis (\textbf{IV}).
 \end{figure}
 \bcenter
 
-\small Fonte -- Adaptado de \textcite{ADAMS2010}.
+\small Fonte -- Adaptado de \textcite{diPasquale} \emph{apud} \textcite{ADAMS2010}.
 \ecenter
 
 A Figura \ref{fig:adams} mostra, além desta propagação descrita acima, em seu
@@ -5227,8 +5233,8 @@ Em ambas as séries foram aplicados testes de mudança estrutural do mercado no
 \proglang{R}, versão 4.1.1 \autocite{R}.
 Para a série de valores nominais, estes pontos de mudança foram extraídos pelo
 pacote \pkg{changepoint}. Já para a série de valores reais foi utilizado o
-pacote \pkg{strucchange} \autocite{strucchange}. As linhas tracejadas em vermelho representam estes
-pontos de corte.
+pacote \pkg{strucchange} \autocite{strucchange}. As linhas tracejadas em vermelho
+representam estes pontos de corte.
 \begin{figure}[H]
 
 {\centering \includegraphics[width=0.7\linewidth]{images/nhpi-1} 
@@ -5337,7 +5343,7 @@ como mostra a Figura \ref{fig:global-rhpi}, do índice de preços global de
 imóveis do \gls{FMI}, que será apresentado na próxima seção.
 
 A possível presença de uma tendência de longo prazo para os preços dos imóveis
-deve ser investigada. No capítulo \ref{crise2008} isto será abordado.
+deve ser investigada.
 \begin{figure}[H]
 
 {\centering \includegraphics[width=0.7\linewidth]{images/rhpi2-1} 
@@ -6153,7 +6159,7 @@ crise imobiliário-financeira de 2008.
 
 }
 
-\caption{HPI, Custos de Construção, População e Taxa de Juros nos EUA, desde 1890.}\label{fig:unnamed-chunk-18}
+\caption{HPI, Custos de Construção, População e Taxa de Juros nos EUA, desde 1890.}\label{fig:unnamed-chunk-20}
 \end{figure}
 \bcenter
 
@@ -6202,7 +6208,7 @@ bem-estar da população em geral.
 
 }
 
-\caption{Índices de Preços de imóveis Residenciais e Comerciais no EUA.}\label{fig:unnamed-chunk-19}
+\caption{Índices de Preços de imóveis Residenciais e Comerciais no EUA.}\label{fig:unnamed-chunk-21}
 \end{figure}
 \bcenter
 

@@ -1838,7 +1838,7 @@ p1 <- ggplot(mapping = aes(x = x, y = y)) +
 p1
 ```
 \bcenter
-\small Fonte -- Adaptado de @ADAMS2010.
+\small Fonte -- Adaptado de @diPasquale \emph{apud} @ADAMS2010.
 \ecenter
 
 A Figura \@ref(fig:adams) mostra, além desta propagação descrita acima, em seu
