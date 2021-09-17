@@ -643,23 +643,23 @@ diminui) em uma unidade.
 
 ##### Elasticidade-preço da demanda
 
-A elasticidade-preço da demanda, \gls{varepsilon_p}, definida conforme a equação
-\@ref(eq:epdemanda) [@varian, p. 302], mede a quantidade marginal que será
-demandada do mercado se o preço de uma mercadoria aumenta ou diminui em uma
-unidade de preço. Geralmente a elasticidade-preço da oferta é, então, um número
-negativo [@varian, 289].
+A elasticidade-preço da demanda, $\varepsilon_{pd}$, definida conforme a
+equação \@ref(eq:epdemanda) [@varian, p. 302], mede a quantidade marginal
+$\mathrm{d} q_d$ que será demandada do mercado se o preço $p$ de uma mercadoria
+aumenta ou diminui em uma unidade de preço. Geralmente a elasticidade-preço da
+oferta é, então, um número negativo [@varian, 289].
 
 \begin{equation}
-\varepsilon_p = \frac{p}{q}\frac{\mathrm{d} q}{\mathrm{d} p}
+\varepsilon_{pd} = \frac{p}{q_d}\frac{\mathrm{d} q_d}{\mathrm{d} p}
 (\#eq:epdemanda)
 \end{equation}
 
 Uma maneira mais conveniente (e exata) de se escrever a equação da elasticidade 
 é a apresentada na equação \@ref(eq:elasticidadeLN), em função do logaritmo
-natural das variáveis [@varian, p.307-308]:
+natural das variáveis [@varian, 307-308]:
 
 \begin{equation}
-\varepsilon_p = \frac{\mathrm{d} \ln(q)}{\mathrm{d} \ln(p)}
+\varepsilon_pd = \frac{\mathrm{d} \ln(q_d)}{\mathrm{d} \ln(p)}
 (\#eq:elasticidadeLN)
 \end{equation}
 
@@ -668,16 +668,22 @@ estimativa para o valor da elasticidade-preço da demanda é algo em torno de -0
 
 ##### Elasticidade-renda da demanda
 
-A elasticidade-renda da demanda, \gls{varepsilon_r}, mede como muda a quantidade
-demandada quando a renda do consumidor varia [@varian, p.300]. De acordo com a
-elasticidade-renda os bens podem ser classificados em bens normais, *i.e.* bens
-cuja demanda aumenta com o aumento da renda; bens inferiores, *i.e.* bens cuja
-demanda diminui com o aumento da renda; e bens de luxo ($\varepsilon_r > 1$),
-*i.e.* bens cujo aumento na demanda é mais do que proporcional ao aumento da
-renda (um aumento de 1% na renda conduz a um aumento de mais de 1% da demanda).
+A elasticidade-renda da demanda, $\varepsilon_{yd}$, mede como muda a 
+quantidade demandada $q_d$ quando a renda $y$ do consumidor varia [@varian, 300]. 
+De acordo com a elasticidade-renda os bens podem ser classificados em bens 
+normais, *i.e.* bens cuja demanda aumenta com o aumento da renda; bens 
+inferiores, *i.e.* bens cuja demanda diminui com o aumento da renda; e bens de 
+luxo ($\varepsilon_r > 1$), *i.e.* bens cujo aumento na demanda é mais do que proporcional ao aumento da renda (um aumento de 1% na renda conduz a um aumento 
+de mais de 1% da demanda).
 
-A análise da elasticidade-renda da demanda pode ser feita a partir das curvas
-de Engel, como na Figura \@ref(fig:engel1):
+A elasticidade-renda da demanda é calculada conforme a equação 
+\@ref(eq:erdemanda) e sua análise pode ser feita a partir das curvas de Engel, 
+como na Figura \@ref(fig:engel1).
+
+\begin{equation}
+\varepsilon_{yd} = \frac{y}{q_d}\frac{\mathrm{d} q_d}{\mathrm{d} y}
+(\#eq:erdemanda)
+\end{equation}
 
 ```{r engel1, fig.cap="Curvas de Engel no Espaço Aluguéis vs. Renda."}
 engel1 <- Hmisc::bezier(c(2, 5, 9),
@@ -714,12 +720,12 @@ p1
 No entanto, segundo @regulation [p. 12-13], uma transformação conveniente pode
 ser feita para a melhor compreensão da diferença entre o consumo necessário e o
 consumo de luxo, como pode ser visto na Figura \@ref(fig:engel2): no caso de um
-mercado de bens de luxo ($\varepsilon_r > 1$), com o aumento da renda as pessoas
-podem ficar mais *dispostas a comprometer* uma parte um pouco maior do orçamento 
-neste mercado, enquanto em um mercado de bens normal ($\varepsilon_r < 1$), as 
-pessoas podem estar *obrigadas a comprometer* boa parte do seu orçamento neste
-mercado, mas, à medida que a renda aumenta, a proporção da renda aplicada neste
-mercado diminui.
+mercado de bens de luxo ($\varepsilon_{yd} > 1$), com o aumento da renda as
+pessoas podem ficar mais *dispostas a comprometer* uma parte um pouco maior do
+orçamento neste mercado, enquanto em um mercado de bens normal
+($\varepsilon_{yd} < 1$), as pessoas podem estar *obrigadas a comprometer* boa
+parte do seu orçamento neste mercado, mas, à medida que a renda aumenta, a
+proporção da renda aplicada neste mercado diminui.
 
 ```{r engel2, fig.cap="Curvas de Engel no Espaço Aluguéis/Renda vs. Renda."}
 engel1 <- Hmisc::bezier(c(.5, 1, 5),
@@ -769,12 +775,17 @@ knitr::include_graphics("images/income_elasticity.png")
 \small Fonte: @green_2003 *apud* Malpezzi [-@malpezzi_2017].
 \ecenter
 
-##### Elasticidade da oferta
+##### Elasticidade-preço da oferta
 
 Analogamente à elasticidade-preço da demanda, a elasticidade-preço da oferta 
-mede a variação na quantidade ofertada de uma mercadoria quando os preços variam
-em uma unidade, sendo portanto, em geral, um número positivo (quando os preços
-aumentam, a quantidade ofertada aumenta). 
+$\varepsilon_{ps}$ mede a variação na quantidade ofertada $q_s$ de uma 
+mercadoria quando os preços $p$ variam em uma unidade, sendo portanto, em geral, 
+um número positivo (quando os preços aumentam, a quantidade ofertada aumenta). 
+
+\begin{equation}
+\varepsilon_{ps} = \frac{p}{q_s}\frac{\mathrm{d} q_s}{\mathrm{d} p}
+(\#eq:epoferta)
+\end{equation}
 
 Na Figura \@ref(fig:equilibrioMercado) foi apresentado o conceito de equilíbrio 
 em um determinado mercado, a partir de curvas de oferta e de demanda.
@@ -1513,7 +1524,7 @@ que se verifica pela análise da Figura \@ref(fig:mortgages), em que são
 comparadas as taxas de juros das hipotecas com as taxas de juros de longo prazo
 nos EUA.
 
-```{r}
+```{r, eval = FALSE}
 mortgage30us <- fredr(series_id = "MORTGAGE30US",
               observation_start = as.Date("1971-04-02"))
 dgs30 <- fredr(series_id = "DGS30",
@@ -1523,7 +1534,7 @@ dgs30 <- fredr(series_id = "DGS30",
  df <- df[, c("date", "value.MORTGAGE30US", "value.DGS30")]
  colnames(df) <- c("date", "MORTGAGE30US", "DGS30")
  df <- df %>% gather("index", "rate", -date)
- saveRDS(df, "data/FRED_mortgages")
+saveRDS(df, "data/FRED_mortgages")
 ```
 
 ```{r recessionsDF3}

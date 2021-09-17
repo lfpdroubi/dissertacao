@@ -620,22 +620,23 @@ alocação do capital naquele mercado.
 #ycAll <- Quandl("USTREASURY/YIELD", type = "ts")
 ```
 
-```{r ratesData}
+```{r ratesData, eval = FALSE}
 effr <- fredr(series_id = "DFF",
              observation_start = as.Date("1954-07-01"),
              frequency = "w")
-# gs10 <- fredr(series_id = "GS10",
-#               observation_start = as.Date("1953-04-01"))
-# gs20 <- fredr(series_id = "GS20",
-#               observation_start = as.Date("1953-04-01"))
-# gs30 <- fredr(series_id = "GS30",
-#               observation_start = as.Date("1953-04-01"))
-# df <- left_join(gs10, gs20, by = "date", suffix = c(".GS10", ".GS20"))
-# df <- left_join(df, gs30, by = "date")
-# df <- df[, c("date", "value.GS10", "value.GS20", "value")]
-# colnames(df) <- c("date", "GS10", "GS20", "GS30")
-# df <- df %>% gather("bond", "rate", -date)
-# saveRDS(df, "data/FRED")
+saveRDS(effr, "data/EFFR")
+gs10 <- fredr(series_id = "GS10",
+              observation_start = as.Date("1953-04-01"))
+gs20 <- fredr(series_id = "GS20",
+              observation_start = as.Date("1953-04-01"))
+gs30 <- fredr(series_id = "GS30",
+              observation_start = as.Date("1953-04-01"))
+df <- left_join(gs10, gs20, by = "date", suffix = c(".GS10", ".GS20"))
+df <- left_join(df, gs30, by = "date")
+df <- df[, c("date", "value.GS10", "value.GS20", "value")]
+colnames(df) <- c("date", "GS10", "GS20", "GS30")
+df <- df %>% gather("bond", "rate", -date)
+saveRDS(df, "data/FRED")
 ```
 
 ```{r recessionsDF5}
@@ -647,8 +648,9 @@ recessions.df <- within(recessions.df, {
 ```
 
 ```{r effr, fig.cap="Taxa efetiva dos fundos federais (FED)"}
+effr <- readRDS(file = "data/EFFR")
 ggplot(data = effr, aes(x = date, y = value)) +
-  geom_line() +  
+  geom_line(color = 'blue') +  
   xlab("Ano") +
   ylab("Taxa (a.a.)") +
   #scale_x_continuous(expand = c(0, 0)) +
@@ -694,19 +696,19 @@ Mesmo uma análise mais ampla (desde 1953) das taxas de juros mostram que o
 período recente é o período de menor taxa de juros em termos históricos, o que 
 pode ser visto na figura \@ref(fig:fred).
 
-```{r}
-# dgs10 <- fredr(series_id = "DGS10",
-#               observation_start = as.Date("1962-01-02"))
-# dgs20 <- fredr(series_id = "DGS20",
-#               observation_start = as.Date("1962-01-02"))
-# dgs30 <- fredr(series_id = "DGS30",
-#               observation_start = as.Date("1962-01-02"))
-# df <- left_join(dgs10, dgs20, by = "date", suffix = c(".DGS10", ".DGS20"))
-# df <- left_join(df, dgs30, by = "date")
-# df <- df[, c("date", "value.DGS10", "value.DGS20", "value")]
-# colnames(df) <- c("date", "DGS10", "DGS20", "DGS30")
-# df <- df %>% gather("bond", "rate", -date)
-# saveRDS(df, "data/FRED_daily")
+```{r, eval = FALSE}
+dgs10 <- fredr(series_id = "DGS10",
+              observation_start = as.Date("1962-01-02"))
+dgs20 <- fredr(series_id = "DGS20",
+              observation_start = as.Date("1962-01-02"))
+dgs30 <- fredr(series_id = "DGS30",
+              observation_start = as.Date("1962-01-02"))
+dados <- left_join(dgs10, dgs20, by = "date", suffix = c(".DGS10", ".DGS20"))
+dados <- left_join(dados, dgs30, by = "date")
+dados <- dados[, c("date", "value.DGS10", "value.DGS20", "value")]
+colnames(dados) <- c("date", "DGS10", "DGS20", "DGS30")
+dados <- dados %>% gather("bond", "rate", -date)
+saveRDS(dados, "data/FRED_daily")
 ```
 
 ```{r yields2, fig.cap="Taxas diárias dos \\emph{treasuries bonds} desde janeiro/1990."}
@@ -779,6 +781,31 @@ ggplot(data = df, aes(x = date, y = rate, color = bond)) +
 \bcenter
 \small Fonte -- O autor, à partir de dados do \gls{FRED}.
 \ecenter
+
+Ainda mais impressionante é a análise das taxas juros reais, o que pode ser
+visto na Figura \@ref(fig:realinterests).
+
+```{r, eval = FALSE}
+rint <- fredr(series_id = "DFII10")
+saveRDS(rint, file = "data/rint")
+```
+
+
+```{r realinterests, fig.cap="Taxas de juros reais. Títulos com vencimento de 10 anos protegidos contra inflação."}
+rint <- readRDS(file = "data/rint")
+ggplot(data = rint, aes(x = date, y = value)) +
+  geom_line(color = 'blue') +  
+  xlab("Ano") +
+  ylab("Taxa real(a.a.)") +
+  #scale_x_continuous(expand = c(0, 0)) +
+  scale_y_continuous(expand = c(0, 0), 
+                     labels = scales::label_percent(scale = 1, decimal.mark = ",")) +
+  geom_hline(yintercept = 0, lty = 3) +
+  geom_rect(data=recessions.df[which(recessions.df$Peak >= as.Date("2003-01-02")), ], 
+            aes(xmin=Peak, xmax=Trough, ymin=-Inf, ymax=+Inf),
+            inherit.aes=F, fill='grey', alpha=0.5)
+```
+
 
 Esta longa e sustentada tendência de queda de longo prazo, com esta persistência
 não pode ser atribuída a uma bolha especulativa, *i.e.* um desvio de curto prazo

@@ -41,6 +41,13 @@
 \addbibresource{bib/cap8.bib}
 \addbibresource{bib/pkgs.bib}
 
+\newlength{\cslhangindent}
+\setlength{\cslhangindent}{1.5em}
+\newenvironment{CSLReferences}%
+  {}%
+  {\par}
+ 
+
 \usepackage[table]{xcolor}
 \let\newfloat\undefined
 \usepackage{floatrow}
@@ -302,11 +309,11 @@
 % ---
 \begin{agradecimentos}
 	Gostaria de agradecer sinceramente a todos os que colaboraram à execução\\
-deste trabalho.\\
-Aos colegas da UFSC.\\
-Aos professores do PPGTG.\\
-Em especial ao meu orientador, pela paciência.\\
-E a minha querida esposa pela compreensão.
+ deste trabalho.\\
+ Aos colegas da UFSC.\\
+ Aos professores do PPGTG.\\
+ Em especial ao meu orientador, pela paciência.\\
+ E a minha querida esposa pela compreensão.
 \end{agradecimentos}
 % ---
 
@@ -331,26 +338,26 @@ E a minha querida esposa pela compreensão.
 \begin{resumo}
 	\SingleSpacing
   Este trabalho tem como objetivo efetuar um estudo do histÃ³rico e de tendÃªncias
-  dos mercados imobiliÃ¡rios brasileiro e mundial e seus efeitos nÃ£o apenas no
-  setor habitacional, mas tambÃ©m na Economia como um todo. Esta pesquisa tenta
-  compreender especialmente os eventos recentes do mercado imobiliÃ¡rio, como a
-  formaÃ§Ã£o e o estouro de bolhas imobiliÃ¡rias e os efeitos destes eventos sobre a
-  Economia com foco, claro, no setor habitacional. Preliminarmente o texto mostra
-  uma anÃ¡lise histÃ³rica do fenÃ´meno da urbanizaÃ§Ã£o, considerando a experiÃªncia de
-  vÃ¡rios paÃ­ses. EntÃ£o, Ã© realizada uma anÃ¡lise dos mercados imobiliÃ¡rios e a
-  interaÃ§Ã£o destes com as variÃ¡veis macroeconÃ´micas atravÃ©s da anÃ¡lise de sÃ©ries
-  histÃ³ricas, buscando contextualizar os eventos de formaÃ§Ã£o e estouro de bolhas
-  imobiliÃ¡rias e seus efeitos. Finalmente, o trabalho faz uma anÃ¡lise dos
-  principais problemas decorrentes da financeirizaÃ§Ã£o do setor habitacional
-  ocorrida nas Ãºltimas dÃ©cadas, inicialmente atravÃ©s da anÃ¡lise das evidÃªncias
-  anedÃ³ticas, advindas dos paÃ­ses desenvolvidos, da grave crise habitacional por
-  que passam, depois atravÃ©s da anÃ¡lise de sÃ©ries estatÃ­sticas histÃ³ricas
-  relacionadas ao setor habitacional nestes paÃ­ses. Por fim, este trabalho propÃµe
-  a implementaÃ§Ã£o de uma polÃ­tica habitacional coordenada, atravÃ©s da utilizaÃ§Ã£o
-  dos diversos instrumentos de polÃ­tica urbana previstos no Estatuto da cidade, de
-  maneira a enfrentar o problema da moradia precÃ¡ria no Brasil, de maneira a
-  melhorar as condiÃ§Ãµes de saneamento, saÃºde pÃºblica e bem-estar do povo
-  brasileiro. 
+dos mercados imobiliÃ¡rios brasileiro e mundial e seus efeitos nÃ£o apenas no
+setor habitacional, mas tambÃ©m na Economia como um todo. Esta pesquisa tenta
+compreender especialmente os eventos recentes do mercado imobiliÃ¡rio, como a
+formaÃ§Ã£o e o estouro de bolhas imobiliÃ¡rias e os efeitos destes eventos sobre a
+Economia com foco, claro, no setor habitacional. Preliminarmente o texto mostra
+uma anÃ¡lise histÃ³rica do fenÃ´meno da urbanizaÃ§Ã£o, considerando a experiÃªncia de
+vÃ¡rios paÃ­ses. EntÃ£o, Ã© realizada uma anÃ¡lise dos mercados imobiliÃ¡rios e a
+interaÃ§Ã£o destes com as variÃ¡veis macroeconÃ´micas atravÃ©s da anÃ¡lise de sÃ©ries
+histÃ³ricas, buscando contextualizar os eventos de formaÃ§Ã£o e estouro de bolhas
+imobiliÃ¡rias e seus efeitos. Finalmente, o trabalho faz uma anÃ¡lise dos
+principais problemas decorrentes da financeirizaÃ§Ã£o do setor habitacional
+ocorrida nas Ãºltimas dÃ©cadas, inicialmente atravÃ©s da anÃ¡lise das evidÃªncias
+anedÃ³ticas, advindas dos paÃ­ses desenvolvidos, da grave crise habitacional por
+que passam, depois atravÃ©s da anÃ¡lise de sÃ©ries estatÃ­sticas histÃ³ricas
+relacionadas ao setor habitacional nestes paÃ­ses. Por fim, este trabalho propÃµe
+a implementaÃ§Ã£o de uma polÃ­tica habitacional coordenada, atravÃ©s da utilizaÃ§Ã£o
+dos diversos instrumentos de polÃ­tica urbana previstos no Estatuto da cidade, de
+maneira a enfrentar o problema da moradia precÃ¡ria no Brasil, de maneira a
+melhorar as condiÃ§Ãµes de saneamento, saÃºde pÃºblica e bem-estar do povo
+brasileiro. 
   
   \textbf{Palavras-chave}: 
     Desenvolvimento Urbano.
@@ -541,118 +548,28 @@ para 22,3\% da população urbana.
 No entanto, com o crescimento da população brasileira e o aumento da porcentagem
 de população urbana desde então, os números totais estão praticamente estagnados,
 o que pode ser observado na tabela abaixo.
-\begin{longtable}[]{@{}rrrrrr@{}}
+\begin{longtable}[]{@{}
+  >{\raggedleft\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.04}}
+  >{\raggedleft\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.24}}
+  >{\raggedleft\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.15}}
+  >{\raggedleft\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.25}}
+  >{\raggedleft\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.12}}
+  >{\raggedleft\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.20}}@{}}
 \caption{População habitando favelas no Brasil.}\tabularnewline
 \toprule
-\begin{minipage}[b]{0.04\columnwidth}\raggedleft
-Ano\strut
-\end{minipage} & \begin{minipage}[b]{0.20\columnwidth}\raggedleft
-Pop. total (milhões hab.)\strut
-\end{minipage} & \begin{minipage}[b]{0.13\columnwidth}\raggedleft
-Pop. urbana (\%)\strut
-\end{minipage} & \begin{minipage}[b]{0.21\columnwidth}\raggedleft
-Pop. urbana (milhões hab.)\strut
-\end{minipage} & \begin{minipage}[b]{0.10\columnwidth}\raggedleft
-Favelas (\%)\strut
-\end{minipage} & \begin{minipage}[b]{0.17\columnwidth}\raggedleft
-Favelas (milhões hab.)\strut
-\end{minipage}\tabularnewline
+Ano & Pop. total (milhões hab.) & Pop. urbana (\%) & Pop. urbana (milhões hab.) & Favelas (\%) & Favelas (milhões hab.) \\
 \midrule
 \endfirsthead
 \toprule
-\begin{minipage}[b]{0.04\columnwidth}\raggedleft
-Ano\strut
-\end{minipage} & \begin{minipage}[b]{0.20\columnwidth}\raggedleft
-Pop. total (milhões hab.)\strut
-\end{minipage} & \begin{minipage}[b]{0.13\columnwidth}\raggedleft
-Pop. urbana (\%)\strut
-\end{minipage} & \begin{minipage}[b]{0.21\columnwidth}\raggedleft
-Pop. urbana (milhões hab.)\strut
-\end{minipage} & \begin{minipage}[b]{0.10\columnwidth}\raggedleft
-Favelas (\%)\strut
-\end{minipage} & \begin{minipage}[b]{0.17\columnwidth}\raggedleft
-Favelas (milhões hab.)\strut
-\end{minipage}\tabularnewline
+Ano & Pop. total (milhões hab.) & Pop. urbana (\%) & Pop. urbana (milhões hab.) & Favelas (\%) & Favelas (milhões hab.) \\
 \midrule
 \endhead
-\begin{minipage}[t]{0.04\columnwidth}\raggedleft
-1990\strut
-\end{minipage} & \begin{minipage}[t]{0.20\columnwidth}\raggedleft
-149,0\strut
-\end{minipage} & \begin{minipage}[t]{0.13\columnwidth}\raggedleft
-73,90\strut
-\end{minipage} & \begin{minipage}[t]{0.21\columnwidth}\raggedleft
-110,1\strut
-\end{minipage} & \begin{minipage}[t]{0.10\columnwidth}\raggedleft
-36,7\strut
-\end{minipage} & \begin{minipage}[t]{0.17\columnwidth}\raggedleft
-40,4\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{0.04\columnwidth}\raggedleft
-1995\strut
-\end{minipage} & \begin{minipage}[t]{0.20\columnwidth}\raggedleft
-162,0\strut
-\end{minipage} & \begin{minipage}[t]{0.13\columnwidth}\raggedleft
-77,61\strut
-\end{minipage} & \begin{minipage}[t]{0.21\columnwidth}\raggedleft
-125,7\strut
-\end{minipage} & \begin{minipage}[t]{0.10\columnwidth}\raggedleft
-34,1\strut
-\end{minipage} & \begin{minipage}[t]{0.17\columnwidth}\raggedleft
-42,9\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{0.04\columnwidth}\raggedleft
-2000\strut
-\end{minipage} & \begin{minipage}[t]{0.20\columnwidth}\raggedleft
-174,8\strut
-\end{minipage} & \begin{minipage}[t]{0.13\columnwidth}\raggedleft
-81,20\strut
-\end{minipage} & \begin{minipage}[t]{0.21\columnwidth}\raggedleft
-141,9\strut
-\end{minipage} & \begin{minipage}[t]{0.10\columnwidth}\raggedleft
-31,5\strut
-\end{minipage} & \begin{minipage}[t]{0.17\columnwidth}\raggedleft
-44,7\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{0.04\columnwidth}\raggedleft
-2005\strut
-\end{minipage} & \begin{minipage}[t]{0.20\columnwidth}\raggedleft
-186,1\strut
-\end{minipage} & \begin{minipage}[t]{0.13\columnwidth}\raggedleft
-82,80\strut
-\end{minipage} & \begin{minipage}[t]{0.21\columnwidth}\raggedleft
-154,2\strut
-\end{minipage} & \begin{minipage}[t]{0.10\columnwidth}\raggedleft
-29,0\strut
-\end{minipage} & \begin{minipage}[t]{0.17\columnwidth}\raggedleft
-44,7\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{0.04\columnwidth}\raggedleft
-2009\strut
-\end{minipage} & \begin{minipage}[t]{0.20\columnwidth}\raggedleft
-193,9\strut
-\end{minipage} & \begin{minipage}[t]{0.13\columnwidth}\raggedleft
-84,04\strut
-\end{minipage} & \begin{minipage}[t]{0.21\columnwidth}\raggedleft
-162,9\strut
-\end{minipage} & \begin{minipage}[t]{0.10\columnwidth}\raggedleft
-26,9\strut
-\end{minipage} & \begin{minipage}[t]{0.17\columnwidth}\raggedleft
-43,8\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{0.04\columnwidth}\raggedleft
-2014\strut
-\end{minipage} & \begin{minipage}[t]{0.20\columnwidth}\raggedleft
-202,8\strut
-\end{minipage} & \begin{minipage}[t]{0.13\columnwidth}\raggedleft
-85,90\strut
-\end{minipage} & \begin{minipage}[t]{0.21\columnwidth}\raggedleft
-174,3\strut
-\end{minipage} & \begin{minipage}[t]{0.10\columnwidth}\raggedleft
-22,3\strut
-\end{minipage} & \begin{minipage}[t]{0.17\columnwidth}\raggedleft
-38,9\strut
-\end{minipage}\tabularnewline
+1990 & 149,0 & 73,90 & 110,1 & 36,7 & 40,4 \\
+1995 & 162,0 & 77,61 & 125,7 & 34,1 & 42,9 \\
+2000 & 174,8 & 81,20 & 141,9 & 31,5 & 44,7 \\
+2005 & 186,1 & 82,80 & 154,2 & 29,0 & 44,7 \\
+2009 & 193,9 & 84,04 & 162,9 & 26,9 & 43,8 \\
+2014 & 202,8 & 85,90 & 174,3 & 22,3 & 38,9 \\
 \bottomrule
 \end{longtable}
 \bcenter
@@ -1503,11 +1420,11 @@ consideravelmente, a resistência do complexo à dissolução''.
 \begin{citacao}
 A revolução democrático-burguesa, nos casos em que a gleba feudal é -- como
 aconteceu na Europa Ocidental (principalmente, na França) e nos Estados Unidos
--- substituída pela pequena propriedade familiar ou *homestead*, ao fortalecer
-as bases da economia natural ou de autoconsumo, resolve satisfatoriamente o
-problema na absorção dos excedentes de mão-de-obra no seio da própria economia
-camponesa, estancando ou reduzindo drasticamente o fluxo populacional
-responsável pelo êxodo campo-cidade \cite[p.~133]{rangel1986b}. 
+-- substituída pela pequena propriedade familiar ou \emph{homestead}, ao
+fortalecer as bases da economia natural ou de autoconsumo, resolve
+satisfatoriamente o problema na absorção dos excedentes de mão-de-obra no seio
+da própria economia camponesa, estancando ou reduzindo drasticamente o fluxo
+populacional responsável pelo êxodo campo-cidade \cite[p.~133]{rangel1986b}.
 \end{citacao}
 Segundo Rangel \autocite*[133]{rangel1986b}, no entanto, ``esse tipo de superação das
 relações de produção feudais'', ou seja, a revolução democrático-burguesa, ``não é
@@ -2393,20 +2310,20 @@ diminui) em uma unidade.
 \hypertarget{elasticidade-preuxe7o-da-demanda}{%
 \paragraph{Elasticidade-preço da demanda}\label{elasticidade-preuxe7o-da-demanda}}
 
-A elasticidade-preço da demanda, \gls{varepsilon_p}, definida conforme a equação
-\eqref{eq:epdemanda} \autocite[p.~302]{varian}, mede a quantidade marginal que será
-demandada do mercado se o preço de uma mercadoria aumenta ou diminui em uma
-unidade de preço. Geralmente a elasticidade-preço da oferta é, então, um número
-negativo \autocite[289]{varian}.
+A elasticidade-preço da demanda, \(\varepsilon_{pd}\), definida conforme a
+equação \eqref{eq:epdemanda} \autocite[p.~302]{varian}, mede a quantidade marginal
+\(\mathrm{d} q_d\) que será demandada do mercado se o preço \(p\) de uma mercadoria
+aumenta ou diminui em uma unidade de preço. Geralmente a elasticidade-preço da
+oferta é, então, um número negativo \autocite[289]{varian}.
 \begin{equation}
-\varepsilon_p = \frac{p}{q}\frac{\mathrm{d} q}{\mathrm{d} p}
+\varepsilon_{pd} = \frac{p}{q_d}\frac{\mathrm{d} q_d}{\mathrm{d} p}
 \label{eq:epdemanda}
 \end{equation}
 Uma maneira mais conveniente (e exata) de se escrever a equação da elasticidade
 é a apresentada na equação \eqref{eq:elasticidadeLN}, em função do logaritmo
-natural das variáveis \autocite[p.307-308]{varian}:
+natural das variáveis \autocite[307-308]{varian}:
 \begin{equation}
-\varepsilon_p = \frac{\mathrm{d} \ln(q)}{\mathrm{d} \ln(p)}
+\varepsilon_pd = \frac{\mathrm{d} \ln(q_d)}{\mathrm{d} \ln(p)}
 \label{eq:elasticidadeLN}
 \end{equation}
 Segundo Mayo (1981) e Olsen (1986) \autocite[\emph{apud}][p.23]{Malpezzi2002TheRO}, uma boa
@@ -2415,16 +2332,21 @@ estimativa para o valor da elasticidade-preço da demanda é algo em torno de -0
 \hypertarget{elasticidade-renda-da-demanda}{%
 \paragraph{Elasticidade-renda da demanda}\label{elasticidade-renda-da-demanda}}
 
-A elasticidade-renda da demanda, \gls{varepsilon_r}, mede como muda a quantidade
-demandada quando a renda do consumidor varia \autocite[p.300]{varian}. De acordo com a
-elasticidade-renda os bens podem ser classificados em bens normais, \emph{i.e.} bens
-cuja demanda aumenta com o aumento da renda; bens inferiores, \emph{i.e.} bens cuja
-demanda diminui com o aumento da renda; e bens de luxo (\(\varepsilon_r > 1\)),
-\emph{i.e.} bens cujo aumento na demanda é mais do que proporcional ao aumento da
-renda (um aumento de 1\% na renda conduz a um aumento de mais de 1\% da demanda).
+A elasticidade-renda da demanda, \(\varepsilon_{yd}\), mede como muda a
+quantidade demandada \(q_d\) quando a renda \(y\) do consumidor varia \autocite[300]{varian}.
+De acordo com a elasticidade-renda os bens podem ser classificados em bens
+normais, \emph{i.e.} bens cuja demanda aumenta com o aumento da renda; bens
+inferiores, \emph{i.e.} bens cuja demanda diminui com o aumento da renda; e bens de
+luxo (\(\varepsilon_r > 1\)), \emph{i.e.} bens cujo aumento na demanda é mais do que proporcional ao aumento da renda (um aumento de 1\% na renda conduz a um aumento
+de mais de 1\% da demanda).
 
-A análise da elasticidade-renda da demanda pode ser feita a partir das curvas
-de Engel, como na Figura \ref{fig:engel1}:
+A elasticidade-renda da demanda é calculada conforme a equação
+\eqref{eq:erdemanda} e sua análise pode ser feita a partir das curvas de Engel,
+como na Figura \ref{fig:engel1}.
+\begin{equation}
+\varepsilon_{yd} = \frac{y}{q_d}\frac{\mathrm{d} q_d}{\mathrm{d} y}
+\label{eq:erdemanda}
+\end{equation}
 \begin{figure}[H]
 
 {\centering \includegraphics[width=0.7\linewidth]{images/engel1-1} 
@@ -2441,12 +2363,12 @@ de Engel, como na Figura \ref{fig:engel1}:
 No entanto, segundo \textcite[p.~12-13]{regulation}, uma transformação conveniente pode
 ser feita para a melhor compreensão da diferença entre o consumo necessário e o
 consumo de luxo, como pode ser visto na Figura \ref{fig:engel2}: no caso de um
-mercado de bens de luxo (\(\varepsilon_r > 1\)), com o aumento da renda as pessoas
-podem ficar mais \emph{dispostas a comprometer} uma parte um pouco maior do orçamento
-neste mercado, enquanto em um mercado de bens normal (\(\varepsilon_r < 1\)), as
-pessoas podem estar \emph{obrigadas a comprometer} boa parte do seu orçamento neste
-mercado, mas, à medida que a renda aumenta, a proporção da renda aplicada neste
-mercado diminui.
+mercado de bens de luxo (\(\varepsilon_{yd} > 1\)), com o aumento da renda as
+pessoas podem ficar mais \emph{dispostas a comprometer} uma parte um pouco maior do
+orçamento neste mercado, enquanto em um mercado de bens normal
+(\(\varepsilon_{yd} < 1\)), as pessoas podem estar \emph{obrigadas a comprometer} boa
+parte do seu orçamento neste mercado, mas, à medida que a renda aumenta, a
+proporção da renda aplicada neste mercado diminui.
 \begin{figure}[H]
 
 {\centering \includegraphics[width=0.7\linewidth]{images/engel2-1} 
@@ -2482,14 +2404,17 @@ categorizada em função do decil de renda a que pertencem.
 \small Fonte: \textcite{green_2003} \emph{apud} Malpezzi \autocite*{malpezzi_2017}.
 \ecenter
 
-\hypertarget{elasticidade-da-oferta}{%
-\paragraph{Elasticidade da oferta}\label{elasticidade-da-oferta}}
+\hypertarget{elasticidade-preuxe7o-da-oferta}{%
+\paragraph{Elasticidade-preço da oferta}\label{elasticidade-preuxe7o-da-oferta}}
 
 Analogamente à elasticidade-preço da demanda, a elasticidade-preço da oferta
-mede a variação na quantidade ofertada de uma mercadoria quando os preços variam
-em uma unidade, sendo portanto, em geral, um número positivo (quando os preços
-aumentam, a quantidade ofertada aumenta).
-
+\(\varepsilon_{ps}\) mede a variação na quantidade ofertada \(q_s\) de uma
+mercadoria quando os preços \(p\) variam em uma unidade, sendo portanto, em geral,
+um número positivo (quando os preços aumentam, a quantidade ofertada aumenta).
+\begin{equation}
+\varepsilon_{ps} = \frac{p}{q_s}\frac{\mathrm{d} q_s}{\mathrm{d} p}
+\label{eq:epoferta}
+\end{equation}
 Na Figura \ref{fig:equilibrioMercado} foi apresentado o conceito de equilíbrio
 em um determinado mercado, a partir de curvas de oferta e de demanda.
 
@@ -2962,7 +2887,7 @@ classe de ativos no mundo é a propriedade residencial, com valor estimado de 20
 trilhões de dólares, o que equivale a 3 vezes mais o valor de todas as ações
 negociadas em bolsa.
 
-No Brasil, segundo \textcites{fnogueira}[155]{fnogueira}, a participação dos ativos de
+No Brasil, segundo \textcites[155]{fnogueira,fnogueira}, a participação dos ativos de
 base imobiliária era cerca de 40\% dos bens e direitos declarados na Declaração
 do Imposto de Renda da Pessoa Física. Deve-se levar em conta, no entanto, que
 os valores declarados são os valores do momento da aquisição dos imóveis, que
@@ -3398,7 +3323,7 @@ elevará o estoque de imóveis (\textbf{IV}).
 \end{figure}
 \bcenter
 
-\small Fonte -- Adaptado de \textcite{ADAMS2010}.
+\small Fonte -- Adaptado de \textcite{diPasquale} \emph{apud} \textcite{ADAMS2010}.
 \ecenter
 
 A Figura \ref{fig:adams} mostra, além desta propagação descrita acima, em seu
@@ -4331,8 +4256,8 @@ maneira, segundo \textcite{malpezzi_affordable_2018_1}, a preferência do consum
 violada e, ao mesmo tempo em que ele ganha o bem-estar por poder comprar \(Q_c\)
 unidades a um preço \((P_m-P_c)\), igual a área do retângulo \(a-b-c-d\) da Figura
 \ref{fig:eficiencia}, ele perde bem-estar de magnitude igual à área do
-triângulo \(e-c-f\). Assim, geometricamente, se a área \(a-b-c-d\) é maior do que a
-área do triângulo \(e-c-f\), o consumidor estará obtendo um benefício líquido e
+triângulo \(d-e-f\). Assim, geometricamente, se a área \(a-b-c-d\) é maior do que a
+área do triângulo \(d-e-f\), o consumidor estará obtendo um benefício líquido e
 optará pela compra da unidade subsidiada. Caso contrário, o benefício líquido
 seria negativo e o consumidor optaria por não comprar a unidade.
 \begin{figure}[H]
@@ -4349,12 +4274,52 @@ seria negativo e o consumidor optaria por não comprar a unidade.
 \ecenter
 
 A eficiência é simplesmente a razão entre o benefício líquido obtido pelo
-consumidor (\(\overline{a-b-c-d} - \overline{e-c-f}\)) e o custo de transferência
-arcada pelo governo (\(a-b-c-d\)).
+consumidor (\(\underline{a-b-c-d} - \underline{d-e-f}\)) e o custo de transferência
+arcada pelo governo (\(\underline{a-b-c-d}\)).
 
-Os programas habitacionais que atuam pelo lado da oferta, nos \gls{EUA}, tem
-eficiência média de transferência de 72\%. A eficiência de produção de moradias
-públicas, nos \gls{EUA}, segundo diversos estudos, é, em média, de 63\%.
+De uma forma análoga, também existe perda de eficiência se as unidades
+oferecidas aos beneficiários tiverem tamanho (ou qualidade) maior do que os
+procurados pelos beneficiários. Isto é ilustrado na Figura \ref{fig:eficiencia2}.
+Num contexto de livre mercado, o consumidor preferirira adquirir \(Q_m\) ao preço
+\(P_m\), porém somente lhe é oferecido adquirir a quantidade \(Q_c\), neste caso
+maior do que a quantidade desejada, por um preço menor, \(P_c\). Ao preço \(P_c\),
+no entanto, a escolha do consumidor seria adquirir apenas \(Q^*\) unidades, menor
+do que o oferecido. A perda de eficiência, então, para este caso, está na razão
+entre a diferença dos benefícios ao consumidor
+\(\underline{a-b-e-d}-\underline{e-f-g}\) sobre os custos do governo
+\(\underline{a-c-f-d}\).
+\begin{figure}[H]
+
+{\centering \includegraphics[width=0.7\linewidth]{images/eficiencia2-1} 
+
+}
+
+\caption{Eficiência da transferência.}\label{fig:eficiencia2}
+\end{figure}
+\bcenter
+
+\small Fonte -- Adaptado de \textcite{malpezzi_affordable_2018_1}.
+\ecenter
+
+A única ocasião em que o custo de transferência seria zero, \emph{i.e.} o custo do
+governo com os subsídios igualam os benefícios obtidos pelos beneficiários, se
+daria quando a quantidade de habitação oferecida ao beneficiário pelo programa
+seja exatamente igual à quantidade que o beneficiário adquiriria nas condições
+de livre-mercado. Isto é ilustrado na Figura \ref{fig:eficiencia3}. Neste caso,
+o triângulo do peso-morto encolhe a zero.
+\begin{figure}[H]
+
+{\centering \includegraphics[width=0.7\linewidth]{images/eficiencia3-1} 
+
+}
+
+\caption{Eficiência da transferência.}\label{fig:eficiencia3}
+\end{figure}
+Naturalmente deve-se esperar que apenas muito raramente ocorrerá uma
+transferência com 100\% de eficiência. Os programas habitacionais que atuam pelo
+lado da oferta, nos \gls{EUA}, tem eficiência média de transferência de 72\%. A
+eficiência de produção de moradias públicas, nos \gls{EUA}, segundo diversos
+estudos, é de 63\%, em média.
 
 A eficiência microeconômica total é o produto das três eficiência citadas. A
 eficiência adminstrativa não foi medida e não deve ser muito importante em
@@ -5070,7 +5035,7 @@ simplificam demais o que é, na verdade, um rico conjunto de variações espacia
 e temporais nas taxas de valorização \autocite{McMillen2014LocalQH}. Alguns índices tem
 sido propostos, portanto, buscando melhor descrever o mercado, baseados na
 metodologia da regressão quantílica, que é capaz de descrever melhor a mudança
-de preços ao longo da distribuição de probabilidades \autocites[ver][]{Wen}{ZHANG201785}{Coulson}.
+de preços ao longo da distribuição de probabilidades \autocites[ver][]{Wen,ZHANG201785,Coulson}.
 
 Segundo \textcite[pp.~16-17]{washington}, durante um ciclo de inflação e posterior
 estouro de uma bolha imobiliária, o valor da\index{terra!valor da} terra tende a
@@ -5237,7 +5202,7 @@ Outra \gls{HMV} importante não citada por \textcite{macroHousing} é a \emph{Ho
 \ecenter
 
 É usual encontrar análises sobre o \gls{MI} com estas séries plotadas num
-único gráfico \autocites[ver][]{FRED2014}{FRED2016}{FRED2018}, como mostrado na Figura
+único gráfico \autocites[ver][]{FRED2014,FRED2016,FRED2018}, como mostrado na Figura
 \ref{fig:twoseries}.
 \begin{figure}[H]
 
@@ -5274,11 +5239,11 @@ desde 1975, enquanto a Figura \ref{fig:rhpi} mostra a evolução dos preços
 das residências em termos reais desde 1890.
 
 Em ambas as séries foram aplicados testes de mudança estrutural do mercado no
-\proglang{R}, versão 4.0.2 \autocite{R}.
+\proglang{R}, versão 4.1.1 \autocite{R}.
 Para a série de valores nominais, estes pontos de mudança foram extraídos pelo
 pacote \pkg{changepoint}. Já para a série de valores reais foi utilizado o
-pacote \pkg{strucchange}. As linhas tracejadas em vermelho representam estes
-pontos de corte.
+pacote \pkg{strucchange} \autocite{strucchange}. As linhas tracejadas em vermelho
+representam estes pontos de corte.
 \begin{figure}[H]
 
 {\centering \includegraphics[width=0.7\linewidth]{images/nhpi-1} 
@@ -5332,12 +5297,12 @@ preços anteriores à crise de 2008.
 
 Em julho de 2006 o índice atingiu o valor de 184,61
 pontos, entrando então em tendência de baixa, até atingir os
-134,16 pontos, em janeiro de 2012, uma queda de
-50,45
+134,17 pontos, em janeiro de 2012, uma queda de
+50,44
 pontos, quando se iniciou nova tendência de alta, que perdura até os dias atuais.
 No momento em que se escreve esta dissertação o índice se encontra com
-238,82 pontos, maior valor da série histórica, uma alta de
-104,66
+260,87 pontos, maior valor da série histórica, uma alta de
+126,70
 pontos.
 
 Em termos reais, no entanto, os preços ainda são inferiores ao pico registrado,
@@ -5356,11 +5321,11 @@ mas há uma nítida tendência de alta, conforme pode ser visto na figura
 \small Fonte -- O autor, à partir de dados de \textcite{QuandlWIKI}.
 \ecenter
 
-Na atualidade este índice se encontra em 196,33 pontos, sendo
+Na atualidade este índice se encontra em 213,39 pontos, sendo
 que o maior valor da série histórica se deu em dezembro de 2005, quando atingiu
 195,83 pontos.
 
-Em janeiro de 1997, o índice estava em 112,24 pontos.
+Em janeiro de 1997, o índice estava em 112,23 pontos.
 Desta data em diante, o índice entrou em franca tendência de alta até atingir os
 195,83 pontos, em dezembro de 2005, auge, em termos
 reais, da bolha imobiliária, que no entanto só viria a estourar, nominalmente
@@ -5387,7 +5352,7 @@ como mostra a Figura \ref{fig:global-rhpi}, do índice de preços global de
 imóveis do \gls{FMI}, que será apresentado na próxima seção.
 
 A possível presença de uma tendência de longo prazo para os preços dos imóveis
-deve ser investigada. No capítulo \ref{crise2008} isto será abordado.
+deve ser investigada.
 \begin{figure}[H]
 
 {\centering \includegraphics[width=0.7\linewidth]{images/rhpi2-1} 
@@ -5407,18 +5372,18 @@ Nov de
 65,61 pontos.
 
 É interessante notar que, em um século, desde 1890, o índice de preços reais de
-imóveis atingiu um valor máximo de apenas 130,99
+imóveis atingiu um valor máximo de apenas 130,98
 pontos, o que ocorreu em agosto de 1989.
 
 Ou seja, em relação ao topo histórico de um século (agosto de 1989) à partir do
 início da coleta do índice (1890), o \gls{HPI} hoje se encontra
-65,34 pontos percentuais acima daquela
-marca e a apenas -65,34 pontos
+82,41 pontos percentuais acima daquela
+marca e a apenas -82,41 pontos
 percentuais abaixo de atingir o topo histórico de dezembro de 2005.
 
 Em janeiro de 2012, no fundo do vale da curva do índice real, este atingiu
-126,65 pontos, apenas
-4,34 pontos abaixo do topo
+126,66 pontos, apenas
+4,32 pontos abaixo do topo
 histórico de um século à partir de 1890.
 
 \hypertarget{o-global-real-house-price-index}{%
@@ -5929,10 +5894,10 @@ pode ser visto na figura \ref{fig:fred}.
 \ecenter
 
 No momento em que se escreve deste trabalho, a taxa de juros dos títulos de mais
-longa maturidade, ou seja, de 30 anos, está em 2,45\% a.a.
+longa maturidade, ou seja, de 30 anos, está em 1,87\% a.a.
 
-Para os títulos com vencimento em 20 anos, a taxa está em 2,36
-\% a.a. e para os títulos com vencimento em 10 anos está em 1,74\% a.a.,
+Para os títulos com vencimento em 20 anos, a taxa está em 1,80
+\% a.a. e para os títulos com vencimento em 10 anos está em 1,31\% a.a.,
 todos muito perto dos seus valores mínimos da série histórica, que foram
 atingidos em 2020-08-04, quando os títulos
 com maturidade de 10 anos atingiram impressionantes 0,54\% a.a.
@@ -5964,6 +5929,16 @@ market now appears to believe that something like this is the new normal.
 \small Fonte -- O autor, à partir de dados do \gls{FRED}.
 \ecenter
 
+Ainda mais impressionante é a análise das taxas juros reais, o que pode ser
+visto na Figura \ref{fig:realinterests}.
+\begin{figure}[H]
+
+{\centering \includegraphics[width=0.7\linewidth]{images/realinterests-1} 
+
+}
+
+\caption{Taxas de juros reais. Títulos com vencimento de 10 anos protegidos contra inflação.}\label{fig:realinterests}
+\end{figure}
 Esta longa e sustentada tendência de queda de longo prazo, com esta persistência
 não pode ser atribuída a uma bolha especulativa, \emph{i.e.} um desvio de curto prazo
 de uma tendência de longo prazo, mas sim a uma tendência estrutural, sistêmica.
@@ -6203,7 +6178,7 @@ crise imobiliário-financeira de 2008.
 
 }
 
-\caption{HPI, Custos de Construção, População e Taxa de Juros nos EUA, desde 1890.}\label{fig:unnamed-chunk-18}
+\caption{HPI, Custos de Construção, População e Taxa de Juros nos EUA, desde 1890.}\label{fig:unnamed-chunk-21}
 \end{figure}
 \bcenter
 
@@ -6252,7 +6227,7 @@ bem-estar da população em geral.
 
 }
 
-\caption{Índices de Preços de imóveis Residenciais e Comerciais no EUA.}\label{fig:unnamed-chunk-19}
+\caption{Índices de Preços de imóveis Residenciais e Comerciais no EUA.}\label{fig:unnamed-chunk-22}
 \end{figure}
 \bcenter
 
@@ -6511,50 +6486,50 @@ Segundo \textcite{watts}, a duração típica de um contrato de \gls{CDO} era de
 \begin{longtable}[]{@{}lr@{}}
 \caption{Parte da matriz de risco de default da Fitch.}\tabularnewline
 \toprule
-\textbf{Rating at issuance} & \textbf{5-yr default probability (\%)}\tabularnewline
+\textbf{Rating at issuance} & \textbf{5-yr default probability (\%)} \\
 \midrule
 \endfirsthead
 \toprule
-\textbf{Rating at issuance} & \textbf{5-yr default probability (\%)}\tabularnewline
+\textbf{Rating at issuance} & \textbf{5-yr default probability (\%)} \\
 \midrule
 \endhead
-AAA & 0,05\tabularnewline
-AA+ & 0,19\tabularnewline
-AA & 0,26\tabularnewline
-AA- & 0,36\tabularnewline
-A+ & 0,56\tabularnewline
-A & 0,62\tabularnewline
-A- & 0,92\tabularnewline
-BBB+ & 1,20\tabularnewline
-BBB & 1,89\tabularnewline
-BBB- & 3,63\tabularnewline
-BB+ & 5,74\tabularnewline
-BB & 8,11\tabularnewline
-BB- & 12,50\tabularnewline
-B+ & 17,09\tabularnewline
-B & 21,36\tabularnewline
-B- & 27,08\tabularnewline
-CCC+ & 33,64\tabularnewline
-CCC & 37,64\tabularnewline
+AAA & 0,05 \\
+AA+ & 0,19 \\
+AA & 0,26 \\
+AA- & 0,36 \\
+A+ & 0,56 \\
+A & 0,62 \\
+A- & 0,92 \\
+BBB+ & 1,20 \\
+BBB & 1,89 \\
+BBB- & 3,63 \\
+BB+ & 5,74 \\
+BB & 8,11 \\
+BB- & 12,50 \\
+B+ & 17,09 \\
+B & 21,36 \\
+B- & 27,08 \\
+CCC+ & 33,64 \\
+CCC & 37,64 \\
 \bottomrule
 \end{longtable}
 \small Fonte -- \textcite{watts}.
 \begin{longtable}[]{@{}lc@{}}
 \caption{Exemplo de parcelamento de \gls{CDO}.}\tabularnewline
 \toprule
-\textbf{Tranche (Rating)} & \textbf{Attachment Points}\tabularnewline
+\textbf{Tranche (Rating)} & \textbf{Attachment Points} \\
 \midrule
 \endfirsthead
 \toprule
-\textbf{Tranche (Rating)} & \textbf{Attachment Points}\tabularnewline
+\textbf{Tranche (Rating)} & \textbf{Attachment Points} \\
 \midrule
 \endhead
-Senior (AAA) & 42\% -- 100\%\tabularnewline
-Mezzanine 1 (AA-) & 34\% -- 42\%\tabularnewline
-Mezzanine 4 (A-) & 28\% -- 34\%\tabularnewline
-Mezzanine 4 (BBB-) & 20\% -- 28\%\tabularnewline
-Mezzanine 4 (BB-) & 11\% -- 20\%\tabularnewline
-Equity (NA) & 0\% -- 11\%\tabularnewline
+Senior (AAA) & 42\% -- 100\% \\
+Mezzanine 1 (AA-) & 34\% -- 42\% \\
+Mezzanine 4 (A-) & 28\% -- 34\% \\
+Mezzanine 4 (BBB-) & 20\% -- 28\% \\
+Mezzanine 4 (BB-) & 11\% -- 20\% \\
+Equity (NA) & 0\% -- 11\% \\
 \bottomrule
 \end{longtable}
 \small Fonte -- \textcite{watts}.
@@ -7314,7 +7289,7 @@ Como é relatado em diversos trabalhos, o \gls{IPTU} e seus similares no mundo
 seja em relação ao valor de mercado das propriedades, devido a procedimentos
 avaliatórios, seja em relação à renda das pessoas, \emph{i.e.} as pessoas com maior
 capacidade de pagamento pagam menos imposto sobre a propriedade,
-proporcionalmente, do que as pessoas com menor capacidade \autocites{McMillen2020}[p.~3]{landtax}{fonseca2020}.
+proporcionalmente, do que as pessoas com menor capacidade \autocites[p.~3]{McMillen2020,landtax}{fonseca2020}.
 
 Visando proporcionar equidade, algumas localidades podem proporcionar isenções
 do \gls{IPTU} à baixa renda (ou a propriedades de baixo valor). A maneira mais
@@ -7992,7 +7967,8 @@ básico para a população.
 \postextual
 
 \hypertarget{refs}{}
-
+\begin{CSLReferences}{0}{0}
+\end{CSLReferences}
 \bapendices
 
 \hypertarget{capital}{%
